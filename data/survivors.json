@@ -1,0 +1,553 @@
+[
+  {
+    "name": "cait",
+    "heroic": true,
+    "carry_slots": {
+      "rifles": [
+        "double_barrel_shotgun"
+      ],
+      "melee": [
+        "baseball_bat",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "must_carry": [
+      "chems.psycho"
+    ],
+    "cost": 137
+  },
+  {
+    "name": "codsworth",
+    "must_carry": [
+      "pistols.mr_handy_flamer",
+      "melee.mr_handy_buzzsaw"
+    ],
+    "cost": 120
+  },
+  {
+    "name": "dog",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 90
+  },
+  {
+    "name": "dogmeat",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 104
+  },
+  {
+    "name": "dogmeat_scout",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 100
+  },
+  {
+    "name": "enslaved_tech",
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "hunting_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "lead_pipe",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ],
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 33
+  },
+  {
+    "name": "eyebot",
+    "must_carry": [
+      "pistols.eyebot_laser"
+    ],
+    "cost": 59
+  },
+  {
+    "name": "mama_murphy",
+    "heroic": true,
+    "carry_slots": {
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "must_carry": [
+      "chems.jet",
+      "chems.mentats"
+    ],
+    "cost": 160
+  },
+  {
+    "name": "mr_handy",
+    "must_carry": [
+      "pistols.mr_handy_flamer",
+      "melee.mr_handy_buzzsaw"
+    ],
+    "cost": 100
+  },
+  {
+    "name": "minuteman",
+    "heroic": true,
+    "carry_slots": {
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle",
+        "laser_musket"
+      ]
+    },
+    "consumables": {
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ],
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade"
+      ]
+    },
+    "cost": 54
+  },
+  {
+    "name": "nuka_cola_girl",
+    "heroic": true,
+    "carry_slots": {
+      "pistols": [
+        "thirst_zapper_cola"
+      ]
+    },
+    "cost": 60
+  },
+  {
+    "name": "piper",
+    "heroic": true,
+    "carry_slots": {
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade"
+      ]
+    },
+    "cost": 76
+  },
+  {
+    "name": "preston_garvey",
+    "heroic": true,
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle",
+        "laser_musket"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade"
+      ]
+    },
+    "cost": 124
+  },
+  {
+    "name": "ronnie_shaw",
+    "heroic": true,
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle",
+        "laser_musket"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade"
+      ]
+    },
+    "cost": 114
+  },
+  {
+    "name": "scavenger",
+    "heroic": true,
+    "carry_slots": {
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle"
+      ]
+    },
+    "consumables": {
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ],
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade"
+      ]
+    },
+    "cost": 30
+  },
+  {
+    "name": "settler",
+    "heroic": true,
+    "carry_slots": {
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "pipe_pistol"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle"
+      ]
+    },
+    "cost": 40
+  },
+  {
+    "name": "sole_survivor",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "power_armor_frame",
+        "t45_power_armor",
+        "t51_power_armor",
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle",
+        "institute_laser_rifle",
+        "laser_musket",
+        "laser_rifle",
+        "plasma_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "baton",
+        "board",
+        "deathclaw_gauntlet",
+        "machete",
+        "pipe_wrench",
+        "ripper",
+        "sledgehammer",
+        "stun_baton",
+        "super_sledge"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "alien_blaster",
+        "gamma_gun",
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ],
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ],
+      "chems": [
+        "stimpak"
+      ]
+    },
+    "cost": 95
+  },
+  {
+    "name": "sole_survivor_day_one",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "power_armor_frame"
+      ]
+    },
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle",
+        "laser_musket"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench",
+        "ripper",
+        "sledgehammer"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade"
+      ],
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ],
+      "chems": [
+        "stimpak"
+      ]
+    },
+    "cost": 70
+  },
+  {
+    "name": "sole_survivor_loner",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "power_armor_frame",
+        "t45_power_armor",
+        "t51_power_armor",
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle",
+        "institute_laser_rifle",
+        "laser_musket",
+        "laser_rifle",
+        "plasma_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "baton",
+        "board",
+        "deathclaw_gauntlet",
+        "machete",
+        "pipe_wrench",
+        "ripper",
+        "sledgehammer",
+        "stun_baton",
+        "super_sledge"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "alien_blaster",
+        "gamma_gun",
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ],
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ],
+      "chems": [
+        "stimpak"
+      ]
+    },
+    "cost": 140
+  },
+  {
+    "name": "sturges",
+    "heroic": true,
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "hunting_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "machete",
+        "pipe_wrench"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ]
+    },
+    "cost": 100
+  },
+  {
+    "name": "x6-88_courser",
+    "heroic": true,
+    "carry_slots": {
+      "heavy_weapons": [
+        "missile_launcher"
+      ],
+      "rifles": [
+        "institute_laser_rifle",
+        "plasma_rifle"
+      ],
+      "melee": [
+        "stun_baton"
+      ],
+      "pistols": [
+        "gamma_gun",
+        "laser_pistol"
+      ]
+    },
+    "cost": 188
+  }
+]

@@ -1,0 +1,544 @@
+{
+  "heavy_weapons": [
+    {
+      "name": "broadsider",
+      "cost": 25
+    },
+    {
+      "name": "gatling_laser",
+      "cost": 30
+    },
+    {
+      "name": "minigun",
+      "cost": 30
+    },
+    {
+      "name": "missile_launcher",
+      "cost": 30
+    }
+  ],
+  "rifles": [
+    {
+      "name": "assault_rifle",
+      "cost": 8
+    },
+    {
+      "name": "assaultron_head_laser",
+      "cost": 0
+    },
+    {
+      "name": "bolt_action_pipe_rifle",
+      "cost": 10
+    },
+    {
+      "name": "combat_rifle",
+      "cost": 14
+    },
+    {
+      "name": "combat_shotgun",
+      "cost": 10
+    },
+    {
+      "name": "double_barrel_shotgun",
+      "cost": 17
+    },
+    {
+      "name": "hunting_rifle",
+      "cost": 20
+    },
+    {
+      "name": "institute_laser_rifle",
+      "cost": 17
+    },
+    {
+      "name": "laser_musket",
+      "cost": 11
+    },
+    {
+      "name": "laser_rifle",
+      "cost": 30
+    },
+    {
+      "name": "laser_turret",
+      "cost": 10
+    },
+    {
+      "name": "machine_gun_turret_mk1",
+      "cost": 10
+    },
+    {
+      "name": "plasma_rifle",
+      "cost": 24
+    }
+  ],
+  "pistols": [
+    {
+      "name": "44_revolver",
+      "cost": 6
+    },
+    {
+      "name": "10mm_pistol",
+      "cost": 6
+    },
+    {
+      "name": "alien_blaster",
+      "cost": 6
+    },
+    {
+      "name": "eyebot_laser",
+      "cost": 0
+    },
+    {
+      "name": "gamma_gun",
+      "cost": 23
+    },
+    {
+      "name": "indys_freezing_44",
+      "cost": 9
+    },
+    {
+      "name": "laser_pistol",
+      "cost": 7
+    },
+    {
+      "name": "mr_handy_flamer",
+      "cost": 0
+    },
+    {
+      "name": "pipe_pistol",
+      "cost": 4
+    },
+    {
+      "name": "protectron_hand_laser",
+      "cost": 0
+    },
+    {
+      "name": "thirst_zapper_cola",
+      "cost": 4
+    }
+  ],
+  "melee": [
+    {
+      "name": "assaultron_swipe",
+      "cost": 0
+    },
+    {
+      "name": "baseball_bat",
+      "cost": 5
+    },
+    {
+      "name": "baton",
+      "cost": 8
+    },
+    {
+      "name": "board",
+      "cost": 9
+    },
+    {
+      "name": "deathclaw_crush",
+      "cost": 0
+    },
+    {
+      "name": "deathclaw_gauntlet",
+      "cost": 15
+    },
+    {
+      "name": "deathclaw_swipe",
+      "cost": 0
+    },
+    {
+      "name": "dog_bite",
+      "cost": 0
+    },
+    {
+      "name": "feral_ghoul_swipe",
+      "cost": 0
+    },
+    {
+      "name": "fire_hydrant_bat",
+      "cost": 24
+    },
+    {
+      "name": "hound_bite",
+      "cost": 0
+    },
+    {
+      "name": "huge_club",
+      "cost": 19
+    },
+    {
+      "name": "lead_pipe",
+      "cost": 12
+    },
+    {
+      "name": "machete",
+      "cost": 5
+    },
+    {
+      "name": "mr_handy_buzzsaw",
+      "cost": 0
+    },
+    {
+      "name": "pipe_wrench",
+      "cost": 7
+    },
+    {
+      "name": "radroach_swarm_bite",
+      "cost": 0
+    },
+    {
+      "name": "radroach_pincers_sting",
+      "cost": 0
+    },
+    {
+      "name": "ripper",
+      "cost": 7
+    },
+    {
+      "name": "sledgehammer",
+      "cost": 12
+    },
+    {
+      "name": "stun_baton",
+      "cost": 30
+    },
+    {
+      "name": "super_sledge",
+      "cost": 30
+    },
+    {
+      "name": "tire_iron",
+      "cost": 12
+    }
+  ],
+  "thrown": [
+    {
+      "name": "baseball_grenade",
+      "cost": 6
+    },
+    {
+      "name": "behemoth_rock_throw",
+      "cost": 12
+    },
+    {
+      "name": "cryo_grenade",
+      "cost": 7
+    },
+    {
+      "name": "frag_grenade",
+      "cost": 7
+    },
+    {
+      "name": "molotov_cocktail",
+      "cost": 6
+    },
+    {
+      "name": "pulse_grenade",
+      "cost": 5
+    },
+    {
+      "name": "suicider_mini_nuke",
+      "cost": 0
+    }
+  ],
+  "mines": [
+    {
+      "name": "bottlecap_mine",
+      "cost": 20
+    },
+    {
+      "name": "fragmentation_mine",
+      "cost": 10
+    }
+  ],
+  "armor": [
+    {
+      "name": "armored_pads",
+      "cost": 12
+    },
+    {
+      "name": "army_helmet",
+      "cost": 15
+    },
+    {
+      "name": "chain_dog_collar",
+      "cost": 13
+    },
+    {
+      "name": "chains",
+      "cost": 8
+    },
+    {
+      "name": "combat_armor",
+      "cost": 18
+    },
+    {
+      "name": "damaged_hazmat_suit",
+      "cost": 15
+    },
+    {
+      "name": "freefall_leg_armor",
+      "cost": 15
+    },
+    {
+      "name": "hazmat_suit",
+      "cost": 20
+    },
+    {
+      "name": "heavy_gauntlets",
+      "cost": 15
+    },
+    {
+      "name": "power_armor_frame",
+      "cost": 15
+    },
+    {
+      "name": "rocks_bladed_helm",
+      "cost": 23
+    },
+    {
+      "name": "sturdy_combat_armor",
+      "cost": 30
+    },
+    {
+      "name": "sturdy_leather_armor",
+      "cost": 23
+    },
+    {
+      "name": "t45_power_armor",
+      "cost": 36
+    },
+    {
+      "name": "t51_power_armor",
+      "cost": 54
+    },
+    {
+      "name": "t60_power_armor",
+      "cost": 72
+    }
+  ],
+  "clothing": [
+    {
+      "name": "aviator_cap",
+      "cost": 20
+    },
+    {
+      "name": "atom_cats_jacket_and_jeans",
+      "cost": 10
+    },
+    {
+      "name": "bowler_hat",
+      "cost": 15
+    },
+    {
+      "name": "camoflage",
+      "cost": 20
+    },
+    {
+      "name": "dirty_postman_uniform",
+      "cost": 10
+    },
+    {
+      "name": "dog_bandana",
+      "cost": 10
+    },
+    {
+      "name": "eyeglasses",
+      "cost": 4
+    },
+    {
+      "name": "military_fatigues",
+      "cost": 5
+    },
+    {
+      "name": "patched_three_piece_suit",
+      "cost": 8
+    },
+    {
+      "name": "road_goggles",
+      "cost": 4
+    },
+    {
+      "name": "robotic_bits",
+      "cost": 5
+    },
+    {
+      "name": "sea_captains_hat",
+      "cost": 10
+    },
+    {
+      "name": "vault_111_jumpsuit",
+      "cost": 10
+    }
+  ],
+  "chems": [
+    {
+      "name": "addictol",
+      "cost": 15
+    },
+    {
+      "name": "berry_mentats",
+      "cost": 25
+    },
+    {
+      "name": "buffout",
+      "cost": 30
+    },
+    {
+      "name": "calmex",
+      "cost": 30
+    },
+    {
+      "name": "day_tripper",
+      "cost": 17
+    },
+    {
+      "name": "fury",
+      "cost": 30
+    },
+    {
+      "name": "jet",
+      "cost": 30
+    },
+    {
+      "name": "med-x",
+      "cost": 25
+    },
+    {
+      "name": "mentats",
+      "cost": 20
+    },
+    {
+      "name": "mysterious_serum",
+      "cost": 30
+    },
+    {
+      "name": "orange_mentats",
+      "cost": 30
+    },
+    {
+      "name": "overdrive",
+      "cost": 30
+    },
+    {
+      "name": "psycho",
+      "cost": 30
+    },
+    {
+      "name": "radaway",
+      "cost": 30
+    },
+    {
+      "name": "rad-x",
+      "cost": 20
+    },
+    {
+      "name": "refreshing_beverage",
+      "cost": 80
+    },
+    {
+      "name": "stimpak",
+      "cost": 58
+    },
+    {
+      "name": "x-cell",
+      "cost": 37
+    }
+  ],
+  "alcohol": [
+    {
+      "name": "bourbon",
+      "cost": 10
+    },
+    {
+      "name": "ice_cold_gwinett_ale",
+      "cost": 14
+    },
+    {
+      "name": "rum",
+      "cost": 13
+    },
+    {
+      "name": "vodka",
+      "cost": 13
+    },
+    {
+      "name": "whiskey",
+      "cost": 12
+    }
+  ],
+  "heroes_and_leaders": [
+    {
+      "name": "heroic",
+      "cost": 60
+    },
+    {
+      "name": "berserker",
+      "cost": 20
+    },
+    {
+      "name": "blitzer",
+      "cost": 30
+    },
+    {
+      "name": "bodyguard",
+      "cost": 25
+    },
+    {
+      "name": "brawler",
+      "cost": 15
+    },
+    {
+      "name": "bruiser",
+      "cost": 40
+    },
+    {
+      "name": "commander",
+      "cost": 55
+    },
+    {
+      "name": "defender",
+      "cost": 60
+    },
+    {
+      "name": "dweller",
+      "cost": 13
+    },
+    {
+      "name": "fusilier",
+      "cost": 30
+    },
+    {
+      "name": "hunter",
+      "cost": 15
+    },
+    {
+      "name": "old_timer",
+      "cost": 17
+    },
+    {
+      "name": "tech",
+      "cost": 20
+    },
+    {
+      "name": "thief",
+      "cost": 10
+    },
+    {
+      "name": "veteran",
+      "cost": 25
+    },
+    {
+      "name": "warden",
+      "cost": 30
+    },
+    {
+      "name": "wasteland_searcher",
+      "cost": 7
+    },
+    {
+      "name": "wrestler",
+      "cost": 15
+    }
+  ]
+}

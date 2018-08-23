@@ -1,0 +1,214 @@
+[
+  {
+    "name": "aviator",
+    "heroic": true,
+    "must_wear": [
+      "clothing.aviator_cap"
+    ],
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_shotgun",
+        "hunting_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "lead_pipe",
+        "sledgehammer"
+      ],
+      "pistols": [
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 67
+  },
+  {
+    "name": "behemoth",
+    "cost": 209,
+    "carry_slots": {
+      "melee": [
+        "fire_hydrant_bat"
+      ],
+      "thrown": [
+        "behemoth_rock_throw"
+      ]
+    }
+  },
+  {
+    "name": "brute",
+    "heroic": true,
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "hunting_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "huge_club",
+        "sledgehammer",
+        "super_sledge"
+      ],
+      "pistols": [
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 81
+  },
+  {
+    "name": "enslaved_tech",
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "lead_pipe"
+      ],
+      "pistols": [
+        "pipe_pistol"
+      ]
+    },
+    "cost": 33
+  },
+  {
+    "name": "hammer",
+    "heroic": true,
+    "carry_slots": {
+      "heavy_weapons": [
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "huge_club",
+        "sledgehammer",
+        "super_sledge"
+      ],
+      "pistols": [
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 114
+  },
+  {
+    "name": "master",
+    "heroic": true,
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "huge_club",
+        "sledgehammer",
+        "super_sledge"
+      ],
+      "pistols": [
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 95
+  },
+  {
+    "name": "mutant_hound",
+    "must_carry": [
+      "melee.hound_bite"
+    ],
+    "cost": 63
+  },
+  {
+    "name": "mutant_hound_fiend",
+    "must_carry": [
+      "melee.hound_bite"
+    ],
+    "cost": 63
+  },
+  {
+    "name": "suicider",
+    "must_carry": [
+      "thrown.suicider_mini_nuke"
+    ],
+    "cost": 72
+  },
+  {
+    "name": "super_mutant",
+    "heroic": true,
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "pipe_rifle",
+        "hunting_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "lead_pipe",
+        "sledgehammer"
+      ],
+      "pistols": [
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 40
+  }
+]

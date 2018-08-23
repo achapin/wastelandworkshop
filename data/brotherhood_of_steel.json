@@ -1,0 +1,276 @@
+[
+  {
+    "name": "aspirant_goddard",
+    "heroic": true,
+    "must_wear": [
+      "armor.t60_power_armor"
+    ],
+    "carry_slots": {
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle"
+      ],
+      "melee": [
+        "machete",
+        "ripper"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "fragmentation_grenade"
+      ]
+    },
+    "cost": 105
+  },
+  {
+    "name": "eyebot",
+    "must_carry": [
+      "pistols.eyebot_laser"
+    ],
+    "cost": 59
+  },
+  {
+    "name": "field_scribe",
+    "heroic": true,
+    "carry_slots": {
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ]
+    },
+    "consumables": {
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ]
+    },
+    "cost": 43
+  },
+  {
+    "name": "lancer",
+    "heroic": true,
+    "carry_slots": {
+      "rifles": [
+        "laser_rifle",
+        "plasma_rifle"
+      ]
+    },
+    "cost": 53
+  },
+  {
+    "name": "knight",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "t45_power_armor",
+        "t51_power_armor",
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ]
+    },
+    "cost": 62
+  },
+  {
+    "name": "knight_captain_cade",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "t45_power_armor",
+        "t51_power_armor",
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ],
+      "chems": [
+        "stimpak"
+      ]
+    },
+    "cost": 114
+  },
+  {
+    "name": "knight_patrol",
+    "heroic": true,
+    "carry_slots": {
+      "melee": [
+        "machete"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "fragmentation_grenade"
+      ]
+    },
+    "cost": 51
+  },
+  {
+    "name": "knight_patrol_blade",
+    "heroic": true,
+    "carry_slots": {
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "fragmentation_grenade"
+      ],
+      "mines": [
+        "fragmentation_mine"
+      ]
+    },
+    "cost": 47
+  },
+  {
+    "name": "paladin",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "t45_power_armor",
+        "t51_power_armor",
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ]
+    },
+    "cost": 90
+  },
+  {
+    "name": "paladin_danse",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ]
+    },
+    "cost": 128
+  }
+]
