@@ -9,6 +9,8 @@ var addButton;
 var addSection;
 var capsSection;
 
+var lastTextFieldValue;
+
 var totalCaps;
 
 function getUrl(url){
@@ -143,10 +145,19 @@ function addCharacter(characterElement){
 	nameSection.appendChild(name);
 	charaSection.appendChild(nameSection);
 
+	var close = document.createElement("p");
+	var closeButton = document.createTextNode("X");
+	close.appendChild(closeButton);
+	charaSection.appendChild(close);
+
 	var costSection = document.createElement("p");
 	var cost = document.createTextNode(characterElement.cost);
 	costSection.appendChild(cost);
 	charaSection.appendChild(costSection);
+	costSection.appendChild(document.createTextNode(" + Equipment: "));
+	var equipmentCost = document.createElement("span");
+	equipmentCost.innerHTML = "0";
+	costSection.appendChild(equipmentCost);
 
 	if(characterElement.heroic){
 		var heroicSection = document.createElement("div");
@@ -201,18 +212,143 @@ function addCharacter(characterElement){
 		});
 	}
 
-	charaSection.appendChild(equipmentSection);
-	var close = document.createElement("p");
-	var closeButton = document.createTextNode("X");
+	if(characterElement.carry_slots != null){
+		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
+			var carrySection = document.createElement("div");
+			var carryHeader = document.createElement("h2");
+			var carryHeaderText = document.createTextNode(slotType);
+			carryHeader.appendChild(carryHeaderText);
+			carrySection.appendChild(carryHeader);
+			var slotOption = characterElement.carry_slots[slotType];
+			slotOption.forEach(function(option) {
+				var optionElement = getUpgrade(slotType, option);
+				var optionSection = document.createElement("div");
+				var optionNameSection = document.createElement("p");
+				optionNameSection.appendChild(document.createTextNode(optionElement.name));
+				var optionCostSection = document.createElement("p");
+				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
+				var optionCheckBox = document.createElement('input');
+				optionCheckBox.type = 'checkbox';
+				optionSection.appendChild(optionNameSection);
+				optionSection.appendChild(optionCostSection);
+				optionSection.appendChild(optionCheckBox);
+				
+				optionCheckBox.addEventListener("click", function(){
+				if(optionCheckBox.checked){
+					totalCaps += optionElement.cost;
+					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost
+					updateCaps();
+				}else{
+					totalCaps -= optionElement.cost;
+					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost
+					updateCaps();
+				}
+			});
+
+				carrySection.appendChild(optionSection);
+			});
+			equipmentSection.appendChild(carrySection);
+		});
+	}
+
+	if(characterElement.consumables != null){
+		Object.keys(characterElement.consumables).forEach(function (slotType) {
+			var consumeableSection = document.createElement("div");
+			var consumeableHeader = document.createElement("h2");
+			var consumeableHeaderText = document.createTextNode(slotType);
+			consumeableHeader.appendChild(consumeableHeaderText);
+			consumeableSection.appendChild(consumeableHeader);
+
+			var slotOption = characterElement.consumables[slotType];
+			slotOption.forEach(function(option) {
+				var optionElement = getUpgrade(slotType, option);
+				var optionSection = document.createElement("div");
+				var optionNameSection = document.createElement("p");
+				optionNameSection.appendChild(document.createTextNode(optionElement.name));
+				var optionCostSection = document.createElement("p");
+				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
+				optionCostSection.appendChild(document.createTextNode(" X"));
+
+				var optionIncreaseCount = document.createElement("span");
+				optionIncreaseCount.appendChild(document.createTextNode("+"));
+				optionIncreaseCount.addEventListener("click", function(){
+					var value = parseInt(optionInput.value);
+					if(isNaN(value)){
+						optionInput.value = "0";
+					}else{
+						optionInput.value = value + 1;
+						totalCaps += optionElement.cost;
+						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost;
+						updateCaps();
+					}
+				});
+
+				var optionDecreaseCount = document.createElement("span");
+				optionDecreaseCount.appendChild(document.createTextNode("-"));
+				optionDecreaseCount.addEventListener("click", function(){
+					var value = parseInt(optionInput.value);
+					if(isNaN(value)){
+						optionInput.value = "0";
+					}else if(value > 0){
+						optionInput.value = value - 1;
+						totalCaps -= optionElement.cost;
+						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost;
+						updateCaps();
+					}
+				});
+
+				var optionInput = document.createElement('input');
+				optionInput.type = 'text';
+				optionInput.value = "0";
+				optionInput.addEventListener("focusin", function(){
+					var value = parseInt(optionInput.value);
+					if(isNaN(value)){
+						lastTextFieldValue = 0;
+					}else{
+						lastTextFieldValue = value;
+					}
+				})
+				optionInput.addEventListener("change", function(){
+					var value = parseInt(optionInput.value);
+					if(isNaN(value)){
+						optionInput.value = lastTextFieldValue;
+					}else{
+						if(value < lastTextFieldValue){
+							value = 0;
+							optionInput.value = "0";
+						}
+						totalCaps += (value - lastTextFieldValue) * optionElement.cost;
+						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + (value - lastTextFieldValue) * optionElement.cost;
+						updateCaps();
+					}
+				});
+
+				optionCostSection.appendChild(optionIncreaseCount);
+				optionCostSection.appendChild(optionInput);
+				optionCostSection.appendChild(optionDecreaseCount);
+
+				optionSection.appendChild(optionNameSection);
+				optionSection.appendChild(optionCostSection);
+				consumeableSection.appendChild(optionSection);
+			});
+
+			equipmentSection.appendChild(consumeableSection);
+		});
+	}
+
 	close.addEventListener("click", function() 
 		{
 			forceSection.removeChild(charaSection);
-			totalCaps -= characterElement.cost; //TODO: include equipment
+			var heroicCost = 0; 
+			if(heroicCheckBox.checked){
+				heroicCost = upgrades.heroes_and_leaders[0].cost;
+			}
+			totalCaps -= (characterElement.cost + parseInt(equipmentCost.innerHTML) + heroicCost);
 			updateCaps();
 		}
 	);
-	close.appendChild(closeButton);
-	charaSection.appendChild(close);
+
+	charaSection.appendChild(equipmentSection);
 	forceSection.appendChild(charaSection);
 
 	totalCaps += characterElement.cost;
