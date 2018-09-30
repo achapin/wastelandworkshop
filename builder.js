@@ -123,6 +123,19 @@ function openAddSection(){
 	addSection.style.display = "block";
 }
 
+function getUpgrade(elementType, elementName){
+	if(upgrades[elementType] == null){
+		return null;
+	}
+	var toReturn = null;
+	upgrades[elementType].forEach(function(element){
+		if(element.name == elementName){
+			toReturn = element;
+		}
+	});
+	return toReturn;
+}
+
 function addCharacter(characterElement){
 	var charaSection = document.createElement("div");
 	var nameSection = document.createElement("h1");
@@ -158,6 +171,37 @@ function addCharacter(characterElement){
 		charaSection.appendChild(heroicSection);
 	}
 
+	var equipmentSection = document.createElement("div");
+	if(characterElement.must_wear){
+		characterElement.must_wear.forEach(function(element){
+			var elements = element.split(".");
+			var upgrade = getUpgrade(elements[0], elements[1]);
+			if(upgrade == null){
+				alert("No upgrade " + elements[1] + " of type " + elements[0] + " found");
+			}else{
+				var mustWearSection = document.createElement("div");
+				var mustWearDescription = document.createTextNode(elements[1]);
+				mustWearSection.appendChild(mustWearDescription);
+				equipmentSection.appendChild(mustWearSection);
+			}
+		});
+	}
+	if(characterElement.must_carry){
+		characterElement.must_carry.forEach(function(element){
+			var elements = element.split(".");
+			var upgrade = getUpgrade(elements[0], elements[1]);
+			if(upgrade == null){
+				alert("No upgrade " + elements[1] + " of type " + elements[0] + " found");
+			}else{
+				var mustCarrySection = document.createElement("div");
+				var mustCarryDescription = document.createTextNode(elements[1]);
+				mustCarrySection.appendChild(mustCarryDescription);
+				equipmentSection.appendChild(mustCarrySection);
+			}
+		});
+	}
+
+	charaSection.appendChild(equipmentSection);
 	var close = document.createElement("p");
 	var closeButton = document.createTextNode("X");
 	close.addEventListener("click", function() 
