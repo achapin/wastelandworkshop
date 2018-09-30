@@ -135,6 +135,29 @@ function addCharacter(characterElement){
 	costSection.appendChild(cost);
 	charaSection.appendChild(costSection);
 
+	if(characterElement.heroic){
+		var heroicSection = document.createElement("div");
+		var heroicCheckBox = document.createElement('input');
+		heroicCheckBox.type = 'checkbox';
+		var heroicCostSection = document.createElement("p");
+		var heroicDescription = document.createTextNode("Heroic:");
+		heroicSection.appendChild(heroicDescription);
+		heroicSection.appendChild(heroicCheckBox);
+		heroicSection.appendChild(heroicCostSection);
+		heroicCheckBox.addEventListener("click", function(){
+			if(heroicCheckBox.checked){
+				totalCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+				heroicCostSection.innerHTML = "+" + upgrades.heroes_and_leaders[0].cost;
+				updateCaps();
+			}else{
+				totalCaps -= upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+				updateCaps();
+				heroicCostSection.innerHTML = "";
+			}
+		});
+		charaSection.appendChild(heroicSection);
+	}
+
 	var close = document.createElement("p");
 	var closeButton = document.createTextNode("X");
 	close.addEventListener("click", function() 
