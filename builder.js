@@ -99,17 +99,19 @@ function clearForce(){
 	var list = document.createElement("ul");
 	characters.forEach(function(characterElement){
 		var para = document.createElement("li");
-		var node = document.createTextNode(characterElement.name);
+		var nameNode = document.createTextNode(characterElement.name);
+		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		para.addEventListener("click", function() { addCharacter(characterElement);});
-		para.appendChild(node);
+		para.appendChild(nameNode);
+		para.appendChild(pointsNode);
 		list.appendChild(para);
 	});
-	addSection.appendChild(list);
 	var close = document.createElement("p");
 	var closeButton = document.createTextNode("X");
 	close.addEventListener("click", closeAddSection);
 	close.appendChild(closeButton);
 	addSection.appendChild(close);
+	addSection.appendChild(list);
 	closeAddSection();
 	totalCaps = 0;
 	updateCaps();
@@ -140,27 +142,50 @@ function getUpgrade(elementType, elementName){
 
 function addCharacter(characterElement){
 	var charaSection = document.createElement("div");
+	charaSection.setAttribute("class", "characterElement");
+	
+	var headerSection = document.createElement("div");
+	headerSection.setAttribute("class", "row");
+	
+	var close = document.createElement("div");
+	var closeButton = document.createTextNode("X");
+	close.setAttribute("class", "col-sm-1 float-left");
+	close.appendChild(closeButton);
+	headerSection.appendChild(close);
+
 	var nameSection = document.createElement("h1");
+	nameSection.setAttribute("class", "col-sm-6 float-left");
 	var name = document.createTextNode(characterElement.name);
 	nameSection.appendChild(name);
-	charaSection.appendChild(nameSection);
+	headerSection.appendChild(nameSection);
 
-	var close = document.createElement("p");
-	var closeButton = document.createTextNode("X");
-	close.appendChild(closeButton);
-	charaSection.appendChild(close);
-
-	var costSection = document.createElement("p");
+	var costSection = document.createElement("div");
 	var cost = document.createTextNode(characterElement.cost);
 	costSection.appendChild(cost);
-	charaSection.appendChild(costSection);
 	costSection.appendChild(document.createTextNode(" + Equipment: "));
 	var equipmentCost = document.createElement("span");
 	equipmentCost.innerHTML = "0";
 	costSection.appendChild(equipmentCost);
+	costSection.setAttribute("class", "col-sm-3 float-left");
+	headerSection.appendChild(costSection);
+
+	var copy = document.createElement("div");
+	var copyButton = document.createTextNode("+");
+	copy.setAttribute("class", "col-sm-1 float-right");
+	copy.appendChild(copyButton);
+	headerSection.appendChild(copy);
+	copy.addEventListener("click", function() {
+		alert("Don't copy that floppy!");
+	})
+
+	charaSection.appendChild(headerSection);
+
+	var specialSection = document.createElement("div");
+	specialSection.setAttribute("class", "row");
 
 	if(characterElement.heroic){
 		var heroicSection = document.createElement("div");
+		heroicSection.setAttribute("class", "col-sm-2 float-left");
 		var heroicCheckBox = document.createElement('input');
 		heroicCheckBox.type = 'checkbox';
 		var heroicCostSection = document.createElement("p");
@@ -179,42 +204,80 @@ function addCharacter(characterElement){
 				heroicCostSection.innerHTML = "";
 			}
 		});
-		charaSection.appendChild(heroicSection);
+		specialSection.appendChild(heroicSection);
 	}
 
-	var equipmentSection = document.createElement("div");
 	if(characterElement.must_wear){
+		var mustWearSection = document.createElement("div");
+		mustWearSection.setAttribute("class", "col-sm-5 float-left");
 		characterElement.must_wear.forEach(function(element){
 			var elements = element.split(".");
 			var upgrade = getUpgrade(elements[0], elements[1]);
 			if(upgrade == null){
 				alert("No upgrade " + elements[1] + " of type " + elements[0] + " found");
 			}else{
-				var mustWearSection = document.createElement("div");
+				var mustWearElement = document.createElement("div");
 				var mustWearDescription = document.createTextNode(elements[1]);
-				mustWearSection.appendChild(mustWearDescription);
-				equipmentSection.appendChild(mustWearSection);
+				mustWearElement.appendChild(mustWearDescription);
+				mustWearSection.appendChild(mustWearElement);
 			}
 		});
+		specialSection.appendChild(mustWearSection);
 	}
 	if(characterElement.must_carry){
+		var mustCarrySection = document.createElement("div");
+		mustCarrySection.setAttribute("class", "col-sm-5 float-left");
 		characterElement.must_carry.forEach(function(element){
 			var elements = element.split(".");
 			var upgrade = getUpgrade(elements[0], elements[1]);
 			if(upgrade == null){
 				alert("No upgrade " + elements[1] + " of type " + elements[0] + " found");
 			}else{
-				var mustCarrySection = document.createElement("div");
+				var mustCarryElement = document.createElement("div");
 				var mustCarryDescription = document.createTextNode(elements[1]);
-				mustCarrySection.appendChild(mustCarryDescription);
-				equipmentSection.appendChild(mustCarrySection);
+				mustCarryElement.appendChild(mustCarryDescription);
+				mustCarrySection.appendChild(mustCarryElement);
 			}
 		});
+		specialSection.appendChild(mustCarrySection);
 	}
+
+	charaSection.appendChild(specialSection);
+
+	var equipmentToggle = document.createElement("div");
+	equipmentToggle.setAttribute("class", "row");
+	var showEquipment = document.createElement("div");
+	showEquipment.setAttribute("class", "col-sm-12 float-left");
+	showEquipment.appendChild(document.createTextNode("Show Equipment"));
+	equipmentToggle.appendChild(showEquipment);
+	showEquipment.style.display = "none";
+	var hideEquipment = document.createElement("div");
+	hideEquipment.setAttribute("class", "col-sm-12 float-left");
+	hideEquipment.appendChild(document.createTextNode("Hide Equipment"));
+	equipmentToggle.appendChild(hideEquipment);
+
+	charaSection.appendChild(equipmentToggle);
+
+	var equipmentSection = document.createElement("div");
+	equipmentSection.setAttribute("class", "row");
+
+	var numCarrySections = 0;
+	if(characterElement.carry_slots != null){
+		numCarrySections += Object.keys(characterElement.carry_slots).length;
+	}
+	if(characterElement.consumables != null){
+		numCarrySections += Object.keys(characterElement.consumables).length;
+	}
+	if(numCarrySections == 0){
+		numCarrySections = 1;
+	}
+	var sectionSize = Math.floor(12 / numCarrySections);
+	var colClass = "col-sm-"+sectionSize + " float-left";
 
 	if(characterElement.carry_slots != null){
 		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
 			var carrySection = document.createElement("div");
+			carrySection.setAttribute("class", colClass);
 			var carryHeader = document.createElement("h2");
 			var carryHeaderText = document.createTextNode(slotType);
 			carryHeader.appendChild(carryHeaderText);
@@ -254,6 +317,7 @@ function addCharacter(characterElement){
 	if(characterElement.consumables != null){
 		Object.keys(characterElement.consumables).forEach(function (slotType) {
 			var consumeableSection = document.createElement("div");
+			consumeableSection.setAttribute("class", colClass);
 			var consumeableHeader = document.createElement("h2");
 			var consumeableHeaderText = document.createTextNode(slotType);
 			consumeableHeader.appendChild(consumeableHeaderText);
@@ -336,11 +400,22 @@ function addCharacter(characterElement){
 		});
 	}
 
+	showEquipment.addEventListener("click", function() {
+		showEquipment.style.display = "none";
+		equipmentSection.style.display = "block";
+		hideEquipment.style.display = "block";
+	});
+	hideEquipment.addEventListener("click", function() {
+		equipmentSection.style.display = "none";
+		showEquipment.style.display = "block";
+		hideEquipment.style.display = "none";
+	});
+
 	close.addEventListener("click", function() 
 		{
 			forceSection.removeChild(charaSection);
 			var heroicCost = 0; 
-			if(heroicCheckBox.checked){
+			if(heroicCheckBox != null && heroicCheckBox.checked){
 				heroicCost = upgrades.heroes_and_leaders[0].cost;
 			}
 			totalCaps -= (characterElement.cost + parseInt(equipmentCost.innerHTML) + heroicCost);

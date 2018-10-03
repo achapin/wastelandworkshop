@@ -1,0 +1,32 @@
+#selector {
+	float: left;
+}
+
+#caps {
+	float: left;
+}
+
+#selector ul li {
+	float: left;
+	list-style-type: none;
+	padding: 5px;
+}
+
+.add{
+	clear:both;
+}
+
+#addSection ul li {
+	float: left;
+	list-style-type: none;
+	padding: 5px;
+}
+
+.force{
+	clear:both;
+}
+
+.characterElement{
+	border: 2px; 
+	border-color: black;
+}
