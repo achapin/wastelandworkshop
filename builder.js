@@ -193,7 +193,7 @@ function addCharacter(characterElement){
 		heroicSection.setAttribute("class", "col-sm-2 float-left");
 		var heroicCheckBox = document.createElement('input');
 		heroicCheckBox.type = 'checkbox';
-		var heroicCostSection = document.createElement("p");
+		var heroicCostSection = document.createElement("span");
 		var heroicDescription = document.createTextNode("Heroic:");
 		heroicSection.appendChild(heroicDescription);
 		heroicSection.appendChild(heroicCheckBox);
@@ -201,12 +201,15 @@ function addCharacter(characterElement){
 		heroicCheckBox.addEventListener("click", function(){
 			if(heroicCheckBox.checked){
 				totalCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+				heroicCostSection.setAttribute("class", "cost");
 				heroicCostSection.innerHTML = "+" + upgrades.heroes_and_leaders[0].cost;
+				heroicCostSection.style.display = "block";
 				updateCaps();
 			}else{
 				totalCaps -= upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
 				updateCaps();
 				heroicCostSection.innerHTML = "";
+				heroicCostSection.style.display = "none";
 			}
 		});
 		specialSection.appendChild(heroicSection);
@@ -272,7 +275,7 @@ function addCharacter(characterElement){
 	if(characterElement.wear_slots != null){
 		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
 			var wearSection = document.createElement("div");
-			wearSection.setAttribute("class", "grid-item");
+			wearSection.setAttribute("class", "grid-item carry-section");
 
 			var carryHeader = document.createElement("h2");
 			var carryHeaderText = document.createTextNode(slotType);
@@ -286,6 +289,7 @@ function addCharacter(characterElement){
 				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
 				var optionCostSection = document.createElement("span");
+				optionCostSection.setAttribute("class", "cost");
 				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
 				var optionCheckBox = document.createElement('input');
 				optionCheckBox.type = 'checkbox';
@@ -315,7 +319,7 @@ function addCharacter(characterElement){
 	if(characterElement.carry_slots != null){
 		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
 			var carrySection = document.createElement("div");
-			carrySection.setAttribute("class", "grid-item");
+			carrySection.setAttribute("class", "grid-item carry-section");
 			var carryHeader = document.createElement("h2");
 			var carryHeaderText = document.createTextNode(slotType);
 			carryHeader.appendChild(carryHeaderText);
@@ -327,6 +331,7 @@ function addCharacter(characterElement){
 				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
 				var optionCostSection = document.createElement("span");
+				optionCostSection.setAttribute("class", "cost");
 				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
 				var optionCheckBox = document.createElement('input');
 				optionCheckBox.type = 'checkbox';
@@ -365,11 +370,12 @@ function addCharacter(characterElement){
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 				var optionSection = document.createElement("div");
-				var optionNameSection = document.createElement("p");
+				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
-				var optionCostSection = document.createElement("p");
+				var optionCostSection = document.createElement("span");
+				optionCostSection.setAttribute("class", "cost");
 				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
-				optionCostSection.appendChild(document.createTextNode(" X"));
+				optionCostSection.appendChild(document.createTextNode(" X "));
 
 				var optionIncreaseCount = document.createElement("button");
 				optionIncreaseCount.setAttribute("class", "btn btn-primary");
@@ -427,12 +433,12 @@ function addCharacter(characterElement){
 					}
 				});
 
-				optionCostSection.appendChild(optionIncreaseCount);
-				optionCostSection.appendChild(optionInput);
-				optionCostSection.appendChild(optionDecreaseCount);
-
 				optionSection.appendChild(optionNameSection);
 				optionSection.appendChild(optionCostSection);
+				optionSection.appendChild(optionIncreaseCount);
+				optionSection.appendChild(optionInput);
+				optionSection.appendChild(optionDecreaseCount);
+
 				consumeableSection.appendChild(optionSection);
 			});
 

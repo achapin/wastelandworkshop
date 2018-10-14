@@ -6,6 +6,25 @@
 	clear: both;
 }
 
+.button-force-selector {
+	border-radius: 0px 0px 20px 20px;
+}
+
+#bos {
+	background-color: gray;
+	color: white;
+}
+
+#super_mutants {
+	background-color: green;
+	color: gray;
+}
+
+#survivors {
+	background-color: blue;
+	color: white;
+}
+
 #selector ul li {
 	float: left;
 	list-style-type: none;
@@ -29,6 +48,8 @@
 .characterElement{
 	border: 2px; 
 	border-color: black;
+	border-style: solid;
+	padding: 1em;
 }
 
 .grid-container {
@@ -38,4 +59,14 @@
 
 .grid-item {
 	padding: 20px;
+}
+
+.carry-section {
+	background-color: gray;
+}
+
+.cost {
+	background-color: red;
+	color: white;
+	padding: 2px;
 }
