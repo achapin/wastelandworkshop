@@ -8,5 +8,6 @@ A skirmish squad builder for Fallout Wasteland Warfare
 * Changes affect url query string
 * Force loaded via query string
 * Weapon mods
-* Armor
+* Armor Exclusivity
 * Localization
+* Printable lists

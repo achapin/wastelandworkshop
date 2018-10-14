@@ -269,6 +269,49 @@ function addCharacter(characterElement){
 		equipmentSection.setAttribute("class", "grid-container");
 	}
 
+	if(characterElement.wear_slots != null){
+		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
+			var wearSection = document.createElement("div");
+			wearSection.setAttribute("class", "grid-item");
+
+			var carryHeader = document.createElement("h2");
+			var carryHeaderText = document.createTextNode(slotType);
+			carryHeader.appendChild(carryHeaderText);
+			wearSection.appendChild(carryHeader)
+
+			var slotOption = characterElement.wear_slots[slotType];
+			slotOption.forEach(function(option) {
+				var optionElement = getUpgrade(slotType, option);
+				var optionSection = document.createElement("div");
+				var optionNameSection = document.createElement("span");
+				optionNameSection.appendChild(document.createTextNode(optionElement.name));
+				var optionCostSection = document.createElement("span");
+				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
+				var optionCheckBox = document.createElement('input');
+				optionCheckBox.type = 'checkbox';
+				optionCheckBox.name = slotType;
+				optionCheckBox.value = optionElement.name
+				optionSection.appendChild(optionNameSection);
+				optionSection.appendChild(optionCostSection);
+				optionSection.appendChild(optionCheckBox);
+				
+				optionCheckBox.addEventListener("click", function(){
+				if(optionCheckBox.checked){
+					totalCaps += optionElement.cost;
+					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost
+					updateCaps();
+				}else{
+					totalCaps -= optionElement.cost;
+					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost
+					updateCaps();
+				}
+			});
+				wearSection.appendChild(optionSection);
+			});
+			equipmentSection.appendChild(wearSection);
+		});
+	}
+
 	if(characterElement.carry_slots != null){
 		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
 			var carrySection = document.createElement("div");
