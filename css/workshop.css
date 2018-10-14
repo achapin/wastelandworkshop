@@ -3,7 +3,7 @@
 }
 
 #caps {
-	float: left;
+	clear: both;
 }
 
 #selector ul li {
@@ -29,4 +29,13 @@
 .characterElement{
 	border: 2px; 
 	border-color: black;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+	padding: 20px;
 }

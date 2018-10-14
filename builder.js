@@ -99,14 +99,18 @@ function clearForce(){
 	var list = document.createElement("ul");
 	characters.forEach(function(characterElement){
 		var para = document.createElement("li");
+		var button = document.createElement("button");
+		button.setAttribute("class", "btn btn-primary");
 		var nameNode = document.createTextNode(characterElement.name);
 		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
-		para.addEventListener("click", function() { addCharacter(characterElement);});
-		para.appendChild(nameNode);
-		para.appendChild(pointsNode);
+		button.addEventListener("click", function() { addCharacter(characterElement);});
+		button.appendChild(nameNode);
+		button.appendChild(pointsNode);
+		para.appendChild(button);
 		list.appendChild(para);
 	});
-	var close = document.createElement("p");
+	var close = document.createElement("button");
+	close.setAttribute("class", "btn btn-primary");
 	var closeButton = document.createTextNode("X");
 	close.addEventListener("click", closeAddSection);
 	close.appendChild(closeButton);
@@ -147,11 +151,10 @@ function addCharacter(characterElement){
 	var headerSection = document.createElement("div");
 	headerSection.setAttribute("class", "row");
 	
-	var close = document.createElement("div");
+	var close = document.createElement("button");
 	var closeButton = document.createTextNode("X");
-	close.setAttribute("class", "col-sm-1 float-left");
+	close.setAttribute("class", "btn btn-danger");
 	close.appendChild(closeButton);
-	headerSection.appendChild(close);
 
 	var nameSection = document.createElement("h1");
 	nameSection.setAttribute("class", "col-sm-6 float-left");
@@ -169,14 +172,16 @@ function addCharacter(characterElement){
 	costSection.setAttribute("class", "col-sm-3 float-left");
 	headerSection.appendChild(costSection);
 
-	var copy = document.createElement("div");
+	var copy = document.createElement("button");
 	var copyButton = document.createTextNode("+");
-	copy.setAttribute("class", "col-sm-1 float-right");
+	copy.setAttribute("class", "btn btn-primary");
 	copy.appendChild(copyButton);
 	headerSection.appendChild(copy);
 	copy.addEventListener("click", function() {
 		alert("Don't copy that floppy!");
-	})
+	});
+
+	headerSection.appendChild(close);
 
 	charaSection.appendChild(headerSection);
 
@@ -244,40 +249,30 @@ function addCharacter(characterElement){
 
 	charaSection.appendChild(specialSection);
 
-	var equipmentToggle = document.createElement("div");
-	equipmentToggle.setAttribute("class", "row");
-	var showEquipment = document.createElement("div");
-	showEquipment.setAttribute("class", "col-sm-12 float-left");
-	showEquipment.appendChild(document.createTextNode("Show Equipment"));
-	equipmentToggle.appendChild(showEquipment);
-	showEquipment.style.display = "none";
-	var hideEquipment = document.createElement("div");
-	hideEquipment.setAttribute("class", "col-sm-12 float-left");
-	hideEquipment.appendChild(document.createTextNode("Hide Equipment"));
-	equipmentToggle.appendChild(hideEquipment);
+	if(characterElement.carry_slots != null || characterElement.consumables != null){
+		var equipmentToggle = document.createElement("div");
+		equipmentToggle.setAttribute("class", "row");
+		
+		var showEquipment = document.createElement("button");
+		showEquipment.setAttribute("class", "btn btn-primary");
+		showEquipment.appendChild(document.createTextNode("Show Equipment"));
+		equipmentToggle.appendChild(showEquipment);
+		showEquipment.style.display = "none";
 
-	charaSection.appendChild(equipmentToggle);
+		var hideEquipment = document.createElement("button");
+		hideEquipment.setAttribute("class", "btn btn-primary");
+		hideEquipment.appendChild(document.createTextNode("Hide Equipment"));
+		equipmentToggle.appendChild(hideEquipment);
 
-	var equipmentSection = document.createElement("div");
-	equipmentSection.setAttribute("class", "row");
-
-	var numCarrySections = 0;
-	if(characterElement.carry_slots != null){
-		numCarrySections += Object.keys(characterElement.carry_slots).length;
+		charaSection.appendChild(equipmentToggle);
+		var equipmentSection = document.createElement("div");
+		equipmentSection.setAttribute("class", "grid-container");
 	}
-	if(characterElement.consumables != null){
-		numCarrySections += Object.keys(characterElement.consumables).length;
-	}
-	if(numCarrySections == 0){
-		numCarrySections = 1;
-	}
-	var sectionSize = Math.floor(12 / numCarrySections);
-	var colClass = "col-sm-"+sectionSize + " float-left";
 
 	if(characterElement.carry_slots != null){
 		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
 			var carrySection = document.createElement("div");
-			carrySection.setAttribute("class", colClass);
+			carrySection.setAttribute("class", "grid-item");
 			var carryHeader = document.createElement("h2");
 			var carryHeaderText = document.createTextNode(slotType);
 			carryHeader.appendChild(carryHeaderText);
@@ -286,9 +281,9 @@ function addCharacter(characterElement){
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 				var optionSection = document.createElement("div");
-				var optionNameSection = document.createElement("p");
+				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
-				var optionCostSection = document.createElement("p");
+				var optionCostSection = document.createElement("span");
 				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
 				var optionCheckBox = document.createElement('input');
 				optionCheckBox.type = 'checkbox';
@@ -317,7 +312,7 @@ function addCharacter(characterElement){
 	if(characterElement.consumables != null){
 		Object.keys(characterElement.consumables).forEach(function (slotType) {
 			var consumeableSection = document.createElement("div");
-			consumeableSection.setAttribute("class", colClass);
+			consumeableSection.setAttribute("class", "grid-item");
 			var consumeableHeader = document.createElement("h2");
 			var consumeableHeaderText = document.createTextNode(slotType);
 			consumeableHeader.appendChild(consumeableHeaderText);
@@ -333,7 +328,8 @@ function addCharacter(characterElement){
 				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
 				optionCostSection.appendChild(document.createTextNode(" X"));
 
-				var optionIncreaseCount = document.createElement("span");
+				var optionIncreaseCount = document.createElement("button");
+				optionIncreaseCount.setAttribute("class", "btn btn-primary");
 				optionIncreaseCount.appendChild(document.createTextNode("+"));
 				optionIncreaseCount.addEventListener("click", function(){
 					var value = parseInt(optionInput.value);
@@ -347,7 +343,8 @@ function addCharacter(characterElement){
 					}
 				});
 
-				var optionDecreaseCount = document.createElement("span");
+				var optionDecreaseCount = document.createElement("button");
+				optionDecreaseCount.setAttribute("class", "btn btn-primary");
 				optionDecreaseCount.appendChild(document.createTextNode("-"));
 				optionDecreaseCount.addEventListener("click", function(){
 					var value = parseInt(optionInput.value);
@@ -400,16 +397,19 @@ function addCharacter(characterElement){
 		});
 	}
 
-	showEquipment.addEventListener("click", function() {
-		showEquipment.style.display = "none";
-		equipmentSection.style.display = "block";
-		hideEquipment.style.display = "block";
-	});
-	hideEquipment.addEventListener("click", function() {
-		equipmentSection.style.display = "none";
-		showEquipment.style.display = "block";
-		hideEquipment.style.display = "none";
-	});
+	if(characterElement.carry_slots != null || characterElement.consumables != null){
+		showEquipment.addEventListener("click", function() {
+			showEquipment.style.display = "none";
+			equipmentSection.style.display = "flex";
+			hideEquipment.style.display = "block";
+		});
+		hideEquipment.addEventListener("click", function() {
+			equipmentSection.style.display = "none";
+			showEquipment.style.display = "block";
+			hideEquipment.style.display = "none";
+		});
+		charaSection.appendChild(equipmentSection);
+	}
 
 	close.addEventListener("click", function() 
 		{
@@ -423,7 +423,6 @@ function addCharacter(characterElement){
 		}
 	);
 
-	charaSection.appendChild(equipmentSection);
 	forceSection.appendChild(charaSection);
 
 	totalCaps += characterElement.cost;
@@ -432,6 +431,11 @@ function addCharacter(characterElement){
 
 function updateCaps(){
 	capsSection.innerHTML = totalCaps;
+	/*
+	var url = window.location.href;  
+	var urlSplit = url.split( "?" ); 
+	window.location.href = urlSplit[0] + '?force' + totalCaps;
+	*/
 }
 
 function initialize(){
