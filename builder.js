@@ -153,8 +153,9 @@ function addCharacter(characterElement){
 	
 	var close = document.createElement("button");
 	var closeButton = document.createTextNode("X");
-	close.setAttribute("class", "btn btn-danger");
+	close.setAttribute("class", "btn btn-danger btn-support");
 	close.appendChild(closeButton);
+	headerSection.appendChild(close);
 
 	var nameSection = document.createElement("h1");
 	nameSection.setAttribute("class", "col-sm-6 float-left");
@@ -163,25 +164,26 @@ function addCharacter(characterElement){
 	headerSection.appendChild(nameSection);
 
 	var costSection = document.createElement("div");
-	var cost = document.createTextNode(characterElement.cost);
+	var cost = document.createElement("span");
+	cost.appendChild(document.createTextNode(characterElement.cost));
+	cost.setAttribute("class", "cost");
 	costSection.appendChild(cost);
 	costSection.appendChild(document.createTextNode(" + Equipment: "));
 	var equipmentCost = document.createElement("span");
+	equipmentCost.setAttribute("class", "cost");
 	equipmentCost.innerHTML = "0";
 	costSection.appendChild(equipmentCost);
-	costSection.setAttribute("class", "col-sm-3 float-left");
+	costSection.setAttribute("class", "col-sm-3 float-left cost-section");
 	headerSection.appendChild(costSection);
 
 	var copy = document.createElement("button");
 	var copyButton = document.createTextNode("+");
-	copy.setAttribute("class", "btn btn-primary");
+	copy.setAttribute("class", "btn btn-primary btn-support");
 	copy.appendChild(copyButton);
 	headerSection.appendChild(copy);
 	copy.addEventListener("click", function() {
 		alert("Don't copy that floppy!");
 	});
-
-	headerSection.appendChild(close);
 
 	charaSection.appendChild(headerSection);
 
@@ -254,6 +256,7 @@ function addCharacter(characterElement){
 
 	if(characterElement.carry_slots != null || characterElement.consumables != null){
 		var equipmentToggle = document.createElement("div");
+		equipmentToggle.id = "equipmentToggle";
 		equipmentToggle.setAttribute("class", "row");
 		
 		var showEquipment = document.createElement("button");
@@ -286,6 +289,7 @@ function addCharacter(characterElement){
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 				var optionSection = document.createElement("div");
+				optionSection.setAttribute("class", "equipmentOption");
 				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
 				var optionCostSection = document.createElement("span");
@@ -328,6 +332,7 @@ function addCharacter(characterElement){
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 				var optionSection = document.createElement("div");
+				optionSection.setAttribute("class", "equipmentOption");
 				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
 				var optionCostSection = document.createElement("span");
@@ -370,15 +375,17 @@ function addCharacter(characterElement){
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 				var optionSection = document.createElement("div");
+				optionSection.setAttribute("class", "equipmentOption");
 				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
 				var optionCostSection = document.createElement("span");
 				optionCostSection.setAttribute("class", "cost");
 				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
-				optionCostSection.appendChild(document.createTextNode(" X "));
+				var optionCostQty = document.createElement("span");
+				optionCostQty.appendChild(document.createTextNode(" X "));
 
 				var optionIncreaseCount = document.createElement("button");
-				optionIncreaseCount.setAttribute("class", "btn btn-primary");
+				optionIncreaseCount.setAttribute("class", "btn btn-primary btn-left-sm");
 				optionIncreaseCount.appendChild(document.createTextNode("+"));
 				optionIncreaseCount.addEventListener("click", function(){
 					var value = parseInt(optionInput.value);
@@ -393,7 +400,7 @@ function addCharacter(characterElement){
 				});
 
 				var optionDecreaseCount = document.createElement("button");
-				optionDecreaseCount.setAttribute("class", "btn btn-primary");
+				optionDecreaseCount.setAttribute("class", "btn btn-primary btn-right-sm");
 				optionDecreaseCount.appendChild(document.createTextNode("-"));
 				optionDecreaseCount.addEventListener("click", function(){
 					var value = parseInt(optionInput.value);
@@ -408,6 +415,8 @@ function addCharacter(characterElement){
 				});
 
 				var optionInput = document.createElement('input');
+				optionInput.setAttribute("class", "consumeableCount");
+				optionInput.size = 2;
 				optionInput.type = 'text';
 				optionInput.value = "0";
 				optionInput.addEventListener("focusin", function(){
@@ -435,6 +444,7 @@ function addCharacter(characterElement){
 
 				optionSection.appendChild(optionNameSection);
 				optionSection.appendChild(optionCostSection);
+				optionSection.appendChild(optionCostQty);
 				optionSection.appendChild(optionIncreaseCount);
 				optionSection.appendChild(optionInput);
 				optionSection.appendChild(optionDecreaseCount);
@@ -479,7 +489,7 @@ function addCharacter(characterElement){
 }
 
 function updateCaps(){
-	capsSection.innerHTML = totalCaps;
+	capsSection.innerHTML = "Total Size: " + totalCaps;
 	/*
 	var url = window.location.href;  
 	var urlSplit = url.split( "?" ); 

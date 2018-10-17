@@ -1,9 +1,15 @@
 #selector {
 	float: left;
+	margin-top: 0px;
+	padding-top: 0px;
 }
 
-#caps {
+#listInfo {
 	clear: both;
+}
+
+#equipmentToggle {
+	padding: 1em;
 }
 
 .button-force-selector {
@@ -28,7 +34,8 @@
 #selector ul li {
 	float: left;
 	list-style-type: none;
-	padding: 5px;
+	padding: 7px;
+	padding-top: 0px;
 }
 
 .add{
@@ -68,5 +75,52 @@
 .cost {
 	background-color: red;
 	color: white;
-	padding: 2px;
+	margin: .2em;
+	padding: 5px;
+	border-radius: 30px;
+}
+
+.cost-section {
+	padding: 10px;
+}
+
+.btn-support {
+	float: right;
+	margin-right: .5em;
+}
+
+.equipmentOption {
+	margin-bottom: .5em;
+}
+
+.equipmentOption span {
+	margin-right: .5em;
+}
+
+.btn-left-sm {
+	padding: 3px 5px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 0px;
+	position: relative;
+	top: -1px;
+}
+
+.btn-right-sm {
+	padding: 3px 5px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 10px;
+	position: relative;
+	top: -1px;
+}
+
+.consumeableCount {
+	text-align: center;
 }
