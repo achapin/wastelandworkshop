@@ -100,12 +100,17 @@ function clearForce(){
 	characters.forEach(function(characterElement){
 		var para = document.createElement("li");
 		var button = document.createElement("button");
-		button.setAttribute("class", "btn btn-primary");
+		button.setAttribute("class", "btn btn-primary choice");
+		var nameSpan = document.createElement("span");
 		var nameNode = document.createTextNode(characterElement.name);
-		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
+		nameSpan.appendChild(nameNode);
+		var pointsSpan = document.createElement("span");
+		pointsSpan.setAttribute("class", "cost");
+		var pointsNode = document.createTextNode(characterElement.cost);
+		pointsSpan.appendChild(pointsNode);
 		button.addEventListener("click", function() { addCharacter(characterElement);});
-		button.appendChild(nameNode);
-		button.appendChild(pointsNode);
+		button.appendChild(nameSpan);
+		button.appendChild(pointsSpan);
 		para.appendChild(button);
 		list.appendChild(para);
 	});
@@ -489,7 +494,7 @@ function addCharacter(characterElement){
 }
 
 function updateCaps(){
-	capsSection.innerHTML = "Total Size: " + totalCaps;
+	capsSection.innerHTML = totalCaps;
 	/*
 	var url = window.location.href;  
 	var urlSplit = url.split( "?" ); 
