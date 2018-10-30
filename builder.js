@@ -12,6 +12,8 @@ var capsSection;
 var lastTextFieldValue;
 
 var totalCaps;
+var faction;
+var force;
 
 function getUrl(url){
 	var req = new XMLHttpRequest();
@@ -75,21 +77,29 @@ function initListeners(){
 	capsSection = document.getElementById("caps");
 	addButton.addEventListener("click", openAddSection);
 
-	switchBos();
+	var queryString = window.location.href.split("?");
+	if(queryString.length > 1){
+		loadForceFromString(queryString[1]);
+	}else{
+		switchBos();
+	}
 }
 
 function switchBos() {
 	characters = bos;
+	faction = "bos";
 	clearForce();
 }
 
 function switchMutants() {
 	characters = mutants;
+	faction = "mut";
 	clearForce();
 }
 
 function switchSurvivors() {
 	characters = survivors;
+	faction = "srv";
 	clearForce();
 }
 
@@ -123,6 +133,7 @@ function clearForce(){
 	addSection.appendChild(list);
 	closeAddSection();
 	totalCaps = 0;
+	force = [];
 	updateCaps();
 }
 
@@ -150,6 +161,10 @@ function getUpgrade(elementType, elementName){
 }
 
 function addCharacter(characterElement){
+
+	var character = new Object();
+	character.id = characterElement.id;
+
 	var charaSection = document.createElement("div");
 	charaSection.setAttribute("class", "characterElement");
 	
@@ -193,6 +208,7 @@ function addCharacter(characterElement){
 	specialSection.setAttribute("class", "row");
 
 	if(characterElement.heroic){
+		character.heroid = false;
 		var heroicSection = document.createElement("div");
 		heroicSection.setAttribute("class", "col-sm-2 float-left");
 		var heroicCheckBox = document.createElement('input');
@@ -203,6 +219,7 @@ function addCharacter(characterElement){
 		heroicSection.appendChild(heroicCheckBox);
 		heroicSection.appendChild(heroicCostSection);
 		heroicCheckBox.addEventListener("click", function(){
+			character.heroic = heroicCheckBox.checked;
 			if(heroicCheckBox.checked){
 				totalCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
 				heroicCostSection.setAttribute("class", "cost");
@@ -490,6 +507,8 @@ function addCharacter(characterElement){
 
 	forceSection.appendChild(charaSection);
 
+	force.push(character);
+
 	totalCaps += characterElement.cost;
 	updateCaps();
 	return charaSection;
@@ -497,11 +516,45 @@ function addCharacter(characterElement){
 
 function updateCaps(){
 	capsSection.innerHTML = totalCaps;
-	/*
-	var url = window.location.href;  
-	var urlSplit = url.split( "?" ); 
-	window.location.href = urlSplit[0] + '?force' + totalCaps;
-	*/
+	if (history.pushState) {
+          var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
+          window.history.pushState({path:newurl},'',newurl);
+      }
+}
+
+function getStringForForce(){
+	var forceString = "f=" + faction + ";";
+	force.forEach(function(characterElement) {
+		forceString += characterElement.id + "=;";
+	})
+	return forceString;
+}
+
+function loadForceFromString(forceString){
+	var objects = forceString.split(";");
+	objects.forEach(function(param) {
+		var key = param.split("=")[0];
+		var value = param.split("=")[1];
+
+		if(key == "f"){
+			if(value == "bos"){
+				switchBos();
+			}
+			if(value == "mut"){
+				switchMutants();
+			}
+			if(value == "srv"){
+				switchSurvivors();
+			}
+		}else if(!isNaN(parseInt(key))){
+			var characterId = parseInt(key);
+			characters.forEach(function(characterElement){
+				if(characterElement.id == characterId){
+					addCharacter(characterElement);
+				}
+			});
+		}
+	})
 }
 
 function initialize(){

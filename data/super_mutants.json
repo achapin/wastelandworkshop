@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "name": "aviator",
     "heroic": true,
     "must_wear": [
@@ -30,6 +31,7 @@
     "cost": 67
   },
   {
+    "id": 1,
     "name": "behemoth",
     "cost": 209,
     "carry_slots": {
@@ -42,6 +44,7 @@
     }
   },
   {
+    "id": 2,
     "name": "brute",
     "heroic": true,
     "carry_slots": {
@@ -76,6 +79,7 @@
     "cost": 81
   },
   {
+    "id": 3,
     "name": "enslaved_tech",
     "carry_slots": {
       "rifles": [
@@ -96,6 +100,7 @@
     "cost": 33
   },
   {
+    "id": 4,
     "name": "hammer",
     "heroic": true,
     "carry_slots": {
@@ -129,6 +134,7 @@
     "cost": 114
   },
   {
+    "id": 5,
     "name": "master",
     "heroic": true,
     "carry_slots": {
@@ -164,6 +170,7 @@
     "cost": 95
   },
   {
+    "id": 6,
     "name": "mutant_hound",
     "must_carry": [
       "melee.hound_bite"
@@ -171,6 +178,7 @@
     "cost": 63
   },
   {
+    "id": 7,
     "name": "mutant_hound_fiend",
     "must_carry": [
       "melee.hound_bite"
@@ -178,6 +186,7 @@
     "cost": 63
   },
   {
+    "id": 8,
     "name": "suicider",
     "must_carry": [
       "thrown.suicider_mini_nuke"
@@ -185,6 +194,7 @@
     "cost": 72
   },
   {
+    "id": 9,
     "name": "super_mutant",
     "heroic": true,
     "carry_slots": {

@@ -1,14 +1,16 @@
 # Wasteland Workshop
 A skirmish squad builder for Fallout Wasteland Warfare
 
-#TODO
-* Make entries pretty
-* Copy entry
-* Limit unique Characters
+# TODO
 * Changes affect url query string
 * Force loaded via query string
-* Weapon mods
-* Armor Exclusivity
+* Copy entry
+* Make entries pretty
 * Localization
+* Armor Exclusivity
+* Limit unique Characters
 * Printable lists
 * Leader Perks
+
+# Removed 
+* Weapon mods (bc they isn't permitted in Battle Mode)
