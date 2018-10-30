@@ -186,9 +186,6 @@ function addCharacter(characterElement){
 	copy.setAttribute("class", "btn btn-primary btn-support");
 	copy.appendChild(copyButton);
 	headerSection.appendChild(copy);
-	copy.addEventListener("click", function() {
-		alert("Don't copy that floppy!");
-	});
 
 	charaSection.appendChild(headerSection);
 
@@ -486,11 +483,16 @@ function addCharacter(characterElement){
 			updateCaps();
 		}
 	);
+	copy.addEventListener("click", function() {
+		addCharacter(characterElement);	
+		//TODO: Find and copy the equipment...somehow
+	});
 
 	forceSection.appendChild(charaSection);
 
 	totalCaps += characterElement.cost;
 	updateCaps();
+	return charaSection;
 }
 
 function updateCaps(){

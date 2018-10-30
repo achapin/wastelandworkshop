@@ -11,3 +11,4 @@ A skirmish squad builder for Fallout Wasteland Warfare
 * Armor Exclusivity
 * Localization
 * Printable lists
+* Leader Perks
