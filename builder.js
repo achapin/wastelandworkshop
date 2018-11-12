@@ -208,7 +208,7 @@ function addCharacter(characterElement){
 	specialSection.setAttribute("class", "row");
 
 	if(characterElement.heroic){
-		character.heroid = false;
+		character.heroic = false;
 		var heroicSection = document.createElement("div");
 		heroicSection.setAttribute("class", "col-sm-2 float-left");
 		var heroicCheckBox = document.createElement('input');
@@ -324,10 +324,12 @@ function addCharacter(characterElement){
 				
 				optionCheckBox.addEventListener("click", function(){
 				if(optionCheckBox.checked){
+					character[slotOption] = optionElement.name;
 					totalCaps += optionElement.cost;
 					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost
 					updateCaps();
 				}else{
+					character[slotOption] = null;
 					totalCaps -= optionElement.cost;
 					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost
 					updateCaps();
@@ -365,10 +367,18 @@ function addCharacter(characterElement){
 				
 				optionCheckBox.addEventListener("click", function(){
 				if(optionCheckBox.checked){
+					if(character[slotType] == null){
+						character[slotType] = [];
+					}
+					character[slotType].push(optionElement.name);
 					totalCaps += optionElement.cost;
 					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost
 					updateCaps();
 				}else{
+					character[slotType] = character[slotType].filter(
+						function(value, index, arr){
+							value != optionElement.name;
+						});
 					totalCaps -= optionElement.cost;
 					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost
 					updateCaps();
@@ -411,9 +421,14 @@ function addCharacter(characterElement){
 					if(isNaN(value)){
 						optionInput.value = "0";
 					}else{
-						optionInput.value = value + 1;
+						var newCount = value + 1;
+						optionInput.value = newCount;
 						totalCaps += optionElement.cost;
 						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost;
+						if(character[slotType] == null){
+							character[slotType] = {};
+						}
+						character[slotType][optionElement.name] = newCount;
 						updateCaps();
 					}
 				});
@@ -426,9 +441,11 @@ function addCharacter(characterElement){
 					if(isNaN(value)){
 						optionInput.value = "0";
 					}else if(value > 0){
-						optionInput.value = value - 1;
+						var newCount = value - 1;
+						optionInput.value = newCount;
 						totalCaps -= optionElement.cost;
 						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost;
+						character[slotType][optionElement.name] = newCount;
 						updateCaps();
 					}
 				});
@@ -457,6 +474,10 @@ function addCharacter(characterElement){
 						}
 						totalCaps += (value - lastTextFieldValue) * optionElement.cost;
 						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + (value - lastTextFieldValue) * optionElement.cost;
+						if(character[slotType] == null){
+							character[slotType] = {};
+						}
+						character[slotType][optionElement.name] = value;
 						updateCaps();
 					}
 				});
@@ -497,6 +518,9 @@ function addCharacter(characterElement){
 				heroicCost = upgrades.heroes_and_leaders[0].cost;
 			}
 			totalCaps -= (characterElement.cost + parseInt(equipmentCost.innerHTML) + heroicCost);
+			force = force.filter(function(value, index, arr) {
+				return value != character;
+			});
 			updateCaps();
 		}
 	);
@@ -517,15 +541,36 @@ function addCharacter(characterElement){
 function updateCaps(){
 	capsSection.innerHTML = totalCaps;
 	if (history.pushState) {
-          var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
-          window.history.pushState({path:newurl},'',newurl);
-      }
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
+		window.history.pushState({path:newurl},'',newurl);
+	}
 }
 
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
-	force.forEach(function(characterElement) {
-		forceString += characterElement.id + "=;";
+	force.forEach(function(character) {
+		var charString = character.id + "=";
+		for (var key in character) {
+			if (character.hasOwnProperty(key)) {
+				if(key == "heroic"){
+					charString += "h=" + character[key] + ":";
+				}else if(Array.isArray(character[key])){
+					charString += key + "=";
+					for(item in character[key]){
+						charString += item + ",";
+					}
+					charString += ":";
+				}else{
+					for (var consumableKey in character[key]) {
+						if (character[key].hasOwnProperty(consumableKey)) {
+							charString += consumableKey + "=" + character[key][consumableKey] + ":";
+						}
+					}
+				}
+			}
+		}
+		charString += ";";
+		forceString += charString;
 	})
 	return forceString;
 }
