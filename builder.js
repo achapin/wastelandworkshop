@@ -118,7 +118,7 @@ function clearForce(){
 		pointsSpan.setAttribute("class", "cost");
 		var pointsNode = document.createTextNode(characterElement.cost);
 		pointsSpan.appendChild(pointsNode);
-		button.addEventListener("click", function() { addCharacter(characterElement);});
+		button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
 		button.appendChild(nameSpan);
 		button.appendChild(pointsSpan);
 		para.appendChild(button);
@@ -160,9 +160,8 @@ function getUpgrade(elementType, elementName){
 	return toReturn;
 }
 
-function addCharacter(characterElement){
-
-	var character = new Object();
+function addCharacter(characterElement, presetInfo){
+	var character = presetInfo;
 	character.id = characterElement.id;
 
 	var charaSection = document.createElement("div");
@@ -208,11 +207,11 @@ function addCharacter(characterElement){
 	specialSection.setAttribute("class", "row");
 
 	if(characterElement.heroic){
-		character.heroic = false;
 		var heroicSection = document.createElement("div");
 		heroicSection.setAttribute("class", "col-sm-2 float-left");
 		var heroicCheckBox = document.createElement('input');
 		heroicCheckBox.type = 'checkbox';
+		heroicCheckBox.checked = character.heroic;
 		var heroicCostSection = document.createElement("span");
 		var heroicDescription = document.createTextNode("Heroic:");
 		heroicSection.appendChild(heroicDescription);
@@ -220,18 +219,7 @@ function addCharacter(characterElement){
 		heroicSection.appendChild(heroicCostSection);
 		heroicCheckBox.addEventListener("click", function(){
 			character.heroic = heroicCheckBox.checked;
-			if(heroicCheckBox.checked){
-				totalCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
-				heroicCostSection.setAttribute("class", "cost");
-				heroicCostSection.innerHTML = "+" + upgrades.heroes_and_leaders[0].cost;
-				heroicCostSection.style.display = "block";
-				updateCaps();
-			}else{
-				totalCaps -= upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
-				updateCaps();
-				heroicCostSection.innerHTML = "";
-				heroicCostSection.style.display = "none";
-			}
+			updateCaps();
 		});
 		specialSection.appendChild(heroicSection);
 	}
@@ -305,6 +293,7 @@ function addCharacter(characterElement){
 			wearSection.appendChild(carryHeader)
 
 			var slotOption = characterElement.wear_slots[slotType];
+
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 				var optionSection = document.createElement("div");
@@ -317,6 +306,7 @@ function addCharacter(characterElement){
 				var optionCheckBox = document.createElement('input');
 				optionCheckBox.type = 'checkbox';
 				optionCheckBox.name = slotType;
+				optionCheckBox.checked = character[slotType] == optionElement.name;
 				optionCheckBox.value = optionElement.name
 				optionSection.appendChild(optionNameSection);
 				optionSection.appendChild(optionCostSection);
@@ -324,14 +314,10 @@ function addCharacter(characterElement){
 				
 				optionCheckBox.addEventListener("click", function(){
 				if(optionCheckBox.checked){
-					character[slotOption] = optionElement.name;
-					totalCaps += optionElement.cost;
-					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost
+					character[slotType] = optionElement.name;
 					updateCaps();
 				}else{
-					character[slotOption] = null;
-					totalCaps -= optionElement.cost;
-					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost
+					delete character[slotType];
 					updateCaps();
 				}
 			});
@@ -361,6 +347,9 @@ function addCharacter(characterElement){
 				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
 				var optionCheckBox = document.createElement('input');
 				optionCheckBox.type = 'checkbox';
+				if(character.hasOwnProperty(slotType)){
+					optionCheckBox.checked = character[slotType].includes(optionElement.name);
+				}
 				optionSection.appendChild(optionNameSection);
 				optionSection.appendChild(optionCostSection);
 				optionSection.appendChild(optionCheckBox);
@@ -371,21 +360,16 @@ function addCharacter(characterElement){
 						character[slotType] = [];
 					}
 					character[slotType].push(optionElement.name);
-					totalCaps += optionElement.cost;
-					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost
 					updateCaps();
 				}else{
 					character[slotType] = character[slotType].filter(
 						function(value, index, arr){
 							value != optionElement.name;
 						});
-					totalCaps -= optionElement.cost;
-					equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost
 					updateCaps();
 				}
 			});
-
-				carrySection.appendChild(optionSection);
+			carrySection.appendChild(optionSection);
 			});
 			equipmentSection.appendChild(carrySection);
 		});
@@ -423,8 +407,6 @@ function addCharacter(characterElement){
 					}else{
 						var newCount = value + 1;
 						optionInput.value = newCount;
-						totalCaps += optionElement.cost;
-						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + optionElement.cost;
 						if(character[slotType] == null){
 							character[slotType] = {};
 						}
@@ -443,8 +425,6 @@ function addCharacter(characterElement){
 					}else if(value > 0){
 						var newCount = value - 1;
 						optionInput.value = newCount;
-						totalCaps -= optionElement.cost;
-						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) - optionElement.cost;
 						character[slotType][optionElement.name] = newCount;
 						updateCaps();
 					}
@@ -454,7 +434,12 @@ function addCharacter(characterElement){
 				optionInput.setAttribute("class", "consumeableCount");
 				optionInput.size = 2;
 				optionInput.type = 'text';
-				optionInput.value = "0";
+
+				if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
+					optionInput.value = character[slotType][optionElement.name];					
+				}else{
+					optionInput.value = "0";
+				}
 				optionInput.addEventListener("focusin", function(){
 					var value = parseInt(optionInput.value);
 					if(isNaN(value)){
@@ -472,8 +457,6 @@ function addCharacter(characterElement){
 							value = 0;
 							optionInput.value = "0";
 						}
-						totalCaps += (value - lastTextFieldValue) * optionElement.cost;
-						equipmentCost.innerHTML = parseInt(equipmentCost.innerHTML) + (value - lastTextFieldValue) * optionElement.cost;
 						if(character[slotType] == null){
 							character[slotType] = {};
 						}
@@ -513,20 +496,17 @@ function addCharacter(characterElement){
 	close.addEventListener("click", function() 
 		{
 			forceSection.removeChild(charaSection);
-			var heroicCost = 0; 
-			if(heroicCheckBox != null && heroicCheckBox.checked){
-				heroicCost = upgrades.heroes_and_leaders[0].cost;
-			}
-			totalCaps -= (characterElement.cost + parseInt(equipmentCost.innerHTML) + heroicCost);
-			force = force.filter(function(value, index, arr) {
-				return value != character;
+			var index = force.findIndex(function(otherChar){
+				return otherChar === character;
 			});
+			if(index != -1){
+				force.splice(index,1);
+			}
 			updateCaps();
 		}
 	);
 	copy.addEventListener("click", function() {
-		addCharacter(characterElement);	
-		//TODO: Find and copy the equipment...somehow
+		addCharacter(characterElement, character);	
 	});
 
 	forceSection.appendChild(charaSection);
@@ -539,6 +519,42 @@ function addCharacter(characterElement){
 }
 
 function updateCaps(){
+
+	totalCaps = 0;
+
+	var wear_slots = ["armor"];
+	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
+	var consumable_slots = [ "thrown", "mines", "chems"];
+
+	force.forEach(function(character){
+		totalCaps += characters[character.id].cost;
+		if(character.heroic){
+			totalCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+		}
+
+		wear_slots.forEach(function (slotType) {
+			if(character[slotType] != null){
+				totalCaps += getUpgrade(slotType, character[slotType]).cost;
+			}
+		});
+
+		carry_slots.forEach(function (slotType) {
+			if(character[slotType] != null){
+				character[slotType].forEach(function(item){
+					totalCaps += getUpgrade(slotType,item).cost;
+				});
+			}
+		});
+
+		consumable_slots.forEach(function (slotType) {
+			if(character[slotType] != null){
+				Object.keys(character[slotType]).forEach(function (item) { 
+					totalCaps += getUpgrade(slotType, item).cost * character[slotType][item];
+				});
+			}
+		});		
+	})
+
 	capsSection.innerHTML = totalCaps;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
@@ -549,57 +565,37 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	force.forEach(function(character) {
-		var charString = character.id + "=";
-		for (var key in character) {
-			if (character.hasOwnProperty(key)) {
-				if(key == "heroic"){
-					charString += "h=" + character[key] + ":";
-				}else if(Array.isArray(character[key])){
-					charString += key + "=";
-					for(item in character[key]){
-						charString += item + ",";
-					}
-					charString += ":";
-				}else{
-					for (var consumableKey in character[key]) {
-						if (character[key].hasOwnProperty(consumableKey)) {
-							charString += consumableKey + "=" + character[key][consumableKey] + ":";
-						}
-					}
-				}
-			}
-		}
+		var charString = replaceAll(JSON.stringify(character),'"',"!");
 		charString += ";";
 		forceString += charString;
 	})
 	return forceString;
 }
 
+function replaceAll(str, find, replace) {
+	return str.replace(new RegExp(find, 'g'), replace);
+}
+
 function loadForceFromString(forceString){
 	var objects = forceString.split(";");
-	objects.forEach(function(param) {
-		var key = param.split("=")[0];
-		var value = param.split("=")[1];
 
-		if(key == "f"){
-			if(value == "bos"){
-				switchBos();
-			}
-			if(value == "mut"){
-				switchMutants();
-			}
-			if(value == "srv"){
-				switchSurvivors();
-			}
-		}else if(!isNaN(parseInt(key))){
-			var characterId = parseInt(key);
-			characters.forEach(function(characterElement){
-				if(characterElement.id == characterId){
-					addCharacter(characterElement);
-				}
-			});
-		}
-	})
+	var forceValue = objects[0].split("=")[1];
+
+	if(forceValue == "bos"){
+		switchBos();
+	}
+	if(forceValue == "mut"){
+		switchMutants();
+	}
+	if(forceValue == "srv"){
+		switchSurvivors();
+	}
+
+	for(var index = 1; index < objects.length - 1; index++){
+		var toParse = replaceAll(objects[index], "!","\"");
+		var characterData = JSON.parse(toParse);
+		addCharacter(characters[characterData.id],characterData);
+	}
 }
 
 function initialize(){

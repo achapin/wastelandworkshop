@@ -2,9 +2,7 @@
 A skirmish squad builder for Fallout Wasteland Warfare
 
 # TODO
-* Changes affect url query string
-* Force loaded via query string
-* Copy entry
+* BUG: IDs shift by one every time the page refreshes
 * Make entries pretty
 * Localization
 * Armor Exclusivity
