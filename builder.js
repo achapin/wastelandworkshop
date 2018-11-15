@@ -594,8 +594,17 @@ function loadForceFromString(forceString){
 	for(var index = 1; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
-		addCharacter(characters[characterData.id],characterData);
+		addCharacter(getCharacterById(characterData.id),characterData);
 	}
+}
+
+function getCharacterById(characterId){
+	for(var index = 0; index < characters.length; index++){
+		if(characters[index].id == characterId){
+			return characters[index];
+		}
+	}
+	return null;
 }
 
 function initialize(){
