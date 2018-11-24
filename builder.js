@@ -218,7 +218,11 @@ function addCharacter(characterElement, presetInfo){
 		heroicSection.appendChild(heroicCheckBox);
 		heroicSection.appendChild(heroicCostSection);
 		heroicCheckBox.addEventListener("click", function(){
-			character.heroic = heroicCheckBox.checked;
+			if(heroicCheckBox.checked){
+				character.heroic = true;
+			}else{
+				delete character["heroic"];
+			}
 			updateCaps();
 		});
 		specialSection.appendChild(heroicSection);
@@ -294,35 +298,32 @@ function addCharacter(characterElement, presetInfo){
 
 			var slotOption = characterElement.wear_slots[slotType];
 
+			var slotDropdown = document.createElement("SELECT");
+			var emptyOption = new Option("None", null);
+			slotDropdown.add(emptyOption);
+			var optionSelectedIndex = 0;
+			var optionIndex = 0;
+
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
-				var optionSection = document.createElement("div");
-				optionSection.setAttribute("class", "equipmentOption");
-				var optionNameSection = document.createElement("span");
-				optionNameSection.appendChild(document.createTextNode(optionElement.name));
-				var optionCostSection = document.createElement("span");
-				optionCostSection.setAttribute("class", "cost");
-				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
-				var optionCheckBox = document.createElement('input');
-				optionCheckBox.type = 'checkbox';
-				optionCheckBox.name = slotType;
-				optionCheckBox.checked = character[slotType] == optionElement.name;
-				optionCheckBox.value = optionElement.name
-				optionSection.appendChild(optionNameSection);
-				optionSection.appendChild(optionCostSection);
-				optionSection.appendChild(optionCheckBox);
-				
-				optionCheckBox.addEventListener("click", function(){
-				if(optionCheckBox.checked){
-					character[slotType] = optionElement.name;
-					updateCaps();
-				}else{
-					delete character[slotType];
-					updateCaps();
+
+				var option = new Option(optionElement.name + " (" + optionElement.cost + ")", optionElement.name);
+				slotDropdown.add(option);
+				optionIndex++;
+				if(character[slotType] == optionElement.name){
+					optionSelectedIndex = optionIndex;
 				}
 			});
-				wearSection.appendChild(optionSection);
-			});
+			slotDropdown.selectedIndex = optionSelectedIndex;
+			slotDropdown.onchange = function(){
+				if(slotDropdown.value == null || slotDropdown.value == "null"){
+					delete character[slotType];
+				}else{
+					character[slotType] = slotDropdown.value;
+				}
+				updateCaps();
+			};
+			wearSection.appendChild(slotDropdown);
 			equipmentSection.appendChild(wearSection);
 		});
 	}

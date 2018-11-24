@@ -2,9 +2,9 @@
 A skirmish squad builder for Fallout Wasteland Warfare
 
 # TODO
-* Armor Exclusivity
 * Make entries pretty
 * Localization
+* Shorten query string
 * Limit unique Characters
 * Printable lists
 * Leader Perks
