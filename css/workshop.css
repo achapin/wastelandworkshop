@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Overseer';
+  src: url('/fonts/Overseer.otf');
+}
+
+@font-face {
+  font-family: 'Overseer-Italic';
+  src: url('/fonts/Overseer Italic.otf');
+}
+
+body {
+	background-color: rgb(40,65,129);
+	color: rgb(231, 189, 66);
+}
+
+h1 {
+	font-family: 'Overseer-Italic';
+}
+
+h2 {
+	font-family: 'Overseer';
+}
+
 #selector {
 	float: left;
 	margin-top: 0px;
