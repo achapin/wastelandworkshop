@@ -90,6 +90,8 @@ h2 {
 	border-color: black;
 	border-style: solid;
 	padding: 1em;
+	background-color: rgb(75,75,75);
+	margin: 1em;
 }
 
 .grid-container {
@@ -102,7 +104,7 @@ h2 {
 }
 
 .carry-section {
-	background-color: gray;
+	float: left;
 }
 
 .cost {
@@ -156,4 +158,14 @@ h2 {
 
 .consumeableCount {
 	text-align: center;
+}
+
+.btn-equipped {
+	background-color: rgb(40,65,129);
+	color: rgb(231, 189, 66);
+}
+
+.btn-unequipped {
+	background-color: rgb(200,200,200);
+	color: rgb(75, 75, 75);
 }

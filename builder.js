@@ -160,6 +160,62 @@ function getUpgrade(elementType, elementName){
 	return toReturn;
 }
 
+function addEquipmentToggleButton(character, slotType, carryInfo, section, isSelected) {
+	var equipmentToggle =  document.createElement("div");
+
+	var optionNameSection = document.createElement("span");
+	optionNameSection.appendChild(document.createTextNode(carryInfo.name));
+	var optionCostSection = document.createElement("span");
+	optionCostSection.setAttribute("class", "cost");
+	optionCostSection.appendChild(document.createTextNode(carryInfo.cost));
+
+	var equipButton = document.createElement("button");
+	equipButton.setAttribute("class", "btn btn-unequipped");
+	equipButton.appendChild(optionNameSection);
+	equipButton.appendChild(optionCostSection);
+	equipmentToggle.appendChild(equipButton);
+
+	var optionNameSection2 = document.createElement("span");
+	optionNameSection2.appendChild(document.createTextNode("■ " + carryInfo.name));
+	var optionCostSection2 = document.createElement("span");
+	optionCostSection2.setAttribute("class", "cost");
+	optionCostSection2.appendChild(document.createTextNode(carryInfo.cost));
+
+	var removeButton = document.createElement("button");
+	removeButton.setAttribute("class", "btn btn-equipped");
+	removeButton.appendChild(optionNameSection2);
+	removeButton.appendChild(optionCostSection2);
+	equipmentToggle.appendChild(removeButton);
+
+	if(isSelected){
+		equipButton.style.display = "none";
+	}else{
+		removeButton.style.display = "none";
+	}
+
+	equipButton.addEventListener("click", function() {
+		removeButton.style.display = "block";
+		equipButton.style.display = "none";
+		if(character[slotType] == null){
+			character[slotType] = [];
+		}
+		character[slotType].push(carryInfo.name);
+		updateCaps();
+	});
+
+	removeButton.addEventListener("click", function() {
+		equipButton.style.display = "block";
+		removeButton.style.display = "none";
+		character[slotType] = character[slotType].filter(
+			function(value, index, arr){
+				value != carryInfo.name;
+		});
+		updateCaps();
+	});
+
+	section.appendChild(equipmentToggle);
+}
+
 function addCharacter(characterElement, presetInfo){
 	var character = presetInfo;
 	character.id = characterElement.id;
@@ -339,38 +395,11 @@ function addCharacter(characterElement, presetInfo){
 			var slotOption = characterElement.carry_slots[slotType];
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
-				var optionSection = document.createElement("div");
-				optionSection.setAttribute("class", "equipmentOption");
-				var optionNameSection = document.createElement("span");
-				optionNameSection.appendChild(document.createTextNode(optionElement.name));
-				var optionCostSection = document.createElement("span");
-				optionCostSection.setAttribute("class", "cost");
-				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
-				var optionCheckBox = document.createElement('input');
-				optionCheckBox.type = 'checkbox';
+				var isEquipped = false;
 				if(character.hasOwnProperty(slotType)){
-					optionCheckBox.checked = character[slotType].includes(optionElement.name);
+					isEquipped = character[slotType].includes(optionElement.name);
 				}
-				optionSection.appendChild(optionNameSection);
-				optionSection.appendChild(optionCostSection);
-				optionSection.appendChild(optionCheckBox);
-				
-				optionCheckBox.addEventListener("click", function(){
-				if(optionCheckBox.checked){
-					if(character[slotType] == null){
-						character[slotType] = [];
-					}
-					character[slotType].push(optionElement.name);
-					updateCaps();
-				}else{
-					character[slotType] = character[slotType].filter(
-						function(value, index, arr){
-							value != optionElement.name;
-						});
-					updateCaps();
-				}
-			});
-			carrySection.appendChild(optionSection);
+				addEquipmentToggleButton(character, slotType, optionElement, carrySection, isEquipped)
 			});
 			equipmentSection.appendChild(carrySection);
 		});
