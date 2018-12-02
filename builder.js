@@ -110,13 +110,13 @@ function clearForce(){
 	characters.forEach(function(characterElement){
 		var para = document.createElement("li");
 		var button = document.createElement("button");
-		button.setAttribute("class", "btn btn-primary choice");
+		button.setAttribute("class", "btn btn-background choice");
 		var nameSpan = document.createElement("span");
 		var nameNode = document.createTextNode(characterElement.name);
 		nameSpan.appendChild(nameNode);
 		var pointsSpan = document.createElement("span");
 		pointsSpan.setAttribute("class", "cost");
-		var pointsNode = document.createTextNode(characterElement.cost);
+		var pointsNode = document.createTextNode("("+characterElement.cost+")");
 		pointsSpan.appendChild(pointsNode);
 		button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
 		button.appendChild(nameSpan);
@@ -125,11 +125,14 @@ function clearForce(){
 		list.appendChild(para);
 	});
 	var close = document.createElement("button");
-	close.setAttribute("class", "btn btn-primary");
+	close.setAttribute("class", "btn btn-background-off");
 	var closeButton = document.createTextNode("X");
 	close.addEventListener("click", closeAddSection);
 	close.appendChild(closeButton);
+	var descriptionSpan = document.createElement("span");
+	descriptionSpan.appendChild(document.createTextNode("Characters:"));
 	addSection.appendChild(close);
+	addSection.appendChild(descriptionSpan);
 	addSection.appendChild(list);
 	closeAddSection();
 	totalCaps = 0;
@@ -167,7 +170,7 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	optionNameSection.appendChild(document.createTextNode(carryInfo.name));
 	var optionCostSection = document.createElement("span");
 	optionCostSection.setAttribute("class", "cost");
-	optionCostSection.appendChild(document.createTextNode(carryInfo.cost));
+	optionCostSection.appendChild(document.createTextNode("(" + carryInfo.cost + ")"));
 
 	var equipButton = document.createElement("button");
 	equipButton.setAttribute("class", "btn btn-unequipped");
@@ -179,7 +182,7 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	optionNameSection2.appendChild(document.createTextNode("■ " + carryInfo.name));
 	var optionCostSection2 = document.createElement("span");
 	optionCostSection2.setAttribute("class", "cost");
-	optionCostSection2.appendChild(document.createTextNode(carryInfo.cost));
+	optionCostSection2.appendChild(document.createTextNode("(" + carryInfo.cost + ")"));
 
 	var removeButton = document.createElement("button");
 	removeButton.setAttribute("class", "btn btn-equipped");
@@ -224,38 +227,32 @@ function addCharacter(characterElement, presetInfo){
 	charaSection.setAttribute("class", "characterElement");
 	
 	var headerSection = document.createElement("div");
-	headerSection.setAttribute("class", "row");
+	headerSection.setAttribute("class", "header-section");
 	
 	var close = document.createElement("button");
 	var closeButton = document.createTextNode("X");
-	close.setAttribute("class", "btn btn-danger btn-support");
+	close.setAttribute("class", "btn btn-background-off");
 	close.appendChild(closeButton);
 	headerSection.appendChild(close);
 
+	var copy = document.createElement("button");
+	var copyButton = document.createTextNode("+");
+	copy.setAttribute("class", "btn btn-background");
+	copy.appendChild(copyButton);
+	headerSection.appendChild(copy);
+
 	var nameSection = document.createElement("h1");
-	nameSection.setAttribute("class", "col-sm-6 float-left");
+	nameSection.setAttribute("class", "float-left");
 	var name = document.createTextNode(characterElement.name);
 	nameSection.appendChild(name);
 	headerSection.appendChild(nameSection);
 
 	var costSection = document.createElement("div");
 	var cost = document.createElement("span");
-	cost.appendChild(document.createTextNode(characterElement.cost));
+	cost.appendChild(document.createTextNode("("+characterElement.cost+")"));
 	cost.setAttribute("class", "cost");
 	costSection.appendChild(cost);
-	costSection.appendChild(document.createTextNode(" + Equipment: "));
-	var equipmentCost = document.createElement("span");
-	equipmentCost.setAttribute("class", "cost");
-	equipmentCost.innerHTML = "0";
-	costSection.appendChild(equipmentCost);
-	costSection.setAttribute("class", "col-sm-3 float-left cost-section");
 	headerSection.appendChild(costSection);
-
-	var copy = document.createElement("button");
-	var copyButton = document.createTextNode("+");
-	copy.setAttribute("class", "btn btn-primary btn-support");
-	copy.appendChild(copyButton);
-	headerSection.appendChild(copy);
 
 	charaSection.appendChild(headerSection);
 
@@ -269,7 +266,7 @@ function addCharacter(characterElement, presetInfo){
 		heroicCheckBox.type = 'checkbox';
 		heroicCheckBox.checked = character.heroic;
 		var heroicCostSection = document.createElement("span");
-		var heroicDescription = document.createTextNode("Heroic:");
+		var heroicDescription = document.createTextNode("Heroic: (" + upgrades.heroes_and_leaders[0].cost +") ");
 		heroicSection.appendChild(heroicDescription);
 		heroicSection.appendChild(heroicCheckBox);
 		heroicSection.appendChild(heroicCostSection);
@@ -327,27 +324,28 @@ function addCharacter(characterElement, presetInfo){
 		equipmentToggle.setAttribute("class", "row");
 		
 		var showEquipment = document.createElement("button");
-		showEquipment.setAttribute("class", "btn btn-primary");
-		showEquipment.appendChild(document.createTextNode("Show Equipment"));
+		showEquipment.setAttribute("class", "btn btn-background");
+		showEquipment.appendChild(document.createTextNode("Show Upgrades"));
 		equipmentToggle.appendChild(showEquipment);
 		showEquipment.style.display = "none";
 
 		var hideEquipment = document.createElement("button");
-		hideEquipment.setAttribute("class", "btn btn-primary");
-		hideEquipment.appendChild(document.createTextNode("Hide Equipment"));
+		hideEquipment.setAttribute("class", "btn btn-background");
+		hideEquipment.appendChild(document.createTextNode("Hide Upgrades"));
 		equipmentToggle.appendChild(hideEquipment);
 
 		charaSection.appendChild(equipmentToggle);
 		var equipmentSection = document.createElement("div");
-		equipmentSection.setAttribute("class", "grid-container");
+		equipmentSection.setAttribute("class", "");
 	}
 
 	if(characterElement.wear_slots != null){
 		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
 			var wearSection = document.createElement("div");
-			wearSection.setAttribute("class", "grid-item carry-section");
+			wearSection.setAttribute("class", "carry-section");
 
 			var carryHeader = document.createElement("h2");
+			carryHeader.setAttribute("class", "header");
 			var carryHeaderText = document.createTextNode(slotType);
 			carryHeader.appendChild(carryHeaderText);
 			wearSection.appendChild(carryHeader)
@@ -387,9 +385,10 @@ function addCharacter(characterElement, presetInfo){
 	if(characterElement.carry_slots != null){
 		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
 			var carrySection = document.createElement("div");
-			carrySection.setAttribute("class", "grid-item carry-section");
+			carrySection.setAttribute("class", "carry-section");
 			var carryHeader = document.createElement("h2");
 			var carryHeaderText = document.createTextNode(slotType);
+			carryHeader.setAttribute("class", "header");
 			carryHeader.appendChild(carryHeaderText);
 			carrySection.appendChild(carryHeader);
 			var slotOption = characterElement.carry_slots[slotType];
@@ -408,7 +407,7 @@ function addCharacter(characterElement, presetInfo){
 	if(characterElement.consumables != null){
 		Object.keys(characterElement.consumables).forEach(function (slotType) {
 			var consumeableSection = document.createElement("div");
-			consumeableSection.setAttribute("class", "grid-item");
+			consumeableSection.setAttribute("class", "carry-section");
 			var consumeableHeader = document.createElement("h2");
 			var consumeableHeaderText = document.createTextNode(slotType);
 			consumeableHeader.appendChild(consumeableHeaderText);
@@ -418,17 +417,17 @@ function addCharacter(characterElement, presetInfo){
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 				var optionSection = document.createElement("div");
-				optionSection.setAttribute("class", "equipmentOption");
+				optionSection.setAttribute("class", "consumable");
 				var optionNameSection = document.createElement("span");
 				optionNameSection.appendChild(document.createTextNode(optionElement.name));
 				var optionCostSection = document.createElement("span");
 				optionCostSection.setAttribute("class", "cost");
-				optionCostSection.appendChild(document.createTextNode(optionElement.cost));
+				optionCostSection.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
 				var optionCostQty = document.createElement("span");
 				optionCostQty.appendChild(document.createTextNode(" X "));
 
 				var optionIncreaseCount = document.createElement("button");
-				optionIncreaseCount.setAttribute("class", "btn btn-primary btn-left-sm");
+				optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
 				optionIncreaseCount.appendChild(document.createTextNode("+"));
 				optionIncreaseCount.addEventListener("click", function(){
 					var value = parseInt(optionInput.value);
@@ -446,7 +445,7 @@ function addCharacter(characterElement, presetInfo){
 				});
 
 				var optionDecreaseCount = document.createElement("button");
-				optionDecreaseCount.setAttribute("class", "btn btn-primary btn-right-sm");
+				optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
 				optionDecreaseCount.appendChild(document.createTextNode("-"));
 				optionDecreaseCount.addEventListener("click", function(){
 					var value = parseInt(optionInput.value);
@@ -512,7 +511,7 @@ function addCharacter(characterElement, presetInfo){
 	if(characterElement.carry_slots != null || characterElement.consumables != null){
 		showEquipment.addEventListener("click", function() {
 			showEquipment.style.display = "none";
-			equipmentSection.style.display = "flex";
+			equipmentSection.style.display = "block";
 			hideEquipment.style.display = "block";
 		});
 		hideEquipment.addEventListener("click", function() {
@@ -558,20 +557,22 @@ function updateCaps(){
 
 	force.forEach(function(character){
 		totalCaps += characters[character.id].cost;
+
+		var upgradeCaps = 0;
 		if(character.heroic){
-			totalCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+			upgradeCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
 		}
 
 		wear_slots.forEach(function (slotType) {
 			if(character[slotType] != null){
-				totalCaps += getUpgrade(slotType, character[slotType]).cost;
+				upgradeCaps += getUpgrade(slotType, character[slotType]).cost;
 			}
 		});
 
 		carry_slots.forEach(function (slotType) {
 			if(character[slotType] != null){
 				character[slotType].forEach(function(item){
-					totalCaps += getUpgrade(slotType,item).cost;
+					upgradeCaps += getUpgrade(slotType,item).cost;
 				});
 			}
 		});
@@ -579,10 +580,11 @@ function updateCaps(){
 		consumable_slots.forEach(function (slotType) {
 			if(character[slotType] != null){
 				Object.keys(character[slotType]).forEach(function (item) { 
-					totalCaps += getUpgrade(slotType, item).cost * character[slotType][item];
+					upgradeCaps += getUpgrade(slotType, item).cost * character[slotType][item];
 				});
 			}
-		});		
+		});
+		totalCaps += upgradeCaps;
 	})
 
 	capsSection.innerHTML = totalCaps;

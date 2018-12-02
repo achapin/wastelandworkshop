@@ -45,18 +45,18 @@ h2 {
 }
 
 #bos {
-	background-color: gray;
-	color: white;
+	background-color: rgb(200,200,200);
+	color: rgb(75, 75, 75);
 }
 
 #super_mutants {
-	background-color: green;
-	color: gray;
+	background-color: rgb(200,200,200);
+	color: green;
 }
 
 #survivors {
-	background-color: blue;
-	color: white;
+	background-color: rgb(200,200,200);
+	color: rgb(40,65,129);
 }
 
 #selector ul li {
@@ -64,6 +64,10 @@ h2 {
 	list-style-type: none;
 	padding: 7px;
 	padding-top: 0px;
+}
+
+#selector ul li :hover {
+	background-color: white;
 }
 
 .add{
@@ -86,12 +90,8 @@ h2 {
 }
 
 .characterElement{
-	border: 2px; 
-	border-color: black;
-	border-style: solid;
-	padding: 1em;
-	background-color: rgb(75,75,75);
-	margin: 1em;
+	padding-left: 1em;
+	padding-top: 1em;
 }
 
 .grid-container {
@@ -104,12 +104,48 @@ h2 {
 }
 
 .carry-section {
-	float: left;
+	clear: right;
+	background-color: rgb(75,75,75);
+	padding-left: 1em;
+}
+
+.header-section div {
+	display: inline-block;
+}
+
+.header-section h1 {
+	display: inline-block;
+	margin-left: .3em;
+	margin-right: .3em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.header-section button {
+	display: inline-block;
+	margin: .1em;
+}
+
+.carry-section .header {
+	display: inline-block;
+}
+
+.carry-section div {
+	display: inline-block;
+	padding: .1em;
+}
+
+.carry-section h2 {
+	display: inline-block;
+	margin-right: .3em;
+}
+
+.carry-section .consumable {
+	display: block;
+	padding-bottom: .3em;
 }
 
 .cost {
-	background-color: red;
-	color: white;
 	margin: .2em;
 	padding: 5px;
 	border-radius: 30px;
@@ -168,4 +204,23 @@ h2 {
 .btn-unequipped {
 	background-color: rgb(200,200,200);
 	color: rgb(75, 75, 75);
+}
+
+input {
+	color: rgb(75, 75, 75);
+}
+
+select {
+	background-color: rgb(200,200,200);
+	color: rgb(75, 75, 75);
+}
+
+.btn-background {
+	background-color: rgb(231, 189, 66);
+	color: rgb(75, 75, 75);
+}
+
+.btn-background-off {
+	background-color: rgb(200, 200, 200);
+	color: rgb(40,65,129);
 }
