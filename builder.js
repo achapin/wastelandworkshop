@@ -68,7 +68,16 @@ function mutantsLoaded(json){
 }
 
 function loadLocalization(){
-	var language = navigator.language.split("-")[0];
+
+	var language = "en";
+	if(document.cookie != null){
+		var decodedCookie = decodeURIComponent(document.cookie);
+    	language = decodedCookie.split(';')[0].split("=")[1];
+	}else if (navigator.language != language){
+		language = navigator.language.split("-")[0];
+	}
+
+	document.getElementById("languageSelection").value = language;
 
 	var locLoadPromise = loadURL("localization/"+language+".json");
 	locLoadPromise.then(localizationLoaded);
@@ -108,7 +117,7 @@ function initListeners(){
 
 function switchLanguage(){
 	var newlang = document.getElementById("languageSelection").value;
-	alert("changing language to " + newlang);
+	document.cookie = "language="+newlang+"; expires=Sat, 23 Oct 2077 12:00:00 UTC";
 	reloadLanguage(newlang);
 }
 
