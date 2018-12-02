@@ -2,7 +2,6 @@
 A skirmish squad builder for Fallout Wasteland Warfare
 
 # TODO
-* Localization
 * Shorten query string
 * Limit unique Characters
 * Printable lists

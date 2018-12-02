@@ -1,3 +1,4 @@
+var loc;
 var upgrades;
 var bos;
 var survivors;
@@ -63,6 +64,24 @@ function survivorsLoaded(json){
 
 function mutantsLoaded(json){
 	mutants = json;
+	loadLocalization();
+}
+
+function loadLocalization(){
+	var language = navigator.language.split("-")[0];
+
+	var locLoadPromise = loadURL("localization/"+language+".json");
+	locLoadPromise.then(localizationLoaded);
+	locLoadPromise.catch(function(){
+		alert("Localization load failed, defaulting to english");
+		var engLoadPromise = loadURL("localization/en.json");
+		engLoadPromise.then(localizationLoaded);
+		engLoadPromise.catch(function(){alert("English localization load failed. Now you're really hosed!");});
+	});
+}
+
+function localizationLoaded(json){
+	loc = json;
 	initListeners();
 }
 
@@ -70,6 +89,8 @@ function initListeners(){
 	document.getElementById("switch-bos").addEventListener("click", switchBos, true);
 	document.getElementById("switch-mutants").addEventListener("click", switchMutants, true);
 	document.getElementById("switch-survivors").addEventListener("click", switchSurvivors, true);
+
+	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
@@ -83,6 +104,34 @@ function initListeners(){
 	}else{
 		switchBos();
 	}
+}
+
+function switchLanguage(){
+	var newlang = document.getElementById("languageSelection").value;
+	alert("changing language to " + newlang);
+	reloadLanguage(newlang);
+}
+
+function reloadLanguage(langCode){
+	var locLoadPromise = loadURL("localization/"+langCode+".json");
+	locLoadPromise.then(updateLanguage);
+	locLoadPromise.catch(function(){
+		alert("Localization load failed, defaulting to english");
+		var engLoadPromise = loadURL("localization/en.json");
+		engLoadPromise.then(updateLanguage);
+		engLoadPromise.catch(function(){alert("English localization load failed. Now you're really hosed!");});
+	});
+}
+
+function updateLanguage(json){
+	loc = json;
+	var forceString = "";
+	var queryString = window.location.href.split("?");
+	if(queryString.length > 1){
+		forceString = queryString[1];
+	}
+	clearForce();
+	loadForceFromString(forceString);
 }
 
 function switchBos() {
@@ -112,7 +161,7 @@ function clearForce(){
 		var button = document.createElement("button");
 		button.setAttribute("class", "btn btn-background choice");
 		var nameSpan = document.createElement("span");
-		var nameNode = document.createTextNode(characterElement.name);
+		var nameNode = document.createTextNode(loc[characterElement.name]);
 		nameSpan.appendChild(nameNode);
 		var pointsSpan = document.createElement("span");
 		pointsSpan.setAttribute("class", "cost");
@@ -130,7 +179,7 @@ function clearForce(){
 	close.addEventListener("click", closeAddSection);
 	close.appendChild(closeButton);
 	var descriptionSpan = document.createElement("span");
-	descriptionSpan.appendChild(document.createTextNode("Characters:"));
+	descriptionSpan.appendChild(document.createTextNode(loc["characters"]));
 	addSection.appendChild(close);
 	addSection.appendChild(descriptionSpan);
 	addSection.appendChild(list);
@@ -167,7 +216,7 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	var equipmentToggle =  document.createElement("div");
 
 	var optionNameSection = document.createElement("span");
-	optionNameSection.appendChild(document.createTextNode(carryInfo.name));
+	optionNameSection.appendChild(document.createTextNode(loc[carryInfo.name]));
 	var optionCostSection = document.createElement("span");
 	optionCostSection.setAttribute("class", "cost");
 	optionCostSection.appendChild(document.createTextNode("(" + carryInfo.cost + ")"));
@@ -179,7 +228,7 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	equipmentToggle.appendChild(equipButton);
 
 	var optionNameSection2 = document.createElement("span");
-	optionNameSection2.appendChild(document.createTextNode("■ " + carryInfo.name));
+	optionNameSection2.appendChild(document.createTextNode("■ " + loc[carryInfo.name]));
 	var optionCostSection2 = document.createElement("span");
 	optionCostSection2.setAttribute("class", "cost");
 	optionCostSection2.appendChild(document.createTextNode("(" + carryInfo.cost + ")"));
@@ -243,7 +292,7 @@ function addCharacter(characterElement, presetInfo){
 
 	var nameSection = document.createElement("h1");
 	nameSection.setAttribute("class", "float-left");
-	var name = document.createTextNode(characterElement.name);
+	var name = document.createTextNode(loc[characterElement.name]);
 	nameSection.appendChild(name);
 	headerSection.appendChild(nameSection);
 
@@ -266,7 +315,7 @@ function addCharacter(characterElement, presetInfo){
 		heroicCheckBox.type = 'checkbox';
 		heroicCheckBox.checked = character.heroic;
 		var heroicCostSection = document.createElement("span");
-		var heroicDescription = document.createTextNode("Heroic: (" + upgrades.heroes_and_leaders[0].cost +") ");
+		var heroicDescription = document.createTextNode(loc["heroic"] + " (" + upgrades.heroes_and_leaders[0].cost +") ");
 		heroicSection.appendChild(heroicDescription);
 		heroicSection.appendChild(heroicCheckBox);
 		heroicSection.appendChild(heroicCostSection);
@@ -291,7 +340,7 @@ function addCharacter(characterElement, presetInfo){
 				alert("No upgrade " + elements[1] + " of type " + elements[0] + " found");
 			}else{
 				var mustWearElement = document.createElement("div");
-				var mustWearDescription = document.createTextNode(elements[1]);
+				var mustWearDescription = document.createTextNode(loc[elements[1]]);
 				mustWearElement.appendChild(mustWearDescription);
 				mustWearSection.appendChild(mustWearElement);
 			}
@@ -308,7 +357,7 @@ function addCharacter(characterElement, presetInfo){
 				alert("No upgrade " + elements[1] + " of type " + elements[0] + " found");
 			}else{
 				var mustCarryElement = document.createElement("div");
-				var mustCarryDescription = document.createTextNode(elements[1]);
+				var mustCarryDescription = document.createTextNode(loc[elements[1]]);
 				mustCarryElement.appendChild(mustCarryDescription);
 				mustCarrySection.appendChild(mustCarryElement);
 			}
@@ -325,13 +374,13 @@ function addCharacter(characterElement, presetInfo){
 		
 		var showEquipment = document.createElement("button");
 		showEquipment.setAttribute("class", "btn btn-background");
-		showEquipment.appendChild(document.createTextNode("Show Upgrades"));
+		showEquipment.appendChild(document.createTextNode(loc["show_upgrades"]));
 		equipmentToggle.appendChild(showEquipment);
 		showEquipment.style.display = "none";
 
 		var hideEquipment = document.createElement("button");
 		hideEquipment.setAttribute("class", "btn btn-background");
-		hideEquipment.appendChild(document.createTextNode("Hide Upgrades"));
+		hideEquipment.appendChild(document.createTextNode(loc["hide_upgrades"]));
 		equipmentToggle.appendChild(hideEquipment);
 
 		charaSection.appendChild(equipmentToggle);
@@ -346,14 +395,14 @@ function addCharacter(characterElement, presetInfo){
 
 			var carryHeader = document.createElement("h2");
 			carryHeader.setAttribute("class", "header");
-			var carryHeaderText = document.createTextNode(slotType);
+			var carryHeaderText = document.createTextNode(loc[slotType]);
 			carryHeader.appendChild(carryHeaderText);
 			wearSection.appendChild(carryHeader)
 
 			var slotOption = characterElement.wear_slots[slotType];
 
 			var slotDropdown = document.createElement("SELECT");
-			var emptyOption = new Option("None", null);
+			var emptyOption = new Option(loc["none"], null);
 			slotDropdown.add(emptyOption);
 			var optionSelectedIndex = 0;
 			var optionIndex = 0;
@@ -361,7 +410,7 @@ function addCharacter(characterElement, presetInfo){
 			slotOption.forEach(function(option) {
 				var optionElement = getUpgrade(slotType, option);
 
-				var option = new Option(optionElement.name + " (" + optionElement.cost + ")", optionElement.name);
+				var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 				slotDropdown.add(option);
 				optionIndex++;
 				if(character[slotType] == optionElement.name){
@@ -387,7 +436,7 @@ function addCharacter(characterElement, presetInfo){
 			var carrySection = document.createElement("div");
 			carrySection.setAttribute("class", "carry-section");
 			var carryHeader = document.createElement("h2");
-			var carryHeaderText = document.createTextNode(slotType);
+			var carryHeaderText = document.createTextNode(loc[slotType]);
 			carryHeader.setAttribute("class", "header");
 			carryHeader.appendChild(carryHeaderText);
 			carrySection.appendChild(carryHeader);
@@ -409,7 +458,7 @@ function addCharacter(characterElement, presetInfo){
 			var consumeableSection = document.createElement("div");
 			consumeableSection.setAttribute("class", "carry-section");
 			var consumeableHeader = document.createElement("h2");
-			var consumeableHeaderText = document.createTextNode(slotType);
+			var consumeableHeaderText = document.createTextNode(loc[slotType]);
 			consumeableHeader.appendChild(consumeableHeaderText);
 			consumeableSection.appendChild(consumeableHeader);
 
@@ -419,7 +468,7 @@ function addCharacter(characterElement, presetInfo){
 				var optionSection = document.createElement("div");
 				optionSection.setAttribute("class", "consumable");
 				var optionNameSection = document.createElement("span");
-				optionNameSection.appendChild(document.createTextNode(optionElement.name));
+				optionNameSection.appendChild(document.createTextNode(loc[optionElement.name]));
 				var optionCostSection = document.createElement("span");
 				optionCostSection.setAttribute("class", "cost");
 				optionCostSection.appendChild(document.createTextNode("(" + optionElement.cost + ")"));

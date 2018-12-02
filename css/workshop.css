@@ -27,6 +27,11 @@ h2 {
 	padding-top: 0px;
 }
 
+#languageSelection {
+	display: inline-block;
+	float: right;
+}
+
 #listInfo {
 	clear: both;
 }
@@ -57,6 +62,10 @@ h2 {
 #survivors {
 	background-color: rgb(200,200,200);
 	color: rgb(40,65,129);
+}
+
+#selector ul {
+	float: left;
 }
 
 #selector ul li {
