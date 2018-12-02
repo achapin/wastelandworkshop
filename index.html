@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Unofficial Squad Builder for Fallout Wasteland Warfare">
+	<meta name="author" content="Aaron Chapin">
+	<title>Wasteland Warfare Squad Builder</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/workshop.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<script src="builder.js"></script>
+</head>
+<body onload="initialize()">
+	<div id="selector">
+		<ul>
+			<li id="switch-bos"><button id="bos" class="btn btn-primary button-force-selector">Brotherhood of Steel</button></li>
+			<li id="switch-mutants"><button id="super_mutants" class="btn btn-primary button-force-selector">Super Mutants</button></li>
+			<li id="switch-survivors"><button id="survivors" class="btn btn-primary button-force-selector">Survivors</button></li>
+		</ul>
+		<select id="languageSelection">
+			<option value='en'>English</option>
+			<option value='de'>Deutsch</option>
+		</select>
+	</div>
+	<div id="listInfo">
+		<div id="listName" class="">
+			<span>List Name</span> <input id="listNameArea" type="textarea"></input>
+		</div>
+		<div id="caps" class="cost">
+		</div>
+	</div>
+	<div id="addMenu" class="container">
+		<div class="row">
+			<div class="add col-sm-12">
+				<button id="addButton" class="btn btn-background">+</button>
+			</div>
+		</div>
+		<div class="row">
+			<div id="addSection" class="add col-sm-12"></div>
+			</div>
+		</div>
+	<div id="force" class="container"></div>
+</body>

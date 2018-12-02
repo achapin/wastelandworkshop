@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "name": "aspirant_goddard",
     "heroic": true,
     "must_wear": [
@@ -29,6 +30,7 @@
     "cost": 105
   },
   {
+    "id": 1,
     "name": "eyebot",
     "must_carry": [
       "pistols.eyebot_laser"
@@ -36,6 +38,7 @@
     "cost": 59
   },
   {
+    "id": 2,
     "name": "field_scribe",
     "heroic": true,
     "carry_slots": {
@@ -53,6 +56,7 @@
     "cost": 43
   },
   {
+    "id": 3,
     "name": "lancer",
     "heroic": true,
     "carry_slots": {
@@ -64,6 +68,7 @@
     "cost": 53
   },
   {
+    "id": 4,
     "name": "knight",
     "heroic": true,
     "wear_slots": {
@@ -106,6 +111,7 @@
     "cost": 62
   },
   {
+    "id": 5,
     "name": "knight_captain_cade",
     "heroic": true,
     "wear_slots": {
@@ -151,6 +157,7 @@
     "cost": 114
   },
   {
+    "id": 6,
     "name": "knight_patrol",
     "heroic": true,
     "carry_slots": {
@@ -172,6 +179,7 @@
     "cost": 51
   },
   {
+    "id": 7,
     "name": "knight_patrol_blade",
     "heroic": true,
     "carry_slots": {
@@ -192,6 +200,7 @@
     "cost": 47
   },
   {
+    "id": 8,
     "name": "paladin",
     "heroic": true,
     "wear_slots": {
@@ -234,6 +243,7 @@
     "cost": 90
   },
   {
+    "id": 9,
     "name": "paladin_danse",
     "heroic": true,
     "wear_slots": {
