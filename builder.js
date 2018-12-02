@@ -100,6 +100,7 @@ function initListeners(){
 	document.getElementById("switch-survivors").addEventListener("click", switchSurvivors, true);
 
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
+	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
 
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
@@ -645,7 +646,7 @@ function updateCaps(){
 		totalCaps += upgradeCaps;
 	})
 
-	capsSection.innerHTML = totalCaps;
+	capsSection.innerHTML = loc["total_caps"] + ": " + totalCaps;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
 		window.history.pushState({path:newurl},'',newurl);
@@ -654,6 +655,7 @@ function updateCaps(){
 
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
+	forceString += "n=" + document.getElementById("listNameArea").value + ";";
 	force.forEach(function(character) {
 		var charString = replaceAll(JSON.stringify(character),'"',"!");
 		charString += ";";
@@ -681,7 +683,14 @@ function loadForceFromString(forceString){
 		switchSurvivors();
 	}
 
-	for(var index = 1; index < objects.length - 1; index++){
+	var listName = "";
+
+	if(objects[1].length > 2){
+		listName = objects[1].split("=")[1];
+	}		
+	document.getElementById("listNameArea").value = listName;
+
+	for(var index = 2; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
 		addCharacter(getCharacterById(characterData.id),characterData);
