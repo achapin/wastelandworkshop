@@ -219,6 +219,11 @@ function getUpgrade(elementType, elementName){
 			toReturn = element;
 		}
 	});
+
+	if(toReturn == null){
+		alert("No upgrade " + elementName + " found for type " + elementType);
+	}
+
 	return toReturn;
 }
 
