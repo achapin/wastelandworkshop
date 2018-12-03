@@ -201,7 +201,6 @@
       "rifles": [
         "assault_rifle",
         "bolt_action_pipe_rifle",
-        "pipe_rifle",
         "hunting_rifle"
       ],
       "melee": [
