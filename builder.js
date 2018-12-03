@@ -70,11 +70,11 @@ function mutantsLoaded(json){
 function loadLocalization(){
 
 	var language = "en";
-	if(document.cookie != null){
+	if(document.cookie != null && decodeURIComponent(document.cookie) != null && decodeURIComponent(document.cookie).length > 0){
 		var decodedCookie = decodeURIComponent(document.cookie);
     	language = decodedCookie.split(';')[0].split("=")[1];
-	}else if (navigator.language != language){
-		language = navigator.language.split("-")[0];
+	}else if (navigator != null && navigator.hasOwnProperty("language") && navigator.language != language){
+		language = navigator.language.split('-')[0];
 	}
 
 	document.getElementById("languageSelection").value = language;
@@ -84,6 +84,7 @@ function loadLocalization(){
 	locLoadPromise.catch(function(){
 		alert("Localization load failed, defaulting to english");
 		var engLoadPromise = loadURL("localization/en.json");
+		document.getElementById("languageSelection").value = "en";
 		engLoadPromise.then(localizationLoaded);
 		engLoadPromise.catch(function(){alert("English localization load failed. Now you're really hosed!");});
 	});
@@ -620,7 +621,7 @@ function updateCaps(){
 	var consumable_slots = [ "thrown", "mines", "chems"];
 
 	force.forEach(function(character){
-		totalCaps += characters[character.id].cost;
+		totalCaps += getCharacterById(character.id).cost;
 
 		var upgradeCaps = 0;
 		if(character.heroic){
