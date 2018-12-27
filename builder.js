@@ -590,11 +590,11 @@ function addCharacter(characterElement, presetInfo){
 	close.addEventListener("click", function() 
 		{
 			forceSection.removeChild(charaSection);
-			var index = force.findIndex(function(otherChar){
+			var index = force.characters.findIndex(function(otherChar){
 				return otherChar === character;
 			});
 			if(index != -1){
-				force.splice(index,1);
+				force.characters.splice(index,1);
 			}
 			updateCaps();
 		}
@@ -605,7 +605,10 @@ function addCharacter(characterElement, presetInfo){
 
 	forceSection.appendChild(charaSection);
 
-	force.push(character);
+	if(!force.hasOwnProperty("characters")){
+		force.characters = [];
+	}
+	force.characters.push(character);
 
 	totalCaps += characterElement.cost;
 	updateCaps();
@@ -620,37 +623,39 @@ function updateCaps(){
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
 	var consumable_slots = [ "thrown", "mines", "chems"];
 
-	force.forEach(function(character){
-		totalCaps += getCharacterById(character.id).cost;
-
-		var upgradeCaps = 0;
-		if(character.heroic){
-			upgradeCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
-		}
-
-		wear_slots.forEach(function (slotType) {
-			if(character[slotType] != null){
-				upgradeCaps += getUpgrade(slotType, character[slotType]).cost;
+	if(force.hasOwnProperty("characters")){
+		force.characters.forEach(function(character){
+			totalCaps += getCharacterById(character.id).cost;
+	
+			var upgradeCaps = 0;
+			if(character.heroic){
+				upgradeCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
 			}
+	
+			wear_slots.forEach(function (slotType) {
+				if(character[slotType] != null){
+					upgradeCaps += getUpgrade(slotType, character[slotType]).cost;
+				}
+			});
+	
+			carry_slots.forEach(function (slotType) {
+				if(character[slotType] != null){
+					character[slotType].forEach(function(item){
+						upgradeCaps += getUpgrade(slotType,item).cost;
+					});
+				}
+			});
+	
+			consumable_slots.forEach(function (slotType) {
+				if(character[slotType] != null){
+					Object.keys(character[slotType]).forEach(function (item) { 
+						upgradeCaps += getUpgrade(slotType, item).cost * character[slotType][item];
+					});
+				}
+			});
+			totalCaps += upgradeCaps;
 		});
-
-		carry_slots.forEach(function (slotType) {
-			if(character[slotType] != null){
-				character[slotType].forEach(function(item){
-					upgradeCaps += getUpgrade(slotType,item).cost;
-				});
-			}
-		});
-
-		consumable_slots.forEach(function (slotType) {
-			if(character[slotType] != null){
-				Object.keys(character[slotType]).forEach(function (item) { 
-					upgradeCaps += getUpgrade(slotType, item).cost * character[slotType][item];
-				});
-			}
-		});
-		totalCaps += upgradeCaps;
-	})
+	}
 
 	capsSection.innerHTML = loc["total_caps"] + ": " + totalCaps;
 	if (history.pushState) {
@@ -662,11 +667,13 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
-	force.forEach(function(character) {
-		var charString = replaceAll(JSON.stringify(character),'"',"!");
-		charString += ";";
-		forceString += charString;
-	})
+	if(force.hasOwnProperty("characters")){
+		force.characters.forEach(function(character) {
+			var charString = replaceAll(JSON.stringify(character),'"',"!");
+			charString += ";";
+			forceString += charString;
+		});
+	}
 	return forceString;
 }
 
