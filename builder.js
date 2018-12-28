@@ -345,6 +345,7 @@ function addCharacter(characterElement, presetInfo){
 		});
 		specialSection.appendChild(heroicSection);
 	}
+	addLeaderSection(specialSection, character);
 
 	if(characterElement.must_wear){
 		var mustWearSection = document.createElement("div");
@@ -590,11 +591,14 @@ function addCharacter(characterElement, presetInfo){
 	close.addEventListener("click", function() 
 		{
 			forceSection.removeChild(charaSection);
-			var index = force.characters.findIndex(function(otherChar){
-				return otherChar === character;
-			});
+			var index = getCharacterIndex(character);
 			if(index != -1){
 				force.characters.splice(index,1);
+			}
+			if(force.hasOwnProperty("leader")){
+				if(force.leader.leaderIndex > index){
+					force.leader.leaderIndex -= 1;
+				}
 			}
 			updateCaps();
 		}
@@ -615,6 +619,82 @@ function addCharacter(characterElement, presetInfo){
 	return charaSection;
 }
 
+function addLeaderSection(domElement, character){
+	var characterIndex = getCharacterIndex(character);
+	if(characterIndex == -1){
+		characterIndex = force.characters.length;
+	}
+
+	var activeLeaderSection = document.createElement("div");
+	activeLeaderSection.setAttribute("class", "activeLeaderSection");
+	activeLeaderSection.appendChild(document.createTextNode(loc["leader"]));
+	var perkDropdown = document.createElement("SELECT");
+	var emptyOption = new Option(loc["none"], null);
+	perkDropdown.add(emptyOption);
+
+	for(var index = 1; index < upgrades.heroes_and_leaders.length; index++) {
+		var optionElement = upgrades.heroes_and_leaders[index];
+		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+		perkDropdown.add(option);
+	}
+
+	perkDropdown.onchange = function(){
+		if(!force.hasOwnProperty("leader")){
+			force.leader = {};
+		}
+		if(perkDropdown.value == null || perkDropdown.value == "null"){
+			force.leader.perkIndex = 0;
+		}else{
+			force.leader.perkIndex = perkDropdown.selectedIndex;
+		}
+		updateCaps();
+	};
+	activeLeaderSection.appendChild(perkDropdown);
+
+
+	var inactiveLeaderSection = document.createElement("div");
+	inactiveLeaderSection.setAttribute("class", "inactiveLeaderSection");
+	var setLeaderButton = document.createElement("button");
+	setLeaderButton.setAttribute("class", "btn btn-background");
+	setLeaderButton.appendChild(document.createTextNode("Set as leader"));
+	setLeaderButton.addEventListener("click", function() { setLeader(character)});
+	inactiveLeaderSection.appendChild(setLeaderButton);
+
+	if(force.hasOwnProperty("leader")){
+		perkDropdown.selectedIndex = force.leader.perkIndex
+		var isLeader = force.leader.leaderIndex == characterIndex;
+		inactiveLeaderSection.style.display = isLeader ? "none" : "block";
+		activeLeaderSection.style.display = isLeader ? "block" : "none";
+	}else{
+		perkDropdown.selectedIndex = 0;
+		inactiveLeaderSection.style.display = "block";
+		activeLeaderSection.style.display = "none";
+	}
+
+	
+	domElement.appendChild(inactiveLeaderSection);
+	domElement.appendChild(activeLeaderSection);
+}
+
+function setLeader(character){
+	var newLeaderIndex = getCharacterIndex(character);
+	if(!force.hasOwnProperty("leader")){
+		force.leader = {};
+	}
+	force.leader.leaderIndex = newLeaderIndex;
+	force.leader.perkIndex = 0;
+
+	var activeSections = document.getElementsByClassName("activeLeaderSection");
+	var inactiveSections = document.getElementsByClassName("inactiveLeaderSection");
+
+	for(var index = 0; index < activeSections.length; index++){
+		activeSections[index].style.display = index == force.leader.leaderIndex ? "block" : "none";
+		inactiveSections[index].style.display = index == force.leader.leaderIndex ? "none" : "block";
+	}
+
+	updateCaps();
+}
+
 function updateCaps(){
 
 	totalCaps = 0;
@@ -622,6 +702,10 @@ function updateCaps(){
 	var wear_slots = ["armor"];
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
 	var consumable_slots = [ "thrown", "mines", "chems"];
+
+	if(force.hasOwnProperty("leader") && force.leader.perkIndex > 0){
+		totalCaps += upgrades.heroes_and_leaders[force.leader.perkIndex].cost;
+	}
 
 	if(force.hasOwnProperty("characters")){
 		force.characters.forEach(function(character){
@@ -667,6 +751,7 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
+	//todo: add leader info
 	if(force.hasOwnProperty("characters")){
 		force.characters.forEach(function(character) {
 			var charString = replaceAll(JSON.stringify(character),'"',"!");
@@ -696,12 +781,17 @@ function loadForceFromString(forceString){
 		switchSurvivors();
 	}
 
+	//todo: load leader info
+
 	var listName = "";
 
 	if(objects[1].length > 2){
 		listName = objects[1].split("=")[1];
 	}		
 	document.getElementById("listNameArea").value = listName;
+
+	force = {};
+	force.characters = [];
 
 	for(var index = 2; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
@@ -717,6 +807,16 @@ function getCharacterById(characterId){
 		}
 	}
 	return null;
+}
+
+function getCharacterIndex(character){
+	if(force == null || !force.hasOwnProperty("characters") || force.characters == null){
+		return -1;
+	}
+	var characterIndex = force.characters.findIndex(function(otherChar){
+		return otherChar === character;
+	});
+	return characterIndex;
 }
 
 function initialize(){
