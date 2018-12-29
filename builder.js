@@ -629,6 +629,7 @@ function addLeaderSection(domElement, character){
 	activeLeaderSection.setAttribute("class", "activeLeaderSection");
 	activeLeaderSection.appendChild(document.createTextNode(loc["leader"]));
 	var perkDropdown = document.createElement("SELECT");
+	perkDropdown.setAttribute("class", "leaderPerkSelection");
 	var emptyOption = new Option(loc["none"], null);
 	perkDropdown.add(emptyOption);
 
@@ -646,6 +647,10 @@ function addLeaderSection(domElement, character){
 			force.leader.perkIndex = 0;
 		}else{
 			force.leader.perkIndex = perkDropdown.selectedIndex;
+		}
+		var dropDowns = document.getElementsByClassName("leaderPerkSelection");
+		for(var dropDownIndex = 0; dropDownIndex < dropDowns.length; dropDownIndex++){
+			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
 		}
 		updateCaps();
 	};
@@ -682,7 +687,6 @@ function setLeader(character){
 		force.leader = {};
 	}
 	force.leader.leaderIndex = newLeaderIndex;
-	force.leader.perkIndex = 0;
 
 	var activeSections = document.getElementsByClassName("activeLeaderSection");
 	var inactiveSections = document.getElementsByClassName("inactiveLeaderSection");
@@ -751,7 +755,11 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
-	//todo: add leader info
+	if(force.hasOwnProperty("leader")){
+		forceString += "l=" + force.leader.leaderIndex + "," + force.leader.perkIndex + ";";
+	}else{
+		forceString += "l=-1,0;";
+	}
 	if(force.hasOwnProperty("characters")){
 		force.characters.forEach(function(character) {
 			var charString = replaceAll(JSON.stringify(character),'"',"!");
@@ -781,19 +789,31 @@ function loadForceFromString(forceString){
 		switchSurvivors();
 	}
 
-	//todo: load leader info
-
 	var listName = "";
 
 	if(objects[1].length > 2){
-		listName = objects[1].split("=")[1];
+		listName = decodeURIComponent(objects[1].split("=")[1]);
 	}		
 	document.getElementById("listNameArea").value = listName;
 
 	force = {};
+	force.leader = {};
+
+	var startIndex = 2;
+
+	var leaderInfo = objects[2].split("=")[1].split(",");
+	if(leaderInfo.length == 2){
+		startIndex = 3;
+		force.leader.leaderIndex = parseInt(leaderInfo[0]);
+		force.leader.perkIndex = parseInt(leaderInfo[1]);
+	}else{
+		force.leader.leaderIndex = -1;
+		force.leader.perkIndex = 0;
+	}
+
 	force.characters = [];
 
-	for(var index = 2; index < objects.length - 1; index++){
+	for(var index = startIndex; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
 		addCharacter(getCharacterById(characterData.id),characterData);
