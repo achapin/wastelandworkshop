@@ -166,6 +166,13 @@ function switchSurvivors() {
 function clearForce(){
 	forceSection.innerHTML = "";
 	addSection.innerHTML = "";
+
+	force = {};
+	force.leader = {};
+	force.leader.leaderIndex = -1;
+	force.leader.perkIndex = 0;
+	force.characters = [];
+
 	var list = document.createElement("ul");
 	characters.forEach(function(characterElement){
 		var para = document.createElement("li");
@@ -176,7 +183,7 @@ function clearForce(){
 		nameSpan.appendChild(nameNode);
 		var pointsSpan = document.createElement("span");
 		pointsSpan.setAttribute("class", "cost");
-		var pointsNode = document.createTextNode("("+characterElement.cost+")");
+		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		pointsSpan.appendChild(pointsNode);
 		button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
 		button.appendChild(nameSpan);
@@ -196,7 +203,6 @@ function clearForce(){
 	addSection.appendChild(list);
 	closeAddSection();
 	totalCaps = 0;
-	force = [];
 	updateCaps();
 }
 
@@ -627,7 +633,7 @@ function addLeaderSection(domElement, character){
 
 	var activeLeaderSection = document.createElement("div");
 	activeLeaderSection.setAttribute("class", "activeLeaderSection");
-	activeLeaderSection.appendChild(document.createTextNode(loc["leader"]));
+	activeLeaderSection.appendChild(document.createTextNode(loc["leader"] + " "));
 	var perkDropdown = document.createElement("SELECT");
 	perkDropdown.setAttribute("class", "leaderPerkSelection");
 	var emptyOption = new Option(loc["none"], null);
@@ -798,6 +804,7 @@ function loadForceFromString(forceString){
 
 	force = {};
 	force.leader = {};
+	force.characters = [];
 
 	var startIndex = 2;
 
@@ -810,8 +817,6 @@ function loadForceFromString(forceString){
 		force.leader.leaderIndex = -1;
 		force.leader.perkIndex = 0;
 	}
-
-	force.characters = [];
 
 	for(var index = startIndex; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
