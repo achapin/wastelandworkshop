@@ -166,6 +166,13 @@ function switchSurvivors() {
 function clearForce(){
 	forceSection.innerHTML = "";
 	addSection.innerHTML = "";
+
+	force = {};
+	force.leader = {};
+	force.leader.leaderIndex = -1;
+	force.leader.perkIndex = 0;
+	force.characters = [];
+
 	var list = document.createElement("ul");
 	characters.forEach(function(characterElement){
 		var para = document.createElement("li");
@@ -176,7 +183,7 @@ function clearForce(){
 		nameSpan.appendChild(nameNode);
 		var pointsSpan = document.createElement("span");
 		pointsSpan.setAttribute("class", "cost");
-		var pointsNode = document.createTextNode("("+characterElement.cost+")");
+		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		pointsSpan.appendChild(pointsNode);
 		button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
 		button.appendChild(nameSpan);
@@ -196,7 +203,6 @@ function clearForce(){
 	addSection.appendChild(list);
 	closeAddSection();
 	totalCaps = 0;
-	force = [];
 	updateCaps();
 }
 
@@ -345,6 +351,7 @@ function addCharacter(characterElement, presetInfo){
 		});
 		specialSection.appendChild(heroicSection);
 	}
+	addLeaderSection(specialSection, character);
 
 	if(characterElement.must_wear){
 		var mustWearSection = document.createElement("div");
@@ -590,11 +597,14 @@ function addCharacter(characterElement, presetInfo){
 	close.addEventListener("click", function() 
 		{
 			forceSection.removeChild(charaSection);
-			var index = force.findIndex(function(otherChar){
-				return otherChar === character;
-			});
+			var index = getCharacterIndex(character);
 			if(index != -1){
-				force.splice(index,1);
+				force.characters.splice(index,1);
+			}
+			if(force.hasOwnProperty("leader")){
+				if(force.leader.leaderIndex > index){
+					force.leader.leaderIndex -= 1;
+				}
 			}
 			updateCaps();
 		}
@@ -605,11 +615,94 @@ function addCharacter(characterElement, presetInfo){
 
 	forceSection.appendChild(charaSection);
 
-	force.push(character);
+	if(!force.hasOwnProperty("characters")){
+		force.characters = [];
+	}
+	force.characters.push(character);
 
 	totalCaps += characterElement.cost;
 	updateCaps();
 	return charaSection;
+}
+
+function addLeaderSection(domElement, character){
+	var characterIndex = getCharacterIndex(character);
+	if(characterIndex == -1){
+		characterIndex = force.characters.length;
+	}
+
+	var activeLeaderSection = document.createElement("div");
+	activeLeaderSection.setAttribute("class", "activeLeaderSection");
+	activeLeaderSection.appendChild(document.createTextNode(loc["leader"] + " "));
+	var perkDropdown = document.createElement("SELECT");
+	perkDropdown.setAttribute("class", "leaderPerkSelection");
+	var emptyOption = new Option(loc["none"], null);
+	perkDropdown.add(emptyOption);
+
+	for(var index = 1; index < upgrades.heroes_and_leaders.length; index++) {
+		var optionElement = upgrades.heroes_and_leaders[index];
+		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+		perkDropdown.add(option);
+	}
+
+	perkDropdown.onchange = function(){
+		if(!force.hasOwnProperty("leader")){
+			force.leader = {};
+		}
+		if(perkDropdown.value == null || perkDropdown.value == "null"){
+			force.leader.perkIndex = 0;
+		}else{
+			force.leader.perkIndex = perkDropdown.selectedIndex;
+		}
+		var dropDowns = document.getElementsByClassName("leaderPerkSelection");
+		for(var dropDownIndex = 0; dropDownIndex < dropDowns.length; dropDownIndex++){
+			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
+		}
+		updateCaps();
+	};
+	activeLeaderSection.appendChild(perkDropdown);
+
+
+	var inactiveLeaderSection = document.createElement("div");
+	inactiveLeaderSection.setAttribute("class", "inactiveLeaderSection");
+	var setLeaderButton = document.createElement("button");
+	setLeaderButton.setAttribute("class", "btn btn-background");
+	setLeaderButton.appendChild(document.createTextNode("Set as leader"));
+	setLeaderButton.addEventListener("click", function() { setLeader(character)});
+	inactiveLeaderSection.appendChild(setLeaderButton);
+
+	if(force.hasOwnProperty("leader")){
+		perkDropdown.selectedIndex = force.leader.perkIndex
+		var isLeader = force.leader.leaderIndex == characterIndex;
+		inactiveLeaderSection.style.display = isLeader ? "none" : "block";
+		activeLeaderSection.style.display = isLeader ? "block" : "none";
+	}else{
+		perkDropdown.selectedIndex = 0;
+		inactiveLeaderSection.style.display = "block";
+		activeLeaderSection.style.display = "none";
+	}
+
+	
+	domElement.appendChild(inactiveLeaderSection);
+	domElement.appendChild(activeLeaderSection);
+}
+
+function setLeader(character){
+	var newLeaderIndex = getCharacterIndex(character);
+	if(!force.hasOwnProperty("leader")){
+		force.leader = {};
+	}
+	force.leader.leaderIndex = newLeaderIndex;
+
+	var activeSections = document.getElementsByClassName("activeLeaderSection");
+	var inactiveSections = document.getElementsByClassName("inactiveLeaderSection");
+
+	for(var index = 0; index < activeSections.length; index++){
+		activeSections[index].style.display = index == force.leader.leaderIndex ? "block" : "none";
+		inactiveSections[index].style.display = index == force.leader.leaderIndex ? "none" : "block";
+	}
+
+	updateCaps();
 }
 
 function updateCaps(){
@@ -620,37 +713,43 @@ function updateCaps(){
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
 	var consumable_slots = [ "thrown", "mines", "chems"];
 
-	force.forEach(function(character){
-		totalCaps += getCharacterById(character.id).cost;
+	if(force.hasOwnProperty("leader") && force.leader.perkIndex > 0){
+		totalCaps += upgrades.heroes_and_leaders[force.leader.perkIndex].cost;
+	}
 
-		var upgradeCaps = 0;
-		if(character.heroic){
-			upgradeCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
-		}
-
-		wear_slots.forEach(function (slotType) {
-			if(character[slotType] != null){
-				upgradeCaps += getUpgrade(slotType, character[slotType]).cost;
+	if(force.hasOwnProperty("characters")){
+		force.characters.forEach(function(character){
+			totalCaps += getCharacterById(character.id).cost;
+	
+			var upgradeCaps = 0;
+			if(character.heroic){
+				upgradeCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
 			}
+	
+			wear_slots.forEach(function (slotType) {
+				if(character[slotType] != null){
+					upgradeCaps += getUpgrade(slotType, character[slotType]).cost;
+				}
+			});
+	
+			carry_slots.forEach(function (slotType) {
+				if(character[slotType] != null){
+					character[slotType].forEach(function(item){
+						upgradeCaps += getUpgrade(slotType,item).cost;
+					});
+				}
+			});
+	
+			consumable_slots.forEach(function (slotType) {
+				if(character[slotType] != null){
+					Object.keys(character[slotType]).forEach(function (item) { 
+						upgradeCaps += getUpgrade(slotType, item).cost * character[slotType][item];
+					});
+				}
+			});
+			totalCaps += upgradeCaps;
 		});
-
-		carry_slots.forEach(function (slotType) {
-			if(character[slotType] != null){
-				character[slotType].forEach(function(item){
-					upgradeCaps += getUpgrade(slotType,item).cost;
-				});
-			}
-		});
-
-		consumable_slots.forEach(function (slotType) {
-			if(character[slotType] != null){
-				Object.keys(character[slotType]).forEach(function (item) { 
-					upgradeCaps += getUpgrade(slotType, item).cost * character[slotType][item];
-				});
-			}
-		});
-		totalCaps += upgradeCaps;
-	})
+	}
 
 	capsSection.innerHTML = loc["total_caps"] + ": " + totalCaps;
 	if (history.pushState) {
@@ -662,11 +761,18 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
-	force.forEach(function(character) {
-		var charString = replaceAll(JSON.stringify(character),'"',"!");
-		charString += ";";
-		forceString += charString;
-	})
+	if(force.hasOwnProperty("leader")){
+		forceString += "l=" + force.leader.leaderIndex + "," + force.leader.perkIndex + ";";
+	}else{
+		forceString += "l=-1,0;";
+	}
+	if(force.hasOwnProperty("characters")){
+		force.characters.forEach(function(character) {
+			var charString = replaceAll(JSON.stringify(character),'"',"!");
+			charString += ";";
+			forceString += charString;
+		});
+	}
 	return forceString;
 }
 
@@ -692,11 +798,27 @@ function loadForceFromString(forceString){
 	var listName = "";
 
 	if(objects[1].length > 2){
-		listName = objects[1].split("=")[1];
+		listName = decodeURIComponent(objects[1].split("=")[1]);
 	}		
 	document.getElementById("listNameArea").value = listName;
 
-	for(var index = 2; index < objects.length - 1; index++){
+	force = {};
+	force.leader = {};
+	force.characters = [];
+
+	var startIndex = 2;
+
+	var leaderInfo = objects[2].split("=")[1].split(",");
+	if(leaderInfo.length == 2){
+		startIndex = 3;
+		force.leader.leaderIndex = parseInt(leaderInfo[0]);
+		force.leader.perkIndex = parseInt(leaderInfo[1]);
+	}else{
+		force.leader.leaderIndex = -1;
+		force.leader.perkIndex = 0;
+	}
+
+	for(var index = startIndex; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
 		addCharacter(getCharacterById(characterData.id),characterData);
@@ -710,6 +832,16 @@ function getCharacterById(characterId){
 		}
 	}
 	return null;
+}
+
+function getCharacterIndex(character){
+	if(force == null || !force.hasOwnProperty("characters") || force.characters == null){
+		return -1;
+	}
+	var characterIndex = force.characters.findIndex(function(otherChar){
+		return otherChar === character;
+	});
+	return characterIndex;
 }
 
 function initialize(){
