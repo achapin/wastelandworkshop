@@ -7,10 +7,12 @@ var characters;
 
 var forceSection;
 var addButton;
+var closeAddButton;
 var addSection;
 var capsSection;
 
 var lastTextFieldValue;
+var addSectionOpen;
 
 var totalCaps;
 var faction;
@@ -106,8 +108,12 @@ function initListeners(){
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
 	addButton = document.getElementById("addButton");
+	closeAddButton = document.getElementById("closeAddButton");
 	capsSection = document.getElementById("caps");
 	addButton.addEventListener("click", openAddSection);
+	closeAddButton.addEventListener("click", closeAddSection);
+
+	addSectionOpen = true;
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
@@ -165,7 +171,6 @@ function switchSurvivors() {
 
 function clearForce(){
 	forceSection.innerHTML = "";
-	addSection.innerHTML = "";
 
 	force = {};
 	force.leader = {};
@@ -173,11 +178,34 @@ function clearForce(){
 	force.leader.perkIndex = 0;
 	force.characters = [];
 
+	buildAddSection();
+
+	totalCaps = 0;
+	updateCaps();
+}
+
+function buildAddSection() {
+	addSection.innerHTML = "";
 	var list = document.createElement("ul");
 	characters.forEach(function(characterElement){
+
+		var can_add = true;
+
+		if(characterElement.hasOwnProperty("unique_code")){
+			force.characters.forEach(function(otherChar){
+				var otherCharElement = getCharacterById(otherChar.id)
+				if(otherCharElement.hasOwnProperty("unique_code") 
+					&& otherCharElement.unique_code == characterElement.unique_code){
+					can_add = false;
+				}
+			})
+		}
+
+		var classTypes = can_add ? "btn btn-background choice" : "btn btn-background-off choice";
+
 		var para = document.createElement("li");
 		var button = document.createElement("button");
-		button.setAttribute("class", "btn btn-background choice");
+		button.setAttribute("class", classTypes);
 		var nameSpan = document.createElement("span");
 		var nameNode = document.createTextNode(loc[characterElement.name]);
 		nameSpan.appendChild(nameNode);
@@ -185,35 +213,38 @@ function clearForce(){
 		pointsSpan.setAttribute("class", "cost");
 		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		pointsSpan.appendChild(pointsNode);
-		button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
+		if(can_add){
+			button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
+		}
 		button.appendChild(nameSpan);
 		button.appendChild(pointsSpan);
 		para.appendChild(button);
 		list.appendChild(para);
 	});
-	var close = document.createElement("button");
-	close.setAttribute("class", "btn btn-background-off");
-	var closeButton = document.createTextNode("X");
-	close.addEventListener("click", closeAddSection);
-	close.appendChild(closeButton);
+
 	var descriptionSpan = document.createElement("span");
 	descriptionSpan.appendChild(document.createTextNode(loc["characters"]));
-	addSection.appendChild(close);
 	addSection.appendChild(descriptionSpan);
 	addSection.appendChild(list);
-	closeAddSection();
-	totalCaps = 0;
-	updateCaps();
+	if(addSectionOpen){
+		openAddSection();
+	}else{
+		closeAddSection();
+	}
 }
 
 function closeAddSection(){
+	addSectionOpen = false;
 	addSection.style.display = "none";
 	addButton.style.display = "block";
+	closeAddButton.style.display = "none";
 }
 
 function openAddSection(){
+	addSectionOpen = true;
 	addButton.style.display = "none";
 	addSection.style.display = "block";
+	closeAddButton.style.display = "block";
 }
 
 function getUpgrade(elementType, elementName){
@@ -306,11 +337,13 @@ function addCharacter(characterElement, presetInfo){
 	close.appendChild(closeButton);
 	headerSection.appendChild(close);
 
-	var copy = document.createElement("button");
-	var copyButton = document.createTextNode("+");
-	copy.setAttribute("class", "btn btn-background");
-	copy.appendChild(copyButton);
-	headerSection.appendChild(copy);
+	if(!characterElement.hasOwnProperty("unique_code")){
+		var copy = document.createElement("button");
+		var copyButton = document.createTextNode("+");
+		copy.setAttribute("class", "btn btn-background");
+		copy.appendChild(copyButton);
+		headerSection.appendChild(copy);
+	}
 
 	var nameSection = document.createElement("h1");
 	nameSection.setAttribute("class", "float-left");
@@ -607,11 +640,16 @@ function addCharacter(characterElement, presetInfo){
 				}
 			}
 			updateCaps();
+			if(characterElement.hasOwnProperty("unique_code")){
+				buildAddSection();
+			}
 		}
 	);
-	copy.addEventListener("click", function() {
-		addCharacter(characterElement, character);	
-	});
+	if(!characterElement.hasOwnProperty("unique_code")){
+		copy.addEventListener("click", function() {
+			addCharacter(characterElement, character);	
+		});
+	}
 
 	forceSection.appendChild(charaSection);
 
@@ -622,6 +660,7 @@ function addCharacter(characterElement, presetInfo){
 
 	totalCaps += characterElement.cost;
 	updateCaps();
+	buildAddSection();
 	return charaSection;
 }
 

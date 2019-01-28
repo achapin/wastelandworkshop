@@ -2,6 +2,7 @@
   {
     "id": 0,
     "name": "aspirant_goddard",
+    "unique_code": "aspirant_goddard",
     "heroic": true,
     "must_wear": [
       "armor.t60_power_armor"
@@ -113,6 +114,7 @@
   {
     "id": 5,
     "name": "knight_captain_cade",
+    "unique_code": "knight_captain_cade",
     "heroic": true,
     "wear_slots": {
       "armor": [
@@ -245,6 +247,7 @@
   {
     "id": 9,
     "name": "paladin_danse",
+    "unique_code": "paladin_danse",
     "heroic": true,
     "wear_slots": {
       "armor": [
