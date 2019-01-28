@@ -1,6 +1,7 @@
 [
   {
     "id": 0,
+    "unique_code": "cait",
     "name": "cait",
     "heroic": true,
     "carry_slots": {
@@ -26,6 +27,7 @@
   {
     "id": 1,
     "name": "codsworth",
+    "unique_code": "codsworth",
     "must_carry": [
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
@@ -43,6 +45,7 @@
   {
     "id": 20,
     "name": "dogmeat",
+    "unique_code": "dogmeat",
     "must_carry": [
       "melee.dog_bite"
     ],
@@ -51,6 +54,7 @@
   {
     "id": 3,
     "name": "dogmeat_scout",
+    "unique_code": "dogmeat",
     "must_carry": [
       "melee.dog_bite"
     ],
@@ -102,6 +106,7 @@
   {
     "id": 6,
     "name": "mama_murphy",
+    "unique_code": "mama_murphy",
     "heroic": true,
     "carry_slots": {
       "pistols": [
@@ -166,6 +171,7 @@
   {
     "id": 9,
     "name": "nuka_cola_girl",
+    "unique_code": "nuka_cola_girl",
     "heroic": true,
     "carry_slots": {
       "pistols": [
@@ -177,6 +183,7 @@
   {
     "id": 10,
     "name": "piper",
+    "unique_code": "piper",
     "heroic": true,
     "carry_slots": {
       "melee": [
@@ -202,6 +209,7 @@
   {
     "id": 11,
     "name": "preston_garvey",
+    "unique_code": "preston_garvey",
     "heroic": true,
     "carry_slots": {
       "rifles": [
@@ -236,6 +244,7 @@
   {
     "id": 12,
     "name": "ronnie_shaw",
+    "unique_code": "ronnie_shaw",
     "heroic": true,
     "carry_slots": {
       "rifles": [
@@ -334,6 +343,7 @@
   {
     "id": 15,
     "name": "sole_survivor",
+    "unique_code": "sole_survivor",
     "heroic": true,
     "wear_slots": {
       "armor": [
@@ -401,6 +411,7 @@
   {
     "id": 16,
     "name": "sole_survivor_day_one",
+    "unique_code": "sole_survivor",
     "heroic": true,
     "wear_slots": {
       "armor": [
@@ -450,6 +461,7 @@
   {
     "id": 17,
     "name": "sole_survivor_loner",
+    "unique_code": "sole_survivor_loner",
     "heroic": true,
     "wear_slots": {
       "armor": [
@@ -517,6 +529,7 @@
   {
     "id": 18,
     "name": "sturges",
+    "unique_code": "sturges",
     "heroic": true,
     "carry_slots": {
       "rifles": [
@@ -552,6 +565,7 @@
   {
     "id": 19,
     "name": "x6-88_courser",
+    "unique_code": "x6-88_courser",
     "heroic": true,
     "carry_slots": {
       "heavy_weapons": [

@@ -2,6 +2,7 @@
   {
     "id": 0,
     "name": "aviator",
+    "unique_code": "aviator",
     "heroic": true,
     "must_wear": [
       "clothing.aviator_cap"
@@ -102,6 +103,7 @@
   {
     "id": 4,
     "name": "hammer",
+    "unique_code": "hammer",
     "heroic": true,
     "carry_slots": {
       "heavy_weapons": [
