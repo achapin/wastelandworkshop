@@ -14,7 +14,11 @@
     },
     {
       "name": "missile_launcher",
-      "cost": 30
+      "cost": 35
+    },
+    {
+      "name": "junk_jet",
+      "cost": 14
     }
   ],
   "rifles": [
@@ -67,8 +71,20 @@
       "cost": 10
     },
     {
+      "name": "pipe_rifle",
+      "cost": 11
+    },
+    {
       "name": "plasma_rifle",
       "cost": 24
+    },
+    {
+      "name": "railway_rifle",
+      "cost": 20
+    },
+    {
+      "name": "gauss_rifle",
+      "cost": 47
     }
   ],
   "pistols": [
@@ -83,6 +99,10 @@
     {
       "name": "alien_blaster",
       "cost": 6
+    },
+    {
+      "name": "bolt_action_pipe_pistol",
+      "cost": 2
     },
     {
       "name": "eyebot_laser",
@@ -106,7 +126,7 @@
     },
     {
       "name": "pipe_pistol",
-      "cost": 4
+      "cost": 3
     },
     {
       "name": "protectron_hand_laser",
@@ -124,7 +144,7 @@
     },
     {
       "name": "baseball_bat",
-      "cost": 5
+      "cost": 2
     },
     {
       "name": "baton",
@@ -164,7 +184,7 @@
     },
     {
       "name": "huge_club",
-      "cost": 19
+      "cost": 21
     },
     {
       "name": "lead_pipe",
@@ -172,7 +192,11 @@
     },
     {
       "name": "machete",
-      "cost": 5
+      "cost": 2
+    },
+    {
+      "name": "nail_board",
+      "cost": 2
     },
     {
       "name": "mr_handy_buzzsaw",
@@ -297,6 +321,10 @@
       "cost": 23
     },
     {
+      "name": "raider_power_armor",
+      "cost": 33
+    },
+    {
       "name": "sturdy_combat_armor",
       "cost": 30
     },
@@ -315,6 +343,10 @@
     {
       "name": "t60_power_armor",
       "cost": 72
+    },
+    {
+      "name": "x01_power_armor",
+      "cost": 85
     }
   ],
   "clothing": [
@@ -374,75 +406,75 @@
   "chems": [
     {
       "name": "addictol",
-      "cost": 15
+      "cost": 10
     },
     {
       "name": "berry_mentats",
-      "cost": 25
+      "cost": 16
     },
     {
       "name": "buffout",
-      "cost": 30
+      "cost": 20
     },
     {
       "name": "calmex",
-      "cost": 30
+      "cost": 20
     },
     {
       "name": "day_tripper",
-      "cost": 17
+      "cost": 11
     },
     {
       "name": "fury",
-      "cost": 30
+      "cost": 20
     },
     {
       "name": "jet",
-      "cost": 30
+      "cost": 20
     },
     {
       "name": "med-x",
-      "cost": 25
+      "cost": 16
     },
     {
       "name": "mentats",
-      "cost": 20
+      "cost": 13
     },
     {
       "name": "mysterious_serum",
-      "cost": 30
-    },
-    {
-      "name": "orange_mentats",
-      "cost": 30
-    },
-    {
-      "name": "overdrive",
-      "cost": 30
-    },
-    {
-      "name": "psycho",
-      "cost": 30
-    },
-    {
-      "name": "radaway",
-      "cost": 30
-    },
-    {
-      "name": "rad-x",
       "cost": 20
     },
     {
+      "name": "orange_mentats",
+      "cost": 20
+    },
+    {
+      "name": "overdrive",
+      "cost": 20
+    },
+    {
+      "name": "psycho",
+      "cost": 20
+    },
+    {
+      "name": "radaway",
+      "cost": 20
+    },
+    {
+      "name": "rad-x",
+      "cost": 13
+    },
+    {
       "name": "refreshing_beverage",
-      "cost": 80
+      "cost": 52
     },
     {
       "name": "stimpak",
-      "cost": 58
+      "cost": 38
     },
     {
       "name": "x-cell",
-      "cost": 37
+      "cost": 24
     }
   ],
   "alcohol": [
@@ -474,71 +506,209 @@
     },
     {
       "name": "berserker",
-      "cost": 20
-    },
-    {
-      "name": "blitzer",
-      "cost": 30
-    },
-    {
-      "name": "bodyguard",
-      "cost": 25
-    },
-    {
-      "name": "brawler",
-      "cost": 15
-    },
-    {
-      "name": "bruiser",
-      "cost": 40
-    },
-    {
-      "name": "commander",
-      "cost": 55
-    },
-    {
-      "name": "defender",
-      "cost": 60
-    },
-    {
-      "name": "dweller",
       "cost": 13
     },
     {
-      "name": "fusilier",
-      "cost": 30
-    },
-    {
-      "name": "hunter",
-      "cost": 15
-    },
-    {
-      "name": "old_timer",
-      "cost": 17
-    },
-    {
-      "name": "tech",
+      "name": "blitzer",
       "cost": 20
     },
     {
-      "name": "thief",
+      "name": "bodyguard",
+      "cost": 16
+    },
+    {
+      "name": "brawler",
       "cost": 10
     },
     {
-      "name": "veteran",
-      "cost": 25
+      "name": "bruiser",
+      "cost": 26
     },
     {
-      "name": "warden",
-      "cost": 30
+      "name": "commander",
+      "cost": 36
     },
     {
-      "name": "wasteland_searcher",
+      "name": "defender",
+      "cost": 39
+    },
+    {
+      "name": "dweller",
+      "cost": 8
+    },
+    {
+      "name": "fusilier",
+      "cost": 20
+    },
+    {
+      "name": "hunter",
+      "cost": 10
+    },
+    {
+      "name": "old_timer",
+      "cost": 11
+    },
+    {
+      "name": "tech",
+      "cost": 13
+    },
+    {
+      "name": "thief",
       "cost": 7
     },
     {
+      "name": "veteran",
+      "cost": 16
+    },
+    {
+      "name": "warden",
+      "cost": 20
+    },
+    {
+      "name": "wasteland_searcher",
+      "cost": 5
+    },
+    {
       "name": "wrestler",
-      "cost": 15
+      "cost": 10
+    }
+  ],
+  "perks":[
+    {
+      "name": "action_person",
+      "cost": 10
+    },
+    {
+      "name": "attack_dog",
+      "cost": 10
+    },
+    {
+      "name": "basher",
+      "cost": 10
+    },
+    {
+      "name": "big_leagues",
+      "cost": 16
+    },
+    {
+      "name": "blitz",
+      "cost": 7
+    },
+    {
+      "name": "bloody_mess",
+      "cost": 8
+    },
+    {
+      "name": "chem_resistant",
+      "cost": 10
+    },
+    {
+      "name": "chemist",
+      "cost": 10
+    },
+    {
+      "name": "concentrated_fire",
+      "cost": 12
+    },
+    {
+      "name": "demolition_expert",
+      "cost": 5
+    },
+    {
+      "name": "ghoulish",
+      "cost": 10
+    },
+    {
+      "name": "gunslinger",
+      "cost": 7
+    },
+    {
+      "name": "hacker",
+      "cost": 7
+    },
+    {
+      "name": "heavy_gunner",
+      "cost": 16
+    },
+    {
+      "name": "huntsman",
+      "cost": 10
+    },
+    {
+      "name": "lead_belly",
+      "cost": 7
+    },
+    {
+      "name": "life_giver",
+      "cost": 7
+    },
+    {
+      "name": "locksmith",
+      "cost": 7
+    },
+    {
+      "name": "lone_wanderer",
+      "cost": 33
+    },
+    {
+      "name": "medic",
+      "cost": 7
+    },
+    {
+      "name": "moving_target",
+      "cost": 10
+    },
+    {
+      "name": "mysterious_stranger_1",
+      "cost": 10
+    },
+    {
+      "name": "mysterious_stranger_2",
+      "cost": 13
+    },
+    {
+      "name": "mysterious_stranger_3",
+      "cost": 3
+    },
+    {
+      "name": "nerd_rage",
+      "cost": 13
+    },
+    {
+      "name": "ninja",
+      "cost": 10
+    },
+    {
+      "name": "pack_leader",
+      "cost": 26
+    },
+    {
+      "name": "pain_train",
+      "cost": 3
+    },
+    {
+      "name": "rad_resistant",
+      "cost": 5
+    },
+    {
+      "name": "refractor",
+      "cost": 7
+    },
+    {
+      "name": "rifle_man",
+      "cost": 13
+    },
+    {
+      "name": "sneak",
+      "cost": 13
+    },
+    {
+      "name": "steady_aim",
+      "cost": 10
+    },
+    {
+      "name": "toughness",
+      "cost": 7
     }
   ]
 }

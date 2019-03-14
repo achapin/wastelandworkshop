@@ -12,15 +12,18 @@
         "assault_rifle",
         "bolt_action_pipe_rifle",
         "combat_shotgun",
-        "hunting_rifle"
+        "hunting_rifle",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "lead_pipe",
+        "nail_board",
         "sledgehammer"
       ],
       "pistols": [
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
@@ -34,7 +37,7 @@
   {
     "id": 1,
     "name": "behemoth",
-    "cost": 209,
+    "cost": 245,
     "carry_slots": {
       "melee": [
         "fire_hydrant_bat"
@@ -59,15 +62,20 @@
         "bolt_action_pipe_rifle",
         "combat_rifle",
         "combat_shotgun",
-        "hunting_rifle"
+        "hunting_rifle",
+        "laser_rifle",
+        "pipe_rifle",
+        "plasma_rifle"
       ],
       "melee": [
         "baseball_bat",
         "huge_club",
+        "nail_board",
         "sledgehammer",
         "super_sledge"
       ],
       "pistols": [
+        "bolt_action_pipe_pistol",
         "laser_pistol",
         "pipe_pistol"
       ]
@@ -87,14 +95,17 @@
         "assault_rifle",
         "bolt_action_pipe_rifle",
         "combat_rifle",
-        "combat_shotgun"
+        "combat_shotgun",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
-        "lead_pipe"
+        "lead_pipe",
+        "nail_board"
       ],
       "pistols": [
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
@@ -115,15 +126,18 @@
         "combat_rifle",
         "combat_shotgun",
         "laser_rifle",
+        "pipe_rifle",
         "plasma_rifle"
       ],
       "melee": [
         "baseball_bat",
         "huge_club",
+        "nail_board",
         "sledgehammer",
         "super_sledge"
       ],
       "pistols": [
+        "bolt_action_pipe_pistol",
         "laser_pistol",
         "pipe_pistol"
       ]
@@ -133,7 +147,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 114
+    "cost": 105
   },
   {
     "id": 5,
@@ -151,15 +165,18 @@
         "combat_rifle",
         "combat_shotgun",
         "laser_rifle",
-        "plasma_rifle"
+        "plasma_rifle",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "huge_club",
+        "nail_board",
         "sledgehammer",
         "super_sledge"
       ],
       "pistols": [
+        "bolt_action_pipe_pistol",
         "laser_pistol",
         "pipe_pistol"
       ]
@@ -193,7 +210,7 @@
     "must_carry": [
       "thrown.suicider_mini_nuke"
     ],
-    "cost": 72
+    "cost": 55
   },
   {
     "id": 9,
@@ -203,15 +220,18 @@
       "rifles": [
         "assault_rifle",
         "bolt_action_pipe_rifle",
-        "hunting_rifle"
+        "hunting_rifle",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "lead_pipe",
+        "nail_board",
         "sledgehammer"
       ],
       "pistols": [
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },

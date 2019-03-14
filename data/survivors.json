@@ -6,7 +6,8 @@
     "heroic": true,
     "carry_slots": {
       "rifles": [
-        "double_barrel_shotgun"
+        "double_barrel_shotgun",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
@@ -16,13 +17,14 @@
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
     "must_carry": [
       "chems.psycho"
     ],
-    "cost": 137
+    "cost": 95
   },
   {
     "id": 1,
@@ -49,7 +51,16 @@
     "must_carry": [
       "melee.dog_bite"
     ],
-    "cost": 104
+    "cost": 110
+  },
+  {
+    "id": 21,
+    "name": "dogmeat_guard_dog",
+    "unique_code": "dogmeat",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 95
   },
   {
     "id": 3,
@@ -69,18 +80,22 @@
         "bolt_action_pipe_rifle",
         "combat_rifle",
         "combat_shotgun",
-        "hunting_rifle"
+        "double_barrel_shotgun",
+        "hunting_rifle",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "lead_pipe",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
@@ -112,6 +127,7 @@
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
@@ -119,7 +135,7 @@
       "chems.jet",
       "chems.mentats"
     ],
-    "cost": 160
+    "cost": 85
   },
   {
     "id": 7,
@@ -139,11 +155,13 @@
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ],
       "rifles": [
@@ -153,7 +171,8 @@
         "combat_shotgun",
         "double_barrel_shotgun",
         "hunting_rifle",
-        "laser_musket"
+        "laser_musket",
+        "pipe_rifle"
       ]
     },
     "consumables": {
@@ -178,7 +197,7 @@
         "thirst_zapper_cola"
       ]
     },
-    "cost": 60
+    "cost": 76
   },
   {
     "id": 10,
@@ -190,11 +209,13 @@
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
@@ -219,17 +240,20 @@
         "combat_shotgun",
         "double_barrel_shotgun",
         "hunting_rifle",
-        "laser_musket"
+        "laser_musket",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
@@ -254,17 +278,20 @@
         "combat_shotgun",
         "double_barrel_shotgun",
         "hunting_rifle",
-        "laser_musket"
+        "laser_musket",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ]
     },
@@ -285,11 +312,13 @@
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ],
       "rifles": [
@@ -298,7 +327,8 @@
         "combat_rifle",
         "combat_shotgun",
         "double_barrel_shotgun",
-        "hunting_rifle"
+        "hunting_rifle",
+        "pipe_rifle"
       ]
     },
     "consumables": {
@@ -311,7 +341,7 @@
         "fragmentation_grenade"
       ]
     },
-    "cost": 30
+    "cost": 38
   },
   {
     "id": 14,
@@ -322,11 +352,13 @@
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "pipe_pistol"
       ],
       "rifles": [
@@ -335,7 +367,8 @@
         "combat_rifle",
         "combat_shotgun",
         "double_barrel_shotgun",
-        "hunting_rifle"
+        "hunting_rifle",
+        "pipe_rifle"
       ]
     },
     "cost": 40
@@ -348,14 +381,17 @@
     "wear_slots": {
       "armor": [
         "power_armor_frame",
+        "raider_power_armor",
         "t45_power_armor",
         "t51_power_armor",
-        "t60_power_armor"
+        "t60_power_armor",
+        "x01_power_armor"
       ]
     },
     "carry_slots": {
       "heavy_weapons": [
         "gatling_laser",
+        "junk_jet",
         "minigun",
         "missile_launcher"
       ],
@@ -365,28 +401,35 @@
         "combat_rifle",
         "combat_shotgun",
         "double_barrel_shotgun",
+        "gauss_rifle",
         "hunting_rifle",
         "institute_laser_rifle",
         "laser_musket",
         "laser_rifle",
-        "plasma_rifle"
+        "plasma_rifle",
+        "pipe_rifle",
+        "railway_rifle"
       ],
       "melee": [
         "baseball_bat",
         "baton",
         "board",
         "deathclaw_gauntlet",
+        "huge_club",
         "machete",
+        "nail_board",
         "pipe_wrench",
         "ripper",
         "sledgehammer",
         "stun_baton",
-        "super_sledge"
+        "super_sledge",
+        "tire_iron"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
         "alien_blaster",
+        "bolt_action_pipe_pistol",
         "gamma_gun",
         "laser_pistol",
         "pipe_pistol"
@@ -401,9 +444,6 @@
       "mines": [
         "bottlecap_mine",
         "fragmentation_mine"
-      ],
-      "chems": [
-        "stimpak"
       ]
     },
     "cost": 95
@@ -426,19 +466,23 @@
         "combat_shotgun",
         "double_barrel_shotgun",
         "hunting_rifle",
-        "laser_musket"
+        "laser_musket",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench",
         "ripper",
-        "sledgehammer"
+        "sledgehammer",
+        "tire_iron"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "laser_pistol",
         "pipe_pistol"
       ]
@@ -451,9 +495,6 @@
       "mines": [
         "bottlecap_mine",
         "fragmentation_mine"
-      ],
-      "chems": [
-        "stimpak"
       ]
     },
     "cost": 70
@@ -466,14 +507,17 @@
     "wear_slots": {
       "armor": [
         "power_armor_frame",
+        "raider_power_armor",
         "t45_power_armor",
         "t51_power_armor",
-        "t60_power_armor"
+        "t60_power_armor",
+        "x01_power_armor"
       ]
     },
     "carry_slots": {
       "heavy_weapons": [
         "gatling_laser",
+        "junk_jet",
         "minigun",
         "missile_launcher"
       ],
@@ -483,11 +527,14 @@
         "combat_rifle",
         "combat_shotgun",
         "double_barrel_shotgun",
+        "gauss_rifle",
         "hunting_rifle",
         "institute_laser_rifle",
         "laser_musket",
         "laser_rifle",
-        "plasma_rifle"
+        "plasma_rifle",
+        "pipe_rifle",
+        "railway_rifle"
       ],
       "melee": [
         "baseball_bat",
@@ -519,12 +566,82 @@
       "mines": [
         "bottlecap_mine",
         "fragmentation_mine"
-      ],
-      "chems": [
-        "stimpak"
       ]
     },
     "cost": 140
+  },
+  {
+    "id": 22,
+    "name": "sole_survivor_tech",
+    "unique_code": "sole_survivor",
+    "heroic": true,
+    "wear_slots": {
+      "armor": [
+        "power_armor_frame",
+        "raider_power_armor",
+        "t45_power_armor",
+        "t51_power_armor",
+        "t60_power_armor",
+        "x01_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "double_barrel_shotgun",
+        "gauss_rifle",
+        "hunting_rifle",
+        "institute_laser_rifle",
+        "laser_musket",
+        "laser_rifle",
+        "plasma_rifle",
+        "pipe_rifle",
+        "railway_rifle"
+      ],
+      "melee": [
+        "baseball_bat",
+        "baton",
+        "board",
+        "deathclaw_gauntlet",
+        "huge_club",
+        "machete",
+        "nail_board",
+        "pipe_wrench",
+        "ripper",
+        "sledgehammer",
+        "stun_baton",
+        "super_sledge",
+        "tire_iron"
+      ],
+      "pistols": [
+        "44_revolver",
+        "10mm_pistol",
+        "alien_blaster",
+        "gamma_gun",
+        "laser_pistol",
+        "pipe_pistol"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "baseball_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ],
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ]
+    },
+    "cost": 85
   },
   {
     "id": 18,
@@ -538,17 +655,20 @@
         "combat_rifle",
         "combat_shotgun",
         "double_barrel_shotgun",
-        "hunting_rifle"
+        "hunting_rifle",
+        "pipe_rifle"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "machete",
+        "nail_board",
         "pipe_wrench"
       ],
       "pistols": [
         "44_revolver",
         "10mm_pistol",
+        "bolt_action_pipe_pistol",
         "laser_pistol",
         "pipe_pistol"
       ]
@@ -572,6 +692,7 @@
         "missile_launcher"
       ],
       "rifles": [
+        "gauss_rifle",
         "institute_laser_rifle",
         "plasma_rifle"
       ],

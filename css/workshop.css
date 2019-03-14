@@ -64,6 +64,11 @@ h2 {
 	color: rgb(40,65,129);
 }
 
+#raiders {
+	background-color: rgb(200,200,200);
+	color: rgb(139,69,19);
+}
+
 #selector ul {
 	float: left;
 }

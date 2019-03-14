@@ -1,6 +1,7 @@
 var loc;
 var upgrades;
 var bos;
+var raiders;
 var survivors;
 var mutants;
 var characters;
@@ -52,6 +53,13 @@ function upgradesLoaded(json)
 
 function bosLoaded(json){
 	bos = json;
+	var raiderLoadPromise = loadURL("data/raiders.json");
+	raiderLoadPromise.then(raidersLoaded);
+	raiderLoadPromise.catch(function(){alert("raider load failed");});
+}
+
+function raidersLoaded(json){
+	raiders = json;	
 	var survivorLoadPromise = loadURL("data/survivors.json");
 	survivorLoadPromise.then(survivorsLoaded);
 	survivorLoadPromise.catch(function(){alert("survivor load failed");});
@@ -101,6 +109,7 @@ function initListeners(){
 	document.getElementById("switch-bos").addEventListener("click", switchBos, true);
 	document.getElementById("switch-mutants").addEventListener("click", switchMutants, true);
 	document.getElementById("switch-survivors").addEventListener("click", switchSurvivors, true);
+	document.getElementById("switch-raiders").addEventListener("click", switchRaiders, true);
 
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
@@ -167,6 +176,12 @@ function switchSurvivors() {
 	characters = survivors;
 	faction = "srv";
 	clearForce();
+}
+
+function switchRaiders() {
+	characters = raiders;
+	faction = "rdr";
+	clearForce();	
 }
 
 function clearForce(){
@@ -832,6 +847,9 @@ function loadForceFromString(forceString){
 	}
 	if(forceValue == "srv"){
 		switchSurvivors();
+	}
+	if(forceValue == "rdr"){
+		switchRaiders();
 	}
 
 	var listName = "";

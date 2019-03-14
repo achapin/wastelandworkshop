@@ -15,6 +15,7 @@
         "laser_rifle"
       ],
       "melee": [
+        "baton",
         "machete",
         "ripper"
       ],
@@ -66,7 +67,7 @@
         "plasma_rifle"
       ]
     },
-    "cost": 53
+    "cost": 60
   },
   {
     "id": 4,
@@ -109,7 +110,7 @@
         "pulse_grenade"
       ]
     },
-    "cost": 62
+    "cost": 65
   },
   {
     "id": 5,
@@ -178,7 +179,7 @@
         "fragmentation_grenade"
       ]
     },
-    "cost": 51
+    "cost": 49
   },
   {
     "id": 7,
@@ -189,6 +190,10 @@
         "baton",
         "machete",
         "ripper"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
       ]
     },
     "consumables": {
@@ -199,7 +204,7 @@
         "fragmentation_mine"
       ]
     },
-    "cost": 47
+    "cost": 45
   },
   {
     "id": 8,
@@ -231,6 +236,7 @@
         "assault_rifle",
         "combat_rifle",
         "combat_shotgun",
+        "gauss_rifle",
         "laser_rifle",
         "plasma_rifle"
       ]
