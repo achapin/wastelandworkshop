@@ -1,5 +1,6 @@
 # Wasteland Workshop
 A skirmish squad builder for Fallout Wasteland Warfare
+Usable at https://achapin.github.io/wastelandworkshop/
 
 # TODO (In no particular order)
 * Shorten query string
