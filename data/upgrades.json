@@ -529,6 +529,10 @@
       "cost": 36
     },
     {
+      "name": "creature_controller",
+      "cost": 7
+    },
+    {
       "name": "defender",
       "cost": 39
     },
@@ -547,6 +551,10 @@
     {
       "name": "old_timer",
       "cost": 11
+    },
+    {
+      "name": "robot_controller",
+      "cost": 7
     },
     {
       "name": "tech",

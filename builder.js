@@ -418,6 +418,7 @@ function addCharacter(characterElement, presetInfo){
 		});
 		specialSection.appendChild(mustWearSection);
 	}
+
 	if(characterElement.must_carry){
 		var mustCarrySection = document.createElement("div");
 		mustCarrySection.setAttribute("class", "col-sm-5 float-left");
@@ -435,6 +436,9 @@ function addCharacter(characterElement, presetInfo){
 		});
 		specialSection.appendChild(mustCarrySection);
 	}
+
+	//TODO: ADD PERK DISPLAY HERE
+	//TODO: ADD PERK SELECTION HERE
 
 	charaSection.appendChild(specialSection);
 
