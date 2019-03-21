@@ -239,5 +239,6 @@
   "rifle_man":"Rifle Man",
   "sneak":"Sneak",
   "steady_aim":"Steady Aim",
-  "toughness":"Toughness"
+  "toughness":"Toughness",
+  "addPerk":"Add Selected Perk to Character"
 }

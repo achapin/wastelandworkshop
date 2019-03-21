@@ -437,8 +437,78 @@ function addCharacter(characterElement, presetInfo){
 		specialSection.appendChild(mustCarrySection);
 	}
 
-	//TODO: ADD PERK DISPLAY HERE
-	//TODO: ADD PERK SELECTION HERE
+	var perkDropdown = document.createElement("SELECT");
+	upgrades.perks.forEach(function(perk){
+		var option = new Option(loc[perk.name] + " (" + perk.cost + ")", perk.name);
+		perkDropdown.add(option);
+	});
+	var addPerkButton = document.createElement("button");
+	var perkSection = document.createElement("div");
+	var ownedPerks = document.createElement("div");
+	if(character.hasOwnProperty("perks")){
+		character.perks.forEach(function(perk){
+			var selectedPerk = document.createElement("div");
+			var perkData = getUpgrade("perks", perk);
+			selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
+			
+			var removeButton = document.createElement("button");
+			removeButton.appendChild(document.createTextNode("X"));
+			removeButton.setAttribute("class", "btn btn-background-off");
+			removeButton.addEventListener("click", function() {
+				
+				var perkIndex = character.perks.findIndex(function(otherPerk){
+					return perk === otherPerk;
+				});
+				character.perks.splice(perkIndex, 1);
+				ownedPerks.removeChild(selectedPerk);
+				updateCaps();
+			});
+			selectedPerk.appendChild(removeButton);
+
+			ownedPerks.appendChild(selectedPerk);
+		});
+	}
+	perkSection.appendChild(ownedPerks);
+	var perkSelection = document.createElement("div");
+
+	perkDropdown.onchange = function(){
+		var perkIndex = character.perks.findIndex(function(otherPerk){
+			return perkDropdown.value === otherPerk;
+		});
+		addPerkButton.disabled = perkIndex >= 0;
+	};
+	
+	perkSection.appendChild(perkDropdown);
+	addPerkButton.appendChild(document.createTextNode(loc["addPerk"]));
+	addPerkButton.setAttribute("class", "btn btn-background");
+	addPerkButton.addEventListener("click", function() {
+		if(!character.hasOwnProperty("perks")){
+			character.perks = [];
+		}
+		character.perks.push(perkDropdown.value);
+		var selectedPerk = document.createElement("div");
+		var perkData = getUpgrade("perks", perkDropdown.value);
+		selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
+		var removeButton = document.createElement("button");
+			removeButton.appendChild(document.createTextNode("X"));
+			removeButton.setAttribute("class", "btn btn-background-off");
+			removeButton.addEventListener("click", function() {
+				
+				var perkIndex = character.perks.findIndex(function(otherPerk){
+					return perkData.name === otherPerk;
+				});
+				character.perks.splice(perkIndex, 1);
+				ownedPerks.removeChild(selectedPerk);
+				//TODO: enable the add perk button if the current perk is selected
+				updateCaps();
+			});
+			selectedPerk.appendChild(removeButton);
+		ownedPerks.appendChild(selectedPerk);
+		addPerkButton.disabled = true;
+		updateCaps();
+	});
+	specialSection.appendChild(addPerkButton);
+	specialSection.appendChild(perkSection);
 
 	charaSection.appendChild(specialSection);
 
@@ -782,6 +852,12 @@ function updateCaps(){
 			var upgradeCaps = 0;
 			if(character.heroic){
 				upgradeCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+			}
+
+			if(character.hasOwnProperty("perks")){
+				character.perks.forEach(function(perk){
+					upgradeCaps += getUpgrade("perks", perk).cost;
+				})
 			}
 	
 			wear_slots.forEach(function (slotType) {
