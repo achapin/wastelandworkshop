@@ -437,54 +437,7 @@ function addCharacter(characterElement, presetInfo){
 		specialSection.appendChild(mustCarrySection);
 	}
 
-	var perkDropdown = document.createElement("SELECT");
-	upgrades.perks.forEach(function(perk){
-		var option = new Option(loc[perk.name] + " (" + perk.cost + ")", perk.name);
-		perkDropdown.add(option);
-	});
-	var addPerkButton = document.createElement("button");
-	var perkSection = document.createElement("div");
-	var ownedPerks = document.createElement("div");
-	if(character.hasOwnProperty("perks")){
-		character.perks.forEach(function(perk){
-			var selectedPerk = document.createElement("div");
-			var perkData = getUpgrade("perks", perk);
-			selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
-			
-			addRemovePerkButton(selectedPerk, character, perkData, ownedPerks);
-
-			ownedPerks.appendChild(selectedPerk);
-		});
-	}
-	perkSection.appendChild(ownedPerks);
-	var perkSelection = document.createElement("div");
-
-	perkDropdown.onchange = function(){
-		var perkIndex = character.perks.findIndex(function(otherPerk){
-			return perkDropdown.value === otherPerk;
-		});
-		addPerkButton.disabled = perkIndex >= 0;
-	};
-	
-	perkSection.appendChild(perkDropdown);
-	addPerkButton.appendChild(document.createTextNode(loc["addPerk"]));
-	addPerkButton.setAttribute("class", "btn btn-background");
-	addPerkButton.addEventListener("click", function() {
-		if(!character.hasOwnProperty("perks")){
-			character.perks = [];
-		}
-		character.perks.push(perkDropdown.value);
-		var selectedPerk = document.createElement("div");
-		var perkData = getUpgrade("perks", perkDropdown.value);
-		selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
-		
-		addRemovePerkButton(selectedPerk, character, perkData, ownedPerks);
-
-		ownedPerks.appendChild(selectedPerk);
-		addPerkButton.disabled = true;
-		updateCaps();
-	});
-	specialSection.appendChild(addPerkButton);
+	var perkSection = getPerkSection(character);
 	specialSection.appendChild(perkSection);
 
 	charaSection.appendChild(specialSection);
@@ -728,6 +681,59 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function getPerkSection(character){
+	var addPerkButton = document.createElement("button");
+	var perkSection = document.createElement("div");
+	var ownedPerks = document.createElement("div");
+	var perkDropdown = document.createElement("SELECT");
+	upgrades.perks.forEach(function(perk){
+		var option = new Option(loc[perk.name] + " (" + perk.cost + ")", perk.name);
+		perkDropdown.add(option);
+	});
+
+	if(character.hasOwnProperty("perks")){
+		character.perks.forEach(function(perk){
+			addPerkEntry(ownedPerks, perk, character);
+		});
+	}
+
+	perkSection.appendChild(ownedPerks);
+	var perkSelection = document.createElement("div");
+
+	perkDropdown.onchange = function(){
+		var perkIndex = -1;
+		if(character.hasOwnProperty("perks")){
+			perkIndex = character.perks.findIndex(function(otherPerk){
+				return perkDropdown.value === otherPerk;
+			});
+		}
+		addPerkButton.disabled = perkIndex >= 0;
+	};
+	
+	perkSection.appendChild(perkDropdown);
+	addPerkButton.appendChild(document.createTextNode(loc["addPerk"]));
+	addPerkButton.setAttribute("class", "btn btn-background");
+	addPerkButton.addEventListener("click", function() {
+		if(!character.hasOwnProperty("perks")){
+			character.perks = [];
+		}
+		character.perks.push(perkDropdown.value);
+		addPerkEntry(ownedPerks, perkDropdown.value, character);
+		addPerkButton.disabled = true;
+		updateCaps();
+	});
+	perkSection.appendChild(addPerkButton);
+	return perkSection;
+}
+
+function addPerkEntry(ownedPerks, perk, character){
+	var selectedPerk = document.createElement("div");
+	var perkData = getUpgrade("perks", perk);
+	selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
+	addRemovePerkButton(selectedPerk, character, perkData, ownedPerks);
+	ownedPerks.appendChild(selectedPerk);
 }
 
 function addRemovePerkButton(selectedPerk, character, perkData, ownedPerks) {
