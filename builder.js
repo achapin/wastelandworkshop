@@ -451,19 +451,7 @@ function addCharacter(characterElement, presetInfo){
 			var perkData = getUpgrade("perks", perk);
 			selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
 			
-			var removeButton = document.createElement("button");
-			removeButton.appendChild(document.createTextNode("X"));
-			removeButton.setAttribute("class", "btn btn-background-off");
-			removeButton.addEventListener("click", function() {
-				
-				var perkIndex = character.perks.findIndex(function(otherPerk){
-					return perk === otherPerk;
-				});
-				character.perks.splice(perkIndex, 1);
-				ownedPerks.removeChild(selectedPerk);
-				updateCaps();
-			});
-			selectedPerk.appendChild(removeButton);
+			addRemovePerkButton(selectedPerk, character, perkData, ownedPerks);
 
 			ownedPerks.appendChild(selectedPerk);
 		});
@@ -489,20 +477,9 @@ function addCharacter(characterElement, presetInfo){
 		var selectedPerk = document.createElement("div");
 		var perkData = getUpgrade("perks", perkDropdown.value);
 		selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
-		var removeButton = document.createElement("button");
-			removeButton.appendChild(document.createTextNode("X"));
-			removeButton.setAttribute("class", "btn btn-background-off");
-			removeButton.addEventListener("click", function() {
-				
-				var perkIndex = character.perks.findIndex(function(otherPerk){
-					return perkData.name === otherPerk;
-				});
-				character.perks.splice(perkIndex, 1);
-				ownedPerks.removeChild(selectedPerk);
-				//TODO: enable the add perk button if the current perk is selected
-				updateCaps();
-			});
-			selectedPerk.appendChild(removeButton);
+		
+		addRemovePerkButton(selectedPerk, character, perkData, ownedPerks);
+
 		ownedPerks.appendChild(selectedPerk);
 		addPerkButton.disabled = true;
 		updateCaps();
@@ -751,6 +728,22 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function addRemovePerkButton(selectedPerk, character, perkData, ownedPerks) {
+	var removeButton = document.createElement("button");
+	removeButton.appendChild(document.createTextNode("X"));
+	removeButton.setAttribute("class", "btn btn-background-off");
+	removeButton.addEventListener("click", function() {
+		var perkIndex = character.perks.findIndex(function(otherPerk){
+			return perkData.name === otherPerk;
+		});
+		character.perks.splice(perkIndex, 1);
+		ownedPerks.removeChild(selectedPerk);
+		//TODO: enable the add perk button if the current perk is selected
+		updateCaps();
+	});
+	selectedPerk.appendChild(removeButton);
 }
 
 function addLeaderSection(domElement, character){
