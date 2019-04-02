@@ -632,6 +632,9 @@ function addCharacter(characterElement, presetInfo){
 		});
 	}
 
+	var chemsSection = getChemsSection(character);
+	equipmentSection.appendChild(chemsSection);
+
 	if(characterElement.carry_slots != null || characterElement.consumables != null){
 		showEquipment.addEventListener("click", function() {
 			showEquipment.style.display = "none";
@@ -681,6 +684,80 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function getChemsSection(character){
+	var chemSection = document.createElement("div");
+	var addChemButton = document.createElement("button");
+	var ownedChems = document.createElement("div");
+	var chemDropdown = document.createElement("SELECT");
+	
+	upgrades.chems.forEach(function(chem){
+		var option = new Option(loc[chem.name] + " (" + chem.cost + ")", chem.name);
+		chemDropdown.add(option);
+	});
+
+	var hasFirstChem = false;
+
+	if(character.hasOwnProperty("chems")){
+		Object.getOwnPropertyNames(character.chems).forEach(function(chem){
+
+			if(chem == upgrades.chems[0].name){
+				hasFirstChem = true;
+			}
+			addChemEntry(ownedChems, chem, character, chemDropdown, addChemButton);
+		});
+	}
+
+	chemSection.appendChild(ownedChems);
+	var chemSelection = document.createElement("div");
+
+	chemDropdown.onchange = function(){
+		var chemFound = false;
+		if(character.hasOwnProperty("chems")){
+			chemFound = character.chems.hasOwnProperty(chemDropdown.value);
+		}
+		addChemButton.disabled = chemFound;
+	};
+	
+	chemSection.appendChild(chemDropdown);
+	addChemButton.appendChild(document.createTextNode(loc["addChem"]));
+	addChemButton.setAttribute("class", "btn btn-background");
+	addChemButton.addEventListener("click", function() {
+		if(!character.hasOwnProperty("chems")){
+			character.chems = {};
+		}
+		character["chems"][chemDropdown.value] = 1;
+		addChemEntry(ownedChems, chemDropdown.value, character, chemDropdown, addChemButton);
+		addChemButton.disabled = true;
+		updateCaps();
+	});
+	addChemButton.disabled = hasFirstChem;
+	chemSection.appendChild(addChemButton);
+	return chemSection;
+}
+
+function addChemEntry(ownedChems, chem, character, chemDropdown, addChemButton){
+	var selectedChem = document.createElement("div");
+	var chemData = getUpgrade("chems", chem);
+	selectedChem.appendChild(document.createTextNode(loc[chemData.name] + " (" + chemData.cost + ")"));
+	addRemoveChemButton(selectedChem, character, chemData, ownedChems, chemDropdown, addChemButton);
+	ownedChems.appendChild(selectedChem);
+}
+
+function addRemoveChemButton(selectedChem, character, chemData, ownedChems, chemDropdown, addChemButton) {
+	var removeButton = document.createElement("button");
+	removeButton.appendChild(document.createTextNode("X"));
+	removeButton.setAttribute("class", "btn btn-background-off");
+	removeButton.addEventListener("click", function() {
+		delete character.chems[chemData.name]
+		ownedChems.removeChild(selectedChem);
+		if(chemDropdown.value == chemData.name){
+			addChemButton.disabled = false;
+		}
+		updateCaps();
+	});
+	selectedChem.appendChild(removeButton);
 }
 
 function getPerkSection(character){
