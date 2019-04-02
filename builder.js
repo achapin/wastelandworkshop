@@ -547,83 +547,12 @@ function addCharacter(characterElement, presetInfo){
 				var optionCostSection = document.createElement("span");
 				optionCostSection.setAttribute("class", "cost");
 				optionCostSection.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
-				var optionCostQty = document.createElement("span");
-				optionCostQty.appendChild(document.createTextNode(" X "));
 
-				var optionIncreaseCount = document.createElement("button");
-				optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
-				optionIncreaseCount.appendChild(document.createTextNode("+"));
-				optionIncreaseCount.addEventListener("click", function(){
-					var value = parseInt(optionInput.value);
-					if(isNaN(value)){
-						optionInput.value = "0";
-					}else{
-						var newCount = value + 1;
-						optionInput.value = newCount;
-						if(character[slotType] == null){
-							character[slotType] = {};
-						}
-						character[slotType][optionElement.name] = newCount;
-						updateCaps();
-					}
-				});
-
-				var optionDecreaseCount = document.createElement("button");
-				optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
-				optionDecreaseCount.appendChild(document.createTextNode("-"));
-				optionDecreaseCount.addEventListener("click", function(){
-					var value = parseInt(optionInput.value);
-					if(isNaN(value)){
-						optionInput.value = "0";
-					}else if(value > 0){
-						var newCount = value - 1;
-						optionInput.value = newCount;
-						character[slotType][optionElement.name] = newCount;
-						updateCaps();
-					}
-				});
-
-				var optionInput = document.createElement('input');
-				optionInput.setAttribute("class", "consumeableCount");
-				optionInput.size = 2;
-				optionInput.type = 'text';
-
-				if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
-					optionInput.value = character[slotType][optionElement.name];					
-				}else{
-					optionInput.value = "0";
-				}
-				optionInput.addEventListener("focusin", function(){
-					var value = parseInt(optionInput.value);
-					if(isNaN(value)){
-						lastTextFieldValue = 0;
-					}else{
-						lastTextFieldValue = value;
-					}
-				})
-				optionInput.addEventListener("change", function(){
-					var value = parseInt(optionInput.value);
-					if(isNaN(value)){
-						optionInput.value = lastTextFieldValue;
-					}else{
-						if(value < lastTextFieldValue){
-							value = 0;
-							optionInput.value = "0";
-						}
-						if(character[slotType] == null){
-							character[slotType] = {};
-						}
-						character[slotType][optionElement.name] = value;
-						updateCaps();
-					}
-				});
+				var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name);
 
 				optionSection.appendChild(optionNameSection);
 				optionSection.appendChild(optionCostSection);
-				optionSection.appendChild(optionCostQty);
-				optionSection.appendChild(optionIncreaseCount);
-				optionSection.appendChild(optionInput);
-				optionSection.appendChild(optionDecreaseCount);
+				optionSection.appendChild(getOptionQtySection);
 
 				consumeableSection.appendChild(optionSection);
 			});
@@ -686,6 +615,86 @@ function addCharacter(characterElement, presetInfo){
 	return charaSection;
 }
 
+
+function getNumericCounterFor(character, slotType, field){
+
+	var counterDiv = document.createElement("div");
+
+	var optionIncreaseCount = document.createElement("button");
+	optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
+	optionIncreaseCount.appendChild(document.createTextNode("+"));
+	optionIncreaseCount.addEventListener("click", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			optionInput.value = "0";
+		}else{
+			var newCount = value + 1;
+			optionInput.value = newCount;
+			if(character[slotType] == null){
+				character[slotType] = {};
+			}
+			character[slotType][field] = newCount;
+			updateCaps();
+		}
+	});
+
+	var optionDecreaseCount = document.createElement("button");
+	optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
+	optionDecreaseCount.appendChild(document.createTextNode("-"));
+	optionDecreaseCount.addEventListener("click", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			optionInput.value = "0";
+		}else if(value > 0){
+			var newCount = value - 1;
+			optionInput.value = newCount;
+			character[slotType][field] = newCount;
+			updateCaps();
+		}
+	});
+
+	var optionInput = document.createElement('input');
+	optionInput.setAttribute("class", "consumeableCount");
+	optionInput.size = 2;
+	optionInput.type = 'text';
+
+	if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(field)){
+		optionInput.value = character[slotType][field];					
+	}else{
+		optionInput.value = "0";
+	}
+	optionInput.addEventListener("focusin", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			lastTextFieldValue = 0;
+		}else{
+			lastTextFieldValue = value;
+		}
+	})
+	optionInput.addEventListener("change", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			optionInput.value = lastTextFieldValue;
+		}else{
+			if(value < lastTextFieldValue){
+				value = 0;
+				optionInput.value = "0";
+			}
+			if(character[slotType] == null){
+				character[slotType] = {};
+			}
+			character[slotType][field] = value;
+			updateCaps();
+		}
+	});
+
+	counterDiv.appendChild(optionDecreaseCount);
+	counterDiv.appendChild(optionInput);
+	counterDiv.appendChild(optionIncreaseCount);
+
+	return counterDiv;
+}
+
 function getChemsSection(character){
 	var chemSection = document.createElement("div");
 	var addChemButton = document.createElement("button");
@@ -741,6 +750,10 @@ function addChemEntry(ownedChems, chem, character, chemDropdown, addChemButton){
 	var selectedChem = document.createElement("div");
 	var chemData = getUpgrade("chems", chem);
 	selectedChem.appendChild(document.createTextNode(loc[chemData.name] + " (" + chemData.cost + ")"));
+	
+	var chemCounter = getNumericCounterFor(character, "chems", chem);
+	selectedChem.appendChild(chemCounter)
+
 	addRemoveChemButton(selectedChem, character, chemData, ownedChems, chemDropdown, addChemButton);
 	ownedChems.appendChild(selectedChem);
 }

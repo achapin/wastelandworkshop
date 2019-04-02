@@ -240,5 +240,6 @@
   "sneak":"Sneak",
   "steady_aim":"Steady Aim",
   "toughness":"Toughness",
-  "addPerk":"Add Selected Perk to Character"
+  "addPerk":"Add Selected Perk to Character",
+  "addChem":"Add Chem"
 }
