@@ -442,26 +442,25 @@ function addCharacter(characterElement, presetInfo){
 
 	charaSection.appendChild(specialSection);
 
-	if(characterElement.carry_slots != null || characterElement.consumables != null){
-		var equipmentToggle = document.createElement("div");
-		equipmentToggle.id = "equipmentToggle";
-		equipmentToggle.setAttribute("class", "row");
-		
-		var showEquipment = document.createElement("button");
-		showEquipment.setAttribute("class", "btn btn-background");
-		showEquipment.appendChild(document.createTextNode(loc["show_upgrades"]));
-		equipmentToggle.appendChild(showEquipment);
-		showEquipment.style.display = "none";
+	var equipmentSection = document.createElement("div");
+	equipmentSection.setAttribute("class", "");
 
-		var hideEquipment = document.createElement("button");
-		hideEquipment.setAttribute("class", "btn btn-background");
-		hideEquipment.appendChild(document.createTextNode(loc["hide_upgrades"]));
-		equipmentToggle.appendChild(hideEquipment);
+	var equipmentToggle = document.createElement("div");
+	equipmentToggle.id = "equipmentToggle";
+	equipmentToggle.setAttribute("class", "row");
+	
+	var showEquipment = document.createElement("button");
+	showEquipment.setAttribute("class", "btn btn-background");
+	showEquipment.appendChild(document.createTextNode(loc["show_upgrades"]));
+	equipmentToggle.appendChild(showEquipment);
+	showEquipment.style.display = "none";
 
-		charaSection.appendChild(equipmentToggle);
-		var equipmentSection = document.createElement("div");
-		equipmentSection.setAttribute("class", "");
-	}
+	var hideEquipment = document.createElement("button");
+	hideEquipment.setAttribute("class", "btn btn-background");
+	hideEquipment.appendChild(document.createTextNode(loc["hide_upgrades"]));
+	equipmentToggle.appendChild(hideEquipment);
+
+	charaSection.appendChild(equipmentToggle);
 
 	if(characterElement.wear_slots != null){
 		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
@@ -564,19 +563,17 @@ function addCharacter(characterElement, presetInfo){
 	var chemsSection = getChemsSection(character);
 	equipmentSection.appendChild(chemsSection);
 
-	if(characterElement.carry_slots != null || characterElement.consumables != null){
-		showEquipment.addEventListener("click", function() {
-			showEquipment.style.display = "none";
-			equipmentSection.style.display = "block";
-			hideEquipment.style.display = "block";
-		});
-		hideEquipment.addEventListener("click", function() {
-			equipmentSection.style.display = "none";
-			showEquipment.style.display = "block";
-			hideEquipment.style.display = "none";
-		});
-		charaSection.appendChild(equipmentSection);
-	}
+	showEquipment.addEventListener("click", function() {
+		showEquipment.style.display = "none";
+		equipmentSection.style.display = "block";
+		hideEquipment.style.display = "block";
+	});
+	hideEquipment.addEventListener("click", function() {
+		equipmentSection.style.display = "none";
+		showEquipment.style.display = "block";
+		hideEquipment.style.display = "none";
+	});
+	charaSection.appendChild(equipmentSection);
 
 	close.addEventListener("click", function() 
 		{
