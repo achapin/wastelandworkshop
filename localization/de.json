@@ -241,5 +241,7 @@
   "steady_aim":"Steady Aim",
   "toughness":"Toughness",
   "addPerk":"Add Selected Perk to Character",
-  "addChem":"Add Chem"
+  "addChem":"Add Chem",
+  "model_upgrade_cost":"Model Upgrade Cost: ",
+  "unit_upgrade_cost":"Unit Upgrade Cost: "
 }

@@ -39,7 +39,7 @@ function loadURL(url){
 					reject();
 				}
 			}
-		}
+		};
 	});
 }
 
@@ -213,7 +213,7 @@ function buildAddSection() {
 					&& otherCharElement.unique_code == characterElement.unique_code){
 					can_add = false;
 				}
-			})
+			});
 		}
 
 		var classTypes = can_add ? "btn btn-background choice" : "btn btn-background-off choice";
@@ -360,6 +360,10 @@ function addCharacter(characterElement, presetInfo){
 		headerSection.appendChild(copy);
 	}
 
+	var unitCost = document.createElement("span");
+	unitCost.setAttribute("class", "unitCost");
+	headerSection.appendChild(unitCost);
+
 	var nameSection = document.createElement("h1");
 	nameSection.setAttribute("class", "float-left");
 	var name = document.createTextNode(loc[characterElement.name]);
@@ -367,11 +371,42 @@ function addCharacter(characterElement, presetInfo){
 	headerSection.appendChild(nameSection);
 
 	var costSection = document.createElement("div");
-	var cost = document.createElement("span");
-	cost.appendChild(document.createTextNode("("+characterElement.cost+")"));
-	cost.setAttribute("class", "cost");
-	costSection.appendChild(cost);
+	
+	var modelCost = document.createElement("span");
+	modelCost.appendChild(document.createTextNode("("+characterElement.cost+")"));
+	costSection.appendChild(modelCost);
+
+	var modelUpgradeCostDesc = document.createElement("span");
+	modelUpgradeCostDesc.appendChild(document.createTextNode(" + " + loc["model_upgrade_cost"])); //TODO: Localize?
+	costSection.appendChild(modelUpgradeCostDesc);
+
+	var modelUpdadeCost = document.createElement("span");
+	modelUpdadeCost.setAttribute("class", "modelUpdadeCost");
+	costSection.appendChild(modelUpdadeCost);
+
+	if(!characterElement.hasOwnProperty("unique_code")){
+		var qtySection = document.createElement("div");
+
+		qtySection.appendChild(document.createTextNode(" X "));
+
+		var qtyCounter = getNumericCounterForField(character, "modelCount");
+		qtySection.appendChild(qtyCounter);
+		costSection.appendChild(qtySection);
+	}
+
+	var unitUpgradeCostDesc = document.createElement("span");
+	unitUpgradeCostDesc.appendChild(document.createTextNode(" + " + loc["unit_upgrade_cost"]));
+	costSection.appendChild(unitUpgradeCostDesc);
+
+	var unitUpgradeCost = document.createElement("span");
+	unitUpgradeCost.setAttribute("class", "unitUpgradeCost");
+	costSection.appendChild(unitUpgradeCost);
+
 	headerSection.appendChild(costSection);
+
+	var warningSection = document.createElement("div");
+	warningSection.setAttribute("class", "warning");
+	headerSection.appendChild(warningSection);
 
 	charaSection.appendChild(headerSection);
 
@@ -612,6 +647,86 @@ function addCharacter(characterElement, presetInfo){
 	return charaSection;
 }
 
+function getNumericCounterForField(character, field){
+	var counterDiv = document.createElement("div");
+
+	var optionIncreaseCount = document.createElement("button");
+	optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
+	optionIncreaseCount.appendChild(document.createTextNode("+"));
+	optionIncreaseCount.addEventListener("click", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			optionInput.value = "0";
+		}else{
+			var newCount = value + 1;
+			optionInput.value = newCount;
+			character[field] = newCount;
+			updateCaps();
+		}
+	});
+
+	var optionDecreaseCount = document.createElement("button");
+	optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
+	optionDecreaseCount.appendChild(document.createTextNode("-"));
+	optionDecreaseCount.addEventListener("click", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			optionInput.value = "0";
+			delete character[field];
+		}else{
+			var newCount = value - 1;
+			if(newCount > 0){
+				optionInput.value = newCount;
+				character[field] = newCount;
+			}else{
+				optionInput.value = "0";
+				delete character[field];
+			}
+		}
+		updateCaps();
+	});
+
+	var optionInput = document.createElement('input');
+	optionInput.setAttribute("class", "consumeableCount");
+	optionInput.size = 2;
+	optionInput.type = 'text';
+
+	if(character.hasOwnProperty(field)){
+		optionInput.value = character[field];					
+	}else{
+		optionInput.value = "1";
+		character[field] = 1;
+		updateCaps();
+	}
+	optionInput.addEventListener("focusin", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			lastTextFieldValue = 0;
+		}else{
+			lastTextFieldValue = value;
+		}
+	})
+	optionInput.addEventListener("change", function(){
+		var value = parseInt(optionInput.value);
+		if(isNaN(value)){
+			optionInput.value = lastTextFieldValue;
+		}else{
+			if(value < lastTextFieldValue){
+				value = 0;
+				optionInput.value = "0";
+			}
+			character[field] = value;
+			updateCaps();
+		}
+	});
+
+	counterDiv.appendChild(optionDecreaseCount);
+	counterDiv.appendChild(optionInput);
+	counterDiv.appendChild(optionIncreaseCount);
+
+	return counterDiv;
+}
+
 
 function getNumericCounterFor(character, slotType, field){
 
@@ -836,10 +951,15 @@ function addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perk
 	removeButton.appendChild(document.createTextNode("X"));
 	removeButton.setAttribute("class", "btn btn-background-off");
 	removeButton.addEventListener("click", function() {
-		var perkIndex = character.perks.findIndex(function(otherPerk){
-			return perkData.name === otherPerk;
-		});
-		character.perks.splice(perkIndex, 1);
+
+		if(character.perks.length <= 1){
+			delete character.perks
+		}else{
+			var perkIndex = character.perks.findIndex(function(otherPerk){
+				return perkData.name === otherPerk;
+			});
+			character.perks.splice(perkIndex, 1);
+		}
 		ownedPerks.removeChild(selectedPerk);
 
 		var upgradePerkIndex = upgrades.perks.findIndex(function (otherPerk){
@@ -941,47 +1061,82 @@ function updateCaps(){
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
 	var consumable_slots = [ "thrown", "mines", "chems"];
 
-	if(force.hasOwnProperty("leader") && force.leader.perkIndex > 0){
-		totalCaps += upgrades.heroes_and_leaders[force.leader.perkIndex].cost;
-	}
-
 	if(force.hasOwnProperty("characters")){
+		var unitIndex = 0;
 		force.characters.forEach(function(character){
-			totalCaps += getCharacterById(character.id).cost;
+			var unitDisplay = forceSection.children[unitIndex];
+
+			var modelCount = 1;
+			if(character.hasOwnProperty("modelCount")){
+				modelCount = character.modelCount;
+			}
+
+			var unitCost = 0;
+
+			unitCost += getCharacterById(character.id).cost * modelCount;
+
+			var modelUpdadeCost = 0;
+			var unitUpgradeCost = 0;
+
+			if(force.hasOwnProperty("leader") && force.leader.leaderIndex == unitIndex){
+				var leaderCost = upgrades.heroes_and_leaders[force.leader.perkIndex].cost;
+				unitCost += leaderCost;
+				unitUpgradeCost += leaderCost;
+			}
 	
-			var upgradeCaps = 0;
 			if(character.heroic){
-				upgradeCaps += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+				unitCost += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
+				modelUpdadeCost += upgrades.heroes_and_leaders[0].cost;
 			}
 
 			if(character.hasOwnProperty("perks")){
 				character.perks.forEach(function(perk){
-					upgradeCaps += getUpgrade("perks", perk).cost;
+					var perkCost = getUpgrade("perks", perk).cost;
+					unitCost += perkCost;
+					modelUpdadeCost += perkCost;
 				})
+			}
+
+			if(modelCount > 1 && (character.heroic || character.hasOwnProperty("perks"))){
+				unitDisplay.querySelector(".warning").innerHTML = "MULTI-MODEL UNITS CANNOT BE Heroic OR HAVE PERKS";
+			}else{
+				unitDisplay.querySelector(".warning").innerHTML = null;
 			}
 	
 			wear_slots.forEach(function (slotType) {
 				if(character[slotType] != null){
-					upgradeCaps += getUpgrade(slotType, character[slotType]).cost;
+					var wearCost = getUpgrade(slotType, character[slotType]).cost;
+					unitCost += wearCost * modelCount;
+					modelUpdadeCost += wearCost;
 				}
 			});
 	
 			carry_slots.forEach(function (slotType) {
 				if(character[slotType] != null){
 					character[slotType].forEach(function(item){
-						upgradeCaps += getUpgrade(slotType,item).cost;
+						var carryCost = getUpgrade(slotType,item).cost;
+						unitCost += carryCost * modelCount;
+						modelUpdadeCost += carryCost;
 					});
 				}
 			});
-	
+
+			//Consumables are shared across the entire unit, they're not per-model
 			consumable_slots.forEach(function (slotType) {
 				if(character[slotType] != null){
 					Object.keys(character[slotType]).forEach(function (item) { 
-						upgradeCaps += getUpgrade(slotType, item).cost * character[slotType][item];
+						var consumeableCost = getUpgrade(slotType, item).cost * character[slotType][item];
+						unitCost += consumeableCost;
+						unitUpgradeCost += consumeableCost;
 					});
 				}
 			});
-			totalCaps += upgradeCaps;
+
+			unitDisplay.querySelector(".unitCost").innerHTML = unitCost;
+			unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
+			unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
+			totalCaps += unitCost;
+			unitIndex++;
 		});
 	}
 
