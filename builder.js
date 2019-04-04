@@ -434,6 +434,7 @@ function addCharacter(characterElement, presetInfo){
 		});
 		specialSection.appendChild(heroicSection);
 	}
+	
 	addLeaderSection(specialSection, character);
 
 	if(characterElement.must_wear){
@@ -499,65 +500,14 @@ function addCharacter(characterElement, presetInfo){
 
 	if(characterElement.wear_slots != null){
 		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
-			var wearSection = document.createElement("div");
-			wearSection.setAttribute("class", "carry-section");
-
-			var carryHeader = document.createElement("h2");
-			carryHeader.setAttribute("class", "header");
-			var carryHeaderText = document.createTextNode(loc[slotType]);
-			carryHeader.appendChild(carryHeaderText);
-			wearSection.appendChild(carryHeader)
-
-			var slotOption = characterElement.wear_slots[slotType];
-
-			var slotDropdown = document.createElement("SELECT");
-			var emptyOption = new Option(loc["none"], null);
-			slotDropdown.add(emptyOption);
-			var optionSelectedIndex = 0;
-			var optionIndex = 0;
-
-			slotOption.forEach(function(option) {
-				var optionElement = getUpgrade(slotType, option);
-
-				var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
-				slotDropdown.add(option);
-				optionIndex++;
-				if(character[slotType] == optionElement.name){
-					optionSelectedIndex = optionIndex;
-				}
-			});
-			slotDropdown.selectedIndex = optionSelectedIndex;
-			slotDropdown.onchange = function(){
-				if(slotDropdown.value == null || slotDropdown.value == "null"){
-					delete character[slotType];
-				}else{
-					character[slotType] = slotDropdown.value;
-				}
-				updateCaps();
-			};
-			wearSection.appendChild(slotDropdown);
+			var wearSection = getWearSection(character, characterElement.wear_slots[slotType], slotType); //TODO: ANY OTHER PARAMS?
 			equipmentSection.appendChild(wearSection);
 		});
 	}
 
 	if(characterElement.carry_slots != null){
 		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
-			var carrySection = document.createElement("div");
-			carrySection.setAttribute("class", "carry-section");
-			var carryHeader = document.createElement("h2");
-			var carryHeaderText = document.createTextNode(loc[slotType]);
-			carryHeader.setAttribute("class", "header");
-			carryHeader.appendChild(carryHeaderText);
-			carrySection.appendChild(carryHeader);
-			var slotOption = characterElement.carry_slots[slotType];
-			slotOption.forEach(function(option) {
-				var optionElement = getUpgrade(slotType, option);
-				var isEquipped = false;
-				if(character.hasOwnProperty(slotType)){
-					isEquipped = character[slotType].includes(optionElement.name);
-				}
-				addEquipmentToggleButton(character, slotType, optionElement, carrySection, isEquipped)
-			});
+			var carrySection = getCarrySection(character, characterElement.carry_slots[slotType], slotType); //TODO FILL IN PARAMS?
 			equipmentSection.appendChild(carrySection);
 		});
 	}
@@ -645,6 +595,64 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function getWearSection(character, slotOption, slotType){
+	var wearSection = document.createElement("div");
+	wearSection.setAttribute("class", "carry-section");
+
+	var carryHeader = document.createElement("h2");
+	carryHeader.setAttribute("class", "header");
+	var carryHeaderText = document.createTextNode(loc[slotType]);
+	carryHeader.appendChild(carryHeaderText);
+	wearSection.appendChild(carryHeader)
+
+	var slotDropdown = document.createElement("SELECT");
+	var emptyOption = new Option(loc["none"], null);
+	slotDropdown.add(emptyOption);
+	var optionSelectedIndex = 0;
+	var optionIndex = 0;
+
+	slotOption.forEach(function(option) {
+		var optionElement = getUpgrade(slotType, option);
+
+		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+		slotDropdown.add(option);
+		optionIndex++;
+		if(character[slotType] == optionElement.name){
+			optionSelectedIndex = optionIndex;
+		}
+	});
+	slotDropdown.selectedIndex = optionSelectedIndex;
+	slotDropdown.onchange = function(){
+		if(slotDropdown.value == null || slotDropdown.value == "null"){
+			delete character[slotType];
+		}else{
+			character[slotType] = slotDropdown.value;
+		}
+		updateCaps();
+	};
+	wearSection.appendChild(slotDropdown);
+	return wearSection;
+}
+
+function getCarrySection(character, slotOptions, slotType){
+	var carrySection = document.createElement("div");
+	carrySection.setAttribute("class", "carry-section");
+	var carryHeader = document.createElement("h2");
+	var carryHeaderText = document.createTextNode(loc[slotType]);
+	carryHeader.setAttribute("class", "header");
+	carryHeader.appendChild(carryHeaderText);
+	carrySection.appendChild(carryHeader);
+	slotOptions.forEach(function(option) {
+		var optionElement = getUpgrade(slotType, option);
+		var isEquipped = false;
+		if(character.hasOwnProperty(slotType)){
+			isEquipped = character[slotType].includes(optionElement.name);
+		}
+		addEquipmentToggleButton(character, slotType, optionElement, carrySection, isEquipped)
+	});
+	return carrySection;
 }
 
 function getNumericCounterForField(character, field){

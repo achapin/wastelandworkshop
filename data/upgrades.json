@@ -721,5 +721,167 @@
       "name": "toughness",
       "cost": 7
     }
+  ],
+  "mods":[
+    {
+      "name": "arm_breaker",
+      "cost": 7,
+      "types":["melee"]
+    },
+    {
+      "name": "armor_piercing_receiver",
+      "cost": 7,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "balanced",
+      "cost": 10,
+      "types":["pistols"]
+    },
+    {
+      "name": "ballistic_weave",
+      "cost": 7,
+      "types":["armor"]
+    },
+    {
+      "name": "bayonet",
+      "cost": 8,
+      "types":["rifles"]
+    },
+    {
+      "name": "biocomm_mesh",
+      "cost": 7,
+      "types":["armor"]
+    },
+    {
+      "name": "boosted_servos",
+      "cost": 7,
+      "types":["power_armor"]
+    },
+    {
+      "name": "comfort_grip",
+      "cost": 12,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "core_assembly",
+      "cost": 10,
+      "types":[]
+    },
+    {
+      "name": "cushioned",
+      "cost": 3,
+      "types":[]
+    },
+    {
+      "name": "dissipating",
+      "cost": 7,
+      "types":["armor"]
+    },
+    {
+      "name": "emergency_protocols",
+      "cost": 10,
+      "types":[ "power_armor"]
+    },
+    {
+      "name": "hardened_receiver",
+      "cost": 12,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "headlamp",
+      "cost": 3,
+      "types":["armor"]
+    },
+    {
+      "name": "heavy",
+      "cost": 13,
+      "types":[ "melee"]
+    },
+    {
+      "name": "hot_rod_shark_paint",
+      "cost": 3,
+      "types":["power_armor"]
+    },
+    {
+      "name": "improved_flexibility",
+      "cost": 3,
+      "types":["armor"]
+    },
+    {
+      "name": "lead_lined",
+      "cost": 10,
+      "types":["armor"]
+    },
+    {
+      "name": "lightweight",
+      "cost": 5,
+      "types":["armor"]
+    },
+    {
+      "name": "long_barrel",
+      "cost": 10,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "multi-calibre",
+      "cost": 5,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "multi-purpose",
+      "cost": 5,
+      "types":["melee"]
+    },
+    {
+      "name": "padded",
+      "cost": 7,
+      "types":[]
+    },
+    {
+      "name": "re-bored",
+      "cost": 11,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "refined",
+      "cost": 5,
+      "types":["melee"]
+    },
+    {
+      "name": "reflex_sights",
+      "cost": 12,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "silenced",
+      "cost": 7,
+      "types":[ "rifles", "pistols"]
+    },
+    {
+      "name": "spiked",
+      "cost": 8,
+      "types":["melee"]
+    },
+    {
+      "name": "stun_pack",
+      "cost": 3,
+      "types":["melee"]
+    },
+    {
+      "name": "superior_materials",
+      "cost": 12,
+      "types":["melee"]
+    },
+    {
+      "name": "thicker_plating",
+      "cost": 10,
+      "types":["power_armor"]
+    },
+    {
+      "name": "venomous",
+      "cost": 10,
+      "types":[]
+    }
   ]
 }
