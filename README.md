@@ -7,6 +7,5 @@ Usable at https://achapin.github.io/wastelandworkshop/
 * Printable lists
 * "Other costs" i.e. Nuka-{Cola|Cherry} for the Surivors
 * Make UI prettier
-* Weapon mods
 * Display unit or upgrade card information
 * Unit reordering/sorting

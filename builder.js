@@ -306,8 +306,47 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	removeButton.appendChild(optionNameSection2);
 	removeButton.appendChild(optionCostSection2);
 
-	var modSection = document.createElement("div");
+	var modSection = getModSectionFor(character, slotType, carryInfo); //TODO: other params?
 
+	equipmentToggle.appendChild(removeButton);
+	equipmentToggle.appendChild(modSection);
+
+	if(isSelected){
+		equipButton.style.display = "none";
+		modSection.style.display = "block";
+	}else{
+		removeButton.style.display = "none"
+		modSection.style.display = "none";
+	}
+
+	equipButton.addEventListener("click", function() {
+		removeButton.style.display = "block";
+		modSection.style.display = "block";
+		equipButton.style.display = "none";
+		if(character[slotType] == null){
+			character[slotType] = [];
+		}
+		character[slotType].push(carryInfo.name);
+		updateCaps();
+	});
+
+	removeButton.addEventListener("click", function() {
+		equipButton.style.display = "block";
+		modSection.style.display = "none";
+		removeButton.style.display = "none";
+		character[slotType] = character[slotType].filter(
+			function(value, index, arr){
+				value != carryInfo.name;
+		});
+		removeModFromCharacter(character, carryInfo.name)
+		updateCaps();
+	});
+
+	section.appendChild(equipmentToggle);
+}
+
+function getModSectionFor(character, slotType, carryInfo){
+	var modSection = document.createElement("div");
 	var modDropdown = document.createElement("SELECT");
 	var emptyOption = new Option(loc["none"], null);
 	modDropdown.add(emptyOption);
@@ -320,10 +359,11 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 
 			modDropdown.add(option);
 			optionIndex++;
-			if(character.hasOwnProperty("mods")
-				&& character.mods.hasOwnProperty(carryInfo.name)
-				&& character.mods[carryInfo.name] == mod.name){
-				optionSelectedIndex = optionIndex;
+			if(character.hasOwnProperty("mods")){
+				if((carryInfo == null && character.mods.hasOwnProperty(slotType) && character.mods[slotType] == mod.name)
+					|| (carryInfo != null && character.mods.hasOwnProperty(carryInfo.name) && character.mods[carryInfo.name] == mod.name)){
+					optionSelectedIndex = optionIndex;
+				}
 			}
 		}
 	});
@@ -331,51 +371,22 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	modDropdown.selectedIndex = optionSelectedIndex;
 	modDropdown.onchange = function(){
 		if(modDropdown.value == null || modDropdown.value == "null"){
-			removeModFromCharacter(character, carryInfo.name)
+			if(carryInfo == null){
+				removeModFromCharacter(character, slotType)
+			}else{
+				removeModFromCharacter(character, carryInfo.name)
+			}
 		}else{
-			setModForCharacter(character, carryInfo.name, modDropdown.value)
+			if(carryInfo == null){
+				setModForCharacter(character, slotType, modDropdown.value)
+			}else{
+				setModForCharacter(character, carryInfo.name, modDropdown.value)
+			}
 		}
 		updateCaps();
 	};
-	
-
-	removeButton.appendChild(modSection);
-
-	equipmentToggle.appendChild(removeButton);
-	equipmentToggle.appendChild(modDropdown);
-
-	if(isSelected){
-		equipButton.style.display = "none";
-		modDropdown.style.display = "block";
-	}else{
-		removeButton.style.display = "none"
-		modDropdown.style.display = "none";
-	}
-
-	equipButton.addEventListener("click", function() {
-		removeButton.style.display = "block";
-		modDropdown.style.display = "block";
-		equipButton.style.display = "none";
-		if(character[slotType] == null){
-			character[slotType] = [];
-		}
-		character[slotType].push(carryInfo.name);
-		updateCaps();
-	});
-
-	removeButton.addEventListener("click", function() {
-		equipButton.style.display = "block";
-		modDropdown.style.display = "none";
-		removeButton.style.display = "none";
-		character[slotType] = character[slotType].filter(
-			function(value, index, arr){
-				value != carryInfo.name;
-		});
-		removeModFromCharacter(character, carryInfo.name)
-		updateCaps();
-	});
-
-	section.appendChild(equipmentToggle);
+	modSection.appendChild(modDropdown);
+	return modSection;
 }
 
 function setModForCharacter(character, modSlot, modValue){
@@ -389,7 +400,9 @@ function removeModFromCharacter(character, modSlot){
 	if(character.hasOwnProperty("mods")
 			&& character.mods.hasOwnProperty(modSlot)){
 		delete character.mods[modSlot];
-		//TODO: remove the mods object if there are no more mods
+		if(Object.keys(character.mods).length <= 0){
+			delete character.mods;
+		}
 	}
 }
 
@@ -670,6 +683,8 @@ function getWearSection(character, slotOption, slotType){
 	var optionSelectedIndex = 0;
 	var optionIndex = 0;
 
+	var modSection = getModSectionFor(character, slotType, null);
+
 	slotOption.forEach(function(option) {
 		var optionElement = getUpgrade(slotType, option);
 
@@ -681,15 +696,22 @@ function getWearSection(character, slotOption, slotType){
 		}
 	});
 	slotDropdown.selectedIndex = optionSelectedIndex;
+	modSection.style.display = optionSelectedIndex == 0 ? "none" : "block";
+
 	slotDropdown.onchange = function(){
 		if(slotDropdown.value == null || slotDropdown.value == "null"){
 			delete character[slotType];
+			modSection.style.display = "none";
+			removeModFromCharacter(character, slotType);
 		}else{
 			character[slotType] = slotDropdown.value;
+			modSection.style.display = "block";
 		}
 		updateCaps();
 	};
 	wearSection.appendChild(slotDropdown);
+	wearSection.appendChild(modSection);
+
 	return wearSection;
 }
 
