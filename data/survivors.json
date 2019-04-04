@@ -379,7 +379,7 @@
     "unique_code": "sole_survivor",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "power_armor_frame",
         "raider_power_armor",
         "t45_power_armor",
@@ -454,7 +454,7 @@
     "unique_code": "sole_survivor",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "power_armor_frame"
       ]
     },
@@ -505,7 +505,7 @@
     "unique_code": "sole_survivor_loner",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "power_armor_frame",
         "raider_power_armor",
         "t45_power_armor",
@@ -576,7 +576,7 @@
     "unique_code": "sole_survivor",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "power_armor_frame",
         "raider_power_armor",
         "t45_power_armor",

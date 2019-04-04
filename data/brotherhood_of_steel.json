@@ -5,7 +5,7 @@
     "unique_code": "aspirant_goddard",
     "heroic": true,
     "must_wear": [
-      "armor.t60_power_armor"
+      "power_armor.t60_power_armor"
     ],
     "carry_slots": {
       "rifles": [
@@ -74,7 +74,7 @@
     "name": "knight",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "t45_power_armor",
         "t51_power_armor",
         "t60_power_armor"
@@ -118,7 +118,7 @@
     "unique_code": "knight_captain_cade",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "t45_power_armor",
         "t51_power_armor",
         "t60_power_armor"
@@ -211,7 +211,7 @@
     "name": "paladin",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "t45_power_armor",
         "t51_power_armor",
         "t60_power_armor"
@@ -256,7 +256,7 @@
     "unique_code": "paladin_danse",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "t60_power_armor"
       ]
     },

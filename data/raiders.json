@@ -332,7 +332,7 @@
     "name": "veteran_raider",
     "heroic": true,
     "wear_slots": {
-      "armor": [
+      "power_armor": [
         "raider_power_armor"
       ]
     },

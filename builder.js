@@ -1057,7 +1057,7 @@ function updateCaps(){
 
 	totalCaps = 0;
 
-	var wear_slots = ["armor"];
+	var wear_slots = ["armor","power_armor"];
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
 	var consumable_slots = [ "thrown", "mines", "chems"];
 

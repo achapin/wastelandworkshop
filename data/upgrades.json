@@ -312,17 +312,10 @@
       "name": "heavy_gauntlets",
       "cost": 15
     },
-    {
-      "name": "power_armor_frame",
-      "cost": 15
-    },
+    
     {
       "name": "rocks_bladed_helm",
       "cost": 23
-    },
-    {
-      "name": "raider_power_armor",
-      "cost": 33
     },
     {
       "name": "sturdy_combat_armor",
@@ -331,6 +324,16 @@
     {
       "name": "sturdy_leather_armor",
       "cost": 23
+    }
+  ],
+  "power_armor" : [
+    {
+      "name": "power_armor_frame",
+      "cost": 15
+    },
+    {
+      "name": "raider_power_armor",
+      "cost": 33
     },
     {
       "name": "t45_power_armor",
