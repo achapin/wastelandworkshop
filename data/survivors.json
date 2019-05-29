@@ -197,6 +197,12 @@
         "thirst_zapper_cola"
       ]
     },
+    "consumables":{
+      "other":[
+        "nuka_cola",
+        "nuka_cherry"
+      ]
+    },
     "cost": 76
   },
   {

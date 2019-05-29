@@ -1146,7 +1146,7 @@ function updateCaps(){
 
 	var wear_slots = ["armor","power_armor"];
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
-	var consumable_slots = [ "thrown", "mines", "chems"];
+	var consumable_slots = [ "thrown", "mines", "chems", "other"];
 
 	if(force.hasOwnProperty("characters")){
 		var unitIndex = 0;

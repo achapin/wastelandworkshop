@@ -883,5 +883,17 @@
       "cost": 10,
       "types":[]
     }
+  ],
+  "other":[
+    {
+      "name":"nuka_cola",
+      "cost":20,
+      "types":[]
+    },
+    {
+      "name":"nuka_cherry",
+      "cost":26,
+      "types":[]
+    }
   ]
 }

@@ -3,7 +3,7 @@ A skirmish squad builder for Fallout Wasteland Warfare
 Usable at https://achapin.github.io/wastelandworkshop/
 
 # TODO (In no particular order)
-* "Other costs" i.e. Nuka-{Cola|Cherry} for the Surivors
+* Un-equipping a weapon should reset the mod dropdown
 * Make UI prettier
 * Printable lists
 * Unit reordering/sorting
