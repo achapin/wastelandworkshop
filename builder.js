@@ -333,6 +333,7 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	removeButton.addEventListener("click", function() {
 		equipButton.style.display = "block";
 		modSection.style.display = "none";
+		modSection.querySelector("SELECT").selectedIndex = 0;
 		removeButton.style.display = "none";
 		character[slotType] = character[slotType].filter(
 			function(value, index, arr){
@@ -703,6 +704,7 @@ function getWearSection(character, slotOption, slotType){
 			delete character[slotType];
 			modSection.style.display = "none";
 			removeModFromCharacter(character, slotType);
+			modSection.querySelector("SELECT").selectedIndex = 0;
 		}else{
 			character[slotType] = slotDropdown.value;
 			modSection.style.display = "block";
