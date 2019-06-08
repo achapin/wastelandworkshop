@@ -686,16 +686,30 @@ function getWearSection(character, slotOption, slotType){
 
 	var modSection = getModSectionFor(character, slotType, null);
 
-	slotOption.forEach(function(option) {
-		var optionElement = getUpgrade(slotType, option);
+	if(slotOption.length <= 0){
+		upgrades[slotType].forEach(function(optionElement){
+			if(optionElement.cost != 0){
+				var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+				slotDropdown.add(option);
+				optionIndex++;
+				if(character[slotType] == optionElement.name){
+					optionSelectedIndex = optionIndex;
+				}
+			}
+		});
+	}else{
+		slotOption.forEach(function(option) {
+			var optionElement = getUpgrade(slotType, option);
 
-		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
-		slotDropdown.add(option);
-		optionIndex++;
-		if(character[slotType] == optionElement.name){
-			optionSelectedIndex = optionIndex;
-		}
-	});
+			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+			slotDropdown.add(option);
+			optionIndex++;
+			if(character[slotType] == optionElement.name){
+				optionSelectedIndex = optionIndex;
+			}
+		});
+	}
+
 	slotDropdown.selectedIndex = optionSelectedIndex;
 	modSection.style.display = optionSelectedIndex == 0 ? "none" : "block";
 
@@ -725,14 +739,27 @@ function getCarrySection(character, slotOptions, slotType){
 	carryHeader.setAttribute("class", "header");
 	carryHeader.appendChild(carryHeaderText);
 	carrySection.appendChild(carryHeader);
-	slotOptions.forEach(function(option) {
-		var optionElement = getUpgrade(slotType, option);
-		var isEquipped = false;
-		if(character.hasOwnProperty(slotType)){
-			isEquipped = character[slotType].includes(optionElement.name);
-		}
-		addEquipmentToggleButton(character, slotType, optionElement, carrySection, isEquipped)
-	});
+
+	if(slotOptions.length <= 0){
+		upgrades[slotType].forEach(function(option){
+			if(option.cost != 0){
+				var isEquipped = false;
+				if(character.hasOwnProperty(slotType)){
+					isEquipped = character[slotType].includes(option.name);
+				}
+				addEquipmentToggleButton(character, slotType, option, carrySection, isEquipped);
+			}
+		});
+	}else{
+		slotOptions.forEach(function(option) {
+			var optionElement = getUpgrade(slotType, option);
+			var isEquipped = false;
+			if(character.hasOwnProperty(slotType)){
+				isEquipped = character[slotType].includes(optionElement.name);
+			}
+			addEquipmentToggleButton(character, slotType, optionElement, carrySection, isEquipped)
+		});
+	}
 	return carrySection;
 }
 
