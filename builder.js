@@ -5,6 +5,7 @@ var raiders;
 var survivors;
 var mutants;
 var characters;
+var settlement;
 
 var forceSection;
 var addButton;
@@ -74,6 +75,13 @@ function survivorsLoaded(json){
 
 function mutantsLoaded(json){
 	mutants = json;
+	var settlementLoadPromise = loadURL("data/settlement.json");
+	settlementLoadPromise.then(settlementLoaded);
+	settlementLoadPromise.catch(function(){alert("settlement load failed");});
+}
+
+function settlementLoaded(json){
+	settlement = json;
 	loadLocalization();
 }
 
@@ -102,6 +110,27 @@ function loadLocalization(){
 
 function localizationLoaded(json){
 	loc = json;
+
+	var missingKeys = ""
+
+	settlement.forEach(function(character){
+		if(!loc.hasOwnProperty(character.name)){
+			missingKeys += character.name + ", ";
+		}
+	});
+	Object.keys(upgrades).forEach(function(section){
+		if(!loc.hasOwnProperty(section)){
+			missingKeys += section + ", ";
+		}
+		upgrades[section].forEach(function(upgrade){
+			if(!loc.hasOwnProperty(upgrade.name)){
+				missingKeys += upgrade.name + ", ";
+			}
+		});
+	});
+
+	console.log("Missing LOC keys: " + missingKeys);
+
 	initListeners();
 }
 
@@ -110,6 +139,7 @@ function initListeners(){
 	document.getElementById("switch-mutants").addEventListener("click", switchMutants, true);
 	document.getElementById("switch-survivors").addEventListener("click", switchSurvivors, true);
 	document.getElementById("switch-raiders").addEventListener("click", switchRaiders, true);
+	document.getElementById("switch-settlement").addEventListener("click", switchSettlement, true);
 
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
@@ -181,6 +211,12 @@ function switchSurvivors() {
 function switchRaiders() {
 	characters = raiders;
 	faction = "rdr";
+	clearForce();	
+}
+
+function switchSettlement() {
+	characters = settlement;
+	faction = "stl";
 	clearForce();	
 }
 
@@ -593,24 +629,20 @@ function addCharacter(characterElement, presetInfo){
 			consumeableSection.appendChild(consumeableHeader);
 
 			var slotOption = characterElement.consumables[slotType];
-			slotOption.forEach(function(option) {
-				var optionElement = getUpgrade(slotType, option);
-				var optionSection = document.createElement("div");
-				optionSection.setAttribute("class", "consumable");
-				var optionNameSection = document.createElement("span");
-				optionNameSection.appendChild(document.createTextNode(loc[optionElement.name]));
-				var optionCostSection = document.createElement("span");
-				optionCostSection.setAttribute("class", "cost");
-				optionCostSection.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
 
-				var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name);
-
-				optionSection.appendChild(optionNameSection);
-				optionSection.appendChild(optionCostSection);
-				optionSection.appendChild(getOptionQtySection);
-
-				consumeableSection.appendChild(optionSection);
-			});
+			if(slotOption.length <= 0){
+				upgrades[slotType].forEach(function(optionElement){
+					if(optionElement.cost != 0){
+						consumeableSection.appendChild(getConsumableSectionFor(optionElement, character, slotType));
+					}
+				});
+			}else{
+				slotOption.forEach(function(option) {
+					var optionElement = getUpgrade(slotType, option);
+					var optionSection = getConsumableSectionFor(optionElement, character, slotType);
+					consumeableSection.appendChild(optionSection);
+				});
+			}
 
 			equipmentSection.appendChild(consumeableSection);
 		});
@@ -666,6 +698,23 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function getConsumableSectionFor(optionElement, character, slotType){
+	var optionSection = document.createElement("div");
+	optionSection.setAttribute("class", "consumable");
+	var optionNameSection = document.createElement("span");
+	optionNameSection.appendChild(document.createTextNode(loc[optionElement.name]));
+	var optionCostSection = document.createElement("span");
+	optionCostSection.setAttribute("class", "cost");
+	optionCostSection.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
+
+	var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name);
+
+	optionSection.appendChild(optionNameSection);
+	optionSection.appendChild(optionCostSection);
+	optionSection.appendChild(getOptionQtySection);
+	return optionSection;
 }
 
 function getWearSection(character, slotOption, slotType){
@@ -767,7 +816,7 @@ function getNumericCounterForField(character, field){
 	var counterDiv = document.createElement("div");
 
 	var optionIncreaseCount = document.createElement("button");
-	optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
+	optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
 	optionIncreaseCount.appendChild(document.createTextNode("+"));
 	optionIncreaseCount.addEventListener("click", function(){
 		var value = parseInt(optionInput.value);
@@ -782,7 +831,7 @@ function getNumericCounterForField(character, field){
 	});
 
 	var optionDecreaseCount = document.createElement("button");
-	optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
+	optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
 	optionDecreaseCount.appendChild(document.createTextNode("-"));
 	optionDecreaseCount.addEventListener("click", function(){
 		var value = parseInt(optionInput.value);
@@ -849,7 +898,7 @@ function getNumericCounterFor(character, slotType, field){
 	var counterDiv = document.createElement("div");
 
 	var optionIncreaseCount = document.createElement("button");
-	optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
+	optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
 	optionIncreaseCount.appendChild(document.createTextNode("+"));
 	optionIncreaseCount.addEventListener("click", function(){
 		var value = parseInt(optionInput.value);
@@ -867,7 +916,7 @@ function getNumericCounterFor(character, slotType, field){
 	});
 
 	var optionDecreaseCount = document.createElement("button");
-	optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");
+	optionDecreaseCount.setAttribute("class", "btn btn-equipped btn-left-sm");
 	optionDecreaseCount.appendChild(document.createTextNode("-"));
 	optionDecreaseCount.addEventListener("click", function(){
 		var value = parseInt(optionInput.value);
@@ -1173,9 +1222,9 @@ function updateCaps(){
 
 	totalCaps = 0;
 
-	var wear_slots = ["armor","power_armor"];
+	var wear_slots = ["armor","power_armor", "clothing"];
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
-	var consumable_slots = [ "thrown", "mines", "chems", "other"];
+	var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"];
 
 	if(force.hasOwnProperty("characters")){
 		var unitIndex = 0;
@@ -1310,6 +1359,9 @@ function loadForceFromString(forceString){
 	}
 	if(forceValue == "rdr"){
 		switchRaiders();
+	}
+	if(forceValue == "stl"){
+		switchSettlement();
 	}
 
 	var listName = "";

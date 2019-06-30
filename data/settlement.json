@@ -1,0 +1,1193 @@
+[
+	{
+    "id": 0,
+    "name": "ack_ack",
+    "unique_code": "ack_ack",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 120
+  	},
+  	{
+    "id": 1,
+    "name": "alien",
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 70
+	},
+	{
+    "id": 2,
+    "name": "aspirant_goddard",
+    "unique_code": "aspirant_goddard",
+    "heroic": true,
+    "must_wear": [
+      "power_armor.t60_power_armor"
+    ],
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 105
+	},
+	{
+    "id": 3,
+    "name": "assaultron",
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "must_carry": [
+      "rifles.assaultron_head_laser",
+      "melee.assaultron_swipe"
+    ],
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 320
+	},
+	{
+    "id": 4,
+    "name": "avery",
+    "unique_code": "avery",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 110
+	},
+	{
+    "id": 5,
+    "name": "aviator",
+    "unique_code": "aviator",
+    "heroic": true,
+    "must_wear": [
+      "clothing.aviator_cap"
+    ],
+    "wear_slots": {
+      "armor":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 67
+	},
+	{
+    "id": 6,
+    "name": "battered_assaultron",
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "must_carry": [
+      "rifles.battered_assaultron_head_laser",
+      "melee.assaultron_swipe"
+    ],
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 145
+	},
+	{
+    "id": 7,
+    "name": "battered_protectron",
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "must_carry": [
+      "pistols.protectron_hand_laser"
+    ],
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 20
+	},
+	{
+    "id": 8,
+    "name": "battered_sentry_bot",
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "must_carry": [
+      "melee.empty_minigun",
+      "heavy_weapons.missile_launcher"
+    ],
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 130
+	},
+	{
+    "id": 9,
+    "name": "behemoth",
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 245
+	},
+	{
+    "id": 10,
+    "name": "bloated_glowing_one",
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 220
+	},
+	{
+    "id": 11,
+    "name": "brute",
+    "heroic": true,
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 81
+  	},
+	{
+    "id": 12,
+    "unique_code": "cait",
+    "name": "cait",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "must_carry": [
+      "chems.psycho"
+    ],
+    "cost": 95
+  },
+  {
+    "id": 13,
+    "name": "codsworth",
+    "unique_code": "codsworth",
+    "must_carry": [
+      "pistols.mr_handy_flamer",
+      "melee.mr_handy_buzzsaw"
+    ],
+    "cost": 120
+  },
+  {
+    "id": 14,
+    "name": "deathclaw",
+    "must_carry": [
+      "melee.deathclaw_crush",
+      "melee.deathclaw_swipe"
+    ],
+    "cost": 295
+  },
+  {
+    "id": 15,
+    "name": "dog",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 90
+  },
+  {
+    "id": 16,
+    "name": "dogmeat",
+    "unique_code": "dogmeat",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 110
+  },
+  {
+    "id": 17,
+    "name": "dogmeat_guard_dog",
+    "unique_code": "dogmeat",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 95
+  },
+  {
+    "id": 18,
+    "name": "dogmeat_scout",
+    "unique_code": "dogmeat",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 100
+  },
+  {
+    "id": 19,
+    "name": "enslaved_tech",
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": []
+    },
+    "cost": 33
+  },
+  {
+    "id": 20,
+    "name": "eyebot",
+    "must_carry": [
+      "pistols.eyebot_laser"
+    ],
+    "cost": 59
+  },
+  {
+    "id": 21,
+    "name": "feral_ghoul",
+    "must_carry": [
+      "melee.feral_ghoul_swipe"
+    ],
+    "cost": 50
+  },
+  {
+    "id": 22,
+    "name": "field_scribe",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 43
+  },
+  {
+    "id": 23,
+    "name": "glowing_radroach_swarm",
+    "must_carry": [
+      "melee.radroach_swarm_bite"
+    ],
+    "cost": 35
+  },
+  {
+    "id": 24,
+    "name": "hammer",
+    "unique_code": "hammer",
+    "heroic": true,
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 105
+  },
+  {
+    "id": 25,
+    "name": "knight",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 65
+  },
+  {
+    "id": 26,
+    "name": "knight_captain_cade",
+    "unique_code": "knight_captain_cade",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 114
+  },
+  {
+    "id": 27,
+    "name": "knight_patrol",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 49
+  },
+  {
+    "id": 28,
+    "name": "knight_patrol_blade",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 45
+  },
+  {
+    "id": 29,
+    "name": "lancer",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 60
+  },
+  {
+    "id": 30,
+    "name": "mama_murphy",
+    "unique_code": "mama_murphy",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "must_carry": [
+      "chems.jet",
+      "chems.mentats"
+    ],
+    "cost": 85
+  },
+  {
+    "id": 31,
+    "name": "master",
+    "heroic": true,
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 95
+  },
+  {
+    "id": 32,
+    "name": "minuteman",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 54
+  },
+  {
+    "id": 33,
+    "name": "mole_rat",
+    "must_carry": [
+      "melee.mole_rat_bite"
+    ],
+    "cost": 14
+  },
+  {
+    "id": 34,
+    "name": "mr_handy",
+    "must_carry": [
+      "pistols.mr_handy_flamer",
+      "melee.mr_handy_buzzsaw"
+    ],
+    "cost": 100
+  },
+  {
+    "id": 35,
+    "name": "mutant_hound",
+    "must_carry": [
+      "melee.hound_bite"
+    ],
+    "cost": 63
+  },
+  {
+    "id": 36,
+    "name": "mutant_hound_fiend",
+    "must_carry": [
+      "melee.hound_bite"
+    ],
+    "cost": 63
+  },
+  {
+    "id": 37,
+    "name": "nuka_cola_girl",
+    "unique_code": "nuka_cola_girl",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 76
+  },
+  {
+    "id": 38,
+    "name": "paladin",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 90
+  },
+  {
+    "id": 39,
+    "name": "paladin_danse",
+    "unique_code": "paladin_danse",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 128
+  },
+  {
+    "id": 40,
+    "name": "piper",
+    "unique_code": "piper",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 76
+  },
+  {
+    "id": 41,
+    "name": "preston_garvey",
+    "unique_code": "preston_garvey",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 124
+  },
+  {
+    "id": 42,
+    "name": "protectron",
+    "must_carry": [
+      "pistols.protectron_hand_laser"
+    ],
+    "cost": 30
+  },
+  {
+    "id": 43,
+    "name": "psycho",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 48
+  },
+  {
+    "id": 44,
+    "name": "psycho_outlaw",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 49
+  },
+  {
+    "id": 45,
+    "name": "putrid_glowing_one",
+    "must_carry": [
+      "melee.putrid_glowing_one_swipe"
+    ],
+    "cost": 210
+  },
+  {
+    "id": 46,
+    "name": "radroach_swarm",
+    "must_carry": [
+      "melee.radroach_swarm_bite"
+    ],
+    "cost": 17
+  },
+  {
+    "id": 47,
+    "name": "radscorpion",
+    "must_carry": [
+      "melee.radscorpion_pincers_and_sting"
+    ],
+    "cost": 100
+  },
+  {
+    "id": 48,
+    "name": "raider",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 41
+  },
+  {
+    "id": 49,
+    "name": "raider_outlaw",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 42
+  },
+  {
+    "id": 50,
+    "name": "weak_feral_ghoul",
+    "must_carry": [
+      "melee.weak_feral_ghoul_swipe"
+    ],
+    "cost": 100
+  },
+  {
+    "id": 51,
+    "name": "ronnie_shaw",
+    "unique_code": "ronnie_shaw",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 114
+  },
+  {
+    "id": 52,
+    "name": "scavenger",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 38
+  },
+  {
+    "id": 53,
+    "name": "scavver",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 63
+  },
+  {
+    "id": 54,
+    "name": "scavver_outlaw",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 62
+  },
+  {
+    "id": 55,
+    "name": "sentry_bot",
+    "must_carry": [
+      "heavy_weapons.minigun",
+      "heavy_weapons.missile_launcher"
+    ],
+    "cost": 310
+  },
+  {
+    "id": 56,
+    "name": "settler",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 40
+  },
+  {
+    "id": 57,
+    "name": "sole_survivor",
+    "unique_code": "sole_survivor",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 95
+  },
+  {
+    "id": 58,
+    "name": "sole_survivor_day_one",
+    "unique_code": "sole_survivor",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 70
+  },
+  {
+    "id": 59,
+    "name": "sole_survivor_loner",
+    "unique_code": "sole_survivor_loner",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 140
+  },
+  {
+    "id": 60,
+    "name": "sole_survivor_tech",
+    "unique_code": "sole_survivor",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 85
+  },
+  {
+    "id": 61,
+    "name": "sturges",
+    "unique_code": "sturges",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 100
+  },
+  {
+    "id": 62,
+    "name": "suicider",
+    "must_carry": [
+      "thrown.suicider_mini_nuke"
+    ],
+    "cost": 55
+  },
+  {
+    "id": 63,
+    "name": "super_mutant",
+    "heroic": true,
+    "wear_slots": {
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 40
+  },
+  {
+    "id": 64,
+    "name": "veteran_raider",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 85
+  },
+  {
+    "id": 65,
+    "name": "x6-88_courser",
+    "unique_code": "x6-88_courser",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 188
+  },
+  {
+    "id": 66,
+    "name": "young_deathclaw",
+    "must_carry": [
+      "melee.young_deathclaw_crush",
+      "melee.young_deathclaw_swipe"
+    ],
+    "cost": 90
+  }
+]

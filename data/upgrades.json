@@ -52,7 +52,7 @@
     },
     {
       "name": "institute_laser_rifle",
-      "cost": 17
+      "cost": 12
     },
     {
       "name": "laser_musket",
@@ -85,6 +85,10 @@
     {
       "name": "gauss_rifle",
       "cost": 47
+    },
+    {
+      "name": "battered_assaultron_head_laser",
+      "cost": 0
     }
   ],
   "pistols": [
@@ -98,7 +102,7 @@
     },
     {
       "name": "alien_blaster",
-      "cost": 6
+      "cost": 9
     },
     {
       "name": "bolt_action_pipe_pistol",
@@ -176,7 +180,7 @@
     },
     {
       "name": "fire_hydrant_bat",
-      "cost": 24
+      "cost": 38
     },
     {
       "name": "hound_bite",
@@ -233,6 +237,38 @@
     {
       "name": "tire_iron",
       "cost": 12
+    },
+    {
+      "name": "bloated_glowing_one_swipe",
+      "cost": 0
+    },
+    {
+      "name": "empty_minigun",
+      "cost": 0
+    },
+    {
+      "name": "mole_rat_bite",
+      "cost": 0
+    },
+    {
+      "name": "putrid_glowing_one_swipe",
+      "cost": 0
+    },
+    {
+      "name": "radscorpion_pincers_and_sting",
+      "cost": 0
+    },
+    {
+      "name": "weak_feral_ghoul_swipe",
+      "cost": 0
+    },
+    {
+      "name": "young_deathclaw_crush",
+      "cost": 0
+    },
+    {
+      "name": "young_deathclaw_swipe",
+      "cost": 0
     }
   ],
   "thrown": [
@@ -242,7 +278,7 @@
     },
     {
       "name": "behemoth_rock_throw",
-      "cost": 12
+      "cost": 5
     },
     {
       "name": "cryo_grenade",
@@ -312,7 +348,6 @@
       "name": "heavy_gauntlets",
       "cost": 15
     },
-    
     {
       "name": "rocks_bladed_helm",
       "cost": 23
@@ -323,6 +358,18 @@
     },
     {
       "name": "sturdy_leather_armor",
+      "cost": 23
+    },
+    {
+      "name": "heavy_raider_armor",
+      "cost": 30
+    },
+    {
+      "name": "protectors_right_arm_guard",
+      "cost": 12
+    },
+    {
+      "name": "sturdy_metal_armor",
       "cost": 23
     }
   ],
@@ -355,55 +402,75 @@
   "clothing": [
     {
       "name": "aviator_cap",
-      "cost": 20
-    },
-    {
-      "name": "atom_cats_jacket_and_jeans",
-      "cost": 10
-    },
-    {
-      "name": "bowler_hat",
       "cost": 15
     },
     {
+      "name": "atom_cats_jacket_and_jeans",
+      "cost": 7
+    },
+    {
+      "name": "bowler_hat",
+      "cost": 10
+    },
+    {
       "name": "camoflage",
-      "cost": 20
+      "cost": 13
     },
     {
       "name": "dirty_postman_uniform",
-      "cost": 10
+      "cost": 7
     },
     {
       "name": "dog_bandana",
-      "cost": 10
+      "cost": 7
     },
     {
       "name": "eyeglasses",
-      "cost": 4
+      "cost": 3
     },
     {
       "name": "military_fatigues",
-      "cost": 5
+      "cost": 3
     },
     {
       "name": "patched_three_piece_suit",
-      "cost": 8
-    },
-    {
-      "name": "road_goggles",
-      "cost": 4
-    },
-    {
-      "name": "robotic_bits",
       "cost": 5
     },
     {
+      "name": "road_goggles",
+      "cost": 3
+    },
+    {
+      "name": "robotic_bits",
+      "cost": 3
+    },
+    {
       "name": "sea_captains_hat",
-      "cost": 10
+      "cost": 7
     },
     {
       "name": "vault_111_jumpsuit",
       "cost": 10
+    },
+    {
+      "name": "assault_gas_mask",
+      "cost": 3
+    },
+    {
+      "name": "baseball_cap",
+      "cost": 7
+    },
+    {
+      "name": "brotherhood_of_steel_hood",
+      "cost": 5
+    },
+    {
+      "name": "red_flight_helmet",
+      "cost": 3
+    },
+    {
+      "name": "spiked_muzzle",
+      "cost": 5
     }
   ],
   "chems": [
@@ -483,23 +550,31 @@
   "alcohol": [
     {
       "name": "bourbon",
-      "cost": 10
+      "cost": 7
     },
     {
       "name": "ice_cold_gwinett_ale",
-      "cost": 14
+      "cost": 9
     },
     {
       "name": "rum",
-      "cost": 13
+      "cost": 8
     },
     {
       "name": "vodka",
-      "cost": 13
+      "cost": 8
     },
     {
       "name": "whiskey",
-      "cost": 12
+      "cost": 8
+    },
+    {
+      "name": "moonshine",
+      "cost": 9
+    },
+    {
+      "name": "wine",
+      "cost": 5
     }
   ],
   "heroes_and_leaders": [
@@ -548,6 +623,10 @@
       "cost": 20
     },
     {
+      "name": "grenadier",
+      "cost": 10
+    },
+    {
       "name": "hunter",
       "cost": 10
     },
@@ -558,6 +637,14 @@
     {
       "name": "robot_controller",
       "cost": 7
+    },
+    {
+      "name": "selfless",
+      "cost": 13
+    },
+    {
+      "name": "stalker",
+      "cost": 12
     },
     {
       "name": "tech",
@@ -590,6 +677,10 @@
       "cost": 10
     },
     {
+      "name": "armorer",
+      "cost": 7
+    },
+    {
       "name": "attack_dog",
       "cost": 10
     },
@@ -600,6 +691,10 @@
     {
       "name": "big_leagues",
       "cost": 16
+    },
+    {
+      "name": "blacksmith",
+      "cost": 7
     },
     {
       "name": "blitz",
@@ -836,7 +931,7 @@
     {
       "name": "padded",
       "cost": 7,
-      "types":[]
+      "types":["armor"]
     },
     {
       "name": "re-bored",
@@ -881,19 +976,183 @@
     {
       "name": "venomous",
       "cost": 10,
-      "types":[]
+      "types":["melee"]
     }
   ],
-  "other":[
+  "food_and_drink":[
+    {
+      "name":"bloatfly_meat",
+      "cost":23
+    },
+    {
+      "name":"blood_pack",
+      "cost":20
+    },
+    {
+      "name":"brahmin_meat",
+      "cost":26
+    },
+    {
+      "name":"cave_fungus",
+      "cost":10
+    },
+    {
+      "name":"cram",
+      "cost":16
+    },
+    {
+      "name":"deathclaw_meat",
+      "cost":39
+    },
+    {
+      "name":"fresh_melon",
+      "cost":13
+    },
+    {
+      "name":"iguana_bits",
+      "cost":26
+    },
+    {
+      "name":"iguana_on_a_stick",
+      "cost":20
+    },
+    {
+      "name":"mole_rat_meat",
+      "cost":33
+    },
+    {
+      "name":"mutant_hound_meat",
+      "cost":29
+    },
     {
       "name":"nuka_cola",
-      "cost":20,
-      "types":[]
+      "cost":20
     },
     {
       "name":"nuka_cherry",
-      "cost":26,
-      "types":[]
+      "cost":26
+    },
+    {
+      "name":"nuka_cola_quantum",
+      "cost":55
+    },
+    {
+      "name":"radroach_meat",
+      "cost":13
+    },
+    {
+      "name":"radscorpion_egg",
+      "cost":31
+    },
+    {
+      "name":"radscorpion_meat",
+      "cost":33
+    },
+    {
+      "name":"radstag_meat",
+      "cost":33
+    },
+    {
+      "name":"squirrel_bits",
+      "cost":13
+    },
+    {
+      "name":"squirrel_on_a_stick",
+      "cost":20
+    },
+    {
+      "name":"squirrel_stew",
+      "cost":26
+    },
+    {
+      "name":"sugar_bombs",
+      "cost":20
+    },
+    {
+      "name":"yao_guai_meat",
+      "cost":39
+    },
+    {
+      "name":"yao_guai_rib_meat",
+      "cost":33
+    }
+  ],
+  "gear":[
+    {
+      "name":"admin_password",
+      "cost":13
+    },
+    {
+      "name":"artillery_smoke_grenade",
+      "cost":7
+    },
+    {
+      "name":"binoculars",
+      "cost":7
+    },
+    {
+      "name":"car_security_override",
+      "cost":10
+    },
+    {
+      "name":"climbing_spikes",
+      "cost":10
+    },
+    {
+      "name":"draft_codex",
+      "cost":13
+    },
+    {
+      "name":"fire_extinguisher",
+      "cost":8
+    },
+    {
+      "name":"flashlight",
+      "cost":7
+    },
+    {
+      "name":"fusion_core",
+      "cost":13
+    },
+    {
+      "name":"hand_written_note",
+      "cost":26
+    },
+    {
+      "name":"mr_handy_fuel",
+      "cost":7
+    },
+    {
+      "name":"robot_repair_kit",
+      "cost":33
+    },
+    {
+      "name":"rope",
+      "cost":3
+    },
+    {
+      "name":"skeleton_key",
+      "cost":13
+    },
+    {
+      "name":"stealth_boy",
+      "cost":46
+    },
+    {
+      "name":"stuffed_monkey",
+      "cost":10
+    },
+    {
+      "name":"turret_inhibitors",
+      "cost":10
+    },
+    {
+      "name":"unsent_letter",
+      "cost":33
+    },
+    {
+      "name":"vertibird_signal_grenade",
+      "cost":7
     }
   ]
 }

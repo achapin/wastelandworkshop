@@ -152,9 +152,6 @@
         "cryo_grenade",
         "fragmentation_grenade",
         "pulse_grenade"
-      ],
-      "chems": [
-        "stimpak"
       ]
     },
     "cost": 114
