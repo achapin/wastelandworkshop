@@ -9,16 +9,16 @@
       "cost": 30
     },
     {
+      "name": "junk_jet",
+      "cost": 14
+    },
+    {
       "name": "minigun",
       "cost": 30
     },
     {
       "name": "missile_launcher",
       "cost": 35
-    },
-    {
-      "name": "junk_jet",
-      "cost": 14
     }
   ],
   "rifles": [
@@ -28,6 +28,10 @@
     },
     {
       "name": "assaultron_head_laser",
+      "cost": 0
+    },
+    {
+      "name": "battered_assaultron_head_laser",
       "cost": 0
     },
     {
@@ -45,6 +49,10 @@
     {
       "name": "double_barrel_shotgun",
       "cost": 17
+    },
+    {
+      "name": "gauss_rifle",
+      "cost": 47
     },
     {
       "name": "hunting_rifle",
@@ -81,14 +89,6 @@
     {
       "name": "railway_rifle",
       "cost": 20
-    },
-    {
-      "name": "gauss_rifle",
-      "cost": 47
-    },
-    {
-      "name": "battered_assaultron_head_laser",
-      "cost": 0
     }
   ],
   "pistols": [
@@ -349,6 +349,14 @@
       "cost": 15
     },
     {
+      "name": "heavy_raider_armor",
+      "cost": 30
+    },
+    {
+      "name": "protectors_right_arm_guard",
+      "cost": 12
+    },
+    {
       "name": "rocks_bladed_helm",
       "cost": 23
     },
@@ -359,14 +367,6 @@
     {
       "name": "sturdy_leather_armor",
       "cost": 23
-    },
-    {
-      "name": "heavy_raider_armor",
-      "cost": 30
-    },
-    {
-      "name": "protectors_right_arm_guard",
-      "cost": 12
     },
     {
       "name": "sturdy_metal_armor",
@@ -401,6 +401,10 @@
   ],
   "clothing": [
     {
+      "name": "assault_gas_mask",
+      "cost": 3
+    },
+    {
       "name": "aviator_cap",
       "cost": 15
     },
@@ -409,8 +413,16 @@
       "cost": 7
     },
     {
+      "name": "baseball_cap",
+      "cost": 7
+    },
+    {
       "name": "bowler_hat",
       "cost": 10
+    },
+    {
+      "name": "brotherhood_of_steel_hood",
+      "cost": 5
     },
     {
       "name": "camoflage",
@@ -437,6 +449,10 @@
       "cost": 5
     },
     {
+      "name": "red_flight_helmet",
+      "cost": 3
+    },
+    {
       "name": "road_goggles",
       "cost": 3
     },
@@ -449,28 +465,12 @@
       "cost": 7
     },
     {
-      "name": "vault_111_jumpsuit",
-      "cost": 10
-    },
-    {
-      "name": "assault_gas_mask",
-      "cost": 3
-    },
-    {
-      "name": "baseball_cap",
-      "cost": 7
-    },
-    {
-      "name": "brotherhood_of_steel_hood",
-      "cost": 5
-    },
-    {
-      "name": "red_flight_helmet",
-      "cost": 3
-    },
-    {
       "name": "spiked_muzzle",
       "cost": 5
+    },
+    {
+      "name": "vault_111_jumpsuit",
+      "cost": 10
     }
   ],
   "chems": [

@@ -342,7 +342,7 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	removeButton.appendChild(optionNameSection2);
 	removeButton.appendChild(optionCostSection2);
 
-	var modSection = getModSectionFor(character, slotType, carryInfo); //TODO: other params?
+	var modSection = getModSectionFor(character, slotType, carryInfo);
 
 	equipmentToggle.appendChild(removeButton);
 	equipmentToggle.appendChild(modSection);
@@ -404,6 +404,10 @@ function getModSectionFor(character, slotType, carryInfo){
 			}
 		}
 	});
+
+	if(modDropdown.options.length <= 1){
+		return modSection;
+	}
 
 	modDropdown.selectedIndex = optionSelectedIndex;
 	modDropdown.onchange = function(){
@@ -496,7 +500,7 @@ function addCharacter(characterElement, presetInfo){
 
 		qtySection.appendChild(document.createTextNode(" X "));
 
-		var qtyCounter = getNumericCounterForField(character, "modelCount");
+		var qtyCounter = getNumericCounterForField(character, "modelCount", 1);
 		qtySection.appendChild(qtyCounter);
 		costSection.appendChild(qtySection);
 	}
@@ -709,7 +713,7 @@ function getConsumableSectionFor(optionElement, character, slotType){
 	optionCostSection.setAttribute("class", "cost");
 	optionCostSection.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
 
-	var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name);
+	var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name, 1);
 
 	optionSection.appendChild(optionNameSection);
 	optionSection.appendChild(optionCostSection);
@@ -767,7 +771,9 @@ function getWearSection(character, slotOption, slotType){
 			delete character[slotType];
 			modSection.style.display = "none";
 			removeModFromCharacter(character, slotType);
-			modSection.querySelector("SELECT").selectedIndex = 0;
+			if(modSection.querySelector("SELECT") != null){
+				modSection.querySelector("SELECT").selectedIndex = 0;
+			}
 		}else{
 			character[slotType] = slotDropdown.value;
 			modSection.style.display = "block";
@@ -789,6 +795,14 @@ function getCarrySection(character, slotOptions, slotType){
 	carryHeader.appendChild(carryHeaderText);
 	carrySection.appendChild(carryHeader);
 
+	var slotDropdown = document.createElement("SELECT");
+	var emptyOption = new Option(loc["none"], null);
+	slotDropdown.add(emptyOption);
+	var optionSelectedIndex = 0;
+	var optionIndex = 0;
+
+	var equippedItems = document.createElement("div");
+
 	if(slotOptions.length <= 0){
 		upgrades[slotType].forEach(function(option){
 			if(option.cost != 0){
@@ -796,7 +810,13 @@ function getCarrySection(character, slotOptions, slotType){
 				if(character.hasOwnProperty(slotType)){
 					isEquipped = character[slotType].includes(option.name);
 				}
-				addEquipmentToggleButton(character, slotType, option, carrySection, isEquipped);
+				if(isEquipped){
+					var entrySection = addEquipEntry(character, slotType, option, equippedItems, slotDropdown);
+					equippedItems.appendChild(entrySection);
+				}else{
+					var option = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
+					slotDropdown.add(option);
+				}
 			}
 		});
 	}else{
@@ -806,13 +826,76 @@ function getCarrySection(character, slotOptions, slotType){
 			if(character.hasOwnProperty(slotType)){
 				isEquipped = character[slotType].includes(optionElement.name);
 			}
-			addEquipmentToggleButton(character, slotType, optionElement, carrySection, isEquipped)
+			if(isEquipped){
+					var entrySection = addEquipEntry(character, slotType, optionElement, equippedItems, slotDropdown);
+					equippedItems.appendChild(entrySection);
+				}else{
+					var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+					slotDropdown.add(option);
+				}
 		});
 	}
+	carrySection.appendChild(equippedItems);
+
+	carrySection.appendChild(slotDropdown);
+	
+	slotDropdown.onchange = function(){
+		if(slotDropdown.value != null && slotDropdown.value != "null"){
+			var upgrade = getUpgrade(slotType, slotDropdown.value);
+			var newItemEntry = addEquipEntry(character, slotType, upgrade, equippedItems, slotDropdown);
+			equippedItems.appendChild(newItemEntry);
+			if(!character.hasOwnProperty(slotType)){
+				character[slotType] = [];
+			}
+			character[slotType].push(slotDropdown.value);
+			slotDropdown.remove(slotDropdown.selectedIndex);
+			slotDropdown.selectedIndex = 0;
+		}
+		updateCaps();
+	};
+
 	return carrySection;
 }
 
-function getNumericCounterForField(character, field){
+function addEquipEntry(character, slotType, optionElement, equippedItems, slotDropdown){
+	var equipmentEntry = document.createElement("div");
+
+	var equipmentName = document.createTextNode(loc[optionElement.name]);
+	equipmentEntry.appendChild(equipmentName);
+
+	var equipmentCost = document.createTextNode("(" + optionElement.cost + ")");
+	equipmentEntry.appendChild(equipmentCost);
+
+	var modSection = getModSectionFor(character, slotType, optionElement);
+	equipmentEntry.appendChild(modSection);
+
+	var removeButton = document.createElement("button");
+	removeButton.appendChild(document.createTextNode("X"));
+	removeButton.setAttribute("class", "btn btn-background-off");
+	removeButton.addEventListener("click", function() {
+		character[slotType] = character[slotType].filter(evalItem => evalItem != optionElement.name);
+		if(character[slotType].length <= 0){
+			delete character[slotType];
+		}
+		removeModFromCharacter(character, optionElement.name)
+		equippedItems.removeChild(equipmentEntry);
+		updateCaps();
+
+		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+		var optionIndex = 0;
+		for(index = 1; index < slotDropdown.options.length; index++){
+			if(optionElement.name > slotDropdown.options[index].value){
+				optionIndex = index;
+			}
+		}
+		slotDropdown.add(option, optionIndex + 1);
+	});
+	equipmentEntry.appendChild(removeButton);
+
+	return equipmentEntry;
+}
+
+function getNumericCounterForField(character, field, minVal){
 	var counterDiv = document.createElement("div");
 
 	var optionIncreaseCount = document.createElement("button");
@@ -840,12 +923,12 @@ function getNumericCounterForField(character, field){
 			delete character[field];
 		}else{
 			var newCount = value - 1;
-			if(newCount > 0){
+			if(newCount > minVal){
 				optionInput.value = newCount;
 				character[field] = newCount;
 			}else{
-				optionInput.value = "0";
-				delete character[field];
+				optionInput.value = minVal;
+				character[field] = minVal;
 			}
 		}
 		updateCaps();
@@ -1028,7 +1111,7 @@ function addChemEntry(ownedChems, chem, character, chemDropdown, addChemButton){
 	var chemData = getUpgrade("chems", chem);
 	selectedChem.appendChild(document.createTextNode(loc[chemData.name] + " (" + chemData.cost + ")"));
 	
-	var chemCounter = getNumericCounterFor(character, "chems", chem);
+	var chemCounter = getNumericCounterFor(character, "chems", chem, 1);
 	selectedChem.appendChild(chemCounter)
 
 	addRemoveChemButton(selectedChem, character, chemData, ownedChems, chemDropdown, addChemButton);
