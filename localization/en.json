@@ -365,5 +365,7 @@
   "stuffed_monkey":"Stuffed Monkey",
   "turret_inhibitors":"Turret Inhibitors",
   "unsent_letter":"Unsent Letter",
-  "vertibird_signal_grenade":"Vertibird Signal Grenade"
+  "vertibird_signal_grenade":"Vertibird Signal Grenade",
+  "unit_upgrades":"Unit Upgrades",
+  "model_upgrades":"Model Upgrades"
 }

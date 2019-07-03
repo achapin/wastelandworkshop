@@ -548,9 +548,21 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(specialSection, character);
 
+	var perkSection = getPerkSection(character);
+	specialSection.appendChild(perkSection);
+
+	charaSection.appendChild(specialSection);
+
+	var equipmentSection = document.createElement("div");
+	equipmentSection.setAttribute("class", "");
+
+	var modelUpgradesHeader = document.createElement("h1");
+	modelUpgradesHeader.appendChild(document.createTextNode(loc["model_upgrades"]));
+	equipmentSection.appendChild(modelUpgradesHeader);
+
 	if(characterElement.must_wear){
 		var mustWearSection = document.createElement("div");
-		mustWearSection.setAttribute("class", "col-sm-5 float-left");
+		mustWearSection.setAttribute("class", "must-wear");
 		characterElement.must_wear.forEach(function(element){
 			var elements = element.split(".");
 			var upgrade = getUpgrade(elements[0], elements[1]);
@@ -563,12 +575,12 @@ function addCharacter(characterElement, presetInfo){
 				mustWearSection.appendChild(mustWearElement);
 			}
 		});
-		specialSection.appendChild(mustWearSection);
+		equipmentSection.appendChild(mustWearSection);
 	}
 
 	if(characterElement.must_carry){
 		var mustCarrySection = document.createElement("div");
-		mustCarrySection.setAttribute("class", "col-sm-5 float-left");
+		mustCarrySection.setAttribute("class", "must-carry");
 		characterElement.must_carry.forEach(function(element){
 			var elements = element.split(".");
 			var upgrade = getUpgrade(elements[0], elements[1]);
@@ -581,16 +593,8 @@ function addCharacter(characterElement, presetInfo){
 				mustCarrySection.appendChild(mustCarryElement);
 			}
 		});
-		specialSection.appendChild(mustCarrySection);
+		equipmentSection.appendChild(mustCarrySection);
 	}
-
-	var perkSection = getPerkSection(character);
-	specialSection.appendChild(perkSection);
-
-	charaSection.appendChild(specialSection);
-
-	var equipmentSection = document.createElement("div");
-	equipmentSection.setAttribute("class", "");
 
 	var equipmentToggle = document.createElement("div");
 	equipmentToggle.id = "equipmentToggle";
@@ -623,36 +627,18 @@ function addCharacter(characterElement, presetInfo){
 		});
 	}
 
+	var unitUpgradesHeader = document.createElement("h1");
+	unitUpgradesHeader.appendChild(document.createTextNode(loc["unit_upgrades"]));
+	equipmentSection.appendChild(unitUpgradesHeader);
+
 	if(characterElement.consumables != null){
 		Object.keys(characterElement.consumables).forEach(function (slotType) {
-			var consumeableSection = document.createElement("div");
-			consumeableSection.setAttribute("class", "carry-section");
-			var consumeableHeader = document.createElement("h2");
-			var consumeableHeaderText = document.createTextNode(loc[slotType]);
-			consumeableHeader.appendChild(consumeableHeaderText);
-			consumeableSection.appendChild(consumeableHeader);
-
-			var slotOption = characterElement.consumables[slotType];
-
-			if(slotOption.length <= 0){
-				upgrades[slotType].forEach(function(optionElement){
-					if(optionElement.cost != 0){
-						consumeableSection.appendChild(getConsumableSectionFor(optionElement, character, slotType));
-					}
-				});
-			}else{
-				slotOption.forEach(function(option) {
-					var optionElement = getUpgrade(slotType, option);
-					var optionSection = getConsumableSectionFor(optionElement, character, slotType);
-					consumeableSection.appendChild(optionSection);
-				});
-			}
-
+			var consumeableSection = getConsumeableSection(character, characterElement, slotType);
 			equipmentSection.appendChild(consumeableSection);
 		});
 	}
 
-	var chemsSection = getChemsSection(character);
+	var chemsSection = getConsumeableSection(character, characterElement, "chems");
 	equipmentSection.appendChild(chemsSection);
 
 	showEquipment.addEventListener("click", function() {
@@ -704,9 +690,72 @@ function addCharacter(characterElement, presetInfo){
 	return charaSection;
 }
 
-function getConsumableSectionFor(optionElement, character, slotType){
-	var optionSection = document.createElement("div");
-	optionSection.setAttribute("class", "consumable");
+function getConsumeableSection(character, characterElement, slotType){
+	var consumeableSection = document.createElement("div");
+	consumeableSection.setAttribute("class", "carry-section");
+	var consumeableHeader = document.createElement("h2");
+	var consumeableHeaderText = document.createTextNode(loc[slotType]);
+	consumeableHeader.appendChild(consumeableHeaderText);
+	consumeableSection.appendChild(consumeableHeader);
+
+	var slotOption = null;
+	if(characterElement.consumables != null){
+		slotOption = characterElement.consumables[slotType];
+	}
+
+	var slotDropdown = document.createElement("SELECT");
+	var emptyOption = new Option(loc["none"], null);
+	slotDropdown.add(emptyOption);
+	var optionSelectedIndex = 0;
+	var optionIndex = 0;
+
+	var optionSection = document.createElement("div"); 
+
+	if(slotOption == null || slotOption.length <= 0){
+		upgrades[slotType].forEach(function(optionElement){
+			if(optionElement.cost != 0){
+				if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
+					optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown));
+				}else{
+					slotDropdown.add(new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name));
+				}
+			}
+		});
+	}else{
+		slotOption.forEach(function(option) {
+			var optionElement = getUpgrade(slotType, option);
+			if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
+				var newItemEntry = getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown);
+				optionSection.appendChild(newItemEntry);
+			}else{
+				slotDropdown.add(new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name));
+			}
+		});
+	}
+
+	slotDropdown.onchange = function(){
+		if(slotDropdown.value != null && slotDropdown.value != "null"){
+			var upgrade = getUpgrade(slotType, slotDropdown.value);
+			var newItemEntry = getConsumableEntry(upgrade, character, slotType, optionSection, slotDropdown);
+			optionSection.appendChild(newItemEntry);
+			if(!character.hasOwnProperty(slotType)){
+				character[slotType] = {};
+			}
+			character[slotType][slotDropdown.value] = 0;
+			slotDropdown.remove(slotDropdown.selectedIndex);
+			slotDropdown.selectedIndex = 0;
+		}
+		updateCaps();
+	};
+
+	consumeableSection.appendChild(optionSection);
+	consumeableSection.appendChild(slotDropdown);
+	return consumeableSection;
+}
+
+function getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown){
+	var entrySection = document.createElement("div");
+	entrySection.setAttribute("class", "consumable");
 	var optionNameSection = document.createElement("span");
 	optionNameSection.appendChild(document.createTextNode(loc[optionElement.name]));
 	var optionCostSection = document.createElement("span");
@@ -715,10 +764,33 @@ function getConsumableSectionFor(optionElement, character, slotType){
 
 	var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name, 1);
 
-	optionSection.appendChild(optionNameSection);
-	optionSection.appendChild(optionCostSection);
-	optionSection.appendChild(getOptionQtySection);
-	return optionSection;
+	entrySection.appendChild(optionNameSection);
+	entrySection.appendChild(optionCostSection);
+	entrySection.appendChild(getOptionQtySection);
+
+	var removeButton = document.createElement("button");
+	removeButton.appendChild(document.createTextNode("X"));
+	removeButton.setAttribute("class", "btn btn-background-off");
+	removeButton.addEventListener("click", function() {
+		delete character[slotType][optionElement.name];
+		if(Object.keys(character[slotType]).length <= 0){
+			delete character[slotType];
+		}
+		optionSection.removeChild(entrySection);
+		updateCaps();
+
+		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+		var optionIndex = 0;
+		for(index = 1; index < slotDropdown.options.length; index++){
+			if(optionElement.name > slotDropdown.options[index].value){
+				optionIndex = index;
+			}
+		}
+		slotDropdown.add(option, optionIndex + 1);
+	});
+	entrySection.appendChild(removeButton);
+
+	return entrySection;
 }
 
 function getWearSection(character, slotOption, slotType){
