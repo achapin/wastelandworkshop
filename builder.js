@@ -384,6 +384,11 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 
 function getModSectionFor(character, slotType, carryInfo){
 	var modSection = document.createElement("div");
+
+	var modText = document.createElement("span");
+	modText.appendChild(document.createTextNode(loc["mod_section"]));
+	modSection.appendChild(modText);
+
 	var modDropdown = document.createElement("SELECT");
 	var emptyOption = new Option(loc["none"], null);
 	modDropdown.add(emptyOption);
@@ -457,43 +462,33 @@ function addCharacter(characterElement, presetInfo){
 	var headerSection = document.createElement("div");
 	headerSection.setAttribute("class", "header-section");
 	
+	var headerLeftSection = document.createElement("div");
+	headerLeftSection.setAttribute("class", "header-section-left");
+	headerSection.appendChild(headerLeftSection);
+
+	var unitCost = document.createElement("span");
+	unitCost.setAttribute("class", "unit-cost");
+	headerLeftSection.appendChild(unitCost);
+
 	var close = document.createElement("button");
 	var closeButton = document.createTextNode("X");
-	close.setAttribute("class", "btn btn-background-off");
+	close.setAttribute("class", "btn btn-background-off unit-button");
 	close.appendChild(closeButton);
-	headerSection.appendChild(close);
+	headerLeftSection.appendChild(close);
 
 	if(!characterElement.hasOwnProperty("unique_code")){
 		var copy = document.createElement("button");
 		var copyButton = document.createTextNode("+");
-		copy.setAttribute("class", "btn btn-background");
+		copy.setAttribute("class", "btn btn-background unit-button");
 		copy.appendChild(copyButton);
-		headerSection.appendChild(copy);
+		headerLeftSection.appendChild(copy);
 	}
 
-	var unitCost = document.createElement("span");
-	unitCost.setAttribute("class", "unitCost");
-	headerSection.appendChild(unitCost);
-
 	var nameSection = document.createElement("h1");
-	nameSection.setAttribute("class", "float-left");
+	nameSection.setAttribute("class", "unitName");
 	var name = document.createTextNode(loc[characterElement.name]);
 	nameSection.appendChild(name);
 	headerSection.appendChild(nameSection);
-
-	var costSection = document.createElement("div");
-	
-	var modelCost = document.createElement("span");
-	modelCost.appendChild(document.createTextNode("("+characterElement.cost+")"));
-	costSection.appendChild(modelCost);
-
-	var modelUpgradeCostDesc = document.createElement("span");
-	modelUpgradeCostDesc.appendChild(document.createTextNode(" + " + loc["model_upgrade_cost"]));
-	costSection.appendChild(modelUpgradeCostDesc);
-
-	var modelUpdadeCost = document.createElement("span");
-	modelUpdadeCost.setAttribute("class", "modelUpdadeCost");
-	costSection.appendChild(modelUpdadeCost);
 
 	if(!characterElement.hasOwnProperty("unique_code")){
 		var qtySection = document.createElement("div");
@@ -502,39 +497,22 @@ function addCharacter(characterElement, presetInfo){
 
 		var qtyCounter = getNumericCounterForField(character, "modelCount", 1);
 		qtySection.appendChild(qtyCounter);
-		costSection.appendChild(qtySection);
+		headerSection.appendChild(qtySection);
 	}
 
-	var unitUpgradeCostDesc = document.createElement("span");
-	unitUpgradeCostDesc.appendChild(document.createTextNode(" + " + loc["unit_upgrade_cost"]));
-	costSection.appendChild(unitUpgradeCostDesc);
-
-	var unitUpgradeCost = document.createElement("span");
-	unitUpgradeCost.setAttribute("class", "unitUpgradeCost");
-	costSection.appendChild(unitUpgradeCost);
-
-	headerSection.appendChild(costSection);
-
-	var warningSection = document.createElement("div");
-	warningSection.setAttribute("class", "warning");
-	headerSection.appendChild(warningSection);
-
-	charaSection.appendChild(headerSection);
-
-	var specialSection = document.createElement("div");
-	specialSection.setAttribute("class", "row");
+	addLeaderSection(headerSection, character);
 
 	if(characterElement.heroic){
 		var heroicSection = document.createElement("div");
-		heroicSection.setAttribute("class", "col-sm-2 float-left");
+		heroicSection.setAttribute("class", "heroic");
 		var heroicCheckBox = document.createElement('input');
 		heroicCheckBox.type = 'checkbox';
 		heroicCheckBox.checked = character.heroic;
-		var heroicCostSection = document.createElement("span");
-		var heroicDescription = document.createTextNode(loc["heroic"] + " (" + upgrades.heroes_and_leaders[0].cost +") ");
+		var heroicDescription = document.createElement("span");
+		heroicDescription.setAttribute("class", "heroicDescription");
+		heroicDescription.appendChild(document.createTextNode(loc["heroic"] + " (" + upgrades.heroes_and_leaders[0].cost +")"));
 		heroicSection.appendChild(heroicDescription);
 		heroicSection.appendChild(heroicCheckBox);
-		heroicSection.appendChild(heroicCostSection);
 		heroicCheckBox.addEventListener("click", function(){
 			if(heroicCheckBox.checked){
 				character.heroic = true;
@@ -543,18 +521,66 @@ function addCharacter(characterElement, presetInfo){
 			}
 			updateCaps();
 		});
-		specialSection.appendChild(heroicSection);
+		headerSection.appendChild(heroicSection);
 	}
 
-	addLeaderSection(specialSection, character);
+	var costSection = document.createElement("div");
+	costSection.setAttribute("class","cost-section");
 
-	var perkSection = getPerkSection(character);
-	specialSection.appendChild(perkSection);
+	var equipmentToggle = document.createElement("div");
+	equipmentToggle.setAttribute("class", "equipmentToggle");
+	
+	var showEquipment = document.createElement("button");
+	showEquipment.setAttribute("class", "btn btn-background");
+	showEquipment.appendChild(document.createTextNode(loc["show_upgrades"]));
+	equipmentToggle.appendChild(showEquipment);
+	showEquipment.style.display = "none";
 
-	charaSection.appendChild(specialSection);
+	var hideEquipment = document.createElement("button");
+	hideEquipment.setAttribute("class", "btn btn-background");
+	hideEquipment.appendChild(document.createTextNode(loc["hide_upgrades"]));
+	equipmentToggle.appendChild(hideEquipment);
+	costSection.appendChild(equipmentToggle);
+
+	var costTable = document.createElement("table");
+	costTable.setAttribute("class", "cost-table");
+	var descriptionRow = document.createElement("tr");
+	var pointsRow = document.createElement("tr");
+	
+	var modelCostDesc = document.createElement("td");
+	modelCostDesc.appendChild(document.createTextNode(loc["model_cost"]));
+	descriptionRow.appendChild(modelCostDesc);
+
+	var modelCost = document.createElement("td");
+	modelCost.appendChild(document.createTextNode(characterElement.cost));
+	pointsRow.appendChild(modelCost);
+
+	var modelUpgradeCostDesc = document.createElement("td");
+	modelUpgradeCostDesc.appendChild(document.createTextNode(loc["model_upgrade_cost"]));
+	descriptionRow.appendChild(modelUpgradeCostDesc);
+
+	var modelUpdadeCost = document.createElement("td");
+	modelUpdadeCost.setAttribute("class", "modelUpdadeCost");
+	pointsRow.appendChild(modelUpdadeCost);
+
+	var unitUpgradeCostDesc = document.createElement("td");
+	unitUpgradeCostDesc.appendChild(document.createTextNode(loc["unit_upgrade_cost"]));
+	descriptionRow.appendChild(unitUpgradeCostDesc);
+
+	var unitUpgradeCost = document.createElement("td");
+	unitUpgradeCost.setAttribute("class", "unitUpgradeCost");
+	pointsRow.appendChild(unitUpgradeCost);
+
+	costTable.appendChild(descriptionRow);
+	costTable.appendChild(pointsRow);
+	costSection.appendChild(costTable);
+
+	var warningSection = document.createElement("div");
+	warningSection.setAttribute("class", "warning");
+	headerSection.appendChild(warningSection);
 
 	var equipmentSection = document.createElement("div");
-	equipmentSection.setAttribute("class", "");
+	equipmentSection.setAttribute("class", "equipment-section");
 
 	var modelUpgradesHeader = document.createElement("h1");
 	modelUpgradesHeader.appendChild(document.createTextNode(loc["model_upgrades"]));
@@ -596,22 +622,8 @@ function addCharacter(characterElement, presetInfo){
 		equipmentSection.appendChild(mustCarrySection);
 	}
 
-	var equipmentToggle = document.createElement("div");
-	equipmentToggle.id = "equipmentToggle";
-	equipmentToggle.setAttribute("class", "row");
-	
-	var showEquipment = document.createElement("button");
-	showEquipment.setAttribute("class", "btn btn-background");
-	showEquipment.appendChild(document.createTextNode(loc["show_upgrades"]));
-	equipmentToggle.appendChild(showEquipment);
-	showEquipment.style.display = "none";
-
-	var hideEquipment = document.createElement("button");
-	hideEquipment.setAttribute("class", "btn btn-background");
-	hideEquipment.appendChild(document.createTextNode(loc["hide_upgrades"]));
-	equipmentToggle.appendChild(hideEquipment);
-
-	charaSection.appendChild(equipmentToggle);
+	var perkSection = getPerkSection(character);
+	equipmentSection.appendChild(perkSection);
 
 	if(characterElement.wear_slots != null){
 		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
@@ -651,7 +663,6 @@ function addCharacter(characterElement, presetInfo){
 		showEquipment.style.display = "block";
 		hideEquipment.style.display = "none";
 	});
-	charaSection.appendChild(equipmentSection);
 
 	close.addEventListener("click", function() 
 		{
@@ -676,6 +687,10 @@ function addCharacter(characterElement, presetInfo){
 			addCharacter(characterElement, character);	
 		});
 	}
+
+	charaSection.appendChild(headerSection);
+	charaSection.appendChild(costSection);
+	charaSection.appendChild(equipmentSection);
 
 	forceSection.appendChild(charaSection);
 
@@ -836,7 +851,7 @@ function getWearSection(character, slotOption, slotType){
 	}
 
 	slotDropdown.selectedIndex = optionSelectedIndex;
-	modSection.style.display = optionSelectedIndex == 0 ? "none" : "block";
+	modSection.style.display = optionSelectedIndex == 0 ? "none" : "inline-block";
 
 	slotDropdown.onchange = function(){
 		if(slotDropdown.value == null || slotDropdown.value == "null"){
@@ -848,7 +863,7 @@ function getWearSection(character, slotOption, slotType){
 			}
 		}else{
 			character[slotType] = slotDropdown.value;
-			modSection.style.display = "block";
+			modSection.style.display = "inline-block";
 		}
 		updateCaps();
 	};
@@ -868,12 +883,14 @@ function getCarrySection(character, slotOptions, slotType){
 	carrySection.appendChild(carryHeader);
 
 	var slotDropdown = document.createElement("SELECT");
+	slotDropdown.setAttribute("class","blockdisplay");
 	var emptyOption = new Option(loc["none"], null);
 	slotDropdown.add(emptyOption);
 	var optionSelectedIndex = 0;
 	var optionIndex = 0;
 
 	var equippedItems = document.createElement("div");
+	equippedItems.setAttribute("class","equippedItems");
 
 	if(slotOptions.length <= 0){
 		upgrades[slotType].forEach(function(option){
@@ -931,8 +948,10 @@ function getCarrySection(character, slotOptions, slotType){
 
 function addEquipEntry(character, slotType, optionElement, equippedItems, slotDropdown){
 	var equipmentEntry = document.createElement("div");
+	equipmentEntry.setAttribute("class","equippedItem");
 
-	var equipmentName = document.createTextNode(loc[optionElement.name]);
+	var equipmentName = document.createElement("div");
+	equipmentName.appendChild(document.createTextNode(loc[optionElement.name]));
 	equipmentEntry.appendChild(equipmentName);
 
 	var equipmentCost = document.createTextNode("(" + optionElement.cost + ")");
@@ -1207,66 +1226,63 @@ function addRemoveChemButton(selectedChem, character, chemData, ownedChems, chem
 
 function getPerkSection(character){
 	var perkSection = document.createElement("div");
-	var addPerkButton = document.createElement("button");
+	perkSection.setAttribute("class", "carry-section");
+
+	var header = document.createElement("h2");
+	var headerText = document.createTextNode(loc["perks"]);
+	header.appendChild(headerText);
+	perkSection.appendChild(header);
+
 	var ownedPerks = document.createElement("div");
 	var perkDropdown = document.createElement("SELECT");
+	perkDropdown.add(new Option(loc["none"], null));
 	
 	upgrades.perks.forEach(function(perk){
-		var option = new Option(loc[perk.name] + " (" + perk.cost + ")", perk.name);
-		perkDropdown.add(option);
+		var hasPerk = false;
+		if(character.hasOwnProperty("perks")){
+			character.perks.forEach(function(ownedPerk){
+				if(perk.name == ownedPerk){
+					hasPerk = true;
+				}
+			});
+		}
+
+		if(hasPerk){
+			addPerkEntry(ownedPerks, perk.name, character, perkDropdown);
+		}else{
+			var option = new Option(loc[perk.name] + " (" + perk.cost + ")", perk.name);
+			perkDropdown.add(option);
+		}
 	});
-
-	var hasFirstPerk = false;
-
-	if(character.hasOwnProperty("perks")){
-		character.perks.forEach(function(perk){
-			if(perk == upgrades.perks[0].name){
-				
-				hasFirstPerk = true;
-			}
-			addPerkEntry(ownedPerks, perk, character, perkDropdown, addPerkButton);
-		});
-	}
 
 	perkSection.appendChild(ownedPerks);
 	var perkSelection = document.createElement("div");
 
 	perkDropdown.onchange = function(){
-		var perkIndex = -1;
-		if(character.hasOwnProperty("perks")){
-			perkIndex = character.perks.findIndex(function(otherPerk){
-				return perkDropdown.value === otherPerk;
-			});
+		if(perkDropdown.selectedIndex != 0){
+			if(!character.hasOwnProperty("perks")){
+				character.perks = [];
+			}
+			character.perks.push(perkDropdown.value);
+			addPerkEntry(ownedPerks, perkDropdown.value, character, perkDropdown);
+			perkDropdown.remove(perkDropdown.selectedIndex);
+			updateCaps();
 		}
-		addPerkButton.disabled = perkIndex >= 0;
+		perkDropdown.selectedIndex = 0;
 	};
-	
 	perkSection.appendChild(perkDropdown);
-	addPerkButton.appendChild(document.createTextNode(loc["addPerk"]));
-	addPerkButton.setAttribute("class", "btn btn-background");
-	addPerkButton.addEventListener("click", function() {
-		if(!character.hasOwnProperty("perks")){
-			character.perks = [];
-		}
-		character.perks.push(perkDropdown.value);
-		addPerkEntry(ownedPerks, perkDropdown.value, character, perkDropdown, addPerkButton);
-		addPerkButton.disabled = true;
-		updateCaps();
-	});
-	addPerkButton.disabled = hasFirstPerk;
-	perkSection.appendChild(addPerkButton);
 	return perkSection;
 }
 
-function addPerkEntry(ownedPerks, perk, character, perkDropdown, addPerkButton){
+function addPerkEntry(ownedPerks, perk, character, perkDropdown){
 	var selectedPerk = document.createElement("div");
 	var perkData = getUpgrade("perks", perk);
 	selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
-	addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perkDropdown, addPerkButton);
+	addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perkDropdown);
 	ownedPerks.appendChild(selectedPerk);
 }
 
-function addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perkDropdown, addPerkButton) {
+function addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perkDropdown) {
 	var removeButton = document.createElement("button");
 	removeButton.appendChild(document.createTextNode("X"));
 	removeButton.setAttribute("class", "btn btn-background-off");
@@ -1282,12 +1298,15 @@ function addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perk
 		}
 		ownedPerks.removeChild(selectedPerk);
 
-		var upgradePerkIndex = upgrades.perks.findIndex(function (otherPerk){
-			return perkData.name === otherPerk.name;
-		});
-		if(perkDropdown.selectedIndex == upgradePerkIndex){
-			addPerkButton.disabled = false;
+		var perkOption = new Option(loc[perkData.name] + " (" + perkData.cost + ")", perkData.name);
+		var optionIndex = 0;
+		for(index = 1; index < perkDropdown.options.length; index++){
+			if(perkOption.value > perkDropdown.options[index].value){
+				optionIndex = index;
+			}
 		}
+		perkDropdown.add(perkOption, optionIndex + 1);
+
 		updateCaps();
 	});
 	selectedPerk.appendChild(removeButton);
@@ -1301,7 +1320,10 @@ function addLeaderSection(domElement, character){
 
 	var activeLeaderSection = document.createElement("div");
 	activeLeaderSection.setAttribute("class", "activeLeaderSection");
-	activeLeaderSection.appendChild(document.createTextNode(loc["leader"] + " "));
+	var leaderText = document.createElement("span");
+	leaderText.setAttribute("class", "leaderText");
+	leaderText.appendChild(document.createTextNode(loc["leader"]));
+	activeLeaderSection.appendChild(leaderText);
 	var perkDropdown = document.createElement("SELECT");
 	perkDropdown.setAttribute("class", "leaderPerkSelection");
 	var emptyOption = new Option(loc["none"], null);
@@ -1342,11 +1364,11 @@ function addLeaderSection(domElement, character){
 	if(force.hasOwnProperty("leader")){
 		perkDropdown.selectedIndex = force.leader.perkIndex
 		var isLeader = force.leader.leaderIndex == characterIndex;
-		inactiveLeaderSection.style.display = isLeader ? "none" : "block";
-		activeLeaderSection.style.display = isLeader ? "block" : "none";
+		inactiveLeaderSection.style.display = isLeader ? "none" : "inline-block";
+		activeLeaderSection.style.display = isLeader ? "inline-block" : "none";
 	}else{
 		perkDropdown.selectedIndex = 0;
-		inactiveLeaderSection.style.display = "block";
+		inactiveLeaderSection.style.display = "inline-block";
 		activeLeaderSection.style.display = "none";
 	}
 
@@ -1366,8 +1388,8 @@ function setLeader(character){
 	var inactiveSections = document.getElementsByClassName("inactiveLeaderSection");
 
 	for(var index = 0; index < activeSections.length; index++){
-		activeSections[index].style.display = index == force.leader.leaderIndex ? "block" : "none";
-		inactiveSections[index].style.display = index == force.leader.leaderIndex ? "none" : "block";
+		activeSections[index].style.display = index == force.leader.leaderIndex ? "inline-block" : "none";
+		inactiveSections[index].style.display = index == force.leader.leaderIndex ? "none" : "inline-block";
 	}
 
 	updateCaps();
@@ -1400,6 +1422,9 @@ function updateCaps(){
 
 			if(force.hasOwnProperty("leader") && force.leader.leaderIndex == unitIndex){
 				var leaderCost = upgrades.heroes_and_leaders[force.leader.perkIndex].cost;
+				if(force.leader.perkIndex == 0){
+					leaderCost = 0;
+				}
 				unitCost += leaderCost;
 				unitUpgradeCost += leaderCost;
 			}
@@ -1461,7 +1486,7 @@ function updateCaps(){
 				}
 			});
 
-			unitDisplay.querySelector(".unitCost").innerHTML = unitCost;
+			unitDisplay.querySelector(".unit-cost").innerHTML = unitCost;
 			unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
 			unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
 			totalCaps += unitCost;

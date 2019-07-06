@@ -36,8 +36,9 @@ h2 {
 	clear: both;
 }
 
-#equipmentToggle {
-	padding: 1em;
+.equipmentToggle {
+	padding: .1em;
+	display: inline-block;
 }
 
 .button-force-selector {
@@ -123,6 +124,10 @@ h2 {
 	padding-left: 1em;
 }
 
+.header-section-left {
+	width: 3.7em;
+}
+
 .header-section div {
 	display: inline-block;
 }
@@ -144,11 +149,6 @@ h2 {
 	display: inline-block;
 }
 
-.carry-section div {
-	display: inline-block;
-	padding: .1em;
-}
-
 .carry-section h2 {
 	display: inline-block;
 	margin-right: .3em;
@@ -163,10 +163,6 @@ h2 {
 	margin: .2em;
 	padding: 5px;
 	border-radius: 30px;
-}
-
-.cost-section {
-	padding: 10px;
 }
 
 .btn-support {
@@ -237,4 +233,72 @@ select {
 .btn-background-off {
 	background-color: rgb(200, 200, 200);
 	color: rgb(40,65,129);
+}
+
+.unit-cost{
+	font-family: 'Overseer';
+	font-size: 2em;
+	display: block;
+	text-align: center;
+}
+
+.btn{
+	padding: 0px 6px;
+}
+
+.activeLeaderSection{
+	display:inline-block;
+}
+
+.inactiveLeaderSection{
+	display:inline-block;
+}
+
+.cost-section{
+	margin-left: 3.7em;
+}
+
+.equipment-section{
+	margin-left: 3.7em;
+	background-color: rgb(75,75,75);
+}
+
+.cost-table {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 1em;
+}
+
+.cost-table tr td{
+	text-align: center;
+}
+
+.leaderText {
+	display: block;
+	text-align: center;
+}
+
+.leaderPerkSelection {
+	display: block;
+}
+
+.heroicDescription{
+	display: block;
+	text-align: center;
+}
+
+.blockdisplay {
+	display: block;
+}
+
+.equippedItems{
+	display: block;
+}
+
+.equippedItem{
+	display: block;
+}
+
+.equippedItem div {
+	display: inline-block;
 }

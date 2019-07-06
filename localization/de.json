@@ -242,8 +242,8 @@
   "toughness":"Toughness",
   "addPerk":"Add Selected Perk to Character",
   "addChem":"Add Chem",
-  "model_upgrade_cost":"Model Upgrade Cost: ",
-  "unit_upgrade_cost":"Unit Upgrade Cost: ",
+  "model_upgrade_cost":"Model Upgrade Cost",
+  "unit_upgrade_cost":"Unit Upgrade Cost",
   "power_armor":"Power Armor",
   "armor_piercing_receiver":"Armor Piercing Receiver",
   "balanced":"Balanced",
@@ -366,5 +366,8 @@
   "unsent_letter":"Unsent Letter",
   "vertibird_signal_grenade":"Vertibird Signal Grenade",
   "unit_upgrades":"Unit Upgrades",
-  "model_upgrades":"Model Upgrades"
+  "model_upgrades":"Model Upgrades",
+  "perks":"Perks",
+  "model_cost":"Model Cost",
+  "mod_section": "+ Mod"
 }
