@@ -719,7 +719,7 @@ function getConsumeableSection(character, characterElement, slotType){
 	}
 
 	var slotDropdown = document.createElement("SELECT");
-	var emptyOption = new Option(loc["none"], null);
+	var emptyOption = new Option(loc["dropdown_"+slotType], null);
 	slotDropdown.add(emptyOption);
 	var optionSelectedIndex = 0;
 	var optionIndex = 0;
@@ -884,7 +884,7 @@ function getCarrySection(character, slotOptions, slotType){
 
 	var slotDropdown = document.createElement("SELECT");
 	slotDropdown.setAttribute("class","blockdisplay");
-	var emptyOption = new Option(loc["none"], null);
+	var emptyOption = new Option(loc["dropdown_"+slotType], null);
 	slotDropdown.add(emptyOption);
 	var optionSelectedIndex = 0;
 	var optionIndex = 0;
@@ -1235,7 +1235,7 @@ function getPerkSection(character){
 
 	var ownedPerks = document.createElement("div");
 	var perkDropdown = document.createElement("SELECT");
-	perkDropdown.add(new Option(loc["none"], null));
+	perkDropdown.add(new Option(loc["dropdown_perks"], null));
 	
 	upgrades.perks.forEach(function(perk){
 		var hasPerk = false;

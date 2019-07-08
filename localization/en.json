@@ -370,5 +370,16 @@
   "model_upgrades":"Model Upgrades",
   "perks":"Perks",
   "model_cost":"Base",
-  "mod_section": "+ Mod"
+  "mod_section": "+ Mod",
+  "dropdown_melee": ">Select a Melee Weapon to add<",
+  "dropdown_pistols": ">Select a Pistol to add<",
+  "dropdown_rifles": ">Select a Rifle to add<",
+  "dropdown_heavy_weapons": ">Select a Heavy Weapon to add<",
+  "dropdown_chems": ">Select a Chem to add<",
+  "dropdown_food_and_drink": ">Select some food to add<",
+  "dropdown_thrown": ">Select a Thrown Weapon to add<",
+  "dropdown_mines": ">Select a Mine to add<",
+  "dropdown_alcohol": ">Select some booze to add<",
+  "dropdown_perks": ">Select a Perk to add<",
+  "dropdown_gear": ">Select some gear to add<"
 }
