@@ -124,6 +124,20 @@ h2 {
 	padding-left: 1em;
 }
 
+.header-section-right{
+	background-color: rgb(75,75,75);
+	padding: 1em;
+	border-radius: 10px;
+}
+
+.header-section-right div{
+	vertical-align: middle;
+}
+
+.header-section-right button{
+	vertical-align: middle;
+}
+
 .header-section-left {
 	width: 3.7em;
 }
@@ -261,6 +275,9 @@ select {
 .equipment-section{
 	margin-left: 3.7em;
 	background-color: rgb(75,75,75);
+	padding: .5em;
+	padding-bottom: 1em;
+	border-radius: 20px;
 }
 
 .cost-table {
@@ -282,8 +299,14 @@ select {
 	display: block;
 }
 
+.heroic {
+	margin: .5em;
+	padding: .5em;
+}
+
 .heroicDescription{
-	display: block;
+	display: inline-block;
+	margin: .2em;
 	text-align: center;
 }
 
@@ -297,8 +320,57 @@ select {
 
 .equippedItem{
 	display: block;
+	margin: .5em;
+}
+
+.equippedItem span {
+	margin-right: .5em;
+}
+
+.equippedItem button {
+	margin-right: .5em;
 }
 
 .equippedItem div {
 	display: inline-block;
+}
+
+.modelCount{
+	margin: 0em 1em;
+}
+
+.modelCount span {
+	display: block;
+	text-align: center;
+}
+
+.modelCount div {
+	text-align: center;
+	padding: .2em;
+}
+
+.modelCount button {
+	padding: .5em .3em;
+}
+
+.wear_dropdown {
+}
+
+.carry-section span {
+	margin: .5em;
+}
+
+.consumable div {
+	display: inline-block;
+	margin-right: .5em;
+}
+
+.consumable span{
+	display: inline-block;
+	margin-right: .5em;
+}
+
+.numeric button{
+	display: inline-block;
+	padding: .49em .5em;
 }

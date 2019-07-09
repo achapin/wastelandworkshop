@@ -387,7 +387,6 @@ function getModSectionFor(character, slotType, carryInfo){
 
 	var modText = document.createElement("span");
 	modText.appendChild(document.createTextNode(loc["mod_section"]));
-	modSection.appendChild(modText);
 
 	var modDropdown = document.createElement("SELECT");
 	var emptyOption = new Option(loc["none"], null);
@@ -413,6 +412,7 @@ function getModSectionFor(character, slotType, carryInfo){
 	if(modDropdown.options.length <= 1){
 		return modSection;
 	}
+	modSection.appendChild(modText);
 
 	modDropdown.selectedIndex = optionSelectedIndex;
 	modDropdown.onchange = function(){
@@ -466,6 +466,10 @@ function addCharacter(characterElement, presetInfo){
 	headerLeftSection.setAttribute("class", "header-section-left");
 	headerSection.appendChild(headerLeftSection);
 
+	var headerRightSection = document.createElement("div");
+	headerRightSection.setAttribute("class", "header-section-right");
+	headerSection.appendChild(headerRightSection);
+
 	var unitCost = document.createElement("span");
 	unitCost.setAttribute("class", "unit-cost");
 	headerLeftSection.appendChild(unitCost);
@@ -484,23 +488,28 @@ function addCharacter(characterElement, presetInfo){
 		headerLeftSection.appendChild(copy);
 	}
 
-	var nameSection = document.createElement("h1");
+	var nameSection = document.createElement("div");
 	nameSection.setAttribute("class", "unitName");
+	var nameHeader = document.createElement("h1");
 	var name = document.createTextNode(loc[characterElement.name]);
-	nameSection.appendChild(name);
-	headerSection.appendChild(nameSection);
+	nameHeader.appendChild(name);
+	nameSection.appendChild(nameHeader);
+	headerRightSection.appendChild(nameSection);
 
 	if(!characterElement.hasOwnProperty("unique_code")){
 		var qtySection = document.createElement("div");
+		qtySection.setAttribute("class", "modelCount");
 
-		qtySection.appendChild(document.createTextNode(" X "));
+		var description = document.createElement("span");
+		description.appendChild(document.createTextNode(loc["model_count"]));
+		qtySection.appendChild(description);
 
 		var qtyCounter = getNumericCounterForField(character, "modelCount", 1);
 		qtySection.appendChild(qtyCounter);
-		headerSection.appendChild(qtySection);
+		headerRightSection.appendChild(qtySection);
 	}
 
-	addLeaderSection(headerSection, character);
+	addLeaderSection(headerRightSection, character);
 
 	if(characterElement.heroic){
 		var heroicSection = document.createElement("div");
@@ -521,7 +530,7 @@ function addCharacter(characterElement, presetInfo){
 			}
 			updateCaps();
 		});
-		headerSection.appendChild(heroicSection);
+		headerRightSection.appendChild(heroicSection);
 	}
 
 	var costSection = document.createElement("div");
@@ -779,13 +788,16 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 
 	var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name, 1);
 
+	var removeButton = document.createElement("button");
+	removeButton.appendChild(document.createTextNode("X"));
+	removeButton.setAttribute("class", "btn btn-background-off");
+	
+	entrySection.appendChild(removeButton);
 	entrySection.appendChild(optionNameSection);
 	entrySection.appendChild(optionCostSection);
 	entrySection.appendChild(getOptionQtySection);
 
-	var removeButton = document.createElement("button");
-	removeButton.appendChild(document.createTextNode("X"));
-	removeButton.setAttribute("class", "btn btn-background-off");
+
 	removeButton.addEventListener("click", function() {
 		delete character[slotType][optionElement.name];
 		if(Object.keys(character[slotType]).length <= 0){
@@ -803,7 +815,7 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 		}
 		slotDropdown.add(option, optionIndex + 1);
 	});
-	entrySection.appendChild(removeButton);
+	
 
 	return entrySection;
 }
@@ -819,6 +831,7 @@ function getWearSection(character, slotOption, slotType){
 	wearSection.appendChild(carryHeader)
 
 	var slotDropdown = document.createElement("SELECT");
+	slotDropdown.setAttribute("class", "wear_dropdown");
 	var emptyOption = new Option(loc["none"], null);
 	slotDropdown.add(emptyOption);
 	var optionSelectedIndex = 0;
@@ -950,19 +963,22 @@ function addEquipEntry(character, slotType, optionElement, equippedItems, slotDr
 	var equipmentEntry = document.createElement("div");
 	equipmentEntry.setAttribute("class","equippedItem");
 
-	var equipmentName = document.createElement("div");
+	var removeButton = document.createElement("button");
+	removeButton.appendChild(document.createTextNode("X"));
+	removeButton.setAttribute("class", "btn btn-background-off");
+	equipmentEntry.appendChild(removeButton);
+
+	var equipmentName = document.createElement("span");
 	equipmentName.appendChild(document.createTextNode(loc[optionElement.name]));
 	equipmentEntry.appendChild(equipmentName);
 
-	var equipmentCost = document.createTextNode("(" + optionElement.cost + ")");
+	var equipmentCost = document.createElement("span");
+	equipmentCost.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
 	equipmentEntry.appendChild(equipmentCost);
 
 	var modSection = getModSectionFor(character, slotType, optionElement);
 	equipmentEntry.appendChild(modSection);
 
-	var removeButton = document.createElement("button");
-	removeButton.appendChild(document.createTextNode("X"));
-	removeButton.setAttribute("class", "btn btn-background-off");
 	removeButton.addEventListener("click", function() {
 		character[slotType] = character[slotType].filter(evalItem => evalItem != optionElement.name);
 		if(character[slotType].length <= 0){
@@ -981,13 +997,13 @@ function addEquipEntry(character, slotType, optionElement, equippedItems, slotDr
 		}
 		slotDropdown.add(option, optionIndex + 1);
 	});
-	equipmentEntry.appendChild(removeButton);
 
 	return equipmentEntry;
 }
 
 function getNumericCounterForField(character, field, minVal){
 	var counterDiv = document.createElement("div");
+	counterDiv.setAttribute("class", "numeric");
 
 	var optionIncreaseCount = document.createElement("button");
 	optionIncreaseCount.setAttribute("class", "btn btn-equipped btn-right-sm");

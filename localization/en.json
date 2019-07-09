@@ -184,7 +184,7 @@
   "mutant_hound_fiend":"Mutant Hound Fiend",
   "suicider":"Suicider",
   "super_mutant":"Super Mutant",
-  "leader":"LEADER",
+  "leader":"LEADER PERK",
   "ack_ack":"Ack Ack",
   "avery":"Avery",
   "psycho_outlaw":"Psycho Outlaw",
@@ -381,5 +381,6 @@
   "dropdown_mines": ">Select a Mine to add<",
   "dropdown_alcohol": ">Select some booze to add<",
   "dropdown_perks": ">Select a Perk to add<",
-  "dropdown_gear": ">Select some gear to add<"
+  "dropdown_gear": ">Select some gear to add<",
+  "model_count":"Model Count"
 }
