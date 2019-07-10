@@ -374,3 +374,16 @@ select {
 	display: inline-block;
 	padding: .49em .5em;
 }
+
+table {
+	margin: .25em;
+	padding: .25em;
+	border-width: 1px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: rgb(231, 189, 66);
+}
+
+td {
+	padding: .15em 1em;
+}
