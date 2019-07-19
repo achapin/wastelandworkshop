@@ -20,7 +20,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 120
+    "cost": 98
   	},
   	{
     "id": 1,
@@ -107,7 +107,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 110
+    "cost": 85
 	},
 	{
     "id": 5,
@@ -131,7 +131,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 67
+    "cost": 88
 	},
 	{
     "id": 6,
@@ -246,7 +246,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 81
+    "cost": 87
   	},
 	{
     "id": 12,
@@ -272,7 +272,7 @@
     "must_carry": [
       "chems.psycho"
     ],
-    "cost": 95
+    "cost": 77
   },
   {
     "id": 13,
@@ -282,7 +282,7 @@
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
     ],
-    "cost": 120
+    "cost": 90
   },
   {
     "id": 14,
@@ -346,7 +346,7 @@
       "thrown": [],
       "mines": []
     },
-    "cost": 33
+    "cost": 35
   },
   {
     "id": 20,
@@ -354,7 +354,7 @@
     "must_carry": [
       "pistols.eyebot_laser"
     ],
-    "cost": 59
+    "cost": 45
   },
   {
     "id": 21,
@@ -392,7 +392,7 @@
     "must_carry": [
       "melee.radroach_swarm_bite"
     ],
-    "cost": 35
+    "cost": 40
   },
   {
     "id": 24,
@@ -459,7 +459,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 114
+    "cost": 80
   },
   {
     "id": 27,
@@ -481,7 +481,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 49
+    "cost": 40
   },
   {
     "id": 28,
@@ -503,7 +503,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 45
+    "cost": 38
   },
   {
     "id": 29,
@@ -573,7 +573,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 95
+    "cost": 100
   },
   {
     "id": 32,
@@ -595,7 +595,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 54
+    "cost": 57
   },
   {
     "id": 33,
@@ -612,7 +612,7 @@
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
     ],
-    "cost": 100
+    "cost": 70
   },
   {
     "id": 35,
@@ -628,7 +628,7 @@
     "must_carry": [
       "melee.hound_bite"
     ],
-    "cost": 63
+    "cost": 65
   },
   {
     "id": 37,
@@ -651,7 +651,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 76
+    "cost": 85
   },
   {
     "id": 38,
@@ -696,7 +696,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 128
+    "cost": 118
   },
   {
     "id": 40,
@@ -772,7 +772,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 48
+    "cost": 45
   },
   {
     "id": 44,
@@ -794,7 +794,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 49
+    "cost": 44
   },
   {
     "id": 45,
@@ -818,7 +818,7 @@
     "must_carry": [
       "melee.radscorpion_pincers_and_sting"
     ],
-    "cost": 100
+    "cost": 90
   },
   {
     "id": 48,
@@ -840,7 +840,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 41
+    "cost": 39
   },
   {
     "id": 49,
@@ -862,7 +862,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 42
+    "cost": 39
   },
   {
     "id": 50,
@@ -870,7 +870,7 @@
     "must_carry": [
       "melee.weak_feral_ghoul_swipe"
     ],
-    "cost": 100
+    "cost": 28
   },
   {
     "id": 51,
@@ -915,7 +915,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 38
+    "cost": 43
   },
   {
     "id": 53,
@@ -937,7 +937,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 63
+    "cost": 60
   },
   {
     "id": 54,
@@ -959,7 +959,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 62
+    "cost": 59
   },
   {
     "id": 55,
@@ -993,6 +993,29 @@
     "cost": 40
   },
   {
+    "id": 67,
+    "name": "sin_jin",
+    "unique_code": "sin_jin",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [],
+      "armor":[],
+      "clothing":[]
+    },
+    "carry_slots": {
+      "heavy_weapons": [],
+      "rifles": [],
+      "melee": [],
+      "pistols": []
+    },
+    "consumables": {
+      "thrown": [],
+      "mines": [],
+      "food_and_drink":[]
+    },
+    "cost": 88
+  },
+  {
     "id": 57,
     "name": "sole_survivor",
     "unique_code": "sole_survivor",
@@ -1013,7 +1036,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 95
+    "cost": 103
   },
   {
     "id": 58,
@@ -1036,7 +1059,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 70
+    "cost": 81
   },
   {
     "id": 59,
@@ -1059,7 +1082,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 140
+    "cost": 123
   },
   {
     "id": 60,
@@ -1105,7 +1128,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 100
+    "cost": 92
   },
   {
     "id": 62,
@@ -1179,7 +1202,7 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 188
+    "cost": 152
   },
   {
     "id": 66,
@@ -1188,6 +1211,6 @@
       "melee.young_deathclaw_crush",
       "melee.young_deathclaw_swipe"
     ],
-    "cost": 90
+    "cost": 125
   }
 ]

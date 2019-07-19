@@ -369,5 +369,10 @@
   "model_upgrades":"Model Upgrades",
   "perks":"Perks",
   "model_cost":"Model Cost",
-  "mod_section": "+ Mod"
+  "mod_section": "+ Mod",
+  "gun_nut_heavy":"Gun Nut (Heavy)",
+  "gun_nut_pistol":"Gun Nut (Pistol)",
+  "gun_nut_rifle":"Gun Nut (Rifle)",
+  "local_leader":"Local Leader",
+  "local_leader_2":"Local Leader II"
 }

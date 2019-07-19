@@ -15,16 +15,16 @@
         "hunting_rifle",
         "pipe_rifle"
       ],
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "pipe_pistol"
+      ],
       "melee": [
         "baseball_bat",
         "board",
         "lead_pipe",
         "nail_board",
         "sledgehammer"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {
@@ -32,7 +32,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 67
+    "cost": 88
   },
   {
     "id": 1,
@@ -67,17 +67,17 @@
         "pipe_rifle",
         "plasma_rifle"
       ],
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "laser_pistol",
+        "pipe_pistol"
+      ],
       "melee": [
         "baseball_bat",
         "huge_club",
         "nail_board",
         "sledgehammer",
         "super_sledge"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {
@@ -85,7 +85,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 81
+    "cost": 87
   },
   {
     "id": 3,
@@ -96,20 +96,28 @@
         "bolt_action_pipe_rifle",
         "combat_rifle",
         "combat_shotgun",
-        "pipe_rifle"
+        "laser_rifle",
+        "pipe_rifle",
+        "plasma_rifle"
+      ],
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "pipe_pistol"
       ],
       "melee": [
         "baseball_bat",
         "board",
         "lead_pipe",
         "nail_board"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
       ]
     },
-    "cost": 33
+    "consumables": {
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ]
+    },
+    "cost": 35
   },
   {
     "id": 4,
@@ -129,17 +137,17 @@
         "pipe_rifle",
         "plasma_rifle"
       ],
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "laser_pistol",
+        "pipe_pistol"
+      ],
       "melee": [
         "baseball_bat",
         "huge_club",
         "nail_board",
         "sledgehammer",
         "super_sledge"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {
@@ -164,9 +172,15 @@
         "bolt_action_pipe_rifle",
         "combat_rifle",
         "combat_shotgun",
+        "gauss_rifle",
         "laser_rifle",
-        "plasma_rifle",
-        "pipe_rifle"
+        "pipe_rifle",
+        "plasma_rifle"
+      ],
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "laser_pistol",
+        "pipe_pistol"
       ],
       "melee": [
         "baseball_bat",
@@ -174,11 +188,6 @@
         "nail_board",
         "sledgehammer",
         "super_sledge"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {
@@ -186,7 +195,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 95
+    "cost": 100
   },
   {
     "id": 6,
@@ -202,7 +211,7 @@
     "must_carry": [
       "melee.hound_bite"
     ],
-    "cost": 63
+    "cost": 65
   },
   {
     "id": 8,
@@ -223,16 +232,16 @@
         "hunting_rifle",
         "pipe_rifle"
       ],
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "pipe_pistol"
+      ],
       "melee": [
         "baseball_bat",
         "board",
         "lead_pipe",
         "nail_board",
         "sledgehammer"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {

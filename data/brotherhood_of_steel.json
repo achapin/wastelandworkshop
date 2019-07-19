@@ -14,14 +14,14 @@
         "combat_shotgun",
         "laser_rifle"
       ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
       "melee": [
         "baton",
         "machete",
         "ripper"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
       ]
     },
     "consumables": {
@@ -37,7 +37,7 @@
     "must_carry": [
       "pistols.eyebot_laser"
     ],
-    "cost": 59
+    "cost": 45
   },
   {
     "id": 2,
@@ -86,21 +86,21 @@
         "minigun",
         "missile_launcher"
       ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
       "rifles": [
         "assault_rifle",
         "combat_rifle",
         "combat_shotgun",
         "laser_rifle",
         "plasma_rifle"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
       ]
     },
     "consumables": {
@@ -130,21 +130,21 @@
         "minigun",
         "missile_launcher"
       ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
       "rifles": [
         "assault_rifle",
         "combat_rifle",
         "combat_shotgun",
         "laser_rifle",
         "plasma_rifle"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
       ]
     },
     "consumables": {
@@ -154,21 +154,21 @@
         "pulse_grenade"
       ]
     },
-    "cost": 114
+    "cost": 80
   },
   {
     "id": 6,
     "name": "knight_patrol",
     "heroic": true,
     "carry_slots": {
-      "melee": [
-        "machete"
-      ],
       "rifles": [
         "assault_rifle",
         "combat_rifle",
         "combat_shotgun",
         "laser_rifle"
+      ],
+      "melee": [
+        "machete"
       ]
     },
     "consumables": {
@@ -176,32 +176,32 @@
         "fragmentation_grenade"
       ]
     },
-    "cost": 49
+    "cost": 40
   },
   {
     "id": 7,
     "name": "knight_patrol_blade",
     "heroic": true,
     "carry_slots": {
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
       "melee": [
         "baton",
         "machete",
         "ripper"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
       ]
     },
     "consumables": {
-      "thrown": [
-        "fragmentation_grenade"
-      ],
       "mines": [
         "fragmentation_mine"
+      ],
+      "thrown": [
+        "fragmentation_grenade"
       ]
     },
-    "cost": 45
+    "cost": 38
   },
   {
     "id": 8,
@@ -220,15 +220,6 @@
         "minigun",
         "missile_launcher"
       ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
       "rifles": [
         "assault_rifle",
         "combat_rifle",
@@ -236,6 +227,15 @@
         "gauss_rifle",
         "laser_rifle",
         "plasma_rifle"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
       ]
     },
     "consumables": {
@@ -263,21 +263,21 @@
         "minigun",
         "missile_launcher"
       ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
       "rifles": [
         "assault_rifle",
         "combat_rifle",
         "combat_shotgun",
         "laser_rifle",
         "plasma_rifle"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
       ]
     },
     "consumables": {
@@ -287,6 +287,6 @@
         "pulse_grenade"
       ]
     },
-    "cost": 128
+    "cost": 118
   }
 ]

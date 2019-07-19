@@ -382,5 +382,10 @@
   "dropdown_alcohol": ">Select some booze to add<",
   "dropdown_perks": ">Select a Perk to add<",
   "dropdown_gear": ">Select some gear to add<",
-  "model_count":"Model Count"
+  "model_count":"Model Count",
+  "gun_nut_heavy":"Gun Nut (Heavy)",
+  "gun_nut_pistol":"Gun Nut (Pistol)",
+  "gun_nut_rifle":"Gun Nut (Rifle)",
+  "local_leader":"Local Leader",
+  "local_leader_2":"Local Leader II"
 }

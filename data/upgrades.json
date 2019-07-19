@@ -2,11 +2,11 @@
   "heavy_weapons": [
     {
       "name": "broadsider",
-      "cost": 25
+      "cost": 31
     },
     {
       "name": "gatling_laser",
-      "cost": 30
+      "cost": 25
     },
     {
       "name": "junk_jet",
@@ -14,11 +14,11 @@
     },
     {
       "name": "minigun",
-      "cost": 30
+      "cost": 23
     },
     {
       "name": "missile_launcher",
-      "cost": 35
+      "cost": 41
     }
   ],
   "rifles": [
@@ -64,7 +64,7 @@
     },
     {
       "name": "laser_musket",
-      "cost": 11
+      "cost": 14
     },
     {
       "name": "laser_rifle",
@@ -114,7 +114,7 @@
     },
     {
       "name": "gamma_gun",
-      "cost": 23
+      "cost": 15
     },
     {
       "name": "indys_freezing_44",
@@ -152,11 +152,11 @@
     },
     {
       "name": "baton",
-      "cost": 8
+      "cost": 10
     },
     {
       "name": "board",
-      "cost": 9
+      "cost": 8
     },
     {
       "name": "deathclaw_crush",
@@ -208,7 +208,7 @@
     },
     {
       "name": "pipe_wrench",
-      "cost": 7
+      "cost": 6
     },
     {
       "name": "radroach_swarm_bite",
@@ -220,7 +220,7 @@
     },
     {
       "name": "ripper",
-      "cost": 7
+      "cost": 6
     },
     {
       "name": "sledgehammer",
@@ -294,7 +294,7 @@
     },
     {
       "name": "pulse_grenade",
-      "cost": 5
+      "cost": 4
     },
     {
       "name": "suicider_mini_nuke",
@@ -304,11 +304,11 @@
   "mines": [
     {
       "name": "bottlecap_mine",
-      "cost": 20
+      "cost": 10
     },
     {
       "name": "fragmentation_mine",
-      "cost": 10
+      "cost": 5
     }
   ],
   "armor": [
@@ -405,12 +405,12 @@
       "cost": 3
     },
     {
-      "name": "aviator_cap",
-      "cost": 15
-    },
-    {
       "name": "atom_cats_jacket_and_jeans",
       "cost": 7
+    },
+    {
+      "name": "aviator_cap",
+      "cost": 15
     },
     {
       "name": "baseball_cap",
@@ -721,8 +721,16 @@
       "cost": 5
     },
     {
-      "name": "ghoulish",
-      "cost": 10
+      "name": "gun_nut_heavy",
+      "cost": 7
+    },
+    {
+      "name": "gun_nut_pistol",
+      "cost": 7
+    },
+    {
+      "name": "gun_nut_rifle",
+      "cost": 7
     },
     {
       "name": "gunslinger",
@@ -746,6 +754,14 @@
     },
     {
       "name": "life_giver",
+      "cost": 7
+    },
+    {
+      "name": "local_leader",
+      "cost": 7
+    },
+    {
+      "name": "local_leader_2",
       "cost": 7
     },
     {
@@ -1066,7 +1082,7 @@
     },
     {
       "name":"sugar_bombs",
-      "cost":20
+      "cost":13
     },
     {
       "name":"yao_guai_meat",

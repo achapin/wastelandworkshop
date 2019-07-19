@@ -19,6 +19,11 @@
         "hunting_rifle",
         "pipe_rifle"
       ],
+      "pistols": [
+        "44_revolver",
+        "bolt_action_pipe_pistol",
+        "pipe_pistol"
+      ],
       "melee": [
         "baseball_bat",
         "board",
@@ -27,11 +32,6 @@
         "nail_board",
         "pipe_wrench",
         "tire_iron"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {
@@ -43,7 +43,7 @@
         "fragmentation_mine"
       ]
     },
-    "cost": 120
+    "cost": 98
   },
   {
     "id": 1,
@@ -79,7 +79,7 @@
         "fragmentation_mine"
       ]
     },
-    "cost": 110
+    "cost": 85
   },
   {
     "id": 2,
@@ -114,7 +114,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 48
+    "cost": 45
   },
   {
     "id": 4,
@@ -141,7 +141,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 49
+    "cost": 44
   },
   {
     "id": 5,
@@ -177,7 +177,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 41
+    "cost": 39
   },
   {
     "id": 6,
@@ -213,7 +213,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 42
+    "cost": 39
   },
   {
     "id": 7,
@@ -251,7 +251,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 63
+    "cost": 60
   },
   {
     "id": 8,
@@ -289,7 +289,7 @@
         "molotov_cocktail"
       ]
     },
-    "cost": 62
+    "cost": 59
   },
   {
     "id": 9,
@@ -301,6 +301,11 @@
         "junk_jet",
         "minigun"
       ],
+      "pistols": [
+        "44_revolver",
+        "bolt_action_pipe_pistol",
+        "pipe_pistol"
+      ],
       "melee": [
         "baseball_bat",
         "board",
@@ -309,11 +314,6 @@
         "nail_board",
         "pipe_wrench",
         "tire_iron"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {
@@ -325,7 +325,7 @@
         "fragmentation_mine"
       ]
     },
-    "cost": 80
+    "cost": 88
   },
   {
     "id": 10,
@@ -351,6 +351,11 @@
         "hunting_rifle",
         "pipe_rifle"
       ],
+      "pistols": [
+        "44_revolver",
+        "bolt_action_pipe_pistol",
+        "pipe_pistol"
+      ],
       "melee": [
         "baseball_bat",
         "board",
@@ -361,11 +366,6 @@
         "nail_board",
         "pipe_wrench",
         "tire_iron"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
       ]
     },
     "consumables": {
