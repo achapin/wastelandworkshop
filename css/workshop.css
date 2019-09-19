@@ -87,16 +87,13 @@ h2 {
 
 .add{
 	clear:both;
+	width: 100%;
 }
 
-#addSection ul li {
+.add ul li {
 	float: left;
 	list-style-type: none;
 	padding: 5px;
-}
-
-#addMenu {
-	width: 100%;
 }
 
 #force{

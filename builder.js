@@ -4,6 +4,8 @@ var bos;
 var raiders;
 var survivors;
 var mutants;
+var robots;
+var creatures;
 var characters;
 var settlement;
 
@@ -12,6 +14,7 @@ var addButton;
 var closeAddButton;
 var addSection;
 var capsSection;
+var extraFactionSection;
 
 var lastTextFieldValue;
 var addSectionOpen;
@@ -75,6 +78,20 @@ function survivorsLoaded(json){
 
 function mutantsLoaded(json){
 	mutants = json;
+	var robotLoadPromise = loadURL("data/robots.json");
+	robotLoadPromise.then(robotsLoaded);
+	robotLoadPromise.catch(function(){alert("robots load failed");});
+}
+
+function robotsLoaded(json){
+	robots = json;
+	var creaturesLoadPromise = loadURL("data/creatures.json");
+	creaturesLoadPromise.then(creaturesLoaded);
+	creaturesLoadPromise.catch(function(){alert("mutants load failed");});
+}
+
+function creaturesLoaded(json){
+	creatures = json;
 	var settlementLoadPromise = loadURL("data/settlement.json");
 	settlementLoadPromise.then(settlementLoaded);
 	settlementLoadPromise.catch(function(){alert("settlement load failed");});
@@ -146,6 +163,7 @@ function initListeners(){
 
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
+	extraFactionSection = document.getElementById("extraFactionSection");
 	addButton = document.getElementById("addButton");
 	closeAddButton = document.getElementById("closeAddButton");
 	capsSection = document.getElementById("caps");
@@ -284,9 +302,61 @@ function buildAddSection() {
 	}
 }
 
+function buildExtraFactionSection(faction) {
+	clearExtraFactionSection();
+
+	var faction_code = "";
+	if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "creature_controller"){
+		faction_code = "c";
+	}
+	if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "robot_controller"){
+		faction_code = "r";
+	}
+
+	var list = document.createElement("ul");
+	faction.forEach(function(characterElement){
+
+		var can_add = true;
+
+		characters.forEach(function(otherChar){
+			var otherCharElement = getCharacterById(otherChar.id)
+			if(otherCharElement.name == characterElement.name){
+				can_add = false;
+			}
+		});
+
+		if(can_add) {
+			var para = document.createElement("li");
+			var button = document.createElement("button");
+			button.setAttribute("class", "btn btn-background choice");
+			var nameSpan = document.createElement("span");
+			var nameNode = document.createTextNode(loc[characterElement.name]);
+			nameSpan.appendChild(nameNode);
+			var pointsSpan = document.createElement("span");
+			pointsSpan.setAttribute("class", "cost");
+			var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
+			pointsSpan.appendChild(pointsNode);
+
+			characterElement.faction_code = faction_code;
+			button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
+
+			button.appendChild(nameSpan);
+			button.appendChild(pointsSpan);
+			para.appendChild(button);
+			list.appendChild(para);
+		}
+	});
+	extraFactionSection.appendChild(list);
+}
+
+function clearExtraFactionSection(){
+	extraFactionSection.innerHTML = "";
+}
+
 function closeAddSection(){
 	addSectionOpen = false;
 	addSection.style.display = "none";
+	extraFactionSection.style.display = "none";
 	addButton.style.display = "block";
 	closeAddButton.style.display = "none";
 }
@@ -295,6 +365,7 @@ function openAddSection(){
 	addSectionOpen = true;
 	addButton.style.display = "none";
 	addSection.style.display = "block";
+	extraFactionSection.style.display = "block";
 	closeAddButton.style.display = "block";
 }
 
@@ -479,6 +550,10 @@ function addCharacter(characterElement, presetInfo){
 	close.setAttribute("class", "btn btn-background-off unit-button");
 	close.appendChild(closeButton);
 	headerLeftSection.appendChild(close);
+
+	if(characterElement.hasOwnProperty("faction_code")){
+		character.faction_code = characterElement.faction_code;
+	}
 
 	if(!characterElement.hasOwnProperty("unique_code")){
 		var copy = document.createElement("button");
@@ -673,24 +748,26 @@ function addCharacter(characterElement, presetInfo){
 		hideEquipment.style.display = "none";
 	});
 
-	close.addEventListener("click", function() 
-		{
-			forceSection.removeChild(charaSection);
-			var index = getCharacterIndex(character);
-			if(index != -1){
-				force.characters.splice(index,1);
+	close.addEventListener("click", function() {
+		forceSection.removeChild(charaSection);
+		var index = getCharacterIndex(character);
+		if(index != -1){
+			force.characters.splice(index,1);
+		}
+		if(force.hasOwnProperty("leader")){
+			if(force.leader.leaderIndex > index){
+				force.leader.leaderIndex -= 1;
 			}
-			if(force.hasOwnProperty("leader")){
-				if(force.leader.leaderIndex > index){
-					force.leader.leaderIndex -= 1;
-				}
-			}
-			updateCaps();
-			if(characterElement.hasOwnProperty("unique_code")){
-				buildAddSection();
+			if(force.leader.leaderIndex == index){
+				delete(force.leader)
+				clearExtraFactionSection();
 			}
 		}
-	);
+		updateCaps();
+		if(characterElement.hasOwnProperty("unique_code")){
+			buildAddSection();
+		}
+	});
 	if(!characterElement.hasOwnProperty("unique_code")){
 		copy.addEventListener("click", function() {
 			addCharacter(characterElement, character);	
@@ -1364,6 +1441,14 @@ function addLeaderSection(domElement, character){
 		for(var dropDownIndex = 0; dropDownIndex < dropDowns.length; dropDownIndex++){
 			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
 		}
+
+		clearExtraFactionSection();
+		if(perkDropdown.value == "creature_controller"){
+			buildExtraFactionSection(creatures);
+		}else if(perkDropdown.value == "robot_controller"){
+			buildExtraFactionSection(robots);
+		}
+
 		updateCaps();
 	};
 	activeLeaderSection.appendChild(perkDropdown);
@@ -1419,6 +1504,21 @@ function updateCaps(){
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
 	var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"];
 
+	var extra_faction_code = "";
+	var extra_faction;
+
+	if(force.hasOwnProperty("leader")){
+		var leaderPerk = upgrades.heroes_and_leaders[force.leader.perkIndex];
+		if(leaderPerk.name == "creature_controller"){
+			extra_faction_code = "c";
+			extra_faction = creatures;
+		}
+		if(leaderPerk.name == "robot_controller"){
+			extra_faction_code = "r";
+			extra_faction = robots;
+		}
+	}
+
 	if(force.hasOwnProperty("characters")){
 		var unitIndex = 0;
 		force.characters.forEach(function(character){
@@ -1431,7 +1531,12 @@ function updateCaps(){
 
 			var unitCost = 0;
 
-			unitCost += getCharacterById(character.id).cost * modelCount;
+			var baseCost = getCharacterById(character.id).cost;
+			if(character.hasOwnProperty("faction_code")){
+				baseCost = getCharacterFromForceById(character.id, extra_faction).cost;
+			}
+			
+			unitCost += baseCost * modelCount;
 
 			var modelUpdadeCost = 0;
 			var unitUpgradeCost = 0;
@@ -1458,10 +1563,19 @@ function updateCaps(){
 				})
 			}
 
+			var warningSection = unitDisplay.querySelector(".warning");
+			warningSection.innerHTML = "";
+
 			if(modelCount > 1 && (character.heroic || character.hasOwnProperty("perks"))){
-				unitDisplay.querySelector(".warning").innerHTML = "MULTI-MODEL UNITS CANNOT BE Heroic OR HAVE PERKS";
-			}else{
-				unitDisplay.querySelector(".warning").innerHTML = null;
+				var mmwarning = document.createTextNode("MULTI-MODEL UNITS CANNOT BE Heroic OR HAVE PERKS");
+				warningSection.appendChild(mmwarning);
+			}
+
+
+			if(character.hasOwnProperty("faction_code") && character.faction_code != extra_faction_code){
+				alert("unit " + character.faction_code + " extra " + extra_faction_code);
+				var faction_warning = document.createTextNode("THIS UNIT IS NOT ALLOWED IN THE CURRENT FACTION");
+				warningSection.appendChild(faction_warning);
 			}
 	
 			wear_slots.forEach(function (slotType) {
@@ -1578,6 +1692,13 @@ function loadForceFromString(forceString){
 		startIndex = 3;
 		force.leader.leaderIndex = parseInt(leaderInfo[0]);
 		force.leader.perkIndex = parseInt(leaderInfo[1]);
+
+		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "creature_controller"){
+			buildExtraFactionSection(creatures);
+		}
+		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "robot_controller"){
+			buildExtraFactionSection(robots);
+		}
 	}else{
 		force.leader.leaderIndex = -1;
 		force.leader.perkIndex = 0;
@@ -1586,6 +1707,16 @@ function loadForceFromString(forceString){
 	for(var index = startIndex; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
+		if(characterData.hasOwnProperty("faction_code")){
+			if(characterData.faction_code == "c"){
+				addCharacter(getCharacterFromForceById(characterData.id, creatures), characterData);
+				return;
+			} else if(characterData.faction_code == "r"){
+				addCharacter(getCharacterFromForceById(characterData.id, robots), characterData);
+				return;
+			}
+			alert("Found out-of-faction character " +characterData.name + " with invalid faction code " + characterData.faction_code);
+		}
 		addCharacter(getCharacterById(characterData.id),characterData);
 	}
 }
@@ -1594,6 +1725,15 @@ function getCharacterById(characterId){
 	for(var index = 0; index < characters.length; index++){
 		if(characters[index].id == characterId){
 			return characters[index];
+		}
+	}
+	return null;
+}
+
+function getCharacterFromForceById(characterId, force){
+	for(var index = 0; index < force.length; index++){
+		if(force[index].id == characterId){
+			return force[index];
 		}
 	}
 	return null;
