@@ -1,16 +1,22 @@
 @font-face {
   font-family: 'Overseer';
-  src: url('/fonts/Overseer.otf');
+  src: url('/wastelandworkshop/fonts/Overseer.otf');
 }
 
 @font-face {
   font-family: 'Overseer-Italic';
-  src: url('/fonts/Overseer-Italic.otf');
+  src: url('/wastelandworkshop/fonts/Overseer-Italic.otf');
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/wastelandworkshop/fonts/Futura.ttc');
 }
 
 body {
 	background-color: rgb(40,65,129);
 	color: rgb(231, 189, 66);
+	font-family: 'Futura';
 }
 
 h1 {
