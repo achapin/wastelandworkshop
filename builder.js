@@ -87,7 +87,7 @@ function robotsLoaded(json){
 	robots = json;
 	var creaturesLoadPromise = loadURL("data/creatures.json");
 	creaturesLoadPromise.then(creaturesLoaded);
-	creaturesLoadPromise.catch(function(){alert("mutants load failed");});
+	creaturesLoadPromise.catch(function(){alert("creatures load failed");});
 }
 
 function creaturesLoaded(json){
@@ -1535,7 +1535,7 @@ function updateCaps(){
 			if(character.hasOwnProperty("faction_code")){
 				baseCost = getCharacterFromForceById(character.id, extra_faction).cost;
 			}
-			
+
 			unitCost += baseCost * modelCount;
 
 			var modelUpdadeCost = 0;
@@ -1573,7 +1573,6 @@ function updateCaps(){
 
 
 			if(character.hasOwnProperty("faction_code") && character.faction_code != extra_faction_code){
-				alert("unit " + character.faction_code + " extra " + extra_faction_code);
 				var faction_warning = document.createTextNode("THIS UNIT IS NOT ALLOWED IN THE CURRENT FACTION");
 				warningSection.appendChild(faction_warning);
 			}
