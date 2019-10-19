@@ -80,19 +80,10 @@
 	{
     "id": 3,
     "name": "assaultron",
-    "wear_slots": {
-      "armor":[],
-      "clothing":[]
-    },
     "must_carry": [
       "rifles.assaultron_head_laser",
       "melee.assaultron_swipe"
     ],
-    "consumables": {
-      "thrown": [],
-      "mines": [],
-      "food_and_drink":[]
-    },
     "cost": 320
 	},
 	{
@@ -151,54 +142,27 @@
 	{
     "id": 6,
     "name": "battered_assaultron",
-    "wear_slots": {
-      "armor":[],
-      "clothing":[]
-    },
     "must_carry": [
       "rifles.battered_assaultron_head_laser",
       "melee.assaultron_swipe"
     ],
-    "consumables": {
-      "thrown": [],
-      "mines": [],
-      "food_and_drink":[]
-    },
     "cost": 145
 	},
 	{
     "id": 7,
     "name": "battered_protectron",
-    "wear_slots": {
-      "armor":[],
-      "clothing":[]
-    },
     "must_carry": [
       "pistols.protectron_hand_laser"
     ],
-    "consumables": {
-      "thrown": [],
-      "mines": [],
-      "food_and_drink":[]
-    },
     "cost": 20
 	},
 	{
     "id": 8,
     "name": "battered_sentry_bot",
-    "wear_slots": {
-      "armor":[],
-      "clothing":[]
-    },
     "must_carry": [
       "melee.empty_minigun",
       "heavy_weapons.missile_launcher"
     ],
-    "consumables": {
-      "thrown": [],
-      "mines": [],
-      "food_and_drink":[]
-    },
     "cost": 130
 	},
 	{
@@ -219,27 +183,18 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 245
+    "cost": 245,
+    "default_equipment":[
+      "melee.fire_hydrant_bat",
+      "thrown.behemoth_rock_throw"
+    ]
 	},
 	{
     "id": 10,
     "name": "bloated_glowing_one",
-    "wear_slots": {
-      "power_armor": [],
-      "armor":[],
-      "clothing":[]
-    },
-    "carry_slots": {
-      "heavy_weapons": [],
-      "rifles": [],
-      "melee": [],
-      "pistols": []
-    },
-    "consumables": {
-      "thrown": [],
-      "mines": [],
-      "food_and_drink":[]
-    },
+    "must_carry": [
+      "melee.bloated_glowing_one_swipe"
+    ],
     "cost": 220
 	},
 	{
@@ -370,7 +325,7 @@
     },
     "cost": 35,
     "default_equipment":[
-      "rifles.combat_shotgun",
+      "rifles.combat_shotgun"
     ]
   },
   {
@@ -409,7 +364,10 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 43
+    "cost": 43,
+    "default_equipment":[
+      "pistols.laser_pistol"
+    ]
   },
   {
     "id": 23,
@@ -465,7 +423,10 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 65
+    "cost": 65,
+    "default_equipment":[
+      "rifles.combat_rifle"
+    ]
   },
   {
     "id": 26,
@@ -488,7 +449,11 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 80
+    "cost": 80,
+    "default_equipment":[
+      "heavy_weapons.minigun",
+      "power_armor.t60_power_armor"
+    ]
   },
   {
     "id": 27,
@@ -510,7 +475,10 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 40
+    "cost": 40,
+    "default_equipment":[
+      "rifles.laser_rifle"
+    ]
   },
   {
     "id": 28,
@@ -532,7 +500,10 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 38
+    "cost": 38,
+    "default_equipment":[
+      "rifles.laser_rifle"
+    ]
   },
   {
     "id": 29,
@@ -554,7 +525,10 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 60
+    "cost": 60,
+    "default_equipment":[
+      "rifles.hunting_rifle"
+    ]
   },
   {
     "id": 30,
@@ -583,7 +557,7 @@
     ],
     "cost": 85,
     "default_equipment":[
-      "melee.tire_iron",
+      "melee.tire_iron"
     ]
   },
   {
@@ -605,7 +579,11 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 100
+    "cost": 100,
+    "default_equipment":[
+      "melee.huge_club",
+      "rifles.bolt_action_pipe_rifle"
+    ]
   },
   {
     "id": 32,
@@ -629,7 +607,7 @@
     },
     "cost": 57,
     "default_equipment":[
-      "rifles.laser_musket",
+      "rifles.laser_musket"
     ]
   },
   {
@@ -711,7 +689,11 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 90
+    "cost": 90,
+    "default_equipment":[
+      "melee.machete",
+      "heavy_weapons.gatling_laser"
+    ]
   },
   {
     "id": 39,
@@ -734,7 +716,11 @@
       "mines": [],
       "food_and_drink":[]
     },
-    "cost": 118
+    "cost": 118,
+    "default_equipment":[
+      "rifles.plasma_rifle",
+      "power_armor.t60_power_armor"
+    ]
   },
   {
     "id": 40,
