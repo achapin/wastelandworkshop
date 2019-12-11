@@ -666,6 +666,39 @@ function addCharacter(characterElement, presetInfo){
 	var equipmentSection = document.createElement("div");
 	equipmentSection.setAttribute("class", "equipment-section");
 
+	if(characterElement.default_equipment){
+		var defaultEquipmentSection = document.createElement("div");
+
+		var defaultEquipmentButton = document.createElement("button");
+		defaultEquipmentButton.setAttribute("class", "btn btn-equipped btn-right-sm");
+		defaultEquipmentButton.appendChild(document.createTextNode(loc["add_default_equipment"]));
+
+		defaultEquipmentSection.appendChild(defaultEquipmentButton);
+		//TODO: ADD BUTTON FUNCTIONALITY
+		defaultEquipmentButton.addEventListener("click", function() {
+			characterElement.default_equipment.forEach(function(element){
+				var upgradeData = element.split('.');
+				var upgrade = getUpgrade(upgradeData[0], upgradeData[1]);
+
+				//armor
+				//carry
+				//consumable
+				//ugh
+
+				var newItemEntry = addEquipEntry(character, slotType, upgrade, equippedItems, slotDropdown);
+				equippedItems.appendChild(newItemEntry);
+				if(!character.hasOwnProperty(slotType)){
+					character[slotType] = [];
+				}
+				character[slotType].push(slotDropdown.value);
+				//slotDropdown.remove(slotDropdown.selectedIndex);
+				//slotDropdown.selectedIndex = 0;
+			});
+		});
+
+		equipmentSection.appendChild(defaultEquipmentSection);
+	}
+
 	var modelUpgradesHeader = document.createElement("h1");
 	modelUpgradesHeader.appendChild(document.createTextNode(loc["model_upgrades"]));
 	equipmentSection.appendChild(modelUpgradesHeader);
