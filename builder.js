@@ -8,6 +8,7 @@ var robots;
 var creatures;
 var characters;
 var settlement;
+var institute;
 
 var forceSection;
 var addButton;
@@ -99,6 +100,13 @@ function creaturesLoaded(json){
 
 function settlementLoaded(json){
 	settlement = json;
+	var instituteLoadPromise = loadURL("data/institute.json");
+	instituteLoadPromise.then(instituteLoaded);
+	instituteLoadPromise.catch(function(){alert("institute load failed");});
+}
+
+function instituteLoaded(json){
+	institute = json;
 	loadLocalization();
 }
 
@@ -130,6 +138,12 @@ function localizationLoaded(json){
 
 	var missingKeys = ""
 
+	institute.forEach(function(character){
+		if(!loc.hasOwnProperty(character.name)){
+			missingKeys += character.name + ", ";
+		}
+	});
+
 	settlement.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
 			missingKeys += character.name + ", ";
@@ -156,6 +170,7 @@ function initListeners(){
 	document.getElementById("switch-mutants").addEventListener("click", switchMutants, true);
 	document.getElementById("switch-survivors").addEventListener("click", switchSurvivors, true);
 	document.getElementById("switch-raiders").addEventListener("click", switchRaiders, true);
+	document.getElementById("switch-institute").addEventListener("click", switchInstitute, true);
 	document.getElementById("switch-settlement").addEventListener("click", switchSettlement, true);
 
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
@@ -229,6 +244,12 @@ function switchSurvivors() {
 function switchRaiders() {
 	characters = raiders;
 	faction = "rdr";
+	clearForce();	
+}
+
+function switchInstitute() {
+	characters = institute;
+	faction = "ins";
 	clearForce();	
 }
 
