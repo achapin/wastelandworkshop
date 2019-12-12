@@ -7,8 +7,10 @@ Usable at https://achapin.github.io/wastelandworkshop/
 * Tag-Limited equipment (dog/robot/super mutant/etc only)
 * Tag-filtered equipment (not usable by dog, etc)
 * Default Mod behavior (for Preston Garvey, Sturges and Sin Jin)
+* Default Perks (Strong's Entangle, Lone Wanderer)
 * Printable lists
 * Unit reordering/sorting
 * Shorten query string
 * Search funtion for unit list
 * Display unit or upgrade card information
+* Automatons

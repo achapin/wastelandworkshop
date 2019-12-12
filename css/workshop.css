@@ -76,6 +76,11 @@ h2 {
 	color: rgb(139,69,19);
 }
 
+#institute {
+	background-color: rgb(200,200,200);
+	color: rgb(0,0,0);
+}
+
 #selector ul {
 	float: left;
 }

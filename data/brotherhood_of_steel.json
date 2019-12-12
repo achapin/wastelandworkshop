@@ -21,15 +21,61 @@
       "melee": [
         "baton",
         "machete",
+        "power_fist",
         "ripper"
       ]
     },
     "consumables": {
       "thrown": [
-        "fragmentation_grenade"
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
       ]
     },
     "cost": 105
+  },
+  {
+    "id": 10,
+    "name": "elder_maxson",
+    "unique_code":"elder_maxson",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "final_judgement",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "power_fist",
+        "ripper"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ]
+    },
+    "cost": 140
   },
   {
     "id": 1,
@@ -58,16 +104,22 @@
     "cost": 43
   },
   {
-    "id": 3,
-    "name": "lancer",
+    "id": 11,
+    "name": "field_scribe_shield",
     "heroic": true,
     "carry_slots": {
-      "rifles": [
-        "laser_rifle",
-        "plasma_rifle"
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
       ]
     },
-    "cost": 60
+    "consumables": {
+      "mines": [
+        "bottlecap_mine",
+        "fragmentation_mine"
+      ]
+    },
+    "cost": 41
   },
   {
     "id": 4,
@@ -100,6 +152,7 @@
       "melee": [
         "baton",
         "machete",
+        "power_fist",
         "ripper"
       ]
     },
@@ -190,18 +243,110 @@
       "melee": [
         "baton",
         "machete",
+        "power_fist",
         "ripper"
       ]
     },
     "consumables": {
       "mines": [
-        "fragmentation_mine"
+        "fragmentation_mine",
+        "pulse_mine"
       ],
       "thrown": [
         "fragmentation_grenade"
       ]
     },
     "cost": 38
+  },
+  {
+    "id": 12,
+    "name": "knight_tech",
+    "heroic": true,
+    "wear_slots": {
+      "power_armor": [
+        "t45_power_armor",
+        "t51_power_armor",
+        "t60_power_armor"
+      ]
+    },
+    "carry_slots": {
+      "heavy_weapons": [
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "laser_rifle",
+        "plasma_rifle"
+      ],
+      "pistols": [
+        "10mm_pistol",
+        "laser_pistol"
+      ],
+      "melee": [
+        "baton",
+        "machete",
+        "ripper"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ]
+    },
+    "cost": 66
+  },
+  {
+    "id": 3,
+    "name": "lancer",
+    "heroic": true,
+    "carry_slots": {
+      "rifles": [
+        "laser_rifle",
+        "plasma_rifle"
+      ]
+    },
+    "cost": 60
+  },
+  {
+    "id": 3,
+    "name": "lancer_captain_kells",
+    "unique_code": "lancer_captain_kells",
+    "heroic": true,
+    "wear_slots":{
+      "clothing":[
+        "airship_captains_hat"
+      ]
+    },
+    "carry_slots": {
+      "rifles": [
+        "combat_rifle",
+        "laser_rifle",
+        "plasma_rifle"
+      ],
+      "pistols":[
+        "laser_pistol"
+      ],
+      "melee":[
+        "baton",
+        "machete",
+        "ripper",
+        "stun_baton"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "cryo_grenade",
+        "fragmentation_grenade",
+        "pulse_grenade"
+      ]
+    },
+    "cost": 88
   },
   {
     "id": 8,

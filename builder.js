@@ -138,7 +138,31 @@ function localizationLoaded(json){
 
 	var missingKeys = ""
 
+	bos.forEach(function(character){
+		if(!loc.hasOwnProperty(character.name)){
+			missingKeys += character.name + ", ";
+		}
+	});
+
 	institute.forEach(function(character){
+		if(!loc.hasOwnProperty(character.name)){
+			missingKeys += character.name + ", ";
+		}
+	});
+
+	raiders.forEach(function(character){
+		if(!loc.hasOwnProperty(character.name)){
+			missingKeys += character.name + ", ";
+		}
+	});
+
+	mutants.forEach(function(character){
+		if(!loc.hasOwnProperty(character.name)){
+			missingKeys += character.name + ", ";
+		}
+	});
+
+	survivors.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
 			missingKeys += character.name + ", ";
 		}
@@ -149,6 +173,7 @@ function localizationLoaded(json){
 			missingKeys += character.name + ", ";
 		}
 	});
+
 	Object.keys(upgrades).forEach(function(section){
 		if(!loc.hasOwnProperty(section)){
 			missingKeys += section + ", ";

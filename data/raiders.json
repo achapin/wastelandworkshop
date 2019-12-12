@@ -97,6 +97,7 @@
       "pistols": [
         "44_revolver",
         "bolt_action_pipe_pistol",
+        "flare_gun",
         "pipe_pistol"
       ],
       "melee": [
@@ -124,6 +125,7 @@
       "pistols": [
         "44_revolver",
         "bolt_action_pipe_pistol",
+        "flare_gun",
         "pipe_pistol"
       ],
       "melee": [
@@ -365,6 +367,7 @@
         "machete",
         "nail_board",
         "pipe_wrench",
+        "power_fist",
         "tire_iron"
       ]
     },

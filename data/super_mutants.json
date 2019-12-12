@@ -120,6 +120,34 @@
     "cost": 35
   },
   {
+    "id": 10,
+    "name": "fist",
+    "unique_code": "fist",
+    "heroic": true,
+    "carry_slots": {
+      "heavy_weapons": [
+        "minigun"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "pipe_rifle"
+      ],
+      "melee": [
+        "board",
+        "huge_club",
+        "nail_board",
+        "sledgehammer"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 79
+  },
+  {
     "id": 4,
     "name": "hammer",
     "unique_code": "hammer",
@@ -212,6 +240,104 @@
       "melee.hound_bite"
     ],
     "cost": 65
+  },
+  {
+    "id": 11,
+    "name": "overlord",
+    "heroic": true,
+    "carry_slots": {
+      "heavy_weapons": [
+        "junk_jet",
+        "gatling_laser",
+        "minigun",
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "bolt_action_pipe_rifle",
+        "combat_rifle",
+        "combat_shotgun",
+        "gauss_rifle",
+        "laser_rifle",
+        "pipe_rifle",
+        "plasma_rifle"
+      ],
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "laser_pistol",
+        "pipe_pistol"
+      ],
+      "melee": [
+        "baseball_bat",
+        "huge_club",
+        "nail_board",
+        "sledgehammer",
+        "super_sledge"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "fragmentation_grenade",
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 155
+  },
+  {
+    "id": 12,
+    "name": "skirmisher",
+    "heroic": true,
+    "carry_slots": {
+      "pistols": [
+        "bolt_action_pipe_pistol",
+        "pipe_pistol"
+      ],
+      "melee": [
+        "baseball_bat",
+        "board",
+        "lead_pipe",
+        "nail_board",
+        "sledgehammer",
+        "super_sledge",
+        "tire_iron"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 49
+  },
+  {
+    "id": 13,
+    "name": "strong",
+    "unique_code": "strong",
+    "heroic": true,
+    "carry_slots": {
+      "heavy_weapons":[
+        "missile_launcher"
+      ],
+      "rifles": [
+        "assault_rifle",
+        "gauss_rifle",
+        "hunting_rifle",
+        "pipe_rifle"
+      ],
+      "melee": [
+        "board",
+        "nail_board",
+        "sledgehammer",
+        "super_sledge"
+      ]
+    },
+    "consumables": {
+      "thrown": [
+        "fragmentation_grenade",
+        "molotov_cocktail"
+      ]
+    },
+    "cost": 90
   },
   {
     "id": 8,
