@@ -1,14 +1,7 @@
 var loc;
 var upgrades;
-var bos;
-var raiders;
-var survivors;
-var mutants;
-var robots;
-var creatures;
-var characters;
-var settlement;
-var institute;
+var units;
+var mappedUnits = {};
 
 var forceSection;
 var addButton;
@@ -51,62 +44,13 @@ function loadURL(url){
 function upgradesLoaded(json)
 {
 	upgrades = json;
-	var bosLoadPromise = loadURL("data/brotherhood_of_steel.json");
-	bosLoadPromise.then(bosLoaded);
-	bosLoadPromise.catch(function(){alert("bos load failed");});
+	var unitsLoadPromise = loadURL("data/units.json");
+	unitsLoadPromise.then(unitsLoaded);
+	unitsLoadPromise.catch(function(){alert("units load failed");});
 }
 
-function bosLoaded(json){
-	bos = json;
-	var raiderLoadPromise = loadURL("data/raiders.json");
-	raiderLoadPromise.then(raidersLoaded);
-	raiderLoadPromise.catch(function(){alert("raider load failed");});
-}
-
-function raidersLoaded(json){
-	raiders = json;	
-	var survivorLoadPromise = loadURL("data/survivors.json");
-	survivorLoadPromise.then(survivorsLoaded);
-	survivorLoadPromise.catch(function(){alert("survivor load failed");});
-}
-
-function survivorsLoaded(json){
-	survivors = json;
-	var mutantLoadPromise = loadURL("data/super_mutants.json");
-	mutantLoadPromise.then(mutantsLoaded);
-	mutantLoadPromise.catch(function(){alert("mutants load failed");});
-}
-
-function mutantsLoaded(json){
-	mutants = json;
-	var robotLoadPromise = loadURL("data/robots.json");
-	robotLoadPromise.then(robotsLoaded);
-	robotLoadPromise.catch(function(){alert("robots load failed");});
-}
-
-function robotsLoaded(json){
-	robots = json;
-	var creaturesLoadPromise = loadURL("data/creatures.json");
-	creaturesLoadPromise.then(creaturesLoaded);
-	creaturesLoadPromise.catch(function(){alert("creatures load failed");});
-}
-
-function creaturesLoaded(json){
-	creatures = json;
-	var settlementLoadPromise = loadURL("data/settlement.json");
-	settlementLoadPromise.then(settlementLoaded);
-	settlementLoadPromise.catch(function(){alert("settlement load failed");});
-}
-
-function settlementLoaded(json){
-	settlement = json;
-	var instituteLoadPromise = loadURL("data/institute.json");
-	instituteLoadPromise.then(instituteLoaded);
-	instituteLoadPromise.catch(function(){alert("institute load failed");});
-}
-
-function instituteLoaded(json){
-	institute = json;
+function unitsLoaded(json){
+	units = json;
 	loadLocalization();
 }
 
@@ -138,39 +82,20 @@ function localizationLoaded(json){
 
 	var missingKeys = ""
 
-	bos.forEach(function(character){
+	units.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
 			missingKeys += character.name + ", ";
-		}
-	});
+		}else{
 
-	institute.forEach(function(character){
-		if(!loc.hasOwnProperty(character.name)){
-			missingKeys += character.name + ", ";
-		}
-	});
+			if(mappedUnits.hasOwnProperty(character.name)){
+				console.log("Multiple character entry: " + character.name);
+			}
 
-	raiders.forEach(function(character){
-		if(!loc.hasOwnProperty(character.name)){
-			missingKeys += character.name + ", ";
-		}
-	});
+			if(!character.hasOwnProperty("factions")){
+				console.log("" + character.name + " has no factions");
+			}
 
-	mutants.forEach(function(character){
-		if(!loc.hasOwnProperty(character.name)){
-			missingKeys += character.name + ", ";
-		}
-	});
-
-	survivors.forEach(function(character){
-		if(!loc.hasOwnProperty(character.name)){
-			missingKeys += character.name + ", ";
-		}
-	});
-
-	settlement.forEach(function(character){
-		if(!loc.hasOwnProperty(character.name)){
-			missingKeys += character.name + ", ";
+			mappedUnits[character.name] = character;
 		}
 	});
 
@@ -191,12 +116,6 @@ function localizationLoaded(json){
 }
 
 function initListeners(){
-	document.getElementById("switch-bos").addEventListener("click", switchBos, true);
-	document.getElementById("switch-mutants").addEventListener("click", switchMutants, true);
-	document.getElementById("switch-survivors").addEventListener("click", switchSurvivors, true);
-	document.getElementById("switch-raiders").addEventListener("click", switchRaiders, true);
-	document.getElementById("switch-institute").addEventListener("click", switchInstitute, true);
-	document.getElementById("switch-settlement").addEventListener("click", switchSettlement, true);
 
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
@@ -216,7 +135,7 @@ function initListeners(){
 	if(queryString.length > 1){
 		loadForceFromString(queryString[1]);
 	}else{
-		switchBos();
+		clearForce();
 	}
 }
 
@@ -248,42 +167,6 @@ function updateLanguage(json){
 	loadForceFromString(forceString);
 }
 
-function switchBos() {
-	characters = bos;
-	faction = "bos";
-	clearForce();
-}
-
-function switchMutants() {
-	characters = mutants;
-	faction = "mut";
-	clearForce();
-}
-
-function switchSurvivors() {
-	characters = survivors;
-	faction = "srv";
-	clearForce();
-}
-
-function switchRaiders() {
-	characters = raiders;
-	faction = "rdr";
-	clearForce();	
-}
-
-function switchInstitute() {
-	characters = institute;
-	faction = "ins";
-	clearForce();	
-}
-
-function switchSettlement() {
-	characters = settlement;
-	faction = "stl";
-	clearForce();	
-}
-
 function clearForce(){
 	forceSection.innerHTML = "";
 
@@ -302,13 +185,13 @@ function clearForce(){
 function buildAddSection() {
 	addSection.innerHTML = "";
 	var list = document.createElement("ul");
-	characters.forEach(function(characterElement){
+	units.forEach(function(characterElement){
 
 		var can_add = true;
 
 		if(characterElement.hasOwnProperty("unique_code")){
 			force.characters.forEach(function(otherChar){
-				var otherCharElement = getCharacterById(otherChar.id)
+				var otherCharElement = getCharacterById(otherChar.name)
 				if(otherCharElement.hasOwnProperty("unique_code") 
 					&& otherCharElement.unique_code == characterElement.unique_code){
 					can_add = false;
@@ -364,8 +247,8 @@ function buildExtraFactionSection(faction) {
 
 		var can_add = true;
 
-		characters.forEach(function(otherChar){
-			var otherCharElement = getCharacterById(otherChar.id)
+		units.forEach(function(otherChar){
+			var otherCharElement = getCharacterById(otherChar.name)
 			if(otherCharElement.name == characterElement.name){
 				can_add = false;
 			}
@@ -571,7 +454,8 @@ function removeModFromCharacter(character, modSlot){
 
 function addCharacter(characterElement, presetInfo){
 	var character = presetInfo;
-	character.id = characterElement.id;
+
+	character.name = characterElement.name;
 
 	var charaSection = document.createElement("div");
 	charaSection.setAttribute("class", "characterElement");
@@ -1577,10 +1461,7 @@ function updateCaps(){
 
 			var unitCost = 0;
 
-			var baseCost = getCharacterById(character.id).cost;
-			if(character.hasOwnProperty("faction_code")){
-				baseCost = getCharacterFromForceById(character.id, extra_faction).cost;
-			}
+			var baseCost = getCharacterById(character.name).cost;
 
 			unitCost += baseCost * modelCount;
 
@@ -1686,7 +1567,8 @@ function getStringForForce(){
 	}
 	if(force.hasOwnProperty("characters")){
 		force.characters.forEach(function(character) {
-			var charString = replaceAll(JSON.stringify(character),'"',"!");
+			var stringifiedChar = JSON.stringify(character);
+			var charString = replaceAll(stringifiedChar,'"',"!");
 			charString += ";";
 			forceString += charString;
 		});
@@ -1703,21 +1585,7 @@ function loadForceFromString(forceString){
 
 	var forceValue = objects[0].split("=")[1];
 
-	if(forceValue == "bos"){
-		switchBos();
-	}
-	if(forceValue == "mut"){
-		switchMutants();
-	}
-	if(forceValue == "srv"){
-		switchSurvivors();
-	}
-	if(forceValue == "rdr"){
-		switchRaiders();
-	}
-	if(forceValue == "stl"){
-		switchSettlement();
-	}
+	clearForce();
 
 	var listName = "";
 
@@ -1752,35 +1620,22 @@ function loadForceFromString(forceString){
 	for(var index = startIndex; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
-		if(characterData.hasOwnProperty("faction_code")){
-			if(characterData.faction_code == "c"){
-				addCharacter(getCharacterFromForceById(characterData.id, creatures), characterData);
-				return;
-			} else if(characterData.faction_code == "r"){
-				addCharacter(getCharacterFromForceById(characterData.id, robots), characterData);
-				return;
-			}
-			alert("Found out-of-faction character " +characterData.name + " with invalid faction code " + characterData.faction_code);
-		}
-		addCharacter(getCharacterById(characterData.id),characterData);
+		addCharacter(getCharacterById(characterData.name),characterData);
 	}
 }
 
 function getCharacterById(characterId){
-	for(var index = 0; index < characters.length; index++){
-		if(characters[index].id == characterId){
-			return characters[index];
-		}
-	}
-	return null;
-}
 
-function getCharacterFromForceById(characterId, force){
-	for(var index = 0; index < force.length; index++){
-		if(force[index].id == characterId){
-			return force[index];
+	if(mappedUnits.hasOwnProperty(characterId)){
+		return mappedUnits[characterId];
+	}
+
+	for(var index = 0; index < units.length; index++){
+		if(units[index].name == characterId){
+			return units[index];
 		}
 	}
+	console.log("Could not find character type with ID " + characterId);
 	return null;
 }
 
