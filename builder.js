@@ -1391,6 +1391,8 @@ function setLeader(character){
 	}
 	force.leader.leaderIndex = newLeaderIndex;
 
+	faction = getCharacterById(character.name).factions[0];
+
 	var activeSections = document.getElementsByClassName("activeLeaderSection");
 	var inactiveSections = document.getElementsByClassName("inactiveLeaderSection");
 
@@ -1410,18 +1412,18 @@ function updateCaps(){
 	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
 	var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"];
 
-	var extra_faction_code = "";
-	var extra_faction;
+	var filtered_factions = [];
 
-	if(force.hasOwnProperty("leader")){
+	if(force.hasOwnProperty("leader") && force.leader.leaderIndex >= 0 && force.characters.length > force.leader.leaderIndex){
+		var leaderCharacter = getCharacterById(force.characters[force.leader.leaderIndex].name);
+		filtered_factions.push(leaderCharacter.factions[0]);
+		faction = leaderCharacter.factions[0];
 		var leaderPerk = upgrades.heroes_and_leaders[force.leader.perkIndex];
 		if(leaderPerk.name == "creature_controller"){
-			extra_faction_code = "c";
-			extra_faction = creatures;
+			filtered_factions.push("crt");
 		}
 		if(leaderPerk.name == "robot_controller"){
-			extra_faction_code = "r";
-			extra_faction = robots;
+			filtered_factions.push("rbt");
 		}
 	}
 
@@ -1475,7 +1477,7 @@ function updateCaps(){
 			}
 
 
-			if(character.hasOwnProperty("faction_code") && character.faction_code != extra_faction_code){
+			if(false){ //TODO" Faction checking
 				var faction_warning = document.createTextNode("THIS UNIT IS NOT ALLOWED IN THE CURRENT FACTION");
 				warningSection.appendChild(faction_warning);
 			}
@@ -1581,13 +1583,6 @@ function loadForceFromString(forceString){
 		startIndex = 3;
 		force.leader.leaderIndex = parseInt(leaderInfo[0]);
 		force.leader.perkIndex = parseInt(leaderInfo[1]);
-
-		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "creature_controller"){
-			//TODO: Add extra faction support
-		}
-		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "robot_controller"){
-			//TODO: add extra faction support
-		}
 	}else{
 		force.leader.leaderIndex = -1;
 		force.leader.perkIndex = 0;
@@ -1597,6 +1592,10 @@ function loadForceFromString(forceString){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
 		addCharacter(getCharacterById(characterData.name),characterData);
+
+		if(force.leader.leaderIndex == index){
+			faction = characterData.factions[0];
+		}
 	}
 }
 
