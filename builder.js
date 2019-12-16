@@ -17,6 +17,17 @@ var totalCaps;
 var faction;
 var force;
 
+var appliedFilters = [];
+var possibleFilters = [
+	"bos",
+	"crt",
+	"ins",
+	"mut",
+	"rdr",
+	"rbt",
+	"srv"
+]
+
 function getUrl(url){
 	var req = new XMLHttpRequest();
 	req.open("GET",url,true);
@@ -189,9 +200,16 @@ function clearForce(){
 
 function buildAddSection() {
 	addSection.innerHTML = "";
+	var filters = buildFiltersSection();
+
 	var list = document.createElement("ul");
 	units.forEach(function(characterElement){
 		var can_add = true;
+
+		if(appliedFilters.length > 0 && characterElement.hasOwnProperty("factions") && !characterElement.factions.includes(appliedFilters[0])){
+			return;
+		}
+
 		if(characterElement.hasOwnProperty("unique_code")){
 			force.characters.forEach(function(otherChar){
 				var otherCharElement = getCharacterById(otherChar.name)
@@ -226,12 +244,37 @@ function buildAddSection() {
 	var descriptionSpan = document.createElement("span");
 	descriptionSpan.appendChild(document.createTextNode(loc["characters"]));
 	addSection.appendChild(descriptionSpan);
+	addSection.appendChild(filters);
 	addSection.appendChild(list);
 	if(addSectionOpen){
 		openAddSection();
 	}else{
 		closeAddSection();
 	}
+}
+
+function buildFiltersSection(){
+	var filtersSection = document.createElement("div");
+	var list = document.createElement("ul");
+	possibleFilters.forEach(function(filter){
+		var filterEntry = document.createElement("li");
+		filterEntry.appendChild(document.createTextNode(loc[filter]));
+		filterEntry.addEventListener("click", function() {
+			toggleFilter(filter);
+		});
+		list.appendChild(filterEntry);
+	});
+	filtersSection.appendChild(list);
+	return filtersSection;
+}
+
+function toggleFilter(filter){
+	if(appliedFilters.includes(filter)){
+		appliedFilters = [];
+	}else{
+		appliedFilters = [filter];
+	}
+	buildAddSection();
 }
 
 function closeAddSection(){

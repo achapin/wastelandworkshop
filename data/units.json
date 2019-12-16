@@ -79,7 +79,7 @@
   },
   {
     "name": "eyebot",
-    "factions": ["bos","rob","srv"],
+    "factions": ["bos","rbt","srv"],
     "must_carry": [
       "pistols.eyebot_laser"
     ],
