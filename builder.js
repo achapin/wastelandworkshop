@@ -5,8 +5,6 @@ var mappedUnits = {};
 var sortedUnitNames = [];
 
 var forceSection;
-var addButton;
-var closeAddButton;
 var addSection;
 var capsSection;
 
@@ -137,15 +135,11 @@ function initListeners(){
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
 
+
+
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
-	addButton = document.getElementById("addButton");
-	closeAddButton = document.getElementById("closeAddButton");
 	capsSection = document.getElementById("caps");
-	addButton.addEventListener("click", openAddSection);
-	closeAddButton.addEventListener("click", closeAddSection);
-
-	addSectionOpen = true;
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
@@ -203,7 +197,7 @@ function buildAddSection() {
 	var filters = buildFiltersSection();
 
 	var characterList = document.createElement("div");
-	characterList.setAttribute("class", "row");
+	characterList.setAttribute("class", "characters row");
 	var list = document.createElement("ul");
 	characterList.appendChild(list);
 	units.forEach(function(characterElement){
@@ -246,11 +240,6 @@ function buildAddSection() {
 
 	addSection.appendChild(filters);
 	addSection.appendChild(characterList);
-	if(addSectionOpen){
-		openAddSection();
-	}else{
-		closeAddSection();
-	}
 }
 
 function buildFiltersSection(){

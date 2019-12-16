@@ -469,11 +469,11 @@
   "strong":"Strong",
   "vault_dweller":"Vault Dweller",
   "vault_security_officer":"Vault Security Officer",
-  "bos":"Brotherhood of Steel",
-  "crt":"Creatures",
-  "ins":"Institute",
-  "mut":"Super Mutants",
+  "bos":"Stahlmannschaft",
+  "crt":"Tierwelt",
+  "ins":"Das Institute",
+  "mut":"Die Super Mutants",
   "rdr":"Raiders",
-  "rbt":"Robots",
-  "srv":"Survivors"
+  "rbt":"Roboten",
+  "srv":"Survivoren"
 }

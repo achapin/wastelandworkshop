@@ -396,7 +396,12 @@ td {
 	padding: .15em 1em;
 }
 
-.filters{
+.characters  {
+	margin: 0px;
+}
+
+.filters {
+	margin: 0px;
 }
 
 .filter-active {
