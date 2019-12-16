@@ -202,7 +202,10 @@ function buildAddSection() {
 	addSection.innerHTML = "";
 	var filters = buildFiltersSection();
 
+	var characterList = document.createElement("div");
+	characterList.setAttribute("class", "row");
 	var list = document.createElement("ul");
+	characterList.appendChild(list);
 	units.forEach(function(characterElement){
 		var can_add = true;
 
@@ -241,11 +244,8 @@ function buildAddSection() {
 		list.appendChild(para);
 	});
 
-	var descriptionSpan = document.createElement("span");
-	descriptionSpan.appendChild(document.createTextNode(loc["characters"]));
-	addSection.appendChild(descriptionSpan);
 	addSection.appendChild(filters);
-	addSection.appendChild(list);
+	addSection.appendChild(characterList);
 	if(addSectionOpen){
 		openAddSection();
 	}else{
@@ -255,9 +255,11 @@ function buildAddSection() {
 
 function buildFiltersSection(){
 	var filtersSection = document.createElement("div");
+	filtersSection.setAttribute("class", "filters row");
 	var list = document.createElement("ul");
 	possibleFilters.forEach(function(filter){
 		var filterEntry = document.createElement("li");
+		filterEntry.setAttribute("class", appliedFilters.includes(filter) ? "filter-active" : "filter-inactive");
 		filterEntry.appendChild(document.createTextNode(loc[filter]));
 		filterEntry.addEventListener("click", function() {
 			toggleFilter(filter);

@@ -395,3 +395,14 @@ table {
 td {
 	padding: .15em 1em;
 }
+
+.filters{
+}
+
+.filter-active {
+	font-size: 1.25em;
+}
+
+.filter-inactive {
+	font-size: 1.25em;
+}
