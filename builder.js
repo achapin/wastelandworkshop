@@ -2,6 +2,7 @@ var loc;
 var upgrades;
 var units;
 var mappedUnits = {};
+var sortedUnitNames = [];
 
 var forceSection;
 var addButton;
@@ -73,7 +74,7 @@ function loadLocalization(){
 		document.getElementById("languageSelection").value = "en";
 		engLoadPromise.then(localizationLoaded);
 		engLoadPromise.catch(function(){alert("English localization load failed. Now you're really hosed!");});
-	});
+	});	
 }
 
 function localizationLoaded(json){
@@ -109,9 +110,15 @@ function localizationLoaded(json){
 		});
 	});
 
+	units.sort(orderUnitsByLocalizedName);
+
 	console.log("Missing LOC keys: " + missingKeys);
 
 	initListeners();
+}
+
+function orderUnitsByLocalizedName(unitOne, unitTwo){
+	return loc[unitOne.name].localeCompare(loc[unitTwo.name]);
 }
 
 function initListeners(){
@@ -184,9 +191,7 @@ function buildAddSection() {
 	addSection.innerHTML = "";
 	var list = document.createElement("ul");
 	units.forEach(function(characterElement){
-
 		var can_add = true;
-
 		if(characterElement.hasOwnProperty("unique_code")){
 			force.characters.forEach(function(otherChar){
 				var otherCharElement = getCharacterById(otherChar.name)
