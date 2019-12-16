@@ -8,7 +8,6 @@ var addButton;
 var closeAddButton;
 var addSection;
 var capsSection;
-var extraFactionSection;
 
 var lastTextFieldValue;
 var addSectionOpen;
@@ -122,7 +121,6 @@ function initListeners(){
 
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
-	extraFactionSection = document.getElementById("extraFactionSection");
 	addButton = document.getElementById("addButton");
 	closeAddButton = document.getElementById("closeAddButton");
 	capsSection = document.getElementById("caps");
@@ -231,61 +229,9 @@ function buildAddSection() {
 	}
 }
 
-function buildExtraFactionSection(faction) {
-	clearExtraFactionSection();
-
-	var faction_code = "";
-	if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "creature_controller"){
-		faction_code = "c";
-	}
-	if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "robot_controller"){
-		faction_code = "r";
-	}
-
-	var list = document.createElement("ul");
-	faction.forEach(function(characterElement){
-
-		var can_add = true;
-
-		units.forEach(function(otherChar){
-			var otherCharElement = getCharacterById(otherChar.name)
-			if(otherCharElement.name == characterElement.name){
-				can_add = false;
-			}
-		});
-
-		if(can_add) {
-			var para = document.createElement("li");
-			var button = document.createElement("button");
-			button.setAttribute("class", "btn btn-background choice");
-			var nameSpan = document.createElement("span");
-			var nameNode = document.createTextNode(loc[characterElement.name]);
-			nameSpan.appendChild(nameNode);
-			var pointsSpan = document.createElement("span");
-			pointsSpan.setAttribute("class", "cost");
-			var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
-			pointsSpan.appendChild(pointsNode);
-
-			characterElement.faction_code = faction_code;
-			button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
-
-			button.appendChild(nameSpan);
-			button.appendChild(pointsSpan);
-			para.appendChild(button);
-			list.appendChild(para);
-		}
-	});
-	extraFactionSection.appendChild(list);
-}
-
-function clearExtraFactionSection(){
-	extraFactionSection.innerHTML = "";
-}
-
 function closeAddSection(){
 	addSectionOpen = false;
 	addSection.style.display = "none";
-	extraFactionSection.style.display = "none";
 	addButton.style.display = "block";
 	closeAddButton.style.display = "none";
 }
@@ -294,7 +240,6 @@ function openAddSection(){
 	addSectionOpen = true;
 	addButton.style.display = "none";
 	addSection.style.display = "block";
-	extraFactionSection.style.display = "block";
 	closeAddButton.style.display = "block";
 }
 
@@ -690,7 +635,6 @@ function addCharacter(characterElement, presetInfo){
 			}
 			if(force.leader.leaderIndex == index){
 				delete(force.leader)
-				clearExtraFactionSection();
 			}
 		}
 		updateCaps();
@@ -1372,13 +1316,6 @@ function addLeaderSection(domElement, character){
 			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
 		}
 
-		clearExtraFactionSection();
-		if(perkDropdown.value == "creature_controller"){
-			buildExtraFactionSection(creatures);
-		}else if(perkDropdown.value == "robot_controller"){
-			buildExtraFactionSection(robots);
-		}
-
 		updateCaps();
 	};
 	activeLeaderSection.appendChild(perkDropdown);
@@ -1607,10 +1544,10 @@ function loadForceFromString(forceString){
 		force.leader.perkIndex = parseInt(leaderInfo[1]);
 
 		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "creature_controller"){
-			buildExtraFactionSection(creatures);
+			//TODO: Add extra faction support
 		}
 		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "robot_controller"){
-			buildExtraFactionSection(robots);
+			//TODO: add extra faction support
 		}
 	}else{
 		force.leader.leaderIndex = -1;
