@@ -80,6 +80,7 @@
   {
     "name": "eyebot",
     "factions": ["bos","rbt","srv"],
+    "tags":["robot"],
     "must_carry": [
       "pistols.eyebot_laser"
     ],
@@ -1164,6 +1165,7 @@
   {
     "name": "assaultron",
     "factions": ["rbt"],
+    "tags":["robot"],
     "must_carry": [
       "rifles.assaultron_head_laser",
       "melee.assaultron_swipe"
@@ -1173,6 +1175,7 @@
   {
     "name": "battered_assaultron",
     "factions": ["rbt"],
+    "tags":["robot"],
     "must_carry": [
       "rifles.battered_assaultron_head_laser",
       "melee.assaultron_swipe"
@@ -1182,6 +1185,7 @@
   {
     "name": "battered_protectron",
     "factions": ["rbt"],
+    "tags":["robot"],
     "must_carry": [
       "pistols.protectron_hand_laser"
     ],
@@ -1190,6 +1194,7 @@
   {
     "name": "battered_sentry_bot",
     "factions": ["rbt"],
+    "tags":["robot"],
     "must_carry": [
       "melee.empty_minigun",
       "heavy_weapons.missile_launcher"
@@ -1199,6 +1204,7 @@
   {
     "name": "mr_handy",
     "factions": ["rbt","srv"],
+    "tags":["robot"],
     "must_carry": [
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
@@ -1208,6 +1214,7 @@
   {
     "name": "protectron",
     "factions": ["rbt"],
+    "tags":["robot"],
     "must_carry": [
       "pistols.protectron_hand_laser"
     ],
@@ -1216,6 +1223,7 @@
   {
     "name": "sentry_bot",
     "factions": ["rbt"],
+    "tags":["robot"],
     "must_carry": [
       "heavy_weapons.minigun",
       "heavy_weapons.missile_launcher"
@@ -1227,6 +1235,7 @@
     "unique_code": "aviator",
     "heroic": true,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "must_wear": [
       "clothing.aviator_cap"
     ],
@@ -1261,6 +1270,7 @@
     "name": "behemoth",
     "cost": 245,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "melee": [
         "fire_hydrant_bat"
@@ -1274,6 +1284,7 @@
     "name": "brute",
     "heroic": true,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "heavy_weapons": [
         "gatling_laser",
@@ -1347,6 +1358,7 @@
     "unique_code": "fist",
     "heroic": true,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "heavy_weapons": [
         "minigun"
@@ -1375,6 +1387,7 @@
     "unique_code": "hammer",
     "heroic": true,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "heavy_weapons": [
         "missile_launcher"
@@ -1412,6 +1425,7 @@
     "name": "master",
     "heroic": true,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "heavy_weapons": [
         "gatling_laser",
@@ -1468,6 +1482,7 @@
     "name": "overlord",
     "heroic": true,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "heavy_weapons": [
         "junk_jet",
@@ -1510,6 +1525,7 @@
     "name": "skirmisher",
     "heroic": true,
     "factions": ["mut"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "pistols": [
         "bolt_action_pipe_pistol",
@@ -1537,6 +1553,7 @@
     "unique_code": "strong",
     "heroic": true,
     "factions": ["mut", "srv"],
+    "tags":["super_mutant"],
     "carry_slots": {
       "heavy_weapons":[
         "missile_launcher"
@@ -1633,6 +1650,7 @@
     "name": "codsworth",
     "unique_code": "codsworth",
     "factions": ["srv"],
+    "tags":["robot"],
     "must_carry": [
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
@@ -1642,6 +1660,7 @@
   {
     "name": "dog",
     "factions": ["crt", "srv"],
+    "tags":["dog"],
     "must_carry": [
       "melee.dog_bite"
     ],
@@ -1650,6 +1669,7 @@
   {
     "name": "dogmeat",
     "factions": ["srv"],
+    "tags":["dog"],
     "unique_code": "dogmeat",
     "must_carry": [
       "melee.dog_bite"
@@ -1660,6 +1680,7 @@
     "name": "dogmeat_guard_dog",
     "unique_code": "dogmeat",
     "factions": ["srv"],
+    "tags":["dog"],
     "must_carry": [
       "melee.dog_bite"
     ],
@@ -1669,6 +1690,7 @@
     "name": "dogmeat_scout",
     "unique_code": "dogmeat",
     "factions": ["srv"],
+    "tags":["dog"],
     "must_carry": [
       "melee.dog_bite"
     ],
