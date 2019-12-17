@@ -406,8 +406,15 @@ td {
 
 .filter-active {
 	font-size: 1.25em;
+	color: rgb(40,65,129);
+	background-color: rgb(231, 189, 66);
+	border-radius: 10px 10px 0px 0px;
+	margin-left: .5em;
+	margin-right: .5em;
 }
 
 .filter-inactive {
 	font-size: 1.25em;
+	margin-left: .5em;
+	margin-right: .5em;
 }
