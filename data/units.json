@@ -32,6 +32,19 @@
         "pulse_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 105
   },
   {
@@ -75,6 +88,20 @@
         "pulse_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 140
   },
   {
@@ -83,6 +110,9 @@
     "tags":["robot"],
     "must_carry": [
       "pistols.eyebot_laser"
+    ],
+    "settlment_mode_slots":[
+      "gear"
     ],
     "cost": 45
   },
@@ -102,6 +132,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 43
   },
   {
@@ -120,6 +164,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 41
   },
   {
@@ -157,6 +215,20 @@
         "ripper"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "consumables": {
       "thrown": [
         "cryo_grenade",
@@ -230,6 +302,20 @@
         "fragmentation_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 40
   },
   {
@@ -257,6 +343,20 @@
         "fragmentation_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 38
   },
   {
@@ -300,6 +400,20 @@
         "pulse_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 66
   },
   {
@@ -312,6 +426,20 @@
         "plasma_rifle"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 60
   },
   {
@@ -347,6 +475,20 @@
         "pulse_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 88
   },
   {
@@ -391,6 +533,20 @@
         "pulse_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 90
   },
   {
@@ -433,20 +589,38 @@
         "pulse_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 118
   },
   {
     "name": "alien",
     "factions": ["crt"],
     "must_carry": [
-      "pistols.alien_blaster"],
+      "pistols.alien_blaster"
+    ],
+    "settlment_mode_slots":[],
     "cost": 70
   },
   {
     "name": "bloated_glowing_one",
     "factions": ["crt"],
     "must_carry": [
-      "melee.bloated_glowing_one_swipe"],
+      "melee.bloated_glowing_one_swipe"
+    ],
+    "settlment_mode_slots":[],
     "cost": 220
   },
   {
@@ -456,6 +630,7 @@
       "melee.deathclaw_crush",
       "melee.deathclaw_swipe"
     ],
+    "settlment_mode_slots":[],
     "cost": 295
   },
   {
@@ -464,6 +639,7 @@
     "must_carry": [
       "melee.feral_ghoul_swipe"
     ],
+    "settlment_mode_slots":[],
     "cost": 50
   },
   {
@@ -472,6 +648,7 @@
     "must_carry": [
       "melee.radroach_swarm_bite"
     ],
+    "settlment_mode_slots":[],
     "cost": 40
   },
   {
@@ -480,6 +657,7 @@
     "must_carry": [
       "melee.mole_rat_bite"
     ],
+    "settlment_mode_slots":[],
     "cost": 14
   },
   {
@@ -488,6 +666,7 @@
     "must_carry": [
       "melee.putrid_glowing_one_swipe"
     ],
+    "settlment_mode_slots":[],
     "cost": 210
   },
   {
@@ -496,6 +675,7 @@
     "must_carry": [
       "melee.radroach_swarm_bite"
     ],
+    "settlment_mode_slots":[],
     "cost": 17
   },
   {
@@ -504,6 +684,7 @@
     "must_carry": [
       "melee.radscorpion_pincers_and_sting"
     ],
+    "settlment_mode_slots":[],
     "cost": 90
   },
   {
@@ -512,6 +693,7 @@
     "must_carry": [
       "melee.weak_feral_ghoul_swipe"
     ],
+    "settlment_mode_slots":[],
     "cost": 28
   },
   {
@@ -521,6 +703,7 @@
       "melee.young_deathclaw_crush",
       "melee.young_deathclaw_swipe"
     ],
+    "settlment_mode_slots":[],
     "cost": 125
   },
   {
@@ -557,6 +740,20 @@
         "synth_relay_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 107
   },
   {
@@ -570,6 +767,20 @@
         "baton"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 25
   },
   {
@@ -601,6 +812,20 @@
         "stealth_boy"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 87
   },
   {
@@ -633,6 +858,20 @@
         "synth_relay_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 138
   },
   {
@@ -652,6 +891,20 @@
         "stun_baton"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 43
   },
   {
@@ -669,6 +922,20 @@
         "stun_baton"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 35
   },
   {
@@ -694,6 +961,20 @@
         "synth_relay_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 77
   },
   {
@@ -713,6 +994,20 @@
         "stun_baton"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 30
   },
   {
@@ -738,6 +1033,20 @@
         "synth_relay_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 88
   },
   {
@@ -763,6 +1072,20 @@
         "stun_baton"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 152
   },
   {
@@ -786,6 +1109,20 @@
         "synth_relay_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 118
   },
   {
@@ -832,6 +1169,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 98
   },
   {
@@ -868,6 +1219,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 85
   },
   {
@@ -896,6 +1261,20 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 45
   },
   {
@@ -924,6 +1303,20 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 44
   },
   {
@@ -960,6 +1353,20 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 39
   },
   {
@@ -996,6 +1403,20 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 39
   },
   {
@@ -1034,6 +1455,20 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 60
   },
   {
@@ -1072,6 +1507,20 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 59
   },
   {
@@ -1108,6 +1557,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 88
   },
   {
@@ -1160,6 +1623,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 85
   },
   {
@@ -1170,6 +1647,7 @@
       "rifles.assaultron_head_laser",
       "melee.assaultron_swipe"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 320
   },
   {
@@ -1180,6 +1658,7 @@
       "rifles.battered_assaultron_head_laser",
       "melee.assaultron_swipe"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 145
   },
   {
@@ -1189,6 +1668,7 @@
     "must_carry": [
       "pistols.protectron_hand_laser"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 20
   },
   {
@@ -1199,6 +1679,7 @@
       "melee.empty_minigun",
       "heavy_weapons.missile_launcher"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 130
   },
   {
@@ -1209,6 +1690,7 @@
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 70
   },
   {
@@ -1218,6 +1700,7 @@
     "must_carry": [
       "pistols.protectron_hand_laser"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 30
   },
   {
@@ -1228,6 +1711,7 @@
       "heavy_weapons.minigun",
       "heavy_weapons.missile_launcher"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 310
   },
   {
@@ -1264,6 +1748,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 88
   },
   {
@@ -1278,7 +1775,20 @@
       "thrown": [
         "behemoth_rock_throw"
       ]
-    }
+    },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ]
   },
   {
     "name": "brute",
@@ -1319,6 +1829,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 87
   },
   {
@@ -1351,6 +1874,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 35
   },
   {
@@ -1380,6 +1917,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 79
   },
   {
@@ -1419,6 +1969,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 105
   },
   {
@@ -1460,6 +2023,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 100
   },
   {
@@ -1468,6 +2044,7 @@
     "must_carry": [
       "melee.hound_bite"
     ],
+    "settlment_mode_slots":[],
     "cost": 63
   },
   {
@@ -1476,6 +2053,7 @@
     "must_carry": [
       "melee.hound_bite"
     ],
+    "settlment_mode_slots":[],
     "cost": 65
   },
   {
@@ -1519,6 +2097,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 155
   },
   {
@@ -1546,6 +2137,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 49
   },
   {
@@ -1577,6 +2181,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 90
   },
   {
@@ -1584,6 +2201,19 @@
     "factions": ["mut"],
     "must_carry": [
       "thrown.suicider_mini_nuke"
+    ],
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
     ],
     "cost": 55
   },
@@ -1615,6 +2245,19 @@
         "molotov_cocktail"
       ]
     },
+    "settlment_mode_slots":[
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 40
   },
   {
@@ -1644,6 +2287,20 @@
     "must_carry": [
       "chems.psycho"
     ],
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 77
   },
   {
@@ -1655,6 +2312,7 @@
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
     ],
+    "settlment_mode_slots":["gear"],
     "cost": 90
   },
   {
@@ -1664,6 +2322,7 @@
     "must_carry": [
       "melee.dog_bite"
     ],
+    "settlment_mode_slots":["armor", "clothing", "gear"],
     "cost": 90
   },
   {
@@ -1674,6 +2333,7 @@
     "must_carry": [
       "melee.dog_bite"
     ],
+    "settlment_mode_slots":["armor", "clothing", "gear"],
     "cost": 110
   },
   {
@@ -1684,6 +2344,7 @@
     "must_carry": [
       "melee.dog_bite"
     ],
+    "settlment_mode_slots":["armor", "clothing", "gear"],
     "cost": 95
   },
   {
@@ -1694,6 +2355,7 @@
     "must_carry": [
       "melee.dog_bite"
     ],
+    "settlment_mode_slots":["armor", "clothing", "gear"],
     "cost": 100
   },
   {
@@ -1717,6 +2379,20 @@
         "machete"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 61
   },
   {
@@ -1735,6 +2411,20 @@
     "must_carry": [
       "chems.jet",
       "chems.mentats"
+    ],
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
     ],
     "cost": 85
   },
@@ -1778,6 +2468,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 57
   },
   {
@@ -1798,6 +2502,20 @@
         "stun_baton"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 90
   },
   {
@@ -1816,6 +2534,20 @@
         "nuka_cherry"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 85
   },
   {
@@ -1847,6 +2579,20 @@
         "fragmentation_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 76
   },
   {
@@ -1886,6 +2632,20 @@
         "fragmentation_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 124
   },
   {
@@ -1924,6 +2684,20 @@
         "fragmentation_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 114
   },
   {
@@ -1965,6 +2739,20 @@
         "fragmentation_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 42
   },
   {
@@ -1996,6 +2784,20 @@
         "pipe_wrench"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 40
   },
   {
@@ -2077,6 +2879,20 @@
         "pulse_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 103
   },
   {
@@ -2132,6 +2948,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 81
   },
   {
@@ -2210,6 +3040,20 @@
         "pulse_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 123
   },
   {
@@ -2289,6 +3133,20 @@
         "pulse_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 85
   },
   {
@@ -2330,6 +3188,20 @@
         "pulse_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 92
   },
   {
@@ -2351,6 +3223,20 @@
         "fragmentation_grenade"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 34
   },
   {
@@ -2379,6 +3265,20 @@
         "fragmentation_mine"
       ]
     },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
     "cost": 40
   }
 ]
