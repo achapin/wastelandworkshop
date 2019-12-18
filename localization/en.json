@@ -488,5 +488,7 @@
     "mut":"Super Mutants",
     "rdr":"Raiders",
     "rbt":"Robots",
-    "srv":"Survivors"
+    "srv":"Survivors",
+    "settlement_mode":"Settlement Mode",
+    "battle_mode":"Battle Mode"
 }

@@ -15,6 +15,8 @@ var totalCaps;
 var faction;
 var force;
 
+var settlementMode;
+
 var appliedFilters = [];
 var possibleFilters = [
 	"bos",
@@ -25,6 +27,10 @@ var possibleFilters = [
 	"rbt",
 	"srv"
 ]
+
+var wear_slots = ["armor","power_armor", "clothing"]; //Exclusive choice
+var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee", "gear"]; //Multiple-choice single-instance
+var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"]; //Multiple-choice multiple-instance
 
 function getUrl(url){
 	var req = new XMLHttpRequest();
@@ -186,10 +192,17 @@ function clearForce(){
 	force.leader.perkIndex = 0;
 	force.characters = [];
 
+	settlementMode = false;
+
 	buildAddSection();
 
 	totalCaps = 0;
 	updateCaps();
+}
+
+function setSettlementMode(nowSettlementMode){
+	settlementMode = nowSettlementMode;
+	//TODO: Rebuild any existing character entries
 }
 
 function buildAddSection() {
@@ -252,10 +265,30 @@ function buildFiltersSection(){
 		filterEntry.appendChild(document.createTextNode(loc[filter]));
 		filterEntry.addEventListener("click", function() {
 			toggleFilter(filter);
+			if(typeof(faction) === "undefined" || !force.hasOwnProperty("characters") || force.characters.length <= 0){
+				faction = filter;
+				updateCaps();
+			}
 		});
 		list.appendChild(filterEntry);
 	});
 	filtersSection.appendChild(list);
+
+	var settlementModeButton = document.createElement("button");
+	if(settlementMode){
+		settlementModeButton.setAttribute("class", "settlement_mode_enabled");
+		settlementModeButton.appendChild(document.createTextNode(loc["settlement_mode"]));
+	}else{
+		settlementModeButton.setAttribute("class", "settlement_mode_disabled");
+		settlementModeButton.appendChild(document.createTextNode(loc["battle_mode"]));
+	}
+	settlementModeButton.addEventListener("click", function(){
+		settlementMode = !settlementMode;
+		loadForceFromString(getStringForForce());
+	})
+
+	list.appendChild(settlementModeButton);
+
 	return filtersSection;
 }
 
@@ -465,10 +498,6 @@ function addCharacter(characterElement, presetInfo){
 	close.appendChild(closeButton);
 	headerLeftSection.appendChild(close);
 
-	if(characterElement.hasOwnProperty("faction_code")){
-		character.faction_code = characterElement.faction_code;
-	}
-
 	if(!characterElement.hasOwnProperty("unique_code")){
 		var copy = document.createElement("button");
 		var copyButton = document.createTextNode("+");
@@ -623,33 +652,11 @@ function addCharacter(characterElement, presetInfo){
 	var perkSection = getPerkSection(character);
 	equipmentSection.appendChild(perkSection);
 
-	if(characterElement.wear_slots != null){
-		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
-			var wearSection = getWearSection(character, characterElement.wear_slots[slotType], slotType);
-			equipmentSection.appendChild(wearSection);
-		});
+	if(settlementMode){
+		addSettlementModeSlots(characterElement, character, equipmentSection);
+	}else{
+		addBattleModeSlots(characterElement, character, equipmentSection);
 	}
-
-	if(characterElement.carry_slots != null){
-		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
-			var carrySection = getCarrySection(character, characterElement.carry_slots[slotType], slotType);
-			equipmentSection.appendChild(carrySection);
-		});
-	}
-
-	var unitUpgradesHeader = document.createElement("h1");
-	unitUpgradesHeader.appendChild(document.createTextNode(loc["unit_upgrades"]));
-	equipmentSection.appendChild(unitUpgradesHeader);
-
-	if(characterElement.consumables != null){
-		Object.keys(characterElement.consumables).forEach(function (slotType) {
-			var consumeableSection = getConsumeableSection(character, characterElement, slotType);
-			equipmentSection.appendChild(consumeableSection);
-		});
-	}
-
-	var chemsSection = getConsumeableSection(character, characterElement, "chems");
-	equipmentSection.appendChild(chemsSection);
 
 	showEquipment.addEventListener("click", function() {
 		showEquipment.style.display = "none";
@@ -702,6 +709,62 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function addSettlementModeSlots(characterElement, character, equipmentSection){
+	var firstConsumableSection = true;
+	characterElement.settlment_mode_slots.forEach(function(slotType){
+		if(wear_slots.includes(slotType)){
+			var wearSection = getWearSection(character, [], slotType);
+			equipmentSection.appendChild(wearSection);
+		}
+		if(carry_slots.includes(slotType)){
+			var carrySection = getCarrySection(character, [], slotType);
+			equipmentSection.appendChild(carrySection);
+		}
+		if(consumable_slots.includes(slotType)){
+			if(firstConsumableSection){
+				addUnitUpgradesHeader(equipmentSection);
+				firstConsumableSection = false;
+			}
+			var consumeableSection = getConsumeableSection(character, [], slotType);
+			equipmentSection.appendChild(consumeableSection);	
+		}
+	})
+}
+
+function addBattleModeSlots(characterElement, character, equipmentSection){
+	if(characterElement.wear_slots != null){
+		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
+			var wearSection = getWearSection(character, characterElement.wear_slots[slotType], slotType);
+			equipmentSection.appendChild(wearSection);
+		});
+	}
+
+	if(characterElement.carry_slots != null){
+		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
+			var carrySection = getCarrySection(character, characterElement.carry_slots[slotType], slotType);
+			equipmentSection.appendChild(carrySection);
+		});
+	}
+
+	addUnitUpgradesHeader(equipmentSection);
+
+	if(characterElement.consumables != null){
+		Object.keys(characterElement.consumables).forEach(function (slotType) {
+			var consumeableSection = getConsumeableSection(character, characterElement, slotType);
+			equipmentSection.appendChild(consumeableSection);
+		});
+	}
+
+	var chemsSection = getConsumeableSection(character, characterElement, "chems");
+	equipmentSection.appendChild(chemsSection);
+}
+
+function addUnitUpgradesHeader(equipmentSection){
+	var unitUpgradesHeader = document.createElement("h1");
+	unitUpgradesHeader.appendChild(document.createTextNode(loc["unit_upgrades"]));
+	equipmentSection.appendChild(unitUpgradesHeader);
 }
 
 function getConsumeableSection(character, characterElement, slotType){
@@ -1408,10 +1471,6 @@ function updateCaps(){
 
 	totalCaps = 0;
 
-	var wear_slots = ["armor","power_armor", "clothing"];
-	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
-	var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"];
-
 	var filtered_factions = [];
 
 	if(force.hasOwnProperty("leader") && force.leader.leaderIndex >= 0 && force.characters.length > force.leader.leaderIndex){
@@ -1538,6 +1597,11 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
+	if(settlementMode){
+		forceString += "s=y;";
+	}else{
+		forceString += "s=n;";
+	}
 	if(force.hasOwnProperty("leader")){
 		forceString += "l=" + force.leader.leaderIndex + "," + force.leader.perkIndex + ";";
 	}else{
@@ -1563,24 +1627,30 @@ function loadForceFromString(forceString){
 
 	var forceValue = objects[0].split("=")[1];
 
+	if(typeof(forceValue) !== undefined){
+		appliedFilters = [forceValue];
+	}
+
 	clearForce();
 
 	var listName = "";
 
 	if(objects[1].length > 2){
 		listName = decodeURIComponent(objects[1].split("=")[1]);
-	}		
+	}
 	document.getElementById("listNameArea").value = listName;
+
+	settlementMode = objects[2].split("=")[1] == "y";
 
 	force = {};
 	force.leader = {};
 	force.characters = [];
 
-	var startIndex = 2;
+	var startIndex = 3;
 
-	var leaderInfo = objects[2].split("=")[1].split(",");
+	var leaderInfo = objects[3].split("=")[1].split(",");
 	if(leaderInfo.length == 2){
-		startIndex = 3;
+		startIndex = 4;
 		force.leader.leaderIndex = parseInt(leaderInfo[0]);
 		force.leader.perkIndex = parseInt(leaderInfo[1]);
 	}else{

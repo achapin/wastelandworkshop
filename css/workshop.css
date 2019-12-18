@@ -418,3 +418,15 @@ td {
 	margin-left: .5em;
 	margin-right: .5em;
 }
+
+.settlement_mode_enabled{
+	margin-top: .5em;
+	color: rgb(40,65,129);
+	background-color: rgb(231, 189, 66);
+}
+
+.settlement_mode_disabled{
+	margin-top: .5em;
+	background-color: rgb(40,65,129);
+	color: rgb(231, 189, 66);
+}
