@@ -1160,7 +1160,7 @@
   {
     "id": 60,
     "name": "sole_survivor_tech",
-    "unique_code": "sole_survivor_tech",
+    "unique_code": "sole_survivor",
     "heroic": true,
     "wear_slots": {
       "power_armor": [],
