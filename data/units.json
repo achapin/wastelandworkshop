@@ -4,6 +4,9 @@
     "unique_code": "aspirant_goddard",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "melee.baseball_bat"
+    ],
     "must_wear": [
       "power_armor.t60_power_armor"
     ],
@@ -120,6 +123,9 @@
     "name": "field_scribe",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "pistols.laser_pistol"
+    ],
     "carry_slots": {
       "pistols": [
         "10mm_pistol",
@@ -184,6 +190,9 @@
     "name": "knight",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "rifles.combat_rifle"
+    ],
     "wear_slots": {
       "power_armor": [
         "t45_power_armor",
@@ -243,6 +252,10 @@
     "unique_code": "knight_captain_cade",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "heavy_weapons.minigun",
+      "power_armor.t60_power_armor"
+    ],
     "wear_slots": {
       "power_armor": [
         "t45_power_armor",
@@ -286,6 +299,9 @@
     "name": "knight_patrol",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "rifles.laser_rifle"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -322,6 +338,9 @@
     "name": "knight_patrol_blade",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "rifles.laser_rifle"
+    ],
     "carry_slots": {
       "pistols": [
         "10mm_pistol",
@@ -420,6 +439,9 @@
     "name": "lancer",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "rifles.hunting_rifle"
+    ],
     "carry_slots": {
       "rifles": [
         "laser_rifle",
@@ -495,6 +517,10 @@
     "name": "paladin",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "melee.machete",
+      "heavy_weapons.gatling_laser"
+    ],
     "wear_slots": {
       "power_armor": [
         "t45_power_armor",
@@ -554,6 +580,10 @@
     "unique_code": "paladin_danse",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":[
+      "rifles.plasma_rifle",
+      "power_armor.t60_power_armor"
+    ],
     "wear_slots": {
       "power_armor": [
         "t60_power_armor"
@@ -1054,6 +1084,9 @@
     "unique_code": "x6-88_courser",
     "heroic": true,
     "factions": ["ins","srv"],
+    "default_equipment":[
+      "pistols.gamma_gun"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "missile_launcher"
@@ -1130,6 +1163,9 @@
     "unique_code": "ack_ack",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "heavy_weapons.minigun"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "junk_jet",
@@ -1190,6 +1226,9 @@
     "unique_code": "avery",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "rifles.combat_shotgun"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -1239,6 +1278,10 @@
     "name": "psycho",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "thrown.fragmentation_grenade.4",
+      "melee.pipe_wrench"
+    ],
     "carry_slots": {
       "pistols": [
         "44_revolver",
@@ -1281,6 +1324,10 @@
     "name": "psycho_outlaw",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "thrown.molotov_cocktail.4",
+      "melee.lead_pipe"
+    ],
     "carry_slots": {
       "pistols": [
         "44_revolver",
@@ -1323,6 +1370,9 @@
     "name":"raider",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "rifles.pipe_rifle"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -1373,6 +1423,10 @@
     "name":"raider_outlaw",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "pistols.bolt_action_pipe_pistol",
+      "melee.machete"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -1423,6 +1477,9 @@
     "name": "scavver",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "rifles.bolt_action_pipe_rifle"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "junk_jet"],
@@ -1475,6 +1532,9 @@
     "name": "scavver_outlaw",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "rifles.hunting_rifle"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "junk_jet"],
@@ -1528,6 +1588,9 @@
     "unique_code": "sin_jin",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "pistols.bolt_action_pipe_pistol"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "junk_jet",
@@ -1577,8 +1640,14 @@
     "name":"veteran_raider",
     "heroic": true,
     "factions": ["rdr"],
+    "default_equipment":[
+      "rifles.assault_rifle",
+      "melee.nail_board",
+      "power_armor.raider_power_armor"
+    ],
     "wear_slots": {
       "power_armor": [
+        "raider_power_armor"
       ]
     },
     "carry_slots": {
@@ -1720,6 +1789,9 @@
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":[
+      "pistols.pipe_pistol"
+    ],
     "must_wear": [
       "clothing.aviator_cap"
     ],
@@ -1768,6 +1840,10 @@
     "cost": 245,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":[
+      "melee.fire_hydrant_bat",
+      "thrown.behemoth_rock_throw"
+    ],
     "carry_slots": {
       "melee": [
         "fire_hydrant_bat"
@@ -1795,6 +1871,9 @@
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":[
+      "melee.sledgehammer"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "gatling_laser",
@@ -1847,6 +1926,9 @@
   {
     "name": "enslaved_tech",
     "factions": ["mut", "srv"],
+    "default_equipment":[
+      "rifles.combat_shotgun"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -1938,6 +2020,10 @@
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":[
+      "heavy_weapons.missile_launcher",
+      "melee.super_sledge"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "missile_launcher"
@@ -1989,6 +2075,10 @@
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":[
+      "melee.huge_club",
+      "rifles.bolt_action_pipe_rifle"
+    ],
     "carry_slots": {
       "heavy_weapons": [
         "gatling_laser",
@@ -2221,6 +2311,10 @@
     "name": "super_mutant",
     "factions": ["mut"],
     "heroic": true,
+    "default_equipment":[
+      "rifles.bolt_action_pipe_rifle",
+      "melee.board"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -2265,6 +2359,10 @@
     "name": "cait",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "rifles.double_barrel_shotgun",
+      "chems.mentats"
+    ],
     "carry_slots": {
       "rifles": [
         "double_barrel_shotgun",
@@ -2400,6 +2498,9 @@
     "unique_code": "mama_murphy",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "melee.tire_iron"
+    ],
     "carry_slots": {
       "pistols": [
         "44_revolver",
@@ -2432,6 +2533,9 @@
     "name": "minuteman",
     "heroic": true,
     "factions": ["mnm", "srv"],
+    "default_equipment":[
+      "rifles.laser_musket"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -2523,6 +2627,9 @@
     "unique_code": "nuka_cola_girl",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "pistols.thirst_zapper_cola"
+    ],
     "carry_slots": {
       "pistols": [
         "thirst_zapper_cola"
@@ -2555,6 +2662,9 @@
     "unique_code": "piper",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "pistols.10mm_pistol"
+    ],
     "carry_slots": {
       "rifles":[
         "submachine_gun"
@@ -2600,6 +2710,9 @@
     "unique_code": "preston_garvey",
     "heroic": true,
     "factions": ["mnm", "srv"],
+    "default_equipment":[
+      "rifles.laser_musket"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -2653,6 +2766,9 @@
     "unique_code": "ronnie_shaw",
     "heroic": true,
     "factions": ["mnm", "srv"],
+    "default_equipment":[
+      "rifles.laser_musket"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -2704,6 +2820,9 @@
     "name": "scavenger",
     "factions": ["srv"],
     "heroic": true,
+    "default_equipment":[
+      "rifles.bolt_action_pipe_rifle"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -2759,6 +2878,9 @@
     "name": "settler",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "rifles.assault_rifle"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -2805,6 +2927,9 @@
     "unique_code": "sole_survivor",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "rifles.hunting_rifle"
+    ],
     "wear_slots": {
       "power_armor": [
         "power_armor_frame",
@@ -2900,6 +3025,9 @@
     "unique_code": "sole_survivor",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "pistols.10mm_pistol"
+    ],
     "wear_slots": {
       "power_armor": [
         "power_armor_frame"
@@ -2969,6 +3097,10 @@
     "unique_code": "sole_survivor_loner",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "pistols.44_revolver",
+      "melee.machete"
+    ],
     "wear_slots": {
       "power_armor": [
         "power_armor_frame",
@@ -3059,6 +3191,10 @@
   {
     "name": "sole_survivor_tech",
     "unique_code": "sole_survivor",
+    "default_equipment":[
+      "rifles.combat_shotgun",
+      "power_armor.x01_power_armor"
+    ],
     "heroic": true,
     "factions": ["srv"],
     "wear_slots": {
@@ -3154,6 +3290,9 @@
     "unique_code": "sturges",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":[
+      "pistols.44_revolver"
+    ],
     "carry_slots": {
       "rifles": [
         "assault_rifle",
