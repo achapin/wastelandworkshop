@@ -59,6 +59,7 @@ function loadURL(url){
 function upgradesLoaded(json)
 {
 	upgrades = json;
+	console.log("upgrades loaded");
 	var unitsLoadPromise = loadURL("data/units.json");
 	unitsLoadPromise.then(unitsLoaded);
 	unitsLoadPromise.catch(function(){alert("units load failed");});
@@ -66,6 +67,7 @@ function upgradesLoaded(json)
 
 function unitsLoaded(json){
 	units = json;
+	console.log("units loaded");
 	loadLocalization();
 }
 
@@ -94,6 +96,7 @@ function loadLocalization(){
 
 function localizationLoaded(json){
 	loc = json;
+	console.log("loca loaded");
 
 	var missingKeys = ""
 
@@ -202,7 +205,6 @@ function clearForce(){
 
 function setSettlementMode(nowSettlementMode){
 	settlementMode = nowSettlementMode;
-	//TODO: Rebuild any existing character entries
 }
 
 function buildAddSection() {
@@ -243,7 +245,11 @@ function buildAddSection() {
 		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		pointsSpan.appendChild(pointsNode);
 		if(can_add){
-			button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
+			var defaultEquipment = new Object();
+			if(characterElement.hasOwnProperty("default_equipment")){
+				defaultEquipment = characterElement.default_equipment;
+			}
+			button.addEventListener("click", function() { addCharacter(characterElement, defaultEquipment);});
 		}
 		button.appendChild(nameSpan);
 		button.appendChild(pointsSpan);
@@ -609,39 +615,6 @@ function addCharacter(characterElement, presetInfo){
 	var equipmentSection = document.createElement("div");
 	equipmentSection.setAttribute("class", "equipment-section");
 
-	if(characterElement.default_equipment){
-		var defaultEquipmentSection = document.createElement("div");
-
-		var defaultEquipmentButton = document.createElement("button");
-		defaultEquipmentButton.setAttribute("class", "btn btn-equipped btn-right-sm");
-		defaultEquipmentButton.appendChild(document.createTextNode(loc["add_default_equipment"]));
-
-		defaultEquipmentSection.appendChild(defaultEquipmentButton);
-		//TODO: ADD BUTTON FUNCTIONALITY
-		defaultEquipmentButton.addEventListener("click", function() {
-			characterElement.default_equipment.forEach(function(element){
-				var upgradeData = element.split('.');
-				var upgrade = getUpgrade(upgradeData[0], upgradeData[1]);
-
-				//armor
-				//carry
-				//consumable
-				//ugh
-
-				var newItemEntry = addEquipEntry(character, slotType, upgrade, equippedItems, slotDropdown);
-				equippedItems.appendChild(newItemEntry);
-				if(!character.hasOwnProperty(slotType)){
-					character[slotType] = [];
-				}
-				character[slotType].push(slotDropdown.value);
-				//slotDropdown.remove(slotDropdown.selectedIndex);
-				//slotDropdown.selectedIndex = 0;
-			});
-		});
-
-		equipmentSection.appendChild(defaultEquipmentSection);
-	}
-
 	var modelUpgradesHeader = document.createElement("h1");
 	modelUpgradesHeader.appendChild(document.createTextNode(loc["model_upgrades"]));
 	equipmentSection.appendChild(modelUpgradesHeader);
@@ -766,7 +739,69 @@ function addSettlementModeSlots(characterElement, character, equipmentSection){
 	})
 }
 
+function filterIllegalWearables(character, slotType, slotOptions){
+	if(character.hasOwnProperty(slotType)){
+		if(!slotOptions.includes(character[slotType])){
+			delete(character[slotType]);
+		}
+	}
+}
+
+function filterIllegalEquipment(character, slotType, slotOptions){
+	if(character.hasOwnProperty(slotType)){
+		var filtered = character[slotType].filter(function(option){
+			return slotOptions.includes(option);
+		});
+		if(filtered.length > 0){
+			character[slotType] = filtered;
+		}else{
+			delete(character[slotType]);
+		}
+	}
+}
+
+function filterIllegalConsumables(character, slotType, slotOptions){
+	if(character.hasOwnProperty(slotType)){
+		Object.keys(character[slotType]).forEach(function(option){
+			if(!slotOptions.includes(option)){
+				delete(character[slotType][option]);
+			}
+		});
+		if(Object.keys(character[slotType]).length <= 0) {
+			delete(character[slotType]);
+		}
+	}
+}
+
 function addBattleModeSlots(characterElement, character, equipmentSection){
+
+	wear_slots.forEach(function(slotType){
+		var slotOptions = [];
+		if(characterElement.hasOwnProperty("wear_slots")
+			&& characterElement.wear_slots.hasOwnProperty(slotType)){
+			slotOptions = characterElement.wear_slots[slotType];
+		}
+		filterIllegalWearables(character, slotType, slotOptions);
+	});
+
+	carry_slots.forEach(function(slotType){
+		var slotOptions = [];
+		if(characterElement.hasOwnProperty("carry_slots")
+			&& characterElement.carry_slots.hasOwnProperty(slotType)){
+			slotOptions = characterElement.carry_slots[slotType];
+		}
+		filterIllegalEquipment(character, slotType, slotOptions);
+	});
+
+	consumable_slots.forEach(function(slotType){
+		var slotOptions = [];
+		if(characterElement.hasOwnProperty("consumables")
+		&& 	characterElement.consumables.hasOwnProperty(slotType)){
+			slotOptions = characterElement.consumables[slotType];
+		}
+		filterIllegalConsumables(character, slotType, slotOptions);
+	});
+
 	if(characterElement.wear_slots != null){
 		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
 			var wearSection = getWearSection(character, characterElement.wear_slots[slotType], slotType);
@@ -1729,6 +1764,7 @@ function getCharacterIndex(character){
 
 function initialize(){
 	var upgradeLoadPromise = loadURL("data/upgrades.json");
+	console.log("load upgrades")
 	upgradeLoadPromise.then(upgradesLoaded);
 	upgradeLoadPromise.catch(function(){alert("upgrade load failed");});
 }

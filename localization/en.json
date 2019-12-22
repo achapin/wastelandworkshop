@@ -490,6 +490,6 @@
     "rbt":"Robots",
     "srv":"Survivors",
     "settlement_mode":"Settlement Mode",
-    "battle_mode":"Battle Mode"
-	"add_default_equipment":"Equip Default Equipment"
+    "battle_mode":"Battle Mode",
+    "add_default_equipment":"Equip Default Equipment"
 }
