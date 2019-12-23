@@ -619,6 +619,25 @@ function addCharacter(characterElement, presetInfo){
 	modelUpgradesHeader.appendChild(document.createTextNode(loc["model_upgrades"]));
 	equipmentSection.appendChild(modelUpgradesHeader);
 
+	if(characterElement.has_perk){
+		var hasPerkSection = document.createElement("div");
+
+		hasPerkSection.setAttribute("class", "must-wear");
+		characterElement.has_perk.forEach(function(element){
+			var upgrade = getUpgrade("perks", element);
+			if(upgrade == null){
+				alert("No upgrade " + element + " of type perks found");
+			}else{
+				var hasPerkElement = document.createElement("div");
+				var hasPerkDescription = document.createTextNode(loc[element]);
+				hasPerkElement.appendChild(hasPerkDescription);
+				hasPerkSection.appendChild(hasPerkElement);
+			}
+		});
+
+		equipmentSection.appendChild(hasPerkSection);
+	}
+
 	if(characterElement.must_wear){
 		var mustWearSection = document.createElement("div");
 		mustWearSection.setAttribute("class", "must-wear");
@@ -1417,6 +1436,8 @@ function getPerkSection(character){
 	var perkDropdown = document.createElement("SELECT");
 	perkDropdown.add(new Option(loc["dropdown_perks"], null));
 	
+	var characterElement = getCharacterById(character.name);
+
 	upgrades.perks.forEach(function(perk){
 		var hasPerk = false;
 		if(character.hasOwnProperty("perks")){
@@ -1425,6 +1446,11 @@ function getPerkSection(character){
 					hasPerk = true;
 				}
 			});
+		}
+
+		if(characterElement.hasOwnProperty("has_perk")
+			&& characterElement.has_perk.includes(perk.name)){
+			return;
 		}
 
 		if(hasPerk){

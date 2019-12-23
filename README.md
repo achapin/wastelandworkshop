@@ -4,7 +4,6 @@ Usable at https://achapin.github.io/wastelandworkshop/
 
 # TODO (In no particular order)
 * Default Mod behavior (for Preston Garvey, Sturges and Sin Jin)
-* Default Perks (Strong's Entangle, Lone Wanderer)
 * Printable lists
 * Unit reordering/sorting
 * Shorten query string

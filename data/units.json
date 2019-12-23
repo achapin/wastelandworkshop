@@ -2257,6 +2257,9 @@
     "heroic": true,
     "factions": ["mut", "srv"],
     "tags":["super_mutant"],
+    "has_perk":[
+      "entangle"
+    ],
     "carry_slots": {
       "heavy_weapons":[
         "missile_launcher"
@@ -3111,6 +3114,9 @@
       "pistols":["44_revolver"],
       "melee":["machete"]
     },
+    "has_perk":[
+      "lone_wanderer"
+    ],
     "wear_slots": {
       "power_armor": [
         "power_armor_frame",
