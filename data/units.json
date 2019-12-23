@@ -638,6 +638,7 @@
   {
     "name": "alien",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "pistols.alien_blaster"
     ],
@@ -656,6 +657,7 @@
   {
     "name": "deathclaw",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.deathclaw_crush",
       "melee.deathclaw_swipe"
@@ -666,6 +668,7 @@
   {
     "name": "feral_ghoul",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.feral_ghoul_swipe"
     ],
@@ -675,6 +678,7 @@
   {
     "name": "glowing_radroach_swarm",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.radroach_swarm_bite"
     ],
@@ -684,6 +688,7 @@
   {
     "name": "mole_rat",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.mole_rat_bite"
     ],
@@ -693,6 +698,7 @@
   {
     "name":"putrid_glowing_one",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.putrid_glowing_one_swipe"
     ],
@@ -702,6 +708,7 @@
   {
     "name": "radroach_swarm",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.radroach_swarm_bite"
     ],
@@ -711,6 +718,7 @@
   {
     "name": "radscorpion",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.radscorpion_pincers_and_sting"
     ],
@@ -720,6 +728,7 @@
   {
     "name": "weak_feral_ghoul",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.weak_feral_ghoul_swipe"
     ],
@@ -729,6 +738,7 @@
   {
     "name": "young_deathclaw",
     "factions": ["crt"],
+    "tags":["creature"],
     "must_carry": [
       "melee.young_deathclaw_crush",
       "melee.young_deathclaw_swipe"
@@ -2310,6 +2320,7 @@
     "name": "super_mutant",
     "factions": ["mut"],
     "heroic": true,
+    "tags": ["super_mutant"],
     "default_equipment":{
       "rifles":["bolt_action_pipe_rifle"],
       "melee":["board"]

@@ -378,6 +378,7 @@
     },
     {
       "name": "chain_dog_collar",
+      "restrictions":["dog"],
       "cost": 13
     },
     {
@@ -406,6 +407,7 @@
     },
     {
       "name": "heavy_gauntlets",
+      "restrictions":["super_mutant"],
       "cost": 15
     },
     {
@@ -494,6 +496,7 @@
     },
     {
       "name": "bowler_hat",
+      "restrictions":["robot"],
       "cost": 10
     },
     {
@@ -510,6 +513,7 @@
     },
     {
       "name": "dog_bandana",
+      "restrictions":["dog"],
       "cost": 7
     },
     {
@@ -546,6 +550,7 @@
     },
     {
       "name": "spiked_muzzle",
+      "restrictions":["dog"],
       "cost": 5
     },
     {
@@ -554,6 +559,7 @@
     },
     {
       "name": "vault_111_jumpsuit",
+      "restrictions":["!super_mutant"],
       "cost": 10
     }
   ],
@@ -716,6 +722,7 @@
     },
     {
       "name": "creature_controller",
+      "restrictions":["!robot","!creature","!dog"],
       "cost": 7
     },
     {
@@ -752,6 +759,7 @@
     },
     {
       "name": "robot_controller",
+      "restrictions":["!robot","!creature","!dog"],
       "cost": 7
     },
     {
