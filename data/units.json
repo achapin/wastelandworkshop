@@ -55,6 +55,10 @@
     "unique_code":"elder_maxson",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":{
+      "heavy_weapons":["final_judgement"],
+      "power_armor": "t60_power_armor"
+    },
     "wear_slots": {
       "power_armor": [
         "t60_power_armor"
@@ -158,6 +162,9 @@
     "name": "field_scribe_shield",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":{
+      "pistols":["laser_pistol"]
+    },
     "carry_slots": {
       "pistols": [
         "10mm_pistol",
@@ -382,6 +389,9 @@
     "name": "knight_tech",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":{
+      "rifles":["laser_rifle"]
+    },
     "wear_slots": {
       "power_armor": [
         "t45_power_armor",
@@ -469,6 +479,9 @@
     "unique_code": "lancer_captain_kells",
     "heroic": true,
     "factions": ["bos"],
+    "default_equipment":{
+      "rifles":["laser_rifle"]
+    },
     "wear_slots":{
       "clothing":[
         "airship_captains_hat"
@@ -751,6 +764,9 @@
     "unique_code": "a-2018",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "heavy_weapons":["missile_launcher"]
+    },
     "wear_slots": {
       "armor": [
         "heavy_synth_armor"
@@ -799,6 +815,10 @@
   {
     "name": "battered-gen-1",
     "factions": ["ins"],
+    "default_equipment":{
+      "pistols":["institute_laser_pistol"],
+      "melee":["baton"]
+    },
     "carry_slots": {
       "pistols": [
         "institute_laser_pistol"
@@ -828,6 +848,9 @@
     "unique_code": "conrad_kellog",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "gear":["stealth_boy"]
+    },
     "must_carry": [
       "pistols.kellogs_pistol"
     ],
@@ -872,6 +895,10 @@
     "name": "courser",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "rifles":["assault_rifle"],
+      "pistols":["gamma_gun"]
+    },
     "carry_slots": {
       "rifles": [
         "assault_rifle",
@@ -918,6 +945,9 @@
     "name": "engineer",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "pistols":["institute_laser_pistol"]
+    },
     "must_wear": [
       "armor.cleanroom_suit"
     ],
@@ -949,6 +979,10 @@
   {
     "name": "gen-1-synth",
     "factions": ["ins"],
+    "default_equipment":{
+      "pistols":["institute_laser_pistol"],
+      "melee":["baton"]
+    },
     "carry_slots": {
       "rifles":[
         "institute_laser_rifle"
@@ -981,6 +1015,9 @@
     "name": "patroller",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "rifles":["institute_laser_rifle"]
+    },
     "carry_slots": {
       "rifles": [
         "institute_laser_rifle",
@@ -1020,6 +1057,9 @@
     "name": "scientist",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "pistols":["institute_laser_pistol"]
+    },
     "must_wear": [
       "armor.cleanroom_suit"
     ],
@@ -1053,6 +1093,9 @@
     "name": "trooper",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "rifles":["institute_laser_rifle"]
+    },
     "carry_slots": {
       "rifles": [
         "institute_laser_rifle",
@@ -1135,6 +1178,9 @@
     "unique_code": "z2-47",
     "heroic": true,
     "factions": ["ins"],
+    "default_equipment":{
+      "pistols":["institute_laser_pistol"]
+    },
     "carry_slots": {
       "pistols": [
         "gamma_gun",
@@ -1987,6 +2033,9 @@
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":{
+      "heavy_weapons":["minigun"]
+    },
     "carry_slots": {
       "heavy_weapons": [
         "minigun"
@@ -2160,6 +2209,10 @@
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":{
+      "heavy_weapons":["gatling_laser"],
+      "melee":["nail_board"]
+    },
     "carry_slots": {
       "heavy_weapons": [
         "junk_jet",
@@ -2216,6 +2269,9 @@
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
+    "default_equipment":{
+      "melee":["pipe_wrench"]
+    },
     "carry_slots": {
       "pistols": [
         "bolt_action_pipe_pistol",
@@ -2260,6 +2316,9 @@
     "has_perk":[
       "entangle"
     ],
+    "default_equipment":{
+      "melee":["super_sledge"]
+    },
     "carry_slots": {
       "heavy_weapons":[
         "missile_launcher"
@@ -2474,6 +2533,9 @@
     "name": "hancock",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":{
+      "pistols":["plasma_pistol"]
+    },
     "carry_slots": {
       "rifles": [
         "combat_rifle",
@@ -2606,6 +2668,9 @@
     "name": "nick_valentine",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":{
+      "pistols":["pipe_pistol"]
+    },
     "carry_slots": {
       "pistols": [
         "44_revolver",
@@ -3363,6 +3428,10 @@
     "name": "vault_dweller",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":{
+      "pistols":["10mm_pistol"],
+      "thrown":{"fragmentation_grenade":"4"}
+    },
     "carry_slots": {
       "pistols": [
         "44_revolver",
@@ -3398,6 +3467,10 @@
     "name": "vault_security_officer",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":{
+      "rifles":["combat_shotgun"],
+      "melee":["baton"]
+    },
     "carry_slots": {
       "rifles": [
         "combat_rifle",
@@ -3435,5 +3508,30 @@
       "gear"
     ],
     "cost": 40
+  },
+  {
+    "name": "mechanist",
+    "unique_code": "mechanist",
+    "heroic": true,
+    "factions": ["srv"],
+    "carry_slots": {
+    },
+    "consumables": {
+    },
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "food_and_drink",
+      "gear"
+    ],
+    "cost": 145
   }
 ]
