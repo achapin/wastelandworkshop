@@ -1,20 +1,12 @@
 var loc;
 var upgrades;
-var bos;
-var raiders;
-var survivors;
-var mutants;
-var robots;
-var creatures;
-var characters;
-var settlement;
+var units;
+var mappedUnits = {};
+var sortedUnitNames = [];
 
 var forceSection;
-var addButton;
-var closeAddButton;
 var addSection;
 var capsSection;
-var extraFactionSection;
 
 var lastTextFieldValue;
 var addSectionOpen;
@@ -22,6 +14,23 @@ var addSectionOpen;
 var totalCaps;
 var faction;
 var force;
+
+var settlementMode;
+
+var appliedFilters = [];
+var possibleFilters = [
+	"bos",
+	"crt",
+	"ins",
+	"mut",
+	"rdr",
+	"rbt",
+	"srv"
+]
+
+var wear_slots = ["armor","power_armor", "clothing"]; //Exclusive choice
+var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee", "gear"]; //Multiple-choice single-instance
+var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"]; //Multiple-choice multiple-instance
 
 function getUrl(url){
 	var req = new XMLHttpRequest();
@@ -50,55 +59,15 @@ function loadURL(url){
 function upgradesLoaded(json)
 {
 	upgrades = json;
-	var bosLoadPromise = loadURL("data/brotherhood_of_steel.json");
-	bosLoadPromise.then(bosLoaded);
-	bosLoadPromise.catch(function(){alert("bos load failed");});
+	console.log("upgrades loaded");
+	var unitsLoadPromise = loadURL("data/units.json");
+	unitsLoadPromise.then(unitsLoaded);
+	unitsLoadPromise.catch(function(){alert("units load failed");});
 }
 
-function bosLoaded(json){
-	bos = json;
-	var raiderLoadPromise = loadURL("data/raiders.json");
-	raiderLoadPromise.then(raidersLoaded);
-	raiderLoadPromise.catch(function(){alert("raider load failed");});
-}
-
-function raidersLoaded(json){
-	raiders = json;	
-	var survivorLoadPromise = loadURL("data/survivors.json");
-	survivorLoadPromise.then(survivorsLoaded);
-	survivorLoadPromise.catch(function(){alert("survivor load failed");});
-}
-
-function survivorsLoaded(json){
-	survivors = json;
-	var mutantLoadPromise = loadURL("data/super_mutants.json");
-	mutantLoadPromise.then(mutantsLoaded);
-	mutantLoadPromise.catch(function(){alert("mutants load failed");});
-}
-
-function mutantsLoaded(json){
-	mutants = json;
-	var robotLoadPromise = loadURL("data/robots.json");
-	robotLoadPromise.then(robotsLoaded);
-	robotLoadPromise.catch(function(){alert("robots load failed");});
-}
-
-function robotsLoaded(json){
-	robots = json;
-	var creaturesLoadPromise = loadURL("data/creatures.json");
-	creaturesLoadPromise.then(creaturesLoaded);
-	creaturesLoadPromise.catch(function(){alert("creatures load failed");});
-}
-
-function creaturesLoaded(json){
-	creatures = json;
-	var settlementLoadPromise = loadURL("data/settlement.json");
-	settlementLoadPromise.then(settlementLoaded);
-	settlementLoadPromise.catch(function(){alert("settlement load failed");});
-}
-
-function settlementLoaded(json){
-	settlement = json;
+function unitsLoaded(json){
+	units = json;
+	console.log("units loaded");
 	loadLocalization();
 }
 
@@ -122,19 +91,32 @@ function loadLocalization(){
 		document.getElementById("languageSelection").value = "en";
 		engLoadPromise.then(localizationLoaded);
 		engLoadPromise.catch(function(){alert("English localization load failed. Now you're really hosed!");});
-	});
+	});	
 }
 
 function localizationLoaded(json){
 	loc = json;
+	console.log("loca loaded");
 
 	var missingKeys = ""
 
-	settlement.forEach(function(character){
+	units.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
 			missingKeys += character.name + ", ";
+		}else{
+
+			if(mappedUnits.hasOwnProperty(character.name)){
+				console.log("Multiple character entry: " + character.name);
+			}
+
+			if(!character.hasOwnProperty("factions")){
+				console.log("" + character.name + " has no factions");
+			}
+
+			mappedUnits[character.name] = character;
 		}
 	});
+
 	Object.keys(upgrades).forEach(function(section){
 		if(!loc.hasOwnProperty(section)){
 			missingKeys += section + ", ";
@@ -146,37 +128,33 @@ function localizationLoaded(json){
 		});
 	});
 
+	units.sort(orderUnitsByLocalizedName);
+
 	console.log("Missing LOC keys: " + missingKeys);
 
 	initListeners();
 }
 
+function orderUnitsByLocalizedName(unitOne, unitTwo){
+	return loc[unitOne.name].localeCompare(loc[unitTwo.name]);
+}
+
 function initListeners(){
-	document.getElementById("switch-bos").addEventListener("click", switchBos, true);
-	document.getElementById("switch-mutants").addEventListener("click", switchMutants, true);
-	document.getElementById("switch-survivors").addEventListener("click", switchSurvivors, true);
-	document.getElementById("switch-raiders").addEventListener("click", switchRaiders, true);
-	document.getElementById("switch-settlement").addEventListener("click", switchSettlement, true);
 
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
 
+
+
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
-	extraFactionSection = document.getElementById("extraFactionSection");
-	addButton = document.getElementById("addButton");
-	closeAddButton = document.getElementById("closeAddButton");
 	capsSection = document.getElementById("caps");
-	addButton.addEventListener("click", openAddSection);
-	closeAddButton.addEventListener("click", closeAddSection);
-
-	addSectionOpen = true;
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
 		loadForceFromString(queryString[1]);
 	}else{
-		switchBos();
+		clearForce();
 	}
 }
 
@@ -208,36 +186,6 @@ function updateLanguage(json){
 	loadForceFromString(forceString);
 }
 
-function switchBos() {
-	characters = bos;
-	faction = "bos";
-	clearForce();
-}
-
-function switchMutants() {
-	characters = mutants;
-	faction = "mut";
-	clearForce();
-}
-
-function switchSurvivors() {
-	characters = survivors;
-	faction = "srv";
-	clearForce();
-}
-
-function switchRaiders() {
-	characters = raiders;
-	faction = "rdr";
-	clearForce();	
-}
-
-function switchSettlement() {
-	characters = settlement;
-	faction = "stl";
-	clearForce();	
-}
-
 function clearForce(){
 	forceSection.innerHTML = "";
 
@@ -247,22 +195,36 @@ function clearForce(){
 	force.leader.perkIndex = 0;
 	force.characters = [];
 
+	settlementMode = false;
+
 	buildAddSection();
 
 	totalCaps = 0;
 	updateCaps();
 }
 
+function setSettlementMode(nowSettlementMode){
+	settlementMode = nowSettlementMode;
+}
+
 function buildAddSection() {
 	addSection.innerHTML = "";
-	var list = document.createElement("ul");
-	characters.forEach(function(characterElement){
+	var filters = buildFiltersSection();
 
+	var characterList = document.createElement("div");
+	characterList.setAttribute("class", "characters row");
+	var list = document.createElement("ul");
+	characterList.appendChild(list);
+	units.forEach(function(characterElement){
 		var can_add = true;
+
+		if(appliedFilters.length > 0 && characterElement.hasOwnProperty("factions") && !characterElement.factions.includes(appliedFilters[0])){
+			return;
+		}
 
 		if(characterElement.hasOwnProperty("unique_code")){
 			force.characters.forEach(function(otherChar){
-				var otherCharElement = getCharacterById(otherChar.id)
+				var otherCharElement = getCharacterById(otherChar.name)
 				if(otherCharElement.hasOwnProperty("unique_code") 
 					&& otherCharElement.unique_code == characterElement.unique_code){
 					can_add = false;
@@ -283,7 +245,11 @@ function buildAddSection() {
 		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		pointsSpan.appendChild(pointsNode);
 		if(can_add){
-			button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
+			var defaultEquipment = new Object();
+			if(characterElement.hasOwnProperty("default_equipment")){
+				defaultEquipment = characterElement.default_equipment;
+			}
+			button.addEventListener("click", function() { addCharacter(characterElement, defaultEquipment);});
 		}
 		button.appendChild(nameSpan);
 		button.appendChild(pointsSpan);
@@ -291,72 +257,59 @@ function buildAddSection() {
 		list.appendChild(para);
 	});
 
-	var descriptionSpan = document.createElement("span");
-	descriptionSpan.appendChild(document.createTextNode(loc["characters"]));
-	addSection.appendChild(descriptionSpan);
-	addSection.appendChild(list);
-	if(addSectionOpen){
-		openAddSection();
-	}else{
-		closeAddSection();
-	}
+	addSection.appendChild(filters);
+	addSection.appendChild(characterList);
 }
 
-function buildExtraFactionSection(faction) {
-	clearExtraFactionSection();
-
-	var faction_code = "";
-	if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "creature_controller"){
-		faction_code = "c";
-	}
-	if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "robot_controller"){
-		faction_code = "r";
-	}
-
+function buildFiltersSection(){
+	var filtersSection = document.createElement("div");
+	filtersSection.setAttribute("class", "filters row");
 	var list = document.createElement("ul");
-	faction.forEach(function(characterElement){
-
-		var can_add = true;
-
-		characters.forEach(function(otherChar){
-			var otherCharElement = getCharacterById(otherChar.id)
-			if(otherCharElement.name == characterElement.name){
-				can_add = false;
+	possibleFilters.forEach(function(filter){
+		var filterEntry = document.createElement("li");
+		filterEntry.setAttribute("class", appliedFilters.includes(filter) ? "filter-active" : "filter-inactive");
+		filterEntry.appendChild(document.createTextNode(loc[filter]));
+		filterEntry.addEventListener("click", function() {
+			toggleFilter(filter);
+			if(typeof(faction) === "undefined" || !force.hasOwnProperty("characters") || force.characters.length <= 0){
+				faction = filter;
+				updateCaps();
 			}
 		});
-
-		if(can_add) {
-			var para = document.createElement("li");
-			var button = document.createElement("button");
-			button.setAttribute("class", "btn btn-background choice");
-			var nameSpan = document.createElement("span");
-			var nameNode = document.createTextNode(loc[characterElement.name]);
-			nameSpan.appendChild(nameNode);
-			var pointsSpan = document.createElement("span");
-			pointsSpan.setAttribute("class", "cost");
-			var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
-			pointsSpan.appendChild(pointsNode);
-
-			characterElement.faction_code = faction_code;
-			button.addEventListener("click", function() { addCharacter(characterElement, new Object());});
-
-			button.appendChild(nameSpan);
-			button.appendChild(pointsSpan);
-			para.appendChild(button);
-			list.appendChild(para);
-		}
+		list.appendChild(filterEntry);
 	});
-	extraFactionSection.appendChild(list);
+	filtersSection.appendChild(list);
+
+	var settlementModeButton = document.createElement("button");
+	if(settlementMode){
+		settlementModeButton.setAttribute("class", "settlement_mode_enabled");
+		settlementModeButton.appendChild(document.createTextNode(loc["settlement_mode"]));
+	}else{
+		settlementModeButton.setAttribute("class", "settlement_mode_disabled");
+		settlementModeButton.appendChild(document.createTextNode(loc["battle_mode"]));
+	}
+	settlementModeButton.addEventListener("click", function(){
+		settlementMode = !settlementMode;
+		loadForceFromString(getStringForForce());
+	})
+
+	list.appendChild(settlementModeButton);
+
+	return filtersSection;
 }
 
-function clearExtraFactionSection(){
-	extraFactionSection.innerHTML = "";
+function toggleFilter(filter){
+	if(appliedFilters.includes(filter)){
+		appliedFilters = [];
+	}else{
+		appliedFilters = [filter];
+	}
+	buildAddSection();
 }
 
 function closeAddSection(){
 	addSectionOpen = false;
 	addSection.style.display = "none";
-	extraFactionSection.style.display = "none";
 	addButton.style.display = "block";
 	closeAddButton.style.display = "none";
 }
@@ -365,7 +318,6 @@ function openAddSection(){
 	addSectionOpen = true;
 	addButton.style.display = "none";
 	addSection.style.display = "block";
-	extraFactionSection.style.display = "block";
 	closeAddButton.style.display = "block";
 }
 
@@ -525,7 +477,8 @@ function removeModFromCharacter(character, modSlot){
 
 function addCharacter(characterElement, presetInfo){
 	var character = presetInfo;
-	character.id = characterElement.id;
+
+	character.name = characterElement.name;
 
 	var charaSection = document.createElement("div");
 	charaSection.setAttribute("class", "characterElement");
@@ -550,10 +503,6 @@ function addCharacter(characterElement, presetInfo){
 	close.setAttribute("class", "btn btn-background-off unit-button");
 	close.appendChild(closeButton);
 	headerLeftSection.appendChild(close);
-
-	if(characterElement.hasOwnProperty("faction_code")){
-		character.faction_code = characterElement.faction_code;
-	}
 
 	if(!characterElement.hasOwnProperty("unique_code")){
 		var copy = document.createElement("button");
@@ -670,6 +619,25 @@ function addCharacter(characterElement, presetInfo){
 	modelUpgradesHeader.appendChild(document.createTextNode(loc["model_upgrades"]));
 	equipmentSection.appendChild(modelUpgradesHeader);
 
+	if(characterElement.has_perk){
+		var hasPerkSection = document.createElement("div");
+
+		hasPerkSection.setAttribute("class", "must-wear");
+		characterElement.has_perk.forEach(function(element){
+			var upgrade = getUpgrade("perks", element);
+			if(upgrade == null){
+				alert("No upgrade " + element + " of type perks found");
+			}else{
+				var hasPerkElement = document.createElement("div");
+				var hasPerkDescription = document.createTextNode(loc[element]);
+				hasPerkElement.appendChild(hasPerkDescription);
+				hasPerkSection.appendChild(hasPerkElement);
+			}
+		});
+
+		equipmentSection.appendChild(hasPerkSection);
+	}
+
 	if(characterElement.must_wear){
 		var mustWearSection = document.createElement("div");
 		mustWearSection.setAttribute("class", "must-wear");
@@ -709,33 +677,11 @@ function addCharacter(characterElement, presetInfo){
 	var perkSection = getPerkSection(character);
 	equipmentSection.appendChild(perkSection);
 
-	if(characterElement.wear_slots != null){
-		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
-			var wearSection = getWearSection(character, characterElement.wear_slots[slotType], slotType);
-			equipmentSection.appendChild(wearSection);
-		});
+	if(settlementMode){
+		addSettlementModeSlots(characterElement, character, equipmentSection);
+	}else{
+		addBattleModeSlots(characterElement, character, equipmentSection);
 	}
-
-	if(characterElement.carry_slots != null){
-		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
-			var carrySection = getCarrySection(character, characterElement.carry_slots[slotType], slotType);
-			equipmentSection.appendChild(carrySection);
-		});
-	}
-
-	var unitUpgradesHeader = document.createElement("h1");
-	unitUpgradesHeader.appendChild(document.createTextNode(loc["unit_upgrades"]));
-	equipmentSection.appendChild(unitUpgradesHeader);
-
-	if(characterElement.consumables != null){
-		Object.keys(characterElement.consumables).forEach(function (slotType) {
-			var consumeableSection = getConsumeableSection(character, characterElement, slotType);
-			equipmentSection.appendChild(consumeableSection);
-		});
-	}
-
-	var chemsSection = getConsumeableSection(character, characterElement, "chems");
-	equipmentSection.appendChild(chemsSection);
 
 	showEquipment.addEventListener("click", function() {
 		showEquipment.style.display = "none";
@@ -760,7 +706,6 @@ function addCharacter(characterElement, presetInfo){
 			}
 			if(force.leader.leaderIndex == index){
 				delete(force.leader)
-				clearExtraFactionSection();
 			}
 		}
 		updateCaps();
@@ -789,6 +734,135 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function addSettlementModeSlots(characterElement, character, equipmentSection){
+	var firstConsumableSection = true;
+
+	var characterTags = [];
+	if(characterElement.hasOwnProperty("tags")){
+		characterTags = characterElement.tags;
+	}
+
+	characterElement.settlment_mode_slots.forEach(function(slotType){
+		if(wear_slots.includes(slotType)){
+			var wearSection = getWearSection(character, [], slotType, characterTags);
+			equipmentSection.appendChild(wearSection);
+		}
+		if(carry_slots.includes(slotType)){
+			var carrySection = getCarrySection(character, [], slotType);
+			equipmentSection.appendChild(carrySection);
+		}
+		if(consumable_slots.includes(slotType)){
+			if(firstConsumableSection){
+				addUnitUpgradesHeader(equipmentSection);
+				firstConsumableSection = false;
+			}
+			var consumeableSection = getConsumeableSection(character, [], slotType);
+			equipmentSection.appendChild(consumeableSection);	
+		}
+	})
+}
+
+function filterIllegalWearables(character, slotType, slotOptions){
+	if(character.hasOwnProperty(slotType)){
+		if(!slotOptions.includes(character[slotType])){
+			delete(character[slotType]);
+		}
+	}
+}
+
+function filterIllegalEquipment(character, slotType, slotOptions){
+	if(character.hasOwnProperty(slotType)){
+		var filtered = character[slotType].filter(function(option){
+			return slotOptions.includes(option);
+		});
+		if(filtered.length > 0){
+			character[slotType] = filtered;
+		}else{
+			delete(character[slotType]);
+		}
+	}
+}
+
+function filterIllegalConsumables(character, slotType, slotOptions){
+	if(character.hasOwnProperty(slotType)){
+		Object.keys(character[slotType]).forEach(function(option){
+			if(!slotOptions.includes(option)){
+				delete(character[slotType][option]);
+			}
+		});
+		if(Object.keys(character[slotType]).length <= 0) {
+			delete(character[slotType]);
+		}
+	}
+}
+
+function addBattleModeSlots(characterElement, character, equipmentSection){
+
+	var characterTags = [];
+	if(characterElement.hasOwnProperty("tags")){
+		characterTags = characterElement.tags;
+	}
+
+	wear_slots.forEach(function(slotType){
+		var slotOptions = [];
+		if(characterElement.hasOwnProperty("wear_slots")
+			&& characterElement.wear_slots.hasOwnProperty(slotType)){
+			slotOptions = characterElement.wear_slots[slotType];
+		}
+		filterIllegalWearables(character, slotType, slotOptions);
+	});
+
+	carry_slots.forEach(function(slotType){
+		var slotOptions = [];
+		if(characterElement.hasOwnProperty("carry_slots")
+			&& characterElement.carry_slots.hasOwnProperty(slotType)){
+			slotOptions = characterElement.carry_slots[slotType];
+		}
+		filterIllegalEquipment(character, slotType, slotOptions);
+	});
+
+	consumable_slots.forEach(function(slotType){
+		var slotOptions = [];
+		if(characterElement.hasOwnProperty("consumables")
+		&& 	characterElement.consumables.hasOwnProperty(slotType)){
+			slotOptions = characterElement.consumables[slotType];
+		}
+		filterIllegalConsumables(character, slotType, slotOptions);
+	});
+
+	if(characterElement.wear_slots != null){
+		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
+			var wearSection = getWearSection(character, characterElement.wear_slots[slotType], slotType, characterTags);
+			equipmentSection.appendChild(wearSection);
+		});
+	}
+
+	if(characterElement.carry_slots != null){
+		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
+			var carrySection = getCarrySection(character, characterElement.carry_slots[slotType], slotType);
+			equipmentSection.appendChild(carrySection);
+		});
+	}
+
+	addUnitUpgradesHeader(equipmentSection);
+
+	if(characterElement.consumables != null){
+		Object.keys(characterElement.consumables).forEach(function (slotType) {
+			var consumeableSection = getConsumeableSection(character, characterElement, slotType);
+			equipmentSection.appendChild(consumeableSection);
+		});
+	}
+
+	var chemsSection = getConsumeableSection(character, characterElement, "chems");
+	equipmentSection.appendChild(chemsSection);
+}
+
+function addUnitUpgradesHeader(equipmentSection){
+	var unitUpgradesHeader = document.createElement("h1");
+	unitUpgradesHeader.appendChild(document.createTextNode(loc["unit_upgrades"]));
+	equipmentSection.appendChild(unitUpgradesHeader);
 }
 
 function getConsumeableSection(character, characterElement, slotType){
@@ -897,7 +971,38 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 	return entrySection;
 }
 
-function getWearSection(character, slotOption, slotType){
+function canEquip(optionElement, characterTags){
+	var allowed = true;
+	if(optionElement.hasOwnProperty("restrictions")){
+		optionElement.restrictions.forEach(function(restriction){
+			var tag = restriction;
+			var mustHave = true;
+			if(restriction.substring(0,1) == "!"){
+				tag = restriction.substring(1, restriction.length);
+				mustHave = false;
+			}
+
+			//console.log("find " + tag);
+
+			if(characterTags.includes(tag)){
+				if(!mustHave){
+					//console.log("cannot equip " + optionElement.name + " because it has tag " + tag);
+					allowed = false;
+				}
+			}else{
+				if(mustHave){
+					//console.log("cannot equip " + optionElement.name + " because it doesn't have tag " + tag);
+					allowed = false;
+				}
+			}
+		});
+	}
+	/*if(allowed)
+		console.log("can equip " + optionElement.name);*/
+	return allowed;
+}
+
+function getWearSection(character, slotOption, slotType, characterTags){
 	var wearSection = document.createElement("div");
 	wearSection.setAttribute("class", "carry-section");
 
@@ -918,7 +1023,8 @@ function getWearSection(character, slotOption, slotType){
 
 	if(slotOption.length <= 0){
 		upgrades[slotType].forEach(function(optionElement){
-			if(optionElement.cost != 0){
+
+			if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
 				var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 				slotDropdown.add(option);
 				optionIndex++;
@@ -1330,6 +1436,8 @@ function getPerkSection(character){
 	var perkDropdown = document.createElement("SELECT");
 	perkDropdown.add(new Option(loc["dropdown_perks"], null));
 	
+	var characterElement = getCharacterById(character.name);
+
 	upgrades.perks.forEach(function(perk){
 		var hasPerk = false;
 		if(character.hasOwnProperty("perks")){
@@ -1338,6 +1446,11 @@ function getPerkSection(character){
 					hasPerk = true;
 				}
 			});
+		}
+
+		if(characterElement.hasOwnProperty("has_perk")
+			&& characterElement.has_perk.includes(perk.name)){
+			return;
 		}
 
 		if(hasPerk){
@@ -1424,8 +1537,15 @@ function addLeaderSection(domElement, character){
 
 	for(var index = 1; index < upgrades.heroes_and_leaders.length; index++) {
 		var optionElement = upgrades.heroes_and_leaders[index];
-		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
-		perkDropdown.add(option);
+		var characterTags = [];
+		if(getCharacterById(character.name).hasOwnProperty("tags")){
+			characterTags = getCharacterById(character.name).tags;
+		}
+
+		if(canEquip(optionElement, characterTags)){
+			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+			perkDropdown.add(option);
+		}
 	}
 
 	perkDropdown.onchange = function(){
@@ -1440,13 +1560,6 @@ function addLeaderSection(domElement, character){
 		var dropDowns = document.getElementsByClassName("leaderPerkSelection");
 		for(var dropDownIndex = 0; dropDownIndex < dropDowns.length; dropDownIndex++){
 			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
-		}
-
-		clearExtraFactionSection();
-		if(perkDropdown.value == "creature_controller"){
-			buildExtraFactionSection(creatures);
-		}else if(perkDropdown.value == "robot_controller"){
-			buildExtraFactionSection(robots);
 		}
 
 		updateCaps();
@@ -1485,6 +1598,8 @@ function setLeader(character){
 	}
 	force.leader.leaderIndex = newLeaderIndex;
 
+	faction = getCharacterById(character.name).factions[0];
+
 	var activeSections = document.getElementsByClassName("activeLeaderSection");
 	var inactiveSections = document.getElementsByClassName("inactiveLeaderSection");
 
@@ -1500,22 +1615,18 @@ function updateCaps(){
 
 	totalCaps = 0;
 
-	var wear_slots = ["armor","power_armor", "clothing"];
-	var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"];
-	var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"];
+	var filtered_factions = [];
 
-	var extra_faction_code = "";
-	var extra_faction;
-
-	if(force.hasOwnProperty("leader")){
+	if(force.hasOwnProperty("leader") && force.leader.leaderIndex >= 0 && force.characters.length > force.leader.leaderIndex){
+		var leaderCharacter = getCharacterById(force.characters[force.leader.leaderIndex].name);
+		filtered_factions.push(leaderCharacter.factions[0]);
+		faction = leaderCharacter.factions[0];
 		var leaderPerk = upgrades.heroes_and_leaders[force.leader.perkIndex];
 		if(leaderPerk.name == "creature_controller"){
-			extra_faction_code = "c";
-			extra_faction = creatures;
+			filtered_factions.push("crt");
 		}
 		if(leaderPerk.name == "robot_controller"){
-			extra_faction_code = "r";
-			extra_faction = robots;
+			filtered_factions.push("rbt");
 		}
 	}
 
@@ -1531,10 +1642,7 @@ function updateCaps(){
 
 			var unitCost = 0;
 
-			var baseCost = getCharacterById(character.id).cost;
-			if(character.hasOwnProperty("faction_code")){
-				baseCost = getCharacterFromForceById(character.id, extra_faction).cost;
-			}
+			var baseCost = getCharacterById(character.name).cost;
 
 			unitCost += baseCost * modelCount;
 
@@ -1572,7 +1680,7 @@ function updateCaps(){
 			}
 
 
-			if(character.hasOwnProperty("faction_code") && character.faction_code != extra_faction_code){
+			if(false){ //TODO" Faction checking
 				var faction_warning = document.createTextNode("THIS UNIT IS NOT ALLOWED IN THE CURRENT FACTION");
 				warningSection.appendChild(faction_warning);
 			}
@@ -1633,6 +1741,11 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
+	if(settlementMode){
+		forceString += "s=y;";
+	}else{
+		forceString += "s=n;";
+	}
 	if(force.hasOwnProperty("leader")){
 		forceString += "l=" + force.leader.leaderIndex + "," + force.leader.perkIndex + ";";
 	}else{
@@ -1640,7 +1753,8 @@ function getStringForForce(){
 	}
 	if(force.hasOwnProperty("characters")){
 		force.characters.forEach(function(character) {
-			var charString = replaceAll(JSON.stringify(character),'"',"!");
+			var stringifiedChar = JSON.stringify(character);
+			var charString = replaceAll(stringifiedChar,'"',"!");
 			charString += ";";
 			forceString += charString;
 		});
@@ -1657,47 +1771,32 @@ function loadForceFromString(forceString){
 
 	var forceValue = objects[0].split("=")[1];
 
-	if(forceValue == "bos"){
-		switchBos();
+	if(typeof(forceValue) !== undefined){
+		appliedFilters = [forceValue];
 	}
-	if(forceValue == "mut"){
-		switchMutants();
-	}
-	if(forceValue == "srv"){
-		switchSurvivors();
-	}
-	if(forceValue == "rdr"){
-		switchRaiders();
-	}
-	if(forceValue == "stl"){
-		switchSettlement();
-	}
+
+	clearForce();
 
 	var listName = "";
 
 	if(objects[1].length > 2){
 		listName = decodeURIComponent(objects[1].split("=")[1]);
-	}		
+	}
 	document.getElementById("listNameArea").value = listName;
+
+	settlementMode = objects[2].split("=")[1] == "y";
 
 	force = {};
 	force.leader = {};
 	force.characters = [];
 
-	var startIndex = 2;
+	var startIndex = 3;
 
-	var leaderInfo = objects[2].split("=")[1].split(",");
+	var leaderInfo = objects[3].split("=")[1].split(",");
 	if(leaderInfo.length == 2){
-		startIndex = 3;
+		startIndex = 4;
 		force.leader.leaderIndex = parseInt(leaderInfo[0]);
 		force.leader.perkIndex = parseInt(leaderInfo[1]);
-
-		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "creature_controller"){
-			buildExtraFactionSection(creatures);
-		}
-		if(upgrades.heroes_and_leaders[force.leader.perkIndex].name == "robot_controller"){
-			buildExtraFactionSection(robots);
-		}
 	}else{
 		force.leader.leaderIndex = -1;
 		force.leader.perkIndex = 0;
@@ -1706,35 +1805,26 @@ function loadForceFromString(forceString){
 	for(var index = startIndex; index < objects.length - 1; index++){
 		var toParse = replaceAll(objects[index], "!","\"");
 		var characterData = JSON.parse(toParse);
-		if(characterData.hasOwnProperty("faction_code")){
-			if(characterData.faction_code == "c"){
-				addCharacter(getCharacterFromForceById(characterData.id, creatures), characterData);
-				return;
-			} else if(characterData.faction_code == "r"){
-				addCharacter(getCharacterFromForceById(characterData.id, robots), characterData);
-				return;
-			}
-			alert("Found out-of-faction character " +characterData.name + " with invalid faction code " + characterData.faction_code);
+		addCharacter(getCharacterById(characterData.name),characterData);
+
+		if(force.leader.leaderIndex == index){
+			faction = characterData.factions[0];
 		}
-		addCharacter(getCharacterById(characterData.id),characterData);
 	}
 }
 
 function getCharacterById(characterId){
-	for(var index = 0; index < characters.length; index++){
-		if(characters[index].id == characterId){
-			return characters[index];
-		}
-	}
-	return null;
-}
 
-function getCharacterFromForceById(characterId, force){
-	for(var index = 0; index < force.length; index++){
-		if(force[index].id == characterId){
-			return force[index];
+	if(mappedUnits.hasOwnProperty(characterId)){
+		return mappedUnits[characterId];
+	}
+
+	for(var index = 0; index < units.length; index++){
+		if(units[index].name == characterId){
+			return units[index];
 		}
 	}
+	console.log("Could not find character type with ID " + characterId);
 	return null;
 }
 
@@ -1750,6 +1840,7 @@ function getCharacterIndex(character){
 
 function initialize(){
 	var upgradeLoadPromise = loadURL("data/upgrades.json");
+	console.log("load upgrades")
 	upgradeLoadPromise.then(upgradesLoaded);
 	upgradeLoadPromise.catch(function(){alert("upgrade load failed");});
 }
