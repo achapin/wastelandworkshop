@@ -3004,6 +3004,7 @@
     "name": "sole_survivor",
     "unique_code": "sole_survivor",
     "heroic": true,
+    "preview": "solesurvivor.png",
     "factions": ["srv"],
     "default_equipment":{
       "rifles":["hunting_rifle"]

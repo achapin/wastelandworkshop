@@ -7,6 +7,8 @@ var sortedUnitNames = [];
 var forceSection;
 var addSection;
 var capsSection;
+var previewSection;
+var previewElement;
 
 var lastTextFieldValue;
 var addSectionOpen;
@@ -30,7 +32,7 @@ var possibleFilters = [
 
 var wear_slots = ["armor","power_armor", "clothing"]; //Exclusive choice
 var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee", "gear"]; //Multiple-choice single-instance
-var consumable_slots = [ "thrown", "mines", "chems", "food_and_drink"]; //Multiple-choice multiple-instance
+var consumable_slots = [ "thrown", "mines", "chems", "alcohol", "food_and_drink"]; //Multiple-choice multiple-instance
 
 function getUrl(url){
 	var req = new XMLHttpRequest();
@@ -144,11 +146,10 @@ function initListeners(){
 	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
 
-
-
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
 	capsSection = document.getElementById("caps");
+	previewSection = document.getElementById("preview");
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
@@ -236,6 +237,12 @@ function buildAddSection() {
 
 		var para = document.createElement("li");
 		var button = document.createElement("button");
+
+		if(characterElement.hasOwnProperty("preview")){
+			button.addEventListener("mousemove", function(e) { setPreview(characterElement.preview, e, true);});
+			button.addEventListener("mouseout", clearPreview);
+		}
+
 		button.setAttribute("class", classTypes);
 		var nameSpan = document.createElement("span");
 		var nameNode = document.createTextNode(loc[characterElement.name]);
@@ -1836,6 +1843,29 @@ function getCharacterIndex(character){
 		return otherChar === character;
 	});
 	return characterIndex;
+}
+
+function setPreview(image, event){
+	if(image != previewElement){
+		previewSection.innerHTML = "<img src='images/" + image + "' />";
+	}
+	previewElement = image;
+
+	var xPos = event.clientX;
+	if(xPos + previewSection.offsetWidth > window.innerWidth){
+		xPos -= xPos + previewSection.offsetWidth - window.innerWidth;
+	}
+	previewSection.style.left = xPos + "px";
+	var yPos = event.clientY;
+	if(yPos + previewSection.offsetHeight > window.innerHeight){
+		yPos -= yPos + previewSection.offsetHeight - window.innerHeight;
+	}
+	previewSection.style.top = yPos + "px";
+}
+
+function clearPreview(){
+	previewSection.innerHTML = "";
+	previewElement = "";
 }
 
 function initialize(){

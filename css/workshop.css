@@ -430,3 +430,9 @@ td {
 	background-color: rgb(40,65,129);
 	color: rgb(231, 189, 66);
 }
+
+#preview {
+	position: fixed;
+	z-index: 10;
+	pointer-events: none;
+}
