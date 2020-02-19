@@ -101,6 +101,7 @@ function localizationLoaded(json){
 	console.log("loca loaded");
 
 	var missingKeys = ""
+	var missingPreview = ""
 
 	units.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
@@ -116,6 +117,10 @@ function localizationLoaded(json){
 			}
 
 			mappedUnits[character.name] = character;
+		}
+
+		if(!character.hasOwnProperty("preview")){
+			missingPreview += character.name+",";
 		}
 	});
 
@@ -133,6 +138,7 @@ function localizationLoaded(json){
 	units.sort(orderUnitsByLocalizedName);
 
 	console.log("Missing LOC keys: " + missingKeys);
+	console.log("Missing Previews: " + missingPreview);
 
 	initListeners();
 }
@@ -1847,7 +1853,7 @@ function getCharacterIndex(character){
 
 function setPreview(image, event){
 	if(image != previewElement){
-		previewSection.innerHTML = "<img src='images/" + image + "' />";
+		previewSection.innerHTML = "<img src='images/" + image + ".png' />";
 	}
 	previewElement = image;
 

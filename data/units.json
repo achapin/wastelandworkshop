@@ -2,6 +2,7 @@
   {
     "name": "aspirant_goddard",
     "unique_code": "aspirant_goddard",
+    "preview":"goddard",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -53,6 +54,7 @@
   {
     "name": "elder_maxson",
     "unique_code":"elder_maxson",
+    "preview":"maxson",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -114,6 +116,7 @@
   {
     "name": "eyebot",
     "factions": ["bos","rbt","srv"],
+    "preview":"eyebot",
     "tags":["robot"],
     "must_carry": [
       "pistols.eyebot_laser"
@@ -125,6 +128,7 @@
   },
   {
     "name": "field_scribe",
+    "preview":"scribe",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -160,6 +164,7 @@
   },
   {
     "name": "field_scribe_shield",
+    "preview":"scribeshield",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -195,6 +200,7 @@
   },
   {
     "name": "knight",
+    "preview":"knight",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -257,6 +263,7 @@
   {
     "name": "knight_captain_cade",
     "unique_code": "knight_captain_cade",
+    "preview":"cade",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -304,6 +311,7 @@
   },
   {
     "name": "knight_patrol",
+    "preview":"knightpatrol",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -343,6 +351,7 @@
   },
   {
     "name": "knight_patrol_blade",
+    "preview":"knightblade",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -387,6 +396,7 @@
   },
   {
     "name": "knight_tech",
+    "preview":"knighttech",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -447,6 +457,7 @@
   },
   {
     "name": "lancer",
+    "preview":"lancer",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -477,6 +488,7 @@
   {
     "name": "lancer_captain_kells",
     "unique_code": "lancer_captain_kells",
+    "preview":"kells",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -528,6 +540,7 @@
   },
   {
     "name": "paladin",
+    "preview":"paladin",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -591,6 +604,7 @@
   {
     "name": "paladin_danse",
     "unique_code": "paladin_danse",
+    "preview":"danse",
     "heroic": true,
     "factions": ["bos"],
     "default_equipment":{
@@ -650,6 +664,7 @@
   },
   {
     "name": "alien",
+    "preview":"alien",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -660,6 +675,7 @@
   },
   {
     "name": "bloated_glowing_one",
+    "preview":"bloatedone",
     "factions": ["crt"],
     "must_carry": [
       "melee.bloated_glowing_one_swipe"
@@ -669,6 +685,7 @@
   },
   {
     "name": "deathclaw",
+    "preview":"deathclaw",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -681,6 +698,7 @@
   {
     "name": "feral_ghoul",
     "factions": ["crt"],
+    "preview":"feralghoul",
     "tags":["creature"],
     "must_carry": [
       "melee.feral_ghoul_swipe"
@@ -691,6 +709,7 @@
   {
     "name": "glowing_radroach_swarm",
     "factions": ["crt"],
+    "preview":"glowingradroach",
     "tags":["creature"],
     "must_carry": [
       "melee.radroach_swarm_bite"
@@ -700,6 +719,7 @@
   },
   {
     "name": "mole_rat",
+    "preview":"molerat",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -710,6 +730,7 @@
   },
   {
     "name":"putrid_glowing_one",
+    "preview":"putridone",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -720,6 +741,7 @@
   },
   {
     "name": "radroach_swarm",
+    "preview":"radroachswarm",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -730,6 +752,7 @@
   },
   {
     "name": "radscorpion",
+    "preview":"radscorpion",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -740,6 +763,7 @@
   },
   {
     "name": "weak_feral_ghoul",
+    "preview":"weakferalghoul",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -750,6 +774,7 @@
   },
   {
     "name": "young_deathclaw",
+    "preview":"youngdeathclaw",
     "factions": ["crt"],
     "tags":["creature"],
     "must_carry": [
@@ -762,6 +787,7 @@
   {
     "name": "a-2018",
     "unique_code": "a-2018",
+    "preview":"a2018",
     "heroic": true,
     "factions": ["ins"],
     "default_equipment":{
@@ -814,6 +840,7 @@
   },
   {
     "name": "battered-gen-1",
+    "preview":"batgen1synth",
     "factions": ["ins"],
     "default_equipment":{
       "pistols":["institute_laser_pistol"],
@@ -846,6 +873,7 @@
   {
     "name": "conrad_kellog",
     "unique_code": "conrad_kellog",
+    "preview":"kellogg",
     "heroic": true,
     "factions": ["ins"],
     "default_equipment":{
@@ -894,6 +922,7 @@
   {
     "name": "courser",
     "heroic": true,
+    "preview":"courser",
     "factions": ["ins"],
     "default_equipment":{
       "rifles":["assault_rifle"],
@@ -943,6 +972,7 @@
   },
   {
     "name": "engineer",
+    "preview":"engineer",
     "heroic": true,
     "factions": ["ins"],
     "default_equipment":{
@@ -978,6 +1008,7 @@
   },
   {
     "name": "gen-1-synth",
+    "preview":"gen1synth",
     "factions": ["ins"],
     "default_equipment":{
       "pistols":["institute_laser_pistol"],
@@ -1013,6 +1044,7 @@
   },
   {
     "name": "patroller",
+    "preview":"patroller",
     "heroic": true,
     "factions": ["ins"],
     "default_equipment":{
@@ -1055,6 +1087,7 @@
   },
   {
     "name": "scientist",
+    "preview":"scientist",
     "heroic": true,
     "factions": ["ins"],
     "default_equipment":{
@@ -1091,6 +1124,7 @@
   },
   {
     "name": "trooper",
+    "preview":"trooper",
     "heroic": true,
     "factions": ["ins"],
     "default_equipment":{
@@ -1133,6 +1167,7 @@
   },
   {
     "name": "x6-88_courser",
+    "preview":"x688courser",
     "unique_code": "x6-88_courser",
     "heroic": true,
     "factions": ["ins","srv"],
@@ -1176,6 +1211,7 @@
   {
     "name": "z2-47",
     "unique_code": "z2-47",
+    "preview":"z247",
     "heroic": true,
     "factions": ["ins"],
     "default_equipment":{
@@ -1216,6 +1252,7 @@
   {
     "name": "ack_ack",
     "unique_code": "ack_ack",
+    "preview":"ackack",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1279,6 +1316,7 @@
   {
     "name": "avery",
     "unique_code": "avery",
+    "preview":"avery",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1331,6 +1369,7 @@
   },
   {
     "name": "psycho",
+    "preview":"psycho",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1377,6 +1416,7 @@
   },
   {
     "name": "psycho_outlaw",
+    "preview":"psychooutlaw",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1423,6 +1463,7 @@
   },
   {
     "name":"raider",
+    "preview":"raider",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1476,6 +1517,7 @@
   },
   {
     "name":"raider_outlaw",
+    "preview":"raideroutlaw",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1531,6 +1573,7 @@
   {
     "name": "scavver",
     "heroic": true,
+    "preview":"scavver",
     "factions": ["rdr"],
     "default_equipment":{
       "rifles":["bolt_action_pipe_rifle"]
@@ -1585,6 +1628,7 @@
   },
   {
     "name": "scavver_outlaw",
+    "preview":"scavveroutlaw",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1641,6 +1685,7 @@
   {
     "name": "sin_jin",
     "unique_code": "sin_jin",
+    "preview":"sinjin",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1693,6 +1738,7 @@
   },
   {
     "name":"veteran_raider",
+    "preview":"veteranraider",
     "heroic": true,
     "factions": ["rdr"],
     "default_equipment":{
@@ -1765,6 +1811,7 @@
   },
   {
     "name": "assaultron",
+    "preview":"assaultron",
     "factions": ["rbt"],
     "tags":["robot"],
     "must_carry": [
@@ -1776,6 +1823,7 @@
   },
   {
     "name": "battered_assaultron",
+    "preview":"assaultronbat",
     "factions": ["rbt"],
     "tags":["robot"],
     "must_carry": [
@@ -1787,6 +1835,7 @@
   },
   {
     "name": "battered_protectron",
+    "preview":"protectronbat",
     "factions": ["rbt"],
     "tags":["robot"],
     "must_carry": [
@@ -1797,6 +1846,7 @@
   },
   {
     "name": "battered_sentry_bot",
+    "preview":"sentrybotbat",
     "factions": ["rbt"],
     "tags":["robot"],
     "must_carry": [
@@ -1808,6 +1858,7 @@
   },
   {
     "name": "mr_handy",
+    "preview":"mrhandy",
     "factions": ["rbt","srv"],
     "tags":["robot"],
     "must_carry": [
@@ -1819,6 +1870,7 @@
   },
   {
     "name": "protectron",
+    "preview":"protectron",
     "factions": ["rbt"],
     "tags":["robot"],
     "must_carry": [
@@ -1829,6 +1881,7 @@
   },
   {
     "name": "sentry_bot",
+    "preview":"sentrybot",
     "factions": ["rbt"],
     "tags":["robot"],
     "must_carry": [
@@ -1840,6 +1893,7 @@
   },
   {
     "name": "aviator",
+    "preview":"aviator",
     "unique_code": "aviator",
     "heroic": true,
     "factions": ["mut"],
@@ -1893,6 +1947,7 @@
   {
     "name": "behemoth",
     "cost": 245,
+    "preview":"behemoth",
     "factions": ["mut"],
     "tags":["super_mutant"],
     "default_equipment":{
@@ -1923,6 +1978,7 @@
   },
   {
     "name": "brute",
+    "preview":"brute",
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
@@ -1980,6 +2036,7 @@
   },
   {
     "name": "enslaved_tech",
+    "preview":"enslavedtech",
     "factions": ["mut", "srv"],
     "default_equipment":{
       "rifles":["combat_shotgun"]
@@ -2030,6 +2087,7 @@
   {
     "name": "fist",
     "unique_code": "fist",
+    "preview":"fist",
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
@@ -2075,6 +2133,7 @@
   {
     "name": "hammer",
     "unique_code": "hammer",
+    "preview":"hammer",
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
@@ -2131,6 +2190,7 @@
   {
     "name": "master",
     "heroic": true,
+    "preview":"master",
     "factions": ["mut"],
     "tags":["super_mutant"],
     "default_equipment":{
@@ -2188,6 +2248,7 @@
   },
   {
     "name": "mutant_hound",
+    "preview":"mutanthound",
     "factions": ["mut"],
     "must_carry": [
       "melee.hound_bite"
@@ -2197,6 +2258,7 @@
   },
   {
     "name": "mutant_hound_fiend",
+    "preview":"mutanthoundfiend",
     "factions": ["mut"],
     "must_carry": [
       "melee.hound_bite"
@@ -2206,6 +2268,7 @@
   },
   {
     "name": "overlord",
+    "preview":"overlord",
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
@@ -2266,6 +2329,7 @@
   },
   {
     "name": "skirmisher",
+    "preview":"skirmisher",
     "heroic": true,
     "factions": ["mut"],
     "tags":["super_mutant"],
@@ -2310,6 +2374,7 @@
   {
     "name": "strong",
     "unique_code": "strong",
+    "preview":"strong",
     "heroic": true,
     "factions": ["mut", "srv"],
     "tags":["super_mutant"],
@@ -2359,6 +2424,7 @@
   },
   {
     "name":"suicider",
+    "preview":"suicider",
     "factions": ["mut"],
     "must_carry": [
       "thrown.suicider_mini_nuke"
@@ -2380,6 +2446,7 @@
   },
   {
     "name": "super_mutant",
+    "preview":"supermutant",
     "factions": ["mut"],
     "heroic": true,
     "tags": ["super_mutant"],
@@ -2429,6 +2496,7 @@
   {
     "unique_code": "cait",
     "name": "cait",
+    "preview":"cait",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -2476,6 +2544,7 @@
   {
     "name": "codsworth",
     "unique_code": "codsworth",
+    "preview":"codsworth",
     "factions": ["srv"],
     "tags":["robot"],
     "must_carry": [
@@ -2487,6 +2556,7 @@
   },
   {
     "name": "dog",
+    "preview":"dog",
     "factions": ["crt", "srv"],
     "tags":["dog"],
     "must_carry": [
@@ -2497,6 +2567,7 @@
   },
   {
     "name": "dogmeat",
+    "preview":"dogmeat",
     "factions": ["srv"],
     "tags":["dog"],
     "unique_code": "dogmeat",
@@ -2509,6 +2580,7 @@
   {
     "name": "dogmeat_guard_dog",
     "unique_code": "dogmeat",
+    "preview":"dogmeatguarddog",
     "factions": ["srv"],
     "tags":["dog"],
     "must_carry": [
@@ -2520,6 +2592,7 @@
   {
     "name": "dogmeat_scout",
     "unique_code": "dogmeat",
+    "preview":"dogmeatscout",
     "factions": ["srv"],
     "tags":["dog"],
     "must_carry": [
@@ -2531,6 +2604,7 @@
   {
     "unique_code": "hancock",
     "name": "hancock",
+    "preview":"hancock",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -2571,6 +2645,7 @@
   {
     "name": "mama_murphy",
     "unique_code": "mama_murphy",
+    "preview":"mamamurphy",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -2606,6 +2681,7 @@
   },
   {
     "name": "minuteman",
+    "preview":"minuteman",
     "heroic": true,
     "factions": ["mnm", "srv"],
     "default_equipment":{
@@ -2666,6 +2742,7 @@
   {
     "unique_code": "nick_valentine",
     "name": "nick_valentine",
+    "preview":"nick",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -2703,6 +2780,7 @@
   {
     "name": "nuka_cola_girl",
     "unique_code": "nuka_cola_girl",
+    "preview":"nukagirl",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -2738,6 +2816,7 @@
   {
     "name": "piper",
     "unique_code": "piper",
+    "preview":"piper",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -2785,6 +2864,7 @@
   },
   {
     "name": "preston_garvey",
+    "preview":"prestongarvey",
     "unique_code": "preston_garvey",
     "heroic": true,
     "factions": ["mnm", "srv"],
@@ -2841,6 +2921,7 @@
   },
   {
     "name": "ronnie_shaw",
+    "preview":"ronnieshaw",
     "unique_code": "ronnie_shaw",
     "heroic": true,
     "factions": ["mnm", "srv"],
@@ -2896,6 +2977,7 @@
   },
   {
     "name": "scavenger",
+    "preview":"scavenger",
     "factions": ["srv"],
     "heroic": true,
     "default_equipment":{
@@ -2954,6 +3036,7 @@
   },
   {
     "name": "settler",
+    "preview":"settler",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -3004,7 +3087,7 @@
     "name": "sole_survivor",
     "unique_code": "sole_survivor",
     "heroic": true,
-    "preview": "solesurvivor.png",
+    "preview": "solesurvivor",
     "factions": ["srv"],
     "default_equipment":{
       "rifles":["hunting_rifle"]
@@ -3102,6 +3185,7 @@
   {
     "name": "sole_survivor_day_one",
     "unique_code": "sole_survivor",
+    "preview":"solesurvivordayone",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -3174,6 +3258,7 @@
   {
     "name": "sole_survivor_loner",
     "unique_code": "sole_survivor_loner",
+    "preview":"solesurvivorloner",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -3272,6 +3357,7 @@
   },
   {
     "name": "sole_survivor_tech",
+    "preview":"solesurvivortech",
     "unique_code": "sole_survivor",
     "default_equipment":{
       "rifles":["combat_shotgun"],
@@ -3370,6 +3456,7 @@
   {
     "name": "sturges",
     "unique_code": "sturges",
+    "preview":"sturges",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -3427,6 +3514,7 @@
   },
   {
     "name": "vault_dweller",
+    "preview":"vaultdweller",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -3466,6 +3554,7 @@
   },
   {
     "name": "vault_security_officer",
+    "preview":"vaultguard",
     "heroic": true,
     "factions": ["srv"],
     "default_equipment":{
@@ -3512,6 +3601,7 @@
   },
   {
     "name": "mechanist",
+    "preview":"mechanist",
     "unique_code": "mechanist",
     "heroic": true,
     "factions": ["srv"],
