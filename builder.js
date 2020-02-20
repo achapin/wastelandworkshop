@@ -244,10 +244,7 @@ function buildAddSection() {
 		var para = document.createElement("li");
 		var button = document.createElement("button");
 
-		if(characterElement.hasOwnProperty("preview")){
-			button.addEventListener("mousemove", function(e) { setPreview(characterElement.preview, e, true);});
-			button.addEventListener("mouseout", clearPreview);
-		}
+		addPreviewTooltip(characterElement, button);
 
 		button.setAttribute("class", classTypes);
 		var nameSpan = document.createElement("span");
@@ -530,6 +527,7 @@ function addCharacter(characterElement, presetInfo){
 	var nameHeader = document.createElement("h1");
 	var name = document.createTextNode(loc[characterElement.name]);
 	nameHeader.appendChild(name);
+	addPreviewTooltip(characterElement, nameHeader);
 	nameSection.appendChild(nameHeader);
 	headerRightSection.appendChild(nameSection);
 
@@ -644,6 +642,7 @@ function addCharacter(characterElement, presetInfo){
 				var hasPerkElement = document.createElement("div");
 				var hasPerkDescription = document.createTextNode(loc[element]);
 				hasPerkElement.appendChild(hasPerkDescription);
+				addPreviewTooltip(element, hasPerkDescription);
 				hasPerkSection.appendChild(hasPerkElement);
 			}
 		});
@@ -662,6 +661,7 @@ function addCharacter(characterElement, presetInfo){
 			}else{
 				var mustWearElement = document.createElement("div");
 				var mustWearDescription = document.createTextNode(loc[elements[1]]);
+				addPreviewTooltip(upgrade, mustWearDescription);
 				mustWearElement.appendChild(mustWearDescription);
 				mustWearSection.appendChild(mustWearElement);
 			}
@@ -680,6 +680,7 @@ function addCharacter(characterElement, presetInfo){
 			}else{
 				var mustCarryElement = document.createElement("div");
 				var mustCarryDescription = document.createTextNode(loc[elements[1]]);
+				addPreviewTooltip(upgrade, mustCarryDescription);
 				mustCarryElement.appendChild(mustCarryDescription);
 				mustCarrySection.appendChild(mustCarryElement);
 			}
@@ -1872,6 +1873,13 @@ function setPreview(image, event){
 function clearPreview(){
 	previewSection.innerHTML = "";
 	previewElement = "";
+}
+
+function addPreviewTooltip(element, target){
+	if(element.hasOwnProperty("preview")){
+		target.addEventListener("mousemove", function(e) { setPreview(element.preview, e, true);});
+		target.addEventListener("mouseout", clearPreview);
+	}
 }
 
 function initialize(){
