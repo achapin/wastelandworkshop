@@ -6,73 +6,90 @@
     },
     {
       "name": "final_judgement",
-      "cost": 31
+      "cost": 31,
+      "preview": "finaljudgement"
     },
     {
       "name": "gatling_laser",
-      "cost": 25
+      "cost": 25,
+      "preview": "galinglaser"
     },
     {
       "name": "junk_jet",
-      "cost": 14
+      "cost": 14,
+      "preview": "junkjet"
     },
     {
       "name": "minigun",
-      "cost": 23
+      "cost": 23,
+      "preview": "minigun"
     },
     {
       "name": "missile_launcher",
-      "cost": 41
+      "cost": 41,
+      "preview": "missilelauncher"
     }
   ],
   "rifles": [
     {
       "name": "assault_rifle",
-      "cost": 8
+      "cost": 8,
+      "preview": "assaultrifle"
     },
     {
       "name": "assaultron_head_laser",
-      "cost": 0
+      "cost": 0,
+      "preview": "assaultronlaser"
     },
     {
       "name": "battered_assaultron_head_laser",
-      "cost": 0
+      "cost": 0,
+      "preview": "assaultronbatlaser"
     },
     {
       "name": "bolt_action_pipe_rifle",
-      "cost": 10
+      "cost": 10,
+      "preview": "boltactionpiperifle"
     },
     {
       "name": "combat_rifle",
-      "cost": 14
+      "cost": 14,
+      "preview": "combatrifle"
     },
     {
       "name": "combat_shotgun",
-      "cost": 10
+      "cost": 10,
+      "preview": "combatshotgun"
     },
     {
       "name": "double_barrel_shotgun",
-      "cost": 17
+      "cost": 17,
+      "preview": "doublebarrelshotgun"
     },
     {
       "name": "gauss_rifle",
-      "cost": 47
+      "cost": 47,
+      "preview": "gaussrifle"
     },
     {
       "name": "hunting_rifle",
-      "cost": 20
+      "cost": 20,
+      "preview": "huntingrifle"
     },
     {
       "name": "institute_laser_rifle",
-      "cost": 12
+      "cost": 12,
+      "preview": "institutelaserrifle"
     },
     {
       "name": "laser_musket",
-      "cost": 14
+      "cost": 14,
+      "preview": "lasermusket"
     },
     {
       "name": "laser_rifle",
-      "cost": 30
+      "cost": 30,
+      "preview": "laserrifle"
     },
     {
       "name": "laser_turret",
@@ -84,15 +101,18 @@
     },
     {
       "name": "pipe_rifle",
-      "cost": 11
+      "cost": 11,
+      "preview": "piperifle"
     },
     {
       "name": "plasma_rifle",
-      "cost": 24
+      "cost": 24,
+      "preview": "plasmarifle"
     },
     {
       "name": "railway_rifle",
-      "cost": 20
+      "cost": 20,
+      "preview": "railwayrifle"
     },
     {
       "name": "submachine_gun",
@@ -106,23 +126,28 @@
   "pistols": [
     {
       "name": "44_revolver",
-      "cost": 6
+      "cost": 6,
+      "preview": "44revolver"
     },
     {
       "name": "10mm_pistol",
-      "cost": 6
+      "cost": 6,
+      "preview": "10mmpistol"
     },
     {
       "name": "alien_blaster",
-      "cost": 9
+      "cost": 9,
+      "preview": "alienblaster"
     },
     {
       "name": "bolt_action_pipe_pistol",
-      "cost": 2
+      "cost": 2,
+      "preview": "boltactionpipepistol"
     },
     {
       "name": "eyebot_laser",
-      "cost": 0
+      "cost": 0,
+      "preview": "eyebotlaser"
     },
     {
       "name": "flare_gun",
@@ -130,7 +155,8 @@
     },
     {
       "name": "gamma_gun",
-      "cost": 15
+      "cost": 15,
+      "preview": "gammagun"
     },
     {
       "name": "indys_freezing_44",
@@ -138,27 +164,33 @@
     },
     {
       "name": "institute_laser_pistol",
-      "cost": 3
+      "cost": 3,
+      "preview": "institutelaserpistol"
     },
     {
       "name": "kellogs_pistol",
-      "cost": 0
+      "cost": 0,
+      "preview": "kelloggspistol"
     },
     {
       "name": "laser_pistol",
-      "cost": 7
+      "cost": 7,
+      "preview": "laserpistol"
     },
     {
       "name": "mr_handy_flamer",
-      "cost": 0
+      "cost": 0,
+      "preview": "mrhandyflamer"
     },
     {
       "name": "pipe_pistol",
-      "cost": 3
+      "cost": 3,
+      "preview": "pipepistol"
     },
     {
       "name": "plasma_pistol",
-      "cost": 6
+      "cost": 6,
+      "preview": "plasma"
     },
     {
       "name": "protectrons_gaze",
@@ -166,17 +198,20 @@
     },
     {
       "name": "protectron_hand_laser",
-      "cost": 0
+      "cost": 0,
+      "preview": "protectronlaser"
     },
     {
       "name": "thirst_zapper_cola",
-      "cost": 4
+      "cost": 4,
+      "preview": "thirstzappercola"
     }
   ],
   "melee": [
     {
       "name": "assaultron_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview": "assaultronswipe"
     },
     {
       "name": "assaultron_blade",
@@ -184,63 +219,78 @@
     },
     {
       "name": "baseball_bat",
-      "cost": 2
+      "cost": 2,
+      "preview": "baseballbat"
     },
     {
       "name": "baton",
-      "cost": 10
+      "cost": 10,
+      "preview": "baton"
     },
     {
       "name": "board",
-      "cost": 8
+      "cost": 8,
+      "preview": "board"
     },
     {
       "name": "deathclaw_crush",
-      "cost": 0
+      "cost": 0,
+      "preview": "deathclawcrush"
     },
     {
       "name": "deathclaw_gauntlet",
-      "cost": 15
+      "cost": 15,
+      "preview": "deathclawgauntlet"
     },
     {
       "name": "deathclaw_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview": "deathclawswipe"
     },
     {
       "name": "dog_bite",
-      "cost": 0
+      "cost": 0,
+      "preview": "dogbite"
     },
     {
       "name": "feral_ghoul_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview": "ghoulswipe"
     },
     {
       "name": "fire_hydrant_bat",
-      "cost": 38
+      "cost": 38,
+      "preview": "firehydrantbat"
     },
     {
       "name": "hound_bite",
-      "cost": 0
+      "cost": 0,
+      "preview": "houndbite"
     },
     {
       "name": "huge_club",
-      "cost": 21
+      "cost": 21,
+      "preview": "hugeclub"
     },
     {
       "name": "lead_pipe",
-      "cost": 12
+      "cost": 12,
+      "preview": "leadpipe"
     },
     {
       "name": "machete",
-      "cost": 2
+      "cost": 2,
+      "preview": "machete"
     },
     {
       "name": "nail_board",
-      "cost": 2
+      "cost": 2,
+      "preview": "nail_board"
     },
     {
       "name": "mr_handy_buzzsaw",
-      "cost": 0
+      "cost": 0,
+      "preview": "mrhandybuzzsaw"
     },
     {
       "name": "mr_handy_buzz_blade",
@@ -248,7 +298,8 @@
     },
     {
       "name": "pipe_wrench",
-      "cost": 6
+      "cost": 6,
+      "preview": "pipewrench"
     },
     {
       "name": "power_fist",
@@ -256,7 +307,8 @@
     },
     {
       "name": "radroach_swarm_bite",
-      "cost": 0
+      "cost": 0,
+      "preview": "radroachbite"
     },
     {
       "name": "radroach_pincers_sting",
@@ -264,55 +316,68 @@
     },
     {
       "name": "ripper",
-      "cost": 6
+      "cost": 6,
+      "preview": "ripper"
     },
     {
       "name": "sledgehammer",
-      "cost": 12
+      "cost": 12,
+      "preview": "sledgehammer"
     },
     {
       "name": "stun_baton",
-      "cost": 30
+      "cost": 30,
+      "preview": "stunbaton"
     },
     {
       "name": "super_sledge",
-      "cost": 30
+      "cost": 30,
+      "preview": "supersledge"
     },
     {
       "name": "tire_iron",
-      "cost": 12
+      "cost": 12,
+      "preview": "tireiron"
     },
     {
       "name": "bloated_glowing_one_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview": "bloatedswipe"
     },
     {
       "name": "empty_minigun",
-      "cost": 0
+      "cost": 0,
+      "preview": "emptyminigun"
     },
     {
       "name": "mole_rat_bite",
-      "cost": 0
+      "cost": 0,
+      "preview": "moleratbite"
     },
     {
       "name": "putrid_glowing_one_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview": "putridswipe"
     },
     {
       "name": "radscorpion_pincers_and_sting",
-      "cost": 0
+      "cost": 0,
+      "preview": "radscorpionpincerssting"
     },
     {
       "name": "weak_feral_ghoul_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview": "weakghoulswipe"
     },
     {
       "name": "young_deathclaw_crush",
-      "cost": 0
+      "cost": 0,
+      "preview": "youngdeathclawcrush"
     },
     {
       "name": "young_deathclaw_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview": "youngdeathclawswipe"
     }
   ],
   "thrown": [

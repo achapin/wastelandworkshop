@@ -1113,8 +1113,9 @@ function getCarrySection(character, slotOptions, slotType){
 					var entrySection = addEquipEntry(character, slotType, option, equippedItems, slotDropdown);
 					equippedItems.appendChild(entrySection);
 				}else{
-					var option = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
-					slotDropdown.add(option);
+					var optionElement = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
+					addPreviewTooltip(option, optionElement);
+					slotDropdown.add(optionElement);
 				}
 			}
 		});
@@ -1129,8 +1130,9 @@ function getCarrySection(character, slotOptions, slotType){
 					var entrySection = addEquipEntry(character, slotType, optionElement, equippedItems, slotDropdown);
 					equippedItems.appendChild(entrySection);
 				}else{
-					var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
-					slotDropdown.add(option);
+					var optionEntry = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+					addPreviewTooltip(optionElement, optionEntry);
+					slotDropdown.add(optionEntry);
 				}
 		});
 	}
@@ -1167,6 +1169,7 @@ function addEquipEntry(character, slotType, optionElement, equippedItems, slotDr
 
 	var equipmentName = document.createElement("span");
 	equipmentName.appendChild(document.createTextNode(loc[optionElement.name]));
+	addPreviewTooltip(optionElement, equipmentName);
 	equipmentEntry.appendChild(equipmentName);
 
 	var equipmentCost = document.createElement("span");
