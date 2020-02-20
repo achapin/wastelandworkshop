@@ -383,49 +383,60 @@
   "thrown": [
     {
       "name": "baseball_grenade",
-      "cost": 6
+      "cost": 6,
+      "preview": "baseballgrenade"
     },
     {
       "name": "behemoth_rock_throw",
-      "cost": 5
+      "cost": 5,
+      "preview": "behemothrockthrow"
     },
     {
       "name": "cryo_grenade",
-      "cost": 7
+      "cost": 7,
+      "preview": "cryogrenade"
     },
     {
       "name": "fragmentation_grenade",
-      "cost": 7
+      "cost": 7,
+      "preview": "fragmentationgrenade"
     },
     {
       "name": "molotov_cocktail",
-      "cost": 6
+      "cost": 6,
+      "preview": "molotovcocktail"
     },
     {
       "name": "pulse_grenade",
-      "cost": 4
+      "cost": 4,
+      "preview": "pulsegrenade"
     },
     {
       "name": "suicider_mini_nuke",
-      "cost": 0
+      "cost": 0,
+      "preview": "suicidermininuke"
     },
     {
       "name": "synth_relay_grenade",
-      "cost": 35
+      "cost": 35,
+      "preview": "synthgrenade"
     }
   ],
   "mines": [
     {
       "name": "bottlecap_mine",
-      "cost": 10
+      "cost": 10,
+      "preview": "bottlecapmine"
     },
     {
       "name": "fragmentation_mine",
-      "cost": 5
+      "cost": 5,
+      "preview": "fragmentationmine"
     },
     {
       "name": "pulse_mine",
-      "cost": 4
+      "cost": 4,
+      "preview": "pulsemine"
     }
   ],
   "armor": [
@@ -511,27 +522,33 @@
   "power_armor" : [
     {
       "name": "power_armor_frame",
-      "cost": 15
+      "cost": 15,
+      "preview": "powerarmorframe"
     },
     {
       "name": "raider_power_armor",
-      "cost": 33
+      "cost": 33,
+      "preview": "raiderpowerarmor"
     },
     {
       "name": "t45_power_armor",
-      "cost": 36
+      "cost": 36,
+      "preview": "t45"
     },
     {
       "name": "t51_power_armor",
-      "cost": 54
+      "cost": 54,
+      "preview": "t51"
     },
     {
       "name": "t60_power_armor",
-      "cost": 72
+      "cost": 72,
+      "preview": "t60"
     },
     {
       "name": "x01_power_armor",
-      "cost": 85
+      "cost": 85,
+      "preview": "x01"
     }
   ],
   "clothing": [
@@ -631,71 +648,88 @@
   "chems": [
     {
       "name": "addictol",
-      "cost": 10
+      "cost": 10,
+      "preview": "addictol"
     },
     {
       "name": "berry_mentats",
-      "cost": 16
+      "cost": 16,
+      "preview": "berrymentats"
     },
     {
       "name": "buffout",
-      "cost": 20
+      "cost": 20,
+      "preview": "buffout"
     },
     {
       "name": "bufftats",
-      "cost": 25
+      "cost": 25,
+      "preview": "bufftats"
     },
     {
       "name": "calmex",
-      "cost": 20
+      "cost": 20,
+      "preview": "calmex"
     },
     {
       "name": "day_tripper",
-      "cost": 11
+      "cost": 11,
+      "preview": "daytripper"
     },
     {
       "name": "fury",
-      "cost": 20
+      "cost": 20,
+      "preview": "fury"
     },
     {
       "name": "jet",
-      "cost": 20
+      "cost": 20,
+      "preview": "jet"
     },
     {
       "name": "med-x",
-      "cost": 16
+      "cost": 16,
+      "preview": "medx"
     },
     {
       "name": "mentats",
-      "cost": 13
+      "cost": 13,
+      "preview": "mentats"
     },
     {
       "name": "mysterious_serum",
-      "cost": 20
+      "cost": 20,
+      "preview": "mysteriousserum"
     },
     {
       "name": "orange_mentats",
-      "cost": 20
+      "cost": 20,
+      "preview": "orangementats"
     },
     {
       "name": "overdrive",
-      "cost": 20
+      "cost": 20,
+      "preview": "overdrive"
     },
     {
       "name": "psycho",
-      "cost": 20
+      "cost": 20,
+      "preview": "psycho"
     },
     {
       "name": "radaway",
-      "cost": 20
+      "cost": 20,
+      "preview": "radaway"
     },
     {
       "name": "rad-x",
-      "cost": 13
+      "cost": 13,
+      "preview": "radx"
     },
     {
       "name": "refreshing_beverage",
-      "cost": 52
+      "cost": 52,
+      "preview": "refreshingbeverage"
     },
     {
       "name": "spark",
@@ -703,7 +737,8 @@
     },
     {
       "name": "stimpak",
-      "cost": 38
+      "cost": 38,
+      "preview": "stimpak"
     },
     {
       "name": "ultra_jet",
@@ -755,7 +790,8 @@
   "heroes_and_leaders": [
     {
       "name": "heroic",
-      "cost": 60
+      "cost": 60,
+      "preview": "heroic"
     },
     {
       "name": "beloved",
@@ -763,44 +799,54 @@
     },
     {
       "name": "berserker",
-      "cost": 13
+      "cost": 13,
+      "preview": "berserker"
     },
     {
       "name": "blitzer",
-      "cost": 20
+      "cost": 20,
+      "preview": "blitzer"
     },
     {
       "name": "bodyguard",
-      "cost": 16
+      "cost": 16,
+      "preview": "bodyguard"
     },
     {
       "name": "brawler",
-      "cost": 10
+      "cost": 10,
+      "preview": "brawler"
     },
     {
       "name": "bruiser",
-      "cost": 26
+      "cost": 26,
+      "preview": "bruiser"
     },
     {
       "name": "commander",
-      "cost": 36
+      "cost": 36,
+      "preview": "commander"
     },
     {
       "name": "creature_controller",
       "restrictions":["!robot","!creature","!dog"],
-      "cost": 7
+      "cost": 7,
+      "preview": "creaturecontroller"
     },
     {
       "name": "defender",
-      "cost": 39
+      "cost": 39,
+      "preview": "defender"
     },
     {
       "name": "dweller",
-      "cost": 8
+      "cost": 8,
+      "preview": "dweller"
     },
     {
       "name": "fusilier",
-      "cost": 20
+      "cost": 20,
+      "preview": "fusilier"
     },
     {
       "name": "gatherer",
@@ -808,15 +854,18 @@
     },
     {
       "name": "grenadier",
-      "cost": 10
+      "cost": 10,
+      "preview": "grenadier"
     },
     {
       "name": "hunter",
-      "cost": 10
+      "cost": 10,
+      "preview": "hunter"
     },
     {
       "name": "old_timer",
-      "cost": 11
+      "cost": 11,
+      "preview": "old_timer"
     },
     {
       "name": "procurer",
@@ -825,11 +874,13 @@
     {
       "name": "robot_controller",
       "restrictions":["!robot","!creature","!dog"],
-      "cost": 7
+      "cost": 7,
+      "preview": "robotcontroller"
     },
     {
       "name": "selfless",
-      "cost": 13
+      "cost": 13,
+      "preview": "selfless"
     },
     {
       "name": "stalker",
@@ -841,7 +892,8 @@
     },
     {
       "name": "tech",
-      "cost": 13
+      "cost": 13,
+      "preview": "tech"
     },
     {
       "name": "tech_chief",
@@ -849,29 +901,35 @@
     },
     {
       "name": "thief",
-      "cost": 7
+      "cost": 7,
+      "preview": "thief"
     },
     {
       "name": "veteran",
-      "cost": 16
+      "cost": 16,
+      "preview": "veteran"
     },
     {
       "name": "warden",
-      "cost": 20
+      "cost": 20,
+      "preview": "warden"
     },
     {
       "name": "wasteland_searcher",
-      "cost": 5
+      "cost": 5,
+      "preview": "wastelandsearcher"
     },
     {
       "name": "wrestler",
-      "cost": 10
+      "cost": 10,
+      "preview": "wrestler"
     }
   ],
   "perks":[
     {
       "name": "action_person",
-      "cost": 10
+      "cost": 10,
+      "preview": "actionperson"
     },
     {
       "name": "armorer",
@@ -879,15 +937,18 @@
     },
     {
       "name": "attack_dog",
-      "cost": 10
+      "cost": 10,
+      "preview": "attackdog"
     },
     {
       "name": "basher",
-      "cost": 10
+      "cost": 10,
+      "preview": "basher"
     },
     {
       "name": "big_leagues",
-      "cost": 16
+      "cost": 16,
+      "preview": "bigleagues"
     },
     {
       "name": "blacksmith",
@@ -895,15 +956,18 @@
     },
     {
       "name": "blitz",
-      "cost": 7
+      "cost": 7,
+      "preview": "blitz"
     },
     {
       "name": "bloody_mess",
-      "cost": 8
+      "cost": 8,
+      "preview": "bloodymess"
     },
     {
       "name": "chem_resistant",
-      "cost": 10
+      "cost": 10,
+      "preview": "chemresistant"
     },
     {
       "name": "chemist",
@@ -911,11 +975,13 @@
     },
     {
       "name": "concentrated_fire",
-      "cost": 12
+      "cost": 12,
+      "preview": "concentratedfire"
     },
     {
       "name": "demolition_expert",
-      "cost": 5
+      "cost": 5,
+      "preview": "demolitionexpert"
     },
     {
       "name": "entangle",
@@ -947,15 +1013,18 @@
     },
     {
       "name": "hacker",
-      "cost": 7
+      "cost": 7,
+      "preview": "hacker"
     },
     {
       "name": "heavy_gunner",
-      "cost": 16
+      "cost": 16,
+      "preview": "heavygunner"
     },
     {
       "name": "huntsman",
-      "cost": 10
+      "cost": 10,
+      "preview": "huntsman"
     },
     {
       "name": "impatient",
@@ -963,11 +1032,13 @@
     },
     {
       "name": "lead_belly",
-      "cost": 7
+      "cost": 7,
+      "preview": "leadbelly"
     },
     {
       "name": "life_giver",
-      "cost": 7
+      "cost": 7,
+      "preview": "lifegiver"
     },
     {
       "name": "local_leader",
@@ -979,15 +1050,18 @@
     },
     {
       "name": "locksmith",
-      "cost": 7
+      "cost": 7,
+      "preview": "locksmith"
     },
     {
       "name": "lone_wanderer",
-      "cost": 33
+      "cost": 33,
+      "preview": "lonewanderer"
     },
     {
       "name": "medic",
-      "cost": 7
+      "cost": 7,
+      "preview": "medic"
     },
     {
       "name": "mend_robot",
@@ -995,27 +1069,33 @@
     },
     {
       "name": "moving_target",
-      "cost": 10
+      "cost": 10,
+      "preview": "moving_target"
     },
     {
       "name": "mysterious_stranger_1",
-      "cost": 10
+      "cost": 10,
+      "preview": "mysteriousstranger"
     },
     {
       "name": "mysterious_stranger_2",
-      "cost": 13
+      "cost": 13,
+      "preview": "mysteriousstranger2"
     },
     {
       "name": "mysterious_stranger_3",
-      "cost": 3
+      "cost": 3,
+      "preview": "mysteriousstranger3"
     },
     {
       "name": "nerd_rage",
-      "cost": 13
+      "cost": 13,
+      "preview": "nerdrage"
     },
     {
       "name": "ninja",
-      "cost": 10
+      "cost": 10,
+      "preview": "ninja"
     },
     {
       "name": "nuclear_physicist",
@@ -1023,11 +1103,13 @@
     },
     {
       "name": "pack_leader",
-      "cost": 26
+      "cost": 26,
+      "preview": "packleader"
     },
     {
       "name": "pain_train",
-      "cost": 3
+      "cost": 3,
+      "preview": "paintrain"
     },
     {
       "name": "penetrator",
@@ -1039,23 +1121,28 @@
     },
     {
       "name": "rad_resistant",
-      "cost": 5
+      "cost": 5,
+      "preview": "radresistant"
     },
     {
       "name": "refractor",
-      "cost": 7
+      "cost": 7,
+      "preview": "refractor"
     },
     {
       "name": "rifle_man",
-      "cost": 13
+      "cost": 13,
+      "preview": "rifleman"
     },
     {
       "name": "sneak",
-      "cost": 13
+      "cost": 13,
+      "preview": "sneak"
     },
     {
       "name": "steady_aim",
-      "cost": 10
+      "cost": 10,
+      "preview": "steadyaim"
     },
     {
       "name": "stun_resistant",
@@ -1063,7 +1150,8 @@
     },
     {
       "name": "toughness",
-      "cost": 7
+      "cost": 7,
+      "preview": "toughness"
     }
   ],
   "mods":[

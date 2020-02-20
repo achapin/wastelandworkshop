@@ -436,3 +436,7 @@ td {
 	z-index: 10;
 	pointer-events: none;
 }
+
+option {
+	pointer-events: auto;
+}

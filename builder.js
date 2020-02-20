@@ -565,6 +565,7 @@ function addCharacter(characterElement, presetInfo){
 			}
 			updateCaps();
 		});
+		addPreviewTooltip(upgrades.heroes_and_leaders[0], heroicSection);
 		headerRightSection.appendChild(heroicSection);
 	}
 
@@ -642,7 +643,7 @@ function addCharacter(characterElement, presetInfo){
 				var hasPerkElement = document.createElement("div");
 				var hasPerkDescription = document.createTextNode(loc[element]);
 				hasPerkElement.appendChild(hasPerkDescription);
-				addPreviewTooltip(element, hasPerkDescription);
+				addPreviewTooltip(element, hasPerkElement);
 				hasPerkSection.appendChild(hasPerkElement);
 			}
 		});
@@ -661,7 +662,7 @@ function addCharacter(characterElement, presetInfo){
 			}else{
 				var mustWearElement = document.createElement("div");
 				var mustWearDescription = document.createTextNode(loc[elements[1]]);
-				addPreviewTooltip(upgrade, mustWearDescription);
+				addPreviewTooltip(upgrade, mustWearElement);
 				mustWearElement.appendChild(mustWearDescription);
 				mustWearSection.appendChild(mustWearElement);
 			}
@@ -680,7 +681,7 @@ function addCharacter(characterElement, presetInfo){
 			}else{
 				var mustCarryElement = document.createElement("div");
 				var mustCarryDescription = document.createTextNode(loc[elements[1]]);
-				addPreviewTooltip(upgrade, mustCarryDescription);
+				addPreviewTooltip(upgrade, mustCarryElement);
 				mustCarryElement.appendChild(mustCarryDescription);
 				mustCarrySection.appendChild(mustCarryElement);
 			}
@@ -962,6 +963,7 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 	entrySection.appendChild(optionCostSection);
 	entrySection.appendChild(getOptionQtySection);
 
+	addPreviewTooltip(optionElement, entrySection);
 
 	removeButton.addEventListener("click", function() {
 		delete character[slotType][optionElement.name];
@@ -1077,6 +1079,9 @@ function getWearSection(character, slotOption, slotType, characterTags){
 		}
 		updateCaps();
 	};
+
+	addPreviewTooltipForSlot(character, slotType, slotDropdown);
+
 	wearSection.appendChild(slotDropdown);
 	wearSection.appendChild(modSection);
 
@@ -1114,7 +1119,6 @@ function getCarrySection(character, slotOptions, slotType){
 					equippedItems.appendChild(entrySection);
 				}else{
 					var optionElement = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
-					addPreviewTooltip(option, optionElement);
 					slotDropdown.add(optionElement);
 				}
 			}
@@ -1131,7 +1135,6 @@ function getCarrySection(character, slotOptions, slotType){
 					equippedItems.appendChild(entrySection);
 				}else{
 					var optionEntry = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
-					addPreviewTooltip(optionElement, optionEntry);
 					slotDropdown.add(optionEntry);
 				}
 		});
@@ -1422,6 +1425,7 @@ function addChemEntry(ownedChems, chem, character, chemDropdown, addChemButton){
 	selectedChem.appendChild(chemCounter)
 
 	addRemoveChemButton(selectedChem, character, chemData, ownedChems, chemDropdown, addChemButton);
+	addPreviewTooltip(chemData, selectedChem);
 	ownedChems.appendChild(selectedChem);
 }
 
@@ -1501,6 +1505,7 @@ function addPerkEntry(ownedPerks, perk, character, perkDropdown){
 	var selectedPerk = document.createElement("div");
 	var perkData = getUpgrade("perks", perk);
 	selectedPerk.appendChild(document.createTextNode(loc[perkData.name] + " (" + perkData.cost + ")"));
+	addPreviewTooltip(perkData, selectedPerk);
 	addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perkDropdown);
 	ownedPerks.appendChild(selectedPerk);
 }
@@ -1581,8 +1586,18 @@ function addLeaderSection(domElement, character){
 
 		updateCaps();
 	};
-	activeLeaderSection.appendChild(perkDropdown);
 
+	activeLeaderSection.addEventListener("mousemove", function(e) {
+		if(force.leader.perkIndex > 0){
+			var upgrade = upgrades.heroes_and_leaders[force.leader.perkIndex];
+			if(upgrade.hasOwnProperty("preview")){
+				setPreview(upgrade.preview, e, true);
+			}
+		}
+	});
+	activeLeaderSection.addEventListener("mouseout", clearPreview);
+
+	activeLeaderSection.appendChild(perkDropdown);
 
 	var inactiveLeaderSection = document.createElement("div");
 	inactiveLeaderSection.setAttribute("class", "inactiveLeaderSection");
@@ -1883,6 +1898,18 @@ function addPreviewTooltip(element, target){
 		target.addEventListener("mousemove", function(e) { setPreview(element.preview, e, true);});
 		target.addEventListener("mouseout", clearPreview);
 	}
+}
+
+function addPreviewTooltipForSlot(character, slotType, target){
+	target.addEventListener("mousemove", function(e) {
+		if(character.hasOwnProperty(slotType)){
+			var upgrade = getUpgrade(slotType, character[slotType])
+			if(upgrade != null && upgrade.hasOwnProperty("preview")){
+				setPreview(upgrade.preview, e, true);
+			}
+		}
+	});
+	target.addEventListener("mouseout", clearPreview);
 }
 
 function initialize(){
