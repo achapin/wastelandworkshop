@@ -2557,7 +2557,7 @@
   {
     "name": "dog",
     "preview":"dog",
-    "factions": ["crt", "srv"],
+    "factions": ["crt", "srv", "rdr"],
     "tags":["dog"],
     "must_carry": [
       "melee.dog_bite"

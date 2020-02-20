@@ -12,7 +12,7 @@
     {
       "name": "gatling_laser",
       "cost": 25,
-      "preview": "galinglaser"
+      "preview": "gatlinglaser"
     },
     {
       "name": "junk_jet",
@@ -189,8 +189,7 @@
     },
     {
       "name": "plasma_pistol",
-      "cost": 6,
-      "preview": "plasma"
+      "cost": 6
     },
     {
       "name": "protectrons_gaze",
@@ -285,7 +284,7 @@
     {
       "name": "nail_board",
       "cost": 2,
-      "preview": "nail_board"
+      "preview": "nailboard"
     },
     {
       "name": "mr_handy_buzzsaw",
@@ -435,8 +434,7 @@
     },
     {
       "name": "pulse_mine",
-      "cost": 4,
-      "preview": "pulsemine"
+      "cost": 4
     }
   ],
   "armor": [
@@ -663,8 +661,7 @@
     },
     {
       "name": "bufftats",
-      "cost": 25,
-      "preview": "bufftats"
+      "cost": 25
     },
     {
       "name": "calmex",
@@ -713,8 +710,7 @@
     },
     {
       "name": "psycho",
-      "cost": 20,
-      "preview": "psycho"
+      "cost": 20
     },
     {
       "name": "radaway",
@@ -865,7 +861,7 @@
     {
       "name": "old_timer",
       "cost": 11,
-      "preview": "old_timer"
+      "preview": "oldtimer"
     },
     {
       "name": "procurer",
@@ -1070,7 +1066,7 @@
     {
       "name": "moving_target",
       "cost": 10,
-      "preview": "moving_target"
+      "preview": "movingtarget"
     },
     {
       "name": "mysterious_stranger_1",

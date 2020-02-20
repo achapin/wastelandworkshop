@@ -132,6 +132,9 @@ function localizationLoaded(json){
 			if(!loc.hasOwnProperty(upgrade.name)){
 				missingKeys += upgrade.name + ", ";
 			}
+			if(!upgrade.hasOwnProperty("preview")){
+				missingPreview += upgrade.name+",";
+			}
 		});
 	});
 
