@@ -661,7 +661,8 @@
     },
     {
       "name": "bufftats",
-      "cost": 25
+      "cost": 25,
+      "preview":"bufftats"
     },
     {
       "name": "calmex",
@@ -710,7 +711,8 @@
     },
     {
       "name": "psycho",
-      "cost": 20
+      "cost": 20,
+      "preview": "psychochem"
     },
     {
       "name": "radaway",
@@ -729,7 +731,8 @@
     },
     {
       "name": "spark",
-      "cost": 18
+      "cost": 18,
+      "preview": "spark"
     },
     {
       "name": "stimpak",
@@ -738,7 +741,8 @@
     },
     {
       "name": "ultra_jet",
-      "cost": 25
+      "cost": 25,
+      "preview": "ultrajet"
     },
     {
       "name": "x111_compound",
