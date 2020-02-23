@@ -1915,6 +1915,8 @@ function addPreviewTooltipForSlot(character, slotType, target){
 	target.addEventListener("mouseout", clearPreview);
 }
 
+//TODO: Add preview slot for mods
+
 function initialize(){
 	var upgradeLoadPromise = loadURL("data/upgrades.json");
 	console.log("load upgrades")

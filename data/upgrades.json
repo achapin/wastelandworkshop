@@ -93,11 +93,13 @@
     },
     {
       "name": "laser_turret",
-      "cost": 10
+      "cost": 10,
+      "preview": "laserturret"
     },
     {
       "name": "machine_gun_turret_mk1",
-      "cost": 10
+      "cost": 10,
+      "preview": "machinegunturretmk1"
     },
     {
       "name": "pipe_rifle",
@@ -116,7 +118,8 @@
     },
     {
       "name": "submachine_gun",
-      "cost": 10
+      "cost": 10,
+      "preview": "submachinegun"
     },
     {
       "name": "tesla_rifle",
@@ -151,7 +154,8 @@
     },
     {
       "name": "flare_gun",
-      "cost": 5
+      "cost": 5,
+      "preview": "flaregun"
     },
     {
       "name": "gamma_gun",
@@ -189,7 +193,8 @@
     },
     {
       "name": "plasma_pistol",
-      "cost": 6
+      "cost": 6,
+      "preview": "plasmapistol"
     },
     {
       "name": "protectrons_gaze",
@@ -302,7 +307,8 @@
     },
     {
       "name": "power_fist",
-      "cost": 9
+      "cost": 9,
+      "preview": "powerfist"
     },
     {
       "name": "radroach_swarm_bite",
@@ -434,71 +440,87 @@
     },
     {
       "name": "pulse_mine",
-      "cost": 4
+      "cost": 4,
+      "preview": "pulsemine"
     }
   ],
   "armor": [
     {
       "name": "armored_pads",
-      "cost": 12
+      "cost": 12,
+      "preview": "armoredpads"
     },
     {
       "name": "army_helmet",
-      "cost": 15
+      "cost": 15,
+      "preview": "armyhelmet"
     },
     {
       "name": "bladed_helmet",
-      "cost": 7
+      "cost": 7,
+      "preview": "bladedhelmet"
     },
     {
       "name": "chain_dog_collar",
       "restrictions":["dog"],
-      "cost": 13
+      "cost": 13,
+      "preview": "chaindogcollar"
     },
     {
       "name": "chains",
-      "cost": 8
+      "cost": 8,
+      "preview": "chains"
     },
     {
       "name": "cleanroom_suit",
-      "cost": 25
+      "cost": 25,
+      "preview": "cleanroomsuit"
     },
     {
       "name": "combat_armor",
-      "cost": 18
+      "cost": 18,
+      "preview": "combatarmor"
     },
     {
       "name": "damaged_hazmat_suit",
-      "cost": 15
+      "cost": 15,
+      "preview": "damagedhazmatsuit"
     },
     {
       "name": "freefall_leg_armor",
-      "cost": 15
+      "cost": 15,
+      "preview": "freefalllegarmor"
     },
     {
       "name": "hazmat_suit",
-      "cost": 20
+      "cost": 20,
+      "preview": "hazmatsuit"
     },
     {
       "name": "heavy_gauntlets",
       "restrictions":["super_mutant"],
-      "cost": 15
+      "cost": 15,
+      "preview": "heavygauntlets"
     },
     {
       "name": "heavy_raider_armor",
-      "cost": 30
+      "cost": 30,
+      "preview": "heavyraiderarmor"
     },
     {
       "name": "heavy_synth_armor",
-      "cost": 35
+      "cost": 35,
+      "preview": "heavysyntharmor"
     },
     {
       "name": "mechanist_armor_and_helmet",
-      "cost": 43
+      "cost": 43,
+      "preview": "mechanistarmorandhelmet"
     },
     {
       "name": "protectors_right_arm_guard",
-      "cost": 12
+      "cost": 12,
+      "preview": "protectorsrightarmguard"
     },
     {
       "name": "rocks_bladed_helm",
@@ -506,15 +528,18 @@
     },
     {
       "name": "sturdy_combat_armor",
-      "cost": 30
+      "cost": 30,
+      "preview": "sturdycombatarmor"
     },
     {
       "name": "sturdy_leather_armor",
-      "cost": 23
+      "cost": 23,
+      "preview": "sturdyleatherarmor"
     },
     {
       "name": "sturdy_metal_armor",
-      "cost": 23
+      "cost": 23,
+      "preview": "sturdymetalarmor"
     }
   ],
   "power_armor" : [
@@ -552,95 +577,117 @@
   "clothing": [
     {
       "name": "airship_captains_hat",
-      "cost": 5
+      "cost": 5,
+      "preview": "airshipcaptainshat"
     },
     {
       "name": "assault_gas_mask",
-      "cost": 3
+      "cost": 3,
+      "preview": "assaultgasmask"
     },
     {
       "name": "atom_cats_jacket_and_jeans",
-      "cost": 7
+      "cost": 7,
+      "preview": "atomcatjacketandjeans"
     },
     {
       "name": "aviator_cap",
-      "cost": 15
+      "cost": 15,
+      "preview": "aviatorcap"
     },
     {
       "name": "baseball_cap",
-      "cost": 7
+      "cost": 7,
+      "preview": "baseballcap"
     },
     {
       "name": "battered_fedora",
-      "cost": 8
+      "cost": 8,
+      "preview": "batteredfedora"
     },
     {
       "name": "bowler_hat",
       "restrictions":["robot"],
-      "cost": 10
+      "cost": 10,
+      "preview": "bowlerhat"
     },
     {
       "name": "brotherhood_of_steel_hood",
-      "cost": 5
+      "cost": 5,
+      "preview": "brotherhoodofsteelhood"
     },
     {
       "name": "camoflage",
-      "cost": 13
+      "cost": 13,
+      "preview": "camoflage"
     },
     {
       "name": "dirty_postman_uniform",
-      "cost": 7
+      "cost": 7,
+      "preview": "dirtypostmanuniform"
     },
     {
       "name": "dog_bandana",
       "restrictions":["dog"],
-      "cost": 7
+      "cost": 7,
+      "preview": "dogbandana"
     },
     {
       "name": "eyeglasses",
-      "cost": 3
+      "cost": 3,
+      "preview": "eyeglasses"
     },
     {
       "name": "military_fatigues",
-      "cost": 3
+      "cost": 3,
+      "preview": "militaryfatigues"
     },
     {
       "name": "patched_three_piece_suit",
-      "cost": 5
+      "cost": 5,
+      "preview": "patchedthreepiecesuit"
     },
     {
       "name": "red_flight_helmet",
-      "cost": 3
+      "cost": 3,
+      "preview": "redflighthelmet"
     },
     {
       "name": "road_goggles",
-      "cost": 3
+      "cost": 3,
+      "preview": "roadgoggles"
     },
     {
       "name": "robotic_bits",
-      "cost": 3
+      "cost": 3,
+      "preview": "roboticbits"
     },
     {
       "name": "sea_captains_hat",
-      "cost": 7
+      "cost": 7,
+      "preview": "seacaptainshat"
     },
     {
       "name": "shoulder_rags",
-      "cost": 10
+      "cost": 10,
+      "preview": "shoulderrags"
     },
     {
       "name": "spiked_muzzle",
       "restrictions":["dog"],
-      "cost": 5
+      "cost": 5,
+      "preview": "spikedmuzzle"
     },
     {
       "name": "tricorn_hat",
-      "cost": 5
+      "cost": 5,
+      "preview": "tricornhat"
     },
     {
       "name": "vault_111_jumpsuit",
       "restrictions":["!super_mutant"],
-      "cost": 10
+      "cost": 10,
+      "preview": "vault111jumpsuit"
     }
   ],
   "chems": [
@@ -746,45 +793,55 @@
     },
     {
       "name": "x111_compound",
-      "cost": 30
+      "cost": 30,
+      "preview": "x111compound"
     },
     {
       "name": "x-cell",
-      "cost": 24
+      "cost": 24,
+      "preview": "xcell"
     }
   ],
   "alcohol": [
     {
       "name": "beer",
-      "cost": 9
+      "cost": 9,
+      "preview": "beer"
     },
     {
       "name": "bourbon",
-      "cost": 7
+      "cost": 7,
+      "preview": "bourbon"
     },
     {
       "name": "ice_cold_gwinett_ale",
-      "cost": 9
+      "cost": 9,
+      "preview": "icecoldgwinnettale"
     },
     {
       "name": "rum",
-      "cost": 8
+      "cost": 8,
+      "preview": "rum"
     },
     {
       "name": "vodka",
-      "cost": 8
+      "cost": 8,
+      "preview": "vodka"
     },
     {
       "name": "whiskey",
-      "cost": 8
+      "cost": 8,
+      "preview": "whiskey"
     },
     {
       "name": "moonshine",
-      "cost": 9
+      "cost": 9,
+      "preview": "moonshine"
     },
     {
       "name": "wine",
-      "cost": 5
+      "cost": 5,
+      "preview": "wine"
     }
   ],
   "heroes_and_leaders": [
@@ -795,7 +852,8 @@
     },
     {
       "name": "beloved",
-      "cost": 16
+      "cost": 16,
+      "preview": "beloved"
     },
     {
       "name": "berserker",
@@ -850,7 +908,8 @@
     },
     {
       "name": "gatherer",
-      "cost": 15
+      "cost": 15,
+      "preview": "gatherer"
     },
     {
       "name": "grenadier",
@@ -869,7 +928,8 @@
     },
     {
       "name": "procurer",
-      "cost": 15
+      "cost": 15,
+      "preview": "procurer"
     },
     {
       "name": "robot_controller",
@@ -884,11 +944,13 @@
     },
     {
       "name": "stalker",
-      "cost": 12
+      "cost": 12,
+      "preview": "stalker"
     },
     {
       "name": "synth_expert",
-      "cost": 12
+      "cost": 12,
+      "preview": "synthexpert"
     },
     {
       "name": "tech",
@@ -897,7 +959,8 @@
     },
     {
       "name": "tech_chief",
-      "cost": 17
+      "cost": 17,
+      "preview": "techchief"
     },
     {
       "name": "thief",
@@ -933,7 +996,8 @@
     },
     {
       "name": "armorer",
-      "cost": 7
+      "cost": 7,
+      "preview": "armorer"
     },
     {
       "name": "attack_dog",
@@ -952,7 +1016,8 @@
     },
     {
       "name": "blacksmith",
-      "cost": 7
+      "cost": 7,
+      "preview": "blacksmith"
     },
     {
       "name": "blitz",
@@ -971,7 +1036,8 @@
     },
     {
       "name": "chemist",
-      "cost": 10
+      "cost": 10,
+      "preview": "chemist"
     },
     {
       "name": "concentrated_fire",
@@ -985,31 +1051,38 @@
     },
     {
       "name": "entangle",
-      "cost": 8
+      "cost": 8,
+      "preview": "entangle"
     },
     {
       "name": "finesse",
-      "cost": 15
+      "cost": 15,
+      "preview": "finesse"
     },
     {
       "name": "ghoulish",
-      "cost": 10
+      "cost": 10,
+      "preview": "ghoulish"
     },
     {
       "name": "gun_nut_heavy",
-      "cost": 7
+      "cost": 7,
+      "preview": "gunnutheavy"
     },
     {
       "name": "gun_nut_pistol",
-      "cost": 7
+      "cost": 7,
+      "preview": "gunnutpistol"
     },
     {
       "name": "gun_nut_rifle",
-      "cost": 7
+      "cost": 7,
+      "preview": "gunnutrifle"
     },
     {
       "name": "gunslinger",
-      "cost": 7
+      "cost": 7,
+      "preview": "gunslinger"
     },
     {
       "name": "hacker",
@@ -1028,7 +1101,8 @@
     },
     {
       "name": "impatient",
-      "cost": 13
+      "cost": 13,
+      "preview": "impatient"
     },
     {
       "name": "lead_belly",
@@ -1042,11 +1116,13 @@
     },
     {
       "name": "local_leader",
-      "cost": 7
+      "cost": 7,
+      "preview": "localleader"
     },
     {
       "name": "local_leader_2",
-      "cost": 7
+      "cost": 7,
+      "preview": "localleader"
     },
     {
       "name": "locksmith",
@@ -1065,7 +1141,8 @@
     },
     {
       "name": "mend_robot",
-      "cost": 15
+      "cost": 15,
+      "preview": "mendrobot"
     },
     {
       "name": "moving_target",
@@ -1099,7 +1176,8 @@
     },
     {
       "name": "nuclear_physicist",
-      "cost": 10
+      "cost": 10,
+      "preview": "nuclearphysicist"
     },
     {
       "name": "pack_leader",
@@ -1113,11 +1191,13 @@
     },
     {
       "name": "penetrator",
-      "cost": 15
+      "cost": 15,
+      "preview": "penetrator"
     },
     {
       "name": "quick_thinking",
-      "cost": 4
+      "cost": 4,
+      "preview": "quickthinking"
     },
     {
       "name": "rad_resistant",
@@ -1146,7 +1226,8 @@
     },
     {
       "name": "stun_resistant",
-      "cost": 13
+      "cost": 13,
+      "preview": "stunresistant"
     },
     {
       "name": "toughness",
@@ -1158,132 +1239,158 @@
     {
       "name": "abraxo_paint",
       "cost": 12,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "abraxopaint"
     },
     {
       "name": "aligned_sights",
       "cost": 12,
-      "types":[]
+      "types":["pistols","rifles"],
+      "preview": "alignedsights"
     },
     {
       "name": "arm_breaker",
       "cost": 7,
-      "types":["melee"]
+      "types":["melee"],
+      "preview": "armbreaker"
     },
     {
       "name": "armor_piercing_receiver",
       "cost": 7,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "armorpiercingreceiver"
     },
     {
       "name": "balanced",
       "cost": 10,
-      "types":["pistols"]
+      "types":["pistols"],
+      "preview": "balanced"
     },
     {
       "name": "ballistic_weave",
       "cost": 7,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "ballisticweave"
     },
     {
       "name": "bayonet",
       "cost": 8,
-      "types":["rifles"]
+      "types":["rifles"],
+      "preview": "bayonet"
     },
     {
       "name": "biocomm_mesh",
       "cost": 7,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "biocommmesh"
     },
     {
       "name": "boosted_servos",
       "cost": 7,
-      "types":["power_armor"]
+      "types":["power_armor"],
+      "preview": "boostedservos"
     },
     {
       "name": "braced",
       "cost": 5,
-      "types":[]
+      "types":["armor"],
+      "preview": "braced"
     },
     {
       "name": "comfort_grip",
       "cost": 12,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "comfortgrip"
     },
     {
       "name": "core_assembly",
       "cost": 10,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "coreassembly"
     },
     {
       "name": "counterweight",
       "cost": 5,
-      "types":[]
+      "types":["heavy_weapons"],
+      "preview": "counterweight"
     },
     {
       "name": "cushioned",
       "cost": 3,
-      "types":[]
+      "types":["armor"],
+      "preview": "cushioned"
     },
     {
       "name": "custom_fitted",
       "cost": 5,
-      "types":[]
+      "types":["armor"],
+      "preview": "customfitted"
     },
     {
       "name": "dissipating",
       "cost": 7,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "dissipating"
     },
     {
       "name": "elder_paint",
       "cost": 18,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "elderpaint"
     },
     {
       "name": "emergency_protocols",
       "cost": 10,
-      "types":[ "power_armor"]
+      "types":[ "power_armor"],
+      "preview": "emergencyprotocols"
     },
     {
       "name": "explosive_shielding",
       "cost": 4,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "explosiveshielding"
     },
     {
       "name": "explosive_vent",
       "cost": 6,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "explosivevent"
     },
     {
       "name": "hair_trigger",
       "cost": 6,
-      "types":[]
+      "types":["pistols","rifles"],
+      "preview": "hairtrigger"
     },
     {
       "name": "hardened_receiver",
       "cost": 12,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "hardenedreceiver"
     },
     {
       "name": "headlamp",
       "cost": 3,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "headlamp"
     },
     {
       "name": "heavy",
       "cost": 13,
-      "types":[ "melee"]
+      "types":[ "melee"],
+      "preview": "heavy"
     },
     {
       "name": "hot_rod_shark_paint",
       "cost": 3,
-      "types":["power_armor"]
+      "types":["power_armor"],
+      "preview": "hotrodsharkpaint"
     },
     {
       "name": "hydraulic_bracers",
       "cost": 3,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "hydraulicbracers"
     },
     {
       "name": "impact_exchanger",
@@ -1293,132 +1400,158 @@
     {
       "name": "improved_flexibility",
       "cost": 3,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "improvedflexibility"
     },
     {
       "name": "jagged",
       "cost": 5,
-      "types":[]
+      "types":["melee"],
+      "preview": "jagged"
     },
     {
       "name": "jetpack",
       "cost": 8,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "jetpack"
     },
     {
       "name": "lead_lined",
       "cost": 10,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "leadlined"
     },
     {
       "name": "lightweight",
       "cost": 5,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "lightweight"
     },
     {
       "name": "light",
       "cost": 6,
-      "types":[]
+      "types":["melee"],
+      "preview": "light"
     },
     {
       "name": "long_barrel",
       "cost": 10,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "longbarrel"
     },
     {
       "name": "medic_pump",
       "cost": 10,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "medicpump"
     },
     {
       "name": "multi-calibre",
       "cost": 5,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "multicaliber"
     },
     {
       "name": "multi-purpose",
       "cost": 5,
-      "types":["melee"]
+      "types":["melee"],
+      "preview": "multipurpose"
     },
     {
       "name": "padded",
       "cost": 7,
-      "types":["armor"]
+      "types":["armor"],
+      "preview": "padded"
     },
     {
       "name": "powerful",
       "cost": 8,
-      "types":[]
+      "types":["rifles"],
+      "preview": "powerful"
     },
     {
       "name": "re-bored",
       "cost": 11,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "rebored"
     },
     {
       "name": "recon_sensors",
       "cost": 7,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "reconsensors"
     },
     {
       "name": "refined",
       "cost": 5,
-      "types":["melee"]
+      "types":["melee"],
+      "preview": "refined"
     },
     {
       "name": "reflex_sights",
       "cost": 12,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "reflexsights"
     },
     {
       "name": "rusty_knuckles",
       "cost": 2,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "rustyknuckles"
     },
     {
       "name": "serrated_bayonet",
       "cost": 9,
-      "types":[]
+      "types":["heavy_weapons"],
+      "preview": "serratedbayonet"
     },
     {
       "name": "silenced",
       "cost": 7,
-      "types":[ "rifles", "pistols"]
+      "types":[ "rifles", "pistols"],
+      "preview": "silenced"
     },
     {
       "name": "spiked",
       "cost": 8,
-      "types":["melee"]
+      "types":["melee"],
+      "preview": "spiked"
     },
     {
       "name": "stun_pack",
       "cost": 3,
-      "types":["melee"]
+      "types":["melee"],
+      "preview": "stunpack"
     },
     {
       "name": "superior_materials",
       "cost": 12,
-      "types":["melee"]
+      "types":["melee"],
+      "preview": "superiormaterials"
     },
     {
       "name": "targeting_hud",
       "cost": 10,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "targetinghud"
     },
     {
       "name": "tesla_coils",
       "cost": 7,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "teslacoils"
     },
     {
       "name": "thicker_plating",
       "cost": 10,
-      "types":["power_armor"]
+      "types":["power_armor"],
+      "preview": "thickerplating"
     },
     {
       "name": "vats_matrix_overlay",
       "cost": 8,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "vatsmatrixoverlay"
     },
     {
       "name": "venomous",
@@ -1428,131 +1561,162 @@
     {
       "name": "vim_refresh_paint",
       "cost": 5,
-      "types":[]
+      "types":["power_armor"],
+      "preview": "vimrefreshpaint"
     }
   ],
   "food_and_drink":[
     {
       "name":"bloatfly_meat",
-      "cost":23
+      "cost":23,
+      "preview": "bloatflymeat"
     },
     {
       "name":"blood_pack",
-      "cost":20
+      "cost":20,
+      "preview": "bloodpack"
     },
     {
       "name":"brahmin_meat",
-      "cost":26
+      "cost":26,
+      "preview": "brahminmeat"
     },
     {
       "name":"cave_fungus",
-      "cost":10
+      "cost":10,
+      "preview": "cavefungus"
     },
     {
       "name":"cram",
-      "cost":16
+      "cost":16,
+      "preview": "cram"
     },
     {
       "name":"deathclaw_meat",
-      "cost":39
+      "cost":39,
+      "preview": "deathclawmeat"
     },
     {
       "name":"fresh_melon",
-      "cost":13
+      "cost":13,
+      "preview": "freshmelon"
     },
     {
       "name":"iguana_bits",
-      "cost":26
+      "cost":26,
+      "preview": "iguanabits"
     },
     {
       "name":"iguana_on_a_stick",
-      "cost":20
+      "cost":20,
+      "preview": "iguanaonastick"
     },
     {
       "name":"mole_rat_meat",
-      "cost":33
+      "cost":33,
+      "preview": "moleratmeat"
     },
     {
       "name":"mutant_hound_meat",
-      "cost":29
+      "cost":29,
+      "preview": "mutanthoundmeat"
     },
     {
       "name":"nuka_cola",
-      "cost":20
+      "cost":20,
+      "preview": "nukacola"
     },
     {
       "name":"nuka_cherry",
-      "cost":26
+      "cost":26,
+      "preview": "nukacherry"
     },
     {
       "name":"nuka_cola_quantum",
-      "cost":55
+      "cost":55,
+      "preview": "nukacolaquantum"
     },
     {
       "name":"radroach_meat",
-      "cost":13
+      "cost":13,
+      "preview": "radroachmeat"
     },
     {
       "name":"radscorpion_egg",
-      "cost":31
+      "cost":31,
+      "preview": "radscorpionegg"
     },
     {
       "name":"radscorpion_meat",
-      "cost":33
+      "cost":33,
+      "preview": "radscorpionmeat"
     },
     {
       "name":"radstag_meat",
-      "cost":33
+      "cost":33,
+      "preview": "radstagmeat"
     },
     {
       "name":"squirrel_bits",
-      "cost":13
+      "cost":13,
+      "preview": "squirrelbits"
     },
     {
       "name":"squirrel_on_a_stick",
-      "cost":20
+      "cost":20,
+      "preview": "squirrelonastick"
     },
     {
       "name":"squirrel_stew",
-      "cost":26
+      "cost":26,
+      "preview": "squirrelstew"
     },
     {
       "name":"sugar_bombs",
-      "cost":13
+      "cost":13,
+      "preview": "sugarbombs"
     },
     {
       "name": "tato_and_water",
-      "cost": 21
+      "cost": 21,
+      "preview": "tatoandwater"
     },
     {
       "name":"yao_guai_meat",
-      "cost":39
+      "cost":39,
+      "preview": "yaoguaimeat"
     },
     {
       "name":"yao_guai_rib_meat",
-      "cost":33
+      "cost":33,
+      "preview": "yaoguairibmeat"
     }
   ],
   "gear":[
     {
       "name":"admin_password",
-      "cost":13
+      "cost":13,
+      "preview": "adminpassword"
     },
     {
       "name":"artillery_smoke_grenade",
-      "cost":7
+      "cost":7,
+      "preview": "artillerysmokegrenade"
     },
     {
       "name":"binoculars",
-      "cost":7
+      "cost":7,
+      "preview": "binoculars"
     },
     {
       "name":"car_security_override",
-      "cost":10
+      "cost":10,
+      "preview": "carsecurityoverride"
     },
     {
       "name":"climbing_spikes",
-      "cost":10
+      "cost":10,
+      "preview": "climbingspikes"
     },
     {
       "name":"draft_codex",
@@ -1560,87 +1724,108 @@
     },
     {
       "name":"fire_extinguisher",
-      "cost":8
+      "cost":8,
+      "preview": "fireextinguisher"
     },
     {
       "name":"flashlight",
-      "cost":7
+      "cost":7,
+      "preview": "flashlight"
     },
     {
       "name": "fragile_bobby_pin",
-      "cost": 4
+      "cost": 4,
+      "preview": "fragilebobbypin"
     },
     {
       "name":"fusion_core",
-      "cost":13
+      "cost":13,
+      "preview": "fusioncore"
     },
     {
       "name": "gen_1_synth_override",
-      "cost": 25
+      "cost": 25,
+      "preview": "gen1synthoverride"
     },
     {
       "name":"hand_written_note",
-      "cost":26
+      "cost":26,
+      "preview": "handwrittennote"
     },
     {
       "name":"mr_handy_fuel",
-      "cost":7
+      "cost":7,
+      "preview": "mrhandyfuel"
     },
     {
       "name": "overclocker",
-      "cost": 14
+      "cost": 14,
+      "preview": "overclocker"
     },
     {
       "name": "power_armor_patch",
-      "cost": 5
+      "cost": 5,
+      "preview": "powerarmorpatch"
     },
     {
       "name": "pulse_shield",
-      "cost": 13
+      "cost": 13,
+      "preview": "pulseshield"
     },
     {
       "name":"robot_repair_kit",
-      "cost":33
+      "cost":33,
+      "preview": "robotrepairkit"
     },
     {
       "name":"rope",
-      "cost":3
+      "cost":3,
+      "preview": "rope"
     },
     {
       "name":"skeleton_key",
-      "cost":13
+      "cost":13,
+      "preview": "skeletonkey"
     },
     {
       "name":"stealth_boy",
-      "cost":46
+      "cost":46,
+      "preview": "stealthboy"
     },
     {
       "name": "stethoscope",
-      "cost": 4
+      "cost": 4,
+      "preview": "stethoscope"
     },
     {
       "name":"stuffed_monkey",
-      "cost":10
+      "cost":10,
+      "preview": "stuffedmonkey"
     },
     {
       "name": "synthbooster",
-      "cost": 20
+      "cost": 20,
+      "preview": "synthbooster"
     },
     {
       "name": "temporary_password",
-      "cost": 4
+      "cost": 4,
+      "preview": "temporarypassword"
     },
     {
       "name":"turret_inhibitors",
-      "cost":10
+      "cost":10,
+      "preview": "turretinhibitors"
     },
     {
       "name":"unsent_letter",
-      "cost":33
+      "cost":33,
+      "preview": "unsentletter"
     },
     {
       "name":"vertibird_signal_grenade",
-      "cost":7
+      "cost":7,
+      "preview": "vertibirdsignalgrenade"
     }
   ]
 }

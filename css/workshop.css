@@ -435,6 +435,12 @@ td {
 	position: fixed;
 	z-index: 10;
 	pointer-events: none;
+	max-width: 480px;
+}
+
+#preview img {
+	width: 100%;
+	height: auto;
 }
 
 option {
