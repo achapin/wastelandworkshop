@@ -468,6 +468,7 @@ function getModSectionFor(character, slotType, carryInfo){
 		updateCaps();
 	};
 	modSection.appendChild(modDropdown);
+	addPreviewTooltipForMod(modDropdown);
 	return modSection;
 }
 
@@ -1915,7 +1916,17 @@ function addPreviewTooltipForSlot(character, slotType, target){
 	target.addEventListener("mouseout", clearPreview);
 }
 
-//TODO: Add preview slot for mods
+function addPreviewTooltipForMod(target){
+	target.addEventListener("mousemove", function(e) {
+		if(target.selectedIndex != 0){
+			var upgrade = getUpgrade("mods", target.value);
+			if(upgrade != null && upgrade.hasOwnProperty("preview")){
+				setPreview(upgrade.preview, e, true);
+			}
+		}
+	});
+	target.addEventListener("mouseout", clearPreview);
+}
 
 function initialize(){
 	var upgradeLoadPromise = loadURL("data/upgrades.json");
