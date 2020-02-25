@@ -457,6 +457,7 @@
     },
     {
       "name": "bladed_helmet",
+      "restrictions":["super_mutant"],
       "cost": 7,
       "preview": "bladedhelmet"
     },
@@ -468,6 +469,7 @@
     },
     {
       "name": "chains",
+      "restrictions":["super_mutant"],
       "cost": 8,
       "preview": "chains"
     },
@@ -515,6 +517,7 @@
     {
       "name": "mechanist_armor_and_helmet",
       "cost": 43,
+      "restrictions":["!super_mutant"],
       "preview": "mechanistarmorandhelmet"
     },
     {
@@ -593,6 +596,7 @@
     {
       "name": "aviator_cap",
       "cost": 15,
+      "restrictions":["super_mutant"],
       "preview": "aviatorcap"
     },
     {
@@ -670,6 +674,7 @@
     {
       "name": "shoulder_rags",
       "cost": 10,
+      "restrictions":["super_mutant"],
       "preview": "shoulderrags"
     },
     {
