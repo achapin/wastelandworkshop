@@ -490,7 +490,7 @@ function removeModFromCharacter(character, modSlot){
 }
 
 function addCharacter(characterElement, presetInfo){
-	var character = presetInfo;
+	var character = Object.assign({}, presetInfo);
 
 	character.name = characterElement.name;
 
