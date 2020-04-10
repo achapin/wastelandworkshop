@@ -669,6 +669,9 @@ function addCharacter(characterElement, presetInfo){
 				addPreviewTooltip(upgrade, mustWearElement);
 				mustWearElement.appendChild(mustWearDescription);
 				mustWearSection.appendChild(mustWearElement);
+
+				var modSecton = getModSectionFor(character, elements[0], null)
+				mustWearSection.appendChild(modSecton);
 			}
 		});
 		equipmentSection.appendChild(mustWearSection);
@@ -688,6 +691,9 @@ function addCharacter(characterElement, presetInfo){
 				addPreviewTooltip(upgrade, mustCarryElement);
 				mustCarryElement.appendChild(mustCarryDescription);
 				mustCarrySection.appendChild(mustCarryElement);
+
+				var modSecton = getModSectionFor(character, elements[0], upgrade)
+				mustCarrySection.appendChild(modSecton);
 			}
 		});
 		equipmentSection.appendChild(mustCarrySection);
