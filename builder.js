@@ -647,7 +647,7 @@ function addCharacter(characterElement, presetInfo){
 				var hasPerkElement = document.createElement("div");
 				var hasPerkDescription = document.createTextNode(loc[element]);
 				hasPerkElement.appendChild(hasPerkDescription);
-				addPreviewTooltip(element, hasPerkElement);
+				addPreviewTooltip(upgrade, hasPerkElement);
 				hasPerkSection.appendChild(hasPerkElement);
 			}
 		});
@@ -1684,7 +1684,9 @@ function updateCaps(){
 
 			var unitCost = 0;
 
-			var baseCost = getCharacterById(character.name).cost;
+			var characterTemplate = getCharacterById(character.name);
+
+			var baseCost = characterTemplate.cost;
 
 			unitCost += baseCost * modelCount;
 
@@ -1746,11 +1748,28 @@ function updateCaps(){
 			});
 
 			if(character.hasOwnProperty("mods")){
+				var applied_free_mod = false;
 				Object.getOwnPropertyNames(character.mods).forEach(function(moddedItem){
 					var modType = character.mods[moddedItem];
 					var modCost = getUpgrade("mods", modType).cost;
-					unitCost += modCost * modelCount;
-					modelUpdadeCost += modCost;
+
+					var applyModCost = true;
+
+					if(characterTemplate.hasOwnProperty("free_mod") && !applied_free_mod){
+
+						if(characterTemplate.free_mod.mod == modType
+							&& (characterTemplate.free_mod.restriction == moddedItem
+								|| getUpgrade(characterTemplate.free_mod.restriction, moddedItem) != null)){
+							applyModCost = false;
+						}
+					}
+
+					if(applyModCost){
+						unitCost += modCost * modelCount;
+						modelUpdadeCost += modCost;
+					}else{
+						applied_free_mod = true;
+					}
 				})
 			}
 

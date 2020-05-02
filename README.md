@@ -3,7 +3,6 @@ A squad builder for Fallout Wasteland Warfare
 Usable at https://achapin.github.io/wastelandworkshop/
 
 # TODO (In no particular order)
-* Default Mod behavior (for Preston Garvey, Sturges and Sin Jin)
 * Printable lists
 * Unit reordering/sorting
 * Shorten query string

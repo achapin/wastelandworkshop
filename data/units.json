@@ -1722,6 +1722,10 @@
     "default_equipment":{
       "pistols":["bolt_action_pipe_pistol"]
     },
+    "free_mod": {
+        "mod":"silenced",
+        "restriction":"pistols"
+    },
     "carry_slots": {
       "heavy_weapons": [
         "junk_jet",
@@ -2923,6 +2927,10 @@
     "default_equipment":{
       "rifles":["laser_musket"]
     },
+    "free_mod": {
+        "mod":"long_barrel",
+        "restriction":"laser_musket"
+      },
     "carry_slots": {
       "rifles": [
         "assault_rifle",
