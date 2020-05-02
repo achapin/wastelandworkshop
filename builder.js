@@ -31,8 +31,8 @@ var possibleFilters = [
 ]
 
 var wear_slots = ["armor","power_armor", "clothing"]; //Exclusive choice
-var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee", "gear"]; //Multiple-choice single-instance
-var consumable_slots = [ "thrown", "mines", "chems", "alcohol", "food_and_drink"]; //Multiple-choice multiple-instance
+var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"]; //Multiple-choice single-instance
+var consumable_slots = [ "thrown", "mines", "chems", "alcohol", "food_and_drink", "gear"]; //Multiple-choice multiple-instance
 
 function getUrl(url){
 	var req = new XMLHttpRequest();

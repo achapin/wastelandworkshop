@@ -3676,9 +3676,22 @@
     "unique_code": "mechanist",
     "heroic": true,
     "factions": ["srv"],
+    "default_equipment":{
+      "pistols":["protectrons_gaze"],
+      "melee":["mr_handy_buzz_blade"],
+      "armor":"mechanist_armor_and_helmet",
+      "gear":{"stealth_boy":"1"}
+    },
+    "wear_slots":
+    {
+      "armor":["mechanist_armor_and_helmet"]
+    },
     "carry_slots": {
+      "pistols":["protectrons_gaze"],
+      "melee":["mr_handy_buzz_blade"]
     },
     "consumables": {
+      "gear":["stealth_boy"]
     },
     "settlment_mode_slots":[
       "power_armor",
