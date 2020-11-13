@@ -447,12 +447,12 @@
   "armor": [
     {
       "name": "armored_pads",
-      "cost": 12,
+      "cost": 13,
       "preview": "armoredpads"
     },
     {
       "name": "army_helmet",
-      "cost": 15,
+      "cost": 17,
       "preview": "armyhelmet"
     },
     {
@@ -464,13 +464,13 @@
     {
       "name": "chain_dog_collar",
       "restrictions":["dog"],
-      "cost": 13,
+      "cost": 14,
       "preview": "chaindogcollar"
     },
     {
       "name": "chains",
       "restrictions":["super_mutant"],
-      "cost": 8,
+      "cost": 7,
       "preview": "chains"
     },
     {
@@ -480,38 +480,50 @@
     },
     {
       "name": "combat_armor",
-      "cost": 18,
+      "cost": 13,
       "preview": "combatarmor"
     },
     {
+      "name": "commando_chest_piece",
+      "cost": 15
+    },
+    {
+      "name": "corrugated plates",
+      "cost": 7
+    },
+    {
       "name": "damaged_hazmat_suit",
-      "cost": 15,
+      "cost": 3,
       "preview": "damagedhazmatsuit"
     },
     {
+      "name": "environmental_suit",
+      "cost": 20
+    },
+    {
       "name": "freefall_leg_armor",
-      "cost": 15,
+      "cost": 2,
       "preview": "freefalllegarmor"
     },
     {
       "name": "hazmat_suit",
-      "cost": 20,
+      "cost": 8,
       "preview": "hazmatsuit"
     },
     {
       "name": "heavy_gauntlets",
       "restrictions":["super_mutant"],
-      "cost": 15,
+      "cost": 16,
       "preview": "heavygauntlets"
     },
     {
       "name": "heavy_raider_armor",
-      "cost": 30,
+      "cost": 21,
       "preview": "heavyraiderarmor"
     },
     {
       "name": "heavy_synth_armor",
-      "cost": 35,
+      "cost": 28,
       "preview": "heavysyntharmor"
     },
     {
@@ -522,30 +534,42 @@
     },
     {
       "name": "protectors_right_arm_guard",
-      "cost": 12,
+      "cost": 10,
       "preview": "protectorsrightarmguard"
     },
     {
       "name": "rocks_bladed_helm",
-      "cost": 23
+      "cost": 18
     },
     {
       "name": "sturdy_combat_armor",
-      "cost": 30,
+      "cost": 21,
       "preview": "sturdycombatarmor"
     },
     {
       "name": "sturdy_leather_armor",
-      "cost": 23,
+      "cost": 16,
       "preview": "sturdyleatherarmor"
     },
     {
       "name": "sturdy_metal_armor",
-      "cost": 23,
+      "cost": 18,
       "preview": "sturdymetalarmor"
+    },
+    {
+      "name": "tesla_coil_harness",
+      "cost": 7
     }
   ],
   "power_armor" : [
+    {
+      "name": "enclave_power_armor",
+      "cost": 44
+    },
+    {
+      "name": "hellfire_armor",
+      "cost": 52
+    },
     {
       "name": "power_armor_frame",
       "cost": 15,
@@ -558,7 +582,7 @@
     },
     {
       "name": "t45_power_armor",
-      "cost": 36,
+      "cost": 38,
       "preview": "t45"
     },
     {
@@ -568,12 +592,16 @@
     },
     {
       "name": "t60_power_armor",
-      "cost": 72,
+      "cost": 70,
       "preview": "t60"
     },
     {
+      "name": "t60f_power_armor",
+      "cost": 95
+    },
+    {
       "name": "x01_power_armor",
-      "cost": 85,
+      "cost": 82,
       "preview": "x01"
     }
   ],
@@ -585,23 +613,23 @@
     },
     {
       "name": "assault_gas_mask",
-      "cost": 3,
+      "cost": 2,
       "preview": "assaultgasmask"
     },
     {
       "name": "atom_cats_jacket_and_jeans",
-      "cost": 7,
+      "cost": 5,
       "preview": "atomcatjacketandjeans"
     },
     {
       "name": "aviator_cap",
-      "cost": 15,
+      "cost": 16,
       "restrictions":["super_mutant"],
       "preview": "aviatorcap"
     },
     {
       "name": "baseball_cap",
-      "cost": 7,
+      "cost": 5,
       "preview": "baseballcap"
     },
     {
@@ -612,22 +640,22 @@
     {
       "name": "bowler_hat",
       "restrictions":["robot"],
-      "cost": 10,
+      "cost": 7,
       "preview": "bowlerhat"
     },
     {
       "name": "brotherhood_of_steel_hood",
-      "cost": 5,
+      "cost": 7,
       "preview": "brotherhoodofsteelhood"
     },
     {
       "name": "camoflage",
-      "cost": 13,
+      "cost": 6,
       "preview": "camoflage"
     },
     {
       "name": "dirty_postman_uniform",
-      "cost": 7,
+      "cost": 5,
       "preview": "dirtypostmanuniform"
     },
     {
@@ -637,23 +665,51 @@
       "preview": "dogbandana"
     },
     {
+      "name": "enclave_officers_hat",
+      "cost": 5
+    },
+    {
       "name": "eyeglasses",
       "cost": 3,
       "preview": "eyeglasses"
     },
     {
+      "name": "institute_division_head_coat",
+      "cost": 4
+    },
+    {
+      "name": "institute_lab_coat",
+      "cost": 6
+    },
+    {
+      "name": "leg_guards",
+      "cost": 8
+    },
+    {
+      "name": "limb_braces",
+      "cost": 12
+    },
+    {
+      "name": "magnifying_visor",
+      "cost": 8
+    },
+    {
       "name": "military_fatigues",
-      "cost": 3,
+      "cost": 4,
       "preview": "militaryfatigues"
     },
     {
+      "name": "mirelurk_carapace",
+      "cost": 23
+    },
+    {
       "name": "patched_three_piece_suit",
-      "cost": 5,
+      "cost": 4,
       "preview": "patchedthreepiecesuit"
     },
     {
       "name": "red_flight_helmet",
-      "cost": 3,
+      "cost": 5,
       "preview": "redflighthelmet"
     },
     {
@@ -680,7 +736,7 @@
     {
       "name": "spiked_muzzle",
       "restrictions":["dog"],
-      "cost": 5,
+      "cost": 3,
       "preview": "spikedmuzzle"
     },
     {
@@ -691,24 +747,28 @@
     {
       "name": "vault_111_jumpsuit",
       "restrictions":["!super_mutant"],
-      "cost": 10,
+      "cost": 12,
       "preview": "vault111jumpsuit"
     }
   ],
   "chems": [
     {
       "name": "addictol",
-      "cost": 10,
+      "cost": 3,
       "preview": "addictol"
     },
     {
+      "name": "anti-venom_balm",
+      "cost": 9
+    },
+    {
       "name": "berry_mentats",
-      "cost": 16,
+      "cost": 13,
       "preview": "berrymentats"
     },
     {
       "name": "buffout",
-      "cost": 20,
+      "cost": 14,
       "preview": "buffout"
     },
     {
@@ -718,67 +778,71 @@
     },
     {
       "name": "calmex",
-      "cost": 20,
+      "cost": 12,
       "preview": "calmex"
     },
     {
       "name": "day_tripper",
-      "cost": 11,
+      "cost": 6,
       "preview": "daytripper"
     },
     {
       "name": "fury",
-      "cost": 20,
+      "cost": 10,
       "preview": "fury"
     },
     {
       "name": "jet",
-      "cost": 20,
+      "cost": 13,
       "preview": "jet"
     },
     {
       "name": "med-x",
-      "cost": 16,
+      "cost": 12,
       "preview": "medx"
     },
     {
       "name": "mentats",
-      "cost": 13,
+      "cost": 11,
       "preview": "mentats"
     },
     {
       "name": "mysterious_serum",
-      "cost": 20,
+      "cost": 15,
       "preview": "mysteriousserum"
     },
     {
       "name": "orange_mentats",
-      "cost": 20,
+      "cost": 14,
       "preview": "orangementats"
     },
     {
       "name": "overdrive",
-      "cost": 20,
+      "cost": 13,
       "preview": "overdrive"
     },
     {
       "name": "psycho",
-      "cost": 20,
+      "cost": 13,
       "preview": "psychochem"
     },
     {
+      "name": "psychobuff",
+      "cost": 20
+    },
+    {
       "name": "radaway",
-      "cost": 20,
+      "cost": 10,
       "preview": "radaway"
     },
     {
       "name": "rad-x",
-      "cost": 13,
+      "cost": 5,
       "preview": "radx"
     },
     {
       "name": "refreshing_beverage",
-      "cost": 52,
+      "cost": 37,
       "preview": "refreshingbeverage"
     },
     {
@@ -788,7 +852,7 @@
     },
     {
       "name": "stimpak",
-      "cost": 38,
+      "cost": 28,
       "preview": "stimpak"
     },
     {
@@ -803,7 +867,7 @@
     },
     {
       "name": "x-cell",
-      "cost": 24,
+      "cost": 17,
       "preview": "xcell"
     }
   ],
@@ -819,33 +883,37 @@
       "preview": "bourbon"
     },
     {
+      "name": "dirty_wastelander",
+      "cost": 7
+    },
+    {
       "name": "ice_cold_gwinett_ale",
-      "cost": 9,
+      "cost": 3,
       "preview": "icecoldgwinnettale"
     },
     {
+      "name": "moonshine",
+      "cost": 3,
+      "preview": "moonshine"
+    },
+    {
       "name": "rum",
-      "cost": 8,
+      "cost": 5,
       "preview": "rum"
     },
     {
       "name": "vodka",
-      "cost": 8,
+      "cost": 6,
       "preview": "vodka"
     },
     {
       "name": "whiskey",
-      "cost": 8,
+      "cost": 4,
       "preview": "whiskey"
     },
     {
-      "name": "moonshine",
-      "cost": 9,
-      "preview": "moonshine"
-    },
-    {
       "name": "wine",
-      "cost": 5,
+      "cost": 2,
       "preview": "wine"
     }
   ],
