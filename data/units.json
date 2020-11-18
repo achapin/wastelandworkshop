@@ -50,7 +50,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 105
+    "cost": 111
   },
   {
     "name": "elder_maxson",
@@ -113,7 +113,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 140
+    "cost": 120
   },
   {
     "name": "eyebot",
@@ -126,7 +126,7 @@
     "settlment_mode_slots":[
       "gear"
     ],
-    "cost": 45
+    "cost": 40
   },
   {
     "name": "field_scribe",
@@ -200,7 +200,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 41
+    "cost": 38
   },
   {
     "name": "knight",
@@ -312,7 +312,7 @@
         "pulse_grenade"
       ]
     },
-    "cost": 80
+    "cost": 72
   },
   {
     "name": "knight_patrol",
@@ -461,7 +461,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 66
+    "cost": 67
   },
   {
     "name": "lancer",
@@ -683,7 +683,7 @@
       "pistols.alien_blaster"
     ],
     "settlment_mode_slots":[],
-    "cost": 70
+    "cost": 80
   },
   {
     "name": "bloated_glowing_one",
@@ -693,7 +693,7 @@
       "melee.bloated_glowing_one_swipe"
     ],
     "settlment_mode_slots":[],
-    "cost": 220
+    "cost": 210
   },
   {
     "name": "deathclaw",
@@ -705,7 +705,7 @@
       "melee.deathclaw_swipe"
     ],
     "settlment_mode_slots":[],
-    "cost": 295
+    "cost": 250
   },
   {
     "name": "feral_ghoul",
@@ -716,7 +716,7 @@
       "melee.feral_ghoul_swipe"
     ],
     "settlment_mode_slots":[],
-    "cost": 50
+    "cost": 49
   },
   {
     "name": "glowing_radroach_swarm",
@@ -727,7 +727,7 @@
       "melee.radroach_swarm_bite"
     ],
     "settlment_mode_slots":[],
-    "cost": 40
+    "cost": 34
   },
   {
     "name": "mole_rat",
@@ -738,7 +738,7 @@
       "melee.mole_rat_bite"
     ],
     "settlment_mode_slots":[],
-    "cost": 14
+    "cost": 10
   },
   {
     "name":"putrid_glowing_one",
@@ -749,7 +749,7 @@
       "melee.putrid_glowing_one_swipe"
     ],
     "settlment_mode_slots":[],
-    "cost": 210
+    "cost": 223
   },
   {
     "name": "radroach_swarm",
@@ -760,7 +760,7 @@
       "melee.radroach_swarm_bite"
     ],
     "settlment_mode_slots":[],
-    "cost": 17
+    "cost": 22
   },
   {
     "name": "radscorpion",
@@ -771,7 +771,7 @@
       "melee.radscorpion_pincers_and_sting"
     ],
     "settlment_mode_slots":[],
-    "cost": 90
+    "cost": 77
   },
   {
     "name": "weak_feral_ghoul",
@@ -782,7 +782,7 @@
       "melee.weak_feral_ghoul_swipe"
     ],
     "settlment_mode_slots":[],
-    "cost": 28
+    "cost": 24
   },
   {
     "name": "young_deathclaw",
@@ -882,7 +882,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 25
+    "cost": 23
   },
   {
     "name": "conrad_kellog",
@@ -1058,7 +1058,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 35
+    "cost": 32
   },
   {
     "name": "patroller",
@@ -1868,7 +1868,7 @@
       "melee.assaultron_swipe"
     ],
     "settlment_mode_slots":["gear"],
-    "cost": 145
+    "cost": 95
   },
   {
     "name": "battered_protectron",
@@ -1879,7 +1879,7 @@
       "pistols.protectron_hand_laser"
     ],
     "settlment_mode_slots":["gear"],
-    "cost": 20
+    "cost": 35
   },
   {
     "name": "battered_sentry_bot",
@@ -1891,7 +1891,7 @@
       "heavy_weapons.missile_launcher"
     ],
     "settlment_mode_slots":["gear"],
-    "cost": 130
+    "cost": 180
   },
   {
     "name": "mr_handy",
@@ -1914,7 +1914,7 @@
       "pistols.protectron_hand_laser"
     ],
     "settlment_mode_slots":["gear"],
-    "cost": 30
+    "cost": 48
   },
   {
     "name": "sentry_bot",
@@ -1926,7 +1926,7 @@
       "heavy_weapons.missile_launcher"
     ],
     "settlment_mode_slots":["gear"],
-    "cost": 310
+    "cost": 253
   },
   {
     "name": "aviator",
@@ -1984,7 +1984,7 @@
   },
   {
     "name": "behemoth",
-    "cost": 245,
+    "cost": 207,
     "preview":"behemoth",
     "factions": ["mut"],
     "tags":["super_mutant"],
@@ -2370,7 +2370,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 155
+    "cost": 163
   },
   {
     "name": "skirmisher",
@@ -2467,7 +2467,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 90
+    "cost": 80
   },
   {
     "name":"suicider",
@@ -2605,7 +2605,7 @@
     "cost": 90
   },
   {
-    "name": "dog",
+    "name": "dog_v1",
     "preview":"dog",
     "factions": ["crt", "srv", "rd"],
     "tags":["dog"],
@@ -2613,10 +2613,21 @@
       "melee.dog_bite"
     ],
     "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 90
+    "cost": 100
   },
   {
-    "name": "dogmeat",
+    "name": "dog_v2",
+    "preview":"dog",
+    "factions": ["crt", "srv", "rd"],
+    "tags":["dog"],
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "settlment_mode_slots":["armor", "clothing", "gear"],
+    "cost": 80
+  },
+  {
+    "name": "dogmeat_v1",
     "preview":"dogmeat",
     "factions": ["srv"],
     "tags":["dog"],
@@ -2625,7 +2636,19 @@
       "melee.dog_bite"
     ],
     "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 110
+    "cost": 120
+  },
+  {
+    "name": "dogmeat_v2",
+    "preview":"dogmeat",
+    "factions": ["srv"],
+    "tags":["dog"],
+    "unique_code": "dogmeat",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "settlment_mode_slots":["armor", "clothing", "gear"],
+    "cost": 95
   },
   {
     "name": "dogmeat_guard_dog",
@@ -2640,7 +2663,19 @@
     "cost": 95
   },
   {
-    "name": "dogmeat_scout",
+    "name": "dogmeat_scout_v1",
+    "unique_code": "dogmeat",
+    "preview":"dogmeatscout",
+    "factions": ["srv"],
+    "tags":["dog"],
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "settlment_mode_slots":["armor", "clothing", "gear"],
+    "cost": 112
+  },
+  {
+    "name": "dogmeat_scout_v2",
     "unique_code": "dogmeat",
     "preview":"dogmeatscout",
     "factions": ["srv"],
@@ -2829,7 +2864,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 90
+    "cost": 70
   },
   {
     "name": "nuka_cola_girl",
@@ -3708,6 +3743,258 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 145
+    "cost": 88
+  },
+  {
+    "name": "colonel_autumn",
+    "preview":"colonel_autumn",
+    "unique_code": "colonel_autumn",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "alcohol",
+      "food_and_drink",
+      "gear"
+    ],
+    "cost": 115
+  },
+  {
+    "name": "deathclaw_matriarch",
+    "preview":"deathclaw_matriarch",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 550
+  },
+  {
+    "name": "enclave_soldier",
+    "preview":"enclave_soldier",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "alcohol",
+      "food_and_drink",
+      "gear"
+    ],
+    "cost": 80
+  },
+  {
+    "name": "enclave_trainee",
+    "preview":"enclave_trainee",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "alcohol",
+      "food_and_drink",
+      "gear"
+    ],
+    "cost": 36
+  },
+  {
+    "name": "fog_crawler",
+    "preview":"fog_crawler",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 305
+  },
+  {
+    "name": "frank_horrigan",
+    "preview":"frank_horrigan",
+    "unique_code": "frank_horrigan",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 600
+  },
+  {
+    "name": "hellfire_trooper",
+    "preview":"hellfire_trooper",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 90
+  },
+  {
+    "name": "lily",
+    "preview":"lily",
+    "unique_code": "lily",
+    "factions": [],
+    "settlment_mode_slots":[
+    ],
+    "cost": 110
+  },
+  {
+    "name": "lorenzo_cabot",
+    "preview":"lorenzo_cabot",
+    "unique_code": "lorenzo_cabot",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 80
+  },
+  {
+    "name": "lieutenant",
+    "preview":"lieutenant",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 57
+  },
+  {
+    "name": "lieutenant_gorobets",
+    "preview":"lieutenant_gorobets",
+    "unique_code": "lieutenant_gorobets",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 120
+  },
+  {
+    "name": "mirelurk",
+    "preview":"mirelurk",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 50
+  },
+  {
+    "name": "mirelurk_hatchling",
+    "preview":"mirelurk_hatchling",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 12
+  },
+  {
+    "name": "mirelurk_hunter",
+    "preview":"mirelurk_hunter",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 255
+  },
+  {
+    "name": "mirelurk_queen",
+    "preview":"mirelurk_queen",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 230
+  },
+  {
+    "name": "rabid_mole_rat",
+    "preview":"rabid_mole_rat",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 20
+  },
+  {
+    "name": "robobrain_head",
+    "preview":"robobrain_head",
+    "factions": ["rbt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 56
+  },
+  {
+    "name": "science_specialist",
+    "preview":"science_specialist",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 46
+  },
+  {
+    "name": "sentry_bot_head",
+    "preview":"sentry_bot_head",
+    "factions": ["rbt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 55
+  },
+  {
+    "name": "softshell_mirelurk",
+    "preview":"softshell_mirelurk",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 32
+  },
+  {
+    "name": "tesla_soldier",
+    "preview":"tesla_soldier",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 85
+  },
+  {
+    "name": "warrant_officer",
+    "preview":"warrant_officer",
+    "factions": ["enc"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 60
+  },
+  {
+    "name": "weak_behemoth",
+    "preview":"weak_behemoth",
+    "factions": ["mut"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 120
+  },
+  {
+    "name": "young_fog_crawler",
+    "preview":"young_fog_crawler",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 245
+  },
+  {
+    "name": "young_mirelurk_queen",
+    "preview":"young_mirelurk_queen",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 185
+  },
+  {
+    "name": "young_radscorpion",
+    "preview":"young_radscorpion",
+    "factions": ["crt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 48
   }
 ]

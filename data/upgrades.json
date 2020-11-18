@@ -204,7 +204,7 @@
     {
       "name":"troubleshooters_combat_rifle",
       "cost": 17
-    },
+    }
   ],
   "pistols": [
     {
@@ -361,7 +361,7 @@
     {
       "name":"wounding_laser_pistol",
       "cost": 8
-    },
+    }
   ],
   "melee": [
     {
@@ -729,7 +729,7 @@
     {
       "name":"weak_behemoth_rock_throw",
       "cost": 0
-    },
+    }
   ],
   "mines": [
     {
@@ -2626,6 +2626,6 @@
     {
       "name":"zapper",
       "cost":8
-    },
+    }
   ]
 }
