@@ -2617,7 +2617,7 @@
   },
   {
     "name": "dog_v2",
-    "preview":"dog",
+    "preview":"dog_v2",
     "factions": ["crt", "srv", "rd"],
     "tags":["dog"],
     "must_carry": [
@@ -2640,7 +2640,7 @@
   },
   {
     "name": "dogmeat_v2",
-    "preview":"dogmeat",
+    "preview":"dogmeat_v2",
     "factions": ["srv"],
     "tags":["dog"],
     "unique_code": "dogmeat",
@@ -2677,7 +2677,7 @@
   {
     "name": "dogmeat_scout_v2",
     "unique_code": "dogmeat",
-    "preview":"dogmeatscout",
+    "preview":"dogmeatscout_v2",
     "factions": ["srv"],
     "tags":["dog"],
     "must_carry": [
@@ -3747,7 +3747,7 @@
   },
   {
     "name": "colonel_autumn",
-    "preview":"colonel_autumn",
+    "preview":"colonelautumn",
     "unique_code": "colonel_autumn",
     "factions": ["enc"],
     "settlment_mode_slots":[
@@ -3769,7 +3769,6 @@
   },
   {
     "name": "deathclaw_matriarch",
-    "preview":"deathclaw_matriarch",
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],
@@ -3777,7 +3776,7 @@
   },
   {
     "name": "enclave_soldier",
-    "preview":"enclave_soldier",
+    "preview":"enclavesoldier",
     "factions": ["enc"],
     "settlment_mode_slots":[
       "power_armor",
@@ -3798,7 +3797,7 @@
   },
   {
     "name": "enclave_trainee",
-    "preview":"enclave_trainee",
+    "preview":"enclavetrainee",
     "factions": ["enc"],
     "settlment_mode_slots":[
       "power_armor",
@@ -3819,15 +3818,16 @@
   },
   {
     "name": "fog_crawler",
-    "preview":"fog_crawler",
+    "preview":"fogcrawler",
     "factions": ["crt"],
+    "must_carry":["melee.fog_crawler_claw", "melee.fog_crawler_ground_pound"],
     "settlment_mode_slots":[
     ],
     "cost": 305
   },
   {
     "name": "frank_horrigan",
-    "preview":"frank_horrigan",
+    "preview":"frankhorrigan",
     "unique_code": "frank_horrigan",
     "factions": ["enc"],
     "settlment_mode_slots":[
@@ -3836,7 +3836,7 @@
   },
   {
     "name": "hellfire_trooper",
-    "preview":"hellfire_trooper",
+    "preview":"hellfiretrooper",
     "factions": ["enc"],
     "settlment_mode_slots":[
     ],
@@ -3844,7 +3844,6 @@
   },
   {
     "name": "lily",
-    "preview":"lily",
     "unique_code": "lily",
     "factions": [],
     "settlment_mode_slots":[
@@ -3853,7 +3852,7 @@
   },
   {
     "name": "lorenzo_cabot",
-    "preview":"lorenzo_cabot",
+    "preview":"lorenzocabot",
     "unique_code": "lorenzo_cabot",
     "factions": ["crt"],
     "settlment_mode_slots":[
@@ -3870,7 +3869,6 @@
   },
   {
     "name": "lieutenant_gorobets",
-    "preview":"lieutenant_gorobets",
     "unique_code": "lieutenant_gorobets",
     "factions": ["enc"],
     "settlment_mode_slots":[
@@ -3881,13 +3879,15 @@
     "name": "mirelurk",
     "preview":"mirelurk",
     "factions": ["crt"],
+    "must_carry":["melee.mirelurk_claw"],
     "settlment_mode_slots":[
     ],
     "cost": 50
   },
   {
-    "name": "mirelurk_hatchling",
-    "preview":"mirelurk_hatchling",
+    "name": "mirelurk_hatchlings",
+    "preview":"mirelurkhatchlings",
+    "must_carry":["melee.mirelurk_hatchlings_claw"],
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],
@@ -3895,23 +3895,24 @@
   },
   {
     "name": "mirelurk_hunter",
-    "preview":"mirelurk_hunter",
+    "preview":"mirelurkhunter",
     "factions": ["crt"],
+    "must_carry":["melee.mirelurk_hunter_claw","rifles.mirelurk_hunter_acid"],
     "settlment_mode_slots":[
     ],
     "cost": 255
   },
   {
     "name": "mirelurk_queen",
-    "preview":"mirelurk_queen",
+    "preview":"mirelurkqueen",
     "factions": ["crt"],
+    "must_carry":["thrown.mirelurk_queen_brood","melee.mirelurk_queen_claw"],
     "settlment_mode_slots":[
     ],
     "cost": 230
   },
   {
     "name": "rabid_mole_rat",
-    "preview":"rabid_mole_rat",
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],
@@ -3919,7 +3920,6 @@
   },
   {
     "name": "robobrain_head",
-    "preview":"robobrain_head",
     "factions": ["rbt"],
     "settlment_mode_slots":[
     ],
@@ -3927,7 +3927,7 @@
   },
   {
     "name": "science_specialist",
-    "preview":"science_specialist",
+    "preview":"sciencespecialist",
     "factions": ["enc"],
     "settlment_mode_slots":[
     ],
@@ -3935,7 +3935,6 @@
   },
   {
     "name": "sentry_bot_head",
-    "preview":"sentry_bot_head",
     "factions": ["rbt"],
     "settlment_mode_slots":[
     ],
@@ -3943,7 +3942,6 @@
   },
   {
     "name": "softshell_mirelurk",
-    "preview":"softshell_mirelurk",
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],
@@ -3951,7 +3949,7 @@
   },
   {
     "name": "tesla_soldier",
-    "preview":"tesla_soldier",
+    "preview":"teslasoldier",
     "factions": ["enc"],
     "settlment_mode_slots":[
     ],
@@ -3959,7 +3957,7 @@
   },
   {
     "name": "warrant_officer",
-    "preview":"warrant_officer",
+    "preview":"warrantofficer",
     "factions": ["enc"],
     "settlment_mode_slots":[
     ],
@@ -3967,7 +3965,6 @@
   },
   {
     "name": "weak_behemoth",
-    "preview":"weak_behemoth",
     "factions": ["mut"],
     "settlment_mode_slots":[
     ],
@@ -3975,7 +3972,6 @@
   },
   {
     "name": "young_fog_crawler",
-    "preview":"young_fog_crawler",
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],
@@ -3983,7 +3979,6 @@
   },
   {
     "name": "young_mirelurk_queen",
-    "preview":"young_mirelurk_queen",
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],
@@ -3991,7 +3986,6 @@
   },
   {
     "name": "young_radscorpion",
-    "preview":"young_radscorpion",
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],

@@ -23,6 +23,7 @@ var appliedFilters = [];
 var possibleFilters = [
 	"bos",
 	"crt",
+	"enc",
 	"ins",
 	"mut",
 	"rdr",
@@ -103,6 +104,9 @@ function localizationLoaded(json){
 	var missingKeys = ""
 	var missingPreview = ""
 
+	var checkPreview = false; //Only enable for debugging
+	var badPreview = ""
+
 	units.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
 			missingKeys += character.name + ", ";
@@ -121,6 +125,10 @@ function localizationLoaded(json){
 
 		if(!character.hasOwnProperty("preview")){
 			missingPreview += character.name+",";
+		}else if (checkPreview){
+			if(!urlExists("images/" + character["preview"] + ".png")) {
+				badPreview += character["preview"] + " ";
+			}
 		}
 	});
 
@@ -134,16 +142,31 @@ function localizationLoaded(json){
 			}
 			if(!upgrade.hasOwnProperty("preview")){
 				missingPreview += upgrade.name+",";
+			}else if (checkPreview){
+			if(!urlExists("images/" + upgrade["preview"] + ".png")) {
+				badPreview += upgrade["preview"] + " ";
 			}
+		}
 		});
 	});
 
-	units.sort(orderUnitsByLocalizedName);
-
 	console.log("Missing LOC keys: " + missingKeys);
 	console.log("Missing Previews: " + missingPreview);
+	if(checkPreview){
+		console.log("Bad preview links: " + badPreview);
+	}
+
+	units.sort(orderUnitsByLocalizedName);
 
 	initListeners();
+}
+
+function urlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
 }
 
 function orderUnitsByLocalizedName(unitOne, unitTwo){
@@ -431,7 +454,7 @@ function getModSectionFor(character, slotType, carryInfo){
 	var optionIndex = 0;
 
 	upgrades.mods.forEach(function(mod){
-		if(mod.types.includes(slotType)){
+		if(mod.hasOwnProperty("types") && mod.types.includes(slotType)){
 			var option = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
 
 			modDropdown.add(option);
