@@ -117,7 +117,7 @@
   },
   {
     "name": "eyebot",
-    "factions": ["bos","rbt","srv"],
+    "factions": ["bos","enc","rbt","srv"],
     "preview":"eyebot",
     "tags":["robot"],
     "must_carry": [
@@ -698,7 +698,7 @@
   {
     "name": "deathclaw",
     "preview":"deathclaw",
-    "factions": ["crt"],
+    "factions": ["crt","enc"],
     "tags":["creature"],
     "must_carry": [
       "melee.deathclaw_crush",
@@ -1849,7 +1849,7 @@
   {
     "name": "assaultron",
     "preview":"assaultron",
-    "factions": ["rbt"],
+    "factions": ["enc","rbt"],
     "tags":["robot"],
     "must_carry": [
       "rifles.assaultron_head_laser",
@@ -1919,7 +1919,7 @@
   {
     "name": "sentry_bot",
     "preview":"sentrybot",
-    "factions": ["rbt"],
+    "factions": ["enc","rbt"],
     "tags":["robot"],
     "must_carry": [
       "heavy_weapons.minigun",
