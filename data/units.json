@@ -2595,7 +2595,7 @@
     "name": "codsworth",
     "unique_code": "codsworth",
     "preview":"codsworth",
-    "factions": ["srv"],
+    "factions": ["srv", "rbt"],
     "tags":["robot"],
     "must_carry": [
       "pistols.mr_handy_flamer",
@@ -3832,7 +3832,7 @@
     "factions": ["enc"],
     "settlment_mode_slots":[
     ],
-    "cost": 600
+    "cost": 450
   },
   {
     "name": "hellfire_trooper",
@@ -3843,18 +3843,10 @@
     "cost": 90
   },
   {
-    "name": "lily",
-    "unique_code": "lily",
-    "factions": [],
-    "settlment_mode_slots":[
-    ],
-    "cost": 110
-  },
-  {
     "name": "lorenzo_cabot",
     "preview":"lorenzocabot",
     "unique_code": "lorenzo_cabot",
-    "factions": ["crt"],
+    "factions": ["crt", "srv"],
     "settlment_mode_slots":[
     ],
     "cost": 80
@@ -3990,5 +3982,146 @@
     "settlment_mode_slots":[
     ],
     "cost": 48
+  },
+  {
+    "name": "arcade_gannon",
+    "factions": ["enc", "srv"],
+    "unique_code": "arcade_gannon",
+    "settlment_mode_slots":[
+    ],
+    "cost": 50
+  },
+  {
+    "name": "boone",
+    "factions": ["srv"],
+    "unique_code": "boone",
+    "settlment_mode_slots":[
+    ],
+    "cost": 100
+  },
+  {
+    "name": "cass",
+    "factions": ["srv"],
+    "unique_code": "cass",
+    "settlment_mode_slots":[
+    ],
+    "cost": 52
+  },
+  {
+    "name": "ed-e",
+    "factions": ["srv","enc", "rbt"],
+    "unique_code": "ed-e",
+    "must_carry":[
+      "pistols.eyebot_tesla_cannon"
+    ],
+    "settlment_mode_slots":[
+    ],
+    "cost": 67
+  },
+  {
+    "name": "raul",
+    "factions": ["srv"],
+    "unique_code": "raul",
+    "settlment_mode_slots":[
+    ],
+    "cost": 65
+  },
+  {
+    "name": "rex",
+    "factions": ["srv"],
+    "tags":["dog"],
+    "unique_code": "rex",
+    "must_carry": [
+      "melee.dog_bite"
+    ],
+    "cost": 80
+  },
+  {
+    "name": "the_burned_man",
+    "factions": ["srv"],
+    "unique_code": "the_burned_man",
+    "must_carry": [
+      "pistols.a_light_burning_in_the_darkness"
+    ],
+    "cost": 85
+  },
+  {
+    "name": "the_courier",
+    "factions": ["bos", "srv"],
+    "unique_code": "the_courier",
+    "must_carry": [
+      "perks.companion"
+    ],
+    "cost": 98
+  },
+  {
+    "name": "veronica",
+    "factions": ["srv", "bos"],
+    "unique_code": "veronica",
+    "settlment_mode_slots":[
+    ],
+    "cost": 60
+  },
+  {
+    "name": "lily",
+    "factions": ["mut"],
+    "unique_code": "lily",
+    "settlment_mode_slots":[
+    ],
+    "cost": 112
+  },
+  {
+    "name": "marcus",
+    "factions": ["mut"],
+    "unique_code": "marcus",
+    "must_carry": [
+      "melee.marcus_punch"
+    ],
+    "settlment_mode_slots":[
+    ],
+    "cost": 115
+  },
+  {
+    "name": "nightkin",
+    "factions": ["mut"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 78
+  },
+  {
+    "name": "tabitha",
+    "factions": ["mut"],
+    "unique_code": "tabitha",
+    "settlment_mode_slots":[
+    ],
+    "cost": 135
+  },
+  {
+    "name": "securitron_mk_1",
+    "factions": ["rbt"],
+    "must_carry":[
+      "heavy_weapons.securitron_gatling_laser",
+      "rifles.securitron_smg"
+    ],
+    "settlment_mode_slots":[
+    ],
+    "cost": 100
+  },
+  {
+    "name": "securitron_mk_2",
+    "factions": ["rbt"],
+    "settlment_mode_slots":[
+    ],
+    "cost": 200
+  },
+  {
+    "name": "legion_mongrel",
+    "factions": ["crt"],
+    "must_carry":[
+      "melee.mongrel_bite"
+    ],
+    "settlment_mode_slots":[
+    ],
+    "cost": 78
   }
 ]
