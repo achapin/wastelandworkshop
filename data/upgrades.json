@@ -753,12 +753,12 @@
     },
     {
       "name": "fat_man",
-      "cost": 60,
+      "cost": 45,
       "preview": "fatman"
     },
     {
       "name": "final_judgement",
-      "cost": 27,
+      "cost": 35,
       "preview": "finaljudgement"
     },
     {
@@ -768,7 +768,7 @@
     },
     {
       "name": "gatling_laser",
-      "cost": 25,
+      "cost": 30,
       "preview": "gatlinglaser"
     },
     {
@@ -987,7 +987,7 @@
     },
     {
       "name": "pipe_rifle",
-      "cost": 11,
+      "cost": 8,
       "preview": "piperifle"
     },
     {
@@ -997,7 +997,7 @@
     },
     {
       "name": "plasma_rifle",
-      "cost": 24,
+      "cost": 19,
       "preview": "plasmarifle"
     },
     {
@@ -1447,7 +1447,7 @@
     },
     {
       "name": "lead_pipe",
-      "cost": 12,
+      "cost": 9,
       "preview": "leadpipe"
     },
     {
@@ -1507,7 +1507,7 @@
     },
     {
       "name": "nail_board",
-      "cost": 2,
+      "cost": 1,
       "preview": "nailboard"
     },
     {
@@ -1802,7 +1802,7 @@
     },
     {
       "name": "environmental_suit",
-      "cost": 20,
+      "cost": 15,
       "preview": "environmentalsuit"
     },
     {
@@ -1939,7 +1939,7 @@
     },
     {
       "name": "atom_cats_jacket_and_jeans",
-      "cost": 5,
+      "cost": 12,
       "preview": "atomcatjacketandjeans"
     },
     {
@@ -1955,7 +1955,7 @@
     },
     {
       "name": "battered_fedora",
-      "cost": 8,
+      "cost": 12,
       "preview": "batteredfedora"
     },
     {
@@ -1971,12 +1971,12 @@
     },
     {
       "name": "camoflage",
-      "cost": 6,
+      "cost": 22,
       "preview": "camoflage"
     },
     {
       "name": "dirty_postman_uniform",
-      "cost": 5,
+      "cost": 12,
       "preview": "dirtypostmanuniform"
     },
     {
@@ -1991,17 +1991,17 @@
     },
     {
       "name": "eyeglasses",
-      "cost": 3,
+      "cost": 7,
       "preview": "eyeglasses"
     },
     {
       "name": "institute_division_head_coat",
-      "cost": 4,
+      "cost": 7,
       "preview": "institutedivisionheadcoat"
     },
     {
       "name": "institute_lab_coat",
-      "cost": 6,
+      "cost": 7,
       "preview": "institutelabcoat"
     },
     {
@@ -2020,7 +2020,7 @@
     },
     {
       "name": "military_fatigues",
-      "cost": 4,
+      "cost": 7,
       "preview": "militaryfatigues"
     },
     {
@@ -2033,7 +2033,7 @@
     },
     {
       "name": "patched_three_piece_suit",
-      "cost": 4,
+      "cost": 12,
       "preview": "patchedthreepiecesuit"
     },
     {
@@ -2043,12 +2043,12 @@
     },
     {
       "name": "road_goggles",
-      "cost": 3,
+      "cost": 7,
       "preview": "roadgoggles"
     },
     {
       "name": "robotic_bits",
-      "cost": 3,
+      "cost": 7,
       "preview": "roboticbits"
     },
     {
@@ -2070,7 +2070,7 @@
     },
     {
       "name": "tricorn_hat",
-      "cost": 5,
+      "cost": 7,
       "preview": "tricornhat"
     },
     {
@@ -2234,7 +2234,7 @@
     },
     {
       "name": "bourbon",
-      "cost": 7,
+      "cost": 6,
       "preview": "bourbon"
     },
     {
@@ -2897,7 +2897,7 @@
     },
     {
       "name": "asbestos_lining",
-      "cost": 6,
+      "cost": 5,
       "types":[ "armor"],
       "preview": "asbestoslining"
     },
@@ -3193,7 +3193,7 @@
     },
     {
       "name": "lockpick_module",
-      "cost": 8
+      "cost": 10
     },
     {
       "name": "long_barrel",
@@ -3249,7 +3249,7 @@
     },
     {
       "name": "powerful",
-      "cost": 8,
+      "cost": 16,
       "types":["rifles"],
       "preview": "powerful"
     },
@@ -3281,7 +3281,7 @@
     },
     {
       "name": "recon_sensors",
-      "cost": 5,
+      "cost": 7,
       "types":["power_armor"],
       "preview": "reconsensors"
     },
@@ -3313,6 +3313,7 @@
     },
     {
       "name": "sensor_array_pa",
+      "types":["power_armor"],
       "cost": 12
     },
     {
@@ -3617,7 +3618,7 @@
   "gear":[
     {
       "name":"admin_password",
-      "cost":8,
+      "cost":25,
       "preview": "adminpassword"
     },
     {
@@ -3777,7 +3778,7 @@
     },
     {
       "name":"skeleton_key",
-      "cost":8,
+      "cost":25,
       "preview": "skeletonkey"
     },
     {
