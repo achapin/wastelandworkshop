@@ -11,31 +11,12 @@
     "must_wear": [
       "power_armor.t60_power_armor"
     ],
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "power_fist",
-        "ripper"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "cryo_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -62,42 +43,17 @@
       "heavy_weapons":["final_judgement"],
       "power_armor": "t60_power_armor"
     },
-    "wear_slots": {
-      "power_armor": [
-        "t60_power_armor"
-      ]
+    "free_mod":{
+      "mod":"elder_paint",
+      "restriction":"power_armor"
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "final_judgement",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "power_fist",
-        "ripper"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "cryo_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -123,6 +79,9 @@
     "must_carry": [
       "pistols.eyebot_laser"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":[
       "gear"
     ],
@@ -136,18 +95,12 @@
     "default_equipment":{
       "pistols":["laser_pistol"]
     },
-    "carry_slots": {
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ]
-    },
-    "consumables": {
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -173,18 +126,12 @@
     "default_equipment":{
       "pistols":["laser_pistol"]
     },
-    "carry_slots": {
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ]
-    },
-    "consumables": {
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -210,37 +157,13 @@
     "default_equipment":{
       "rifles":["combat_rifle"]
     },
-    "wear_slots": {
-      "power_armor": [
-        "t45_power_armor",
-        "t51_power_armor",
-        "t60_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "power_fist",
-        "ripper"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -263,7 +186,7 @@
         "pulse_grenade"
       ]
     },
-    "cost": 65
+    "cost": 62
   },
   {
     "name": "knight_captain_cade",
@@ -275,43 +198,13 @@
       "heavy_weapons":["minigun"],
       "power_armor":"t60_power_armor"
     },
-    "wear_slots": {
-      "power_armor": [
-        "t45_power_armor",
-        "t51_power_armor",
-        "t60_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "cryo_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "cost": 72
   },
   {
@@ -322,22 +215,13 @@
     "default_equipment":{
       "rifles":["laser_rifle"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle"
-      ],
-      "melee": [
-        "machete"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -363,27 +247,13 @@
     "default_equipment":{
       "rifles":["laser_rifle"]
     },
-    "carry_slots": {
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "power_fist",
-        "ripper"
-      ]
-    },
-    "consumables": {
-      "mines": [
-        "fragmentation_mine",
-        "pulse_mine"
-      ],
-      "thrown": [
-        "fragmentation_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -409,43 +279,13 @@
     "default_equipment":{
       "rifles":["laser_rifle"]
     },
-    "wear_slots": {
-      "power_armor": [
-        "t45_power_armor",
-        "t51_power_armor",
-        "t60_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "cryo_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -471,12 +311,13 @@
     "default_equipment":{
       "rifles":["hunting_rifle"]
     },
-    "carry_slots": {
-      "rifles": [
-        "laser_rifle",
-        "plasma_rifle"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -492,7 +333,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 60
+    "cost": 57
   },
   {
     "name": "lancer_captain_kells",
@@ -508,29 +349,13 @@
         "airship_captains_hat"
       ]
     },
-    "carry_slots": {
-      "rifles": [
-        "combat_rifle",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols":[
-        "laser_pistol"
-      ],
-      "melee":[
-        "baton",
-        "machete",
-        "ripper",
-        "stun_baton"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "cryo_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -546,7 +371,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 88
+    "cost": 80
   },
   {
     "name": "paladin",
@@ -557,44 +382,13 @@
       "melee":["machete"],
       "heavy_weapons":["gatling_laser"]
     },
-    "wear_slots": {
-      "power_armor": [
-        "t45_power_armor",
-        "t51_power_armor",
-        "t60_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "gauss_rifle",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "cryo_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -622,41 +416,13 @@
       "rifles":["plasma_rifle"],
       "power_armor":"t60_power_armor"
     },
-    "wear_slots": {
-      "power_armor": [
-        "t60_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "10mm_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "machete",
-        "ripper"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "cryo_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -682,8 +448,12 @@
     "must_carry": [
       "pistols.alien_blaster"
     ],
+    "battle_mode_packs":[
+      "upgrades",
+      "usable_items"
+    ],
     "settlment_mode_slots":[],
-    "cost": 80
+    "cost": 97
   },
   {
     "name": "bloated_glowing_one",
@@ -691,6 +461,9 @@
     "factions": ["crt"],
     "must_carry": [
       "melee.bloated_glowing_one_swipe"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
     ],
     "settlment_mode_slots":[],
     "cost": 210
@@ -704,6 +477,9 @@
       "melee.deathclaw_crush",
       "melee.deathclaw_swipe"
     ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[],
     "cost": 250
   },
@@ -715,6 +491,9 @@
     "must_carry": [
       "melee.feral_ghoul_swipe"
     ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[],
     "cost": 49
   },
@@ -724,7 +503,10 @@
     "preview":"glowingradroach",
     "tags":["creature"],
     "must_carry": [
-      "melee.radroach_swarm_bite"
+      "melee.glowing_radroach_swarm_bite"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
     ],
     "settlment_mode_slots":[],
     "cost": 34
@@ -737,6 +519,9 @@
     "must_carry": [
       "melee.mole_rat_bite"
     ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[],
     "cost": 10
   },
@@ -747,6 +532,9 @@
     "tags":["creature"],
     "must_carry": [
       "melee.putrid_glowing_one_swipe"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
     ],
     "settlment_mode_slots":[],
     "cost": 223
@@ -759,6 +547,9 @@
     "must_carry": [
       "melee.radroach_swarm_bite"
     ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[],
     "cost": 22
   },
@@ -770,8 +561,11 @@
     "must_carry": [
       "melee.radscorpion_pincers_and_sting"
     ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[],
-    "cost": 77
+    "cost": 82
   },
   {
     "name": "weak_feral_ghoul",
@@ -780,6 +574,9 @@
     "tags":["creature"],
     "must_carry": [
       "melee.weak_feral_ghoul_swipe"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
     ],
     "settlment_mode_slots":[],
     "cost": 24
@@ -792,6 +589,9 @@
     "must_carry": [
       "melee.young_deathclaw_crush",
       "melee.young_deathclaw_swipe"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
     ],
     "settlment_mode_slots":[],
     "cost": 125
@@ -810,30 +610,10 @@
         "heavy_synth_armor"
       ]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "institute_laser_rifle",
-        "laser_rifle"
-      ],
-      "pistols": [
-        "institute_laser_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "synth_relay_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "high_tech_items",
+      "advanced_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -859,14 +639,9 @@
       "pistols":["institute_laser_pistol"],
       "melee":["baton"]
     },
-    "carry_slots": {
-      "pistols": [
-        "institute_laser_pistol"
-      ],
-      "melee": [
-        "baton"
-      ]
-    },
+    "battle_mode_packs":[
+      "advanced_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -896,27 +671,12 @@
     "must_carry": [
       "pistols.kellogs_pistol"
     ],
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "synth_relay_grenade"
-      ],
-      "gear":[
-        "stealth_boy"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -943,32 +703,11 @@
       "rifles":["assault_rifle"],
       "pistols":["gamma_gun"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "gauss_rifle",
-        "institute_laser_rifle",
-        "laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "gamma_gun",
-        "institute_laser_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "synth_relay_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -997,16 +736,11 @@
     "must_wear": [
       "armor.cleanroom_suit"
     ],
-    "carry_slots": {
-      "pistols": [
-        "institute_laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "pipe_wrench",
-        "stun_baton"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "clothing",
@@ -1031,18 +765,9 @@
       "pistols":["institute_laser_pistol"],
       "melee":["baton"]
     },
-    "carry_slots": {
-      "rifles":[
-        "institute_laser_rifle"
-      ],
-      "pistols": [
-        "institute_laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
+    "battle_mode_packs":[
+      "high_tech_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1068,25 +793,9 @@
     "default_equipment":{
       "rifles":["institute_laser_rifle"]
     },
-    "carry_slots": {
-      "rifles": [
-        "institute_laser_rifle",
-        "laser_rifle"
-      ],
-      "pistols": [
-        "institute_laser_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "synth_relay_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "high_tech_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1115,16 +824,11 @@
     "must_wear": [
       "armor.cleanroom_suit"
     ],
-    "carry_slots": {
-      "pistols": [
-        "gamma_gun",
-        "institute_laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1150,25 +854,9 @@
     "default_equipment":{
       "rifles":["institute_laser_rifle"]
     },
-    "carry_slots": {
-      "rifles": [
-        "institute_laser_rifle",
-        "laser_rifle"
-      ],
-      "pistols": [
-        "institute_laser_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "synth_relay_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "high_tech_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1195,24 +883,12 @@
     "default_equipment":{
       "pistols":["gamma_gun"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "missile_launcher"
-      ],
-      "rifles": [
-        "gauss_rifle",
-        "institute_laser_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "gamma_gun",
-        "institute_laser_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "stun_baton"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1239,22 +915,11 @@
     "default_equipment":{
       "pistols":["institute_laser_pistol"]
     },
-    "carry_slots": {
-      "pistols": [
-        "gamma_gun",
-        "institute_laser_pistol",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "synth_relay_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1281,45 +946,13 @@
     "default_equipment":{
       "heavy_weapons":["minigun"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "junk_jet",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "molotov_cocktail"
-      ],
-      "mines": [
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1346,35 +979,13 @@
     "default_equipment":{
       "rifles":["combat_shotgun"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "molotov_cocktail"
-      ],
-      "mines": [
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1401,28 +1012,11 @@
       "thrown":{"fragmentation_grenade":"4"},
       "melee":["pipe_wrench"]
     },
-    "carry_slots": {
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "flare_gun",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1449,28 +1043,11 @@
       "thrown":{"molotov_cocktail":"4"},
       "melee":["lead_pipe"]
     },
-    "carry_slots": {
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "flare_gun",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1496,36 +1073,12 @@
     "default_equipment":{
       "rifles":["pipe_rifle"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1552,36 +1105,12 @@
       "pistols":["bolt_action_pipe_pistol"],
       "melee":["machete"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1607,38 +1136,13 @@
     "default_equipment":{
       "rifles":["bolt_action_pipe_rifle"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "junk_jet"],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1664,38 +1168,13 @@
     "default_equipment":{
       "rifles":["hunting_rifle"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "junk_jet"],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1726,35 +1205,13 @@
         "mod":"silenced",
         "restriction":"pistols"
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "junk_jet",
-        "minigun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "molotov_cocktail"
-      ],
-      "mines": [
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1782,53 +1239,13 @@
       "melee":["nail_board"],
       "power_armor":"raider_power_armor"
     },
-    "wear_slots": {
-      "power_armor": [
-        "raider_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "junk_jet",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "deathclaw_gauntlet",
-        "huge_club",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "power_fist",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "molotov_cocktail"
-      ],
-      "mines": [
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -1855,6 +1272,9 @@
       "rifles.assaultron_head_laser",
       "melee.assaultron_swipe"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":["gear"],
     "cost": 320
   },
@@ -1867,6 +1287,9 @@
       "rifles.battered_assaultron_head_laser",
       "melee.assaultron_swipe"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":["gear"],
     "cost": 95
   },
@@ -1877,6 +1300,9 @@
     "tags":["robot"],
     "must_carry": [
       "pistols.protectron_hand_laser"
+    ],
+    "battle_mode_packs":[
+      "robot_items"
     ],
     "settlment_mode_slots":["gear"],
     "cost": 35
@@ -1890,8 +1316,11 @@
       "melee.empty_minigun",
       "heavy_weapons.missile_launcher"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":["gear"],
-    "cost": 180
+    "cost": 165
   },
   {
     "name": "mr_handy",
@@ -1901,6 +1330,9 @@
     "must_carry": [
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
+    ],
+    "battle_mode_packs":[
+      "robot_items"
     ],
     "settlment_mode_slots":["gear"],
     "cost": 70
@@ -1913,6 +1345,9 @@
     "must_carry": [
       "pistols.protectron_hand_laser"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":["gear"],
     "cost": 48
   },
@@ -1924,6 +1359,9 @@
     "must_carry": [
       "heavy_weapons.minigun",
       "heavy_weapons.missile_launcher"
+    ],
+    "battle_mode_packs":[
+      "robot_items"
     ],
     "settlment_mode_slots":["gear"],
     "cost": 253
@@ -1941,31 +1379,12 @@
     "must_wear": [
       "clothing.aviator_cap"
     ],
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "nail_board",
-        "sledgehammer"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -1980,7 +1399,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 88
+    "cost": 95
   },
   {
     "name": "behemoth",
@@ -1992,14 +1411,13 @@
       "melee":["fire_hydrant_bat"],
       "thrown":{"behemoth_rock_throw":1}
     },
-    "carry_slots": {
-      "melee": [
-        "fire_hydrant_bat"
-      ],
-      "thrown": [
-        "behemoth_rock_throw"
-      ]
-    },
+    "must_carry":[
+      "thrown.behemoth_rock_throw"
+    ],
+    "battle_mode_packs":[
+      "melee.fire_hydrant_bat",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2024,40 +1442,13 @@
     "default_equipment":{
       "melee":["sledgehammer"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "hunting_rifle",
-        "laser_rifle",
-        "pipe_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "huge_club",
-        "nail_board",
-        "sledgehammer",
-        "super_sledge"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2072,7 +1463,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 87
+    "cost": 95
   },
   {
     "name": "enslaved_tech",
@@ -2081,35 +1472,12 @@
     "default_equipment":{
       "rifles":["combat_shotgun"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle",
-        "pipe_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "nail_board"
-      ]
-    },
-    "consumables": {
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
-      "power_armor",
       "armor",
       "clothing",
       "heavy_weapons",
@@ -2135,27 +1503,13 @@
     "default_equipment":{
       "heavy_weapons":["minigun"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "minigun"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "pipe_rifle"
-      ],
-      "melee": [
-        "board",
-        "huge_club",
-        "nail_board",
-        "sledgehammer"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2170,7 +1524,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 79
+    "cost": 86
   },
   {
     "name": "hammer",
@@ -2183,37 +1537,13 @@
       "heavy_weapons":["missile_launcher"],
       "melee":["super_sledge"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "laser_rifle",
-        "pipe_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "huge_club",
-        "nail_board",
-        "sledgehammer",
-        "super_sledge"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2228,7 +1558,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 105
+    "cost": 109
   },
   {
     "name": "master",
@@ -2240,40 +1570,13 @@
       "melee":["huge_club"],
       "rifles":["bolt_action_pipe_rifle"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "gauss_rifle",
-        "laser_rifle",
-        "pipe_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "huge_club",
-        "nail_board",
-        "sledgehammer",
-        "super_sledge"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2288,7 +1591,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 100
+    "cost": 107
   },
   {
     "name": "mutant_hound",
@@ -2297,8 +1600,11 @@
     "must_carry": [
       "melee.hound_bite"
     ],
+    "battle_mode_packs":[
+      "dog_items"
+    ],
     "settlment_mode_slots":[],
-    "cost": 63
+    "cost": 65
   },
   {
     "name": "mutant_hound_fiend",
@@ -2306,6 +1612,9 @@
     "factions": ["mut"],
     "must_carry": [
       "melee.hound_bite"
+    ],
+    "battle_mode_packs":[
+      "dog_items"
     ],
     "settlment_mode_slots":[],
     "cost": 65
@@ -2320,42 +1629,13 @@
       "heavy_weapons":["gatling_laser"],
       "melee":["nail_board"]
     },
-    "carry_slots": {
-      "heavy_weapons": [
-        "junk_jet",
-        "gatling_laser",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "gauss_rifle",
-        "laser_rifle",
-        "pipe_rifle",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "huge_club",
-        "nail_board",
-        "sledgehammer",
-        "super_sledge"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2381,26 +1661,11 @@
     "default_equipment":{
       "melee":["pipe_wrench"]
     },
-    "carry_slots": {
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "nail_board",
-        "sledgehammer",
-        "super_sledge",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2430,29 +1695,13 @@
     "default_equipment":{
       "melee":["super_sledge"]
     },
-    "carry_slots": {
-      "heavy_weapons":[
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "gauss_rifle",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "melee": [
-        "board",
-        "nail_board",
-        "sledgehammer",
-        "super_sledge"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade",
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2467,7 +1716,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 80
+    "cost": 86
   },
   {
     "name":"suicider",
@@ -2475,6 +1724,11 @@
     "factions": ["mut"],
     "must_carry": [
       "thrown.suicider_mini_nuke"
+    ],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
     ],
     "settlment_mode_slots":[
       "armor",
@@ -2502,30 +1756,11 @@
       "rifles":["bolt_action_pipe_rifle"],
       "melee":["board"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "nail_board",
-        "sledgehammer"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "molotov_cocktail"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "armor",
       "clothing",
@@ -2540,7 +1775,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 40
+    "cost": 42
   },
   {
     "unique_code": "cait",
@@ -2552,27 +1787,11 @@
       "rifles":["double_barrel_shotgun"],
       "chems":{"mentats":1}
     },
-    "carry_slots": {
-      "rifles": [
-        "double_barrel_shotgun",
-        "pipe_rifle",
-        "submachine_gun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "machete",
-        "pipe_wrench",
-        "power_fist"
-      ]
-    },
-    "must_carry": [
-      "chems.psycho"
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
     ],
     "settlment_mode_slots":[
       "power_armor",
@@ -2601,19 +1820,11 @@
       "pistols.mr_handy_flamer",
       "melee.mr_handy_buzzsaw"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":["gear"],
     "cost": 90
-  },
-  {
-    "name": "dog_v1",
-    "preview":"dog",
-    "factions": ["crt", "srv", "rd"],
-    "tags":["dog"],
-    "must_carry": [
-      "melee.dog_bite"
-    ],
-    "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 100
   },
   {
     "name": "dog_v2",
@@ -2623,20 +1834,11 @@
     "must_carry": [
       "melee.dog_bite"
     ],
-    "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 80
-  },
-  {
-    "name": "dogmeat_v1",
-    "preview":"dogmeat",
-    "factions": ["srv"],
-    "tags":["dog"],
-    "unique_code": "dogmeat",
-    "must_carry": [
-      "melee.dog_bite"
+    "battle_mode_packs":[
+      "dog_items"
     ],
     "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 120
+    "cost": 70
   },
   {
     "name": "dogmeat_v2",
@@ -2647,8 +1849,11 @@
     "must_carry": [
       "melee.dog_bite"
     ],
+    "battle_mode_packs":[
+      "dog_items"
+    ],
     "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 95
+    "cost": 83
   },
   {
     "name": "dogmeat_guard_dog",
@@ -2659,20 +1864,11 @@
     "must_carry": [
       "melee.dog_bite"
     ],
-    "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 95
-  },
-  {
-    "name": "dogmeat_scout_v1",
-    "unique_code": "dogmeat",
-    "preview":"dogmeatscout",
-    "factions": ["srv"],
-    "tags":["dog"],
-    "must_carry": [
-      "melee.dog_bite"
+    "battle_mode_packs":[
+      "dog_items"
     ],
     "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 112
+    "cost": 83
   },
   {
     "name": "dogmeat_scout_v2",
@@ -2683,8 +1879,11 @@
     "must_carry": [
       "melee.dog_bite"
     ],
+    "battle_mode_packs":[
+      "dog_items"
+    ],
     "settlment_mode_slots":["armor", "clothing", "gear"],
-    "cost": 100
+    "cost": 86
   },
   {
     "unique_code": "hancock",
@@ -2695,22 +1894,13 @@
     "default_equipment":{
       "pistols":["plasma_pistol"]
     },
-    "carry_slots": {
-      "rifles": [
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "plasma_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "plasma_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "machete"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -2737,14 +1927,11 @@
     "default_equipment":{
       "melee":["tire_iron"]
     },
-    "carry_slots": {
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ],
     "must_carry": [
       "chems.jet",
       "chems.mentats"
@@ -2774,42 +1961,12 @@
     "default_equipment":{
       "rifles":["laser_musket"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "laser_musket",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "flare_gun",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "machete",
-        "nail_board",
-        "pipe_wrench"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade"
-      ],
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -2836,19 +1993,13 @@
     "default_equipment":{
       "pistols":["pipe_pistol"]
     },
-    "carry_slots": {
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "gamma_gun",
-        "laser_pistol"
-      ],
-      "melee": [
-        "baton",
-        "stun_baton"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -2875,17 +2026,12 @@
     "default_equipment":{
       "pistols":["thirst_zapper_cola"]
     },
-    "carry_slots": {
-      "pistols": [
-        "thirst_zapper_cola"
-      ]
-    },
-    "consumables":{
-      "food_and_drink":[
-        "nuka_cola",
-        "nuka_cherry"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -2901,7 +2047,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 85
+    "cost": 100
   },
   {
     "name": "piper",
@@ -2912,30 +2058,13 @@
     "default_equipment":{
       "pistols":["10mm_pistol"]
     },
-    "carry_slots": {
-      "rifles":[
-        "submachine_gun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "machete",
-        "nail_board",
-        "pipe_wrench"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -2966,40 +2095,14 @@
         "mod":"long_barrel",
         "restriction":"laser_musket"
       },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "laser_musket",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "flare_gun",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "machete",
-        "nail_board",
-        "pipe_wrench"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
-      "power_armor",
       "armor",
       "clothing",
       "heavy_weapons",
@@ -3024,39 +2127,14 @@
     "default_equipment":{
       "rifles":["laser_musket"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "laser_musket",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "machete",
-        "nail_board",
-        "pipe_wrench"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
-      "power_armor",
       "armor",
       "clothing",
       "heavy_weapons",
@@ -3080,41 +2158,12 @@
     "default_equipment":{
       "rifles":["bolt_action_pipe_rifle"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "flare_gun",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "machete",
-        "nail_board",
-        "pipe_wrench"
-      ]
-    },
-    "consumables": {
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine"
-      ],
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3140,31 +2189,12 @@
     "default_equipment":{
       "rifles":["assault_rifle"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "flare_gun",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "machete",
-        "nail_board",
-        "pipe_wrench"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3191,80 +2221,14 @@
     "default_equipment":{
       "rifles":["hunting_rifle"]
     },
-    "wear_slots": {
-      "power_armor": [
-        "power_armor_frame",
-        "t45_power_armor",
-        "t51_power_armor",
-        "t60_power_armor",
-        "x01_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "junk_jet",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "gauss_rifle",
-        "hunting_rifle",
-        "institute_laser_rifle",
-        "laser_musket",
-        "laser_rifle",
-        "plasma_rifle",
-        "pipe_rifle",
-        "railway_rifle",
-        "submachine_gun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "alien_blaster",
-        "bolt_action_pipe_pistol",
-        "flare_gun",
-        "gamma_gun",
-        "institute_laser_pistol",
-        "laser_pistol",
-        "pipe_pistol",
-        "plasma_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "baton",
-        "board",
-        "deathclaw_gauntlet",
-        "huge_club",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "power_fist",
-        "ripper",
-        "sledgehammer",
-        "stun_baton",
-        "super_sledge",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ],
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine",
-        "pulse_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3280,7 +2244,7 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 103
+    "cost": 107
   },
   {
     "name": "sole_survivor_day_one",
@@ -3291,254 +2255,13 @@
     "default_equipment":{
       "pistols":["10mm_pistol"]
     },
-    "wear_slots": {
-      "power_armor": [
-        "power_armor_frame"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "junk_jet"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "laser_musket",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "lead_pipe",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "ripper",
-        "sledgehammer",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade"
-      ],
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine"
-      ]
-    },
-    "settlment_mode_slots":[
-      "power_armor",
-      "armor",
-      "clothing",
-      "heavy_weapons",
-      "rifles",
-      "pistols",
-      "melee",
-      "thrown",
-      "mines",
-      "chems",
-      "alcohol",
-      "food_and_drink",
-      "gear"
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
     ],
-    "cost": 81
-  },
-  {
-    "name": "sole_survivor_loner",
-    "unique_code": "sole_survivor_loner",
-    "preview":"solesurvivorloner",
-    "heroic": true,
-    "factions": ["srv"],
-    "default_equipment":{
-      "pistols":["44_revolver"],
-      "melee":["machete"]
-    },
-    "has_perk":[
-      "lone_wanderer"
-    ],
-    "wear_slots": {
-      "power_armor": [
-        "power_armor_frame",
-        "t45_power_armor",
-        "t51_power_armor",
-        "t60_power_armor",
-        "x01_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "junk_jet",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "gauss_rifle",
-        "hunting_rifle",
-        "institute_laser_rifle",
-        "laser_musket",
-        "laser_rifle",
-        "plasma_rifle",
-        "pipe_rifle",
-        "railway_rifle",
-        "submachine_gun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "alien_blaster",
-        "flare_gun",
-        "gamma_gun",
-        "institute_laser_pistol",
-        "laser_pistol",
-        "pipe_pistol",
-        "plasma_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "baton",
-        "board",
-        "deathclaw_gauntlet",
-        "lead_pipe",
-        "machete",
-        "pipe_wrench",
-        "power_fist",
-        "ripper",
-        "sledgehammer",
-        "stun_baton",
-        "super_sledge",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ],
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine",
-        "pulse_mine"
-      ]
-    },
-    "settlment_mode_slots":[
-      "power_armor",
-      "armor",
-      "clothing",
-      "heavy_weapons",
-      "rifles",
-      "pistols",
-      "melee",
-      "thrown",
-      "mines",
-      "chems",
-      "alcohol",
-      "food_and_drink",
-      "gear"
-    ],
-    "cost": 123
-  },
-  {
-    "name": "sole_survivor_tech",
-    "preview":"solesurvivortech",
-    "unique_code": "sole_survivor",
-    "default_equipment":{
-      "rifles":["combat_shotgun"],
-      "power_armor":"x01_power_armor"
-    },
-    "heroic": true,
-    "factions": ["srv"],
-    "wear_slots": {
-      "power_armor": [
-        "power_armor_frame",
-        "t45_power_armor",
-        "t51_power_armor",
-        "t60_power_armor",
-        "x01_power_armor"
-      ]
-    },
-    "carry_slots": {
-      "heavy_weapons": [
-        "gatling_laser",
-        "junk_jet",
-        "minigun",
-        "missile_launcher"
-      ],
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "gauss_rifle",
-        "hunting_rifle",
-        "institute_laser_rifle",
-        "laser_musket",
-        "laser_rifle",
-        "plasma_rifle",
-        "pipe_rifle",
-        "railway_rifle",
-        "submachine_gun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "alien_blaster",
-        "flare_gun",
-        "gamma_gun",
-        "institute_laser_pistol",
-        "laser_pistol",
-        "pipe_pistol",
-        "plasma_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "baton",
-        "board",
-        "deathclaw_gauntlet",
-        "huge_club",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "power_fist",
-        "ripper",
-        "sledgehammer",
-        "stun_baton",
-        "super_sledge",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ],
-      "mines": [
-        "bottlecap_mine",
-        "fragmentation_mine",
-        "pulse_mine"
-      ]
-    },
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3557,6 +2280,79 @@
     "cost": 85
   },
   {
+    "name": "sole_survivor_loner",
+    "unique_code": "sole_survivor_loner",
+    "preview":"solesurvivorloner",
+    "heroic": true,
+    "factions": ["srv"],
+    "default_equipment":{
+      "pistols":["44_revolver"],
+      "melee":["machete"]
+    },
+    "has_perk":[
+      "lone_wanderer"
+    ],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "alcohol",
+      "food_and_drink",
+      "gear"
+    ],
+    "cost": 126
+  },
+  {
+    "name": "sole_survivor_tech",
+    "preview":"solesurvivortech",
+    "unique_code": "sole_survivor",
+    "default_equipment":{
+      "rifles":["combat_shotgun"],
+      "power_armor":"x01_power_armor"
+    },
+    "heroic": true,
+    "factions": ["srv"],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
+    "settlment_mode_slots":[
+      "power_armor",
+      "armor",
+      "clothing",
+      "heavy_weapons",
+      "rifles",
+      "pistols",
+      "melee",
+      "thrown",
+      "mines",
+      "chems",
+      "alcohol",
+      "food_and_drink",
+      "gear"
+    ],
+    "cost": 88
+  },
+  {
     "name": "sturges",
     "unique_code": "sturges",
     "preview":"sturges",
@@ -3565,40 +2361,13 @@
     "default_equipment":{
       "pistols":["44_revolver"]
     },
-    "carry_slots": {
-      "rifles": [
-        "assault_rifle",
-        "bolt_action_pipe_rifle",
-        "combat_rifle",
-        "combat_shotgun",
-        "double_barrel_shotgun",
-        "hunting_rifle",
-        "pipe_rifle"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol",
-        "bolt_action_pipe_pistol",
-        "laser_pistol",
-        "pipe_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "board",
-        "machete",
-        "nail_board",
-        "pipe_wrench",
-        "power_fist",
-        "tire_iron"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "baseball_grenade",
-        "fragmentation_grenade",
-        "pulse_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3625,21 +2394,11 @@
       "pistols":["10mm_pistol"],
       "thrown":{"fragmentation_grenade":"4"}
     },
-    "carry_slots": {
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "pipe_wrench"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3666,28 +2425,11 @@
       "rifles":["combat_shotgun"],
       "melee":["baton"]
     },
-    "carry_slots": {
-      "rifles": [
-        "combat_rifle",
-        "combat_shotgun"
-      ],
-      "pistols": [
-        "44_revolver",
-        "10mm_pistol"
-      ],
-      "melee": [
-        "baseball_bat",
-        "baton"
-      ]
-    },
-    "consumables": {
-      "thrown": [
-        "fragmentation_grenade"
-      ],
-      "mines": [
-        "fragmentation_mine"
-      ]
-    },
+    "battle_mode_packs":[
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3714,20 +2456,19 @@
     "default_equipment":{
       "pistols":["protectrons_gaze"],
       "melee":["mr_handy_buzz_blade"],
-      "armor":"mechanist_armor_and_helmet",
-      "gear":{"stealth_boy":"1"}
+      "armor":"mechanist_armor_and_helmet"
     },
-    "wear_slots":
-    {
-      "armor":["mechanist_armor_and_helmet"]
-    },
-    "carry_slots": {
-      "pistols":["protectrons_gaze"],
-      "melee":["mr_handy_buzz_blade"]
-    },
-    "consumables": {
-      "gear":["stealth_boy"]
-    },
+    "must_carry":[
+      "gear.stealth_boy.1"
+    ],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "high_tech_items",
+      "robot_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3750,6 +2491,13 @@
     "preview":"colonelautumn",
     "unique_code": "colonel_autumn",
     "factions": ["enc"],
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3765,19 +2513,39 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 115
+    "cost": 103
   },
   {
     "name": "deathclaw_matriarch",
     "factions": ["crt"],
+    "must_carry":[
+      "melee.matriarch_swipe",
+      "melee.deathclaw_trample",
+      "melee.deathclaw_roar",
+      "mods.conditioning_active",
+      "mods.conditioning_hit_and_run",
+      "melee.deathclaw_tail_sweep",
+      "melee.deathclaw_head_butt",
+      "mods.conditioning_haymaker",
+      "mods.conditioning_rage"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[
     ],
-    "cost": 550
+    "cost": 390
   },
   {
     "name": "enclave_soldier",
     "preview":"enclavesoldier",
     "factions": ["enc"],
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3793,12 +2561,18 @@
       "food_and_drink",
       "gear"
     ],
-    "cost": 80
+    "cost": 95
   },
   {
     "name": "enclave_trainee",
     "preview":"enclavetrainee",
     "factions": ["enc"],
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
       "power_armor",
       "armor",
@@ -3821,6 +2595,9 @@
     "preview":"fogcrawler",
     "factions": ["crt"],
     "must_carry":["melee.fog_crawler_claw", "melee.fog_crawler_ground_pound"],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 305
@@ -3830,6 +2607,10 @@
     "preview":"frankhorrigan",
     "unique_code": "frank_horrigan",
     "factions": ["enc"],
+    "must_carry": [
+      "melee.horrigans_knife",
+      "rifles.horrigans_plasma_gun"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 450
@@ -3838,15 +2619,35 @@
     "name": "hellfire_trooper",
     "preview":"hellfiretrooper",
     "factions": ["enc"],
+    "free_mod":{
+      "mod":"tesla_coils",
+      "restriction":"power_armor"
+    },
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
     ],
-    "cost": 90
+    "cost": 108
   },
   {
     "name": "lorenzo_cabot",
     "preview":"lorenzocabot",
     "unique_code": "lorenzo_cabot",
     "factions": ["crt", "srv"],
+    "must_carry":[
+      "pistols.lorenzos_artifact_gun"
+    ],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 80
@@ -3855,9 +2656,15 @@
     "name": "lieutenant",
     "preview":"lieutenant",
     "factions": ["enc"],
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
     ],
-    "cost": 57
+    "cost": 62
   },
   {
     "name": "lieutenant_gorobets",
@@ -3872,6 +2679,9 @@
     "preview":"mirelurk",
     "factions": ["crt"],
     "must_carry":["melee.mirelurk_claw"],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 50
@@ -3881,6 +2691,9 @@
     "preview":"mirelurkhatchlings",
     "must_carry":["melee.mirelurk_hatchlings_claw"],
     "factions": ["crt"],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 12
@@ -3892,14 +2705,20 @@
     "must_carry":["melee.mirelurk_hunter_claw","rifles.mirelurk_hunter_acid"],
     "settlment_mode_slots":[
     ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "cost": 255
   },
   {
     "name": "mirelurk_queen",
     "preview":"mirelurkqueen",
     "factions": ["crt"],
-    "must_carry":["thrown.mirelurk_queen_brood","melee.mirelurk_queen_claw"],
+    "must_carry":["thrown.mirelurk_queen_brood","melee.mirelurk_queen_claw","rifles.mirelurk_queen_acid"],
     "settlment_mode_slots":[
+    ],
+    "battle_mode_packs":[
+      "creature_items"
     ],
     "cost": 230
   },
@@ -3907,6 +2726,12 @@
     "name": "rabid_mole_rat",
     "factions": ["crt"],
     "settlment_mode_slots":[
+    ],
+    "must_carry":[
+      "melee.rabid_mole_rat_bite"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
     ],
     "cost": 20
   },
@@ -3921,6 +2746,11 @@
     "name": "science_specialist",
     "preview":"sciencespecialist",
     "factions": ["enc"],
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 46
@@ -3937,27 +2767,51 @@
     "factions": ["crt"],
     "settlment_mode_slots":[
     ],
+    "must_carry":[
+      "melee.softshell_mirelurk_claw"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "cost": 32
   },
   {
     "name": "tesla_soldier",
     "preview":"teslasoldier",
     "factions": ["enc"],
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
     ],
-    "cost": 85
+    "cost": 101
   },
   {
     "name": "warrant_officer",
     "preview":"warrantofficer",
     "factions": ["enc"],
+    "battle_mode_packs":[
+      "upgrades",
+      "high_tech_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
     ],
-    "cost": 60
+    "cost": 71
   },
   {
     "name": "weak_behemoth",
     "factions": ["mut"],
+    "must_carry":[
+      "thrown.weak_behemoth_rock_throw"
+    ],
+    "battle_mode_packs":[
+      "melee.fire_hydrant_bat"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 120
@@ -3965,6 +2819,13 @@
   {
     "name": "young_fog_crawler",
     "factions": ["crt"],
+    "must_carry":[
+      "melee.young_fog_crawler_claw",
+      "melee.young_fog_crawler_ground_pound"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 245
@@ -3972,6 +2833,14 @@
   {
     "name": "young_mirelurk_queen",
     "factions": ["crt"],
+    "must_carry":[
+      "thrown.mirelurk_queen_brood",
+      "melee.young_mirelurk_queen_claw",
+      "rifles.young_mirelurk_queen_acid"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 185
@@ -3979,14 +2848,27 @@
   {
     "name": "young_radscorpion",
     "factions": ["crt"],
+    "must_carry":[
+      "melee.young_radscorpion_pincers_and_sting"
+    ],
+    "battle_mode_packs":[
+      "creature_items"
+    ],
     "settlment_mode_slots":[
     ],
-    "cost": 48
+    "cost": 54
   },
   {
     "name": "arcade_gannon",
     "factions": ["enc", "srv"],
     "unique_code": "arcade_gannon",
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 50
@@ -3995,6 +2877,12 @@
     "name": "boone",
     "factions": ["srv"],
     "unique_code": "boone",
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 100
@@ -4003,6 +2891,12 @@
     "name": "cass",
     "factions": ["srv"],
     "unique_code": "cass",
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 52
@@ -4014,6 +2908,9 @@
     "must_carry":[
       "pistols.eyebot_tesla_cannon"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 67
@@ -4022,6 +2919,12 @@
     "name": "raul",
     "factions": ["srv"],
     "unique_code": "raul",
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 65
@@ -4034,6 +2937,9 @@
     "must_carry": [
       "melee.dog_bite"
     ],
+    "battle_mode_packs":[
+      "dog_items"
+    ],
     "cost": 80
   },
   {
@@ -4042,6 +2948,12 @@
     "unique_code": "the_burned_man",
     "must_carry": [
       "pistols.a_light_burning_in_the_darkness"
+    ],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
     ],
     "cost": 85
   },
@@ -4052,12 +2964,28 @@
     "must_carry": [
       "perks.companion"
     ],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "cost": 98
   },
   {
     "name": "veronica",
     "factions": ["srv", "bos"],
     "unique_code": "veronica",
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 60
@@ -4066,6 +2994,13 @@
     "name": "lily",
     "factions": ["mut"],
     "unique_code": "lily",
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 112
@@ -4077,6 +3012,13 @@
     "must_carry": [
       "melee.marcus_punch"
     ],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 115
@@ -4084,6 +3026,11 @@
   {
     "name": "nightkin",
     "factions": ["mut"],
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 78
@@ -4092,6 +3039,13 @@
     "name": "tabitha",
     "factions": ["mut"],
     "unique_code": "tabitha",
+    "battle_mode_packs":[
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 135
@@ -4103,6 +3057,9 @@
       "heavy_weapons.securitron_gatling_laser",
       "rifles.securitron_smg"
     ],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 100
@@ -4110,6 +3067,9 @@
   {
     "name": "securitron_mk_2",
     "factions": ["rbt"],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
     "settlment_mode_slots":[
     ],
     "cost": 200
@@ -4120,8 +3080,19 @@
     "must_carry":[
       "melee.mongrel_bite"
     ],
+    "battle_mode_packs":[
+      "dog_items"
+    ],
     "settlment_mode_slots":[
     ],
-    "cost": 78
+    "cost": 60
+  },
+  {
+    "name": "robobrain",
+    "factions":["rbt"],
+    "battle_mode_packs":[
+      "robot_items"
+    ],
+    "cost":60
   }
 ]
