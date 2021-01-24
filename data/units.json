@@ -1424,7 +1424,7 @@
     "must_carry": [
       "melee.dog_bite"
     ], 
-    "name": "dog_v2", 
+    "name": "dog", 
     "preview": "dog_v2", 
     "tags": [
       "dog"
@@ -1441,7 +1441,7 @@
     "must_carry": [
       "melee.dog_bite"
     ], 
-    "name": "dogmeat_v2", 
+    "name": "dogmeat", 
     "preview": "dogmeat_v2", 
     "tags": [
       "dog"
@@ -1477,7 +1477,7 @@
     "must_carry": [
       "melee.dog_bite"
     ], 
-    "name": "dogmeat_scout_v2", 
+    "name": "dogmeat_scout", 
     "preview": "dogmeatscout_v2", 
     "tags": [
       "dog"
