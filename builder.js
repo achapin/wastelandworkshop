@@ -130,11 +130,25 @@ function localizationLoaded(json){
 				badPreview += character["preview"] + " ";
 			}
 		}
+
+		if(!character.hasOwnProperty("battle_mode_packs")){
+			console.log(character.name + "has no battle mode packs");
+			return;
+		}
+
+		character.battle_mode_packs.forEach(function(pack){
+			if(!upgrades.battle_mode_packs.hasOwnProperty(pack)){
+				console.log(character.name + " has bad pack name " + pack);
+			}
+		})
 	});
 
 	Object.keys(upgrades).forEach(function(section){
 		if(!loc.hasOwnProperty(section)){
 			missingKeys += section + ", ";
+		}
+		if(section == "battle_mode_packs"){
+			return;
 		}
 		upgrades[section].forEach(function(upgrade){
 			if(!loc.hasOwnProperty(upgrade.name)){
@@ -151,8 +165,8 @@ function localizationLoaded(json){
 	});
 
 	var missingItems = "";
-	upgrades.packs.forEach(function(pack){
-		pack.contents.forEach(function(item){
+	Object.keys(upgrades.battle_mode_packs).forEach(function(pack){
+		upgrades.battle_mode_packs[pack].forEach(function(item){
 			var split = item.split('.');
 			var upgrade = getUpgrade(split[0], split[1]);
 			if(upgrade == null){
@@ -804,15 +818,13 @@ function addSettlementModeSlots(characterElement, character, equipmentSection){
 		characterTags = characterElement.tags;
 	}
 
-	//TODO: Filter items based on tags
-
 	wear_slots.forEach(function(slotType) {
-		var wearSection = getWearSection(character, [], slotType, characterTags);
+		var wearSection = getWearSection(character, false, slotType, characterTags);
 			equipmentSection.appendChild(wearSection);
 	});
 
 	carry_slots.forEach(function(slotType) {
-		var wearSection = getCarrySection(character, [], slotType, characterTags);
+		var wearSection = getCarrySection(character, false, slotType, characterTags);
 			equipmentSection.appendChild(wearSection);
 	});
 
@@ -821,7 +833,7 @@ function addSettlementModeSlots(characterElement, character, equipmentSection){
 			addUnitUpgradesHeader(equipmentSection);
 			firstConsumableSection = false;
 		}
-		var consumeableSection = getConsumeableSection(character, [], slotType. characterTags);
+		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, false);
 		equipmentSection.appendChild(consumeableSection);
 	});
 }
@@ -833,26 +845,24 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 		characterTags = characterElement.tags;
 	}
 
-	//TODO: FILTER OUT OPTIONS BASED ON BATTLE MODE SLOTS & TAGS
-
 	wear_slots.forEach(function (slotType) {
-		var wearSection = getWearSection(character, [], slotType, characterTags);
+		var wearSection = getWearSection(character, true, slotType, characterTags);
 		equipmentSection.appendChild(wearSection);
 	});
 
 	carry_slots.forEach(function (slotType) {
-		var carrySection = getCarrySection(character, [], slotType, characterTags);
+		var carrySection = getCarrySection(character, true, slotType, characterTags);
 		equipmentSection.appendChild(carrySection);
 	});
 
 	addUnitUpgradesHeader(equipmentSection);
 
 	consumable_slots.forEach(function (slotType) {
-		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags);
+		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
 		equipmentSection.appendChild(consumeableSection);
 	});
 
-	var chemsSection = getConsumeableSection(character, characterElement, "chems", characterTags);
+	var chemsSection = getConsumeableSection(character, characterElement, "chems", characterTags, true);
 	equipmentSection.appendChild(chemsSection);
 }
 
@@ -862,7 +872,7 @@ function addUnitUpgradesHeader(equipmentSection){
 	equipmentSection.appendChild(unitUpgradesHeader);
 }
 
-function getConsumeableSection(character, characterElement, slotType, characterTags){
+function getConsumeableSection(character, characterElement, slotType, characterTags, isBattleMode){
 	var consumeableSection = document.createElement("div");
 	consumeableSection.setAttribute("class", "carry-section");
 	var consumeableHeader = document.createElement("h2");
@@ -883,9 +893,9 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 
 	var optionSection = document.createElement("div"); 
 
-	console.log(slotType);		
+	//console.log(slotType);
 	upgrades[slotType].forEach(function(optionElement){
-		if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
+		if(optionElement.cost != 0 && canEquip(optionElement, characterTags) && (!isBattleMode || inBattleModeKit(optionElement, character, slotType))){
 			if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
 				optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown));
 			}else{
@@ -958,7 +968,39 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 	return entrySection;
 }
 
-function canEquip(optionElement, characterTags){
+function inBattleModeKit(optionElement, character, slotType) {
+
+	var characterElement = getCharacterById(character.name);
+
+	if(!characterElement.hasOwnProperty("battle_mode_packs") ){
+		console.log(character.name + " has no battle mode packs assigned");
+		return false;
+	}
+
+	if(optionElement.name.includes("power_armor") && !characterElement.battle_mode_packs.includes("power_armor")){
+		return false;
+	}
+
+	//console.log(slotType + " " + optionElement);
+
+	var searchName = slotType + "." + optionElement.name;
+
+	//console.log("search " + searchName);
+
+	var foundItem = false;
+
+	characterElement.battle_mode_packs.forEach(function(pack){
+		if(foundItem){
+			return;
+		}
+		if(upgrades.battle_mode_packs[pack].includes(searchName)){
+			foundItem = true;
+		}
+	});
+	return foundItem;
+}
+
+function canEquip(optionElement, characterTags) {
 	var allowed = true;
 
 	if(characterTags.includes("dog")){
@@ -1011,7 +1053,7 @@ function canEquip(optionElement, characterTags){
 	return allowed;
 }
 
-function getWearSection(character, slotOption, slotType, characterTags){
+function getWearSection(character, isBattleMode, slotType, characterTags){
 	var wearSection = document.createElement("div");
 	wearSection.setAttribute("class", "carry-section");
 
@@ -1031,7 +1073,8 @@ function getWearSection(character, slotOption, slotType, characterTags){
 	var modSection = getModSectionFor(character, slotType, null);
 
 	upgrades[slotType].forEach(function(optionElement){
-		if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
+
+		if(optionElement.cost != 0 && canEquip(optionElement, characterTags) && (!isBattleMode || inBattleModeKit(optionElement, character, slotType))){
 			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 			slotDropdown.add(option);
 			optionIndex++;
@@ -1067,7 +1110,7 @@ function getWearSection(character, slotOption, slotType, characterTags){
 	return wearSection;
 }
 
-function getCarrySection(character, slotOptions, slotType, characterTags){
+function getCarrySection(character, isBattleMode, slotType, characterTags){
 	var carrySection = document.createElement("div");
 	carrySection.setAttribute("class", "carry-section");
 	var carryHeader = document.createElement("h2");
@@ -1087,7 +1130,7 @@ function getCarrySection(character, slotOptions, slotType, characterTags){
 	equippedItems.setAttribute("class","equippedItems");
 
 	upgrades[slotType].forEach(function(option){
-		if(option.cost != 0 && canEquip(option, characterTags)){
+		if(option.cost != 0 && canEquip(option, characterTags) && (!isBattleMode || inBattleModeKit(option, character, slotType))){
 			var isEquipped = false;
 			if(character.hasOwnProperty(slotType)){
 				isEquipped = character[slotType].includes(option.name);
@@ -1340,6 +1383,8 @@ function getChemsSection(character){
 	});
 
 	var hasFirstChem = false;
+
+	//TODO: NEW FILTERED UPDATE
 
 	if(character.hasOwnProperty("chems")){
 		Object.getOwnPropertyNames(character.chems).forEach(function(chem){
