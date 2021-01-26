@@ -585,7 +585,7 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(headerRightSection, character);
 
-	if(characterElement.heroic){
+	if(characterElement.battle_mode_packs.includes("upgrades")){
 		var heroicSection = document.createElement("div");
 		heroicSection.setAttribute("class", "heroic");
 		var heroicCheckBox = document.createElement('input');
@@ -593,7 +593,7 @@ function addCharacter(characterElement, presetInfo){
 		heroicCheckBox.checked = character.heroic;
 		var heroicDescription = document.createElement("span");
 		heroicDescription.setAttribute("class", "heroicDescription");
-		heroicDescription.appendChild(document.createTextNode(loc["heroic"] + " (" + upgrades.heroes_and_leaders[0].cost +")"));
+		heroicDescription.appendChild(document.createTextNode(loc["heroic"] + " (" + upgrades.heroic[1].cost +")"));
 		heroicSection.appendChild(heroicDescription);
 		heroicSection.appendChild(heroicCheckBox);
 		heroicCheckBox.addEventListener("click", function(){
@@ -604,7 +604,7 @@ function addCharacter(characterElement, presetInfo){
 			}
 			updateCaps();
 		});
-		addPreviewTooltip(upgrades.heroes_and_leaders[0], heroicSection);
+		addPreviewTooltip(upgrades.heroic[1], heroicSection);
 		headerRightSection.appendChild(heroicSection);
 	}
 
@@ -804,58 +804,26 @@ function addSettlementModeSlots(characterElement, character, equipmentSection){
 		characterTags = characterElement.tags;
 	}
 
-	characterElement.settlment_mode_slots.forEach(function(slotType){
-		if(wear_slots.includes(slotType)){
-			var wearSection = getWearSection(character, [], slotType, characterTags);
+	//TODO: Filter items based on tags
+
+	wear_slots.forEach(function(slotType) {
+		var wearSection = getWearSection(character, [], slotType, characterTags);
 			equipmentSection.appendChild(wearSection);
-		}
-		if(carry_slots.includes(slotType)){
-			var carrySection = getCarrySection(character, [], slotType);
-			equipmentSection.appendChild(carrySection);
-		}
-		if(consumable_slots.includes(slotType)){
-			if(firstConsumableSection){
-				addUnitUpgradesHeader(equipmentSection);
-				firstConsumableSection = false;
-			}
-			var consumeableSection = getConsumeableSection(character, [], slotType);
-			equipmentSection.appendChild(consumeableSection);	
-		}
-	})
-}
+	});
 
-function filterIllegalWearables(character, slotType, slotOptions){
-	if(character.hasOwnProperty(slotType)){
-		if(!slotOptions.includes(character[slotType])){
-			delete(character[slotType]);
-		}
-	}
-}
+	carry_slots.forEach(function(slotType) {
+		var wearSection = getCarrySection(character, [], slotType, characterTags);
+			equipmentSection.appendChild(wearSection);
+	});
 
-function filterIllegalEquipment(character, slotType, slotOptions){
-	if(character.hasOwnProperty(slotType)){
-		var filtered = character[slotType].filter(function(option){
-			return slotOptions.includes(option);
-		});
-		if(filtered.length > 0){
-			character[slotType] = filtered;
-		}else{
-			delete(character[slotType]);
+	consumable_slots.forEach(function(slotType) {
+		if(firstConsumableSection){
+			addUnitUpgradesHeader(equipmentSection);
+			firstConsumableSection = false;
 		}
-	}
-}
-
-function filterIllegalConsumables(character, slotType, slotOptions){
-	if(character.hasOwnProperty(slotType)){
-		Object.keys(character[slotType]).forEach(function(option){
-			if(!slotOptions.includes(option)){
-				delete(character[slotType][option]);
-			}
-		});
-		if(Object.keys(character[slotType]).length <= 0) {
-			delete(character[slotType]);
-		}
-	}
+		var consumeableSection = getConsumeableSection(character, [], slotType. characterTags);
+		equipmentSection.appendChild(consumeableSection);
+	});
 }
 
 function addBattleModeSlots(characterElement, character, equipmentSection){
@@ -865,57 +833,26 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 		characterTags = characterElement.tags;
 	}
 
-	wear_slots.forEach(function(slotType){
-		var slotOptions = [];
-		if(characterElement.hasOwnProperty("wear_slots")
-			&& characterElement.wear_slots.hasOwnProperty(slotType)){
-			slotOptions = characterElement.wear_slots[slotType];
-		}
-		filterIllegalWearables(character, slotType, slotOptions);
+	//TODO: FILTER OUT OPTIONS BASED ON BATTLE MODE SLOTS & TAGS
+
+	wear_slots.forEach(function (slotType) {
+		var wearSection = getWearSection(character, [], slotType, characterTags);
+		equipmentSection.appendChild(wearSection);
 	});
 
-	carry_slots.forEach(function(slotType){
-		var slotOptions = [];
-		if(characterElement.hasOwnProperty("carry_slots")
-			&& characterElement.carry_slots.hasOwnProperty(slotType)){
-			slotOptions = characterElement.carry_slots[slotType];
-		}
-		filterIllegalEquipment(character, slotType, slotOptions);
+	carry_slots.forEach(function (slotType) {
+		var carrySection = getCarrySection(character, [], slotType, characterTags);
+		equipmentSection.appendChild(carrySection);
 	});
-
-	consumable_slots.forEach(function(slotType){
-		var slotOptions = [];
-		if(characterElement.hasOwnProperty("consumables")
-		&& 	characterElement.consumables.hasOwnProperty(slotType)){
-			slotOptions = characterElement.consumables[slotType];
-		}
-		filterIllegalConsumables(character, slotType, slotOptions);
-	});
-
-	if(characterElement.wear_slots != null){
-		Object.keys(characterElement.wear_slots).forEach(function (slotType) {
-			var wearSection = getWearSection(character, characterElement.wear_slots[slotType], slotType, characterTags);
-			equipmentSection.appendChild(wearSection);
-		});
-	}
-
-	if(characterElement.carry_slots != null){
-		Object.keys(characterElement.carry_slots).forEach(function (slotType) {
-			var carrySection = getCarrySection(character, characterElement.carry_slots[slotType], slotType);
-			equipmentSection.appendChild(carrySection);
-		});
-	}
 
 	addUnitUpgradesHeader(equipmentSection);
 
-	if(characterElement.consumables != null){
-		Object.keys(characterElement.consumables).forEach(function (slotType) {
-			var consumeableSection = getConsumeableSection(character, characterElement, slotType);
-			equipmentSection.appendChild(consumeableSection);
-		});
-	}
+	consumable_slots.forEach(function (slotType) {
+		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags);
+		equipmentSection.appendChild(consumeableSection);
+	});
 
-	var chemsSection = getConsumeableSection(character, characterElement, "chems");
+	var chemsSection = getConsumeableSection(character, characterElement, "chems", characterTags);
 	equipmentSection.appendChild(chemsSection);
 }
 
@@ -925,7 +862,7 @@ function addUnitUpgradesHeader(equipmentSection){
 	equipmentSection.appendChild(unitUpgradesHeader);
 }
 
-function getConsumeableSection(character, characterElement, slotType){
+function getConsumeableSection(character, characterElement, slotType, characterTags){
 	var consumeableSection = document.createElement("div");
 	consumeableSection.setAttribute("class", "carry-section");
 	var consumeableHeader = document.createElement("h2");
@@ -946,27 +883,16 @@ function getConsumeableSection(character, characterElement, slotType){
 
 	var optionSection = document.createElement("div"); 
 
-	if(slotOption == null || slotOption.length <= 0){
-		upgrades[slotType].forEach(function(optionElement){
-			if(optionElement.cost != 0){
-				if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
-					optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown));
-				}else{
-					slotDropdown.add(new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name));
-				}
-			}
-		});
-	}else{
-		slotOption.forEach(function(option) {
-			var optionElement = getUpgrade(slotType, option);
+	console.log(slotType);		
+	upgrades[slotType].forEach(function(optionElement){
+		if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
 			if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
-				var newItemEntry = getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown);
-				optionSection.appendChild(newItemEntry);
+				optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown));
 			}else{
 				slotDropdown.add(new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name));
 			}
-		});
-	}
+		}
+	});
 
 	slotDropdown.onchange = function(){
 		if(slotDropdown.value != null && slotDropdown.value != "null"){
@@ -1034,6 +960,28 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 
 function canEquip(optionElement, characterTags){
 	var allowed = true;
+
+	if(characterTags.includes("dog")){
+		if(!optionElement.hasOwnProperty("restrictions")
+			|| !optionElement.restrictions.includes("dog")){
+			return false;
+		}
+	}
+
+	if(characterTags.includes("creature")){
+		if(!optionElement.hasOwnProperty("restrictions")
+			|| !optionElement.restrictions.includes("creature")){
+			return false;
+		}
+	}
+
+	if(characterTags.includes("robot")){
+		if(!optionElement.hasOwnProperty("restrictions")
+			|| !optionElement.restrictions.includes("robot")){
+			return false;
+		}
+	}
+
 	if(optionElement.hasOwnProperty("restrictions")){
 		optionElement.restrictions.forEach(function(restriction){
 			var tag = restriction;
@@ -1082,30 +1030,16 @@ function getWearSection(character, slotOption, slotType, characterTags){
 
 	var modSection = getModSectionFor(character, slotType, null);
 
-	if(slotOption.length <= 0){
-		upgrades[slotType].forEach(function(optionElement){
-
-			if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
-				var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
-				slotDropdown.add(option);
-				optionIndex++;
-				if(character[slotType] == optionElement.name){
-					optionSelectedIndex = optionIndex;
-				}
-			}
-		});
-	}else{
-		slotOption.forEach(function(option) {
-			var optionElement = getUpgrade(slotType, option);
-
+	upgrades[slotType].forEach(function(optionElement){
+		if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
 			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 			slotDropdown.add(option);
 			optionIndex++;
 			if(character[slotType] == optionElement.name){
 				optionSelectedIndex = optionIndex;
 			}
-		});
-	}
+		}
+	});
 
 	slotDropdown.selectedIndex = optionSelectedIndex;
 	modSection.style.display = optionSelectedIndex == 0 ? "none" : "inline-block";
@@ -1133,7 +1067,7 @@ function getWearSection(character, slotOption, slotType, characterTags){
 	return wearSection;
 }
 
-function getCarrySection(character, slotOptions, slotType){
+function getCarrySection(character, slotOptions, slotType, characterTags){
 	var carrySection = document.createElement("div");
 	carrySection.setAttribute("class", "carry-section");
 	var carryHeader = document.createElement("h2");
@@ -1152,38 +1086,22 @@ function getCarrySection(character, slotOptions, slotType){
 	var equippedItems = document.createElement("div");
 	equippedItems.setAttribute("class","equippedItems");
 
-	if(slotOptions.length <= 0){
-		upgrades[slotType].forEach(function(option){
-			if(option.cost != 0){
-				var isEquipped = false;
-				if(character.hasOwnProperty(slotType)){
-					isEquipped = character[slotType].includes(option.name);
-				}
-				if(isEquipped){
-					var entrySection = addEquipEntry(character, slotType, option, equippedItems, slotDropdown);
-					equippedItems.appendChild(entrySection);
-				}else{
-					var optionElement = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
-					slotDropdown.add(optionElement);
-				}
-			}
-		});
-	}else{
-		slotOptions.forEach(function(option) {
-			var optionElement = getUpgrade(slotType, option);
+	upgrades[slotType].forEach(function(option){
+		if(option.cost != 0 && canEquip(option, characterTags)){
 			var isEquipped = false;
 			if(character.hasOwnProperty(slotType)){
-				isEquipped = character[slotType].includes(optionElement.name);
+				isEquipped = character[slotType].includes(option.name);
 			}
 			if(isEquipped){
-					var entrySection = addEquipEntry(character, slotType, optionElement, equippedItems, slotDropdown);
-					equippedItems.appendChild(entrySection);
-				}else{
-					var optionEntry = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
-					slotDropdown.add(optionEntry);
-				}
-		});
-	}
+				var entrySection = addEquipEntry(character, slotType, option, equippedItems, slotDropdown);
+				equippedItems.appendChild(entrySection);
+			}else{
+				var optionElement = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
+				slotDropdown.add(optionElement);
+			}
+		}
+	});
+
 	carrySection.appendChild(equippedItems);
 
 	carrySection.appendChild(slotDropdown);
@@ -1602,8 +1520,8 @@ function addLeaderSection(domElement, character){
 	var emptyOption = new Option(loc["none"], null);
 	perkDropdown.add(emptyOption);
 
-	for(var index = 1; index < upgrades.heroes_and_leaders.length; index++) {
-		var optionElement = upgrades.heroes_and_leaders[index];
+	for(var index = 1; index < upgrades.heroic.length; index++) {
+		var optionElement = upgrades.heroic[index];
 		var characterTags = [];
 		if(getCharacterById(character.name).hasOwnProperty("tags")){
 			characterTags = getCharacterById(character.name).tags;
@@ -1698,7 +1616,7 @@ function updateCaps(){
 		var leaderCharacter = getCharacterById(force.characters[force.leader.leaderIndex].name);
 		filtered_factions.push(leaderCharacter.factions[0]);
 		faction = leaderCharacter.factions[0];
-		var leaderPerk = upgrades.heroes_and_leaders[force.leader.perkIndex];
+		var leaderPerk = upgrades.leader[force.leader.perkIndex];
 		if(leaderPerk.name == "creature_controller"){
 			filtered_factions.push("crt");
 		}
@@ -1729,17 +1647,12 @@ function updateCaps(){
 			var unitUpgradeCost = 0;
 
 			if(force.hasOwnProperty("leader") && force.leader.leaderIndex == unitIndex){
-				var leaderCost = upgrades.heroes_and_leaders[force.leader.perkIndex].cost;
+				var leaderCost = upgrades.leader[force.leader.perkIndex].cost;
 				if(force.leader.perkIndex == 0){
 					leaderCost = 0;
 				}
 				unitCost += leaderCost;
 				unitUpgradeCost += leaderCost;
-			}
-	
-			if(character.heroic){
-				unitCost += upgrades.heroes_and_leaders[0].cost; //Heroic is the first entry
-				modelUpdadeCost += upgrades.heroes_and_leaders[0].cost;
 			}
 
 			if(character.hasOwnProperty("perks")){
@@ -1773,7 +1686,7 @@ function updateCaps(){
 			});
 	
 			carry_slots.forEach(function (slotType) {
-				if(character[slotType] != null){
+				if(character.hasOwnProperty(slotType)){
 					character[slotType].forEach(function(item){
 						var carryCost = getUpgrade(slotType,item).cost;
 						unitCost += carryCost * modelCount;

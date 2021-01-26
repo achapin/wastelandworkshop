@@ -1705,6 +1705,7 @@
     },
     {
       "name": "suicider_mini_nuke",
+      "restrictions":["suicider"],
       "cost": 30,
       "preview": "suicidermininuke"
     },
@@ -1879,45 +1880,54 @@
     },
     {
       "name": "enclave_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 44,
       "preview": "enclavepowerarmor"
     },
     {
       "name": "hellfire_armor",
+      "restrictions":["!super_mutant"],
       "cost": 52,
       "preview": "hellfirearmor"
     },
     {
       "name": "power_armor_frame",
+      "restrictions":["!super_mutant"],
       "cost": 15,
       "preview": "powerarmorframe"
     },
     {
       "name": "raider_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 33,
       "preview": "raiderpowerarmor"
     },
     {
       "name": "t45_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 38,
       "preview": "t45"
     },
     {
       "name": "t51_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 54,
       "preview": "t51"
     },
     {
       "name": "t60_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 70,
       "preview": "t60"
     },
     {
       "name": "t60f_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 95
     },
     {
       "name": "x01_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 82,
       "preview": "x01"
     }
@@ -2276,7 +2286,8 @@
   "heroic": [
     {
       "name": "clunky",
-      "cost": 0.8
+      "cost": 0.8,
+      "restrictions":["robot"]
     },
     {
       "name": "heroic",
@@ -2289,7 +2300,8 @@
     },
     {
       "name": "wild",
-      "cost": 0.8
+      "cost": 0.8,
+      "restrictions":["creature"]
     }
   ],
   "leader": [
