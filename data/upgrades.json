@@ -182,7 +182,7 @@
   "high_tech_items" : [
       "armor.enclave_power_armor",
       "armor.heavy_synth_armor",
-      "armor.hellfire_armor",
+      "armor.hellfire_power_armor",
       "armor.t45_power_armor",
       "armor.t51_power_armor",
       "armor.t60_power_armor",
@@ -1854,7 +1854,7 @@
       "preview": "enclavepowerarmor"
     },
     {
-      "name": "hellfire_armor",
+      "name": "hellfire_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 52,
       "preview": "hellfirearmor"
