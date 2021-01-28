@@ -718,7 +718,8 @@
   "heavy_weapons": [
     {
       "name": "broadsider",
-      "cost": 31
+      "cost": 31,
+      "preview": "broadsider"
     },
     {
       "name": "fat_man",
@@ -830,8 +831,7 @@
     },
     {
       "name":"crippling_bolt_action_pipe_rifle",
-      "cost": 16
-      ,
+      "cost": 16,
       "preview": "cripplingboltactionpiperifle"
     },
     {
@@ -875,7 +875,8 @@
     },
     {
       "name": "hunters_hunting_rifle",
-      "cost": 22
+      "cost": 22,
+      "preview":"huntershuntingrifle"
     },
     {
       "name": "hunters_laser_musket",
@@ -981,7 +982,8 @@
     },
     {
       "name":"robobrain_laser",
-      "cost": 7
+      "cost": 7,
+      "preview":"robobrainlaser"
     },
     {
       "name": "sawed_off_shotgun",
@@ -1015,7 +1017,8 @@
     },
     {
       "name": "tesla_rifle",
-      "cost": 20
+      "cost": 20,
+      "preview":"teslarifle"
     },
     {
       "name": "trail_carbine",
@@ -1100,19 +1103,23 @@
     },
     {
       "name":"hand_cryojet",
-      "cost": 10
+      "cost": 10,
+      "preview":"handcryojet"
     },
     {
       "name":"hand_gamma_gun",
-      "cost": 15
+      "cost": 15,
+      "preview":"handgammagun"
     },
     {
       "name":"hand_lightning_gun",
-      "cost": 4
+      "cost": 4,
+      "preview":"handlightninggun"
     },
     {
       "name":"hand_nail_gun",
-      "cost": 7
+      "cost": 7,
+      "preview":"handnailgun"
     },
     {
       "name":"hunters_10mm_pistol",
@@ -1125,7 +1132,8 @@
     },
     {
       "name": "indys_freezing_44",
-      "cost": 9
+      "cost": 9,
+      "preview":"indysfreezing44"
     },
     {
       "name": "institute_laser_pistol",
@@ -1193,7 +1201,8 @@
     },
     {
       "name": "protectrons_gaze",
-      "cost": 7
+      "cost": 7,
+      "preview":"protectronsgaze"
     },
     {
       "name": "protectron_hand_laser",
@@ -1210,7 +1219,8 @@
     },
     {
       "name":"robobrain_mesmetron",
-      "cost": 15
+      "cost": 15,
+      "preview":"robobrainmesmetron"
     },
     {
       "name":"staggering_institute_laser_pistol",
@@ -1219,7 +1229,8 @@
     },
     {
       "name":"staggering_pipe_pistol",
-      "cost": 3
+      "cost": 3,
+      "preview":"staggeringpipepistol"
     },
     {
       "name": "thirst_zapper_cola",
@@ -1240,7 +1251,8 @@
     },
     {
       "name": "assaultron_blade",
-      "cost": 3
+      "cost": 3,
+      "preview":"assaultronblade"
     },
     {
       "name": "ballistic_fist",
@@ -1301,11 +1313,13 @@
     },
     {
       "name": "deathclaw_head_butt",
-      "cost": 0
+      "cost": 0,
+      "preview":"deathclawheadbutt"
     },
     {
       "name": "deathclaw_roar",
-      "cost": 0
+      "cost": 0,
+      "preview":"deathclawroar"
     },
     {
       "name": "deathclaw_swipe",
@@ -1314,11 +1328,13 @@
     },
     {
       "name": "deathclaw_tail_sweep",
-      "cost": 0
+      "cost": 0,
+      "preview":"deathclawtailsweep"
     },
     {
       "name": "deathclaw_trample",
-      "cost": 0
+      "cost": 0,
+      "preview":"deathclawtrample"
     },
     {
       "name": "dog_bite",
@@ -1365,19 +1381,23 @@
     },
     {
       "name": "glowing_radroach_swarm_bite",
-      "cost": 0
+      "cost": 0,
+      "preview":"glowingradroachswarmbite"
     },
     {
       "name": "hand_saw_blade",
-      "cost": 6
+      "cost": 6,
+      "preview":"handsawblade"
     },
     {
       "name": "hand_shock",
-      "cost": 25
+      "cost": 25,
+      "preview":"handshock"
     },
     {
       "name": "hand_vice_grip",
-      "cost": 3
+      "cost": 3,
+      "preview":"handvicegrip"
     },
     {
       "name": "horrigans_knife",
@@ -1434,7 +1454,8 @@
     },
     {
       "name": "matriarch_swipe",
-      "cost": 0
+      "cost": 0,
+      "preview":"matriarchswipe"
     },
     {
       "name": "mirelurk_claw",
@@ -1513,10 +1534,6 @@
       "name": "radroach_swarm_bite",
       "cost": 0,
       "preview": "radroachbite"
-    },
-    {
-      "name": "radroach_pincers_sting",
-      "cost": 0
     },
     {
       "name": "rebar_club",
@@ -1601,7 +1618,8 @@
     },
     {
       "name": "wounding_machete",
-      "cost": 3
+      "cost": 3,
+      "preview":"woundingmachete"
     },
     {
       "name": "young_deathclaw_crush",
@@ -1689,7 +1707,8 @@
     },
     {
       "name":"weak_behemoth_rock_throw",
-      "cost": 0
+      "cost": 0,
+      "preview":"weakbehemothrockthrow"
     }
   ],
   "mines": [
@@ -1759,7 +1778,9 @@
     },
     {
       "name": "corrugated_plates",
-      "cost": 7
+      "cost": 7,
+      "restrictions":["creature"],
+      "preview":"corrugatedplates"
     },
     {
       "name": "damaged_hazmat_suit",
@@ -1822,11 +1843,14 @@
     },
     {
       "name": "rocks_bladed_helm",
-      "cost": 18
+      "cost": 18,
+      "preview":"rocksbladedhelm"
     },
     {
       "name": "spiked_harness",
-      "cost": 10
+      "cost": 10,
+      "restrictions":["creature"],
+      "preview":"spikedharness"
     },
     {
       "name": "sturdy_combat_armor",
@@ -1845,7 +1869,9 @@
     },
     {
       "name": "tesla_coil_harness",
-      "cost": 7
+      "cost": 7,
+      "restrictions":["creature"],
+      "preview":"teslacoilharness"
     },
     {
       "name": "enclave_power_armor",
@@ -1966,7 +1992,8 @@
     },
     {
       "name": "enclave_officers_hat",
-      "cost": 5
+      "cost": 5,
+      "preview":"enclaveofficershat"
     },
     {
       "name": "eyeglasses",
@@ -1990,7 +2017,9 @@
     },
     {
       "name": "limb_braces",
-      "cost": 12
+      "cost": 12,
+      "restrictions":["creature"],
+      "preview":"limbbraces"
     },
     {
       "name": "magnifying_visor",
@@ -2004,7 +2033,9 @@
     },
     {
       "name": "mirelurk_carapace",
-      "cost": 23
+      "cost": 23,
+      "restrictions":["!creature"],
+      "preview":"mirelurkcarapace"
     },
     {
       "name": "ncr_engineer_jumpsuit",
@@ -2256,7 +2287,8 @@
     {
       "name": "clunky",
       "cost": 0.8,
-      "restrictions":["robot"]
+      "restrictions":["robot"],
+      "preview":"clunky"
     },
     {
       "name": "heroic",
@@ -2270,7 +2302,8 @@
     {
       "name": "wild",
       "cost": 0.8,
-      "restrictions":["creature"]
+      "restrictions":["creature"],
+      "preview":"wild"
     }
   ],
   "leader": [
@@ -2373,7 +2406,8 @@
     },
     {
       "name": "skipper",
-      "cost": 15
+      "cost": 15,
+      "preview":"skipper"
     },
     {
       "name": "stalker",
@@ -2438,15 +2472,18 @@
     },
     {
       "name":"animal_friend",
-      "cost":8
+      "cost":8,
+      "preview":"animalfriend1"
     },
     {
       "name":"animal_friend_2",
-      "cost":6
+      "cost":6,
+      "preview":"animalfriend2"
     },
     {
       "name":"animal_friend_3",
-      "cost":4
+      "cost":4,
+      "preview":"animalfriend3"
     },
     {
       "name": "armorer",
@@ -2500,55 +2537,68 @@
     },
     {
       "name":"command_act",
-      "cost":13
+      "cost":13,
+      "preview":"commandact"
     },
     {
       "name":"command_pack_assault",
-      "cost":6
+      "cost":6,
+      "preview":"commandpackassault"
     },
     {
       "name":"command_attack",
-      "cost":8
+      "cost":8,
+      "preview":"commandattack"
     },
     {
       "name":"command_pack_attack",
-      "cost":5
+      "cost":5,
+      "preview":"commandpackattack"
     },
     {
       "name":"command_counter",
-      "cost":4
+      "cost":4,
+      "preview":"commandcounter"
     },
     {
       "name":"command_find",
-      "cost":8
+      "cost":8,
+      "preview":"commandfind"
     },
     {
       "name":"command_guided_strike",
-      "cost":8
+      "cost":8,
+      "preview":"commandguidedstrike"
     },
     {
       "name":"command_heel",
-      "cost":8
+      "cost":8,
+      "preview":"commandheel"
     },
     {
       "name":"command_impetuous",
-      "cost":7
+      "cost":7,
+      "preview":"commandimpetuous"
     },
     {
       "name":"command_protect",
-      "cost":4
+      "cost":4,
+      "preview":"commandprotect"
     },
     {
       "name":"command_scatter",
-      "cost":9
+      "cost":9,
+      "preview":"commandscatter"
     },
     {
       "name":"command_speed",
-      "cost":8
+      "cost":8,
+      "preview":"commandspeed"
     },
     {
       "name":"command_take_it",
-      "cost":6
+      "cost":6,
+      "preview":"commandtakeit"
     },
     {
       "name": "concentrated_fire",
@@ -2561,7 +2611,8 @@
     },
     {
       "name":"creature_trainer",
-      "cost":4
+      "cost":4,
+      "preview":"creaturetrainer"
     },
     {
       "name": "demolition_expert",
@@ -2684,7 +2735,8 @@
     },
     {
       "name": "mend_robot",
-      "cost": 8
+      "cost": 8,
+      "preview":"mendrobot"
     },
     {
       "name": "moving_target",
@@ -2738,51 +2790,63 @@
     },
     {
       "name":"program_act",
-      "cost": 13
+      "cost": 13,
+      "preview":"programact"
     },
     {
       "name":"program_aggressive",
-      "cost": 5
+      "cost": 5,
+      "preview":"programaggressive"
     },
     {
       "name":"program_attack",
-      "cost": 8
+      "cost": 8,
+      "preview":"programattack"
     },
     {
       "name":"program_coordinated",
-      "cost": 4
+      "cost": 4,
+      "preview":"programcoordinated"
     },
     {
       "name":"program_hack",
-      "cost": 8
+      "cost": 8,
+      "preview":"programhack"
     },
     {
       "name":"program_intercept",
-      "cost": 4
+      "cost": 4,
+      "preview":"programintercept"
     },
     {
       "name":"program_pick",
-      "cost": 8
+      "cost": 8,
+      "preview":"programpick"
     },
     {
       "name":"program_return",
-      "cost": 8
+      "cost": 8,
+      "preview":"programreturn"
     },
     {
       "name":"program_speed",
-      "cost": 8
+      "cost": 8,
+      "preview":"programspeed"
     },
     {
       "name":"program_spread",
-      "cost": 9
+      "cost": 9,
+      "preview":"programspread"
     },
     {
       "name":"program_synchronized",
-      "cost": 7
+      "cost": 7,
+      "preview":"programsynchronized"
     },
     {
       "name":"program_volley",
-      "cost": 7
+      "cost": 7,
+      "preview":"programvolley"
     },
     {
       "name":"pyromaniac",
@@ -2811,7 +2875,8 @@
     },
     {
       "name":"robotics_expert",
-      "cost": 4
+      "cost": 4,
+      "preview":"roboticsexpert"
     },
     {
       "name":"shotgun_surgeon",
@@ -2930,91 +2995,135 @@
     },
     {
       "name": "conditioning_active",
-      "cost": 8
+      "cost": 8,
+      "types":["creature"],
+      "preview":"conditioning"
     },  
     {
       "name": "conditioning_adrenaline",
-      "cost": 3
+      "cost": 3,
+      "types":["creature"],
+      "preview":"conditioningadrenaline"
     },
     {
       "name": "conditioning_ankle_biter",
-      "cost": 8
+      "cost": 8,
+      "types":["creature"],
+      "preview":"conditioninganklebiter"
     },
     {
       "name": "conditioning_arm_breaker",
-      "cost": 10
+      "cost": 10,
+      "types":["creature"],
+      "preview":"conditioningarmbreaker"
     },
     {
       "name": "conditioning_champion",
-      "cost": 10
+      "cost": 10,
+      "types":["creature"],
+      "preview":"conditioningchampion"
     },
     {
       "name": "conditioning_chancer",
-      "cost": 12
+      "cost": 12,
+      "types":["creature"],
+      "preview":"conditioningchancer"
     },
     {
       "name": "conditioning_chief",
-      "cost": 15
+      "cost": 15,
+      "types":["creature"],
+      "preview":"conditioningchief"
     },
     {
       "name": "conditioning_crafty",
-      "cost": 8
+      "cost": 8,
+      "types":["creature"],
+      "preview":"conditioningcrafty"
     },
     {
       "name": "conditioning_dash",
-      "cost": 9
+      "cost": 9,
+      "types":["creature"],
+      "preview":"conditioningdash"
     },
     {
       "name": "conditioning_fast",
-      "cost": 5
+      "cost": 5,
+      "types":["creature"],
+      "preview":"conditioningfast"
     },
     {
       "name": "conditioning_ferocious",
-      "cost": 3
+      "cost": 3,
+      "types":["creature"],
+      "preview":"conditioningferocious"
     },
     {
       "name": "conditioning_haymaker",
-      "cost": 12
+      "cost": 12,
+      "types":["creature"],
+      "preview":"conditioninghaymaker"
     },
     {
       "name": "conditioning_hit_and_run",
-      "cost": 6
+      "cost": 6,
+      "types":["creature"],
+      "preview":"conditioninghitandrun"
     },
     {
       "name": "conditioning_independent",
-      "cost": 15
+      "cost": 15,
+      "types":["creature"],
+      "preview":"conditioningindependent"
     },
     {
       "name": "conditioning_lean",
-      "cost": 1
+      "cost": 1,
+      "types":["creature"],
+      "preview":"conditioninglean"
     },
     {
       "name": "conditioning_rage",
-      "cost": 9
+      "cost": 9,
+      "types":["creature"],
+      "preview":"conditioningrage"
     },
     {
       "name": "conditioning_savage",
-      "cost": 8
+      "cost": 8,
+      "types":["creature"],
+      "preview":"conditioningsavage"
     },
     {
       "name": "conditioning_sniffer",
-      "cost": 10
+      "cost": 10,
+      "types":["creature"],
+      "preview":"conditioningsniffer"
     },
     {
       "name": "conditioning_stunning",
-      "cost": 12
+      "cost": 12,
+      "types":["creature"],
+      "preview":"conditioningstunning"
     },
     {
       "name": "conditioning_vicious",
-      "cost": 10
+      "cost": 10,
+      "types":["creature"],
+      "preview":"conditioningvicious"
     },
     {
       "name": "conditioning_vigilant",
-      "cost": 5
+      "cost": 5,
+      "types":["creature"],
+      "preview":"conditioningvigilant"
     },
     {
       "name": "conditioning_wily",
-      "cost": 7
+      "cost": 7,
+      "types":["creature"],
+      "preview":"conditioningwily"
     },
     {
       "name": "core_assembly",
@@ -3042,7 +3151,9 @@
     },
     {
       "name": "damage_self_destruct",
-      "cost": 6
+      "cost": 6,
+      "types":["robot"],
+      "preview":"damageselfdestruct"
     },
     {
       "name": "dissipating",
@@ -3076,7 +3187,9 @@
     },
     {
       "name": "hacking_module",
-      "cost": 10
+      "cost": 10,
+      "types":["robot"],
+      "preview":"hackingmodule"
     },
     {
       "name": "hair_trigger",
@@ -3123,7 +3236,8 @@
     {
       "name": "impact_exchanger",
       "cost": 9,
-      "types":[]
+      "types":["power_armor"],
+      "preview":"impactexchanger"
     },
     {
       "name": "improved_flexibility",
@@ -3134,7 +3248,8 @@
     {
       "name": "internal_database",
       "cost": 8,
-      "types":["power_armor"]
+      "types":["power_armor"],
+      "preview":"internaldatabase"
     },
     {
       "name": "jagged",
@@ -3174,7 +3289,9 @@
     },
     {
       "name": "lockpick_module",
-      "cost": 10
+      "cost": 10,
+      "types":["robot"],
+      "preview":"lockpickmodule"
     },
     {
       "name": "long_barrel",
@@ -3184,7 +3301,9 @@
     },
     {
       "name": "magnetic_attachment",
-      "cost": 2
+      "cost": 2,
+      "types":["robot"],
+      "preview":"magneticattachment"
     },
     {
       "name": "medic_pump",
@@ -3210,11 +3329,15 @@
     },
     {
       "name": "noxious_armor",
-      "cost": 14
+      "cost": 14,
+      "types":["robot"],
+      "preview":"noxiousarmor"
     },
     {
       "name": "optimized_servos",
-      "cost": 5
+      "cost": 5,
+      "types":["power_armor"],
+      "preview":"optimizedservos"
     },
     {
       "name": "padded",
@@ -3236,15 +3359,21 @@
     },
     {
       "name": "processor_overcharger",
-      "cost": 9
+      "cost": 9,
+      "types":["robot"],
+      "preview":"processorovercharger"
     },
     {
       "name": "radiation_coils",
-      "cost": 5
+      "cost": 5,
+      "types":["robot"],
+      "preview":"radiationcoils"
     },
     {
       "name": "reactive_plates",
-      "cost": 9
+      "cost": 9,
+      "types":["power_armor"],
+      "preview":"reactiveplates"
     },
     {
       "name": "re-bored",
@@ -3254,7 +3383,9 @@
     },
     {
       "name": "robot_recon_sensors",
-      "cost": 7
+      "cost": 7,
+      "types":["robot"],
+      "preview":"reconsensorsrobot"
     },
     {
       "name": "recoil_compensator",
@@ -3280,11 +3411,15 @@
     },
     {
       "name": "regeneration_field",
-      "cost": 10
+      "cost": 10,
+      "types":["robot"],
+      "preview":"regeneration_field"
     },
     {
       "name": "resistence_field",
-      "cost": 14
+      "cost": 14,
+      "types":["robot"],
+      "preview":"resistencefield"
     },
     {
       "name": "rusty_knuckles",
@@ -3295,11 +3430,14 @@
     {
       "name": "sensor_array_pa",
       "types":["power_armor"],
-      "cost": 12
+      "cost": 12,
+      "preview":"sensorarraypa"
     },
     {
       "name": "sensor_array_robots",
-      "cost": 13
+      "cost": 13,
+      "types":["robot"],
+      "preview":"sensorarrayrobot"
     },
     {
       "name": "serrated_bayonet",
@@ -3309,11 +3447,15 @@
     },
     {
       "name": "serrated_bodywork",
-      "cost": 5
+      "cost": 5,
+      "types":["robot"],
+      "preview":"serratedbodywork"
     },
     {
       "name": "servo_boost",
-      "cost": 5
+      "cost": 5,
+      "types":["robot"],
+      "preview":"servoboost"
     },
     {
       "name": "silenced",
@@ -3329,7 +3471,9 @@
     },
     {
       "name": "stealth_field",
-      "cost": 5
+      "cost": 5,
+      "types":["robot"],
+      "preview":"stealthfield"
     },
     {
       "name": "stun_pack",
@@ -3339,35 +3483,51 @@
     },
     {
       "name":"subroutine_bash",
-      "cost":5
+      "cost":5,
+      "types":["robot"],
+      "preview":"subroutine"
     },
     {
       "name":"subroutine_carnage",
-      "cost":9
+      "cost":9,
+      "types":["robot"],
+      "preview":"subroutinecarnage"
     },
     {
       "name":"subroutine_combat_analysis",
-      "cost":10
+      "cost":10,
+      "types":["robot"],
+      "preview":"subroutinecombatanalysis"
     },
     {
       "name":"subroutine_combative",
-      "cost":10
+      "cost":10,
+      "types":["robot"],
+      "preview":"subroutinecombative"
     },
     {
       "name":"subroutine_emergency",
-      "cost":3
+      "cost":3,
+      "types":["robot"],
+      "preview":"subroutineemergency"
     },
     {
       "name":"subroutine_pause",
-      "cost":7
+      "cost":7,
+      "types":["robot"],
+      "preview":"subroutinepause"
     },
     {
       "name":"subroutine_quick",
-      "cost":5
+      "cost":5,
+      "types":["robot"],
+      "preview":"subroutinequick"
     },
     {
       "name":"subroutine_remote",
-      "cost":15
+      "cost":15,
+      "types":["robot"],
+      "preview":"subroutineremote"
     },
     {
       "name": "superior_materials",
@@ -3383,11 +3543,15 @@
     },
     {
       "name":"terminal_self_destruction",
-      "cost":25
+      "cost":25,
+      "types":["robot"],
+      "preview":"terminalselfdestruction"
     },
     {
       "name":"tesla_bracers",
-      "cost":2
+      "cost":2,
+      "types":["power_armor"],
+      "preview":"teslabracers"
     },
     {
       "name": "tesla_coils",
@@ -3398,7 +3562,8 @@
     {
       "name":"tesla_coils_robots",
       "types":["robots"],
-      "cost":5
+      "cost":5,
+      "preview":"teslacoilsrobots"
     },
     {
       "name": "thicker_plating",
@@ -3431,7 +3596,9 @@
     },
     {
       "name":"welded_plate",
-      "cost":13
+      "cost":13,
+      "types":["robot"],
+      "preview":"weldedplate"
     }
   ],
   "food_and_drink":[
@@ -3645,7 +3812,8 @@
     },
     {
       "name":"deathclaw_control_scrambler",
-      "cost":10
+      "cost":10,
+      "preview":"deathclawcontrolscrambler"
     },
     {
       "name":"domestication_unit",
@@ -3654,7 +3822,8 @@
     },
     {
       "name":"draft_codex",
-      "cost":9
+      "cost":9,
+      "preview":"draftcodex"
     },
     {
       "name":"fire_extinguisher",
@@ -3715,11 +3884,13 @@
     },
     {
       "name":"pheremone_emitter",
-      "cost":8
+      "cost":8,
+      "preview":"pheremoneemitter"
     },
     {
       "name":"pheremone_mask",
-      "cost":12
+      "cost":12,
+      "preview":"pheremonemask"
     },
     {
       "name": "power_armor_patch",
@@ -3733,7 +3904,8 @@
     },
     {
       "name":"robobrain_arms",
-      "cost":5
+      "cost":5,
+      "preview":"robobrainarms"
     },
     {
       "name":"robot_repair_kit",
@@ -3742,11 +3914,8 @@
     },
     {
       "name":"robot_repair_patch",
-      "cost":10
-    },
-    {
-      "name":"robot_patch_kit",
-      "cost":10
+      "cost":10,
+      "preview":"robotrepairpatch"
     },
     {
       "name":"rope",
@@ -3789,7 +3958,8 @@
     },
     {
       "name":"third_arm_clamp",
-      "cost":4
+      "cost":4,
+      "preview":"thirdarmclamp"
     },
     {
       "name":"turret_inhibitors",
@@ -3812,7 +3982,8 @@
     },
     {
       "name":"zapper",
-      "cost":8
+      "cost":8,
+      "preview":"zapper"
     }
   ]
 }

@@ -1918,6 +1918,7 @@
       "mods.conditioning_rage"
     ], 
     "name": "deathclaw_matriarch",
+    "preview":"deathclawmatriarch1",
     "tags": [
       "creature"
     ]
@@ -2124,6 +2125,7 @@
       "melee.rabid_mole_rat_bite"
     ], 
     "name": "rabid_mole_rat",
+    "preview": "rabidmolerat",
     "tags": [
       "creature"
     ]
@@ -2167,6 +2169,7 @@
       "melee.softshell_mirelurk_claw"
     ], 
     "name": "softshell_mirelurk",
+    "preview":"softshellmirelurk",
     "tags": [
       "creature"
     ]
@@ -2211,6 +2214,7 @@
       "thrown.weak_behemoth_rock_throw"
     ], 
     "name": "weak_behemoth",
+    "preview":"weakbehemoth",
     "tags": [
       "super_mutant"
     ]
@@ -2228,6 +2232,7 @@
       "melee.young_fog_crawler_ground_pound"
     ], 
     "name": "young_fog_crawler",
+    "preview":"youngfogcrawler",
     "tags": [
       "creature"
     ]
@@ -2246,6 +2251,7 @@
       "rifles.young_mirelurk_queen_acid"
     ], 
     "name": "young_mirelurk_queen",
+    "preview":"youngmirelurkqueen",
     "tags": [
       "creature"
     ]
@@ -2262,6 +2268,7 @@
       "melee.young_radscorpion_pincers_and_sting"
     ], 
     "name": "young_radscorpion",
+    "preview":"youngradscorpion",
     "tags": [
       "creature"
     ]
@@ -2541,6 +2548,7 @@
       "rbt"
     ], 
     "name": "robobrain",
+    "preview":"robobrain",
     "tags": [
       "robot"
     ]
