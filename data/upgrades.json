@@ -1555,6 +1555,11 @@
       "preview": "shishkebab"
     },
     {
+      "name": "softshell_mirelurk_claw",
+      "cost": 0,
+      "preview": "softshellmirelurkclaw"
+    },
+    {
       "name": "sledgehammer",
       "cost": 12,
       "preview": "sledgehammer"
@@ -3790,7 +3795,8 @@
     },
     {
       "name":"chemical_coating",
-      "cost":10
+      "cost":10,
+      "restrictions":["creature"]
     },
     {
       "name":"climbing_spikes",
@@ -3808,7 +3814,8 @@
     },
     {
       "name":"dead_mans_switch",
-      "cost":8
+      "cost":8,
+      "restrictions":["creature"]
     },
     {
       "name":"deathclaw_control_scrambler",
@@ -3871,6 +3878,7 @@
     {
       "name":"mr_handy_fuel",
       "cost":4,
+      "restrictions":["robot"],
       "preview": "mrhandyfuel"
     },
     {
@@ -3905,11 +3913,13 @@
     {
       "name":"robobrain_arms",
       "cost":5,
+      "restrictions":["robot"],
       "preview":"robobrainarms"
     },
     {
       "name":"robot_repair_kit",
       "cost":18,
+      "restrictions":["robot"],
       "preview": "robotrepairkit"
     },
     {
@@ -3959,6 +3969,7 @@
     {
       "name":"third_arm_clamp",
       "cost":4,
+      "restrictions":["robot"],
       "preview":"thirdarmclamp"
     },
     {

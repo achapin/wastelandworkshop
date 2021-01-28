@@ -748,8 +748,12 @@ function addCharacter(characterElement, presetInfo){
 		equipmentSection.appendChild(mustCarrySection);
 	}
 
-	var perkSection = getPerkSection(character);
-	equipmentSection.appendChild(perkSection);
+	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
+		addModdedCharacterSlots(characterElement, character, equipmentSection, settlementMode);
+	} else {
+		var perkSection = getPerkSection(character);
+		equipmentSection.appendChild(perkSection);
+	}
 
 	if(settlementMode){
 		addSettlementModeSlots(characterElement, character, equipmentSection);
@@ -810,6 +814,13 @@ function addCharacter(characterElement, presetInfo){
 	return charaSection;
 }
 
+function addModdedCharacterSlots(characterElement, character, equipmentSection, isSettlementMode){
+	//TODO: Add Mods for characters
+	equipmentSection.appendChild(document.createTextNode("CHARACTER MODS GO HERE"))
+	//Both Robots and Creatures have exactly 2 slots
+
+}
+
 function addSettlementModeSlots(characterElement, character, equipmentSection){
 	var firstConsumableSection = true;
 
@@ -823,19 +834,28 @@ function addSettlementModeSlots(characterElement, character, equipmentSection){
 			equipmentSection.appendChild(wearSection);
 	});
 
-	carry_slots.forEach(function(slotType) {
-		var wearSection = getCarrySection(character, false, slotType, characterTags);
-			equipmentSection.appendChild(wearSection);
-	});
-
-	consumable_slots.forEach(function(slotType) {
-		if(firstConsumableSection){
-			addUnitUpgradesHeader(equipmentSection);
-			firstConsumableSection = false;
-		}
-		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, false);
+	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature")) && characterElement.hasOwnProperty("must_carry")){
+		//Skip all carry slots, bc this character cannot carry other weapons.
+		//They can't carry other equipment other, besides specific gear
+		var consumeableSection = getConsumeableSection(character, characterElement, "gear", characterTags, false);
 		equipmentSection.appendChild(consumeableSection);
-	});
+	}else{
+		carry_slots.forEach(function(slotType) {
+			var wearSection = getCarrySection(character, false, slotType, characterTags);
+				equipmentSection.appendChild(wearSection);
+		});
+
+		consumable_slots.forEach(function(slotType) {
+			if(firstConsumableSection){
+				addUnitUpgradesHeader(equipmentSection);
+				firstConsumableSection = false;
+			}
+			var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, false);
+			equipmentSection.appendChild(consumeableSection);
+		});
+	}
+
+	
 }
 
 function addBattleModeSlots(characterElement, character, equipmentSection){
@@ -850,20 +870,27 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 		equipmentSection.appendChild(wearSection);
 	});
 
-	carry_slots.forEach(function (slotType) {
-		var carrySection = getCarrySection(character, true, slotType, characterTags);
-		equipmentSection.appendChild(carrySection);
-	});
-
-	addUnitUpgradesHeader(equipmentSection);
-
-	consumable_slots.forEach(function (slotType) {
-		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
+	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature")) && characterElement.hasOwnProperty("must_carry")){
+		//Skip all carry slots, bc this character cannot carry other weapons.
+		//They can't carry other equipment other, besides specific gear
+		var consumeableSection = getConsumeableSection(character, characterElement, "gear", characterTags, false);
 		equipmentSection.appendChild(consumeableSection);
-	});
+	}else{
+		carry_slots.forEach(function (slotType) {
+			var carrySection = getCarrySection(character, true, slotType, characterTags);
+			equipmentSection.appendChild(carrySection);
+		});
 
-	var chemsSection = getConsumeableSection(character, characterElement, "chems", characterTags, true);
-	equipmentSection.appendChild(chemsSection);
+		addUnitUpgradesHeader(equipmentSection);
+
+		consumable_slots.forEach(function (slotType) {
+			var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
+			equipmentSection.appendChild(consumeableSection);
+		});
+
+		var chemsSection = getConsumeableSection(character, characterElement, "chems", characterTags, true);
+		equipmentSection.appendChild(chemsSection);
+	}
 }
 
 function addUnitUpgradesHeader(equipmentSection){

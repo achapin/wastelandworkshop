@@ -2131,13 +2131,6 @@
     ]
   }, 
   {
-    "cost": 56, 
-    "factions": [
-      "rbt"
-    ], 
-    "name": "robobrain_head"
-  }, 
-  {
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
@@ -2149,13 +2142,6 @@
     ], 
     "name": "science_specialist", 
     "preview": "sciencespecialist"
-  }, 
-  {
-    "cost": 55, 
-    "factions": [
-      "rbt"
-    ], 
-    "name": "sentry_bot_head"
   }, 
   {
     "battle_mode_packs": [
@@ -2547,6 +2533,10 @@
     "factions": [
       "rbt"
     ], 
+    "must_carry":[
+      "rifles.robobrain_laser",
+      "pistols.robobrain_mesmetron"
+    ],
     "name": "robobrain",
     "preview":"robobrain",
     "tags": [
