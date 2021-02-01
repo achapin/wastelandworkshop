@@ -1582,11 +1582,7 @@ function addLeaderSection(domElement, character){
 		if(!force.hasOwnProperty("leader")){
 			force.leader = {};
 		}
-		if(perkDropdown.value == null || perkDropdown.value == "null"){
-			force.leader.perkIndex = 0;
-		}else{
-			force.leader.perkIndex = perkDropdown.selectedIndex;
-		}
+		force.leader.perkIndex = perkDropdown.selectedIndex;
 		var dropDowns = document.getElementsByClassName("leaderPerkSelection");
 		for(var dropDownIndex = 0; dropDownIndex < dropDowns.length; dropDownIndex++){
 			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
@@ -1659,7 +1655,8 @@ function updateCaps(){
 
 	if(force.hasOwnProperty("leader") 
 		&& force.leader.leaderIndex >= 0 
-		&& force.characters.length > force.leader.leaderIndex){
+		&& force.characters.length > force.leader.leaderIndex
+		&& force.leader.perkIndex > 0) {
 		var leaderCharacter = getCharacterById(force.characters[force.leader.leaderIndex].name);
 		filtered_factions.push(leaderCharacter.factions[0]);
 		faction = leaderCharacter.factions[0];
@@ -1693,11 +1690,10 @@ function updateCaps(){
 			var modelUpdadeCost = 0;
 			var unitUpgradeCost = 0;
 
-			if(force.hasOwnProperty("leader") && force.leader.leaderIndex == unitIndex){
-				var leaderCost = upgrades.leader[force.leader.perkIndex].cost;
-				if(force.leader.perkIndex == 0){
-					leaderCost = 0;
-				}
+			if(force.hasOwnProperty("leader") 
+				&& force.leader.leaderIndex == unitIndex
+				&& force.leader.perkIndex > 0){
+				var leaderCost = upgrades.leader[force.leader.perkIndex-1].cost;
 				unitCost += leaderCost;
 				unitUpgradeCost += leaderCost;
 			}
