@@ -1657,11 +1657,13 @@ function updateCaps(){
 
 	var filtered_factions = [];
 
-	if(force.hasOwnProperty("leader") && force.leader.leaderIndex >= 0 && force.characters.length > force.leader.leaderIndex){
+	if(force.hasOwnProperty("leader") 
+		&& force.leader.leaderIndex >= 0 
+		&& force.characters.length > force.leader.leaderIndex){
 		var leaderCharacter = getCharacterById(force.characters[force.leader.leaderIndex].name);
 		filtered_factions.push(leaderCharacter.factions[0]);
 		faction = leaderCharacter.factions[0];
-		var leaderPerk = upgrades.leader[force.leader.perkIndex];
+		var leaderPerk = upgrades.leader[force.leader.perkIndex - 1];
 		if(leaderPerk.name == "creature_controller"){
 			filtered_factions.push("crt");
 		}
