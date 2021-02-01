@@ -1419,7 +1419,7 @@
     "factions": [
       "crt", 
       "srv", 
-      "rd"
+      "rdr"
     ], 
     "must_carry": [
       "melee.dog_bite"

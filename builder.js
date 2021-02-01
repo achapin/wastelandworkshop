@@ -1565,8 +1565,8 @@ function addLeaderSection(domElement, character){
 	var emptyOption = new Option(loc["none"], null);
 	perkDropdown.add(emptyOption);
 
-	for(var index = 1; index < upgrades.heroic.length; index++) {
-		var optionElement = upgrades.heroic[index];
+	for(var index = 0; index < upgrades.leader.length; index++) {
+		var optionElement = upgrades.leader[index];
 		var characterTags = [];
 		if(getCharacterById(character.name).hasOwnProperty("tags")){
 			characterTags = getCharacterById(character.name).tags;
@@ -1597,7 +1597,7 @@ function addLeaderSection(domElement, character){
 
 	activeLeaderSection.addEventListener("mousemove", function(e) {
 		if(force.leader.perkIndex > 0){
-			var upgrade = upgrades.heroes_and_leaders[force.leader.perkIndex];
+			var upgrade = upgrades.leader[force.leader.perkIndex - 1];
 			if(upgrade.hasOwnProperty("preview")){
 				setPreview(upgrade.preview, e, true);
 			}
@@ -1706,6 +1706,11 @@ function updateCaps(){
 					unitCost += perkCost;
 					modelUpdadeCost += perkCost;
 				})
+			}
+
+			if(character.heroic){
+				unitCost += upgrades.heroic[1].cost;
+				unitUpgradeCost += upgrades.heroic[1].cost;
 			}
 
 			var warningSection = unitDisplay.querySelector(".warning");
