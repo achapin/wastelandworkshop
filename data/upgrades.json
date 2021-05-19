@@ -748,7 +748,8 @@
     },
     {
       "name": "incinerator",
-      "cost": 22
+      "cost": 22,
+      "preview":"incinerator"
     },
     {
       "name": "junk_jet",
@@ -757,7 +758,8 @@
     },
     {
       "name": "light_machine_gun",
-      "cost": 18
+      "cost": 18,
+      "preview":"lightmachinegun"
     },
     {
       "name": "minigun",
@@ -771,25 +773,30 @@
     },
     {
       "name": "securitron_gatling_laser",
-      "cost": 20
+      "cost": 20,
+      "preview": "securitrongatlinglaser"
     },
     {
       "name": "securitron_missile_launcher",
-      "cost": 52
+      "cost": 52,
+      "preview": "securitronmissilelauncher"
     },
     {
       "name": "tesla_cannon",
-      "cost": 35
+      "cost": 35,
+      "preview": "teslacannon"
     }
   ],
   "rifles": [
     {
       "name": "anti_materiel_rifle",
-      "cost": 37
+      "cost": 37,
+      "preview": "antimaterielrifle"
     },
     {
       "name": "assault_carbine",
-      "cost": 10
+      "cost": 10,
+      "preview": "assaultcarbine"
     },
     {
       "name": "assault_rifle",
@@ -813,7 +820,8 @@
     },
     {
       "name": "caravan_shotgun",
-      "cost": 12
+      "cost": 12,
+      "preview": "caravanshotgun"
     },
     {
       "name": "combat_rifle",
@@ -827,7 +835,8 @@
     },
     {
       "name": "cowboy_repeater",
-      "cost": 11
+      "cost": 11,
+      "preview": "cowboyrepeater"
     },
     {
       "name":"crippling_bolt_action_pipe_rifle",
@@ -866,7 +875,8 @@
     },
     {
       "name": "grenade_launcher",
-      "cost": 35
+      "cost": 35,
+      "preview": "grenadelauncher"
     },
     {
       "name":"horrigans_plasma_gun",
@@ -889,7 +899,8 @@
     },
     {
       "name": "hunting_shotgun",
-      "cost": 9
+      "cost": 9,
+      "preview": "huntingshotgun"
     },
     {
       "name":"incendiary_assault_rifle",
@@ -943,7 +954,8 @@
     },
     {
       "name": "marksman_carbine",
-      "cost": 14
+      "cost": 14,
+      "preview": "marksmancarbine"
     },
     {
       "name":"mirelurk_hunter_acid",
@@ -987,23 +999,28 @@
     },
     {
       "name": "sawed_off_shotgun",
-      "cost": 15
+      "cost": 15,
+      "preview": "sawedoffshotgun"
     },
     {
       "name": "securitron_grenade_launcher",
-      "cost": 35
+      "cost": 35,
+      "preview": "securitrongrenadelauncher"
     },
     {
       "name": "securitron_smg",
-      "cost": 10
+      "cost": 10,
+      "preview": "securitronsmg"
     },
     {
       "name": "service_rifle",
-      "cost": 10
+      "cost": 10,
+      "preview": "servicerifle"
     },
     {
       "name": "sniper_rifle",
-      "cost": 26
+      "cost": 26,
+      "preview": "sniperrifle"
     },
     {
       "name": "staggering_pipe_rifle",
@@ -1022,7 +1039,8 @@
     },
     {
       "name": "trail_carbine",
-      "cost": 24
+      "cost": 24,
+      "preview": "trailcarbine"
     },
     {
       "name":"troubleshooters_combat_rifle",
@@ -1033,15 +1051,18 @@
   "pistols": [
     {
       "name":"127mm_pistol",
-      "cost":4
+      "cost":4,
+      "preview": "127mmpistol"
     },
     {
       "name":"357_magnum_revolver",
-      "cost":8
+      "cost":8,
+      "preview": "357magnumrevolver"
     },
     {
       "name":"44_magnum_revolver",
-      "cost":8
+      "cost":8,
+      "preview": "44magnumrevolver"
     },
     {
       "name": "44_revolver",
@@ -1055,7 +1076,8 @@
     },
     {
       "name":"a_light_burning_in_the_darkness",
-      "cost":14
+      "cost":14,
+      "preview": "alightburninginthedarkness"
     },
     {
       "name": "alien_blaster",
@@ -1089,7 +1111,8 @@
     },
     {
       "name":"eyebot_tesla_cannon",
-      "cost":12
+      "cost":12,
+      "preview": "eyebotteslacannon"
     },
     {
       "name": "flare_gun",
@@ -1128,7 +1151,8 @@
     },
     {
       "name":"hunting_revolver",
-      "cost":7
+      "cost":7,
+      "preview": "huntingrevolver"
     },
     {
       "name": "indys_freezing_44",
@@ -1177,7 +1201,8 @@
     },
     {
       "name":"plasma_defender",
-      "cost": 12
+      "cost": 12,
+      "preview": "plasmadefender"
     },
     {
       "name": "pipe_pistol",
@@ -1211,11 +1236,13 @@
     },
     {
       "name":"pulse_gun",
-      "cost": 11
+      "cost": 11,
+      "preview": "pulsegun"
     },
     {
       "name":"ranger_sequoia",
-      "cost": 13
+      "cost": 13,
+      "preview": "rangersequoia"
     },
     {
       "name":"robobrain_mesmetron",
@@ -1256,7 +1283,8 @@
     },
     {
       "name": "ballistic_fist",
-      "cost": 16
+      "cost": 16,
+      "preview": "ballisticfist"
     },
     {
       "name": "baseball_bat",
@@ -1270,7 +1298,8 @@
     },
     {
       "name": "blade_of_the_east",
-      "cost": 25
+      "cost": 25,
+      "preview": "bladeoftheeast"
     },
     {
       "name": "bloodied_board",
@@ -1289,7 +1318,8 @@
     },
     {
       "name": "cattle_prod",
-      "cost": 3
+      "cost": 3,
+      "preview": "cattleprod"
     },
     {
       "name": "chinese_officers_sword",
@@ -1343,7 +1373,8 @@
     },
     {
       "name": "dog_tag_fist",
-      "cost": 2
+      "cost": 2,
+      "preview": "dogtagfist"
     },
     {
       "name": "empty_minigun",
@@ -1357,7 +1388,8 @@
     },
     {
       "name": "fire_axe",
-      "cost": 10
+      "cost": 10,
+      "preview": "fireaxe"
     },
     {
       "name": "fire_hydrant_bat",
@@ -1446,11 +1478,13 @@
     },
     {
       "name": "machete_gladius",
-      "cost": 3
+      "cost": 3,
+      "preview": "machetegladius"
     },
     {
       "name": "marcus_punch",
-      "cost": 0
+      "cost": 0,
+      "preview": "marcuspunch"
     },
     {
       "name": "matriarch_swipe",
@@ -1484,11 +1518,13 @@
     },
     {
       "name": "mongrel_bite",
-      "cost": 0
+      "cost": 0,
+      "preview": "mongrelbite"
     },
     {
       "name": "mr_handy_buzz_blade",
-      "cost": 7
+      "cost": 7,
+      "preview": "mrhandybuzzblade"
     },
     {
       "name": "mr_handy_buzzsaw",
@@ -1537,7 +1573,8 @@
     },
     {
       "name": "rebar_club",
-      "cost": 18
+      "cost": 18,
+      "preview": "rebarclub"
     },
     {
       "name": "relentless_chinese_officers_sword",
@@ -1561,7 +1598,8 @@
     },
     {
       "name": "spear",
-      "cost": 4
+      "cost": 4,
+      "preview": "spear"
     },
     {
       "name": "staggering_tire_iron",
@@ -1580,7 +1618,8 @@
     },
     {
       "name": "thermic_lance",
-      "cost": 35
+      "cost": 35,
+      "preview": "thermiclance"
     },
     {
       "name": "tire_iron",
@@ -1599,7 +1638,8 @@
     },
     {
       "name": "vertibird_blade",
-      "cost": 22
+      "cost": 22,
+      "preview": "vertibirdblade"
     },
     {
       "name": "weak_feral_ghoul_swipe",
@@ -1645,7 +1685,8 @@
     },
     {
       "name": "centaur_lash",
-      "cost": 0
+      "cost": 0,
+      "preview": "centaurlash"
     },
     {
       "name": "cryo_grenade",
@@ -1659,11 +1700,13 @@
     },
     {
       "name": "incendiary_grenade",
-      "cost": 7
+      "cost": 7,
+      "preview": "incendiarygrenade"
     },
     {
       "name": "long_fuse_dynamite",
-      "cost": 3
+      "cost": 3,
+      "preview": "longfusedynamite"
     },
     {
       "name":"mirelurk_queen_brood",
@@ -1703,7 +1746,8 @@
     },
     {
       "name": "throwing_spear",
-      "cost": 3
+      "cost": 3,
+      "preview": "throwingspear"
     },
     {
       "name":"weak_behemoth_rock_throw",
@@ -1719,7 +1763,8 @@
     },
     {
       "name": "c4_plastic_explosive",
-      "cost": 10
+      "cost": 10,
+      "preview": "c4plasticexplosive"
     },
     {
       "name": "fragmentation_mine",
@@ -1789,7 +1834,8 @@
     },
     {
       "name": "damaged_legate_armor",
-      "cost": 23
+      "cost": 23,
+      "preview": "damagedlegatearmor"
     },
     {
       "name": "environmental_suit",
@@ -1803,7 +1849,8 @@
     },
     {
       "name": "gecko_backed_metal_armor",
-      "cost": 16
+      "cost": 16,
+      "preview": "geckobackedmetalarmor"
     },
     {
       "name": "hazmat_suit",
@@ -1834,7 +1881,8 @@
     },
     {
       "name": "ncr_salvaged_power_armor",
-      "cost": 26
+      "cost": 26,
+      "preview": "ncrsalvagedpowerarmor"
     },
     {
       "name": "protectors_right_arm_guard",
@@ -1930,7 +1978,8 @@
   "clothing": [
     {
       "name": "1st_recon_beret",
-      "cost": 12
+      "cost": 12,
+      "preview": "1streconberet"
     },
     {
       "name": "airship_captains_hat",
@@ -2039,7 +2088,8 @@
     },
     {
       "name": "ncr_engineer_jumpsuit",
-      "cost": 15
+      "cost": 15,
+      "preview": "ncrengineerjumpsuit"
     },
     {
       "name": "patched_three_piece_suit",
@@ -2085,7 +2135,8 @@
     },
     {
       "name": "triggerman_bowler",
-      "cost": 5
+      "cost": 5,
+      "preview": "triggermanbowler"
     },
     {
       "name": "vault_111_jumpsuit",
@@ -2141,7 +2192,8 @@
     },
     {
       "name": "healing_powder",
-      "cost": 15
+      "cost": 15,
+      "preview": "healingpowder"
     },
     {
       "name": "jet",
@@ -2195,7 +2247,8 @@
     },
     {
       "name": "rebound",
-      "cost": 8
+      "cost": 8,
+      "preview": "rebound"
     },
     {
       "name": "refreshing_beverage",
@@ -2209,7 +2262,8 @@
     },
     {
       "name": "steady",
-      "cost": 8
+      "cost": 8,
+      "preview": "steady"
     },
     {
       "name": "stimpak",
@@ -2468,7 +2522,8 @@
     },
     {
       "name":"adamantion_skeleton",
-      "cost":8
+      "cost":8,
+      "preview": "adamantiumskeleton"
     },
     {
       "name":"animal_friend",
@@ -2607,7 +2662,8 @@
     },
     {
       "name":"companion",
-      "cost":12
+      "cost":12,
+      "preview": "companion"
     },
     {
       "name":"creature_trainer",
@@ -2676,7 +2732,8 @@
     },
     {
       "name":"hit_the_deck",
-      "cost":3
+      "cost":3,
+      "preview": "hitthedeck"
     },
     {
       "name": "huntsman",
@@ -2880,7 +2937,8 @@
     },
     {
       "name":"shotgun_surgeon",
-      "cost":6
+      "cost":6,
+      "preview": "shotgundevotee"
     },
     {
       "name": "sneak",
@@ -2955,7 +3013,9 @@
     },
     {
       "name": "barbed",
-      "cost": 3
+      "cost": 3,
+      "types":["melee"],
+      "preview": "barbed"
     },
     {
       "name": "ballistic_weave",
@@ -3325,7 +3385,9 @@
     },
     {
       "name": "muffled",
-      "cost": 5
+      "cost": 5,
+      "types":["clothing","armor"],
+      "preview": "muffled"
     },
     {
       "name": "noxious_armor",
@@ -3389,7 +3451,9 @@
     },
     {
       "name": "recoil_compensator",
-      "cost": 7
+      "cost": 7,
+      "types":"heavy_weapons",
+      "preview": "recoilcompensator"
     },
     {
       "name": "recon_sensors",
@@ -3586,7 +3650,8 @@
     {
       "name": "venomous",
       "cost": 3,
-      "types":["melee"]
+      "types":["melee"],
+      "preview": "venomous"
     },
     {
       "name": "vim_refresh_paint",
@@ -3604,7 +3669,8 @@
   "food_and_drink":[
     {
       "name":"bighorner_steak",
-      "cost":10
+      "cost":10,
+      "preview": "bighornersteak"
     },
     {
       "name":"bloatfly_meat",
@@ -3623,7 +3689,8 @@
     },
     {
       "name":"caravan_lunch",
-      "cost":16
+      "cost":16,
+      "preview": "caravanlunch"
     },
     {
       "name":"cave_fungus",
@@ -3652,11 +3719,13 @@
     },
     {
       "name":"gecko_kebab",
-      "cost":20
+      "cost":20,
+      "preview": "geckokebab"
     },
     {
       "name":"honey_mesquite_pod",
-      "cost":5
+      "cost":5,
+      "preview": "honeymesquitepod"
     },
     {
       "name":"iguana_bits",
@@ -3745,7 +3814,8 @@
     },
     {
       "name":"sunset_sasparilla",
-      "cost":24
+      "cost":24,
+      "preview": "sunsetsasparilla"
     },
     {
       "name": "tato_and_water",
@@ -3771,7 +3841,8 @@
     },
     {
       "name":"armor_piercing_ammo",
-      "cost":1
+      "cost":1,
+      "preview": "armorpiercingammo"
     },
     {
       "name":"artillery_smoke_grenade",
@@ -3857,11 +3928,13 @@
     },
     {
       "name":"hollow_point_ammo",
-      "cost":2
+      "cost":2,
+      "preview": "hollowpointammo"
     },
     {
       "name":"incendiary_ammo",
-      "cost":3
+      "cost":3,
+      "preview": "incendiaryammo"
     },
     {
       "name":"mirelurk_eggs",
@@ -3875,7 +3948,8 @@
     },
     {
       "name":"ncr_emergency_radio",
-      "cost":4
+      "cost":4,
+      "preview": "ncremergencyradio"
     },
     {
       "name": "overclocker",
@@ -3924,7 +3998,8 @@
     },
     {
       "name":"snakebite_touniquet",
-      "cost":2
+      "cost":2,
+      "preview": "snakebitetourniquet"
     },
     {
       "name":"skeleton_key",
@@ -3978,7 +4053,8 @@
     },
     {
       "name":"weapon_repair_kit",
-      "cost":6
+      "cost":6,
+      "preview": "weaponrepairkit"
     },
     {
       "name":"zapper",

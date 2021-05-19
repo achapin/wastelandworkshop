@@ -25,7 +25,9 @@ var possibleFilters = [
 	"crt",
 	"enc",
 	"ins",
+	"lgn",
 	"mut",
+	"ncr",
 	"rdr",
 	"rbt",
 	"srv"
@@ -861,9 +863,6 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
 		equipmentSection.appendChild(consumeableSection);
 	});
-
-	var chemsSection = getConsumeableSection(character, characterElement, "chems", characterTags, true);
-	equipmentSection.appendChild(chemsSection);
 }
 
 function addUnitUpgradesHeader(equipmentSection){

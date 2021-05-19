@@ -1059,7 +1059,8 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 95, 
     "default_equipment": {
@@ -1112,7 +1113,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 95, 
     "default_equipment": {
@@ -1154,7 +1156,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 86, 
     "default_equipment": {
@@ -1178,7 +1181,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 109, 
     "default_equipment": {
@@ -1205,7 +1209,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 107, 
     "default_equipment": {
@@ -1259,7 +1264,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 163, 
     "default_equipment": {
@@ -1283,7 +1289,8 @@
     "battle_mode_packs": [
       "upgrades", 
       "wasteland_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 49, 
     "default_equipment": {
@@ -1306,7 +1313,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 86, 
     "default_equipment": {
@@ -1332,7 +1340,8 @@
     "battle_mode_packs": [
       "upgrades", 
       "wasteland_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 55, 
     "factions": [
@@ -1348,7 +1357,8 @@
     "battle_mode_packs": [
       "upgrades", 
       "wasteland_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 42, 
     "default_equipment": {
@@ -2035,11 +2045,17 @@
     "preview": "lieutenant"
   }, 
   {
+    "battle_mode_packs":[
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ],
     "cost": 120, 
     "factions": [
-      "enc"
+      "ncr"
     ], 
     "name": "lieutenant_gorobets", 
+    "preview": "lieutenantgorobets",
     "unique_code": "lieutenant_gorobets"
   }, 
   {
@@ -2131,13 +2147,6 @@
     ]
   }, 
   {
-    "cost": 56, 
-    "factions": [
-      "rbt"
-    ], 
-    "name": "robobrain_head"
-  }, 
-  {
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
@@ -2149,13 +2158,6 @@
     ], 
     "name": "science_specialist", 
     "preview": "sciencespecialist"
-  }, 
-  {
-    "cost": 55, 
-    "factions": [
-      "rbt"
-    ], 
-    "name": "sentry_bot_head"
   }, 
   {
     "battle_mode_packs": [
@@ -2287,21 +2289,8 @@
       "srv"
     ], 
     "name": "arcade_gannon", 
+    "preview":"arcadegannon",
     "unique_code": "arcade_gannon"
-  }, 
-  {
-    "battle_mode_packs": [
-      "upgrades", 
-      "wasteland_items", 
-      "advanced_items", 
-      "usable_items"
-    ], 
-    "cost": 100, 
-    "factions": [
-      "srv"
-    ], 
-    "name": "boone", 
-    "unique_code": "boone"
   }, 
   {
     "battle_mode_packs": [
@@ -2315,6 +2304,7 @@
       "srv"
     ], 
     "name": "cass", 
+    "preview":"cass",
     "unique_code": "cass"
   }, 
   {
@@ -2334,6 +2324,7 @@
     "tags": [
       "robot"
     ], 
+    "preview":"ede",
     "unique_code": "ed-e"
   }, 
   {
@@ -2348,6 +2339,7 @@
       "srv"
     ], 
     "name": "raul", 
+    "preview":"raul",
     "unique_code": "raul"
   }, 
   {
@@ -2365,6 +2357,7 @@
     "tags": [
       "dog"
     ], 
+    "preview":"rex",
     "unique_code": "rex"
   }, 
   {
@@ -2376,12 +2369,14 @@
     ], 
     "cost": 85, 
     "factions": [
-      "srv"
+      "srv",
+      "lgn"
     ], 
     "must_carry": [
       "pistols.a_light_burning_in_the_darkness"
     ], 
     "name": "the_burned_man", 
+    "preview":"theburnedman",
     "unique_code": "the_burned_man"
   }, 
   {
@@ -2396,12 +2391,15 @@
     "cost": 98, 
     "factions": [
       "bos", 
-      "srv"
+      "srv",
+      "ncr",
+      "lgn"
     ], 
     "must_carry": [
       "perks.companion"
     ], 
     "name": "the_courier", 
+    "preview":"thecourier",
     "unique_code": "the_courier"
   }, 
   {
@@ -2419,6 +2417,7 @@
       "bos"
     ], 
     "name": "veronica", 
+    "preview":"veronica",
     "unique_code": "veronica"
   }, 
   {
@@ -2427,7 +2426,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 112, 
     "factions": [
@@ -2437,6 +2437,7 @@
     "tags": [
       "super_mutant"
     ], 
+    "preview":"lily",
     "unique_code": "lily"
   }, 
   {
@@ -2445,11 +2446,13 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 115, 
     "factions": [
-      "mut"
+      "mut",
+      "srv"
     ], 
     "must_carry": [
       "melee.marcus_punch"
@@ -2458,19 +2461,22 @@
     "tags": [
       "super_mutant"
     ], 
+    "preview":"marcus",
     "unique_code": "marcus"
   }, 
   {
     "battle_mode_packs": [
       "upgrades", 
       "wasteland_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 78, 
     "factions": [
       "mut"
     ], 
     "name": "nightkin",
+    "preview":"nightkin",
     "tags": [
       "super_mutant"
     ]
@@ -2481,7 +2487,8 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "super_mutant_items"
     ], 
     "cost": 135, 
     "factions": [
@@ -2491,6 +2498,7 @@
     "tags": [
       "super_mutant"
     ], 
+    "preview":"tabitha",
     "unique_code": "tabitha"
   }, 
   {
@@ -2508,7 +2516,8 @@
     "name": "securitron_mk_1",
     "tags": [
       "robot"
-    ]
+    ],
+    "preview":"securitronmk1"
   }, 
   {
     "battle_mode_packs": [
@@ -2521,20 +2530,23 @@
     "name": "securitron_mk_2",
     "tags": [
       "robot"
-    ]
+    ],
+    "preview":"securitronmk2"
   }, 
   {
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 60, 
+    "cost": 65, 
     "factions": [
-      "crt"
+      "crt",
+      "lgn"
     ], 
     "must_carry": [
       "melee.mongrel_bite"
     ], 
     "name": "legion_mongrel",
+    "preview":"legionmongrel",
     "tags": [
       "dog"
     ]
@@ -2552,5 +2564,306 @@
     "tags": [
       "robot"
     ]
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 125, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "1st_recon_sharpshooter",
+    "preview":"1streconsharpshooter"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 100, 
+    "factions": [
+      "ncr",
+      "srv"
+    ], 
+    "name": "boone",
+    "preview":"boone",
+    "unique_code":"boone"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 75, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "chief_hanlon",
+    "preview":"chiefhanlon",
+    "unique_code":"chief_hanlon"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 81, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "general_lee_oliver",
+    "preview":"generalleeoliver",
+    "unique_code":"general_lee_oliver"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 65, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "ncr_civilian_ranger",
+    "preview":"ncrcivilianranger"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "advanced_items",
+      "usable_items",
+      "power_armor"
+    ], 
+    "cost": 59, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "ncr_heavy_trooper",
+    "preview":"ncrheavytrooper"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 76, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "ncr_patrol_ranger",
+    "preview":"ncrpatrolranger"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 40, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "ncr_trooper",
+    "preview":"ncrtrooper"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 39, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "ncr_trooper_mp",
+    "preview":"ncrtroopermp"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 86, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "centurion",
+    "preview":"centurion"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ], 
+    "cost": 90, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "hound_master",
+    "preview":"houndmaster"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 137, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "legate_lanius",
+    "preview":"legatelanius",
+    "unique_code":"legate_lanius"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "usable_items"
+    ], 
+    "cost": 59, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "legion_explorer",
+    "preview":"legionexplorer"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 60, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "legion_scout",
+    "preview":"legionaryscout"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 90, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "lucius",
+    "preview":"lucius",
+    "unique_code":"lucius"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 65, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "praetorian_guard",
+    "preview":"praetorianguard"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 38, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "prime_legionary",
+    "preview":"primelegionary"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 30, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "recruit_legionary",
+    "preview":"recruitlegionary"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 58, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "veteran_decanus",
+    "preview":"veterandecanus"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 90, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "vexillarius",
+    "preview":"vexillarius"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "wasteland_items",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 80, 
+    "factions": [
+      "lgn"
+    ], 
+    "name": "vulpes_inculta",
+    "preview":"vulpesinculta",
+    "unique_code":"vulpes_inculta"
   }
 ]
