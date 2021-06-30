@@ -2553,20 +2553,18 @@
   }, 
   {
     "battle_mode_packs": [
-      "robot_items"
+      "robot_items",
+      "robobrain_items"
     ], 
     "cost": 60, 
     "factions": [
       "rbt"
     ], 
-    "must_carry":[
-      "rifles.robobrain_laser",
-      "pistols.robobrain_mesmetron"
-    ],
     "name": "robobrain",
     "preview":"robobrain",
     "tags": [
-      "robot"
+      "robot",
+      "robobrain"
     ]
   },
   {

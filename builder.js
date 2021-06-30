@@ -22,14 +22,14 @@ var settlementMode;
 var appliedFilters = [];
 var possibleFilters = [
 	"bos",
+	"lgn",
 	"crt",
 	"enc",
 	"ins",
-	"lgn",
-	"mut",
 	"ncr",
 	"rdr",
 	"rbt",
+	"mut",
 	"srv"
 ]
 
@@ -198,6 +198,14 @@ function urlExists(url)
 }
 
 function orderUnitsByLocalizedName(unitOne, unitTwo){
+	if(!loc.hasOwnProperty(unitOne.name))
+	{
+		console.log("Missing localization for " + unitOne.name);
+	}
+	if(!loc.hasOwnProperty(unitTwo.name))
+	{
+		console.log("Missing localization for " + unitTwo.name);
+	}
 	return loc[unitOne.name].localeCompare(loc[unitTwo.name]);
 }
 
@@ -872,7 +880,9 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 		equipmentSection.appendChild(wearSection);
 	});
 
-	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature")) && characterElement.hasOwnProperty("must_carry")){
+	if(characterElement.hasOwnProperty("tags") 
+		&& (characterElement.tags.includes("robot") || characterElement.tags.includes("creature")) 
+		&& characterElement.hasOwnProperty("must_carry")){
 		//Skip all carry slots, bc this character cannot carry other weapons.
 		//They can't carry other equipment other, besides specific gear
 		var consumeableSection = getConsumeableSection(character, characterElement, "gear", characterTags, false);
@@ -885,10 +895,11 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 
 		addUnitUpgradesHeader(equipmentSection);
 
-	consumable_slots.forEach(function (slotType) {
-		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
-		equipmentSection.appendChild(consumeableSection);
-	});
+		consumable_slots.forEach(function (slotType) {
+			var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
+			equipmentSection.appendChild(consumeableSection);
+		});
+	}
 }
 
 function addUnitUpgradesHeader(equipmentSection){
@@ -903,7 +914,6 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	var consumeableHeader = document.createElement("h2");
 	var consumeableHeaderText = document.createTextNode(loc[slotType]);
 	consumeableHeader.appendChild(consumeableHeaderText);
-	consumeableSection.appendChild(consumeableHeader);
 
 	var slotOption = null;
 	if(characterElement.consumables != null){
@@ -944,8 +954,13 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 		updateCaps();
 	};
 
-	consumeableSection.appendChild(optionSection);
-	consumeableSection.appendChild(slotDropdown);
+	if(slotDropdown.length > 1)
+	{
+		consumeableSection.appendChild(consumeableHeader);
+		consumeableSection.appendChild(optionSection);
+		consumeableSection.appendChild(slotDropdown);
+	}
+
 	return consumeableSection;
 }
 
@@ -1086,7 +1101,6 @@ function getWearSection(character, isBattleMode, slotType, characterTags){
 	carryHeader.setAttribute("class", "header");
 	var carryHeaderText = document.createTextNode(loc[slotType]);
 	carryHeader.appendChild(carryHeaderText);
-	wearSection.appendChild(carryHeader)
 
 	var slotDropdown = document.createElement("SELECT");
 	slotDropdown.setAttribute("class", "wear_dropdown");
@@ -1129,8 +1143,12 @@ function getWearSection(character, isBattleMode, slotType, characterTags){
 
 	addPreviewTooltipForSlot(character, slotType, slotDropdown);
 
-	wearSection.appendChild(slotDropdown);
-	wearSection.appendChild(modSection);
+	if(slotDropdown.length > 1)
+	{
+		wearSection.appendChild(carryHeader);
+		wearSection.appendChild(slotDropdown);
+		wearSection.appendChild(modSection);
+	}
 
 	return wearSection;
 }
@@ -1142,7 +1160,6 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 	var carryHeaderText = document.createTextNode(loc[slotType]);
 	carryHeader.setAttribute("class", "header");
 	carryHeader.appendChild(carryHeaderText);
-	carrySection.appendChild(carryHeader);
 
 	var slotDropdown = document.createElement("SELECT");
 	slotDropdown.setAttribute("class","blockdisplay");
@@ -1169,10 +1186,6 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 			}
 		}
 	});
-
-	carrySection.appendChild(equippedItems);
-
-	carrySection.appendChild(slotDropdown);
 	
 	slotDropdown.onchange = function(){
 		if(slotDropdown.value != null && slotDropdown.value != "null"){
@@ -1188,6 +1201,13 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 		}
 		updateCaps();
 	};
+
+	if(slotDropdown.length > 1)
+	{
+		carrySection.appendChild(carryHeader);
+		carrySection.appendChild(equippedItems);
+		carrySection.appendChild(slotDropdown);
+	}
 
 	return carrySection;
 }
@@ -1976,7 +1996,7 @@ function addPreviewTooltipForMod(target){
 
 function initialize(){
 	var upgradeLoadPromise = loadURL("data/upgrades.json");
-	console.log("load upgrades")
+	console.log("load upgrades");
 	upgradeLoadPromise.then(upgradesLoaded);
 	upgradeLoadPromise.catch(function(){alert("upgrade load failed");});
 }

@@ -246,7 +246,6 @@
       "clothing.triggerman_bowler",
       "clothing.bowler_hat",
       "gear.mr_handy_fuel",
-      "gear.robobrain_arms",
       "gear.robot_repair_kit",
       "gear.robot_repair_patch",
       "gear.third_arm_clamp",
@@ -667,7 +666,12 @@
       "thrown.molotov_cocktail",
       "thrown.throwing_spear"
     ],
-    "power_armor":[]
+    "power_armor":[],
+    "robobrain_items" : [
+      "gear.robobrain_arms",
+      "rifles.robobrain_laser",
+      "pistols.robobrain_mesmetron"
+    ]
   },
   "automatron" : [
     {
@@ -995,7 +999,8 @@
     {
       "name":"robobrain_laser",
       "cost": 7,
-      "preview":"robobrainlaser"
+      "preview":"robobrainlaser",
+      "restrictions":["robot"]
     },
     {
       "name": "sawed_off_shotgun",
@@ -1247,6 +1252,7 @@
     {
       "name":"robobrain_mesmetron",
       "cost": 15,
+      "restrictions":["robot"],
       "preview":"robobrainmesmetron"
     },
     {
@@ -3987,7 +3993,7 @@
     {
       "name":"robobrain_arms",
       "cost":5,
-      "restrictions":["robot"],
+      "restrictions":["robobrain", "robot"],
       "preview":"robobrainarms"
     },
     {
