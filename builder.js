@@ -25,7 +25,9 @@ var possibleFilters = [
 	"crt",
 	"enc",
 	"ins",
+	"lgn",
 	"mut",
+	"ncr",
 	"rdr",
 	"rbt",
 	"srv"
@@ -883,14 +885,10 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 
 		addUnitUpgradesHeader(equipmentSection);
 
-		consumable_slots.forEach(function (slotType) {
-			var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
-			equipmentSection.appendChild(consumeableSection);
-		});
-
-		var chemsSection = getConsumeableSection(character, characterElement, "chems", characterTags, true);
-		equipmentSection.appendChild(chemsSection);
-	}
+	consumable_slots.forEach(function (slotType) {
+		var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true);
+		equipmentSection.appendChild(consumeableSection);
+	});
 }
 
 function addUnitUpgradesHeader(equipmentSection){
@@ -1592,8 +1590,8 @@ function addLeaderSection(domElement, character){
 	var emptyOption = new Option(loc["none"], null);
 	perkDropdown.add(emptyOption);
 
-	for(var index = 1; index < upgrades.heroic.length; index++) {
-		var optionElement = upgrades.heroic[index];
+	for(var index = 0; index < upgrades.leader.length; index++) {
+		var optionElement = upgrades.leader[index];
 		var characterTags = [];
 		if(getCharacterById(character.name).hasOwnProperty("tags")){
 			characterTags = getCharacterById(character.name).tags;
@@ -1609,11 +1607,7 @@ function addLeaderSection(domElement, character){
 		if(!force.hasOwnProperty("leader")){
 			force.leader = {};
 		}
-		if(perkDropdown.value == null || perkDropdown.value == "null"){
-			force.leader.perkIndex = 0;
-		}else{
-			force.leader.perkIndex = perkDropdown.selectedIndex;
-		}
+		force.leader.perkIndex = perkDropdown.selectedIndex;
 		var dropDowns = document.getElementsByClassName("leaderPerkSelection");
 		for(var dropDownIndex = 0; dropDownIndex < dropDowns.length; dropDownIndex++){
 			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
@@ -1624,7 +1618,7 @@ function addLeaderSection(domElement, character){
 
 	activeLeaderSection.addEventListener("mousemove", function(e) {
 		if(force.leader.perkIndex > 0){
-			var upgrade = upgrades.heroes_and_leaders[force.leader.perkIndex];
+			var upgrade = upgrades.leader[force.leader.perkIndex - 1];
 			if(upgrade.hasOwnProperty("preview")){
 				setPreview(upgrade.preview, e, true);
 			}
@@ -1684,11 +1678,14 @@ function updateCaps(){
 
 	var filtered_factions = [];
 
-	if(force.hasOwnProperty("leader") && force.leader.leaderIndex >= 0 && force.characters.length > force.leader.leaderIndex){
+	if(force.hasOwnProperty("leader") 
+		&& force.leader.leaderIndex >= 0 
+		&& force.characters.length > force.leader.leaderIndex
+		&& force.leader.perkIndex > 0) {
 		var leaderCharacter = getCharacterById(force.characters[force.leader.leaderIndex].name);
 		filtered_factions.push(leaderCharacter.factions[0]);
 		faction = leaderCharacter.factions[0];
-		var leaderPerk = upgrades.leader[force.leader.perkIndex];
+		var leaderPerk = upgrades.leader[force.leader.perkIndex - 1];
 		if(leaderPerk.name == "creature_controller"){
 			filtered_factions.push("crt");
 		}
@@ -1718,11 +1715,10 @@ function updateCaps(){
 			var modelUpdadeCost = 0;
 			var unitUpgradeCost = 0;
 
-			if(force.hasOwnProperty("leader") && force.leader.leaderIndex == unitIndex){
-				var leaderCost = upgrades.leader[force.leader.perkIndex].cost;
-				if(force.leader.perkIndex == 0){
-					leaderCost = 0;
-				}
+			if(force.hasOwnProperty("leader") 
+				&& force.leader.leaderIndex == unitIndex
+				&& force.leader.perkIndex > 0){
+				var leaderCost = upgrades.leader[force.leader.perkIndex-1].cost;
 				unitCost += leaderCost;
 				unitUpgradeCost += leaderCost;
 			}
@@ -1733,6 +1729,11 @@ function updateCaps(){
 					unitCost += perkCost;
 					modelUpdadeCost += perkCost;
 				})
+			}
+
+			if(character.heroic){
+				unitCost += upgrades.heroic[1].cost;
+				unitUpgradeCost += upgrades.heroic[1].cost;
 			}
 
 			var warningSection = unitDisplay.querySelector(".warning");
