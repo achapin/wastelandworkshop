@@ -827,6 +827,7 @@ function addCharacter(characterElement, presetInfo){
 function addModdedCharacterSlots(characterElement, character, equipmentSection, isSettlementMode){
 	//TODO: Add Mods for characters
 	equipmentSection.appendChild(document.createTextNode("CHARACTER MODS GO HERE"))
+	
 	//Both Robots and Creatures have exactly 2 slots
 
 }
@@ -1514,6 +1515,18 @@ function getPerkSection(character){
 
 	upgrades.perks.forEach(function(perk){
 		var hasPerk = false;
+
+		//TODO: RESTRICTIONS
+		var characterTags = [];
+		if(getCharacterById(character.name).hasOwnProperty("tags"))
+		{
+			characterTags = getCharacterById(character.name).tags;
+		}
+		if(!canEquip(perk, characterTags))
+		{
+			return;
+		}
+
 		if(character.hasOwnProperty("perks")){
 			character.perks.forEach(function(ownedPerk){
 				if(perk.name == ownedPerk){
