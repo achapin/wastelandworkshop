@@ -2865,5 +2865,19 @@
     "name": "vulpes_inculta",
     "preview":"vulpesinculta",
     "unique_code":"vulpes_inculta"
+  },
+  {
+    "battle_mode_packs": [
+      "upgrades",
+      "high_tech_items",
+      "advanced_items",
+      "usable_items"
+    ], 
+    "cost": 112, 
+    "factions": [
+      "ncr"
+    ], 
+    "name": "ncr_veteran_ranger",
+    "preview":"ncrveteranranger"
   }
 ]
