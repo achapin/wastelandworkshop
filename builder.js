@@ -86,8 +86,6 @@ function loadLocalization(){
 		language = navigator.language.split('-')[0];
 	}
 
-	document.getElementById("languageSelection").value = language;
-
 	var locLoadPromise = loadURL("localization/"+language+".json");
 	locLoadPromise.then(localizationLoaded);
 	locLoadPromise.catch(function(){
@@ -202,8 +200,6 @@ function orderUnitsByLocalizedName(unitOne, unitTwo){
 }
 
 function initListeners(){
-
-	document.getElementById("languageSelection").addEventListener("change", switchLanguage, true);
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
 
 	forceSection = document.getElementById("force");
