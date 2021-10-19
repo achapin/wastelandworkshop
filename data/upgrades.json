@@ -668,7 +668,19 @@
       "thrown.molotov_cocktail",
       "thrown.throwing_spear"
     ],
-    "power_armor":[]
+    "power_armor":[
+      "armor.enclave_power_armor",
+      "armor.heavy_synth_armor",
+      "armor.hellfire_power_armor",
+      "armor.ncr_salvaged_power_armor",
+      "armor.power_armor_frame",
+      "armor.raider_power_armor",
+      "armor.t45_power_armor",
+      "armor.t51_power_armor",
+      "armor.t60_power_armor",
+      "armor.t60f_power_armor",
+      "armor.x01_power_armor"
+      ]
   },
   "automatron" : [
     {
