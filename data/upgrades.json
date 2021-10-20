@@ -9,7 +9,7 @@
       "armor.environmental_suit",
       "armor.freefall_leg_armor",
       "armor.hazmat_suit",
-      "armor.ncr_salvaged_power_armor",
+      "power_armor.ncr_salvaged_power_armor",
       "armor.protectors_right_arm_guard",
       "armor.sturdy_combat_armor",
       "clothing.1st_recon_beret",
@@ -181,14 +181,14 @@
       "clothing.spiked_muzzle"
     ],
   "high_tech_items" : [
-      "armor.enclave_power_armor",
+      "power_armor.enclave_power_armor",
       "armor.heavy_synth_armor",
-      "armor.hellfire_power_armor",
-      "armor.t45_power_armor",
-      "armor.t51_power_armor",
-      "armor.t60_power_armor",
-      "armor.t60f_power_armor",
-      "armor.x01_power_armor",
+      "power_armor.hellfire_power_armor",
+      "power_armor.t45_power_armor",
+      "power_armor.t51_power_armor",
+      "power_armor.t60_power_armor",
+      "power_armor.t60f_power_armor",
+      "power_armor.x01_power_armor",
       "clothing.enclave_officers_hat",
       "clothing.institute_division_head_coat",
       "clothing.institute_lab_coat",
@@ -590,8 +590,8 @@
       "armor.damaged_legate_armor",
       "armor.gecko_backed_metal_armor",
       "armor.heavy_raider_armor",
-      "armor.power_armor_frame",
-      "armor.raider_power_armor",
+      "power_armor.power_armor_frame",
+      "power_armor.raider_power_armor",
       "armor.sturdy_leather_armor",
       "armor.sturdy_metal_armor",
       "clothing.atom_cats_jacket_and_jeans",
@@ -669,17 +669,16 @@
       "thrown.throwing_spear"
     ],
     "power_armor":[
-      "armor.enclave_power_armor",
-      "armor.heavy_synth_armor",
-      "armor.hellfire_power_armor",
-      "armor.ncr_salvaged_power_armor",
-      "armor.power_armor_frame",
-      "armor.raider_power_armor",
-      "armor.t45_power_armor",
-      "armor.t51_power_armor",
-      "armor.t60_power_armor",
-      "armor.t60f_power_armor",
-      "armor.x01_power_armor"
+      "power_armor.enclave_power_armor",
+      "power_armor.hellfire_power_armor",
+      "power_armor.ncr_salvaged_power_armor",
+      "power_armor.power_armor_frame",
+      "power_armor.raider_power_armor",
+      "power_armor.t45_power_armor",
+      "power_armor.t51_power_armor",
+      "power_armor.t60_power_armor",
+      "power_armor.t60f_power_armor",
+      "power_armor.x01_power_armor"
       ]
   },
   "automatron" : [
@@ -1790,6 +1789,66 @@
       "preview": "pulsemine"
     }
   ],
+  "power_armor": [
+    {
+      "name": "ncr_salvaged_power_armor",
+      "cost": 26,
+      "preview": "ncrsalvagedpowerarmor"
+    },
+    {
+      "name": "enclave_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 44,
+      "preview": "enclavepowerarmor"
+    },
+    {
+      "name": "hellfire_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 52,
+      "preview": "hellfirearmor"
+    },
+    {
+      "name": "power_armor_frame",
+      "restrictions":["!super_mutant"],
+      "cost": 15,
+      "preview": "powerarmorframe"
+    },
+    {
+      "name": "raider_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 33,
+      "preview": "raiderpowerarmor"
+    },
+    {
+      "name": "t45_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 38,
+      "preview": "t45"
+    },
+    {
+      "name": "t51_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 54,
+      "preview": "t51"
+    },
+    {
+      "name": "t60_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 70,
+      "preview": "t60"
+    },
+    {
+      "name": "t60f_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 95
+    },
+    {
+      "name": "x01_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 82,
+      "preview": "x01"
+    }
+  ],
   "armor": [
     {
       "name": "armored_pads",
@@ -1893,11 +1952,6 @@
       "preview": "mechanistarmorandhelmet"
     },
     {
-      "name": "ncr_salvaged_power_armor",
-      "cost": 26,
-      "preview": "ncrsalvagedpowerarmor"
-    },
-    {
       "name": "protectors_right_arm_guard",
       "cost": 10,
       "preview": "protectorsrightarmguard"
@@ -1933,59 +1987,6 @@
       "cost": 7,
       "restrictions":["creature"],
       "preview":"teslacoilharness"
-    },
-    {
-      "name": "enclave_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 44,
-      "preview": "enclavepowerarmor"
-    },
-    {
-      "name": "hellfire_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 52,
-      "preview": "hellfirearmor"
-    },
-    {
-      "name": "power_armor_frame",
-      "restrictions":["!super_mutant"],
-      "cost": 15,
-      "preview": "powerarmorframe"
-    },
-    {
-      "name": "raider_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 33,
-      "preview": "raiderpowerarmor"
-    },
-    {
-      "name": "t45_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 38,
-      "preview": "t45"
-    },
-    {
-      "name": "t51_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 54,
-      "preview": "t51"
-    },
-    {
-      "name": "t60_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 70,
-      "preview": "t60"
-    },
-    {
-      "name": "t60f_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 95
-    },
-    {
-      "name": "x01_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 82,
-      "preview": "x01"
     }
   ],
   "clothing": [
