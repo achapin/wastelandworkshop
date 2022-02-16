@@ -902,14 +902,14 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	slotDropdown.onchange = function(){
 		if(slotDropdown.value != null && slotDropdown.value != "null"){
 			var upgrade = getUpgrade(slotType, slotDropdown.value);
-			var newItemEntry = getConsumableEntry(upgrade, character, slotType, optionSection, slotDropdown);
-			optionSection.appendChild(newItemEntry);
 			if(!character.hasOwnProperty(slotType)){
 				character[slotType] = {};
 			}
-			character[slotType][slotDropdown.value] = 0;
+			character[slotType][slotDropdown.value] = 1;
 			slotDropdown.remove(slotDropdown.selectedIndex);
 			slotDropdown.selectedIndex = 0;
+			var newItemEntry = getConsumableEntry(upgrade, character, slotType, optionSection, slotDropdown);
+			optionSection.appendChild(newItemEntry);
 		}
 		updateCaps();
 	};
