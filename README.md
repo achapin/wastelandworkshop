@@ -4,7 +4,6 @@ Usable at https://achapin.github.io/wastelandworkshop/
 
 # TODO (In no particular order)
 * Better boss flow
-* Creature and Robot mods
 * Automatons
 * Printable lists
 * Unit reordering/sorting
