@@ -843,6 +843,7 @@
   "securitron_mk_2":"Securitron MK 2",
   "legion_mongrel":"Legion Mongrel",
   "robobrain":"Robobrain",
+  "softshell_mirelurk_claw":"Softshell Mirelurk Claw",
   "1st_recon_sharpshooter":"1st Recon Sharpshooter",
   "chief_hanlon":"Chief Hanlon",
   "general_lee_oliver":"General Lee Oliver",
@@ -867,4 +868,5 @@
   "battle_mode_packs":"Battle_mode_packs",
   "ncr":"NCR",
   "lgn":"Caesar's Legion"
+
 }
