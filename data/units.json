@@ -511,11 +511,9 @@
     "name": "a-2018", 
     "preview": "a2018", 
     "unique_code": "a-2018", 
-    "wear_slots": {
-      "armor": [
-        "heavy_synth_armor"
-      ]
-    }
+    "tags": [
+      "synth"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -534,7 +532,10 @@
       "ins"
     ], 
     "name": "battered-gen-1", 
-    "preview": "batgen1synth"
+    "preview": "batgen1synth",
+    "tags": [
+      "synth"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -618,7 +619,10 @@
       "ins"
     ], 
     "name": "gen-1-synth", 
-    "preview": "gen1synth"
+    "preview": "gen1synth",
+    "tags": [
+      "synth"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -634,7 +638,10 @@
       "ins"
     ], 
     "name": "patroller", 
-    "preview": "patroller"
+    "preview": "patroller",
+    "tags": [
+      "synth"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -671,7 +678,10 @@
       "ins"
     ], 
     "name": "trooper", 
-    "preview": "trooper"
+    "preview": "trooper",
+    "tags": [
+      "synth"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -1577,7 +1587,10 @@
     ], 
     "name": "nick_valentine", 
     "preview": "nick", 
-    "unique_code": "nick_valentine"
+    "unique_code": "nick_valentine",
+    "tags": [
+      "synth"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -2553,7 +2566,8 @@
   }, 
   {
     "battle_mode_packs": [
-      "robot_items"
+      "robot_items",
+      "robobrain_items"
     ], 
     "cost": 60, 
     "factions": [
@@ -2562,7 +2576,8 @@
     "name": "robobrain",
     "preview":"robobrain",
     "tags": [
-      "robot"
+      "robot",
+      "robobrain"
     ]
   },
   {
