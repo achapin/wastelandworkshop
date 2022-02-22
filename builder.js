@@ -1835,7 +1835,7 @@ function updateCaps(){
 			if(character.hasOwnProperty("char_mods")){
 				character.char_mods.forEach(function(perk){
 					var perkCost = getUpgrade("mods", perk).cost;
-					unitCost += perkCost;
+					unitCost += perkCost * modelCount;
 					modelUpdadeCost += perkCost;
 				})
 			}
