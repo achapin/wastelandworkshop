@@ -318,6 +318,10 @@
       "thrown.behemoth_rock_throw",
       "thrown.weak_behemoth_rock_throw"
     ],
+    "behemoth_items" :
+    [
+      "melee.fire_hydrant_bat"
+    ],
     "upgrades" : [
       "heroic.heroic",
       "heroic.unpredictable",

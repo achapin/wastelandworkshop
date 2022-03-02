@@ -1093,7 +1093,7 @@
   }, 
   {
     "battle_mode_packs": [
-      "melee.fire_hydrant_bat", 
+      "behemoth_items", 
       "usable_items"
     ], 
     "cost": 207, 
@@ -1914,6 +1914,11 @@
       "power_armor"
     ], 
     "cost": 103, 
+    "default_equipment": {
+      "pistols": [
+        "col_autumns_10mm_pistol"
+      ]
+    },
     "factions": [
       "enc"
     ], 
@@ -1953,6 +1958,12 @@
       "usable_items", 
       "power_armor"
     ], 
+    "default_equipment": {
+      "rifles": [
+        "laser_rifle"
+      ],
+      "power_armor":"enclave_power_armor"
+    },
     "cost": 95, 
     "factions": [
       "enc"
@@ -1966,8 +1977,13 @@
       "high_tech_items", 
       "usable_items", 
       "power_armor"
-    ], 
+    ],
     "cost": 36, 
+    "default_equipment": {
+      "pistols": [
+        "laser_pistol"
+      ]
+    },
     "factions": [
       "enc"
     ], 
@@ -2013,6 +2029,12 @@
       "power_armor"
     ], 
     "cost": 108, 
+    "default_equipment": {
+      "heavy_weapons": [
+        "heavy_incinerator"
+      ],
+      "power_armor":"hellfire_power_armor"
+    },
     "factions": [
       "enc"
     ], 
@@ -2051,6 +2073,11 @@
       "power_armor"
     ], 
     "cost": 62, 
+    "default_equipment": {
+      "pistols": [
+        "plasma_pistol"
+      ]
+    },
     "factions": [
       "enc"
     ], 
@@ -2064,6 +2091,11 @@
       "usable_items"
     ],
     "cost": 120, 
+    "default_equipment": {
+      "rifles": [
+        "hunting_rifle"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2166,6 +2198,11 @@
       "usable_items"
     ], 
     "cost": 46, 
+    "default_equipment": {
+      "pistols": [
+        "laser_pistol"
+      ]
+    },
     "factions": [
       "enc"
     ], 
@@ -2197,6 +2234,15 @@
       "power_armor"
     ], 
     "cost": 101, 
+    "default_equipment": {
+      "pistols": [
+        "plasma_pistol"
+      ],
+      "melee":[
+        "ripper"
+      ],
+      "power_armor":"enclave_power_armor"
+    },
     "factions": [
       "enc"
     ], 
@@ -2211,6 +2257,14 @@
       "power_armor"
     ], 
     "cost": 71, 
+    "default_equipment": {
+      "melee": [
+        "stun_baton"
+      ],
+      "thrown": {
+        "plasma_grenade": "4"
+      }
+    },
     "factions": [
       "enc"
     ], 
@@ -2219,7 +2273,7 @@
   }, 
   {
     "battle_mode_packs": [
-      "melee.fire_hydrant_bat"
+      "behemoth_items"
     ], 
     "cost": 120, 
     "factions": [
@@ -2297,6 +2351,14 @@
       "usable_items"
     ], 
     "cost": 50, 
+    "default_equipment": {
+      "melee": [
+        "ripper"
+      ],
+      "pistols": [
+        "plasma_defender"
+      ]
+    },
     "factions": [
       "enc", 
       "srv"
@@ -2313,6 +2375,11 @@
       "usable_items"
     ], 
     "cost": 52, 
+    "default_equipment": {
+      "rifles": [
+        "caravan_shotgun"
+      ]
+    },
     "factions": [
       "srv"
     ], 
@@ -2348,6 +2415,11 @@
       "usable_items"
     ], 
     "cost": 65, 
+    "default_equipment": {
+      "pistols": [
+        "44_magnum_revolver"
+      ]
+    },
     "factions": [
       "srv"
     ], 
@@ -2402,6 +2474,12 @@
       "power_armor"
     ], 
     "cost": 98, 
+    "default_equipment": {
+      "rifles": [
+        "anti_materiel_rifle"
+      ],
+      "melee":["machete"]
+    },
     "factions": [
       "bos", 
       "srv",
@@ -2425,6 +2503,9 @@
       "power_armor"
     ], 
     "cost": 60, 
+    "default_equipment": {
+      "melee":["power_fist"]
+    },
     "factions": [
       "srv", 
       "bos"
@@ -2443,6 +2524,12 @@
       "super_mutant_items"
     ], 
     "cost": 112, 
+    "default_equipment": {
+      "rifles": [
+        "assault_carbine"
+      ],
+      "melee":["vertibird_blade"]
+    },
     "factions": [
       "mut"
     ], 
@@ -2485,6 +2572,12 @@
       "super_mutant_items"
     ], 
     "cost": 78, 
+    "default_equipment": {
+      "heavy_weapons": [
+        "incinerator"
+      ],
+      "melee":["nail_board","rebar_club"]
+    },
     "factions": [
       "mut"
     ], 
@@ -2504,6 +2597,12 @@
       "super_mutant_items"
     ], 
     "cost": 135, 
+    "default_equipment": {
+      "heavy_weapons": [
+        "missile_launcher"
+      ],
+      "melee":["super_sledge"]
+    },
     "factions": [
       "mut"
     ], 
@@ -2537,6 +2636,12 @@
       "robot_items"
     ], 
     "cost": 200, 
+    "default_equipment": {
+      "rifles": [
+        "securitron_grenade_launcher",
+        "securitron_smg"
+      ]
+    },
     "factions": [
       "rbt"
     ], 
@@ -2570,6 +2675,12 @@
       "robobrain_items"
     ], 
     "cost": 60, 
+    "default_equipment": {
+      "rifles": [
+        "robobrain_laser"
+      ],
+      "melee":["robobrain_mesmetron"]
+    },
     "factions": [
       "rbt"
     ], 
@@ -2588,6 +2699,11 @@
       "usable_items"
     ], 
     "cost": 125, 
+    "default_equipment": {
+      "rifles": [
+        "sniper_rifle"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2603,6 +2719,11 @@
       "usable_items"
     ], 
     "cost": 100, 
+    "default_equipment": {
+      "rifles": [
+        "hunting_rifle"
+      ]
+    },
     "factions": [
       "ncr",
       "srv"
@@ -2618,6 +2739,11 @@
       "usable_items"
     ], 
     "cost": 75, 
+    "default_equipment": {
+      "pistols": [
+        "ranger_sequoia"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2632,6 +2758,11 @@
       "usable_items"
     ], 
     "cost": 81, 
+    "default_equipment": {
+      "pistols": [
+        "44_magnum_revolver"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2646,6 +2777,11 @@
       "usable_items"
     ], 
     "cost": 65, 
+    "default_equipment": {
+      "pistols": [
+        "357_magnum_revolver"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2660,6 +2796,12 @@
       "power_armor"
     ], 
     "cost": 59, 
+    "default_equipment": {
+      "heavy_weapons": [
+        "light_machine_gun"
+      ],
+      "power_armor":"ncr_salvaged_power_armor"
+    },
     "factions": [
       "ncr"
     ], 
@@ -2673,6 +2815,11 @@
       "usable_items"
     ], 
     "cost": 76, 
+    "default_equipment": {
+      "rifles": [
+        "trail_carbine"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2686,6 +2833,11 @@
       "usable_items"
     ], 
     "cost": 40, 
+    "default_equipment": {
+      "rifles": [
+        "service_rifle"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2699,6 +2851,11 @@
       "usable_items"
     ], 
     "cost": 39, 
+    "default_equipment": {
+      "melee": [
+        "cattle_prod"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
@@ -2714,6 +2871,12 @@
       "usable_items"
     ], 
     "cost": 86, 
+    "default_equipment": {
+      "rifles": [
+        "marksman_carbine"
+      ],
+      "melee":["thermic_lance"]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2727,6 +2890,9 @@
       "usable_items"
     ], 
     "cost": 90, 
+    "default_equipment": {
+      "melee":["machete"]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2741,7 +2907,15 @@
       "advanced_items",
       "usable_items"
     ], 
-    "cost": 137, 
+    "cost": 137,
+    "default_equipment": {
+      "melee": [
+        "blade_of_the_east"
+      ],
+      "thrown": {
+        "incendiary_grenade": "4"
+      }
+    },
     "factions": [
       "lgn"
     ], 
@@ -2756,6 +2930,11 @@
       "usable_items"
     ], 
     "cost": 59, 
+    "default_equipment": {
+      "melee": [
+        "spear"
+      ]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2770,6 +2949,11 @@
       "usable_items"
     ], 
     "cost": 60, 
+    "default_equipment": {
+      "rifles": [
+        "hunting_rifle"
+      ]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2785,6 +2969,11 @@
       "usable_items"
     ], 
     "cost": 90, 
+    "default_equipment": {
+      "melee": [
+        "ballistic_fist"
+      ]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2801,6 +2990,11 @@
       "usable_items"
     ], 
     "cost": 65, 
+    "default_equipment": {
+      "melee": [
+        "ballistic_fist"
+      ]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2815,6 +3009,14 @@
       "usable_items"
     ], 
     "cost": 38, 
+    "default_equipment": {
+      "melee": [
+        "fire_axe"
+      ],
+      "rifles":[
+        "hunting_shotgun"
+      ]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2828,7 +3030,13 @@
       "advanced_items",
       "usable_items"
     ], 
-    "cost": 30, 
+    "cost": 30,
+    "default_equipment": {
+      "melee": [
+        "machete"
+      ],
+      "rifles":["cowboy_repeater"]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2844,6 +3052,12 @@
       "usable_items"
     ], 
     "cost": 58, 
+    "default_equipment": {
+      "pistols": [
+        "127mm_pistol"
+      ],
+      "melee":["machete_gladius"]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2859,6 +3073,11 @@
       "usable_items"
     ], 
     "cost": 90, 
+    "default_equipment": {
+      "rifles": [
+        "sniper_rifle"
+      ]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2874,6 +3093,11 @@
       "usable_items"
     ], 
     "cost": 80, 
+    "default_equipment": {
+      "melee": [
+        "ripper"
+      ]
+    },
     "factions": [
       "lgn"
     ], 
@@ -2889,6 +3113,11 @@
       "usable_items"
     ], 
     "cost": 112, 
+    "default_equipment": {
+      "rifles": [
+        "anti_materiel_rifle"
+      ]
+    },
     "factions": [
       "ncr"
     ], 
