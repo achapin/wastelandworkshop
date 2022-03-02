@@ -35,7 +35,6 @@ h2 {
 
 #languageSelection {
 	display: inline-block;
-	float: right;
 }
 
 #listInfo {
@@ -359,9 +358,6 @@ select {
 
 .modelCount button {
 	padding: .5em .3em;
-}
-
-.wear_dropdown {
 }
 
 .carry-section span {

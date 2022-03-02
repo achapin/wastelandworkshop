@@ -101,11 +101,12 @@ function localizationLoaded(json){
 	loc = json;
 	console.log("loca loaded");
 
-	var missingKeys = ""
-	var missingPreview = ""
+	var missingKeys = "";
+	var missingPreview = "";
 
 	var checkPreview = false; //Only enable for debugging
-	var badPreview = ""
+	var badPreview = "";
+	var missingDefaults = "";
 
 	units.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
@@ -136,12 +137,19 @@ function localizationLoaded(json){
 			return;
 		}
 
+		if(!character.hasOwnProperty("default_equipment") && !character.hasOwnProperty("must_carry")){
+			missingDefaults += character.name + " ";
+			return;
+		}
+
 		character.battle_mode_packs.forEach(function(pack){
 			if(!upgrades.battle_mode_packs.hasOwnProperty(pack)){
 				console.log(character.name + " has bad pack name " + pack);
 			}
 		})
 	});
+
+	console.log("Missing default equipment: " + missingDefaults);
 
 	Object.keys(upgrades).forEach(function(section){
 		if(!loc.hasOwnProperty(section)){
@@ -1097,6 +1105,7 @@ function inBattleModeKit(optionElement, character, slotType) {
 		}
 		if(upgrades.battle_mode_packs[pack].includes(searchName)){
 			foundItem = true;
+			//console.log("FOUND! " + searchName);
 		}
 	});
 	return foundItem;
@@ -1158,8 +1167,7 @@ function canEquip(optionElement, characterTags) {
 			}
 		});
 	}
-	/*if(allowed)
-		console.log("can equip " + optionElement.name);*/
+	//if(allowed) console.log("can equip " + optionElement.name);
 	return allowed;
 }
 
@@ -1241,6 +1249,8 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 	var equippedItems = document.createElement("div");
 	equippedItems.setAttribute("class","equippedItems");
 
+	var hasEquippedItem = false;
+
 	upgrades[slotType].forEach(function(option){
 		if(option.cost != 0 && canEquip(option, characterTags) && (!isBattleMode || inBattleModeKit(option, character, slotType))){
 			var isEquipped = false;
@@ -1250,6 +1260,7 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 			if(isEquipped){
 				var entrySection = addEquipEntry(character, slotType, option, equippedItems, slotDropdown);
 				equippedItems.appendChild(entrySection);
+				hasEquippedItem = true;
 			}else{
 				var optionElement = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
 				slotDropdown.add(optionElement);
@@ -1272,7 +1283,7 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 		updateCaps();
 	};
 
-	if(slotDropdown.length > 1)
+	if(slotDropdown.length > 1 || hasEquippedItem)
 	{
 		carrySection.appendChild(carryHeader);
 		carrySection.appendChild(equippedItems);
