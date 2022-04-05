@@ -613,7 +613,7 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(headerRightSection, character);
 
-	if(characterElement.battle_mode_packs.includes("upgrades")){
+	if(character.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("upgrades")){
 		var heroicSection = document.createElement("div");
 		heroicSection.setAttribute("class", "heroic");
 		var heroicCheckBox = document.createElement('input');
@@ -755,8 +755,10 @@ function addCharacter(characterElement, presetInfo){
 				mustCarryElement.appendChild(mustCarryDescription);
 				mustCarrySection.appendChild(mustCarryElement);
 
-				var modSecton = getModSectionFor(character, elements[0], upgrade)
-				mustCarrySection.appendChild(modSecton);
+				if(!characterElement.hasOwnProperty("mods_allowed") || characterElement.mods_allowed){
+					var modSecton = getModSectionFor(character, elements[0], upgrade)
+					mustCarrySection.appendChild(modSecton);
+				}
 			}
 		});
 		equipmentSection.appendChild(mustCarrySection);
@@ -764,15 +766,17 @@ function addCharacter(characterElement, presetInfo){
 
 	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
 		addModdedCharacterSlots(characterElement, character, equipmentSection, settlementMode);
-	} else {
+	} else if(!characterElement.hasOwnProperty("perks") || characterElement.perks) {
 		var perkSection = getPerkSection(character);
 		equipmentSection.appendChild(perkSection);
 	}
 
-	if(settlementMode){
-		addSettlementModeSlots(characterElement, character, equipmentSection);
-	}else{
-		addBattleModeSlots(characterElement, character, equipmentSection);
+	if(characterElement.name != "liberty_prime") {
+		if(settlementMode){
+			addSettlementModeSlots(characterElement, character, equipmentSection);
+		}else{
+			addBattleModeSlots(characterElement, character, equipmentSection);
+		}
 	}
 
 	showEquipment.addEventListener("click", function() {
@@ -943,7 +947,7 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 	if(!characterElement.hasOwnProperty("tags") || !characterElement.tags.includes("synth"))
 	{
 		wear_slots.forEach(function(slotType) {
-			if(slotType != "power_armor" || characterElement.battle_mode_packs.includes("power_armor")){
+			if(slotType != "power_armor" || (character.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("power_armor"))){
 				var wearSection = getWearSection(character, false, slotType, characterTags);
 					equipmentSection.appendChild(wearSection);
 			}
@@ -1083,7 +1087,7 @@ function inBattleModeKit(optionElement, character, slotType) {
 	var characterElement = getCharacterById(character.name);
 
 	if(!characterElement.hasOwnProperty("battle_mode_packs") ){
-		console.log(character.name + " has no battle mode packs assigned");
+		//console.log(character.name + " has no battle mode packs assigned");
 		return false;
 	}
 

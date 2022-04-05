@@ -1546,6 +1546,7 @@
     ], 
     "name": "mama_murphy", 
     "preview": "mamamurphy", 
+    "reference": ["reference_mama_murphy"],
     "unique_code": "mama_murphy"
   }, 
   {
@@ -2009,7 +2010,7 @@
     ]
   }, 
   {
-    "cost": 450, 
+    "cost": 180, 
     "factions": [
       "enc"
     ], 
@@ -2017,9 +2018,38 @@
       "melee.horrigans_knife", 
       "rifles.horrigans_plasma_gun"
     ], 
-    "name": "frank_horrigan", 
-    "preview": "frankhorrigan", 
-    "unique_code": "frank_horrigan"
+    "name": "frank_horrigan_1", 
+    "preview": "frankhorrigan",
+    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "unique_code": "frank_horrigan_1"
+  },
+  {
+    "cost": 190, 
+    "factions": [
+      "enc"
+    ], 
+    "must_carry": [
+      "melee.horrigans_knife", 
+      "rifles.horrigans_plasma_gun"
+    ], 
+    "name": "frank_horrigan_2", 
+    "preview": "frankhorrigan2",
+    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "unique_code": "frank_horrigan_2"
+  }, 
+  {
+    "cost": 80, 
+    "factions": [
+      "enc"
+    ], 
+    "must_carry": [
+      "melee.horrigans_knife", 
+      "rifles.horrigans_plasma_gun"
+    ], 
+    "name": "frank_horrigan_3", 
+    "preview": "frankhorrigan3", 
+    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "unique_code": "frank_horrigan_3"
   }, 
   {
     "battle_mode_packs": [
@@ -3123,5 +3153,28 @@
     ], 
     "name": "ncr_veteran_ranger",
     "preview":"ncrveteranranger"
+  },
+  {
+    "cost": 1000, 
+    "factions": [
+      "bos"
+    ],
+    "mods_allowed" : false,
+    "must_carry":[
+      "melee.liberty_prime_stomp",
+      "melee.liberty_prime_punch",
+      "pistols.liberty_laser",
+      "heavy_weapons.mk28_nuclear_bomb",
+      "subsystems.active_defense_matrix",
+      "subsystems.electromagnetic_actuators",
+      "subsystems.gyroscopic_sensors",
+      "subsystems.m28_autoloader",
+      "subsystems.power_core",
+      "subsystems.targeting_hud"
+    ],
+    "name": "liberty_prime",
+    "perks" : false,
+    "preview":"libertyprime",
+    "unique_code":"libertyprime"
   }
 ]

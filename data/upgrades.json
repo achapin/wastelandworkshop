@@ -777,6 +777,11 @@
       "preview": "junkjet"
     },
     {
+      "name": "mk28_nuclear_bomb",
+      "cost": 0,
+      "preview": "mk28nuclearbomb"
+    },
+    {
       "name": "light_machine_gun",
       "cost": 18,
       "preview":"lightmachinegun"
@@ -1206,6 +1211,11 @@
       "preview": "laserpistol"
     },
     {
+      "name": "liberty_laser",
+      "cost": 0,
+      "preview": "libertylaser"
+    },
+    {
       "name":"lorenzos_artifact_gun",
       "cost": 18,
       "preview": "lorenzosartifactgun"
@@ -1492,6 +1502,16 @@
       "name": "lead_pipe",
       "cost": 9,
       "preview": "leadpipe"
+    },
+    {
+      "name": "liberty_prime_stomp",
+      "cost": 0,
+      "preview": "libertyprimestomp"
+    },
+    {
+      "name": "liberty_prime_punch",
+      "cost": 0,
+      "preview": "libertyprimepunch"
     },
     {
       "name": "machete",
@@ -4120,6 +4140,38 @@
       "name":"zapper",
       "cost":8,
       "preview":"zapper"
+    }
+  ],
+  "subsystems":[
+    {
+      "name":"active_defense_matrix",
+      "cost":0,
+      "preview":"libertyprime-activedefensematrix"
+    },
+    {
+      "name":"electromagnetic_actuators",
+      "cost":0,
+      "preview":"libertyprime-electromagneticactuators"
+    },
+    {
+      "name":"gyroscopic_sensors",
+      "cost":0,
+      "preview":"libertyprime-gyroscopicsensors"
+    },
+    {
+      "name":"m28_autoloader",
+      "cost":0,
+      "preview":"libertyprime-m28autoloader"
+    },
+    {
+      "name":"power_core",
+      "cost":0,
+      "preview":"libertyprime-powercore"
+    },
+    {
+      "name":"targeting_hud",
+      "cost":0,
+      "preview":"libertyprime-targetinghud"
     }
   ]
 }
