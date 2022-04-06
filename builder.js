@@ -947,7 +947,7 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 	if(!characterElement.hasOwnProperty("tags") || !characterElement.tags.includes("synth"))
 	{
 		wear_slots.forEach(function(slotType) {
-			if(slotType != "power_armor" || (character.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("power_armor"))){
+			if(slotType != "power_armor" || (characterElement.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("power_armor"))){
 				var wearSection = getWearSection(character, false, slotType, characterTags);
 					equipmentSection.appendChild(wearSection);
 			}
