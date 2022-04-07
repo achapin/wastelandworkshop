@@ -613,7 +613,7 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(headerRightSection, character);
 
-	if(character.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("upgrades")){
+	if(characterElement.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("upgrades")){
 		var heroicSection = document.createElement("div");
 		heroicSection.setAttribute("class", "heroic");
 		var heroicCheckBox = document.createElement('input');
