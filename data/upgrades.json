@@ -686,6 +686,7 @@
       "power_armor.t51_power_armor",
       "power_armor.t60_power_armor",
       "power_armor.t60f_power_armor",
+      "power_armor.tessas_power_armor",
       "power_armor.x01_power_armor"
     ]
   },
@@ -993,6 +994,11 @@
       "preview": "mirelurkqueenacid"
     },
     {
+      "name": "mr_handy_smg",
+      "cost": 10,
+      "preview": "mrhandysmg"
+    },
+    {
       "name": "pipe_rifle",
       "cost": 8,
       "preview": "piperifle"
@@ -1226,6 +1232,16 @@
       "preview": "mrhandyflamer"
     },
     {
+      "name": "mr_handy_laser",
+      "cost": 0,
+      "preview": "mrhandylaser"
+    },
+    {
+      "name": "mr_handy_plasma_pistol",
+      "cost": 6,
+      "preview": "mrhandyplasmapistol"
+    },
+    {
       "name":"penetrating_laser_pistol",
       "cost": 8,
       "preview": "penetratinglaserpistol"
@@ -1349,6 +1365,11 @@
       "preview": "board"
     },
     {
+      "name": "brahmin_trample",
+      "cost": 8,
+      "preview": "brahmintrample"
+    },
+    {
       "name": "cattle_prod",
       "cost": 3,
       "preview": "cattleprod"
@@ -1447,6 +1468,21 @@
       "name": "glowing_radroach_swarm_bite",
       "cost": 0,
       "preview":"glowingradroachswarmbite"
+    },
+    {
+      "name": "glowing_yao_guai_swipe",
+      "cost": 0,
+      "preview":"glowingyaoguaiswipe"
+    },
+    {
+      "name": "grognaks_axe",
+      "cost": 24,
+      "preview":"grognaksaxe"
+    },
+    {
+      "name": "grognaks_sword",
+      "cost": 20,
+      "preview":"grognakssword"
     },
     {
       "name": "hand_saw_blade",
@@ -1634,6 +1670,21 @@
       "preview": "shishkebab"
     },
     {
+      "name": "ship_anchor",
+      "cost": 34,
+      "preview": "shipanchor"
+    },
+    {
+      "name": "ship_anchor_slam",
+      "cost": 0,
+      "preview": "shipanchorslam"
+    },
+    {
+      "name": "ship_anchor_sweep",
+      "cost": 34,
+      "preview": "shipanchorsweep"
+    },
+    {
       "name": "softshell_mirelurk_claw",
       "cost": 0,
       "preview": "softshellmirelurkclaw"
@@ -1662,6 +1713,16 @@
       "name": "super_sledge",
       "cost": 30,
       "preview": "supersledge"
+    },
+    {
+      "name": "swan_grab",
+      "cost": 0,
+      "preview": "swangrab"
+    },
+    {
+      "name": "tessas_fist",
+      "cost": 12,
+      "preview": "tessasfist"
     },
     {
       "name": "thermic_lance",
@@ -1707,6 +1768,11 @@
       "name": "wounding_machete",
       "cost": 3,
       "preview":"woundingmachete"
+    },
+    {
+      "name": "yao_guai_swipe",
+      "cost": 34,
+      "preview": "yaoguaiswipe"
     },
     {
       "name": "young_deathclaw_crush",
@@ -1875,7 +1941,14 @@
     {
       "name": "t60f_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 95
+      "cost": 95,
+      "preview": "t60f_power_armor"
+    },
+    {
+      "name": "tessas_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 32,
+      "preview": "tessaspowerarmor"
     },
     {
       "name": "x01_power_armor",
@@ -2064,7 +2137,7 @@
     {
       "name": "bowler_hat",
       "restrictions":["robot"],
-      "cost": 7,
+      "cost": 6,
       "preview": "bowlerhat"
     },
     {
@@ -2605,6 +2678,11 @@
       "preview": "basher"
     },
     {
+      "name": "berserker",
+      "cost": 9,
+      "preview": "berserker"
+    },
+    {
       "name": "big_leagues",
       "cost": 5,
       "preview": "bigleagues"
@@ -2620,9 +2698,19 @@
       "preview": "blitz"
     },
     {
+      "name": "blitzer",
+      "cost": 8,
+      "preview": "blitzer"
+    },
+    {
       "name": "bloody_mess",
       "cost": 4,
       "preview": "bloodymess"
+    },
+    {
+      "name": "bodyguard",
+      "cost": 16,
+      "preview": "bodyguard"
     },
     {
       "name": "chem_resistant",
@@ -3306,6 +3394,12 @@
       "cost": 6,
       "types":[ "power_armor"],
       "preview": "emergencyprotocols"
+    },
+    {
+      "name": "enrage",
+      "cost": 18,
+      "types":["rifles","pistols"],
+      "preview": "enrage"
     },
     {
       "name": "explosive_shielding",

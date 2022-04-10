@@ -1931,7 +1931,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 390, 
+    "cost": 200, 
     "factions": [
       "crt"
     ], 
@@ -1946,8 +1946,28 @@
       "mods.conditioning_haymaker", 
       "mods.conditioning_rage"
     ], 
-    "name": "deathclaw_matriarch",
+    "name": "deathclaw_matriarch_1",
     "preview":"deathclawmatriarch1",
+    "tags": [
+      "creature"
+    ]
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 190, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.deathclaw_tail_sweep", 
+      "melee.deathclaw_head_butt", 
+      "mods.conditioning_haymaker", 
+      "mods.conditioning_rage"
+    ], 
+    "name": "deathclaw_matriarch_2",
+    "preview":"deathclawmatriarch2",
     "tags": [
       "creature"
     ]
@@ -3176,5 +3196,503 @@
     "perks" : false,
     "preview":"libertyprime",
     "unique_code":"libertyprime"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 75, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":["melee.mongrel_bite"],
+    "name": "alpha_mongrel",
+    "preview":"alphamongrel"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "wasteland_items",
+        "high_tech_items"
+    ], 
+    "cost": 43, 
+    "factions": [
+      "coa"
+    ], 
+    "name": "child_of_atom",
+    "preview":"childofatom"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "wasteland_items",
+        "high_tech_items"
+    ], 
+    "cost": 66, 
+    "factions": [
+      "coa"
+    ], 
+    "name": "disciple",
+    "preview":"disciple"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "wasteland_items",
+        "high_tech_items"
+    ], 
+    "cost": 62, 
+    "factions": [
+      "coa"
+    ], 
+    "name": "preacher",
+    "preview":"preacher"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 135, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":["melee.glowing_yao_guai_bite"],
+    "name": "glowing_yao_guai",
+    "preview":"glowingyaoguai"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 0, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":["melee.yao_guai_bite"],
+    "name": "yao_guai",
+    "preview":"yaoguai"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 57, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":["melee.mongrel_bite"],
+    "name": "mongrel",
+    "preview":"mongrel"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items"
+    ], 
+    "cost": 36, 
+    "factions": [
+      "gun"
+    ], 
+    "name": "gunner_conscript",
+    "preview":"gunnerconscript"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items"
+    ], 
+    "cost": 53, 
+    "factions": [
+      "gun"
+    ], 
+    "name": "gunner_private",
+    "preview":"gunnerprivate"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items"
+    ], 
+    "cost": 68, 
+    "factions": [
+      "gun"
+    ], 
+    "name": "gunner_sergeant",
+    "preview":"gunnersergeant"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items",
+        "power_armor"
+    ], 
+    "cost": 83, 
+    "factions": [
+      "gun"
+    ], 
+    "name": "gunner_commander",
+    "preview":"gunnercommander"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items"
+    ], 
+    "cost": 110, 
+    "factions": [
+      "gun"
+    ], 
+    "name": "sergeant_baker",
+    "preview":"sergeantbaker"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items",
+        "power_armor"
+    ], 
+    "cost": 100, 
+    "factions": [
+      "gun"
+    ], 
+    "must_carry":[
+      "power_armor.tessas_power_armor",
+      "melee.tessas_fist"
+    ],
+    "name": "tessa",
+    "preview":"tessa"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items",
+        "power_armor"
+    ], 
+    "cost": 105, 
+    "factions": [
+      "gun"
+    ],
+    "free_mod": {
+      "mod": "enrage", 
+      "restriction": "laser_rifle"
+    },
+    "must_carry": ["rifles.laser_rifle"],
+    "name": "lieutenant_clint",
+    "preview":"lieutenantclint"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "high_tech_items"
+    ], 
+    "cost": 110, 
+    "factions": [
+      "gun"
+    ], 
+    "name": "sergeant_baker",
+    "preview":"sergeantbaker"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 108, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "desdemona",
+    "preview":"desdemona"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 63, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "dr_carrington",
+    "preview":"drcarrington"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 47, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "drummer_boy",
+    "preview":"drummerboy"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 60, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "mr_tims",
+    "preview":"mrtims"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 56, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "tinker_tom",
+    "preview":"tinkertom"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 102, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "glory",
+    "preview":"glory"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 78, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "deacon",
+    "preview":"deacon"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 83, 
+    "factions": [
+      "rlr"
+    ], 
+    "name": "railroad_heavy",
+    "preview":"railroadheavy"
+  },
+  {
+    "battle_mode_packs": [
+        "robot_items"
+    ], 
+    "cost": 90, 
+    "factions": [
+      "rlr"
+    ], 
+    "must_carry" : ["melee.assaultron_swipe"],
+    "name": "pam",
+    "preview":"pam",
+    "tags":["robot"]
+  },
+  {
+    "battle_mode_packs": [
+        "robot_items"
+    ], 
+    "cost": 60, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry" : [
+      "melee.mr_handy_buzzsaw",
+      "pistols.mr_handy_laser"
+    ],
+    "name": "miss_nanny",
+    "preview":"missnanny",
+    "tags":["robot"]
+  },
+  {
+    "battle_mode_packs": [
+        "robot_items"
+    ], 
+    "cost": 75, 
+    "factions": [
+      "rbt"
+    ], 
+    "name": "mr_gutsy",
+    "preview":"mrgutsy",
+    "tags":["robot"]
+  },
+  {
+    "battle_mode_packs": [
+        "robot_items"
+    ], 
+    "cost": 52, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry" : [
+      "melee.hand_shock"
+    ],
+    "name": "police_protectron",
+    "preview":"policeprotectron",
+    "tags":["robot"]
+  },
+  {
+    "battle_mode_packs": [
+        "robot_items"
+    ], 
+    "cost": 52, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry" : [
+      "pistols.hand_cryojet"
+    ],
+    "name": "protectron_fire_brigadier",
+    "preview":"protectronfirebrigadier",
+    "tags":["robot"]
+  },
+  {
+    "battle_mode_packs": [
+        "robot_items"
+    ], 
+    "cost": 55, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry" : [
+      "pistols.hand_nail_gun"
+    ],
+    "name": "utility_protectron",
+    "preview":"utilityprotectron",
+    "tags":["robot"]
+  },
+  {
+    "battle_mode_packs": [
+        "robot_items"
+    ], 
+    "cost": 73, 
+    "factions": [
+      "srv"
+    ], 
+    "must_carry" : [
+      "melee.mr_handy_buzzsaw",
+      "pistols.mr_handy_laser"
+    ],
+    "name": "curie",
+    "preview":"curie",
+    "tags":["robot"]
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "wasteland_items"
+    ], 
+    "cost": 240, 
+    "factions": [
+      "srv"
+    ], 
+    "must_carry":[
+      "melee.grognaks_sword",
+      "melee.grognaks_axe"
+    ],
+    "name": "grognak",
+    "preview":"grognak"
+  },
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 0, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.brahmin_trample"
+    ], 
+    "name": "brahmin",
+    "preview":"brahmin",
+    "tags": [
+      "creature"
+    ]
+  },
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 0, 
+    "factions": [
+      "mut"
+    ], 
+    "must_carry": [
+      "melee.ship_anchor",
+      "melee.ship_anchor_slam",
+      "thrown.behemoth_rock_throw"
+    ], 
+    "name": "swan_1",
+    "preview":"swan1",
+    "tags": [
+      "creature"
+    ]
+  },
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 0, 
+    "factions": [
+      "mut"
+    ], 
+    "must_carry": [
+      "melee.ship_anchor",
+      "melee.ship_anchor_sweep",
+      "melee.swan_grab",
+      "thrown.behemoth_rock_throw"
+    ], 
+    "name": "swan_2",
+    "preview":"swan2",
+    "tags": [
+      "creature"
+    ]
   }
 ]

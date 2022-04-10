@@ -23,11 +23,14 @@ var appliedFilters = [];
 var possibleFilters = [
 	"bos",
 	"lgn",
+	"coa",
 	"crt",
 	"enc",
 	"ins",
+	"gun",
 	"ncr",
 	"rdr",
+	"rlr",
 	"rbt",
 	"mut",
 	"srv"
