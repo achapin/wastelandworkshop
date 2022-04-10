@@ -3349,20 +3349,6 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "high_tech_items"
-    ], 
-    "cost": 110, 
-    "factions": [
-      "gun"
-    ], 
-    "name": "sergeant_baker",
-    "preview":"sergeantbaker"
-  },
-  {
-    "battle_mode_packs": [
-        "upgrades",
-        "usable_items",
-        "advanced_items",
         "high_tech_items",
         "power_armor"
     ], 
@@ -3506,6 +3492,9 @@
     "factions": [
       "rlr"
     ], 
+    "has_perk": [
+      "huntsman"
+    ],
     "name": "deacon",
     "preview":"deacon"
   },
