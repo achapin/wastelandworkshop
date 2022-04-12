@@ -887,7 +887,6 @@ function addModdedCharacterSlots(characterElement, character, equipmentSection, 
 
 	var moddedCharacterSlots = document.createElement("div");
 	var locKey = "mods_"+characterElement.tags[0];
-	console.log(locKey)
 	moddedCharacterSlots.appendChild(document.createTextNode(loc[locKey]));
 	moddedCharacterSlots.appendChild(slotDropdown1);
 	moddedCharacterSlots.appendChild(slotDropdown2);
@@ -902,8 +901,12 @@ function addSettlementModeSlots(characterElement, character, equipmentSection){
 	var firstConsumableSection = true;
 
 	var characterTags = [];
+	var carryPack = null;
 	if(characterElement.hasOwnProperty("tags")){
 		characterTags = characterElement.tags;
+	}
+	if(characterElement.hasOwnProperty("carry_pack")){
+		carryPack = characterElement.carry_pack;
 	}
 
 	if(!characterElement.hasOwnProperty("tags") || !characterElement.tags.includes("synth"))
@@ -923,7 +926,7 @@ function addSettlementModeSlots(characterElement, character, equipmentSection){
 		equipmentSection.appendChild(consumeableSection);
 	}else{
 		carry_slots.forEach(function(slotType) {
-			var carrySection = getCarrySection(character, false, slotType, characterTags);
+			var carrySection = getCarrySection(character, false, slotType, characterTags, carryPack);
 			equipmentSection.appendChild(carrySection);
 		});
 
@@ -946,6 +949,10 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 	if(characterElement.hasOwnProperty("tags")){
 		characterTags = characterElement.tags;
 	}
+	var carryPack = null;
+	if(characterElement.hasOwnProperty("carry_pack")){
+		carryPack = characterElement.carry_pack;
+	}
 
 	if(!characterElement.hasOwnProperty("tags") || !characterElement.tags.includes("synth"))
 	{
@@ -966,7 +973,7 @@ function addBattleModeSlots(characterElement, character, equipmentSection){
 		equipmentSection.appendChild(consumeableSection);
 	}else{
 		carry_slots.forEach(function (slotType) {
-			var carrySection = getCarrySection(character, true, slotType, characterTags);
+			var carrySection = getCarrySection(character, true, slotType, characterTags, carryPack);
 			equipmentSection.appendChild(carrySection);
 		});
 
@@ -1238,7 +1245,7 @@ function getWearSection(character, isBattleMode, slotType, characterTags){
 	return wearSection;
 }
 
-function getCarrySection(character, isBattleMode, slotType, characterTags){
+function getCarrySection(character, isBattleMode, slotType, characterTags, carryPack){
 	var carrySection = document.createElement("div");
 	carrySection.setAttribute("class", "carry-section");
 	var carryHeader = document.createElement("h2");
@@ -1259,7 +1266,16 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 	var hasEquippedItem = false;
 
 	upgrades[slotType].forEach(function(option){
-		if(option.cost != 0 && canEquip(option, characterTags) && (!isBattleMode || inBattleModeKit(option, character, slotType))){
+		var can_equip = false;
+		if(carryPack != null){
+			if(upgrades.battle_mode_packs[carryPack].includes(slotType + "." + option.name)){
+				can_equip = true;
+			}
+		} else if(option.cost != 0 && canEquip(option, characterTags) && (!isBattleMode || inBattleModeKit(option, character, slotType))){
+			can_equip = true;
+		}
+
+		if(can_equip){
 			var isEquipped = false;
 			if(character.hasOwnProperty(slotType)){
 				isEquipped = character[slotType].includes(option.name);
@@ -1269,7 +1285,7 @@ function getCarrySection(character, isBattleMode, slotType, characterTags){
 				equippedItems.appendChild(entrySection);
 				hasEquippedItem = true;
 			}else{
-				var optionElement = new Option(loc[option.name] + " (" + option.cost + ")", option.name);
+				var optionElement = new Option(loc[option.name] + " (" + Math.max(0, option.cost) + ")", option.name);
 				slotDropdown.add(optionElement);
 			}
 		}
@@ -1315,7 +1331,7 @@ function addEquipEntry(character, slotType, optionElement, equippedItems, slotDr
 	equipmentEntry.appendChild(equipmentName);
 
 	var equipmentCost = document.createElement("span");
-	equipmentCost.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
+	equipmentCost.appendChild(document.createTextNode("(" + Math.max(0, optionElement.cost) + ")"));
 	equipmentEntry.appendChild(equipmentCost);
 
 	var modSection = getModSectionFor(character, slotType, optionElement);
@@ -1330,7 +1346,7 @@ function addEquipEntry(character, slotType, optionElement, equippedItems, slotDr
 		equippedItems.removeChild(equipmentEntry);
 		updateCaps();
 
-		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
+		var option = new Option(loc[optionElement.name] + " (" + Math.max(0, optionElement.cost) + ")", optionElement.name);
 		var optionIndex = 0;
 		for(index = 1; index < slotDropdown.options.length; index++){
 			if(optionElement.name > slotDropdown.options[index].value){
@@ -1870,12 +1886,6 @@ function updateCaps(){
 				var mmwarning = document.createTextNode("MULTI-MODEL UNITS CANNOT BE Heroic OR HAVE PERKS");
 				warningSection.appendChild(mmwarning);
 			}
-
-
-			if(false){ //TODO" Faction checking
-				var faction_warning = document.createTextNode("THIS UNIT IS NOT ALLOWED IN THE CURRENT FACTION");
-				warningSection.appendChild(faction_warning);
-			}
 	
 			wear_slots.forEach(function (slotType) {
 				if(character[slotType] != null){
@@ -1888,9 +1898,13 @@ function updateCaps(){
 			carry_slots.forEach(function (slotType) {
 				if(character.hasOwnProperty(slotType)){
 					character[slotType].forEach(function(item){
-						var carryCost = getUpgrade(slotType,item).cost;
-						unitCost += carryCost * modelCount;
-						modelUpdadeCost += carryCost;
+						if(!characterTemplate.hasOwnProperty("equipped_pack") || !upgrades.battle_mode_packs[characterTemplate.equipped_pack].includes(slotType+"."+item))
+						{
+							var carryCost = getUpgrade(slotType,item).cost;
+							carryCost = Math.max(0, carryCost);
+							unitCost += carryCost * modelCount;
+							modelUpdadeCost += carryCost;
+						}
 					});
 				}
 			});

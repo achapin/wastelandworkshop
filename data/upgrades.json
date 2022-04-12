@@ -249,9 +249,6 @@
       "gear.mr_handy_fuel",
       "gear.robot_repair_kit",
       "gear.robot_repair_patch",
-      "gear.third_arm_clamp",
-      "heavy_weapons.securitron_gatling_laser",
-      "heavy_weapons.securitron_missile_launcher",
       "heroic.clunky",
       "melee.assaultron_swipe",
       "melee.empty_minigun",
@@ -284,20 +281,10 @@
       "mods.terminal_self_destruction",
       "mods.tesla_coils_robots",
       "mods.welded_plate",
-      "pistols.eyebot_laser",
-      "pistols.eyebot_tesla_cannon",
       "pistols.hand_cryojet",
       "pistols.hand_gamma_gun",
       "pistols.hand_lightning_gun",
-      "pistols.hand_nail_gun",
-      "pistols.mr_handy_flamer",
-      "pistols.protectron_hand_laser",
-      "pistols.robobrain_mesmetron",
-      "rifles.assaultron_head_laser",
-      "rifles.battered_assaultron_head_laser",
-      "rifles.robobrain_laser",
-      "rifles.securitron_grenade_launcher",
-      "rifles.securitron_smg"
+      "pistols.hand_nail_gun"
     ],
     "special_items" : [
       "melee.fire_hydrant_bat",
@@ -676,6 +663,20 @@
       "rifles.robobrain_laser",
       "pistols.robobrain_mesmetron"
     ],
+    "mr_handy_items" : [
+      "rifles.mr_handy_smg",
+      "pistols.mr_handy_flamer",
+      "pistols.mr_handy_laser",
+      "pistols.mr_handy_plasma_pistol",
+      "melee.mr_handy_buzzsaw",
+      "gear.third_arm_clamp"
+    ],
+    "securitron_items": [
+      "heavy_weapons.securitron_gatling_laser",
+      "heavy_weapons.securitron_missile_launcher",
+      "rifles.securitron_grenade_launcher",
+      "rifles.securitron_smg"
+    ],
     "power_armor":[
       "power_armor.enclave_power_armor",
       "power_armor.hellfire_power_armor",
@@ -800,12 +801,14 @@
     {
       "name": "securitron_gatling_laser",
       "cost": 20,
-      "preview": "securitrongatlinglaser"
+      "preview": "securitrongatlinglaser",
+      "restrictions":["robot", "securitron"]
     },
     {
       "name": "securitron_missile_launcher",
       "cost": 52,
-      "preview": "securitronmissilelauncher"
+      "preview": "securitronmissilelauncher",
+      "restrictions":["robot", "securitron"]
     },
     {
       "name": "tesla_cannon",
@@ -996,6 +999,7 @@
     {
       "name": "mr_handy_smg",
       "cost": 10,
+      "restrictions":["robot", "mr_handy"],
       "preview": "mrhandysmg"
     },
     {
@@ -1027,7 +1031,7 @@
       "name":"robobrain_laser",
       "cost": 7,
       "preview":"robobrainlaser",
-      "restrictions":["robot"]
+      "restrictions":["robot", "robobrain"]
     },
     {
       "name": "sawed_off_shotgun",
@@ -1037,12 +1041,14 @@
     {
       "name": "securitron_grenade_launcher",
       "cost": 35,
-      "preview": "securitrongrenadelauncher"
+      "preview": "securitrongrenadelauncher",
+      "restrictions":["robot", "securitron"]
     },
     {
       "name": "securitron_smg",
       "cost": 10,
-      "preview": "securitronsmg"
+      "preview": "securitronsmg",
+      "restrictions":["robot", "securitron"]
     },
     {
       "name": "service_rifle",
@@ -1229,16 +1235,19 @@
     {
       "name": "mr_handy_flamer",
       "cost": 10,
+      "restrictions":["robot", "mr_handy"],
       "preview": "mrhandyflamer"
     },
     {
       "name": "mr_handy_laser",
-      "cost": 0,
+      "cost": -1,
+      "restrictions":["robot","mr_handy"],
       "preview": "mrhandylaser"
     },
     {
       "name": "mr_handy_plasma_pistol",
       "cost": 6,
+      "restrictions":["robot","mr_handy"],
       "preview": "mrhandyplasmapistol"
     },
     {
@@ -1294,7 +1303,7 @@
     {
       "name":"robobrain_mesmetron",
       "cost": 15,
-      "restrictions":["robot"],
+      "restrictions":["robot", "robobrain"],
       "preview":"robobrainmesmetron"
     },
     {
@@ -1607,6 +1616,7 @@
     {
       "name": "mr_handy_buzzsaw",
       "cost": 6,
+      "restrictions":["robot", "mr_handy"],
       "preview": "mrhandybuzzsaw"
     },
     {
@@ -2258,6 +2268,7 @@
     {
       "name": "triggerman_bowler",
       "cost": 5,
+      "restrictions":["robot"],
       "preview": "triggermanbowler"
     },
     {
@@ -4207,7 +4218,6 @@
     {
       "name":"third_arm_clamp",
       "cost":4,
-      "restrictions":["robot"],
       "preview":"thirdarmclamp"
     },
     {
