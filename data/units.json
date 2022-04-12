@@ -2683,8 +2683,9 @@
   }, 
   {
     "battle_mode_packs": [
-      "robot_items"
-    ], 
+      "robot_items",
+      "securitron_items"
+    ],
     "cost": 200, 
     "default_equipment": {
       "rifles": [
@@ -2692,12 +2693,14 @@
         "securitron_smg"
       ]
     },
+    "equipped_pack": "securitron_items",
     "factions": [
       "rbt"
     ], 
     "name": "securitron_mk_2",
     "tags": [
-      "robot"
+      "robot",
+      "securitron"
     ],
     "preview":"securitronmk2"
   }, 
@@ -2729,7 +2732,7 @@
       "rifles": [
         "robobrain_laser"
       ],
-      "melee":["robobrain_mesmetron"]
+      "pistols":["robobrain_mesmetron"]
     },
     "factions": [
       "rbt"
@@ -3494,7 +3497,7 @@
     ], 
     "has_perk": [
       "huntsman"
-    ],
+    ], 
     "name": "deacon",
     "preview":"deacon"
   },
@@ -3543,15 +3546,17 @@
   },
   {
     "battle_mode_packs": [
-        "robot_items"
+        "robot_items",
+        "mr_handy_items"
     ], 
-    "cost": 75, 
+    "cost": 75,
+    "equipped_pack": "mr_handy_items",
     "factions": [
       "rbt"
     ], 
     "name": "mr_gutsy",
     "preview":"mrgutsy",
-    "tags":["robot"]
+    "tags":["robot","mr_handy"]
   },
   {
     "battle_mode_packs": [
