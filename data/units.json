@@ -3269,8 +3269,8 @@
   {
     "battle_mode_packs": [
       "creature_items"
-    ], 
-    "cost": 0, 
+    ],
+    "cost": 260,
     "factions": [
       "crt"
     ], 
@@ -3638,8 +3638,9 @@
   },
   {
     "battle_mode_packs": [
+      "creature_items"
     ], 
-    "cost": 0, 
+    "cost": 30, 
     "factions": [
       "crt"
     ], 
