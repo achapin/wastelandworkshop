@@ -3220,6 +3220,12 @@
         "high_tech_items"
     ], 
     "cost": 43, 
+    "default_equipment": {
+      "pistols": [
+        "pipe_pistol",
+        "gamma_gun"
+      ]
+    }, 
     "factions": [
       "coa"
     ], 
@@ -3234,6 +3240,12 @@
         "high_tech_items"
     ], 
     "cost": 66, 
+    "default_equipment": {
+      "pistols": [
+        "pipe_pistol",
+        "gamma_gun"
+      ]
+    }, 
     "factions": [
       "coa"
     ], 
@@ -3248,6 +3260,12 @@
         "high_tech_items"
     ], 
     "cost": 62, 
+    "default_equipment": {
+      "pistols": [
+        "pipe_pistol",
+        "gamma_gun"
+      ]
+    }, 
     "factions": [
       "coa"
     ], 
@@ -3269,8 +3287,8 @@
   {
     "battle_mode_packs": [
       "creature_items"
-    ], 
-    "cost": 260, 
+    ],
+    "cost": 260,
     "factions": [
       "crt"
     ], 
@@ -3298,6 +3316,11 @@
         "high_tech_items"
     ], 
     "cost": 36, 
+    "default_equipment": {
+      "pistols": [
+        "10mm_pistol"
+      ]
+    }, 
     "factions": [
       "gun"
     ], 
@@ -3312,6 +3335,11 @@
         "high_tech_items"
     ], 
     "cost": 53, 
+    "default_equipment": {
+      "rifles": [
+        "combat_rifle"
+      ]
+    }, 
     "factions": [
       "gun"
     ], 
@@ -3326,6 +3354,11 @@
         "high_tech_items"
     ], 
     "cost": 68, 
+    "default_equipment": {
+      "rifles": [
+        "laser_rifle"
+      ]
+    }, 
     "factions": [
       "gun"
     ], 
@@ -3340,7 +3373,15 @@
         "high_tech_items",
         "power_armor"
     ], 
-    "cost": 83, 
+    "cost": 83,
+    "default_equipment": {
+      "rifles": [
+        "plasma_rifle"
+      ],
+      "melee":[
+        "ripper"
+      ]
+    }, 
     "factions": [
       "gun"
     ], 
@@ -3356,6 +3397,11 @@
         "power_armor"
     ], 
     "cost": 100, 
+    "default_equipment": {
+      "thrown": {
+        "molotov_cocktail": "6"
+      }
+    }, 
     "factions": [
       "gun"
     ], 
@@ -3394,6 +3440,11 @@
         "high_tech_items"
     ], 
     "cost": 110, 
+    "default_equipment": {
+      "heavy_weapons": [
+        "missile_launcher"
+      ]
+    }, 
     "factions": [
       "gun"
     ], 
@@ -3408,6 +3459,11 @@
         "wasteland_items"
     ], 
     "cost": 108, 
+    "default_equipment": {
+      "rifles": [
+        "railway_rifle"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
@@ -3422,6 +3478,11 @@
         "wasteland_items"
     ], 
     "cost": 63, 
+    "default_equipment": {
+      "pistols": [
+        "pipe_pistol"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
@@ -3436,6 +3497,11 @@
         "wasteland_items"
     ], 
     "cost": 47, 
+    "default_equipment": {
+      "pistols": [
+        "pipe_pistol"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
@@ -3450,6 +3516,11 @@
         "wasteland_items"
     ], 
     "cost": 60, 
+    "default_equipment": {
+      "pistols": [
+        "44_revolver"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
@@ -3463,7 +3534,12 @@
         "advanced_items",
         "wasteland_items"
     ], 
-    "cost": 56, 
+    "cost": 56,
+    "default_equipment": {
+      "pistols": [
+        "laser_pistol"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
@@ -3478,6 +3554,11 @@
         "wasteland_items"
     ], 
     "cost": 102, 
+    "default_equipment": {
+      "heavy_weapons": [
+        "minigun"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
@@ -3492,6 +3573,11 @@
         "wasteland_items"
     ], 
     "cost": 78, 
+    "default_equipment": {
+      "rifles": [
+        "hunting_rifle"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
@@ -3509,6 +3595,11 @@
         "wasteland_items"
     ], 
     "cost": 83, 
+    "default_equipment": {
+      "rifles": [
+        "gauss_rifle"
+      ]
+    }, 
     "factions": [
       "rlr"
     ], 
