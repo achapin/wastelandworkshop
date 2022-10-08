@@ -1736,7 +1736,9 @@
       ]
     }, 
     "factions": [
-      "srv"
+      "srv",
+      "bos",
+      "ins"
     ], 
     "name": "sole_survivor", 
     "preview": "solesurvivor", 
@@ -1782,7 +1784,9 @@
       ]
     }, 
     "factions": [
-      "srv"
+      "srv",
+      "bos",
+      "ins"
     ], 
     "has_perk": [
       "lone_wanderer"
@@ -1808,7 +1812,9 @@
       ]
     }, 
     "factions": [
-      "srv"
+      "srv",
+      "bos",
+      "ins"
     ], 
     "name": "sole_survivor_tech", 
     "preview": "solesurvivortech", 
