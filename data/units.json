@@ -2714,7 +2714,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 65, 
+    "cost": 57, 
     "factions": [
       "crt",
       "lgn"
@@ -3282,7 +3282,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 135, 
+    "cost": 285, 
     "factions": [
       "crt"
     ], 
@@ -3340,7 +3340,7 @@
         "advanced_items",
         "high_tech_items"
     ], 
-    "cost": 53, 
+    "cost": 72, 
     "default_equipment": {
       "rifles": [
         "combat_rifle"
@@ -3359,7 +3359,7 @@
         "advanced_items",
         "high_tech_items"
     ], 
-    "cost": 68, 
+    "cost": 80, 
     "default_equipment": {
       "rifles": [
         "laser_rifle"
@@ -3426,7 +3426,7 @@
         "high_tech_items",
         "power_armor"
     ], 
-    "cost": 105, 
+    "cost": 148, 
     "factions": [
       "gun"
     ],
@@ -3722,7 +3722,7 @@
         "usable_items",
         "wasteland_items"
     ], 
-    "cost": 240, 
+    "cost": 203, 
     "factions": [
       "srv"
     ], 
