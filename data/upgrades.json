@@ -1019,7 +1019,7 @@
     },
     {
       "name": "railway_rifle",
-      "cost": 20,
+      "cost": 14,
       "preview": "railwayrifle"
     },
     {
@@ -1375,7 +1375,7 @@
     },
     {
       "name": "brahmin_trample",
-      "cost": 8,
+      "cost": 0,
       "preview": "brahmintrample"
     },
     {
@@ -1691,7 +1691,7 @@
     },
     {
       "name": "ship_anchor_sweep",
-      "cost": 34,
+      "cost": 0,
       "preview": "shipanchorsweep"
     },
     {
@@ -1781,7 +1781,7 @@
     },
     {
       "name": "yao_guai_swipe",
-      "cost": 34,
+      "cost": 0,
       "preview": "yaoguaiswipe"
     },
     {
@@ -2501,22 +2501,22 @@
     },
     {
       "name": "berserker",
-      "cost": 8,
+      "cost": 9,
       "preview": "berserker"
     },
     {
       "name": "blitzer",
-      "cost": 4,
+      "cost": 8,
       "preview": "blitzer"
     },
     {
       "name": "bodyguard",
-      "cost": 12,
+      "cost": 16,
       "preview": "bodyguard"
     },
     {
       "name": "brawler",
-      "cost": 10,
+      "cost": 12,
       "preview": "brawler"
     },
     {
@@ -2526,7 +2526,7 @@
     },
     {
       "name": "commander",
-      "cost": 18,
+      "cost": 13,
       "preview": "commander"
     },
     {
@@ -2542,17 +2542,17 @@
     },
     {
       "name": "defender",
-      "cost": 28,
+      "cost": 12,
       "preview": "defender"
     },
     {
       "name": "dweller",
-      "cost": 8,
+      "cost": 17,
       "preview": "dweller"
     },
     {
       "name": "fusilier",
-      "cost": 12,
+      "cost": 14,
       "preview": "fusilier"
     },
     {
@@ -2572,7 +2572,7 @@
     },
     {
       "name": "old_timer",
-      "cost": 3,
+      "cost": 11,
       "preview": "oldtimer"
     },
     {
@@ -2613,7 +2613,7 @@
     },
     {
       "name": "tech",
-      "cost": 9,
+      "cost": 14,
       "preview": "tech"
     },
     {
@@ -2623,22 +2623,22 @@
     },
     {
       "name": "thief",
-      "cost": 7,
+      "cost": 11,
       "preview": "thief"
     },
     {
       "name": "veteran",
-      "cost": 13,
+      "cost": 12,
       "preview": "veteran"
     },
     {
       "name": "warden",
-      "cost": 12,
+      "cost": 11,
       "preview": "warden"
     },
     {
       "name": "wasteland_searcher",
-      "cost": 5,
+      "cost": 12,
       "preview": "wastelandsearcher"
     },
     {
