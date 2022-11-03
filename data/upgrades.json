@@ -172,7 +172,7 @@
       "mods.conditioning_wily",
       "rifles.mirelurk_hunter_acid",
       "rifles.mirelurk_queen_acid",
-      "thrown.centaur_lash",
+      "thrown.centaur_spit",
       "thrown.mirelurk_queen_brood"
     ],
     "dog_items" : [
@@ -683,6 +683,7 @@
       "power_armor.ncr_salvaged_power_armor",
       "power_armor.power_armor_frame",
       "power_armor.raider_power_armor",
+      "power_armor.slags_power_armor",
       "power_armor.t45_power_armor",
       "power_armor.t51_power_armor",
       "power_armor.t60_power_armor",
@@ -1325,6 +1326,26 @@
       "name":"wounding_laser_pistol",
       "cost": 8,
       "preview": "woundinglaserpistol"
+    },
+    {
+      "name": "bloatfly_larva",
+      "cost": 0,
+      "preview": "bloatflylarva"
+    },
+    {
+      "name": "bloodbug_blood_spray",
+      "cost": 0,
+      "preview": "bloodbugbloodspray"
+    },
+    {
+      "name": "glowing_bloatfly_larva",
+      "cost": 0,
+      "preview": "glowingbloatflylarva"
+    },
+    {
+      "name": "glowing_bloodbug_blood_spray",
+      "cost": 0,
+      "preview": "glowingbloodbugbloodspray"
     }
   ],
   "melee": [
@@ -1793,6 +1814,46 @@
       "name": "young_deathclaw_swipe",
       "cost": 0,
       "preview": "youngdeathclawswipe"
+    },
+    {
+      "name": "bloodbug_proboscis",
+      "cost": 0,
+      "preview": "bloodbugproboscis"
+    },
+    {
+      "name": "centaur_lash",
+      "cost": 0,
+      "preview": "centaurlash"
+    },
+    {
+      "name": "glowing_bloodbug_proboscis",
+      "cost": 0,
+      "preview": "glowingbloodbugproboscis"
+    },
+    {
+      "name": "glowing_stingwing_sting",
+      "cost": 0,
+      "preview": "glowingstingwingsting"
+    },
+    {
+      "name": "incendiary_super_sledge",
+      "cost": 33,
+      "preview": "incendiarysupersledge"
+    },
+    {
+      "name": "radstag_doe_gore",
+      "cost": 0,
+      "preview": "radstagdoegore"
+    },
+    {
+      "name": "radstag_gore",
+      "cost": 0,
+      "preview": "radstaggore"
+    },
+    {
+      "name": "stingwing_sting",
+      "cost": 0,
+      "preview": "stingwingsting"
     }
   ],
   "thrown": [
@@ -1807,9 +1868,9 @@
       "preview": "behemothrockthrow"
     },
     {
-      "name": "centaur_lash",
+      "name": "centaur_spit",
       "cost": 0,
-      "preview": "centaurlash"
+      "preview": "centaurspit"
     },
     {
       "name": "cryo_grenade",
@@ -4010,6 +4071,11 @@
       "name":"yao_guai_rib_meat",
       "cost":24,
       "preview": "yaoguairibmeat"
+    },
+    {
+      "name":"tarberry",
+      "cost":9,
+      "preview": "tarberry"
     }
   ],
   "gear":[

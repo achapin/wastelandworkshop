@@ -26,6 +26,7 @@ var possibleFilters = [
 	"coa",
 	"crt",
 	"enc",
+	"frg",
 	"ins",
 	"gun",
 	"ncr",
@@ -33,6 +34,7 @@ var possibleFilters = [
 	"rlr",
 	"rbt",
 	"mut",
+	"slg",
 	"srv"
 ]
 
