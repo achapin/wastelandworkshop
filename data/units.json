@@ -3753,7 +3753,7 @@
   {
     "battle_mode_packs": [
     ], 
-    "cost": 0, 
+    "cost": 225, 
     "factions": [
       "mut"
     ], 
@@ -3771,7 +3771,7 @@
   {
     "battle_mode_packs": [
     ], 
-    "cost": 0, 
+    "cost": 201, 
     "factions": [
       "mut"
     ], 
@@ -3786,5 +3786,309 @@
     "tags": [
       "creature"
     ]
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 42, 
+    "must_carry":["melee.shishkebab"],
+    "factions": [
+      "rdr",
+      "srv",
+      "frg"
+    ], 
+    "name": "jake_finch",
+    "preview":"jakefinch"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 65, 
+    "has_perk": [
+      "pyromaniac"
+    ],
+    "must_carry":["melee.shishkebab"],
+    "factions": [
+      "rdr",
+      "frg"
+    ], 
+    "name": "slag",
+    "preview":"slag"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 49,
+    "factions": [
+      "rdr",
+      "frg"
+    ], 
+    "name": "bedlam",
+    "preview":"bedlam"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 45,
+    "factions": [
+      "rdr",
+      "frg"
+    ], 
+    "name": "forged",
+    "preview":"forged"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 65,
+    "factions": [
+      "srv",
+      "slg"
+    ], 
+    "has_perk": [
+      "lead_belly"
+    ],
+    "name": "wiseman",
+    "preview":"wiseman"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 49,
+    "factions": [
+      "srv",
+      "slg"
+    ], 
+    "has_perk": [
+      "lead_belly"
+    ],
+    "name": "arlen_glass",
+    "preview":"arlenglass"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 45,
+    "factions": [
+      "srv",
+      "slg"
+    ], 
+    "has_perk": [
+      "lead_belly"
+    ],
+    "name": "holly",
+    "preview":"holly"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 52,
+    "factions": [
+      "srv",
+      "slg"
+    ], 
+    "has_perk": [
+      "lead_belly"
+    ],
+    "name": "deidre",
+    "preview":"deidre"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 69,
+    "factions": [
+      "srv",
+      "slg"
+    ], 
+    "has_perk": [
+      "lead_belly"
+    ],
+    "name": "jones",
+    "preview":"jones"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 40,
+    "factions": [
+      "srv",
+      "slg"
+    ], 
+    "has_perk": [
+      "lead_belly"
+    ],
+    "name": "ghoul",
+    "preview":"ghoul"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 59,
+    "factions": [
+      "crt",
+      "mut"
+    ], 
+    "must_carry":[
+      "thrown.centaur_spit",
+      "melee.centaur_lash"
+    ],
+    "name": "centaur",
+    "preview":"centaur"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 35,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "pistols.glowing_bloatfly_larve"
+    ],
+    "name": "glowing_bloatfly",
+    "preview":"glowingbloatfly"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 33,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "melee.glowing_bloodbug_proboscis",
+      "pistols.glowing_bloodbug_blood_spray"
+    ],
+    "name": "glowing_bloodbug",
+    "preview":"glowingbloodblug"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 45,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "melee.glowing_stingwing_strike"
+    ],
+    "name": "glowing_stingwing",
+    "preview":"glowingstingwing"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 0,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "melee.radstag_gore"
+    ],
+    "name": "radstag",
+    "preview":"radstag"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 45,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "melee.radstag_doe_gore"
+    ],
+    "name": "radstag_doe",
+    "preview":"radstagdoe"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 0,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "pistols.bloatfly_larve"
+    ],
+    "name": "bloatfly",
+    "preview":"bloatfly"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 0,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "melee.bloodbug_proboscis",
+      "pistols.bloodbug_blood_spray"
+    ],
+    "name": "bloodbug",
+    "preview":"bloodblug"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 0,
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":[
+      "melee.stingwing_strike"
+    ],
+    "name": "stingwing",
+    "preview":"stingwing"
   }
 ]
