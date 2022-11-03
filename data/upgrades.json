@@ -1964,6 +1964,7 @@
   "power_armor": [
     {
       "name": "ncr_salvaged_power_armor",
+      "restrictions":["!super_mutant"],
       "cost": 26,
       "preview": "ncrsalvagedpowerarmor"
     },
@@ -1990,6 +1991,12 @@
       "restrictions":["!super_mutant"],
       "cost": 33,
       "preview": "raiderpowerarmor"
+    },
+    {
+      "name": "slags_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 38,
+      "preview": "slagspowerarmor"
     },
     {
       "name": "t45_power_armor",
