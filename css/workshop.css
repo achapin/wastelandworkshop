@@ -442,3 +442,17 @@ td {
 option {
 	pointer-events: auto;
 }
+
+.display-section img {
+	float: left;
+}
+
+.fullcard {
+	width: 64mm;
+	height: 88mm;
+}
+
+.smallcard {
+	width: 65mm;
+	height: 44mm;
+}
