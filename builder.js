@@ -616,7 +616,10 @@ function addCharacter(characterElement, presetInfo){
 		headerRightSection.appendChild(qtySection);
 	}
 
-	addLeaderSection(headerRightSection, character);
+	var displaySection = document.createElement("div");
+	displaySection.className = "display-section";
+
+	addLeaderSection(headerRightSection, character, displaySection);
 
 	if(characterElement.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("upgrades")){
 		var heroicSection = document.createElement("div");
@@ -629,11 +632,17 @@ function addCharacter(characterElement, presetInfo){
 		heroicDescription.appendChild(document.createTextNode(loc["heroic"] + " (" + upgrades.heroic[1].cost +")"));
 		heroicSection.appendChild(heroicDescription);
 		heroicSection.appendChild(heroicCheckBox);
+		var cardDisplay = addCardToDisplay(displaySection, null);
+		if(character.heroic){
+			setCardInDisplay(cardDisplay, "heroic");
+		}
 		heroicCheckBox.addEventListener("click", function(){
 			if(heroicCheckBox.checked){
 				character.heroic = true;
+				setCardInDisplay(cardDisplay, "heroic");
 			}else{
 				delete character["heroic"];
+				setCardInDisplay(cardDisplay, null);
 			}
 			updateCaps();
 		});
@@ -695,9 +704,6 @@ function addCharacter(characterElement, presetInfo){
 	var warningSection = document.createElement("div");
 	warningSection.setAttribute("class", "warning");
 	headerSection.appendChild(warningSection);
-
-	var displaySection = document.createElement("div");
-	displaySection.className = "display-section";
 
 	var cardDiv = document.createElement("div");
 	cardDiv.innerHTML = "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
@@ -1725,7 +1731,7 @@ function addRemovePerkButton(selectedPerk, character, perkData, ownedPerks, perk
 	selectedPerk.appendChild(removeButton);
 }
 
-function addLeaderSection(domElement, character){
+function addLeaderSection(domElement, character, display){
 	var characterIndex = getCharacterIndex(character);
 	if(characterIndex == -1){
 		characterIndex = force.characters.length;
@@ -1741,6 +1747,7 @@ function addLeaderSection(domElement, character){
 	perkDropdown.setAttribute("class", "leaderPerkSelection");
 	var emptyOption = new Option(loc["none"], null);
 	perkDropdown.add(emptyOption);
+	var leaderPerkDisplay = addCardToDisplay(display, null);
 
 	for(var index = 0; index < upgrades.leader.length; index++) {
 		var optionElement = upgrades.leader[index];
@@ -1756,6 +1763,7 @@ function addLeaderSection(domElement, character){
 	}
 
 	perkDropdown.onchange = function(){
+		setCardInDisplay(leaderPerkDisplay, null);
 		if(!force.hasOwnProperty("leader")){
 			force.leader = {};
 		}
@@ -1763,6 +1771,8 @@ function addLeaderSection(domElement, character){
 		var dropDowns = document.getElementsByClassName("leaderPerkSelection");
 		for(var dropDownIndex = 0; dropDownIndex < dropDowns.length; dropDownIndex++){
 			dropDowns[dropDownIndex].selectedIndex = force.leader.perkIndex;
+			var upgrade = upgrades.leader[force.leader.perkIndex - 1];
+			setCardInDisplay(leaderPerkDisplay, upgrade.preview);
 		}
 
 		updateCaps();
@@ -1793,6 +1803,10 @@ function addLeaderSection(domElement, character){
 		var isLeader = force.leader.leaderIndex == characterIndex;
 		inactiveLeaderSection.style.display = isLeader ? "none" : "inline-block";
 		activeLeaderSection.style.display = isLeader ? "inline-block" : "none";
+		if(isLeader){
+			var upgrade = upgrades.leader[force.leader.perkIndex - 1];
+			setCardInDisplay(leaderPerkDisplay, upgrade.preview);
+		}
 	}else{
 		perkDropdown.selectedIndex = 0;
 		inactiveLeaderSection.style.display = "inline-block";
@@ -1819,6 +1833,7 @@ function setLeader(character){
 	for(var index = 0; index < activeSections.length; index++){
 		activeSections[index].style.display = index == force.leader.leaderIndex ? "inline-block" : "none";
 		inactiveSections[index].style.display = index == force.leader.leaderIndex ? "none" : "inline-block";
+		//TODO: Update leader card previews for all characters
 	}
 
 	updateCaps();
