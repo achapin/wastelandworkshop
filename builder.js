@@ -1020,6 +1020,8 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	var consumeableHeaderText = document.createTextNode(loc[slotType]);
 	consumeableHeader.appendChild(consumeableHeaderText);
 
+	var cardDisplay = addCardToDisplay(displaySection, null);
+
 	var slotOption = null;
 	if(characterElement.consumables != null){
 		slotOption = characterElement.consumables[slotType];
@@ -1037,7 +1039,7 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	upgrades[slotType].forEach(function(optionElement){
 		if(optionElement.cost != 0 && canEquip(optionElement, characterTags) && (!isBattleMode || inBattleModeKit(optionElement, character, slotType))){
 			if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
-				optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown, displaySection));
+				optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown, cardDisplay));
 			}else{
 				slotDropdown.add(new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name));
 			}
@@ -1053,7 +1055,7 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 			character[slotType][slotDropdown.value] = 1;
 			slotDropdown.remove(slotDropdown.selectedIndex); //Remove from display?
 			slotDropdown.selectedIndex = 0;
-			var newItemEntry = getConsumableEntry(upgrade, character, slotType, optionSection, slotDropdown, displaySection);
+			var newItemEntry = getConsumableEntry(upgrade, character, slotType, optionSection, slotDropdown, cardDisplay);
 			optionSection.appendChild(newItemEntry);
 		}
 		updateCaps();
@@ -1279,6 +1281,8 @@ function getCarrySection(character, isBattleMode, slotType, characterTags, carry
 	var optionSelectedIndex = 0;
 	var optionIndex = 0;
 
+	var cardDisplay = addCardToDisplay(displaySection, null);
+
 	var equippedItems = document.createElement("div");
 	equippedItems.setAttribute("class","equippedItems");
 
@@ -1300,7 +1304,7 @@ function getCarrySection(character, isBattleMode, slotType, characterTags, carry
 				isEquipped = character[slotType].includes(option.name);
 			}
 			if(isEquipped){
-				var entrySection = addEquipEntry(character, slotType, option, equippedItems, slotDropdown, displaySection);
+				var entrySection = addEquipEntry(character, slotType, option, equippedItems, slotDropdown, cardDisplay);
 				equippedItems.appendChild(entrySection);
 				hasEquippedItem = true;
 			}else{
@@ -1313,7 +1317,7 @@ function getCarrySection(character, isBattleMode, slotType, characterTags, carry
 	slotDropdown.onchange = function(){
 		if(slotDropdown.value != null && slotDropdown.value != "null"){
 			var upgrade = getUpgrade(slotType, slotDropdown.value);
-			var newItemEntry = addEquipEntry(character, slotType, upgrade, equippedItems, slotDropdown, displaySection);
+			var newItemEntry = addEquipEntry(character, slotType, upgrade, equippedItems, slotDropdown, cardDisplay);
 			equippedItems.appendChild(newItemEntry);
 			if(!character.hasOwnProperty(slotType)){
 				character[slotType] = [];
