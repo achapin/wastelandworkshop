@@ -486,7 +486,7 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 	section.appendChild(equipmentToggle);
 }
 
-function getModSectionFor(character, slotType, carryInfo){ //TODO: ALL MODS GET EXTRA BIT FOR PREVIEW
+function getModSectionFor(character, slotType, carryInfo, display){
 	var modSection = document.createElement("div");
 
 	var modText = document.createElement("span");
@@ -498,6 +498,8 @@ function getModSectionFor(character, slotType, carryInfo){ //TODO: ALL MODS GET 
 	var optionSelectedIndex = 0;
 	var optionIndex = 0;
 
+	var display2 = addCardToDisplay(display, null);
+
 	upgrades.mods.forEach(function(mod){
 		if(mod.hasOwnProperty("types") && mod.types.includes(slotType)){
 			var option = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
@@ -508,6 +510,7 @@ function getModSectionFor(character, slotType, carryInfo){ //TODO: ALL MODS GET 
 				if((carryInfo == null && character.mods.hasOwnProperty(slotType) && character.mods[slotType] == mod.name)
 					|| (carryInfo != null && character.mods.hasOwnProperty(carryInfo.name) && character.mods[carryInfo.name] == mod.name)){
 					optionSelectedIndex = optionIndex;
+					setCardInDisplay(display2, mod.preview);
 				}
 			}
 		}
@@ -521,12 +524,15 @@ function getModSectionFor(character, slotType, carryInfo){ //TODO: ALL MODS GET 
 	modDropdown.selectedIndex = optionSelectedIndex;
 	modDropdown.onchange = function(){
 		if(modDropdown.value == null || modDropdown.value == "null"){
+			setCardInDisplay(display2, null);
 			if(carryInfo == null){
 				removeModFromCharacter(character, slotType)
 			}else{
 				removeModFromCharacter(character, carryInfo.name)
 			}
 		}else{
+			var upgrade = getUpgrade("mods", modDropdown.value);
+			setCardInDisplay(display2, upgrade.preview);
 			if(carryInfo == null){
 				setModForCharacter(character, slotType, modDropdown.value)
 			}else{
@@ -752,10 +758,10 @@ function addCharacter(characterElement, presetInfo){
 				mustWearElement.appendChild(mustWearDescription);
 				mustWearSection.appendChild(mustWearElement);
 
-				var modSection = getModSectionFor(character, elements[0], null)
+				var cardDisplay = addCardToDisplay(displaySection, upgrade.preview);
+
+				var modSection = getModSectionFor(character, elements[0], null, cardDisplay);
 				mustWearSection.appendChild(modSection);
-				addCardToDisplay(displaySection, upgrade.preview);
-				//TODO: MOD?
 			}
 		});
 		equipmentSection.appendChild(mustWearSection);
@@ -775,12 +781,11 @@ function addCharacter(characterElement, presetInfo){
 				addPreviewTooltip(upgrade, mustCarryElement);
 				mustCarryElement.appendChild(mustCarryDescription);
 				mustCarrySection.appendChild(mustCarryElement);
-				addCardToDisplay(displaySection, upgrade.preview);
+				var cardDisplay = addCardToDisplay(displaySection, upgrade.preview);
 
 				if(!characterElement.hasOwnProperty("mods_allowed") || characterElement.mods_allowed){
-					var modSecton = getModSectionFor(character, elements[0], upgrade)
+					var modSecton = getModSectionFor(character, elements[0], upgrade, cardDisplay);
 					mustCarrySection.appendChild(modSecton);
-					//TODO: Mods for the display section?
 				}
 			}
 		});
@@ -1215,10 +1220,9 @@ function getWearSection(character, isBattleMode, slotType, characterTags, displa
 	var optionSelectedIndex = 0;
 	var optionIndex = 0;
 
-	var modSection = getModSectionFor(character, slotType, null);
+	var cardDisplay = addCardToDisplay(displaySection, null);
 
-	var cardDisplay = document.createElement("div");
-	displaySection.appendChild(cardDisplay);
+	var modSection = getModSectionFor(character, slotType, null, displaySection); //TODO: MOD DOESNT CLEAR IF ITEM DOES
 
 	upgrades[slotType].forEach(function(optionElement){
 
@@ -1357,10 +1361,10 @@ function addEquipEntry(character, slotType, optionElement, equippedItems, slotDr
 	equipmentCost.appendChild(document.createTextNode("(" + Math.max(0, optionElement.cost) + ")"));
 	equipmentEntry.appendChild(equipmentCost);
 
-	var modSection = getModSectionFor(character, slotType, optionElement);
-	equipmentEntry.appendChild(modSection);
-
 	var cardDisplay = addCardToDisplay(displaySection, optionElement.preview);
+
+	var modSection = getModSectionFor(character, slotType, optionElement, cardDisplay);
+	equipmentEntry.appendChild(modSection);
 
 	removeButton.addEventListener("click", function() {
 		character[slotType] = character[slotType].filter(evalItem => evalItem != optionElement.name);
@@ -2156,6 +2160,9 @@ function addPreviewTooltipForDropdown(target, slot){
 }
 
 function addCardToDisplay(displaySection, path) {
+	if(displaySection == null) {
+		return null;
+	}
 	var cardDiv = document.createElement("div");
 	setCardInDisplay(cardDiv, path);
 	displaySection.appendChild(cardDiv);
