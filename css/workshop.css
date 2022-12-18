@@ -456,3 +456,11 @@ option {
 	width: 65mm;
 	height: 44mm;
 }
+
+.detailSection {
+	display: flex;
+}
+
+.displaySection {
+	display: block;
+}

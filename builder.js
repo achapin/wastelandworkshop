@@ -499,6 +499,7 @@ function getModSectionFor(character, slotType, carryInfo, display){
 	var optionIndex = 0;
 
 	var display2 = addCardToDisplay(display, null);
+	display2.setAttribute("class", "modDisplay-" + slotType);
 
 	upgrades.mods.forEach(function(mod){
 		if(mod.hasOwnProperty("types") && mod.types.includes(slotType)){
@@ -623,7 +624,7 @@ function addCharacter(characterElement, presetInfo){
 	}
 
 	var displaySection = document.createElement("div");
-	displaySection.className = "display-section";
+	displaySection.className = "displaySection";
 
 	addLeaderSection(headerRightSection, character, displaySection);
 
@@ -845,8 +846,11 @@ function addCharacter(characterElement, presetInfo){
 
 	charaSection.appendChild(headerSection);
 	charaSection.appendChild(costSection);
-	charaSection.appendChild(equipmentSection);
-	charaSection.appendChild(displaySection);
+	var detailSection = document.createElement("div");
+	detailSection.setAttribute("class", "detailSection");
+	detailSection.appendChild(equipmentSection);
+	detailSection.appendChild(displaySection);
+	charaSection.appendChild(detailSection);
 
 	forceSection.appendChild(charaSection);
 
@@ -1025,7 +1029,7 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	var consumeableHeaderText = document.createTextNode(loc[slotType]);
 	consumeableHeader.appendChild(consumeableHeaderText);
 
-	var cardDisplay = addCardToDisplay(displaySection, null);
+	var cardDisplay = addCardToDisplay(displaySection, null); //TODO: Consumable displays not removed correctly
 
 	var slotOption = null;
 	if(characterElement.consumables != null){
@@ -1222,7 +1226,7 @@ function getWearSection(character, isBattleMode, slotType, characterTags, displa
 
 	var cardDisplay = addCardToDisplay(displaySection, null);
 
-	var modSection = getModSectionFor(character, slotType, null, displaySection); //TODO: MOD DOESNT CLEAR IF ITEM DOES
+	var modSection = getModSectionFor(character, slotType, null, displaySection);
 
 	upgrades[slotType].forEach(function(optionElement){
 
@@ -1247,6 +1251,12 @@ function getWearSection(character, isBattleMode, slotType, characterTags, displa
 			removeModFromCharacter(character, slotType);
 			if(modSection.querySelector("SELECT") != null){
 				modSection.querySelector("SELECT").selectedIndex = 0;
+			}
+			
+			if(displaySection.querySelector(".modDisplay-"+slotType) != null) {
+				displaySection.querySelector(".modDisplay-"+slotType).innerHTML = "";
+			} else {
+				alert("section was null");
 			}
 			setCardInDisplay(cardDisplay, null);
 		}else{
