@@ -3216,7 +3216,8 @@
     ], 
     "must_carry":["melee.mongrel_bite"],
     "name": "alpha_mongrel",
-    "preview":"alphamongrel"
+    "preview":"alphamongrel",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -3975,7 +3976,8 @@
       "melee.centaur_lash"
     ],
     "name": "centaur",
-    "preview":"centaur"
+    "preview":"centaur",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -3989,7 +3991,8 @@
       "pistols.glowing_bloatfly_larve"
     ],
     "name": "glowing_bloatfly",
-    "preview":"glowingbloatfly"
+    "preview":"glowingbloatfly",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -4004,7 +4007,8 @@
       "pistols.glowing_bloodbug_blood_spray"
     ],
     "name": "glowing_bloodbug",
-    "preview":"glowingbloodblug"
+    "preview":"glowingbloodbug",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -4018,13 +4022,14 @@
       "melee.glowing_stingwing_strike"
     ],
     "name": "glowing_stingwing",
-    "preview":"glowingstingwing"
+    "preview":"glowingstingwing",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 36,
     "factions": [
       "crt"
     ], 
@@ -4032,7 +4037,8 @@
       "melee.radstag_gore"
     ],
     "name": "radstag",
-    "preview":"radstag"
+    "preview":"radstag",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -4046,27 +4052,29 @@
       "melee.radstag_doe_gore"
     ],
     "name": "radstag_doe",
-    "preview":"radstagdoe"
+    "preview":"radstagdoe",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 15,
     "factions": [
       "crt"
     ], 
     "must_carry":[
-      "pistols.bloatfly_larve"
+      "pistols.bloatfly_larva"
     ],
     "name": "bloatfly",
-    "preview":"bloatfly"
+    "preview":"bloatfly",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 26,
     "factions": [
       "crt"
     ], 
@@ -4075,20 +4083,22 @@
       "pistols.bloodbug_blood_spray"
     ],
     "name": "bloodbug",
-    "preview":"bloodblug"
+    "preview":"bloodblug",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 34,
     "factions": [
       "crt"
     ], 
     "must_carry":[
-      "melee.stingwing_strike"
+      "melee.stingwing_sting"
     ],
     "name": "stingwing",
-    "preview":"stingwing"
+    "preview":"stingwing",
+    "tags":["creature"]
   }
 ]

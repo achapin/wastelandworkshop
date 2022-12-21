@@ -794,7 +794,7 @@ function addCharacter(characterElement, presetInfo){
 	}
 
 	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
-		addModdedCharacterSlots(characterElement, character, equipmentSection, settlementMode);
+		addModdedCharacterSlots(characterElement, character, equipmentSection, settlementMode, displaySection);
 	} else if(!characterElement.hasOwnProperty("perks") || characterElement.perks) {
 		var perkSection = getPerkSection(character, displaySection);
 		equipmentSection.appendChild(perkSection);
@@ -865,16 +865,22 @@ function addCharacter(characterElement, presetInfo){
 	return charaSection;
 }
 
-function addModdedCharacterSlots(characterElement, character, equipmentSection, isSettlementMode){
+function addModdedCharacterSlots(characterElement, character, equipmentSection, isSettlementMode, displaySection){
 	var perkIndex1 = 0;
 	var perkIndex2 = 0;
+	var mod1 = null;
+	var mod2 = null;
+
+	var perkDisplay1 = addCardToDisplay(displaySection, null);
+	var perkDisplay2 = addCardToDisplay(displaySection, null);
+
 	if(character.hasOwnProperty("char_mods"))
 	{
 		if(character.char_mods.length > 0) {
-			perkIndex1 = character.char_mods[0];
+			mod1 = getUpgrade("mods", character.char_mods[0]);
 		}
 		if(character.char_mods.length > 1) {
-			perkIndex2 = character.char_mods[1];
+			mod2 = getUpgrade("mods", character.char_mods[1]);
 		}
 	}
 
@@ -888,10 +894,19 @@ function addModdedCharacterSlots(characterElement, character, equipmentSection, 
 		if(canEquip(mod, characterElement.tags)){
 			var option1 = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
 			var option2 = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
+			if(mod1 != null && mod1 == mod){
+				perkIndex1 = slotDropdown1.length;
+			}
+			if(mod2 != null && mod2 == mod){
+				perkIndex2 = slotDropdown2.length;
+			}			
 			slotDropdown1.add(option1);
 			slotDropdown2.add(option2);
 		}
 	});
+
+	slotDropdown1.selectedIndex = perkIndex1;
+	slotDropdown2.selectedIndex = perkIndex2;
 
 	slotDropdown1.onchange = function(){
 		character.char_mods = [];
@@ -901,6 +916,7 @@ function addModdedCharacterSlots(characterElement, character, equipmentSection, 
 		if(slotDropdown2.selectedIndex != 0){
 			character.char_mods.push(slotDropdown2.value);
 		}
+		updateCharacterModPreviews([slotDropdown1, slotDropdown2], [perkDisplay1, perkDisplay2]);
 		updateCaps();
 	};
 
@@ -912,8 +928,11 @@ function addModdedCharacterSlots(characterElement, character, equipmentSection, 
 		if(slotDropdown2.selectedIndex != 0){
 			character.char_mods.push(slotDropdown2.value);
 		}
+		updateCharacterModPreviews([slotDropdown1, slotDropdown2], [perkDisplay1, perkDisplay2]);
 		updateCaps();
 	};
+
+	updateCharacterModPreviews([slotDropdown1, slotDropdown2], [perkDisplay1, perkDisplay2]);
 
 	var moddedCharacterSlots = document.createElement("div");
 	var locKey = "mods_"+characterElement.tags[0];
@@ -925,6 +944,17 @@ function addModdedCharacterSlots(characterElement, character, equipmentSection, 
 	addPreviewTooltipForDropdown(slotDropdown2, "mods");
 
 	equipmentSection.appendChild(moddedCharacterSlots);
+}
+
+function updateCharacterModPreviews(slotDropdowns, slotPreviews){
+	for(let index = 0; index < slotDropdowns.length; index++){
+		if(slotDropdowns[index].selectedIndex == 0) {
+			setCardInDisplay(slotPreviews[index], null);
+		} else {
+			mod = getUpgrade("mods", slotDropdowns[index].value);
+			setCardInDisplay(slotPreviews[index], mod.preview);
+		}
+	}
 }
 
 function addSettlementModeSlots(characterElement, character, equipmentSection, displaySection){
