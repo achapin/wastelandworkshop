@@ -1029,7 +1029,7 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	var consumeableHeaderText = document.createTextNode(loc[slotType]);
 	consumeableHeader.appendChild(consumeableHeaderText);
 
-	var cardDisplay = addCardToDisplay(displaySection, null); //TODO: Consumable displays not removed correctly
+	var cardDisplay = addCardToDisplay(displaySection, null);
 
 	var slotOption = null;
 	if(characterElement.consumables != null){
@@ -1044,7 +1044,6 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 
 	var optionSection = document.createElement("div"); 
 
-	//console.log(slotType);
 	upgrades[slotType].forEach(function(optionElement){
 		if(optionElement.cost != 0 && canEquip(optionElement, characterTags) && (!isBattleMode || inBattleModeKit(optionElement, character, slotType))){
 			if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
@@ -1062,7 +1061,7 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 				character[slotType] = {};
 			}
 			character[slotType][slotDropdown.value] = 1;
-			slotDropdown.remove(slotDropdown.selectedIndex); //Remove from display?
+			slotDropdown.remove(slotDropdown.selectedIndex);
 			slotDropdown.selectedIndex = 0;
 			var newItemEntry = getConsumableEntry(upgrade, character, slotType, optionSection, slotDropdown, cardDisplay);
 			optionSection.appendChild(newItemEntry);
@@ -1107,9 +1106,9 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 		delete character[slotType][optionElement.name];
 		if(Object.keys(character[slotType]).length <= 0){
 			delete character[slotType];
-			cardDisplay.remove();
 		}
 		optionSection.removeChild(entrySection);
+		cardDisplay.remove();
 		updateCaps();
 
 		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
@@ -1653,6 +1652,8 @@ function getPerkSection(character, displaySection){
 	var ownedPerks = document.createElement("div");
 	var perkDropdown = document.createElement("SELECT");
 	perkDropdown.add(new Option(loc["dropdown_perks"], null));
+
+	var perkDisplay = addCardToDisplay(displaySection, null);
 	
 	var characterElement = getCharacterById(character.name);
 
@@ -1699,7 +1700,7 @@ function getPerkSection(character, displaySection){
 				character.perks = [];
 			}
 			character.perks.push(perkDropdown.value);
-			addPerkEntry(ownedPerks, perkDropdown.value, character, perkDropdown, displaySection);
+			addPerkEntry(ownedPerks, perkDropdown.value, character, perkDropdown, perkDisplay);
 			perkDropdown.remove(perkDropdown.selectedIndex);
 			updateCaps();
 		}
