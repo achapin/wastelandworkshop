@@ -3803,7 +3803,8 @@
       "frg"
     ], 
     "name": "jake_finch",
-    "preview":"jakefinch"
+    "preview":"jakefinch",
+    "unique_code":"jakefinch"
   },
   {
     "battle_mode_packs": [
@@ -3822,7 +3823,8 @@
       "frg"
     ], 
     "name": "slag",
-    "preview":"slag"
+    "preview":"slag",
+    "unique_code":"slag"
   },
   {
     "battle_mode_packs": [
@@ -3837,7 +3839,8 @@
       "frg"
     ], 
     "name": "bedlam",
-    "preview":"bedlam"
+    "preview":"bedlam",
+    "unique_code":"bedlam"
   },
   {
     "battle_mode_packs": [
@@ -3870,7 +3873,8 @@
       "lead_belly"
     ],
     "name": "wiseman",
-    "preview":"wiseman"
+    "preview":"wiseman",
+    "unique_code":"wiseman"
   },
   {
     "battle_mode_packs": [
@@ -3888,7 +3892,8 @@
       "lead_belly"
     ],
     "name": "arlen_glass",
-    "preview":"arlenglass"
+    "preview":"arlenglass",
+    "unique_code":"arlenglass"
   },
   {
     "battle_mode_packs": [
@@ -3906,7 +3911,8 @@
       "lead_belly"
     ],
     "name": "holly",
-    "preview":"holly"
+    "preview":"holly",
+    "unique_code":"holly"
   },
   {
     "battle_mode_packs": [
@@ -3924,7 +3930,8 @@
       "lead_belly"
     ],
     "name": "deidre",
-    "preview":"deidre"
+    "preview":"deidre",
+    "unique_code":"deidre"
   },
   {
     "battle_mode_packs": [
@@ -3942,7 +3949,8 @@
       "lead_belly"
     ],
     "name": "jones",
-    "preview":"jones"
+    "preview":"jones",
+    "unique_code":"jones"
   },
   {
     "battle_mode_packs": [
