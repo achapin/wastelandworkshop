@@ -13,6 +13,8 @@
   src: url('/wastelandworkshop/fonts/Futura.ttc');
 }
 
+
+
 body {
 	background-color: rgb(40,65,129);
 	color: rgb(231, 189, 66);
@@ -463,4 +465,30 @@ option {
 
 .displaySection {
 	display: block;
+}
+
+@media print {
+    .equipment-section {
+		display: none;
+	}
+
+	#kofi {
+		display: none;
+	}
+
+	#addSection {
+		display: none;
+	}
+
+	.cost-section {
+		display: none;
+	}
+
+	.warning {
+		display: none;
+	}
+
+	.header-section button {
+		display: none;
+	}
 }
