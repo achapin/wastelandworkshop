@@ -445,7 +445,11 @@ option {
 	pointer-events: auto;
 }
 
-.display-section img {
+.displaySection img {
+	float: left;
+}
+
+.displaySection div {
 	float: left;
 }
 

@@ -626,6 +626,10 @@ function addCharacter(characterElement, presetInfo){
 	var displaySection = document.createElement("div");
 	displaySection.className = "displaySection";
 
+	var cardDiv = document.createElement("div");
+	cardDiv.innerHTML = "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
+	displaySection.appendChild(cardDiv);
+
 	addLeaderSection(headerRightSection, character, displaySection);
 
 	if(characterElement.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("upgrades")){
@@ -711,10 +715,6 @@ function addCharacter(characterElement, presetInfo){
 	var warningSection = document.createElement("div");
 	warningSection.setAttribute("class", "warning");
 	headerSection.appendChild(warningSection);
-
-	var cardDiv = document.createElement("div");
-	cardDiv.innerHTML = "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
-	displaySection.appendChild(cardDiv);
 
 	var equipmentSection = document.createElement("div");
 	equipmentSection.setAttribute("class", "equipment-section");
