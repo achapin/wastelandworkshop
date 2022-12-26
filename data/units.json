@@ -1546,7 +1546,7 @@
     ], 
     "name": "mama_murphy", 
     "preview": "mamamurphy", 
-    "reference": ["reference_mama_murphy"],
+    "reference": ["reference_mamamurphy_1", "reference_mamamurphy_2"],
     "unique_code": "mama_murphy"
   }, 
   {
@@ -2119,6 +2119,7 @@
     ], 
     "name": "lorenzo_cabot", 
     "preview": "lorenzocabot", 
+    "reference":["reference_lorenzocabot"],
     "unique_code": "lorenzo_cabot"
   }, 
   {
@@ -3765,6 +3766,7 @@
     ], 
     "name": "swan_1",
     "preview":"swan1",
+    "reference":["reference_swan"],
     "tags": [
       "creature"
     ]
@@ -3784,6 +3786,7 @@
     ], 
     "name": "swan_2",
     "preview":"swan2",
+    "reference":["reference_swan"],
     "tags": [
       "creature"
     ]

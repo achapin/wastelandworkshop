@@ -673,7 +673,12 @@ function addCharacter(characterElement, presetInfo){
 	displaySection.className = "displaySection";
 
 	var cardDiv = document.createElement("div");
-	cardDiv.innerHTML = "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
+	if(characterElement.hasOwnProperty("reference")){
+		characterElement.reference.forEach(function(reference){
+			cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + reference + ".png\" />";
+		});
+	}
+	cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
 	displaySection.appendChild(cardDiv);
 
 	addLeaderSection(headerRightSection, character, displaySection);
