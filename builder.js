@@ -47,7 +47,7 @@ var factionReferences = {
 	"coa":"reference_childrenofatom",
 	"crt":"reference_creaturesfaction",
 	"enc":"reference_enclave",
-	"frg":"",
+	"frg":"reference_forged",
 	"ins":"",
 	"gun":"reference_gunners",
 	"ncr":"reference_ncr",
@@ -55,7 +55,7 @@ var factionReferences = {
 	"rlr":"reference_railroad",
 	"rbt":"reference_robotfaction",
 	"mut":"reference_supermutants",
-	"slg":"",
+	"slg":"reference_slog",
 	"srv":"reference_survivors"
 }
 
