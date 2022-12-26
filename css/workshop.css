@@ -507,6 +507,10 @@ option {
 	display: none;
 }
 
+.unitModelCount {
+	display: none;
+}
+
 @media print {
     .configure-section {
 		display: none;
@@ -517,6 +521,10 @@ option {
 	}
 
 	#factionReference {
+		display: block;
+	}
+
+	.unitModelCount {
 		display: block;
 	}
 

@@ -640,6 +640,11 @@ function addCharacter(characterElement, presetInfo){
 		copy.setAttribute("class", "btn btn-background unit-button");
 		copy.appendChild(copyButton);
 		totalCharacterCapsSection.appendChild(copy);
+
+		var unitCount = document.createElement("div");
+		unitCount.setAttribute("class","unitModelCount");
+		SetModelCount(unitCount, character["modelCount"]);
+		totalCharacterCapsSection.appendChild(unitCount);
 	}
 
 	var nameSection = document.createElement("div");
@@ -659,7 +664,7 @@ function addCharacter(characterElement, presetInfo){
 		description.appendChild(document.createTextNode(loc["model_count"]));
 		qtySection.appendChild(description);
 
-		var qtyCounter = getNumericCounterForField(character, "modelCount", 1);
+		var qtyCounter = getNumericCounterForField(character, "modelCount", 1, unitCount);
 		qtySection.appendChild(qtyCounter);
 		headerRightSection.appendChild(qtySection);
 	}
@@ -903,6 +908,15 @@ function addCharacter(characterElement, presetInfo){
 	updateCaps();
 	buildAddSection();
 	return charaSection;
+}
+
+function SetModelCount(displaySection, modelCount){
+	if(modelCount <= 1){
+		displaySection.innerHTML = ""
+	}
+	if(modelCount > 1){
+		displaySection.innerHTML = modelCount + " Models";
+	}
 }
 
 function addModdedCharacterSlots(characterElement, character, equipmentSection, isSettlementMode, displaySection){
@@ -1468,7 +1482,7 @@ function addEquipEntry(character, slotType, optionElement, equippedItems, slotDr
 	return equipmentEntry;
 }
 
-function getNumericCounterForField(character, field, minVal){
+function getNumericCounterForField(character, field, minVal, displaySection){
 	var counterDiv = document.createElement("div");
 	counterDiv.setAttribute("class", "numeric");
 
@@ -1484,6 +1498,7 @@ function getNumericCounterForField(character, field, minVal){
 			optionInput.value = newCount;
 			character[field] = newCount;
 			updateCaps();
+			SetModelCount(displaySection, newCount);
 		}
 	});
 
@@ -1504,6 +1519,7 @@ function getNumericCounterForField(character, field, minVal){
 				optionInput.value = minVal;
 				character[field] = minVal;
 			}
+			SetModelCount(displaySection, optionInput.value);
 		}
 		updateCaps();
 	});
@@ -1527,6 +1543,7 @@ function getNumericCounterForField(character, field, minVal){
 		}else{
 			lastTextFieldValue = value;
 		}
+		SetModelCount(displaySection, optionInput.value);
 	})
 	optionInput.addEventListener("change", function(){
 		var value = parseInt(optionInput.value);
@@ -1538,6 +1555,7 @@ function getNumericCounterForField(character, field, minVal){
 				optionInput.value = "0";
 			}
 			character[field] = value;
+			SetModelCount(displaySection, value);
 			updateCaps();
 		}
 	});
