@@ -511,6 +511,14 @@ option {
 	display: none;
 }
 
+.optionCount {
+	position: relative;
+	left: -63mm;
+	top: 39mm;
+	margin-right: -5em;
+	color: black;
+}
+
 @media print {
     .configure-section {
 		display: none;

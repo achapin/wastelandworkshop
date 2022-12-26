@@ -1172,7 +1172,11 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 	optionCostSection.setAttribute("class", "cost");
 	optionCostSection.appendChild(document.createTextNode("(" + optionElement.cost + ")"));
 
-	var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name, 1);
+	var optionDisplay = document.createElement("div");
+	optionDisplay.setAttribute("class","optionCount");
+	optionDisplay.innerHTML = "Boop";
+
+	var getOptionQtySection = getNumericCounterFor(character, slotType, optionElement.name, optionDisplay);
 
 	var removeButton = document.createElement("button");
 	removeButton.appendChild(document.createTextNode("X"));
@@ -1185,7 +1189,8 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 
 	addPreviewTooltip(optionElement, entrySection);
 	var cardDisplay = addCardToDisplay(displaySection, optionElement.preview); //TODO: show quantity?
-
+	cardDisplay.appendChild(optionDisplay);
+	
 	removeButton.addEventListener("click", function() {
 		delete character[slotType][optionElement.name];
 		if(Object.keys(character[slotType]).length <= 0){
@@ -1568,7 +1573,7 @@ function getNumericCounterForField(character, field, minVal, displaySection){
 }
 
 
-function getNumericCounterFor(character, slotType, field){
+function getNumericCounterFor(character, slotType, field, countDisplayDiv){
 
 	var counterDiv = document.createElement("div");
 
@@ -1586,6 +1591,7 @@ function getNumericCounterFor(character, slotType, field){
 				character[slotType] = {};
 			}
 			character[slotType][field] = newCount;
+			countDisplayDiv.innerHTML = "x " + newCount;
 			updateCaps();
 		}
 	});
@@ -1601,6 +1607,7 @@ function getNumericCounterFor(character, slotType, field){
 			var newCount = value - 1;
 			optionInput.value = newCount;
 			character[slotType][field] = newCount;
+			countDisplayDiv.innerHTML = "x" + newCount;
 			updateCaps();
 		}
 	});
@@ -1611,10 +1618,11 @@ function getNumericCounterFor(character, slotType, field){
 	optionInput.type = 'text';
 
 	if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(field)){
-		optionInput.value = character[slotType][field];					
+		optionInput.value = character[slotType][field];			
 	}else{
 		optionInput.value = "0";
 	}
+
 	optionInput.addEventListener("focusin", function(){
 		var value = parseInt(optionInput.value);
 		if(isNaN(value)){
@@ -1636,6 +1644,7 @@ function getNumericCounterFor(character, slotType, field){
 				character[slotType] = {};
 			}
 			character[slotType][field] = value;
+			countDisplay.innerHTML = "x" + value;
 			updateCaps();
 		}
 	});
@@ -1643,6 +1652,8 @@ function getNumericCounterFor(character, slotType, field){
 	counterDiv.appendChild(optionDecreaseCount);
 	counterDiv.appendChild(optionInput);
 	counterDiv.appendChild(optionIncreaseCount);
+
+	countDisplayDiv.innerHTML = "x" + optionInput.value;
 
 	return counterDiv;
 }
@@ -1704,8 +1715,10 @@ function addChemEntry(ownedChems, chem, character, chemDropdown, addChemButton){
 	var selectedChem = document.createElement("div");
 	var chemData = getUpgrade("chems", chem);
 	selectedChem.appendChild(document.createTextNode(loc[chemData.name] + " (" + chemData.cost + ")"));
+
+	var optionDisplay = document.createElement("div");
 	
-	var chemCounter = getNumericCounterFor(character, "chems", chem, 1);
+	var chemCounter = getNumericCounterFor(character, "chems", chem, optionDisplay);
 	selectedChem.appendChild(chemCounter)
 
 	addRemoveChemButton(selectedChem, character, chemData, ownedChems, chemDropdown, addChemButton);
