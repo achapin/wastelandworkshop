@@ -59,6 +59,16 @@ var factionReferences = {
 	"srv":"reference_survivors"
 }
 
+var tagsToReferences = {
+	"creature":["reference_creatures"],
+	"dog":["reference_dogs"],
+	"ghoul":["reference_ghouls"],
+	"legendary":["reference_legendary_units"],
+	"nightkin":["reference_nightkin"],
+	"robot":["reference_robots","reference_robots_ai"],
+	"synth":["reference_synth"]
+}
+
 var wear_slots = ["power_armor", "armor", "clothing"]; //Exclusive choice
 var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"]; //Multiple-choice single-instance
 var consumable_slots = [ "thrown", "mines", "chems", "alcohol", "food_and_drink", "gear"]; //Multiple-choice multiple-instance

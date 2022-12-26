@@ -336,7 +336,10 @@
       "melee.bloated_glowing_one_swipe"
     ], 
     "name": "bloated_glowing_one", 
-    "preview": "bloatedone"
+    "preview": "bloatedone",
+    "tags": [
+      "creature"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -910,7 +913,10 @@
       "restriction": "pistols"
     }, 
     "name": "sin_jin", 
-    "preview": "sinjin", 
+    "preview": "sinjin",
+    "tags": [
+      "ghoul"
+    ],
     "unique_code": "sin_jin"
   }, 
   {
@@ -1252,7 +1258,10 @@
       "melee.hound_bite"
     ], 
     "name": "mutant_hound", 
-    "preview": "mutanthound"
+    "preview": "mutanthound",
+    "tags": [
+      "dog"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -1266,7 +1275,10 @@
       "melee.hound_bite"
     ], 
     "name": "mutant_hound_fiend", 
-    "preview": "mutanthoundfiend"
+    "preview": "mutanthoundfiend",
+    "tags": [
+      "dog"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -1361,7 +1373,10 @@
       "thrown.suicider_mini_nuke"
     ], 
     "name": "suicider", 
-    "preview": "suicider"
+    "preview": "suicider",
+    "tags": [
+      "super_mutant"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -1522,7 +1537,10 @@
       "srv"
     ], 
     "name": "hancock", 
-    "preview": "hancock", 
+    "preview": "hancock",
+    "tags": [
+      "ghoul"
+    ], 
     "unique_code": "hancock"
   }, 
   {
@@ -1955,7 +1973,8 @@
     "name": "deathclaw_matriarch_1",
     "preview":"deathclawmatriarch1",
     "tags": [
-      "creature"
+      "creature",
+      "legendary"
     ]
   },
   {
@@ -1975,7 +1994,8 @@
     "name": "deathclaw_matriarch_2",
     "preview":"deathclawmatriarch2",
     "tags": [
-      "creature"
+      "creature",
+      "legendary"
     ]
   }, 
   {
@@ -2046,7 +2066,10 @@
     ], 
     "name": "frank_horrigan_1", 
     "preview": "frankhorrigan",
-    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "reference": ["reference_frank_horrigan"],
+    "tags": [
+      "legendary"
+    ],
     "unique_code": "frank_horrigan_1"
   },
   {
@@ -2060,7 +2083,10 @@
     ], 
     "name": "frank_horrigan_2", 
     "preview": "frankhorrigan2",
-    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "reference": ["reference_frank_horrigan"],
+    "tags": [
+      "legendary"
+    ],
     "unique_code": "frank_horrigan_2"
   }, 
   {
@@ -2074,7 +2100,10 @@
     ], 
     "name": "frank_horrigan_3", 
     "preview": "frankhorrigan3", 
-    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "reference": ["reference_frank_horrigan"],
+    "tags": [
+      "legendary"
+    ],
     "unique_code": "frank_horrigan_3"
   }, 
   {
@@ -2482,6 +2511,9 @@
     ], 
     "name": "raul", 
     "preview":"raul",
+    "tags": [
+      "ghoul"
+    ],
     "unique_code": "raul"
   }, 
   {
@@ -2592,7 +2624,8 @@
     ], 
     "name": "lily",
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "nightkin"
     ], 
     "preview":"lily",
     "unique_code": "lily"
@@ -2641,7 +2674,8 @@
     "name": "nightkin",
     "preview":"nightkin",
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "nightkin"
     ]
   }, 
   {
@@ -2665,7 +2699,8 @@
     ], 
     "name": "tabitha",
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "nightkin"
     ], 
     "preview":"tabitha",
     "unique_code": "tabitha"
@@ -3290,7 +3325,10 @@
     ], 
     "must_carry":["melee.glowing_yao_guai_bite"],
     "name": "glowing_yao_guai",
-    "preview":"glowingyaoguai"
+    "preview":"glowingyaoguai",
+    "tags": [
+      "creature"
+    ]
   },
   {
     "battle_mode_packs": [
@@ -3302,7 +3340,10 @@
     ], 
     "must_carry":["melee.yao_guai_bite"],
     "name": "yao_guai",
-    "preview":"yaoguai"
+    "preview":"yaoguai",
+    "tags": [
+      "creature"
+    ]
   },
   {
     "battle_mode_packs": [
@@ -3314,7 +3355,10 @@
     ], 
     "must_carry":["melee.mongrel_bite"],
     "name": "mongrel",
-    "preview":"mongrel"
+    "preview":"mongrel",
+    "tags": [
+      "creature"
+    ]
   },
   {
     "battle_mode_packs": [
@@ -3768,7 +3812,8 @@
     "preview":"swan1",
     "reference":["reference_swan"],
     "tags": [
-      "creature"
+      "creature",
+      "legendary"
     ]
   },
   {
@@ -3788,7 +3833,8 @@
     "preview":"swan2",
     "reference":["reference_swan"],
     "tags": [
-      "creature"
+      "creature",
+      "legendary"
     ]
   },
   {
