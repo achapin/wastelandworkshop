@@ -7,9 +7,11 @@ var sortedUnitNames = [];
 var forceSection;
 var addSection;
 var capsSection;
+var totalCapsDisplay;
 var previewSection;
 var previewElement;
 
+var printListNameDisplay;
 var lastTextFieldValue;
 var addSectionOpen;
 
@@ -226,7 +228,18 @@ function initListeners(){
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
 	capsSection = document.getElementById("caps");
+	capsSection.setAttribute("class", "totalcaps");
+
+	var totalCapsText = document.createElement("span");
+	totalCapsText.innerHTML = loc["total_caps"] + ": "
+	capsSection.appendChild(totalCapsText);
+
+	totalCapsDisplay = document.createElement("span");
+	totalCapsDisplay.setAttribute("class","totalcapsdisplay");
+	capsSection.appendChild(totalCapsDisplay);
+
 	previewSection = document.getElementById("preview");
+	printListNameDisplay = document.getElementById("listNamePrint");
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
@@ -571,34 +584,40 @@ function addCharacter(characterElement, presetInfo){
 
 	var charaSection = document.createElement("div");
 	charaSection.setAttribute("class", "characterElement");
+
+	var configureSection = document.createElement("div");
+	configureSection.setAttribute("class", "configure-section");
+
+	var totalCharacterCapsSection = document.createElement("div");
+	totalCharacterCapsSection.setAttribute("class", "totalCharacterCaps");
 	
 	var headerSection = document.createElement("div");
 	headerSection.setAttribute("class", "header-section");
-	
-	var headerLeftSection = document.createElement("div");
-	headerLeftSection.setAttribute("class", "header-section-left");
-	headerSection.appendChild(headerLeftSection);
 
 	var headerRightSection = document.createElement("div");
 	headerRightSection.setAttribute("class", "header-section-right");
 	headerSection.appendChild(headerRightSection);
 
+	var capsCircle = document.createElement("div");
+	capsCircle.setAttribute("class", "circle");
+	totalCharacterCapsSection.appendChild(capsCircle);
+
 	var unitCost = document.createElement("span");
 	unitCost.setAttribute("class", "unit-cost");
-	headerLeftSection.appendChild(unitCost);
+	capsCircle.appendChild(unitCost);
 
 	var close = document.createElement("button");
 	var closeButton = document.createTextNode("X");
 	close.setAttribute("class", "btn btn-background-off unit-button");
 	close.appendChild(closeButton);
-	headerLeftSection.appendChild(close);
+	totalCharacterCapsSection.appendChild(close);
 
 	if(!characterElement.hasOwnProperty("unique_code")){
 		var copy = document.createElement("button");
 		var copyButton = document.createTextNode("+");
 		copy.setAttribute("class", "btn btn-background unit-button");
 		copy.appendChild(copyButton);
-		headerLeftSection.appendChild(copy);
+		totalCharacterCapsSection.appendChild(copy);
 	}
 
 	var nameSection = document.createElement("div");
@@ -844,13 +863,12 @@ function addCharacter(characterElement, presetInfo){
 		});
 	}
 
-	charaSection.appendChild(headerSection);
-	charaSection.appendChild(costSection);
-	var detailSection = document.createElement("div");
-	detailSection.setAttribute("class", "detailSection");
-	detailSection.appendChild(equipmentSection);
-	detailSection.appendChild(displaySection);
-	charaSection.appendChild(detailSection);
+	charaSection.appendChild(totalCharacterCapsSection);
+	charaSection.appendChild(configureSection);
+	configureSection.appendChild(headerSection);
+	configureSection.appendChild(costSection);
+	configureSection.appendChild(equipmentSection);
+	charaSection.appendChild(displaySection);
 
 	forceSection.appendChild(charaSection);
 
@@ -2035,7 +2053,8 @@ function updateCaps(){
 		});
 	}
 
-	capsSection.innerHTML = loc["total_caps"] + ": " + totalCaps;
+	printListNameDisplay.innerHTML = document.getElementById("listNameArea").value;
+	totalCapsDisplay.innerHTML = totalCaps;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
 		window.history.pushState({path:newurl},'',newurl);
