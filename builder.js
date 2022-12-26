@@ -10,6 +10,7 @@ var capsSection;
 var totalCapsDisplay;
 var previewSection;
 var previewElement;
+var factionReferenceDisplay;
 
 var printListNameDisplay;
 var lastTextFieldValue;
@@ -39,6 +40,24 @@ var possibleFilters = [
 	"slg",
 	"srv"
 ]
+
+var factionReferences = {
+	"bos":"reference_brotherhoodofsteel",
+	"lgn":"reference_caesarslegion",
+	"coa":"reference_childrenofatom",
+	"crt":"reference_creaturesfaction",
+	"enc":"reference_enclave",
+	"frg":"",
+	"ins":"",
+	"gun":"reference_gunners",
+	"ncr":"reference_ncr",
+	"rdr":"reference_raiders",
+	"rlr":"reference_railroad",
+	"rbt":"reference_robotfaction",
+	"mut":"reference_supermutants",
+	"slg":"",
+	"srv":"reference_survivors"
+}
 
 var wear_slots = ["power_armor", "armor", "clothing"]; //Exclusive choice
 var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"]; //Multiple-choice single-instance
@@ -241,6 +260,8 @@ function initListeners(){
 	previewSection = document.getElementById("preview");
 	printListNameDisplay = document.getElementById("listNamePrint");
 
+	factionReferenceDisplay = document.getElementById("factionReference");
+
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
 		loadForceFromString(queryString[1]);
@@ -370,6 +391,7 @@ function buildFiltersSection(){
 				updateCaps();
 			}
 		});
+		addPreviewTooltipForFaction(filter, filterEntry);
 		list.appendChild(filterEntry);
 	});
 	filtersSection.appendChild(list);
@@ -1872,7 +1894,9 @@ function addLeaderSection(domElement, character, display){
 		activeLeaderSection.style.display = isLeader ? "inline-block" : "none";
 		if(isLeader){
 			var upgrade = upgrades.leader[force.leader.perkIndex - 1];
-			setCardInDisplay(leaderPerkDisplay, upgrade.preview);
+			if(upgrade != null){
+				setCardInDisplay(leaderPerkDisplay, upgrade.preview);
+			}
 		}
 	}else{
 		perkDropdown.selectedIndex = 0;
@@ -1926,6 +1950,12 @@ function updateCaps(){
 		if(leaderPerk.name == "robot_controller"){
 			filtered_factions.push("rbt");
 		}
+	}
+
+	if(factionReferences.hasOwnProperty(faction)){
+		factionReferenceDisplay.innerHTML = "<img class=\"fullcard\" src=\"images/" + factionReferences[faction] + ".png\" />";
+	} else {
+		factionReferenceDisplay.innerHTML = "";
 	}
 
 	if(force.hasOwnProperty("characters")){
@@ -2189,6 +2219,11 @@ function addPreviewTooltip(element, target){
 		target.addEventListener("mousemove", function(e) { setPreview(element.preview, e, true);});
 		target.addEventListener("mouseout", clearPreview);
 	}
+}
+
+function addPreviewTooltipForFaction(faction, target){
+	target.addEventListener("mousemove", function(e) { setPreview( factionReferences[faction], e, true);});
+	target.addEventListener("mouseout", clearPreview);
 }
 
 function addPreviewTooltipForSlot(character, slotType, target){

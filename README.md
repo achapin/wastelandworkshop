@@ -12,6 +12,6 @@ Usable at https://achapin.github.io/wastelandworkshop/
 * "Some cards can only be used by single-model units: Leader, Heroic, Perks, Power Armor, Items with diminishing effects, Unique items, Slow Firing weapons"
 
 - Hide preview toggle?
-- Show faction reference
 - Show Qty of units
 - Show Qty of consumables
+- Unit references ???

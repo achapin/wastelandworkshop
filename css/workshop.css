@@ -161,13 +161,13 @@ h2 {
 }
 
 .totalcaps {
-	font-size: 2em;
+	font-size: 1.5em;
 	padding-right: 1em;
 }
 
 .totalcapsdisplay {
 	font-family: Handelson, Futura;
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 
 .circle {
@@ -503,9 +503,21 @@ option {
 	display: block;
 }
 
+#factionReference {
+	display: none;
+}
+
 @media print {
     .configure-section {
 		display: none;
+	}
+
+	.characterElement {
+		page-break-inside: avoid;
+	}
+
+	#factionReference {
+		display: block;
 	}
 
 	#listName {
@@ -515,7 +527,7 @@ option {
 	#listNamePrint {
 		display: block;
 		font-family: Handelson, Futura;
-		font-size: 1cm;
+		font-size: .75cm;
 		float: right;
 		margin-right: 1em;
 	}
