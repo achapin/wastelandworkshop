@@ -2126,4 +2126,5 @@ function initialize(){
 	console.log("load upgrades");
 	upgradeLoadPromise.then(upgradesLoaded);
 	upgradeLoadPromise.catch(function(){alert("upgrade load failed");});
+	setVisitorCount();
 }
