@@ -2066,9 +2066,9 @@
     ], 
     "name": "frank_horrigan_1", 
     "preview": "frankhorrigan",
-    "reference": ["reference_frank_horrigan"],
     "tags": [
-      "legendary"
+      "legendary",
+      "frank_horrigan"
     ],
     "unique_code": "frank_horrigan_1"
   },
@@ -2083,9 +2083,9 @@
     ], 
     "name": "frank_horrigan_2", 
     "preview": "frankhorrigan2",
-    "reference": ["reference_frank_horrigan"],
     "tags": [
-      "legendary"
+      "legendary",
+      "frank_horrigan"
     ],
     "unique_code": "frank_horrigan_2"
   }, 
@@ -2100,9 +2100,9 @@
     ], 
     "name": "frank_horrigan_3", 
     "preview": "frankhorrigan3", 
-    "reference": ["reference_frank_horrigan"],
     "tags": [
-      "legendary"
+      "legendary",
+      "frank_horrigan"
     ],
     "unique_code": "frank_horrigan_3"
   }, 
@@ -3810,10 +3810,10 @@
     ], 
     "name": "swan_1",
     "preview":"swan1",
-    "reference":["reference_swan"],
     "tags": [
       "creature",
-      "legendary"
+      "legendary",
+      "swan"
     ]
   },
   {
@@ -3831,10 +3831,10 @@
     ], 
     "name": "swan_2",
     "preview":"swan2",
-    "reference":["reference_swan"],
     "tags": [
       "creature",
-      "legendary"
+      "legendary",
+      "swan"
     ]
   },
   {
@@ -3923,6 +3923,7 @@
     ],
     "name": "wiseman",
     "preview":"wiseman",
+    "tags":["ghoul"],
     "unique_code":"wiseman"
   },
   {
@@ -3942,6 +3943,7 @@
     ],
     "name": "arlen_glass",
     "preview":"arlenglass",
+    "tags":["ghoul"],
     "unique_code":"arlenglass"
   },
   {
@@ -3961,6 +3963,7 @@
     ],
     "name": "holly",
     "preview":"holly",
+    "tags":["ghoul"],
     "unique_code":"holly"
   },
   {
@@ -3980,6 +3983,7 @@
     ],
     "name": "deidre",
     "preview":"deidre",
+    "tags":["ghoul"],
     "unique_code":"deidre"
   },
   {
@@ -3999,6 +4003,7 @@
     ],
     "name": "jones",
     "preview":"jones",
+    "tags":["ghoul"],
     "unique_code":"jones"
   },
   {
@@ -4017,7 +4022,8 @@
       "lead_belly"
     ],
     "name": "ghoul",
-    "preview":"ghoul"
+    "preview":"ghoul",
+    "tags":["ghoul"]
   },
   {
     "battle_mode_packs": [

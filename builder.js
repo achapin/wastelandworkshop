@@ -11,6 +11,7 @@ var totalCapsDisplay;
 var previewSection;
 var previewElement;
 var factionReferenceDisplay;
+var forceReferenceDisplay;
 
 var printListNameDisplay;
 var lastTextFieldValue;
@@ -66,7 +67,9 @@ var tagsToReferences = {
 	"legendary":["reference_legendary_units"],
 	"nightkin":["reference_nightkin"],
 	"robot":["reference_robots","reference_robots_ai"],
-	"synth":["reference_synth"]
+	"synth":["reference_synth"],
+	"frank_horrigan":["reference_frank_horrigan"],
+	"swan":["reference_swan"]
 }
 
 var wear_slots = ["power_armor", "armor", "clothing"]; //Exclusive choice
@@ -271,6 +274,7 @@ function initListeners(){
 	printListNameDisplay = document.getElementById("listNamePrint");
 
 	factionReferenceDisplay = document.getElementById("factionReference");
+	forceReferenceDisplay = document.getElementById("forceReferences");
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
@@ -2004,6 +2008,8 @@ function updateCaps(){
 		factionReferenceDisplay.innerHTML = "";
 	}
 
+	var referencesToInclude = new Set();
+
 	if(force.hasOwnProperty("characters")){
 		var unitIndex = 0;
 		force.characters.forEach(function(character){
@@ -2017,6 +2023,14 @@ function updateCaps(){
 			var unitCost = 0;
 
 			var characterTemplate = getCharacterById(character.name);
+
+			if(characterTemplate.hasOwnProperty("tags")){
+				characterTemplate.tags.forEach(function(tag) {
+					if(tagsToReferences.hasOwnProperty(tag)){
+						referencesToInclude.add(tag);
+					}
+				});
+			}
 
 			var baseCost = characterTemplate.cost;
 
@@ -2131,6 +2145,17 @@ function updateCaps(){
 
 	printListNameDisplay.innerHTML = document.getElementById("listNameArea").value;
 	totalCapsDisplay.innerHTML = totalCaps;
+
+	forceReferenceDisplay.innerHTML = "";
+	if(referencesToInclude.size > 0) {
+		forceReferenceDisplay.innerHTML = "<h2>Force References</h2>";
+	}
+	referencesToInclude.forEach(function(referenceTag){
+		tagsToReferences[referenceTag].forEach(function(imagePath){
+			forceReferenceDisplay.innerHTML += "<img class=\"fullcard\" src=\"images/" + imagePath + ".png\" />";
+		});
+	});
+
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
 		window.history.pushState({path:newurl},'',newurl);
