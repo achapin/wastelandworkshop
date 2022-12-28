@@ -572,4 +572,8 @@ option {
 	#forceReferences{
 		page-break-inside: avoid;
 	}
+
+	#footer {
+		display: none;
+	}
 }
