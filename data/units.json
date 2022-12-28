@@ -336,7 +336,10 @@
       "melee.bloated_glowing_one_swipe"
     ], 
     "name": "bloated_glowing_one", 
-    "preview": "bloatedone"
+    "preview": "bloatedone",
+    "tags": [
+      "creature"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -910,7 +913,10 @@
       "restriction": "pistols"
     }, 
     "name": "sin_jin", 
-    "preview": "sinjin", 
+    "preview": "sinjin",
+    "tags": [
+      "ghoul"
+    ],
     "unique_code": "sin_jin"
   }, 
   {
@@ -1252,7 +1258,10 @@
       "melee.hound_bite"
     ], 
     "name": "mutant_hound", 
-    "preview": "mutanthound"
+    "preview": "mutanthound",
+    "tags": [
+      "dog"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -1266,7 +1275,10 @@
       "melee.hound_bite"
     ], 
     "name": "mutant_hound_fiend", 
-    "preview": "mutanthoundfiend"
+    "preview": "mutanthoundfiend",
+    "tags": [
+      "dog"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -1361,7 +1373,10 @@
       "thrown.suicider_mini_nuke"
     ], 
     "name": "suicider", 
-    "preview": "suicider"
+    "preview": "suicider",
+    "tags": [
+      "super_mutant"
+    ]
   }, 
   {
     "battle_mode_packs": [
@@ -1522,7 +1537,10 @@
       "srv"
     ], 
     "name": "hancock", 
-    "preview": "hancock", 
+    "preview": "hancock",
+    "tags": [
+      "ghoul"
+    ], 
     "unique_code": "hancock"
   }, 
   {
@@ -1546,7 +1564,7 @@
     ], 
     "name": "mama_murphy", 
     "preview": "mamamurphy", 
-    "reference": ["reference_mama_murphy"],
+    "reference": ["reference_mamamurphy_1", "reference_mamamurphy_2"],
     "unique_code": "mama_murphy"
   }, 
   {
@@ -1955,7 +1973,8 @@
     "name": "deathclaw_matriarch_1",
     "preview":"deathclawmatriarch1",
     "tags": [
-      "creature"
+      "creature",
+      "legendary"
     ]
   },
   {
@@ -1975,7 +1994,8 @@
     "name": "deathclaw_matriarch_2",
     "preview":"deathclawmatriarch2",
     "tags": [
-      "creature"
+      "creature",
+      "legendary"
     ]
   }, 
   {
@@ -2046,7 +2066,10 @@
     ], 
     "name": "frank_horrigan_1", 
     "preview": "frankhorrigan",
-    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "tags": [
+      "legendary",
+      "frank_horrigan"
+    ],
     "unique_code": "frank_horrigan_1"
   },
   {
@@ -2060,7 +2083,10 @@
     ], 
     "name": "frank_horrigan_2", 
     "preview": "frankhorrigan2",
-    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "tags": [
+      "legendary",
+      "frank_horrigan"
+    ],
     "unique_code": "frank_horrigan_2"
   }, 
   {
@@ -2074,7 +2100,10 @@
     ], 
     "name": "frank_horrigan_3", 
     "preview": "frankhorrigan3", 
-    "reference": ["reference_frank_horrigan", "reference_legendary_units"],
+    "tags": [
+      "legendary",
+      "frank_horrigan"
+    ],
     "unique_code": "frank_horrigan_3"
   }, 
   {
@@ -2119,6 +2148,7 @@
     ], 
     "name": "lorenzo_cabot", 
     "preview": "lorenzocabot", 
+    "reference":["reference_lorenzocabot"],
     "unique_code": "lorenzo_cabot"
   }, 
   {
@@ -2481,6 +2511,9 @@
     ], 
     "name": "raul", 
     "preview":"raul",
+    "tags": [
+      "ghoul"
+    ],
     "unique_code": "raul"
   }, 
   {
@@ -2591,7 +2624,8 @@
     ], 
     "name": "lily",
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "nightkin"
     ], 
     "preview":"lily",
     "unique_code": "lily"
@@ -2640,7 +2674,8 @@
     "name": "nightkin",
     "preview":"nightkin",
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "nightkin"
     ]
   }, 
   {
@@ -2664,7 +2699,8 @@
     ], 
     "name": "tabitha",
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "nightkin"
     ], 
     "preview":"tabitha",
     "unique_code": "tabitha"
@@ -3203,7 +3239,7 @@
     ],
     "name": "liberty_prime",
     "perks" : false,
-    "preview":"libertyprime",
+    "preview":["libertyprime-1", "libertyprime-2", "libertyprime-3"],
     "unique_code":"libertyprime"
   },
   {
@@ -3216,7 +3252,8 @@
     ], 
     "must_carry":["melee.mongrel_bite"],
     "name": "alpha_mongrel",
-    "preview":"alphamongrel"
+    "preview":"alphamongrel",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -3288,7 +3325,10 @@
     ], 
     "must_carry":["melee.glowing_yao_guai_bite"],
     "name": "glowing_yao_guai",
-    "preview":"glowingyaoguai"
+    "preview":"glowingyaoguai",
+    "tags": [
+      "creature"
+    ]
   },
   {
     "battle_mode_packs": [
@@ -3300,7 +3340,10 @@
     ], 
     "must_carry":["melee.yao_guai_bite"],
     "name": "yao_guai",
-    "preview":"yaoguai"
+    "preview":"yaoguai",
+    "tags": [
+      "creature"
+    ]
   },
   {
     "battle_mode_packs": [
@@ -3312,7 +3355,10 @@
     ], 
     "must_carry":["melee.mongrel_bite"],
     "name": "mongrel",
-    "preview":"mongrel"
+    "preview":"mongrel",
+    "tags": [
+      "creature"
+    ]
   },
   {
     "battle_mode_packs": [
@@ -3765,7 +3811,9 @@
     "name": "swan_1",
     "preview":"swan1",
     "tags": [
-      "creature"
+      "creature",
+      "legendary",
+      "swan"
     ]
   },
   {
@@ -3784,7 +3832,9 @@
     "name": "swan_2",
     "preview":"swan2",
     "tags": [
-      "creature"
+      "creature",
+      "legendary",
+      "swan"
     ]
   },
   {
@@ -3802,7 +3852,8 @@
       "frg"
     ], 
     "name": "jake_finch",
-    "preview":"jakefinch"
+    "preview":"jakefinch",
+    "unique_code":"jakefinch"
   },
   {
     "battle_mode_packs": [
@@ -3821,7 +3872,8 @@
       "frg"
     ], 
     "name": "slag",
-    "preview":"slag"
+    "preview":"slag",
+    "unique_code":"slag"
   },
   {
     "battle_mode_packs": [
@@ -3836,7 +3888,8 @@
       "frg"
     ], 
     "name": "bedlam",
-    "preview":"bedlam"
+    "preview":"bedlam",
+    "unique_code":"bedlam"
   },
   {
     "battle_mode_packs": [
@@ -3869,7 +3922,9 @@
       "lead_belly"
     ],
     "name": "wiseman",
-    "preview":"wiseman"
+    "preview":"wiseman",
+    "tags":["ghoul"],
+    "unique_code":"wiseman"
   },
   {
     "battle_mode_packs": [
@@ -3887,7 +3942,9 @@
       "lead_belly"
     ],
     "name": "arlen_glass",
-    "preview":"arlenglass"
+    "preview":"arlenglass",
+    "tags":["ghoul"],
+    "unique_code":"arlenglass"
   },
   {
     "battle_mode_packs": [
@@ -3905,7 +3962,9 @@
       "lead_belly"
     ],
     "name": "holly",
-    "preview":"holly"
+    "preview":"holly",
+    "tags":["ghoul"],
+    "unique_code":"holly"
   },
   {
     "battle_mode_packs": [
@@ -3923,7 +3982,9 @@
       "lead_belly"
     ],
     "name": "deidre",
-    "preview":"deidre"
+    "preview":"deidre",
+    "tags":["ghoul"],
+    "unique_code":"deidre"
   },
   {
     "battle_mode_packs": [
@@ -3941,7 +4002,9 @@
       "lead_belly"
     ],
     "name": "jones",
-    "preview":"jones"
+    "preview":"jones",
+    "tags":["ghoul"],
+    "unique_code":"jones"
   },
   {
     "battle_mode_packs": [
@@ -3959,7 +4022,8 @@
       "lead_belly"
     ],
     "name": "ghoul",
-    "preview":"ghoul"
+    "preview":"ghoul",
+    "tags":["ghoul"]
   },
   {
     "battle_mode_packs": [
@@ -3975,7 +4039,8 @@
       "melee.centaur_lash"
     ],
     "name": "centaur",
-    "preview":"centaur"
+    "preview":"centaur",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -3989,7 +4054,8 @@
       "pistols.glowing_bloatfly_larve"
     ],
     "name": "glowing_bloatfly",
-    "preview":"glowingbloatfly"
+    "preview":"glowingbloatfly",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -4004,7 +4070,8 @@
       "pistols.glowing_bloodbug_blood_spray"
     ],
     "name": "glowing_bloodbug",
-    "preview":"glowingbloodblug"
+    "preview":"glowingbloodbug",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -4018,13 +4085,14 @@
       "melee.glowing_stingwing_strike"
     ],
     "name": "glowing_stingwing",
-    "preview":"glowingstingwing"
+    "preview":"glowingstingwing",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 36,
     "factions": [
       "crt"
     ], 
@@ -4032,7 +4100,8 @@
       "melee.radstag_gore"
     ],
     "name": "radstag",
-    "preview":"radstag"
+    "preview":"radstag",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
@@ -4046,27 +4115,29 @@
       "melee.radstag_doe_gore"
     ],
     "name": "radstag_doe",
-    "preview":"radstagdoe"
+    "preview":"radstagdoe",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 15,
     "factions": [
       "crt"
     ], 
     "must_carry":[
-      "pistols.bloatfly_larve"
+      "pistols.bloatfly_larva"
     ],
     "name": "bloatfly",
-    "preview":"bloatfly"
+    "preview":"bloatfly",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 26,
     "factions": [
       "crt"
     ], 
@@ -4075,20 +4146,22 @@
       "pistols.bloodbug_blood_spray"
     ],
     "name": "bloodbug",
-    "preview":"bloodblug"
+    "preview":"bloodblug",
+    "tags":["creature"]
   },
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 0,
+    "cost": 34,
     "factions": [
       "crt"
     ], 
     "must_carry":[
-      "melee.stingwing_strike"
+      "melee.stingwing_sting"
     ],
     "name": "stingwing",
-    "preview":"stingwing"
+    "preview":"stingwing",
+    "tags":["creature"]
   }
 ]

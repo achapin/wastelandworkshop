@@ -13,6 +13,11 @@
   src: url('/wastelandworkshop/fonts/Futura.ttc');
 }
 
+@font-face {
+	font-family: 'Handelson';
+	src: url('/wastelandworkshop/fonts/Handelson-Two.otf');
+  }
+
 body {
 	background-color: rgb(40,65,129);
 	color: rgb(231, 189, 66);
@@ -39,6 +44,10 @@ h2 {
 
 #listInfo {
 	clear: both;
+}
+
+#listNamePrint {
+	display: none;
 }
 
 .equipmentToggle {
@@ -114,6 +123,7 @@ h2 {
 .characterElement{
 	padding-left: 1em;
 	padding-top: 1em;
+	display: flex;
 }
 
 .grid-container {
@@ -145,9 +155,33 @@ h2 {
 	vertical-align: middle;
 }
 
-.header-section-left {
-	width: 3.7em;
+.totalCharacterCaps {
+	float: left;
+	width: 5em;
 }
+
+.totalcaps {
+	font-size: 1.5em;
+	padding-right: 1em;
+}
+
+.totalcapsdisplay {
+	font-family: Handelson, Futura;
+	font-size: 1.25em;
+}
+
+.circle {
+	width: 4em;
+	line-height: 3.5em;
+	border-radius: 50%;
+	text-align: center;
+	font-family: Handelson, Futura;
+	color: #eee;
+	border: 3px dashed #c22;
+	background-color: #e00;
+	margin-bottom: .5em;
+	position: relative;
+  }
 
 .header-section div {
 	display: inline-block;
@@ -432,6 +466,7 @@ td {
 	z-index: 10;
 	pointer-events: none;
 	max-width: 480px;
+	display: flex;
 }
 
 #preview img {
@@ -441,4 +476,104 @@ td {
 
 option {
 	pointer-events: auto;
+}
+
+.displaySection img {
+	float: left;
+}
+
+.displaySection div {
+	float: left;
+}
+
+.fullcard {
+	width: 64mm;
+	height: 88mm;
+}
+
+.smallcard {
+	width: 65mm;
+	height: 44mm;
+}
+
+.detailSection {
+	display: flex;
+}
+
+.displaySection {
+	display: block;
+}
+
+#factionReference {
+	display: none;
+}
+
+.unitModelCount {
+	display: none;
+}
+
+.optionCount {
+	position: relative;
+	left: -63mm;
+	top: 39mm;
+	margin-right: -5em;
+	color: black;
+}
+
+@media print {
+    .configure-section {
+		display: none;
+	}
+
+	.characterElement {
+		page-break-inside: avoid;
+	}
+
+	#factionReference {
+		display: block;
+	}
+
+	.unitModelCount {
+		display: block;
+	}
+
+	#listName {
+		display: none;
+	}
+
+	#listNamePrint {
+		display: block;
+		font-family: Handelson, Futura;
+		font-size: .75cm;
+		float: right;
+		margin-right: 1em;
+	}
+
+	#kofi {
+		display: none;
+	}
+
+	#addSection {
+		display: none;
+	}
+
+	.cost-section {
+		display: none;
+	}
+
+	.warning {
+		display: none;
+	}
+
+	.totalCharacterCaps button {
+		display: none;
+	}
+
+	#forceReferences{
+		page-break-inside: avoid;
+	}
+
+	#footer {
+		display: none;
+	}
 }
