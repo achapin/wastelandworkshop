@@ -466,6 +466,7 @@ td {
 	z-index: 10;
 	pointer-events: none;
 	max-width: 480px;
+	display: flex;
 }
 
 #preview img {
@@ -566,5 +567,9 @@ option {
 
 	.totalCharacterCaps button {
 		display: none;
+	}
+
+	#forceReferences{
+		page-break-inside: avoid;
 	}
 }

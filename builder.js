@@ -692,7 +692,14 @@ function addCharacter(characterElement, presetInfo){
 			cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + reference + ".png\" />";
 		});
 	}
-	cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
+
+	if(Array.isArray(characterElement.preview)) {
+		characterElement.preview.forEach(function(image){
+			cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + image + ".png\" />";
+		});
+	} else {
+		cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
+	}
 	displaySection.appendChild(cardDiv);
 
 	addLeaderSection(headerRightSection, character, displaySection);
@@ -1690,8 +1697,6 @@ function getChemsSection(character){
 
 	var hasFirstChem = false;
 
-	//TODO: NEW FILTERED UPDATE
-
 	if(character.hasOwnProperty("chems")){
 		Object.getOwnPropertyNames(character.chems).forEach(function(chem){
 
@@ -2264,7 +2269,14 @@ function getCharacterIndex(character){
 
 function setPreview(image, event){
 	if(image != previewElement){
-		previewSection.innerHTML = "<img src='images/" + image + ".png' />";
+
+		if(Array.isArray(image)) {
+			image.forEach(function(subimage){
+				previewSection.innerHTML += "<img style=\"float:left;\" src=\"images/" + subimage + ".png\" />";
+			});
+		} else {
+			previewSection.innerHTML += "<img src=\"images/" + image + ".png\" />";
+		}
 	}
 	previewElement = image;
 
@@ -2341,7 +2353,15 @@ function setCardInDisplay(div, path)
 		div.innerHTML = "";
 		return;
 	}
-	div.innerHTML = "<img class=\"smallcard\" src=\"images/" + path + ".png\" />";
+
+	if(Array.isArray(path)) {
+		div.innerHTML = "";
+		path.forEach(function(subimage){
+			div.innerHTML += "<img class=\"smallcard\" src=\"images/" + subimage + ".png\" />";
+		});
+	} else {
+		div.innerHTML = "<img class=\"smallcard\" src=\"images/" + path + ".png\" />";
+	}
 }
 
 function initialize(){

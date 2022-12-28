@@ -4324,32 +4324,32 @@
     {
       "name":"active_defense_matrix",
       "cost":0,
-      "preview":"libertyprime-activedefensematrix"
+      "preview":["libertyprime-activedefensematrix-active","libertyprime-activedefensematrix-damaged"]
     },
     {
       "name":"electromagnetic_actuators",
       "cost":0,
-      "preview":"libertyprime-electromagneticactuators"
+      "preview":["libertyprime-electromagneticactuators-active","libertyprime-electromagneticactuators-damaged"]
     },
     {
       "name":"gyroscopic_sensors",
       "cost":0,
-      "preview":"libertyprime-gyroscopicsensors"
+      "preview":["libertyprime-gyroscopicsensors-active","libertyprime-gyroscopicsensors-damaged"]
     },
     {
       "name":"m28_autoloader",
       "cost":0,
-      "preview":"libertyprime-m28autoloader"
+      "preview":["libertyprime-m28autoloader-active","libertyprime-m28autoloader-damaged"]
     },
     {
       "name":"power_core",
       "cost":0,
-      "preview":"libertyprime-powercore"
+      "preview":["libertyprime-powercore-active","libertyprime-powercore-damaged"]
     },
     {
       "name":"targeting_hud",
       "cost":0,
-      "preview":"libertyprime-targetinghud"
+      "preview":["libertyprime-targetinghud-active","libertyprime-targetinghud-damaged"]
     }
   ]
 }

@@ -3239,7 +3239,7 @@
     ],
     "name": "liberty_prime",
     "perks" : false,
-    "preview":"libertyprime",
+    "preview":["libertyprime-1", "libertyprime-2", "libertyprime-3"],
     "unique_code":"libertyprime"
   },
   {
