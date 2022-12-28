@@ -12,4 +12,5 @@ Usable at https://achapin.github.io/wastelandworkshop/
 * "Some cards can only be used by single-model units: Leader, Heroic, Perks, Power Armor, Items with diminishing effects, Unique items, Slow Firing weapons"
 
 - Hide preview toggle?
-- Unit references ???
+- Unit references
+- LIBERTY PRIME
