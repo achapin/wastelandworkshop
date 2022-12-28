@@ -3,9 +3,7 @@ A squad builder for Fallout Wasteland Warfare
 Usable at https://achapin.github.io/wastelandworkshop/
 
 # TODO (In no particular order)
-* Better boss flow
 * Automatons
-* Printable lists
 * Unit reordering/sorting
 * Shorten query string
 * Heavy weapons points limit in battle mode
