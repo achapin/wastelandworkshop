@@ -3868,8 +3868,8 @@
     ],
     "must_carry":["melee.shishkebab"],
     "factions": [
-      "rdr",
-      "frg"
+      "frg",
+      "rdr"
     ], 
     "name": "slag",
     "preview":"slag",
@@ -3884,8 +3884,8 @@
     ], 
     "cost": 49,
     "factions": [
-      "rdr",
-      "frg"
+      "frg",
+      "rdr"
     ], 
     "name": "bedlam",
     "preview":"bedlam",
@@ -3900,8 +3900,8 @@
     ], 
     "cost": 45,
     "factions": [
-      "rdr",
-      "frg"
+      "frg",
+      "rdr"
     ], 
     "name": "forged",
     "preview":"forged"
