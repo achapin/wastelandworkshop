@@ -311,7 +311,7 @@
       "upgrades", 
       "usable_items"
     ], 
-    "cost": 97, 
+    "cost": 80, 
     "factions": [
       "crt"
     ], 
@@ -449,7 +449,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 82, 
+    "cost": 77, 
     "factions": [
       "crt"
     ], 
@@ -1001,7 +1001,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 165, 
+    "cost": 180, 
     "factions": [
       "rbt"
     ], 
@@ -2113,7 +2113,7 @@
       "usable_items", 
       "power_armor"
     ], 
-    "cost": 108, 
+    "cost": 90, 
     "default_equipment": {
       "heavy_weapons": [
         "heavy_incinerator"
@@ -2158,7 +2158,7 @@
       "usable_items", 
       "power_armor"
     ], 
-    "cost": 62, 
+    "cost": 57, 
     "default_equipment": {
       "pistols": [
         "plasma_pistol"
@@ -2319,7 +2319,7 @@
       "usable_items", 
       "power_armor"
     ], 
-    "cost": 101, 
+    "cost": 85, 
     "default_equipment": {
       "pistols": [
         "plasma_pistol"
@@ -2342,7 +2342,7 @@
       "usable_items", 
       "power_armor"
     ], 
-    "cost": 71, 
+    "cost": 60, 
     "default_equipment": {
       "melee": [
         "stun_baton"
@@ -2415,7 +2415,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 54, 
+    "cost": 48, 
     "factions": [
       "crt"
     ], 
@@ -2750,7 +2750,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 57, 
+    "cost": 60, 
     "factions": [
       "crt",
       "lgn"
@@ -2984,7 +2984,7 @@
       "wasteland_items",
       "usable_items"
     ], 
-    "cost": 90, 
+    "cost": 63, 
     "default_equipment": {
       "melee":["machete"]
     },
@@ -3024,7 +3024,7 @@
       "wasteland_items",
       "usable_items"
     ], 
-    "cost": 59, 
+    "cost": 46, 
     "default_equipment": {
       "melee": [
         "spear"
@@ -3043,7 +3043,7 @@
       "advanced_items",
       "usable_items"
     ], 
-    "cost": 60, 
+    "cost": 55, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -3084,7 +3084,7 @@
       "advanced_items",
       "usable_items"
     ], 
-    "cost": 65, 
+    "cost": 52, 
     "default_equipment": {
       "melee": [
         "ballistic_fist"
@@ -3207,7 +3207,7 @@
       "advanced_items",
       "usable_items"
     ], 
-    "cost": 112, 
+    "cost": 95, 
     "default_equipment": {
       "rifles": [
         "anti_materiel_rifle"
@@ -3319,7 +3319,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 285, 
+    "cost": 135, 
     "factions": [
       "crt"
     ], 
@@ -3386,7 +3386,7 @@
         "advanced_items",
         "high_tech_items"
     ], 
-    "cost": 72, 
+    "cost": 53, 
     "default_equipment": {
       "rifles": [
         "combat_rifle"
@@ -3405,7 +3405,7 @@
         "advanced_items",
         "high_tech_items"
     ], 
-    "cost": 80, 
+    "cost": 68, 
     "default_equipment": {
       "rifles": [
         "laser_rifle"
@@ -3472,7 +3472,7 @@
         "high_tech_items",
         "power_armor"
     ], 
-    "cost": 148, 
+    "cost": 105, 
     "factions": [
       "gun"
     ],
@@ -3768,7 +3768,7 @@
         "usable_items",
         "wasteland_items"
     ], 
-    "cost": 203, 
+    "cost": 240, 
     "factions": [
       "srv"
     ], 
@@ -3862,7 +3862,7 @@
         "advanced_items",
         "wasteland_items"
     ], 
-    "cost": 65, 
+    "cost": 131, 
     "has_perk": [
       "pyromaniac"
     ],
@@ -3882,7 +3882,7 @@
         "advanced_items",
         "wasteland_items"
     ], 
-    "cost": 49,
+    "cost": 55,
     "factions": [
       "frg",
       "rdr"
@@ -3898,7 +3898,7 @@
         "advanced_items",
         "wasteland_items"
     ], 
-    "cost": 45,
+    "cost": 46,
     "factions": [
       "frg",
       "rdr"

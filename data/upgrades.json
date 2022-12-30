@@ -900,7 +900,7 @@
     },
     {
       "name": "gauss_rifle",
-      "cost": 40,
+      "cost": 42,
       "preview": "gaussrifle"
     },
     {
@@ -1015,12 +1015,12 @@
     },
     {
       "name": "plasma_rifle",
-      "cost": 19,
+      "cost": 24,
       "preview": "plasmarifle"
     },
     {
       "name": "railway_rifle",
-      "cost": 14,
+      "cost": 20,
       "preview": "railwayrifle"
     },
     {
@@ -1124,6 +1124,16 @@
       "preview": "alienblaster"
     },
     {
+      "name": "bloatfly_larva",
+      "cost": 0,
+      "preview": "bloatflylarva"
+    },
+    {
+      "name": "bloodbug_blood_spray",
+      "cost": 0,
+      "preview": "bloodbugbloodspray"
+    },
+    {
       "name": "bolt_action_pipe_pistol",
       "cost": 1,
       "preview": "boltactionpipepistol"
@@ -1162,6 +1172,16 @@
       "name": "gamma_gun",
       "cost": 13,
       "preview": "gammagun"
+    },
+    {
+      "name": "glowing_bloatfly_larva",
+      "cost": 0,
+      "preview": "glowingbloatflylarva"
+    },
+    {
+      "name": "glowing_bloodbug_blood_spray",
+      "cost": 0,
+      "preview": "glowingbloodbugbloodspray"
     },
     {
       "name":"hand_cryojet",
@@ -1326,26 +1346,6 @@
       "name":"wounding_laser_pistol",
       "cost": 8,
       "preview": "woundinglaserpistol"
-    },
-    {
-      "name": "bloatfly_larva",
-      "cost": 0,
-      "preview": "bloatflylarva"
-    },
-    {
-      "name": "bloodbug_blood_spray",
-      "cost": 0,
-      "preview": "bloodbugbloodspray"
-    },
-    {
-      "name": "glowing_bloatfly_larva",
-      "cost": 0,
-      "preview": "glowingbloatflylarva"
-    },
-    {
-      "name": "glowing_bloodbug_blood_spray",
-      "cost": 0,
-      "preview": "glowingbloodbugbloodspray"
     }
   ],
   "melee": [
@@ -1380,6 +1380,16 @@
       "preview": "bladeoftheeast"
     },
     {
+      "name": "bloated_glowing_one_swipe",
+      "cost": 0,
+      "preview": "bloatedswipe"
+    },
+    {
+      "name": "bloodbug_proboscis",
+      "cost": 0,
+      "preview": "bloodbugproboscis"
+    },
+    {
       "name": "bloodied_board",
       "cost": 9,
       "preview": "bloodiedboard"
@@ -1403,6 +1413,11 @@
       "name": "cattle_prod",
       "cost": 3,
       "preview": "cattleprod"
+    },
+    {
+      "name": "centaur_lash",
+      "cost": 0,
+      "preview": "centaurlash"
     },
     {
       "name": "chinese_officers_sword",
@@ -1495,6 +1510,16 @@
       "preview": "freezingmachete"
     },
     {
+      "name": "glowing_bloodbug_proboscis",
+      "cost": 0,
+      "preview": "glowingbloodbugproboscis"
+    },
+    {
+      "name": "glowing_stingwing_sting",
+      "cost": 0,
+      "preview": "glowingstingwingsting"
+    },
+    {
       "name": "glowing_radroach_swarm_bite",
       "cost": 0,
       "preview":"glowingradroachswarmbite"
@@ -1553,6 +1578,11 @@
       "name": "incendiary_baton",
       "cost": 13,
       "preview": "incendiarybaton"
+    },
+    {
+      "name": "incendiary_super_sledge",
+      "cost": 33,
+      "preview": "incendiarysupersledge"
     },
     {
       "name": "irradiated_sledgehammer",
@@ -1681,6 +1711,21 @@
       "preview": "radroachbite"
     },
     {
+      "name": "radscorpion_pincers_and_sting",
+      "cost": 0,
+      "preview": "radscorpionpincerssting"
+    },
+    {
+      "name": "radstag_doe_gore",
+      "cost": 0,
+      "preview": "radstagdoegore"
+    },
+    {
+      "name": "radstag_gore",
+      "cost": 0,
+      "preview": "radstaggore"
+    },
+    {
       "name": "rebar_club",
       "cost": 18,
       "preview": "rebarclub"
@@ -1736,6 +1781,11 @@
       "preview": "staggeringtireiron"
     },
     {
+      "name": "stingwing_sting",
+      "cost": 0,
+      "preview": "stingwingsting"
+    },
+    {
       "name": "stun_baton",
       "cost": 25,
       "preview": "stunbaton"
@@ -1786,16 +1836,6 @@
       "preview": "weakghoulswipe"
     },
     {
-      "name": "bloated_glowing_one_swipe",
-      "cost": 0,
-      "preview": "bloatedswipe"
-    },
-    {
-      "name": "radscorpion_pincers_and_sting",
-      "cost": 0,
-      "preview": "radscorpionpincerssting"
-    },
-    {
       "name": "wounding_machete",
       "cost": 3,
       "preview":"woundingmachete"
@@ -1814,46 +1854,6 @@
       "name": "young_deathclaw_swipe",
       "cost": 0,
       "preview": "youngdeathclawswipe"
-    },
-    {
-      "name": "bloodbug_proboscis",
-      "cost": 0,
-      "preview": "bloodbugproboscis"
-    },
-    {
-      "name": "centaur_lash",
-      "cost": 0,
-      "preview": "centaurlash"
-    },
-    {
-      "name": "glowing_bloodbug_proboscis",
-      "cost": 0,
-      "preview": "glowingbloodbugproboscis"
-    },
-    {
-      "name": "glowing_stingwing_sting",
-      "cost": 0,
-      "preview": "glowingstingwingsting"
-    },
-    {
-      "name": "incendiary_super_sledge",
-      "cost": 33,
-      "preview": "incendiarysupersledge"
-    },
-    {
-      "name": "radstag_doe_gore",
-      "cost": 0,
-      "preview": "radstagdoegore"
-    },
-    {
-      "name": "radstag_gore",
-      "cost": 0,
-      "preview": "radstaggore"
-    },
-    {
-      "name": "stingwing_sting",
-      "cost": 0,
-      "preview": "stingwingsting"
     }
   ],
   "thrown": [
@@ -2570,22 +2570,22 @@
     },
     {
       "name": "berserker",
-      "cost": 9,
+      "cost": 8,
       "preview": "berserker"
     },
     {
       "name": "blitzer",
-      "cost": 8,
+      "cost": 4,
       "preview": "blitzer"
     },
     {
       "name": "bodyguard",
-      "cost": 16,
+      "cost": 12,
       "preview": "bodyguard"
     },
     {
       "name": "brawler",
-      "cost": 12,
+      "cost": 10,
       "preview": "brawler"
     },
     {
@@ -2595,7 +2595,7 @@
     },
     {
       "name": "commander",
-      "cost": 13,
+      "cost": 18,
       "preview": "commander"
     },
     {
@@ -2611,17 +2611,17 @@
     },
     {
       "name": "defender",
-      "cost": 12,
+      "cost": 28,
       "preview": "defender"
     },
     {
       "name": "dweller",
-      "cost": 17,
+      "cost": 8,
       "preview": "dweller"
     },
     {
       "name": "fusilier",
-      "cost": 14,
+      "cost": 12,
       "preview": "fusilier"
     },
     {
@@ -2641,7 +2641,7 @@
     },
     {
       "name": "old_timer",
-      "cost": 11,
+      "cost": 3,
       "preview": "oldtimer"
     },
     {
@@ -2682,7 +2682,7 @@
     },
     {
       "name": "tech",
-      "cost": 14,
+      "cost": 9,
       "preview": "tech"
     },
     {
@@ -2692,22 +2692,22 @@
     },
     {
       "name": "thief",
-      "cost": 11,
+      "cost": 7,
       "preview": "thief"
     },
     {
       "name": "veteran",
-      "cost": 12,
+      "cost": 13,
       "preview": "veteran"
     },
     {
       "name": "warden",
-      "cost": 11,
+      "cost": 12,
       "preview": "warden"
     },
     {
       "name": "wasteland_searcher",
-      "cost": 12,
+      "cost": 5,
       "preview": "wastelandsearcher"
     },
     {
@@ -3254,16 +3254,16 @@
       "preview": "balanced"
     },
     {
-      "name": "barbed",
-      "cost": 3,
-      "types":["melee"],
-      "preview": "barbed"
-    },
-    {
       "name": "ballistic_weave",
       "cost": 6,
       "types":["armor"],
       "preview": "ballisticweave"
+    },
+    {
+      "name": "barbed",
+      "cost": 3,
+      "types":["melee"],
+      "preview": "barbed"
     },
     {
       "name": "bayonet",
@@ -4061,6 +4061,11 @@
       "preview": "sugarbombs"
     },
     {
+      "name":"tarberry",
+      "cost":9,
+      "preview": "tarberry"
+    },
+    {
       "name":"sunset_sasparilla",
       "cost":24,
       "preview": "sunsetsasparilla"
@@ -4079,11 +4084,6 @@
       "name":"yao_guai_rib_meat",
       "cost":24,
       "preview": "yaoguairibmeat"
-    },
-    {
-      "name":"tarberry",
-      "cost":9,
-      "preview": "tarberry"
     }
   ],
   "gear":[
