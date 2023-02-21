@@ -3777,7 +3777,8 @@
       "melee.grognaks_axe"
     ],
     "name": "grognak",
-    "preview":"grognak"
+    "preview":"grognak",
+    "unique_code":"grognak"
   },
   {
     "battle_mode_packs": [
@@ -3860,13 +3861,13 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "power_armor"
     ], 
     "cost": 131, 
     "has_perk": [
       "pyromaniac"
     ],
-    "must_carry":["melee.shishkebab"],
     "factions": [
       "frg",
       "rdr"
