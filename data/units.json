@@ -549,9 +549,9 @@
     ], 
     "cost": 87, 
     "default_equipment": {
-      "gear": [
-        "stealth_boy"
-      ]
+      "gear": {
+        "stealth_boy":1
+      }
     }, 
     "factions": [
       "ins"
@@ -4093,7 +4093,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 36,
+    "cost": 45,
     "factions": [
       "crt"
     ], 
@@ -4108,7 +4108,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 45,
+    "cost": 36,
     "factions": [
       "crt"
     ], 
@@ -4147,7 +4147,7 @@
       "pistols.bloodbug_blood_spray"
     ],
     "name": "bloodbug",
-    "preview":"bloodblug",
+    "preview":"bloodbug",
     "tags":["creature"]
   },
   {

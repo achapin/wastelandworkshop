@@ -837,12 +837,14 @@
     {
       "name": "assaultron_head_laser",
       "cost": 40,
-      "preview": "assaultronlaser"
+      "preview": "assaultronlaser",
+      "restrictions":["robot", "assaultron"]
     },
     {
       "name": "battered_assaultron_head_laser",
       "cost": 30,
-      "preview": "assaultronbatlaser"
+      "preview": "assaultronbatlaser",
+      "restrictions":["robot", "assaultron"]
     },
     {
       "name": "bolt_action_pipe_rifle",
@@ -912,7 +914,8 @@
     {
       "name":"horrigans_plasma_gun",
       "cost": 30,
-      "preview": "horrigansplasmagun"
+      "preview": "horrigansplasmagun",
+      "restrictions":["frank_horrigan"]
     },
     {
       "name": "hunters_hunting_rifle",
@@ -1157,12 +1160,14 @@
     {
       "name": "eyebot_laser",
       "cost": 4,
-      "preview": "eyebotlaser"
+      "preview": "eyebotlaser",
+      "restrictions":["robot", "eyebot"]
     },
     {
       "name":"eyebot_tesla_cannon",
       "cost":12,
-      "preview": "eyebotteslacannon"
+      "preview": "eyebotteslacannon",
+      "restrictions":["robot", "eyebot"]
     },
     {
       "name": "flare_gun",
@@ -1187,22 +1192,26 @@
     {
       "name":"hand_cryojet",
       "cost": 10,
-      "preview":"handcryojet"
+      "preview":"handcryojet",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name":"hand_gamma_gun",
       "cost": 15,
-      "preview":"handgammagun"
+      "preview":"handgammagun",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name":"hand_lightning_gun",
       "cost": 4,
-      "preview":"handlightninggun"
+      "preview":"handlightninggun",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name":"hand_nail_gun",
       "cost": 7,
-      "preview":"handnailgun"
+      "preview":"handnailgun",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name":"hunters_10mm_pistol",
@@ -1310,7 +1319,8 @@
     {
       "name": "protectron_hand_laser",
       "cost": 10,
-      "preview": "protectronlaser"
+      "preview": "protectronlaser",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name":"pulse_gun",
@@ -1353,7 +1363,8 @@
     {
       "name": "assaultron_swipe",
       "cost": 12,
-      "preview": "assaultronswipe"
+      "preview": "assaultronswipe",
+      "restrictions":["robot", "assaultron"]
     },
     {
       "name": "assaultron_blade",
@@ -1478,7 +1489,8 @@
     {
       "name": "empty_minigun",
       "cost": 14,
-      "preview": "emptyminigun"
+      "preview": "emptyminigun",
+      "restrictions":["robot", "sentrybot"]
     },
     {
       "name": "feral_ghoul_swipe",
@@ -1543,22 +1555,26 @@
     {
       "name": "hand_saw_blade",
       "cost": 6,
-      "preview":"handsawblade"
+      "preview":"handsawblade",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name": "hand_shock",
       "cost": 25,
-      "preview":"handshock"
+      "preview":"handshock",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name": "hand_vice_grip",
       "cost": 3,
-      "preview":"handvicegrip"
+      "preview":"handvicegrip",
+      "restrictions":["robot", "protectron"]
     },
     {
       "name": "horrigans_knife",
       "cost": 40,
-      "preview": "horrigansknife"
+      "preview": "horrigansknife",
+      "restrictions":["frank_horrigan"]
     },
     {
       "name": "hound_bite",
@@ -2021,7 +2037,7 @@
       "name": "t60f_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 95,
-      "preview": "t60f_power_armor"
+      "preview": "t60fpowerarmor"
     },
     {
       "name": "tessas_power_armor",
@@ -3876,7 +3892,7 @@
       "name":"tesla_coils_robots",
       "types":["robots"],
       "cost":5,
-      "preview":"teslacoilsrobots"
+      "preview":"teslacoilsrobot"
     },
     {
       "name": "thicker_plating",

@@ -172,7 +172,10 @@ function localizationLoaded(json){
 		}
 
 		if(!character.hasOwnProperty("battle_mode_packs")){
-			console.log(character.name + "has no battle mode packs");
+			if(!character.hasOwnProperty("must_carry"))
+			{
+				console.log(character.name + "has no battle mode packs");
+			}
 			return;
 		}
 
@@ -222,9 +225,15 @@ function localizationLoaded(json){
 		});
 	});
 
-	console.log("Missing LOC keys: " + missingKeys);
+	if(missingKeys.length > 0){
+		console.log("Missing LOC keys: " + missingKeys);
+	}
+	if(missingPreview.length > 0){
 	console.log("Missing Previews: " + missingPreview);
+	}
+	if(missingItems.length > 0){
 	console.log("Missing Items: " + missingItems);
+	}
 	if(checkPreview){
 		console.log("Bad preview links: " + badPreview);
 	}
