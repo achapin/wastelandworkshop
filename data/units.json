@@ -3845,7 +3845,10 @@
         "advanced_items",
         "wasteland_items"
     ], 
-    "cost": 42, 
+    "cost": 42,
+    "default_equipment":{
+      "pistols":["10mm_pistol"]
+    },
     "must_carry":["melee.shishkebab"],
     "factions": [
       "rdr",
@@ -3865,6 +3868,11 @@
         "power_armor"
     ], 
     "cost": 131, 
+    "default_equipment":{
+      "pistols":["laser_pistol"],
+      "melee":["shishkebab"],
+      "power_armor":["slags_power_armor"]
+    },
     "has_perk": [
       "pyromaniac"
     ],
@@ -3884,6 +3892,12 @@
         "wasteland_items"
     ], 
     "cost": 55,
+    "default_equipment":{
+      "melee":["incendiary_super_sledge"],
+      "thrown": {
+        "molotov_cocktail": "4"
+      }
+    },
     "factions": [
       "frg",
       "rdr"
@@ -3900,6 +3914,12 @@
         "wasteland_items"
     ], 
     "cost": 46,
+    "default_equipment":{
+      "melee":["sledgehammer"],
+      "thrown": {
+        "molotov_cocktail": "4"
+      }
+    },
     "factions": [
       "frg",
       "rdr"
@@ -3915,6 +3935,9 @@
         "wasteland_items"
     ], 
     "cost": 65,
+    "default_equipment":{
+      "pistols":["bolt_action_pipe_pistol"]
+    },
     "factions": [
       "srv",
       "slg"
@@ -3935,6 +3958,10 @@
         "wasteland_items"
     ], 
     "cost": 49,
+    "default_equipment":{
+      "pistols":["10mm_pistol"],
+      "melee":["pipe_wrench"]
+    },
     "factions": [
       "srv",
       "slg"
@@ -3955,6 +3982,9 @@
         "wasteland_items"
     ], 
     "cost": 45,
+    "default_equipment":{
+      "pistols":["bolt_action_pipe_pistol"]
+    },
     "factions": [
       "srv",
       "slg"
@@ -3975,6 +4005,10 @@
         "wasteland_items"
     ], 
     "cost": 52,
+    "default_equipment":{
+      "pistols":["pipe_pistol"],
+      "melee":["tire_iron"]
+    },
     "factions": [
       "srv",
       "slg"
@@ -3995,6 +4029,10 @@
         "wasteland_items"
     ], 
     "cost": 69,
+    "default_equipment":{
+      "pistols":["pipe_pistol"],
+      "melee":["board"]
+    },
     "factions": [
       "srv",
       "slg"
@@ -4015,6 +4053,9 @@
         "wasteland_items"
     ], 
     "cost": 40,
+    "default_equipment":{
+      "rifles":["double_barrel_shotgun"]
+    },
     "factions": [
       "srv",
       "slg"
