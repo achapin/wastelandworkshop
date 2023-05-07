@@ -4,9 +4,12 @@
       "upgrades", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 111, 
+    "cost": 107, 
     "default_equipment": {
       "melee": [
         "baseball_bat"
@@ -28,7 +31,9 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
     "cost": 120, 
     "default_equipment": {
@@ -52,7 +57,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 40, 
+    "cost": 47, 
     "factions": [
       "bos", 
       "enc", 
@@ -73,9 +78,11 @@
       "upgrades", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 43, 
+    "cost": 42, 
     "default_equipment": {
       "pistols": [
         "laser_pistol"
@@ -92,9 +99,11 @@
       "upgrades", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 38, 
+    "cost": 37, 
     "default_equipment": {
       "pistols": [
         "laser_pistol"
@@ -112,7 +121,9 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
     "consumables": {
       "thrown": [
@@ -121,7 +132,7 @@
         "pulse_grenade"
       ]
     }, 
-    "cost": 62, 
+    "cost": 60, 
     "default_equipment": {
       "rifles": [
         "combat_rifle"
@@ -139,9 +150,11 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 72, 
+    "cost": 86, 
     "default_equipment": {
       "heavy_weapons": [
         "minigun"
@@ -161,7 +174,9 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
     "cost": 40, 
     "default_equipment": {
@@ -181,9 +196,11 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 38, 
+    "cost": 39, 
     "default_equipment": {
       "rifles": [
         "laser_rifle"
@@ -201,9 +218,11 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 67, 
+    "cost": 58, 
     "default_equipment": {
       "rifles": [
         "laser_rifle"
@@ -221,9 +240,11 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 57, 
+    "cost": 63, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -241,9 +262,11 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 80, 
+    "cost": 85, 
     "default_equipment": {
       "rifles": [
         "laser_rifle"
@@ -267,9 +290,11 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 90, 
+    "cost": 92, 
     "default_equipment": {
       "heavy_weapons": [
         "gatling_laser"
@@ -290,9 +315,11 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items"
     ], 
-    "cost": 118, 
+    "cost": 122, 
     "default_equipment": {
       "power_armor": "t60_power_armor", 
       "rifles": [
@@ -311,7 +338,7 @@
       "upgrades", 
       "usable_items"
     ], 
-    "cost": 80, 
+    "cost": 105, 
     "factions": [
       "crt"
     ], 
@@ -328,7 +355,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 210, 
+    "cost": 198, 
     "factions": [
       "crt"
     ], 
@@ -345,7 +372,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 250, 
+    "cost": 260, 
     "factions": [
       "crt", 
       "enc"
@@ -381,7 +408,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 34, 
+    "cost": 45, 
     "factions": [
       "crt"
     ], 
@@ -398,7 +425,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 10, 
+    "cost": 17, 
     "factions": [
       "crt"
     ], 
@@ -415,7 +442,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 223, 
+    "cost": 181, 
     "factions": [
       "crt"
     ], 
@@ -432,7 +459,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 22, 
+    "cost": 25, 
     "factions": [
       "crt"
     ], 
@@ -449,7 +476,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 77, 
+    "cost": 85, 
     "factions": [
       "crt"
     ], 
@@ -466,7 +493,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 24, 
+    "cost": 31, 
     "factions": [
       "crt"
     ], 
@@ -483,7 +510,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 125, 
+    "cost": 116, 
     "factions": [
       "crt"
     ], 
@@ -500,9 +527,12 @@
   {
     "battle_mode_packs": [
       "high_tech_items", 
-      "advanced_items"
+      "advanced_items",
+      "institute_items",
+      "standard_items",
+      "upgrades"
     ], 
-    "cost": 107, 
+    "cost": 104, 
     "default_equipment": {
       "heavy_weapons": [
         "missile_launcher"
@@ -520,9 +550,12 @@
   }, 
   {
     "battle_mode_packs": [
-      "advanced_items"
+      "advanced_items",
+      "institute_items",
+      "standard_items",
+      "upgrades"
     ], 
-    "cost": 23, 
+    "cost": 24, 
     "default_equipment": {
       "melee": [
         "baton"
@@ -545,9 +578,11 @@
       "upgrades", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 87, 
+    "cost": 95, 
     "default_equipment": {
       "gear": {
         "stealth_boy":1
@@ -567,9 +602,12 @@
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
-      "usable_items"
+      "advanced_items",
+      "usable_items",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 138, 
+    "cost": 125, 
     "default_equipment": {
       "pistols": [
         "gamma_gun"
@@ -588,9 +626,11 @@
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
-      "usable_items"
+      "usable_items",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 43, 
+    "cost": 52, 
     "default_equipment": {
       "pistols": [
         "institute_laser_pistol"
@@ -607,9 +647,12 @@
   }, 
   {
     "battle_mode_packs": [
-      "high_tech_items"
+      "high_tech_items",
+      "upgrades",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 32, 
+    "cost": 30, 
     "default_equipment": {
       "melee": [
         "baton"
@@ -629,9 +672,12 @@
   }, 
   {
     "battle_mode_packs": [
-      "high_tech_items"
+      "high_tech_items",
+      "upgrades",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 77, 
+    "cost": 59, 
     "default_equipment": {
       "rifles": [
         "institute_laser_rifle"
@@ -650,9 +696,11 @@
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
-      "usable_items"
+      "usable_items",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 30, 
+    "cost": 40, 
     "default_equipment": {
       "pistols": [
         "institute_laser_pistol"
@@ -669,9 +717,12 @@
   }, 
   {
     "battle_mode_packs": [
-      "high_tech_items"
+      "high_tech_items",
+      "upgrades",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 88, 
+    "cost": 77, 
     "default_equipment": {
       "rifles": [
         "institute_laser_rifle"
@@ -691,9 +742,11 @@
       "upgrades", 
       "high_tech_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 152, 
+    "cost": 143, 
     "default_equipment": {
       "pistols": [
         "gamma_gun"
@@ -711,9 +764,11 @@
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
-      "usable_items"
+      "usable_items",
+      "institute_items",
+      "standard_items"
     ], 
-    "cost": 118, 
+    "cost": 122, 
     "default_equipment": {
       "pistols": [
         "institute_laser_pistol"
@@ -732,9 +787,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "raider_items",
+      "standard_items"
     ], 
-    "cost": 98, 
+    "cost": 102, 
     "default_equipment": {
       "heavy_weapons": [
         "minigun"
@@ -755,7 +812,7 @@
       "usable_items", 
       "power_armor"
     ], 
-    "cost": 85, 
+    "cost": 93, 
     "default_equipment": {
       "rifles": [
         "combat_shotgun"
@@ -815,9 +872,11 @@
       "upgrades", 
       "wasteland_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "raider_items",
+      "standard_items"
     ], 
-    "cost": 39, 
+    "cost": 43, 
     "default_equipment": {
       "rifles": [
         "pipe_rifle"
@@ -834,7 +893,9 @@
       "upgrades", 
       "wasteland_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "raider_items",
+      "standard_items"
     ], 
     "cost": 39, 
     "default_equipment": {
@@ -857,9 +918,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "raider_items",
+      "standard_items"
     ], 
-    "cost": 60, 
+    "cost": 61, 
     "default_equipment": {
       "rifles": [
         "bolt_action_pipe_rifle"
@@ -877,9 +940,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "raider_items",
+      "standard_items"
     ], 
-    "cost": 59, 
+    "cost": 58, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -897,9 +962,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "raider_items",
+      "standard_items"
     ], 
-    "cost": 88, 
+    "cost": 95, 
     "default_equipment": {
       "pistols": [
         "bolt_action_pipe_pistol"
@@ -925,9 +992,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "raider_items",
+      "standard_items"
     ], 
-    "cost": 85, 
+    "cost": 91, 
     "default_equipment": {
       "melee": [
         "nail_board"
@@ -947,7 +1016,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 320, 
+    "cost": 249, 
     "factions": [
       "enc", 
       "rbt"
@@ -966,9 +1035,10 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 95, 
+    "cost": 120, 
     "factions": [
-      "rbt"
+      "rbt",
+      "rdr"
     ], 
     "must_carry": [
       "rifles.battered_assaultron_head_laser", 
@@ -984,9 +1054,10 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 35, 
+    "cost": 44, 
     "factions": [
-      "rbt"
+      "rbt",
+      "rdr"
     ], 
     "must_carry": [
       "pistols.protectron_hand_laser"
@@ -1001,9 +1072,10 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 180, 
+    "cost": 154, 
     "factions": [
-      "rbt"
+      "rbt",
+      "rdr"
     ], 
     "must_carry": [
       "melee.empty_minigun", 
@@ -1019,7 +1091,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 70, 
+    "cost": 82, 
     "factions": [
       "rbt", 
       "srv"
@@ -1038,7 +1110,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 48, 
+    "cost": 63, 
     "factions": [
       "rbt"
     ], 
@@ -1055,7 +1127,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 253, 
+    "cost": 289, 
     "factions": [
       "enc", 
       "rbt"
@@ -1076,9 +1148,10 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 95, 
+    "cost": 97, 
     "default_equipment": {
       "pistols": [
         "pipe_pistol"
@@ -1100,9 +1173,10 @@
   {
     "battle_mode_packs": [
       "behemoth_items", 
-      "usable_items"
+      "usable_items",
+      "standard_items"
     ], 
-    "cost": 207, 
+    "cost": 230, 
     "default_equipment": {
       "melee": [
         "fire_hydrant_bat"
@@ -1130,9 +1204,10 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 95, 
+    "cost": 88, 
     "default_equipment": {
       "melee": [
         "sledgehammer"
@@ -1151,9 +1226,10 @@
     "battle_mode_packs": [
       "upgrades", 
       "wasteland_items", 
-      "usable_items"
+      "usable_items",
+      "standard_items"
     ], 
-    "cost": 35, 
+    "cost": 34, 
     "default_equipment": {
       "rifles": [
         "combat_shotgun"
@@ -1173,9 +1249,10 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 86, 
+    "cost": 90, 
     "default_equipment": {
       "heavy_weapons": [
         "minigun"
@@ -1198,9 +1275,10 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 109, 
+    "cost": 94, 
     "default_equipment": {
       "heavy_weapons": [
         "missile_launcher"
@@ -1226,9 +1304,10 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 107, 
+    "cost": 108, 
     "default_equipment": {
       "melee": [
         "huge_club"
@@ -1250,7 +1329,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 65, 
+    "cost": 63, 
     "factions": [
       "mut"
     ], 
@@ -1267,7 +1346,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 65, 
+    "cost": 71, 
     "factions": [
       "mut"
     ], 
@@ -1287,7 +1366,8 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
     "cost": 163, 
     "default_equipment": {
@@ -1312,9 +1392,10 @@
       "upgrades", 
       "wasteland_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 49, 
+    "cost": 47, 
     "default_equipment": {
       "melee": [
         "pipe_wrench"
@@ -1336,9 +1417,10 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 86, 
+    "cost": 87, 
     "default_equipment": {
       "melee": [
         "super_sledge"
@@ -1363,7 +1445,8 @@
       "upgrades", 
       "wasteland_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
     "cost": 55, 
     "factions": [
@@ -1383,9 +1466,10 @@
       "upgrades", 
       "wasteland_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 42, 
+    "cost": 44, 
     "default_equipment": {
       "melee": [
         "board"
@@ -1408,9 +1492,11 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 77, 
+    "cost": 81, 
     "default_equipment": {
       "chems": {
         "mentats": 1
@@ -1430,7 +1516,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 90, 
+    "cost": 105, 
     "factions": [
       "srv", 
       "rbt"
@@ -1450,7 +1536,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 70, 
+    "cost": 79, 
     "factions": [
       "crt", 
       "srv", 
@@ -1477,7 +1563,7 @@
       "melee.dog_bite"
     ], 
     "name": "dogmeat", 
-    "preview": "dogmeat_v2", 
+    "preview": "dogmeat", 
     "tags": [
       "dog"
     ], 
@@ -1487,7 +1573,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 83, 
+    "cost": 96, 
     "factions": [
       "srv"
     ], 
@@ -1525,9 +1611,11 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 61, 
+    "cost": 66, 
     "default_equipment": {
       "pistols": [
         "plasma_pistol"
@@ -1547,7 +1635,8 @@
     "battle_mode_packs": [
       "upgrades", 
       "wasteland_items", 
-      "usable_items"
+      "usable_items",
+      "standard_items"
     ], 
     "cost": 85, 
     "default_equipment": {
@@ -1593,9 +1682,11 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 70, 
+    "cost": 79, 
     "default_equipment": {
       "pistols": [
         "pipe_pistol"
@@ -1616,9 +1707,10 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "standard_items"
     ], 
-    "cost": 100, 
+    "cost": 110, 
     "default_equipment": {
       "pistols": [
         "thirst_zapper_cola"
@@ -1637,9 +1729,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 76, 
+    "cost": 57, 
     "default_equipment": {
       "pistols": [
         "10mm_pistol"
@@ -1658,9 +1752,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 124, 
+    "cost": 117, 
     "default_equipment": {
       "rifles": [
         "laser_musket"
@@ -1684,9 +1780,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 114, 
+    "cost": 109, 
     "default_equipment": {
       "rifles": [
         "laser_musket"
@@ -1705,9 +1803,11 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 42, 
+    "cost": 44, 
     "default_equipment": {
       "rifles": [
         "bolt_action_pipe_rifle"
@@ -1724,9 +1824,11 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 40, 
+    "cost": 43, 
     "default_equipment": {
       "rifles": [
         "assault_rifle"
@@ -1745,9 +1847,14 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "enclave_items",
+      "institute_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 107, 
+    "cost": 111, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -1768,9 +1875,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 85, 
+    "cost": 90, 
     "default_equipment": {
       "pistols": [
         "10mm_pistol"
@@ -1790,9 +1899,14 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "enclave_items",
+      "institute_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 126, 
+    "cost": 134, 
     "default_equipment": {
       "melee": [
         "machete"
@@ -1820,9 +1934,14 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "enclave_items",
+      "institute_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 88, 
+    "cost": 97, 
     "default_equipment": {
       "power_armor": "x01_power_armor", 
       "rifles": [
@@ -1844,9 +1963,11 @@
       "wasteland_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 92, 
+    "cost": 90, 
     "default_equipment": {
       "pistols": [
         "44_revolver"
@@ -1863,9 +1984,13 @@
     "battle_mode_packs": [
       "upgrades", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "high_tech_items",
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 34, 
+    "cost": 35, 
     "default_equipment": {
       "pistols": [
         "10mm_pistol"
@@ -1883,10 +2008,13 @@
   {
     "battle_mode_packs": [
       "upgrades", 
-      "advanced_items", 
-      "usable_items"
+      "advanced_items",
+      "high_tech_items",
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 40, 
+    "cost": 47, 
     "default_equipment": {
       "melee": [
         "baton"
@@ -1908,9 +2036,10 @@
       "advanced_items", 
       "high_tech_items", 
       "robot_items", 
-      "usable_items"
+      "usable_items",
+      "standard_items"
     ], 
-    "cost": 88, 
+    "cost": 78, 
     "default_equipment": {
       "armor": "mechanist_armor_and_helmet", 
       "melee": [
@@ -1936,7 +2065,9 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ], 
     "cost": 103, 
     "default_equipment": {
@@ -2003,7 +2134,9 @@
       "upgrades", 
       "high_tech_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ], 
     "default_equipment": {
       "rifles": [
@@ -2022,10 +2155,13 @@
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
+      "advanced_items",
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ],
-    "cost": 36, 
+    "cost": 33, 
     "default_equipment": {
       "pistols": [
         "laser_pistol"
@@ -2035,13 +2171,13 @@
       "enc"
     ], 
     "name": "enclave_trainee", 
-    "preview": "enclavetrainee"
+    "preview": "trainee"
   }, 
   {
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 305, 
+    "cost": 288, 
     "factions": [
       "crt"
     ], 
@@ -2065,7 +2201,7 @@
       "rifles.horrigans_plasma_gun"
     ], 
     "name": "frank_horrigan_1", 
-    "preview": "frankhorrigan",
+    "preview": "frankhorrigan1",
     "tags": [
       "legendary",
       "frank_horrigan"
@@ -2111,7 +2247,9 @@
       "upgrades", 
       "high_tech_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ], 
     "cost": 90, 
     "default_equipment": {
@@ -2136,9 +2274,10 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "standard_items"
     ], 
-    "cost": 80, 
+    "cost": 88, 
     "factions": [
       "crt", 
       "srv"
@@ -2156,7 +2295,9 @@
       "upgrades", 
       "high_tech_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ], 
     "cost": 57, 
     "default_equipment": {
@@ -2176,7 +2317,7 @@
       "advanced_items",
       "usable_items"
     ],
-    "cost": 120, 
+    "cost": 75, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -2193,7 +2334,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 50, 
+    "cost": 58, 
     "factions": [
       "crt"
     ], 
@@ -2210,7 +2351,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 12, 
+    "cost": 18, 
     "factions": [
       "crt"
     ], 
@@ -2227,7 +2368,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 255, 
+    "cost": 167, 
     "factions": [
       "crt"
     ], 
@@ -2245,7 +2386,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 230, 
+    "cost": 270, 
     "factions": [
       "crt"
     ], 
@@ -2264,7 +2405,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 20, 
+    "cost": 33, 
     "factions": [
       "crt"
     ], 
@@ -2281,9 +2422,11 @@
     "battle_mode_packs": [
       "upgrades", 
       "high_tech_items", 
-      "usable_items"
+      "usable_items",
+      "enclave_items",
+      "standard_items"
     ], 
-    "cost": 46, 
+    "cost": 45, 
     "default_equipment": {
       "pistols": [
         "laser_pistol"
@@ -2299,7 +2442,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 32, 
+    "cost": 41, 
     "factions": [
       "crt"
     ], 
@@ -2317,7 +2460,9 @@
       "upgrades", 
       "high_tech_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ], 
     "cost": 85, 
     "default_equipment": {
@@ -2340,7 +2485,9 @@
       "upgrades", 
       "high_tech_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ], 
     "cost": 60, 
     "default_equipment": {
@@ -2378,7 +2525,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 245, 
+    "cost": 168, 
     "factions": [
       "crt"
     ], 
@@ -2415,7 +2562,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 48, 
+    "cost": 57, 
     "factions": [
       "crt"
     ], 
@@ -2434,9 +2581,12 @@
       "wasteland_items", 
       "high_tech_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "power_armor",
+      "enclave_items",
+      "standard_items"
     ], 
-    "cost": 50, 
+    "cost": 55, 
     "default_equipment": {
       "melee": [
         "ripper"
@@ -2458,9 +2608,11 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 52, 
+    "cost": 64, 
     "default_equipment": {
       "rifles": [
         "caravan_shotgun"
@@ -2498,9 +2650,11 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 65, 
+    "cost": 69, 
     "default_equipment": {
       "pistols": [
         "44_magnum_revolver"
@@ -2520,7 +2674,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 80, 
+    "cost": 77, 
     "factions": [
       "srv"
     ], 
@@ -2539,9 +2693,11 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 85, 
+    "cost": 95, 
     "factions": [
       "srv",
       "lgn"
@@ -2560,9 +2716,15 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "standard_items",
+      "legion_items",
+      "ncr_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 98, 
+    "cost": 125, 
     "default_equipment": {
       "rifles": [
         "anti_materiel_rifle"
@@ -2589,9 +2751,12 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items", 
-      "power_armor"
+      "power_armor",
+      "bos_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 60, 
+    "cost": 68, 
     "default_equipment": {
       "melee":["power_fist"]
     },
@@ -2610,7 +2775,8 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
     "cost": 112, 
     "default_equipment": {
@@ -2637,9 +2803,10 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 115, 
+    "cost": 116, 
     "factions": [
       "mut",
       "srv"
@@ -2659,9 +2826,10 @@
       "upgrades", 
       "wasteland_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 78, 
+    "cost": 76, 
     "default_equipment": {
       "heavy_weapons": [
         "incinerator"
@@ -2685,9 +2853,10 @@
       "high_tech_items", 
       "advanced_items", 
       "usable_items",
-      "super_mutant_items"
+      "super_mutant_items",
+      "standard_items"
     ], 
-    "cost": 135, 
+    "cost": 128, 
     "default_equipment": {
       "heavy_weapons": [
         "missile_launcher"
@@ -2709,7 +2878,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 100, 
+    "cost": 115, 
     "factions": [
       "rbt"
     ], 
@@ -2728,7 +2897,7 @@
       "robot_items",
       "securitron_items"
     ],
-    "cost": 200, 
+    "cost": 215, 
     "default_equipment": {
       "rifles": [
         "securitron_grenade_launcher",
@@ -2750,7 +2919,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 60, 
+    "cost": 65, 
     "factions": [
       "crt",
       "lgn"
@@ -2769,7 +2938,7 @@
       "robot_items",
       "robobrain_items"
     ], 
-    "cost": 60, 
+    "cost": 85, 
     "default_equipment": {
       "rifles": [
         "robobrain_laser"
@@ -2791,9 +2960,11 @@
       "upgrades",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 125, 
+    "cost": 115, 
     "default_equipment": {
       "rifles": [
         "sniper_rifle"
@@ -2811,9 +2982,12 @@
       "wasteland_items",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "survivor_items",
+      "standard_items"
     ], 
-    "cost": 100, 
+    "cost": 105, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -2831,9 +3005,11 @@
     "battle_mode_packs": [
       "upgrades",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 75, 
+    "cost": 85, 
     "default_equipment": {
       "pistols": [
         "ranger_sequoia"
@@ -2850,9 +3026,11 @@
     "battle_mode_packs": [
       "upgrades",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 81, 
+    "cost": 87, 
     "default_equipment": {
       "pistols": [
         "44_magnum_revolver"
@@ -2869,9 +3047,11 @@
     "battle_mode_packs": [
       "upgrades",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 65, 
+    "cost": 69, 
     "default_equipment": {
       "pistols": [
         "357_magnum_revolver"
@@ -2888,9 +3068,11 @@
       "upgrades",
       "advanced_items",
       "usable_items",
-      "power_armor"
+      "power_armor",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 59, 
+    "cost": 58, 
     "default_equipment": {
       "heavy_weapons": [
         "light_machine_gun"
@@ -2907,9 +3089,11 @@
     "battle_mode_packs": [
       "upgrades",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 76, 
+    "cost": 72, 
     "default_equipment": {
       "rifles": [
         "trail_carbine"
@@ -2925,9 +3109,11 @@
     "battle_mode_packs": [
       "upgrades",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 40, 
+    "cost": 39, 
     "default_equipment": {
       "rifles": [
         "service_rifle"
@@ -2943,9 +3129,11 @@
     "battle_mode_packs": [
       "upgrades",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 39, 
+    "cost": 37, 
     "default_equipment": {
       "melee": [
         "cattle_prod"
@@ -2963,9 +3151,11 @@
       "wasteland_items",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 86, 
+    "cost": 102, 
     "default_equipment": {
       "rifles": [
         "marksman_carbine"
@@ -2982,9 +3172,11 @@
     "battle_mode_packs": [
       "upgrades",
       "wasteland_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 63, 
+    "cost": 87, 
     "default_equipment": {
       "melee":["machete"]
     },
@@ -3000,9 +3192,11 @@
       "wasteland_items",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 137,
+    "cost": 141,
     "default_equipment": {
       "melee": [
         "blade_of_the_east"
@@ -3022,9 +3216,11 @@
     "battle_mode_packs": [
       "upgrades",
       "wasteland_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 46, 
+    "cost": 57, 
     "default_equipment": {
       "melee": [
         "spear"
@@ -3041,9 +3237,11 @@
       "upgrades",
       "wasteland_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 55, 
+    "cost": 65, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -3061,9 +3259,11 @@
       "wasteland_items",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 90, 
+    "cost": 97, 
     "default_equipment": {
       "melee": [
         "ballistic_fist"
@@ -3082,9 +3282,11 @@
       "wasteland_items",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 52, 
+    "cost": 75, 
     "default_equipment": {
       "melee": [
         "ballistic_fist"
@@ -3101,9 +3303,11 @@
       "upgrades",
       "wasteland_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 38, 
+    "cost": 34, 
     "default_equipment": {
       "melee": [
         "fire_axe"
@@ -3123,9 +3327,11 @@
       "upgrades",
       "wasteland_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 30,
+    "cost": 28,
     "default_equipment": {
       "melee": [
         "machete"
@@ -3144,9 +3350,11 @@
       "wasteland_items",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 58, 
+    "cost": 54, 
     "default_equipment": {
       "pistols": [
         "127mm_pistol"
@@ -3165,9 +3373,11 @@
       "wasteland_items",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "legion_items",
+      "standard_items"
     ], 
-    "cost": 90, 
+    "cost": 95, 
     "default_equipment": {
       "rifles": [
         "sniper_rifle"
@@ -3205,9 +3415,11 @@
       "upgrades",
       "high_tech_items",
       "advanced_items",
-      "usable_items"
+      "usable_items",
+      "ncr_items",
+      "standard_items"
     ], 
-    "cost": 95, 
+    "cost": 125, 
     "default_equipment": {
       "rifles": [
         "anti_materiel_rifle"
@@ -3246,7 +3458,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 75, 
+    "cost": 85, 
     "factions": [
       "crt"
     ], 
@@ -3260,9 +3472,10 @@
         "upgrades",
         "usable_items",
         "wasteland_items",
-        "high_tech_items"
+        "coa_items",
+        "standard_items"
     ], 
-    "cost": 43, 
+    "cost": 45, 
     "default_equipment": {
       "pistols": [
         "pipe_pistol",
@@ -3280,9 +3493,10 @@
         "upgrades",
         "usable_items",
         "wasteland_items",
-        "high_tech_items"
+        "coa_items",
+        "standard_items"
     ], 
-    "cost": 66, 
+    "cost": 84, 
     "default_equipment": {
       "pistols": [
         "pipe_pistol",
@@ -3300,9 +3514,10 @@
         "upgrades",
         "usable_items",
         "wasteland_items",
-        "high_tech_items"
+        "coa_items",
+        "standard_items"
     ], 
-    "cost": 62, 
+    "cost": 60, 
     "default_equipment": {
       "pistols": [
         "pipe_pistol",
@@ -3319,7 +3534,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 135, 
+    "cost": 188, 
     "factions": [
       "crt"
     ], 
@@ -3334,7 +3549,7 @@
     "battle_mode_packs": [
       "creature_items"
     ],
-    "cost": 260,
+    "cost": 159,
     "factions": [
       "crt"
     ], 
@@ -3349,9 +3564,10 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 57, 
+    "cost": 63, 
     "factions": [
-      "crt"
+      "crt",
+      "rdr"
     ], 
     "must_carry":["melee.mongrel_bite"],
     "name": "mongrel",
@@ -3365,7 +3581,9 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "high_tech_items"
+        "high_tech_items",
+        "gunners_items",
+        "standard_items"
     ], 
     "cost": 36, 
     "default_equipment": {
@@ -3384,7 +3602,9 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "high_tech_items"
+        "high_tech_items",
+        "gunners_items",
+        "standard_items"
     ], 
     "cost": 53, 
     "default_equipment": {
@@ -3403,7 +3623,9 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "high_tech_items"
+        "high_tech_items",
+        "gunners_items",
+        "standard_items"
     ], 
     "cost": 68, 
     "default_equipment": {
@@ -3423,9 +3645,11 @@
         "usable_items",
         "advanced_items",
         "high_tech_items",
-        "power_armor"
+        "power_armor",
+        "gunners_items",
+        "standard_items"
     ], 
-    "cost": 83,
+    "cost": 96,
     "default_equipment": {
       "rifles": [
         "plasma_rifle"
@@ -3446,9 +3670,11 @@
         "usable_items",
         "advanced_items",
         "high_tech_items",
-        "power_armor"
+        "power_armor",
+        "gunners_items",
+        "standard_items"
     ], 
-    "cost": 100, 
+    "cost": 119, 
     "default_equipment": {
       "thrown": {
         "molotov_cocktail": "6"
@@ -3470,9 +3696,11 @@
         "usable_items",
         "advanced_items",
         "high_tech_items",
-        "power_armor"
+        "power_armor",
+        "gunners_items",
+        "standard_items"
     ], 
-    "cost": 105, 
+    "cost": 130, 
     "factions": [
       "gun"
     ],
@@ -3489,9 +3717,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "high_tech_items"
+        "high_tech_items",
+        "gunners_items",
+        "standard_items"
     ], 
-    "cost": 110, 
+    "cost": 94, 
     "default_equipment": {
       "heavy_weapons": [
         "missile_launcher"
@@ -3508,9 +3738,10 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 108, 
+    "cost": 112, 
     "default_equipment": {
       "rifles": [
         "railway_rifle"
@@ -3527,7 +3758,8 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
     "cost": 63, 
     "default_equipment": {
@@ -3546,9 +3778,10 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 47, 
+    "cost": 65, 
     "default_equipment": {
       "pistols": [
         "pipe_pistol"
@@ -3565,9 +3798,10 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 60, 
+    "cost": 79, 
     "default_equipment": {
       "pistols": [
         "44_revolver"
@@ -3584,9 +3818,10 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 56,
+    "cost": 60,
     "default_equipment": {
       "pistols": [
         "laser_pistol"
@@ -3603,9 +3838,10 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 102, 
+    "cost": 91, 
     "default_equipment": {
       "heavy_weapons": [
         "minigun"
@@ -3622,9 +3858,10 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 78, 
+    "cost": 85, 
     "default_equipment": {
       "rifles": [
         "hunting_rifle"
@@ -3644,9 +3881,10 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 83, 
+    "cost": 76, 
     "default_equipment": {
       "rifles": [
         "gauss_rifle"
@@ -3662,7 +3900,7 @@
     "battle_mode_packs": [
         "robot_items"
     ], 
-    "cost": 90, 
+    "cost": 100, 
     "factions": [
       "rlr"
     ], 
@@ -3675,7 +3913,7 @@
     "battle_mode_packs": [
         "robot_items"
     ], 
-    "cost": 60, 
+    "cost": 67, 
     "factions": [
       "rbt"
     ], 
@@ -3692,7 +3930,7 @@
         "robot_items",
         "mr_handy_items"
     ], 
-    "cost": 75,
+    "cost": 90,
     "equipped_pack": "mr_handy_items",
     "factions": [
       "rbt"
@@ -3705,7 +3943,7 @@
     "battle_mode_packs": [
         "robot_items"
     ], 
-    "cost": 52, 
+    "cost": 73, 
     "factions": [
       "rbt"
     ], 
@@ -3720,7 +3958,7 @@
     "battle_mode_packs": [
         "robot_items"
     ], 
-    "cost": 52, 
+    "cost": 70, 
     "factions": [
       "rbt"
     ], 
@@ -3735,7 +3973,7 @@
     "battle_mode_packs": [
         "robot_items"
     ], 
-    "cost": 55, 
+    "cost": 80, 
     "factions": [
       "rbt"
     ], 
@@ -3750,7 +3988,7 @@
     "battle_mode_packs": [
         "robot_items"
     ], 
-    "cost": 73, 
+    "cost": 88, 
     "factions": [
       "srv"
     ], 
@@ -3766,9 +4004,10 @@
     "battle_mode_packs": [
         "upgrades",
         "usable_items",
-        "wasteland_items"
+        "wasteland_items",
+        "standard_items"
     ], 
-    "cost": 240, 
+    "cost": 179, 
     "factions": [
       "srv"
     ], 
@@ -3843,9 +4082,12 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "raider_items",
+        "survivor_items",
+        "standard_items"
     ], 
-    "cost": 42,
+    "cost": 65,
     "default_equipment":{
       "pistols":["10mm_pistol"]
     },
@@ -3865,9 +4107,12 @@
         "usable_items",
         "advanced_items",
         "wasteland_items",
-        "power_armor"
+        "power_armor",
+        "high_tech_items",
+        "raider_items",
+        "standard_items"
     ], 
-    "cost": 131, 
+    "cost": 120, 
     "default_equipment":{
       "pistols":["laser_pistol"],
       "melee":["shishkebab"],
@@ -3889,9 +4134,12 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "high_tech_items",
+        "raider_items",
+        "standard_items"
     ], 
-    "cost": 55,
+    "cost": 63,
     "default_equipment":{
       "melee":["incendiary_super_sledge"],
       "thrown": {
@@ -3911,9 +4159,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "raider_items",
+        "standard_items"
     ], 
-    "cost": 46,
+    "cost": 43,
     "default_equipment":{
       "melee":["sledgehammer"],
       "thrown": {
@@ -3932,9 +4182,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
     ], 
-    "cost": 65,
+    "cost": 71,
     "default_equipment":{
       "pistols":["bolt_action_pipe_pistol"]
     },
@@ -3955,9 +4207,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
     ], 
-    "cost": 49,
+    "cost": 44,
     "default_equipment":{
       "pistols":["10mm_pistol"],
       "melee":["pipe_wrench"]
@@ -3979,9 +4233,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
     ], 
-    "cost": 45,
+    "cost": 67,
     "default_equipment":{
       "pistols":["bolt_action_pipe_pistol"]
     },
@@ -4002,9 +4258,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
     ], 
-    "cost": 52,
+    "cost": 58,
     "default_equipment":{
       "pistols":["pipe_pistol"],
       "melee":["tire_iron"]
@@ -4026,9 +4284,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
     ], 
-    "cost": 69,
+    "cost": 47,
     "default_equipment":{
       "pistols":["pipe_pistol"],
       "melee":["board"]
@@ -4050,9 +4310,11 @@
         "upgrades",
         "usable_items",
         "advanced_items",
-        "wasteland_items"
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
     ], 
-    "cost": 40,
+    "cost": 36,
     "default_equipment":{
       "rifles":["double_barrel_shotgun"]
     },
@@ -4071,7 +4333,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 59,
+    "cost": 65,
     "factions": [
       "crt",
       "mut"
@@ -4088,7 +4350,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 35,
+    "cost": 79,
     "factions": [
       "crt"
     ], 
@@ -4103,7 +4365,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 33,
+    "cost": 110,
     "factions": [
       "crt"
     ], 
@@ -4119,7 +4381,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 45,
+    "cost": 102,
     "factions": [
       "crt"
     ], 
@@ -4134,7 +4396,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 45,
+    "cost": 71,
     "factions": [
       "crt"
     ], 
@@ -4149,7 +4411,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 36,
+    "cost": 60,
     "factions": [
       "crt"
     ], 
@@ -4195,7 +4457,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 34,
+    "cost": 72,
     "factions": [
       "crt"
     ], 
@@ -4205,5 +4467,416 @@
     "name": "stingwing",
     "preview":"stingwing",
     "tags":["creature"]
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "power_armor",
+        "enclave_items",
+        "standard_items"
+    ], 
+    "cost": 37,
+    "factions": [
+      "enc"
+    ], 
+    "name": "armored_trainee",
+    "preview":"armoredtrainee"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 85,
+    "factions": [
+      "srv"
+    ], 
+    "has_perk":["bloody_mess"],
+    "must_carry":["heavy_weapons.eugene"],
+    "name": "brick",
+    "unique_code":"brick",
+    "preview":"brick"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "wasteland_items",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "power_armor",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 136,
+    "factions": [
+      "srv"
+    ],
+    "must_carry" : [
+      "melee.switch_blade",
+      "gear.pipboy"
+    ],
+    "name": "butch",
+    "unique_code":"butch",
+    "preview":"butch"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 51,
+    "factions": [
+      "srv"
+    ], 
+    "name": "butcher",
+    "unique_code":"butcher",
+    "preview":"butcher"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "power_armor",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 69,
+    "factions": [
+      "srv"
+    ], 
+    "name": "charon",
+    "unique_code":"charon",
+    "preview":"charon"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 230,
+    "factions": [
+      "enc"
+    ], 
+    "must_carry":[
+      "melee.deathclaw_swipe",
+      "melee.deathclaw_crush"
+    ],
+    "name": "domesticated_deathclaw",
+    "preview":"domesticateddeathclaw",
+    "tags":["creature"]
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 74,
+    "factions": [
+      "srv"
+    ], 
+    "must_carry":[
+      "gear.robot_repair_kit",
+      "gear.power_armor_patch"
+    ],
+    "name": "donovan",
+    "unique_code":"donovan",
+    "preview":"donovan"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "bos_items",
+        "standard_items"
+    ], 
+    "cost": 67,
+    "factions": [
+      "bos"
+    ], 
+    "name": "elder_lyons",
+    "unique_code":"elderlyons",
+    "preview":"elderlyons"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "super_mutant_items",
+        "standard_items"
+    ], 
+    "cost": 141,
+    "factions": [
+      "srv",
+      "mut"
+    ], 
+    "name": "fawkes",
+    "unique_code":"fawkes",
+    "preview":"fawkes"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items",
+        "high_tech_items",
+        "power_armor",
+        "bos_items",
+        "standard_items"
+    ], 
+    "cost": 126,
+    "factions": [
+      "srv"
+    ], 
+    "must_wear":["power_armor.t45_power_armor"],
+    "name": "lone_wanderer",
+    "unique_code":"lonewanderer",
+    "preview":"lonewanderer"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "wasteland_items",
+        "advanced_items",
+        "usable_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 112,
+    "factions": [
+      "srv"
+    ], 
+    "must_wear":["clothing.sheriffs_outfit"],
+    "name": "lucas_simms",
+    "unique_code":"lucassimms",
+    "preview":"lucassimms"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "bos_items",
+        "institute_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 60,
+    "factions": [
+      "srv",
+      "bos",
+      "ins"
+    ], 
+    "name": "madison_li",
+    "unique_code":"madisonli",
+    "preview":"madisonli"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "wasteland_items",
+        "advanced_items",
+        "usable_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 52,
+    "factions": [
+      "srv"
+    ], 
+    "must_carry": [
+      "melee.mole_rat_repellent_stick",
+      "mines.fragmentation_mine.2"
+    ], 
+    "name": "moira_brown",
+    "unique_code":"moirabrown",
+    "preview":"moirabrown"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items"
+    ], 
+    "cost": 63,
+    "factions": [
+      "bos"
+    ], 
+    "name": "recon_knight",
+    "preview":"reconknight"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 72,
+    "factions": [
+      "srv"
+    ], 
+    "name": "reilly",
+    "unique_code":"reilly",
+    "preview":"reilly"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 33,
+    "factions": [
+      "srv"
+    ], 
+    "must_carry":[
+      "food_and_drink.holy_water.2"
+    ],
+    "name": "rosa_meitner",
+    "unique_code":"rosameitner",
+    "preview":"rosameitner"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "bos_items",
+        "standard_items",
+        "power_armor"
+    ], 
+    "cost": 140,
+    "factions": [
+      "bos"
+    ],
+    "must_carry":["gear.lyons_insignia"],
+    "must_wear":["power_armor.t45_power_armor"],
+    "name": "sarah_lyons",
+    "unique_code":"sarahlyons",
+    "preview":"sarahlyons"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "bos_items",
+        "standard_items"
+    ], 
+    "cost": 78,
+    "factions": [
+      "bos"
+    ], 
+    "name": "scribe_rothchild",
+    "unique_code":"scriberothchild",
+    "preview":"scriberothchild"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "bos_items",
+        "standard_items",
+        "power_armor"
+    ], 
+    "cost": 119,
+    "factions": [
+      "bos"
+    ], 
+    "must_carry":["gear.star_paladin_insignia"],
+    "must_wear":["power_armor.t45_power_armor"],
+    "name": "star_paladin_cross",
+    "unique_code":"starpaladincross",
+    "preview":"starpaladincross"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "usable_items",
+        "advanced_items",
+        "wasteland_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 27,
+    "factions": [
+      "srv"
+    ], 
+    "name": "theo",
+    "unique_code":"theo",
+    "preview":"theo"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "wasteland_items",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "survivor_items",
+        "standard_items"
+    ], 
+    "cost": 62,
+    "factions": [
+      "srv"
+    ], 
+    "must_wear":["clothing.three_dogs_headwear"],
+    "name": "three_dog",
+    "unique_code":"threedog",
+    "preview":"threedog"
+  },
+  {
+    "battle_mode_packs": [
+        "upgrades",
+        "high_tech_items",
+        "advanced_items",
+        "usable_items",
+        "power_armor",
+        "enclave_items",
+        "standard_items"
+    ], 
+    "cost": 61,
+    "factions": [
+      "enc"
+    ], 
+    "name": "trooper_scout",
+    "unique_code":"trooperscout",
+    "preview":"trooperscout"
   }
 ]
