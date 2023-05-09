@@ -278,11 +278,9 @@
     "name": "lancer_captain_kells", 
     "preview": "kells", 
     "unique_code": "lancer_captain_kells", 
-    "wear_slots": {
-      "clothing": [
-        "airship_captains_hat"
-      ]
-    }
+    "must_wear": [
+      "clothing.airship_captains_hat"
+    ]
   }, 
   {
     "battle_mode_packs": [
