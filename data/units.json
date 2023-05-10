@@ -1659,7 +1659,9 @@
       "upgrades", 
       "wasteland_items", 
       "advanced_items", 
-      "usable_items"
+      "usable_items",
+      "survivor_items",
+      "standard_items"
     ], 
     "cost": 57, 
     "default_equipment": {
@@ -2784,7 +2786,8 @@
       "melee":["vertibird_blade"]
     },
     "factions": [
-      "mut"
+      "mut",
+      "srv"
     ], 
     "name": "lily",
     "tags": [
