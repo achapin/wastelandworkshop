@@ -2661,7 +2661,8 @@
       ]
     },
     "factions": [
-      "srv"
+      "srv",
+      "mut"
     ], 
     "name": "raul", 
     "preview":"raul",
