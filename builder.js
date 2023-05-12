@@ -713,6 +713,7 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(headerRightSection, character, displaySection);
 
+	//TODO: Since battle mode has heroic/wild/clunky in the packs, just use that?
 	if(characterElement.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("upgrades")){
 		var heroicSection = document.createElement("div");
 		heroicSection.setAttribute("class", "heroic");
