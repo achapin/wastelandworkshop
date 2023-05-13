@@ -713,34 +713,51 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(headerRightSection, character, displaySection);
 
-	//TODO: Since battle mode has heroic/wild/clunky in the packs, just use that?
-	if(characterElement.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("upgrades")){
-		var heroicSection = document.createElement("div");
-		heroicSection.setAttribute("class", "heroic");
-		var heroicCheckBox = document.createElement('input');
-		heroicCheckBox.type = 'checkbox';
-		heroicCheckBox.checked = character.heroic;
-		var heroicDescription = document.createElement("span");
-		heroicDescription.setAttribute("class", "heroicDescription");
-		heroicDescription.appendChild(document.createTextNode(loc["heroic"] + " (" + upgrades.heroic[1].cost +")"));
-		heroicSection.appendChild(heroicDescription);
-		heroicSection.appendChild(heroicCheckBox);
-		var cardDisplay = addCardToDisplay(displaySection, null);
-		if(character.heroic){
-			setCardInDisplay(cardDisplay, "heroic");
-		}
-		heroicCheckBox.addEventListener("click", function(){
-			if(heroicCheckBox.checked){
-				character.heroic = true;
-				setCardInDisplay(cardDisplay, "heroic");
-			}else{
-				delete character["heroic"];
-				setCardInDisplay(cardDisplay, null);
-			}
-			updateCaps();
+	var addHeroic = true;
+	var heroicSection;
+	if(characterElement.hasOwnProperty("battle_mode_packs")){
+		characterElement.battle_mode_packs.forEach(pack =>{
+			upgrades.battle_mode_packs[pack].forEach(upgrade => {
+				if(upgrade.split('.')[0] == "heroic")
+				{
+					if(addHeroic){
+						heroicSection = document.createElement("div");
+						heroicSection.setAttribute("class", "heroic");
+						addHeroic = false;
+					}
+					var heroicCheckBox = document.createElement('input');
+					heroicCheckBox.type = 'checkbox';
+					var heroicUpgrade = getUpgrade("heroic", upgrade.split('.')[1]);
+					if(character.hasOwnProperty("heroic"))
+					{
+						heroicCheckBox.checked = character.heroic == heroicUpgrade.name;
+					}
+					var heroicDescription = document.createElement("span");
+					heroicDescription.setAttribute("class", "heroicDescription");
+					heroicDescription.appendChild(document.createTextNode(loc[heroicUpgrade.name] + " (" + heroicUpgrade.cost +")"));
+					heroicSection.appendChild(heroicDescription);
+					heroicSection.appendChild(heroicCheckBox);
+					var cardDisplay = addCardToDisplay(displaySection, null);
+					if(character.hasOwnProperty("heroic") && character.heroic == heroicUpgrade.name){
+						setCardInDisplay(cardDisplay, heroicUpgrade.preview);
+					}
+					heroicCheckBox.addEventListener("click", function(){
+						if(heroicCheckBox.checked){
+							character.heroic = heroicUpgrade.name;
+							setCardInDisplay(cardDisplay, heroicUpgrade.preview);
+						}else{
+							delete character["heroic"];
+							setCardInDisplay(cardDisplay, null);
+						}
+						updateCaps();
+					});
+					addPreviewTooltip(heroicUpgrade, heroicDescription);
+				}
+			});
 		});
-		addPreviewTooltip(upgrades.heroic[1], heroicSection);
-		headerRightSection.appendChild(heroicSection);
+		if(!addHeroic){
+			headerRightSection.appendChild(heroicSection);
+		}
 	}
 
 	var costSection = document.createElement("div");
@@ -771,6 +788,7 @@ function addCharacter(characterElement, presetInfo){
 	descriptionRow.appendChild(modelCostDesc);
 
 	var modelCost = document.createElement("td");
+	modelCost.setAttribute("class", "modelBaseCost");
 	modelCost.appendChild(document.createTextNode(characterElement.cost));
 	pointsRow.appendChild(modelCost);
 
@@ -2066,8 +2084,16 @@ function updateCaps(){
 			}
 
 			if(character.heroic){
-				unitCost += upgrades.heroic[1].cost;
-				unitUpgradeCost += upgrades.heroic[1].cost;
+				var upgrade = getUpgrade("heroic", character.heroic);
+				if(upgrade.cost % 1 === 0)
+				{
+					unitCost += upgrade.cost;
+					unitUpgradeCost += upgrade.cost;
+				} else {
+					unitCost *= upgrade.cost;
+					unitCost = Math.round(unitCost);
+					unitUpgradeCost += Math.round(baseCost * (upgrade.cost - 1));
+				}
 			}
 
 			var warningSection = unitDisplay.querySelector(".warning");
@@ -2138,6 +2164,7 @@ function updateCaps(){
 			});
 
 			unitDisplay.querySelector(".unit-cost").innerHTML = unitCost;
+			unitDisplay.querySelector(".modelBaseCost").innerHTML = baseCost;
 			unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
 			unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
 			totalCaps += unitCost;

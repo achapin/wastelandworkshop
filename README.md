@@ -4,7 +4,6 @@ Usable at https://achapin.github.io/wastelandworkshop/
 
 # TODO (In no particular order)
 * Creature/Robot Controller Perks should allow the leader to take Creature/Robot perks
-* Clunky robots and Wild creatures
 * Automatons
 * Unit reordering/sorting
 * Shorten query string

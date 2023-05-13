@@ -2726,7 +2726,8 @@
     },
     {
       "name": "unpredictable",
-      "cost": 1.15
+      "cost": 1.15,
+      "preview": "unpredictable"
     },
     {
       "name": "wild",
