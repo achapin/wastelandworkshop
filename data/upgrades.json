@@ -4431,8 +4431,7 @@
     {
       "name":"robot_repair_kit",
       "cost":20,
-      "restrictions":["robot"],
-      "preview": "robotrepairkit"
+      "preview": "robotrepairkit-2"
     },
     {
       "name":"robot_repair_patch",
