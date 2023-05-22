@@ -3690,6 +3690,7 @@
       "melee.tessas_fist"
     ],
     "name": "tessa",
+    "unique_code":"tessa",
     "preview":"tessa"
   },
   {
@@ -3733,6 +3734,7 @@
       "gun"
     ], 
     "name": "sergeant_baker",
+    "unique_code":"sgtbaker",
     "preview":"sergeantbaker"
   },
   {
@@ -3753,6 +3755,7 @@
       "rlr"
     ], 
     "name": "desdemona",
+    "unique_code":"desdemona",
     "preview":"desdemona"
   },
   {
@@ -3773,7 +3776,8 @@
       "rlr"
     ], 
     "name": "dr_carrington",
-    "preview":"drcarrington"
+    "preview":"drcarrington",
+    "unique_code":"drcarrington"
   },
   {
     "battle_mode_packs": [
@@ -3793,7 +3797,8 @@
       "rlr"
     ], 
     "name": "drummer_boy",
-    "preview":"drummerboy"
+    "preview":"drummerboy",
+    "unique_code":"drummerboy"
   },
   {
     "battle_mode_packs": [
@@ -3813,7 +3818,8 @@
       "rlr"
     ], 
     "name": "mr_tims",
-    "preview":"mrtims"
+    "preview":"mrtims",
+    "unique_code":"mrtims"
   },
   {
     "battle_mode_packs": [
@@ -3833,7 +3839,8 @@
       "rlr"
     ], 
     "name": "tinker_tom",
-    "preview":"tinkertom"
+    "preview":"tinkertom",
+    "unique_code":"tinkertom"
   },
   {
     "battle_mode_packs": [
@@ -3853,7 +3860,8 @@
       "rlr"
     ], 
     "name": "glory",
-    "preview":"glory"
+    "preview":"glory",
+    "unique_code":"glory"
   },
   {
     "battle_mode_packs": [
@@ -3876,7 +3884,8 @@
       "huntsman"
     ], 
     "name": "deacon",
-    "preview":"deacon"
+    "preview":"deacon",
+    "unique_code":"deacon"
   },
   {
     "battle_mode_packs": [
@@ -3909,7 +3918,8 @@
     "must_carry" : ["melee.assaultron_swipe"],
     "name": "pam",
     "preview":"pam",
-    "tags":["robot"]
+    "tags":["robot"],
+    "unique_code":"pam"
   },
   {
     "battle_mode_packs": [
@@ -4000,7 +4010,8 @@
     ],
     "name": "curie",
     "preview":"curie",
-    "tags":["robot"]
+    "tags":["robot"],
+    "unique_code":"curie"
   },
   {
     "battle_mode_packs": [
