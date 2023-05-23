@@ -2664,7 +2664,8 @@
   "alcohol": [
     {
       "name":"atomic_cocktail",
-      "cost": 2
+      "cost": 2,
+      "preview":"atomiccocktail"
     },
     {
       "name": "beer",
@@ -3383,11 +3384,13 @@
     },
     {
       "name":"travel_light",
-      "cost":7
+      "cost":7,
+      "preview":"travellight"
     },
     {
       "name":"weapon_handling",
-      "cost":5
+      "cost":5,
+      "preview":"weaponhandling"
     }
   ],
   "mods":[
@@ -4314,7 +4317,8 @@
     {
       "name":"dead_mans_switch",
       "cost":5,
-      "restrictions":["creature"]
+      "restrictions":["creature"],
+      "preview":"deadmansswitch"
     },
     {
       "name":"deathclaw_control_scrambler",

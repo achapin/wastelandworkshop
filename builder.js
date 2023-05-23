@@ -384,7 +384,7 @@ function buildAddSection() {
 		pointsSpan.appendChild(pointsNode);
 		if(can_add){
 			button.addEventListener("click", function() { 
-				var newCharacter = addCharacter(characterElement, {});
+				var newCharacter = addCharacter(characterElement, {}); //IDEA: pass in default equipment, but filter it out if its battle mode?
 				if(characterElement.hasOwnProperty("default_equipment")){
 					for (var [slot, value] of Object.entries(characterElement.default_equipment)){
 
