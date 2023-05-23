@@ -387,9 +387,6 @@ function buildAddSection() {
 				var newCharacter = addCharacter(characterElement, {}); //IDEA: pass in default equipment, but filter it out if its battle mode?
 				if(characterElement.hasOwnProperty("default_equipment")){
 					for (var [slot, value] of Object.entries(characterElement.default_equipment)){
-
-						console.log("processing for slot " + slot + " value " + value + " " + typeof(value));
-
 						if(wear_slots.indexOf(slot) >= 0){
 							newCharacter[slot] = characterElement.default_equipment[slot];
 						}
@@ -397,13 +394,11 @@ function buildAddSection() {
 						if(carry_slots.indexOf(slot) >= 0){
 							var items = characterElement.default_equipment[slot];
 							items.forEach(item => {
-								console.log("checking item " + item +" for slot "+ slot);
 								var optionElement = getUpgrade(slot, item);
 								if(settlementMode || inBattleModeKit(optionElement, newCharacter, slot)){
 									if(!newCharacter.hasOwnProperty(slot)){
 										newCharacter[slot]=[];
 									}
-									console.log("adding " + item)
 									newCharacter[slot].push(item);
 								}
 							});
@@ -416,13 +411,13 @@ function buildAddSection() {
 									if(!newCharacter.hasOwnProperty(slot)){
 										newCharacter[slot]={};
 									}
-									console.log("adding " + item)
 									newCharacter[slot][item]=count;
 								}
 							}
 						}
 					}
 					updateCaps();
+					loadForceFromString(getStringForForce());
 				}
 			});
 		}
@@ -498,7 +493,6 @@ function openAddSection(){
 }
 
 function getUpgrade(elementType, elementName){
-	console.log("get " + elementType + " " + elementName);
 	if(upgrades[elementType] == null){
 		return null;
 	}
