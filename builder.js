@@ -383,11 +383,48 @@ function buildAddSection() {
 		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		pointsSpan.appendChild(pointsNode);
 		if(can_add){
-			var defaultEquipment = new Object();
-			if(characterElement.hasOwnProperty("default_equipment")){
-				defaultEquipment = characterElement.default_equipment;
-			}
-			button.addEventListener("click", function() { addCharacter(characterElement, defaultEquipment);});
+			button.addEventListener("click", function() { 
+				var newCharacter = addCharacter(characterElement, {});
+				if(characterElement.hasOwnProperty("default_equipment")){
+					for (var [slot, value] of Object.entries(characterElement.default_equipment)){
+
+						console.log("processing for slot " + slot + " value " + value + " " + typeof(value));
+
+						if(wear_slots.indexOf(slot) >= 0){
+							newCharacter[slot] = characterElement.default_equipment[slot];
+						}
+
+						if(carry_slots.indexOf(slot) >= 0){
+							var items = characterElement.default_equipment[slot];
+							items.forEach(item => {
+								console.log("checking item " + item +" for slot "+ slot);
+								var optionElement = getUpgrade(slot, item);
+								if(settlementMode || inBattleModeKit(optionElement, newCharacter, slot)){
+									if(!newCharacter.hasOwnProperty(slot)){
+										newCharacter[slot]=[];
+									}
+									console.log("adding " + item)
+									newCharacter[slot].push(item);
+								}
+							});
+						}
+
+						if(consumable_slots.indexOf(slot) >= 0){
+							for(var [item, count] of Object.entries(value)) {
+								var optionElement = getUpgrade(slot, item);
+								if(settlementMode || inBattleModeKit(optionElement, newCharacter, slot)){
+									if(!newCharacter.hasOwnProperty(slot)){
+										newCharacter[slot]={};
+									}
+									console.log("adding " + item)
+									newCharacter[slot][item]=count;
+								}
+							}
+						}
+					}
+					updateCaps();
+				}
+			});
 		}
 		button.appendChild(nameSpan);
 		button.appendChild(pointsSpan);
@@ -461,6 +498,7 @@ function openAddSection(){
 }
 
 function getUpgrade(elementType, elementName){
+	console.log("get " + elementType + " " + elementName);
 	if(upgrades[elementType] == null){
 		return null;
 	}
@@ -961,7 +999,7 @@ function addCharacter(characterElement, presetInfo){
 	totalCaps += characterElement.cost;
 	updateCaps();
 	buildAddSection();
-	return charaSection;
+	return character;
 }
 
 function SetModelCount(displaySection, modelCount){
@@ -2306,7 +2344,6 @@ function setPreview(image, event){
 	var xPos = event.clientX;
 	if(xPos + previewSection.offsetWidth > window.innerWidth){
 		xPos = window.innerWidth - previewSection.offsetWidth;
-		console.log("bloop " + xPos)
 	}
 	previewSection.style.left = xPos + "px";
 	var yPos = event.clientY;
