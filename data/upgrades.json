@@ -2063,6 +2063,11 @@
       "name": "young_mirelurk_queen_claw",
       "cost": 0,
       "preview": "youngmirelurkqueenclaw"
+    },
+    {
+      "name": "young_radscorpion_pincers_and_sting",
+      "cost": 0,
+      "preview": "youngradscorpionpincersandsting"
     }
   ],
   "thrown": [
