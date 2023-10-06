@@ -40,7 +40,7 @@
       "heavy_weapons": [
         "final_judgement"
       ], 
-      "power_armor": "t60_power_armor"
+      "power_armor": ["t60_power_armor"]
     }, 
     "factions": [
       "bos"
@@ -159,7 +159,7 @@
       "heavy_weapons": [
         "minigun"
       ], 
-      "power_armor": "t60_power_armor"
+      "power_armor": ["t60_power_armor"]
     }, 
     "factions": [
       "bos"
@@ -319,7 +319,7 @@
     ], 
     "cost": 122, 
     "default_equipment": {
-      "power_armor": "t60_power_armor", 
+      "power_armor": ["t60_power_armor"], 
       "rifles": [
         "plasma_rifle"
       ]
@@ -999,7 +999,7 @@
       "melee": [
         "nail_board"
       ], 
-      "power_armor": "raider_power_armor", 
+      "power_armor": ["raider_power_armor"], 
       "rifles": [
         "assault_rifle"
       ]
@@ -1943,7 +1943,7 @@
     ], 
     "cost": 97, 
     "default_equipment": {
-      "power_armor": "x01_power_armor", 
+      "power_armor": ["x01_power_armor"], 
       "rifles": [
         "combat_shotgun"
       ]
@@ -2041,7 +2041,7 @@
     ], 
     "cost": 78, 
     "default_equipment": {
-      "armor": "mechanist_armor_and_helmet", 
+      "armor": ["mechanist_armor_and_helmet"], 
       "melee": [
         "mr_handy_buzz_blade"
       ], 
@@ -2144,7 +2144,7 @@
       "rifles": [
         "laser_rifle"
       ],
-      "power_armor":"enclave_power_armor"
+      "power_armor":["enclave_power_armor"]
     },
     "cost": 95, 
     "factions": [
@@ -2258,7 +2258,7 @@
       "heavy_weapons": [
         "heavy_incinerator"
       ],
-      "power_armor":"hellfire_power_armor"
+      "power_armor":["hellfire_power_armor"]
     },
     "factions": [
       "enc"
@@ -2474,7 +2474,7 @@
       "melee":[
         "ripper"
       ],
-      "power_armor":"enclave_power_armor"
+      "power_armor":["enclave_power_armor"]
     },
     "factions": [
       "enc"
@@ -3081,7 +3081,7 @@
       "heavy_weapons": [
         "light_machine_gun"
       ],
-      "power_armor":"ncr_salvaged_power_armor"
+      "power_armor":["ncr_salvaged_power_armor"]
     },
     "factions": [
       "ncr"
