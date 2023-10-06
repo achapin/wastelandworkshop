@@ -72,8 +72,8 @@ var tagsToReferences = {
 	"swan":["reference_swan"]
 }
 
-var wear_slots = ["power_armor", "armor", "clothing"]; //Exclusive choice
-var carry_slots = ["heavy_weapons", "rifles", "pistols", "melee"]; //Multiple-choice single-instance
+var wear_slots = []; //Exclusive choice
+var carry_slots = ["power_armor", "armor", "clothing","heavy_weapons", "rifles", "pistols", "melee"]; //Multiple-choice single-instance
 var consumable_slots = [ "thrown", "mines", "chems", "alcohol", "food_and_drink", "gear"]; //Multiple-choice multiple-instance
 
 function getUrl(url){

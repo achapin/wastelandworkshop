@@ -2106,7 +2106,8 @@
     "tags": [
       "creature",
       "legendary"
-    ]
+    ],
+    "unique_code":"deathclaw_matriarch_1"
   },
   {
     "battle_mode_packs": [
@@ -2127,7 +2128,8 @@
     "tags": [
       "creature",
       "legendary"
-    ]
+    ],
+    "unique_code":"deathclaw_matriarch_2"
   }, 
   {
     "battle_mode_packs": [
@@ -2531,7 +2533,7 @@
     ], 
     "must_carry": [
       "melee.young_fog_crawler_claw", 
-      "melee.young_fog_crawler_ground_pound"
+      "melee.fog_crawler_ground_pound"
     ], 
     "name": "young_fog_crawler",
     "preview":"youngfogcrawler",
@@ -3540,7 +3542,7 @@
     "factions": [
       "crt"
     ], 
-    "must_carry":["melee.glowing_yao_guai_bite"],
+    "must_carry":["melee.glowing_yao_guai_swipe"],
     "name": "glowing_yao_guai",
     "preview":"glowingyaoguai",
     "tags": [
@@ -3555,7 +3557,7 @@
     "factions": [
       "crt"
     ], 
-    "must_carry":["melee.yao_guai_bite"],
+    "must_carry":["melee.yao_guai_swipe"],
     "name": "yao_guai",
     "preview":"yaoguai",
     "tags": [
@@ -4368,7 +4370,7 @@
       "crt"
     ], 
     "must_carry":[
-      "pistols.glowing_bloatfly_larve"
+      "pistols.glowing_bloatfly_larva"
     ],
     "name": "glowing_bloatfly",
     "preview":"glowingbloatfly",
@@ -4399,7 +4401,7 @@
       "crt"
     ], 
     "must_carry":[
-      "melee.glowing_stingwing_strike"
+      "melee.glowing_stingwing_sting"
     ],
     "name": "glowing_stingwing",
     "preview":"glowingstingwing",
@@ -4890,5 +4892,194 @@
     ], 
     "name": "trooper_scout",
     "preview":"trooperscout"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 93, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.glowing_mongrel_bite",
+      "mods.conditioning_savage"
+    ], 
+    "name": "alpha_glowing_mongrel_1",
+    "preview":"alphaglowingmongrel1",
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"alpha_glowing_mongrel_1"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 105, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.glowing_mongrel_bite",
+      "mods.conditioning_hit_and_run",
+      "mods.conditioning_crafty"
+    ], 
+    "name": "alpha_glowing_mongrel_2",
+    "preview":"alphaglowingmongrel2",
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"alpha_glowing_mongrel_2"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 100, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.deathskull_pincers_and_sting",
+      "pistols.deathskull_poison_blast"
+    ], 
+    "name": "deathskull_radscorpion_1",
+    "preview":"deathskullradscorpion1",
+    "reference": ["reference_deathskull_radscorpion"],
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"deathskull_radscorpion_1"
+  },
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 125, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.deathskull_pincers_and_sting",
+      "melee.deathskull_whirl",
+      "melee.deathskull_escape"
+    ], 
+    "name": "deathskull_radscorpion_2",
+    "preview":"deathskullradscorpion2",
+    "reference": ["reference_deathskull_radscorpion"],
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"deathskull_radscorpion_2"
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 18, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.nukalurk_hatchlings_claw"
+    ], 
+    "name": "nukalurk_hatchlings", 
+    "preview": "nukalurkhatchlings",
+    "tags": [
+      "creature"
+    ]
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 210, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.nukalurk_queen_claw",
+      "rifles.nukalurk_queen_acid",
+      "thrown.nukalurk_queen_brood",
+      "thrown.nukalurk_queen_lob"
+    ], 
+    "name": "nukalurk_queen_1", 
+    "preview": "nukalurkqueen1",
+    "reference": ["reference_nukalurk_queen"],
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"nukalurk_queen_1"
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 248, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.nukalurk_queen_claw",
+      "rifles.nukalurk_queen_acid",
+      "thrown.nukalurk_queen_brood",
+      "thrown.nukalurk_queen_lob"
+    ], 
+    "name": "nukalurk_queen_2", 
+    "preview": "nukalurkqueen2",
+    "reference": ["reference_nukalurk_queen"],
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"nukalurk_queen_2"
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 220, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.shipbreaker_claw",
+      "melee.shipbreaker_ground_pound",
+      "melee.shipbreaker_trample"
+    ], 
+    "name": "shipbreaker_1", 
+    "preview": "shipbreaker1",
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"shipbreaker_1"
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 205, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.shipbreaker_claw",
+      "melee.shipbreaker_ground_pound",
+      "mods.conditioning_savage"
+    ], 
+    "name": "shipbreaker_2", 
+    "preview": "shipbreaker2",
+    "tags": [
+      "creature",
+      "legendary"
+    ],
+    "unique_code":"shipbreaker_2"
   }
 ]

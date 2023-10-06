@@ -1095,6 +1095,11 @@
       "preview": "mrhandysmg"
     },
     {
+      "name":"nukalurk_queen_acid",
+      "cost": 0,
+      "preview": "nukalurkqueenacid"
+    },
+    {
       "name": "pipe_rifle",
       "cost": 7,
       "preview": "piperifle"
@@ -1176,6 +1181,11 @@
       "name":"troubleshooters_combat_rifle",
       "cost": 17,
       "preview": "troubleshooterscombatrifle"
+    },
+    {
+      "name":"young_mirelurk_queen_acid",
+      "cost": 0,
+      "preview": "youngmirelurkqueenacid"
     }
   ],
   "pistols": [
@@ -1238,6 +1248,11 @@
       "name":"deadeye_gamma_gun",
       "cost": 17,
       "preview": "deadeyegammagun"
+    },
+    {
+      "name": "deathskull_poison_blast",
+      "cost": 0,
+      "preview": "deathskullpoisonblast"
     },
     {
       "name":"explosive_10mm_pistol",
@@ -1579,6 +1594,21 @@
       "preview":"deathclawtrample"
     },
     {
+      "name": "deathskull_escape",
+      "cost": 0,
+      "preview":"deathskullescape"
+    },
+    {
+      "name": "deathskull_pincers_and_sting",
+      "cost": 0,
+      "preview":"deathskullpincersandsting"
+    },
+    {
+      "name": "deathskull_whirl",
+      "cost": 0,
+      "preview":"deathskullwhirl"
+    },
+    {
       "name": "dog_bite",
       "cost": 0,
       "preview": "dogbite"
@@ -1628,6 +1658,11 @@
       "name": "glowing_bloodbug_proboscis",
       "cost": 0,
       "preview": "glowingbloodbugproboscis"
+    },
+    {
+      "name": "glowing_mongrel_bite",
+      "cost": 0,
+      "preview":"glowingmongrelbite"
     },
     {
       "name": "glowing_stingwing_sting",
@@ -1800,6 +1835,21 @@
       "preview": "nailboard"
     },
     {
+      "name": "nukalurk_hatchlings_claw",
+      "cost": 0,
+      "preview": "nukalurkhatchlingsclaw"
+    },
+    {
+      "name": "nukalurk_queen_claw",
+      "cost": 0,
+      "preview": "nukalurkqueenclaw"
+    },
+    {
+      "name": "nukalurk_queen_quake",
+      "cost": 0,
+      "preview": "nukalurkqueenquake"
+    },
+    {
       "name": "penetrating_lead_pipe",
       "cost": 13,
       "preview": "penetratingleadpipe"
@@ -1828,6 +1878,11 @@
       "name": "putrid_glowing_one_swipe",
       "cost": 0,
       "preview": "putridswipe"
+    },
+    {
+      "name": "rabid_mole_rat_bite",
+      "cost": 0,
+      "preview": "rabidmoleratbite"
     },
     {
       "name": "radroach_swarm_bite",
@@ -1883,6 +1938,21 @@
       "name": "ship_anchor_sweep",
       "cost": 0,
       "preview": "shipanchorsweep"
+    },
+    {
+      "name": "shipbreaker_claw",
+      "cost": 0,
+      "preview": "shipbreakerclaw"
+    },
+    {
+      "name": "shipbreaker_ground_pound",
+      "cost": 0,
+      "preview": "shipbreakergroundpound"
+    },
+    {
+      "name": "shipbreaker_trample",
+      "cost": 0,
+      "preview": "shipbreakertrample"
     },
     {
       "name": "softshell_mirelurk_claw",
@@ -1983,6 +2053,16 @@
       "name": "young_deathclaw_swipe",
       "cost": 0,
       "preview": "youngdeathclawswipe"
+    },
+    {
+      "name": "young_fog_crawler_claw",
+      "cost": 0,
+      "preview": "youngfogcrawlerclaw"
+    },
+    {
+      "name": "young_mirelurk_queen_claw",
+      "cost": 0,
+      "preview": "youngmirelurkqueenclaw"
     }
   ],
   "thrown": [
@@ -2030,6 +2110,16 @@
       "name": "molotov_cocktail",
       "cost": 4,
       "preview": "molotovcocktail"
+    },
+    {
+      "name":"nukalurk_queen_brood",
+      "cost": 0,
+      "preview": "nukalurkqueenbrood"
+    },
+    {
+      "name":"nukalurk_queen_lob",
+      "cost": 0,
+      "preview": "nukalurkqueenlob"
     },
     {
       "name":"plasma_grenade",

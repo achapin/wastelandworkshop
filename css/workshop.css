@@ -461,6 +461,8 @@ td {
 	color: rgb(231, 189, 66);
 }
 
+@media (hover: hover) {
+
 #preview {
 	position: fixed;
 	z-index: 10;
@@ -473,6 +475,18 @@ td {
 #preview img {
 	width: 100%;
 	height: auto;
+}
+
+}
+
+@media (hover: none) {    
+	#preview {
+		display: none;
+	}
+
+	#preview img {
+		display: none;
+	}
 }
 
 option {
