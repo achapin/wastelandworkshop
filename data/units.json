@@ -5724,12 +5724,182 @@
     "default_equipment": {
     }, 
     "factions": [
-      "crt",
-      "nkl"
+      "rbt"
     ], 
-    "must_carry":["melee.mirelurk_king_claws", "rifles.mirelurk_king_sonic_scream"],
-    "name": "mirelurk_king", 
-    "preview": "mirelurkking",
-    "tags":["creature","mirelurk"]
+    "must_carry":["melee.robot_swipe", "heavy_weapons.space_laser"],
+    "name": "space_sentry", 
+    "preview": "spacesentry",
+    "tags":["robot"]
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry":["melee.robot_swipe", "pistols.top_up_nuka_cola_sprayer"],
+    "name": "mr_frothy_server", 
+    "preview": "mrfrothyserver",
+    "tags":["robot"]
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry":["pistols.nuka_cola_sprayer"],
+    "name": "mr_frothy_dispenser", 
+    "preview": "mrfrothydispenser",
+    "tags":["robot"]
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry":["melee.robot_swipe", "heavy_weapons.space_laser", "heavy_weapons.missile_launcher", "heavy_weapons.mortar_launcher"],
+    "name": "space_sentry_annihilator", 
+    "preview": "spacesentryannihilator",
+    "tags":["robot"]
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":["melee.gatorclaw_claws"],
+    "name": "gatorclaw", 
+    "preview": "gatorclaw",
+    "tags":["creature"]
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr"
+    ],
+    "must_wear":["power_armor.overboss_power_armor"],
+    "name": "colter", 
+    "preview": "colter",
+    "unique_code":"colter"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr"
+    ],
+    "must_wear":["armor.gages_outfit"],
+    "name": "gage", 
+    "preview": "gage",
+    "unique_code":"gage"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr"
+    ],
+    "name": "shank", 
+    "preview": "shank",
+    "unique_code":"shank"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "srv"
+    ],
+    "name": "sierra_petrovita", 
+    "preview": "sierrapetrovita",
+    "unique_code":"sierrapetrovita"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "srv"
+    ],
+    "must_wear":["clothing.wildman_rags"],
+    "name": "cito", 
+    "preview": "cito",
+    "unique_code":"cito"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "srv"
+    ],
+    "must_wear":["clothing.magicians_costume"],
+    "name": "oswald_the_outrageous", 
+    "preview": "oswaldtheoutrageous",
+    "unique_code":"oswaldtheoutrageous"
   }
 ]
