@@ -5081,5 +5081,655 @@
       "legendary"
     ],
     "unique_code":"shipbreaker_2"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "pillager_operators", 
+    "preview": "pillageroperators"
+  } , 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "scavver_operators", 
+    "preview": "scavveroperators"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "lizzie", 
+    "preview": "lizzie",
+    "unique_code":"lizzie"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "mags", 
+    "preview": "mags",
+    "unique_code":"mags"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "veteran_operators", 
+    "preview": "veteranoperators"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "survivor_operators", 
+    "preview": "survivoroperators"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "waster_operators", 
+    "preview": "wasteroperators"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "william", 
+    "preview": "william",
+    "unique_code":"william"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "scavver_disciples", 
+    "preview": "scavverdisciples"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "savoy", 
+    "preview": "savoy",
+    "unique_code":"savoy"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "dixie", 
+    "preview": "dixie",
+    "unique_code":"dixie"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "tormentor_disciples", 
+    "preview": "tormentordisciples"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "survivalist_disciples", 
+    "preview": "survivalistdisciples"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "waster_disciples", 
+    "preview": "wasterdisciples"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "nisha", 
+    "preview": "nisha",
+    "unique_code":"nisha"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "butcher_operators", 
+    "preview": "butcheroperators"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "waster_pack", 
+    "preview": "wasterpack"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "mason", 
+    "preview": "mason",
+    "unique_code":"mason"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "tormentor_operators", 
+    "preview": "tormentoroperators"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "pillager_disciples", 
+    "preview": "pillagerdisciples"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "scavver_pack", 
+    "preview": "scavverpack"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "must_carry":["melee.dog_bite"],
+    "name": "hound", 
+    "preview": "hound"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "butcher_disciples", 
+    "preview": "butcherdisciples"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "veteran_disciples", 
+    "preview": "veterandisciples"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rbt"
+    ],
+    "must_carry":["melee.robot_swipe", "pistols.nukatron_cola_dispenser"],
+    "name": "nukatron", 
+    "preview": "nukatron",
+    "tags":["robot"]
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "butcher_pack", 
+    "preview": "butcherpack"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "veteran_pack", 
+    "preview": "veteranpack"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "survivalist_pack", 
+    "preview": "survivalistpack"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rbt"
+    ], 
+    "must_carry":["melee.robot_swipe", "pistols.nukatron_quantum_cola_dispenser"],
+    "name": "nukatron_guardian", 
+    "preview": "nukatronguardian",
+    "tags":["robot"]
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rbt"
+    ],
+    "must_carry":["melee.robot_swipe"],
+    "name": "nira", 
+    "preview": "nira",
+    "tags":["robot"],
+    "unique_code":"nira"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "tormentor_pack", 
+    "preview": "tormentorpack"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "pillager_pack", 
+    "preview": "pillagerpack"
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry":["melee.gatorclaw_claws", "melee.gatorclaw_jaws", "melee.gatorclaw_jaws_2"],
+    "name": "albino_gatorclaw", 
+    "preview": "albinogatorclaw",
+    "tags":["creature"],
+    "unique_code":"albinogatorclaw"
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+    }, 
+    "factions": [
+      "crt",
+      "nkl"
+    ], 
+    "must_carry":["melee.mirelurk_king_claws", "rifles.mirelurk_king_sonic_scream"],
+    "name": "mirelurk_king", 
+    "preview": "mirelurkking",
+    "tags":["creature","mirelurk"]
   }
 ]

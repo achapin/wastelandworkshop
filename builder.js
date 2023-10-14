@@ -39,7 +39,11 @@ var possibleFilters = [
 	"rbt",
 	"mut",
 	"slg",
-	"srv"
+	"srv",
+	"pak",
+	"dis",
+	"opr",
+	"nkl"
 ]
 
 var factionReferences = {
@@ -57,7 +61,11 @@ var factionReferences = {
 	"rbt":"reference_robotfaction",
 	"mut":"reference_supermutants",
 	"slg":"reference_slog",
-	"srv":"reference_survivors"
+	"srv":"reference_survivors",
+	"pak":"reference_the_pack",
+	"dis":"reference_the_disciples",
+	"opr":"reference_the_operators",
+	"nkl":"reference_nukalurks"
 }
 
 var tagsToReferences = {
