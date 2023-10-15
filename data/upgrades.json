@@ -1,6 +1,7 @@
 {
   "battle_mode_packs":{
     "advanced_items": [
+      "heavy_weapons.broadsider",
       "armor.army_helmet",
       "armor.combat_armor",
       "armor.commando_chest_piece",
@@ -99,6 +100,7 @@
       "clothing.scribe_robes",
       "gear.lyons_insignia",
       "gear.star_paladin_insignia",
+      "gear.vertibird_signal_grenade",
       "heavy_weapons.final_judgement",
       "mods.elder_paint"
     ],
@@ -167,7 +169,46 @@
       "rifles.mirelurk_hunter_acid",
       "rifles.mirelurk_queen_acid",
       "thrown.centaur_spit",
-      "thrown.mirelurk_queen_brood"
+      "thrown.mirelurk_queen_brood",
+      "rifles.young_mirelurk_queen_acid",
+      "pistols.bloatfly_larva",
+      "pistols.bloodbug_blood_spray",
+      "pistols.deathskull_poison_blast",
+      "rifles.mirelurk_king_sonic_scream",
+      "rifles.nukalurk_queen_acid",
+      "pistols.glowing_bloatfly_larva",
+      "pistols.glowing_bloodbug_blood_spray",
+      "melee.bloodbug_proboscis",
+      "melee.brahmin_trample",
+      "melee.gatorclaw_claws",
+      "melee.gatorclaw_jaws",
+      "melee.gatorclaw_jaws_2",
+      "melee.glowing_bloodbug_proboscis",
+      "melee.glowing_mongrel_bite",
+      "melee.glowing_stingwing_sting",
+      "melee.glowing_yao_guai_swipe",
+      "melee.deathskull_escape",
+      "melee.deathskull_pincers_and_sting",
+      "melee.deathskull_whirl",
+      "melee.mirelurk_king_claws",
+      "melee.nukalurk_hatchlings_claw",
+      "melee.nukalurk_queen_claw",
+      "melee.nukalurk_queen_quake",
+      "melee.rabid_mole_rat_bite",
+      "melee.radstag_doe_gore",
+      "melee.radstag_gore",
+      "melee.robot_swipe",
+      "melee.shipbreaker_claw",
+      "melee.shipbreaker_ground_pound",
+      "melee.shipbreaker_trample",
+      "melee.softshell_mirelurk_claw",
+      "melee.stingwing_sting",
+      "melee.yao_guai_swipe",
+      "melee.young_fog_crawler_claw",
+      "melee.young_mirelurk_queen_claw",
+      "melee.young_radscorpion_pincers_and_sting",
+      "thrown.nukalurk_queen_brood",
+      "thrown.nukalurk_queen_lob"
     ],
     "dog_items" : [
       "armor.chain_dog_collar",
@@ -201,6 +242,7 @@
       "gear.deathclaw_control_scrambler",
       "gear.pheremone_emitter",
       "gear.pheremone_mask",
+      "gear.pipboy",
       "gear.power_armor_patch",
       "gear.pulse_shield",
       "gear.robot_repair_kit",
@@ -326,7 +368,15 @@
       "rifles.mr_handy_smg",
       "rifles.robobrain_laser",
       "rifles.securitron_grenade_launcher",
-      "rifles.securitron_smg"
+      "rifles.securitron_smg",
+      "heavy_weapons.mortar_launcher",
+      "heavy_weapons.space_laser",
+      "pistols.eyebot_laser",
+      "pistols.eyebot_tesla_cannon",
+      "pistols.nuka_cola_sprayer",
+      "pistols.nukatron_cola_dispenser",
+      "pistols.nukatron_quantum_cola_dispenser",
+      "mods.robot_recon_sensors"
     ],
     "special_items" : [
       "melee.fire_hydrant_bat",
@@ -595,6 +645,7 @@
       "alcohol.whiskey",
       "alcohol.wine",
       "chems.addictol",
+      "chems.anti-venom_balm",
       "chems.berry_mentats",
       "chems.buffout",
       "chems.bufftats",
@@ -757,6 +808,69 @@
       "power_armor.t60f_power_armor",
       "power_armor.tessas_power_armor",
       "power_armor.x01_power_armor"
+    ],
+    "liberty_prime_items":[
+      "pistols.liberty_laser",
+      "heavy_weapons.mk28_nuclear_bomb",
+      "melee.liberty_prime_stomp",
+      "melee.liberty_prime_punch",
+      "subsystems.active_defense_matrix",
+      "subsystems.electromagnetic_actuators",
+      "subsystems.gyroscopic_sensors",
+      "subsystems.m28_autoloader",
+      "subsystems.power_core",
+      "subsystems.targeting_hud"
+    ],
+    "nuka_world_items":[
+      "rifles.handmade_rifle",
+      "rifles.syringer",
+      "pistols.acid_soaker",
+      "pistols.pipe_revolver",
+      "pistols.western_revolver",
+      "melee.commie_whacker",
+      "melee.disciples_blade",
+      "melee.sword_of_wonders",
+      "thrown.fury_grenade",
+      "thrown.nuka_quantum_grenade",
+      "thrown.persuasion_grenade",
+      "thrown.predator_grenade",
+      "power_armor.overboss_power_armor",
+      "armor.disciples_armor",
+      "armor.gages_outfit",
+      "armor.heavy_disciples_armor",
+      "armor.heavy_operator_armor",
+      "armor.heavy_pack_armor",
+      "armor.light_raider_armor",
+      "armor.operators_armor",
+      "armor.pack_armor",
+      "armor.sturdy_raider_armor",
+      "clothing.cappy_glasses",
+      "clothing.magicians_costume",
+      "clothing.wasteland_outfit",
+      "clothing.wildman_rags",
+      "alcohol.nuka_cola_dark",
+      "perks.ace_operator",
+      "perks.berserker",
+      "perks.blitzer",
+      "perks.bodyguard",
+      "perks.chosen_disciple",
+      "perks.pack_alpha",
+      "mods.automatic",
+      "mods.close_quarters",
+      "mods.high_caliber",
+      "mods.marksmans",
+      "mods.nuka_cola_paint_job",
+      "mods.nuka_cola_quantum_paint_job",
+      "mods.precision",
+      "mods.semi-auto",
+      "mods.sniper",
+      "mods.tactical",
+      "food_and_drink.cotton_candy_bites",
+      "food_and_drink.gum_drops",
+      "food_and_drink.nuka_cola_orange",
+      "food_and_drink.nuka_cola_quartz",
+      "food_and_drink.nuka_cola_victory",
+      "food_and_drink.nuka_cola_wild"
     ]
   },
   "automatron" : [
@@ -1011,7 +1125,7 @@
     },
     {
       "name":"handmade_rifle",
-      "cost": 0,
+      "cost": 1000,
       "preview": "handmaderifle"
     },
     {
@@ -1191,7 +1305,7 @@
     },
     {
       "name":"syringer",
-      "cost": 0,
+      "cost": 1000,
       "preview": "syringer"
     },
     {
@@ -1248,7 +1362,7 @@
     },
     {
       "name":"acid_soaker",
-      "cost": 0,
+      "cost": 1000,
       "preview": "acidsoaker"
     },
     {
@@ -1450,7 +1564,7 @@
     },
     {
       "name":"pipe_revolver",
-      "cost": 0,
+      "cost": 1000,
       "preview": "piperevolver"
     },
     {
@@ -1517,7 +1631,7 @@
     },
     {
       "name":"western_revolver",
-      "cost": 0,
+      "cost": 1000,
       "preview": "westernrevolver"
     },
     {
@@ -1610,7 +1724,7 @@
     },
     {
       "name":"commie_whacker",
-      "cost": 0,
+      "cost": 1000,
       "preview": "commiewhacker"
     },
     {
@@ -1675,7 +1789,7 @@
     },
     {
       "name":"disciples_blade",
-      "cost": 0,
+      "cost": 1000,
       "preview": "disciplesblade"
     },
     {
@@ -2098,7 +2212,7 @@
     },
     {
       "name":"sword_of_wonders",
-      "cost": 0,
+      "cost": 1000,
       "preview": "swordofwonders"
     },
     {
@@ -2200,7 +2314,7 @@
     },
     {
       "name":"fury_grenade",
-      "cost": 0,
+      "cost": 1000,
       "preview": "furygrenade"
     },
     {
@@ -2225,7 +2339,7 @@
     },
     {
       "name":"nuka_quantum_grenade",
-      "cost": 0,
+      "cost": 1000,
       "preview": "nukaquantumgrenade"
     },
     {
@@ -2240,7 +2354,7 @@
     },
     {
       "name":"persuasion_grenade",
-      "cost": 0,
+      "cost": 1000,
       "preview": "persuasiongrenade"
     },
     {
@@ -2250,7 +2364,7 @@
     },
     {
       "name":"predator_grenade",
-      "cost": 0,
+      "cost": 1000,
       "preview": "predatorgrenade"
     },
     {
@@ -2329,7 +2443,7 @@
     {
       "name": "overboss_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 0,
+      "cost": 1000,
       "preview": "overbosspowerarmor"
     },
     {
@@ -2449,7 +2563,7 @@
     },
     {
       "name":"disciples_armor",
-      "cost":0,
+      "cost":1000,
       "preview": "disciplesarmor"
     },
     {
@@ -2469,7 +2583,7 @@
     },
     {
       "name":"gages_outfit",
-      "cost":0,
+      "cost":1000,
       "preview": "gagesoutfit"
     },
     {
@@ -2489,7 +2603,7 @@
     },
     {
       "name":"heavy_disciples_armor",
-      "cost":0,
+      "cost":1000,
       "preview": "heavydisciplesarmor"
     },
     {
@@ -2500,12 +2614,12 @@
     },
     {
       "name":"heavy_operator_armor",
-      "cost":0,
+      "cost":1000,
       "preview": "heavyoperatorarmor"
     },
     {
       "name":"heavy_pack_armor",
-      "cost":0,
+      "cost":1000,
       "preview": "heavypackarmor"
     },
     {
@@ -2531,12 +2645,12 @@
     },
     {
       "name":"operators_armor",
-      "cost":0,
+      "cost":1000,
       "preview": "operatorsarmor"
     },
     {
       "name":"pack_armor",
-      "cost":0,
+      "cost":1000,
       "preview": "packarmor"
     },
     {
@@ -2582,7 +2696,7 @@
     },
     {
       "name":"sturdy_raider_armor",
-      "cost":0,
+      "cost":1000,
       "preview": "sturdyraiderarmor"
     },
     {
@@ -2647,7 +2761,7 @@
     },
     {
       "name":"cappy_glasses",
-      "cost":0,
+      "cost":1000,
       "preview": "cappyglasses"
     },
     {
@@ -2699,7 +2813,7 @@
     },
     {
       "name":"magicians_costume",
-      "cost":0,
+      "cost":1000,
       "preview": "magicianscostume"
     },
     {
@@ -2798,12 +2912,12 @@
     },
     {
       "name":"wasteland_outfit",
-      "cost":0,
+      "cost":1000,
       "preview": "wastelandoutfit"
     },
     {
       "name":"wildman_rags",
-      "cost":0,
+      "cost":1000,
       "preview": "wildmanrags"
     }
   ],
@@ -2982,7 +3096,7 @@
     },
     {
       "name": "nuka_cola_dark",
-      "cost": 0,
+      "cost": 1000,
       "preview": "nukacoladark"
     },
     {
@@ -3187,7 +3301,7 @@
   "perks":[
     {
       "name":"ace_operator",
-      "cost": 0,
+      "cost": 1000,
       "preview": "aceoperator"
     },
     {
@@ -3277,7 +3391,7 @@
     },
     {
       "name":"chosen_disciple",
-      "cost": 0,
+      "cost": 1000,
       "preview": "chosendisciple"
     },
     {
@@ -3540,7 +3654,7 @@
     },
     {
       "name":"pack_alpha",
-      "cost": 0,
+      "cost": 1000,
       "preview": "packalpha"
     },
     {
@@ -3734,7 +3848,7 @@
     },
     {
       "name": "automatic",
-      "cost": 0,
+      "cost": 1000,
       "types":["rifles"],
       "preview": "automatic"
     },
@@ -3782,7 +3896,7 @@
     },
     {
       "name": "close_quarters",
-      "cost": 0,
+      "cost": 1000,
       "types":["rifles"],
       "preview": "closequarters"
     },
@@ -4028,7 +4142,7 @@
     },
     {
       "name": "high_caliber",
-      "cost": 0,
+      "cost": 1000,
       "types":["rifles"],
       "preview": "highcaliber"
     },
@@ -4118,7 +4232,7 @@
     },
     {
       "name": "marksmans",
-      "cost": 0,
+      "cost": 1000,
       "types":["rifles"],
       "preview": "marksmans"
     },
@@ -4154,13 +4268,13 @@
     },
     {
       "name":"nuka_cola_paint_job",
-      "cost":0,
+      "cost":1000,
       "types":["power_armor"],
       "preview": "nukacolapaintjob"
     },
     {
       "name":"nuka_cola_quantum_paint_job",
-      "cost":0,
+      "cost":1000,
       "types":["power_armor"],
       "preview": "nukacolaquantumpaintjob"
     },
@@ -4190,7 +4304,7 @@
     },
     {
       "name": "precision",
-      "cost": 0,
+      "cost": 1000,
       "types":["rifles"],
       "preview": "precision"
     },
@@ -4268,7 +4382,7 @@
     },
     {
       "name": "semi-auto",
-      "cost": 0,
+      "cost": 1000,
       "types":["rifles"],
       "preview": "semi-auto"
     },
@@ -4310,7 +4424,7 @@
     },
     {
       "name": "sniper",
-      "cost": 0,
+      "cost": 1000,
       "types":["rifles"],
       "preview": "sniper"
     },
@@ -4387,8 +4501,8 @@
       "preview": "superiormaterials"
     },
     {
-      "name": "tacticial",
-      "cost": 0,
+      "name": "tactical",
+      "cost": 1000,
       "types":["rifles"],
       "preview": "tactical"
     },
@@ -4492,7 +4606,7 @@
     },
     {
       "name":"cotton_candy_bites",
-      "cost":0,
+      "cost":1000,
       "preview": "cottoncandybites"
     },
     {
@@ -4522,7 +4636,7 @@
     },
     {
       "name":"gum_drops",
-      "cost":0,
+      "cost":1000,
       "preview": "gumdrops"
     },
     {
@@ -4572,7 +4686,7 @@
     },
     {
       "name":"nuka_cola_orange",
-      "cost":0,
+      "cost":1000,
       "preview": "nukacolaorange"
     },
     {
@@ -4581,23 +4695,18 @@
       "preview": "nukacolaquantum"
     },
     {
-      "name":"nuka_cola_quantum",
-      "cost":41,
-      "preview": "nukacolaquantum"
-    },
-    {
       "name":"nuka_cola_quartz",
-      "cost":0,
+      "cost":1000,
       "preview": "nukacolaquartz"
     },
     {
       "name":"nuka_cola_victory",
-      "cost":0,
+      "cost":1000,
       "preview": "nukacolavictory"
     },
     {
       "name":"nuka_cola_wild",
-      "cost":0,
+      "cost":1000,
       "preview": "nukacolawild"
     },
     {

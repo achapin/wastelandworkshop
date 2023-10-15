@@ -29,21 +29,21 @@ var possibleFilters = [
 	"lgn",
 	"coa",
 	"crt",
+	"dis",
 	"enc",
 	"frg",
 	"ins",
 	"gun",
 	"ncr",
+	"nkl",
+	"opr",
+	"pak",
 	"rdr",
 	"rlr",
 	"rbt",
 	"mut",
 	"slg",
-	"srv",
-	"pak",
-	"dis",
-	"opr",
-	"nkl"
+	"srv"
 ]
 
 var factionReferences = {
@@ -65,7 +65,7 @@ var factionReferences = {
 	"pak":"reference_the_pack",
 	"dis":"reference_the_disciples",
 	"opr":"reference_the_operators",
-	"nkl":"reference_nukalurks"
+	"nkl":"reference_nukalurks_1"
 }
 
 var tagsToReferences = {
@@ -201,6 +201,20 @@ function localizationLoaded(json){
 
 	console.log("Missing default equipment: " + missingDefaults);
 
+	var missingItems = "";
+	var allBattleModeItems = [];
+	Object.keys(upgrades.battle_mode_packs).forEach(function(pack){
+		upgrades.battle_mode_packs[pack].forEach(function(item){
+			allBattleModeItems.push(item);
+			var split = item.split('.');
+			var upgrade = getUpgrade(split[0], split[1]);
+			if(upgrade == null){
+				missingItems += pack.name + ": " + item + ",";
+			}
+		});
+	});
+	var itemsWithoutBattleModeGroup = "";
+
 	Object.keys(upgrades).forEach(function(section){
 		if(!loc.hasOwnProperty(section)){
 			missingKeys += section + ", ";
@@ -218,18 +232,15 @@ function localizationLoaded(json){
 			if(!urlExists("images/" + upgrade["preview"] + ".png")) {
 				badPreview += upgrade["preview"] + " ";
 			}
-		}
-		});
-	});
 
-	var missingItems = "";
-	Object.keys(upgrades.battle_mode_packs).forEach(function(pack){
-		upgrades.battle_mode_packs[pack].forEach(function(item){
-			var split = item.split('.');
-			var upgrade = getUpgrade(split[0], split[1]);
-			if(upgrade == null){
-				missingItems += pack.name + ": " + item + ",";
+			console.log("Checking "+section + "."+upgrade.name)
+			var index = allBattleModeItems.indexOf(section + "."+upgrade.name)
+			if(index < 0){
+				itemsWithoutBattleModeGroup += section + "."+upgrade.name + ", "
+			} else {
+				console.log("Item: " + section + "."+upgrade.name + " has index " + index);
 			}
+		}
 		});
 	});
 
@@ -242,6 +253,7 @@ function localizationLoaded(json){
 	if(missingItems.length > 0){
 	console.log("Missing Items: " + missingItems);
 	}
+	console.log("Items Without Battle Mode Group: " + itemsWithoutBattleModeGroup);
 	if(checkPreview){
 		console.log("Bad preview links: " + badPreview);
 	}
