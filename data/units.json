@@ -5093,7 +5093,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "10mm_pistol"
+      ],
+      "melee":["baseball_bat", "pipe_wrench"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5112,7 +5116,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "baseball_bat",
+        "pipe_wrench"
+      ],
+      "pistols":["10mm_pistol"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5131,7 +5140,10 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "thrown": {
+        "persuasion_grenade":4
+      }
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5151,7 +5163,8 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["handmade_rifle"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5171,7 +5184,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "thrown": {
+        "fragmentation_grenade":"4"
+      },
+      "rifles":["syringer","combat_rifle"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5209,7 +5226,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "10mm_pistol"
+      ],
+      "rifles":["handmade_rifle"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5228,7 +5249,8 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["handmade_rifle"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5248,7 +5270,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "10mm_pistol",
+        "pipe_revolver"
+      ],
+      "melee":["disciples_blade"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5267,7 +5294,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles": [
+        "combat_shotgun"
+      ],
+      "melee":["disciples_blade"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5287,7 +5318,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "44_revolver"
+      ],
+      "melee":["disciples_blade"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5307,7 +5342,10 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["handmade_rifle","plasma_rifle"],
+      "pistols":["pipe_revolver"],
+      "melee":["disciples_blade"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5326,7 +5364,29 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols":["10mm_pistol"],
+      "rifles":["handmade_rifle","combat_rifle"]
+    },
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "survivalist_operators", 
+    "preview": "survivalistoperators"
+  }, 
+  {
+    "battle_mode_packs": [
+      "upgrades", 
+      "wasteland_items", 
+      "advanced_items", 
+      "usable_items",
+      "raider_items",
+      "standard_items"
+    ], 
+    "cost": 1000, 
+    "default_equipment": {
+      "rifles":["handmade_rifle","hunting_rifle"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5345,7 +5405,10 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles": [
+        "hunting_rifle"
+      ]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5364,7 +5427,14 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "plasma_pistol"
+      ],
+      "melee":["disciples_blade"],
+      "thrown":{
+        "fragmentation_grenade":"4"
+      }
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5384,7 +5454,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "plasma_pistol"
+      ],
+      "melee":["shishkebab"],
+      "rifles":["combat_rifle","handmade_rifle"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5403,7 +5478,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "10mm_pistol",
+        "pipe_revolver"
+      ],
+      "rifles":["handmade_rifle"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5422,7 +5502,8 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["combat_shotgun"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5442,7 +5523,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "heavy_weapons": [
+        "missile_launcher"
+      ],
+      "rifles":["combat_rifle"]
+    },
     "factions": [
       "rdr",
       "opr"
@@ -5461,7 +5546,9 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols":["10mm_pistol","pipe_revolver"],
+      "melee":["disciples_blade","machete"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5480,7 +5567,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "board"
+      ],
+      "pistols":["pipe_revolver"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5519,7 +5610,10 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["handmade_rifle","hunting_rifle"],
+      "melee":["machete"],
+      "pistols":["44_revolver"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5538,7 +5632,9 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["handmade_rifle","syringer"],
+      "heavy_weapons":["missile_launcher"]
+    },
     "factions": [
       "rdr",
       "dis"
@@ -5577,7 +5673,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "baseball_bat"
+      ],
+      "pistols":["10mm_pistol"],
+      "rifles":["handmade_rifle"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5596,7 +5697,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "sledgehammer",
+        "baseball_bat"
+      ],
+      "pistols":["10mm_pistol"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5615,7 +5721,8 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["cowboy_repeater", "double_barrel_shotgun"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5675,7 +5782,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "heavy_weapons": [
+        "flamer",
+        "missile_launcher"
+      ],
+      "rifles":["handmade_rifle"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5694,7 +5806,12 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "board",
+        "sledgehammer"
+      ],
+      "pistols":["10mm_pistol", "pipe_revolver"]
+    },
     "factions": [
       "rdr",
       "pak"
@@ -5798,7 +5915,11 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "power_fist"
+      ],
+      "rifles":["combat_rifle"]
+    },
     "factions": [
       "rdr"
     ],
@@ -5818,7 +5939,8 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "rifles":["handmade_rifle"]
+    },
     "factions": [
       "rdr"
     ],
@@ -5838,7 +5960,8 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols":["44_revolver"]
+    },
     "factions": [
       "rdr"
     ],
@@ -5856,7 +5979,10 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "pistols": [
+        "pipe_pistol"
+      ]
+    },
     "factions": [
       "srv"
     ],
@@ -5874,7 +6000,10 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "sledgehammer"
+      ]
+    },
     "factions": [
       "srv"
     ],
@@ -5893,7 +6022,10 @@
     ], 
     "cost": 1000, 
     "default_equipment": {
-    }, 
+      "melee": [
+        "sword_of_wonders"
+      ]
+    },
     "factions": [
       "srv"
     ],

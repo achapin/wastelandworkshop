@@ -26,6 +26,7 @@
       "gear.stuffed_monkey",
       "gear.turret_inhibitors",
       "gear.weapon_repair_kit",
+      "heavy_weapons.flamer",
       "heavy_weapons.light_machine_gun",
       "heavy_weapons.minigun",
       "heavy_weapons.missile_launcher",
@@ -60,7 +61,6 @@
       "rifles.chinese_assault_rifle",
       "rifles.double_barrel_shotgun",
       "rifles.explosive_combat_rifle",
-      "rifles.flamer",
       "rifles.freezing_combat_shotgun",
       "rifles.grenade_launcher",
       "rifles.hunters_hunting_rifle",
@@ -817,6 +817,11 @@
       "preview": "eugene"
     },
     {
+      "name":"flamer",
+      "cost": 24,
+      "preview": "flamer"
+    },
+    {
       "name": "fat_man",
       "cost": 45,
       "preview": "fatman"
@@ -988,11 +993,6 @@
       "name":"explosive_combat_rifle",
       "cost": 19,
       "preview": "explosivecombatrifle"
-    },
-    {
-      "name":"flamer",
-      "cost": 24,
-      "preview": "flamer"
     },
     {
       "name":"freezing_combat_shotgun",
