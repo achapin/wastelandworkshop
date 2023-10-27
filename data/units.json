@@ -4735,9 +4735,11 @@
   {
     "battle_mode_packs": [
         "upgrades",
-        "usable_items",
+        "high_tech_items",
         "advanced_items",
-        "wasteland_items"
+        "usable_items",
+        "bos_items",
+        "standard_items"
     ], 
     "cost": 63,
     "factions": [
