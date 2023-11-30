@@ -26,6 +26,8 @@
       "gear.stuffed_monkey",
       "gear.turret_inhibitors",
       "gear.weapon_repair_kit",
+      "heavy_weapons.broadsider",
+      "heavy_weapons.flamer",
       "heavy_weapons.light_machine_gun",
       "heavy_weapons.minigun",
       "heavy_weapons.missile_launcher",
@@ -60,7 +62,6 @@
       "rifles.chinese_assault_rifle",
       "rifles.double_barrel_shotgun",
       "rifles.explosive_combat_rifle",
-      "rifles.flamer",
       "rifles.freezing_combat_shotgun",
       "rifles.grenade_launcher",
       "rifles.hunters_hunting_rifle",
@@ -99,6 +100,7 @@
       "clothing.scribe_robes",
       "gear.lyons_insignia",
       "gear.star_paladin_insignia",
+      "gear.vertibird_signal_grenade",
       "heavy_weapons.final_judgement",
       "mods.elder_paint"
     ],
@@ -167,7 +169,46 @@
       "rifles.mirelurk_hunter_acid",
       "rifles.mirelurk_queen_acid",
       "thrown.centaur_spit",
-      "thrown.mirelurk_queen_brood"
+      "thrown.mirelurk_queen_brood",
+      "rifles.young_mirelurk_queen_acid",
+      "pistols.bloatfly_larva",
+      "pistols.bloodbug_blood_spray",
+      "pistols.deathskull_poison_blast",
+      "rifles.mirelurk_king_sonic_scream",
+      "rifles.nukalurk_queen_acid",
+      "pistols.glowing_bloatfly_larva",
+      "pistols.glowing_bloodbug_blood_spray",
+      "melee.bloodbug_proboscis",
+      "melee.brahmin_trample",
+      "melee.gatorclaw_claws",
+      "melee.gatorclaw_jaws",
+      "melee.gatorclaw_jaws_2",
+      "melee.glowing_bloodbug_proboscis",
+      "melee.glowing_mongrel_bite",
+      "melee.glowing_stingwing_sting",
+      "melee.glowing_yao_guai_swipe",
+      "melee.deathskull_escape",
+      "melee.deathskull_pincers_and_sting",
+      "melee.deathskull_whirl",
+      "melee.mirelurk_king_claws",
+      "melee.nukalurk_hatchlings_claw",
+      "melee.nukalurk_queen_claw",
+      "melee.nukalurk_queen_quake",
+      "melee.rabid_mole_rat_bite",
+      "melee.radstag_doe_gore",
+      "melee.radstag_gore",
+      "melee.robot_swipe",
+      "melee.shipbreaker_claw",
+      "melee.shipbreaker_ground_pound",
+      "melee.shipbreaker_trample",
+      "melee.softshell_mirelurk_claw",
+      "melee.stingwing_sting",
+      "melee.yao_guai_swipe",
+      "melee.young_fog_crawler_claw",
+      "melee.young_mirelurk_queen_claw",
+      "melee.young_radscorpion_pincers_and_sting",
+      "thrown.nukalurk_queen_brood",
+      "thrown.nukalurk_queen_lob"
     ],
     "dog_items" : [
       "armor.chain_dog_collar",
@@ -201,6 +242,7 @@
       "gear.deathclaw_control_scrambler",
       "gear.pheremone_emitter",
       "gear.pheremone_mask",
+      "gear.pipboy",
       "gear.power_armor_patch",
       "gear.pulse_shield",
       "gear.robot_repair_kit",
@@ -327,7 +369,15 @@
       "rifles.mr_handy_smg",
       "rifles.robobrain_laser",
       "rifles.securitron_grenade_launcher",
-      "rifles.securitron_smg"
+      "rifles.securitron_smg",
+      "heavy_weapons.mortar_launcher",
+      "heavy_weapons.space_laser",
+      "pistols.eyebot_laser",
+      "pistols.eyebot_tesla_cannon",
+      "pistols.nuka_cola_sprayer",
+      "pistols.nukatron_cola_dispenser",
+      "pistols.nukatron_quantum_cola_dispenser",
+      "mods.robot_recon_sensors"
     ],
     "special_items" : [
       "melee.fire_hydrant_bat",
@@ -596,6 +646,7 @@
       "alcohol.whiskey",
       "alcohol.wine",
       "chems.addictol",
+      "chems.anti-venom_balm",
       "chems.berry_mentats",
       "chems.buffout",
       "chems.bufftats",
@@ -758,6 +809,69 @@
       "power_armor.t60f_power_armor",
       "power_armor.tessas_power_armor",
       "power_armor.x01_power_armor"
+    ],
+    "liberty_prime_items":[
+      "pistols.liberty_laser",
+      "heavy_weapons.mk28_nuclear_bomb",
+      "melee.liberty_prime_stomp",
+      "melee.liberty_prime_punch",
+      "subsystems.active_defense_matrix",
+      "subsystems.electromagnetic_actuators",
+      "subsystems.gyroscopic_sensors",
+      "subsystems.m28_autoloader",
+      "subsystems.power_core",
+      "subsystems.targeting_hud"
+    ],
+    "nuka_world_items":[
+      "rifles.handmade_rifle",
+      "rifles.syringer",
+      "pistols.acid_soaker",
+      "pistols.pipe_revolver",
+      "pistols.western_revolver",
+      "melee.commie_whacker",
+      "melee.disciples_blade",
+      "melee.sword_of_wonders",
+      "thrown.fury_grenade",
+      "thrown.nuka_quantum_grenade",
+      "thrown.persuasion_grenade",
+      "thrown.predator_grenade",
+      "power_armor.overboss_power_armor",
+      "armor.disciples_armor",
+      "armor.gages_outfit",
+      "armor.heavy_disciples_armor",
+      "armor.heavy_operator_armor",
+      "armor.heavy_pack_armor",
+      "armor.light_raider_armor",
+      "armor.operators_armor",
+      "armor.pack_armor",
+      "armor.sturdy_raider_armor",
+      "clothing.cappy_glasses",
+      "clothing.magicians_costume",
+      "clothing.wasteland_outfit",
+      "clothing.wildman_rags",
+      "alcohol.nuka_cola_dark",
+      "perks.ace_operator",
+      "perks.berserker",
+      "perks.blitzer",
+      "perks.bodyguard",
+      "perks.chosen_disciple",
+      "perks.pack_alpha",
+      "mods.automatic",
+      "mods.close_quarters",
+      "mods.high_caliber",
+      "mods.marksmans",
+      "mods.nuka_cola_paint_job",
+      "mods.nuka_cola_quantum_paint_job",
+      "mods.precision",
+      "mods.semi-auto",
+      "mods.sniper",
+      "mods.tactical",
+      "food_and_drink.cotton_candy_bites",
+      "food_and_drink.gum_drops",
+      "food_and_drink.nuka_cola_orange",
+      "food_and_drink.nuka_cola_quartz",
+      "food_and_drink.nuka_cola_victory",
+      "food_and_drink.nuka_cola_wild"
     ]
   },
   "automatron" : [
@@ -818,6 +932,11 @@
       "preview": "eugene"
     },
     {
+      "name":"flamer",
+      "cost": 24,
+      "preview": "flamer"
+    },
+    {
       "name": "fat_man",
       "cost": 45,
       "preview": "fatman"
@@ -858,14 +977,20 @@
       "preview": "junkjet"
     },
     {
+      "name": "light_machine_gun",
+      "cost": 18,
+      "preview":"lightmachinegun"
+    },
+    {
       "name": "mk28_nuclear_bomb",
       "cost": 0,
       "preview": "mk28nuclearbomb"
     },
     {
-      "name": "light_machine_gun",
-      "cost": 18,
-      "preview":"lightmachinegun"
+      "name":"mortar_launcher",
+      "cost": 43,
+      "preview": "mortarlauncher",
+      "restrictions":["robot"]
     },
     {
       "name": "minigun",
@@ -893,6 +1018,12 @@
       "name": "tesla_cannon",
       "cost": 35,
       "preview": "teslacannon"
+    },
+    {
+      "name":"space_laser",
+      "cost": 20,
+      "preview": "spacelaser",
+      "restrictions":["robot"]
     }
   ],
   "rifles": [
@@ -979,11 +1110,6 @@
       "preview": "explosivecombatrifle"
     },
     {
-      "name":"flamer",
-      "cost": 24,
-      "preview": "flamer"
-    },
-    {
       "name":"freezing_combat_shotgun",
       "cost": 11,
       "preview": "freezingcombatshotgun"
@@ -997,6 +1123,11 @@
       "name": "grenade_launcher",
       "cost": 35,
       "preview": "grenadelauncher"
+    },
+    {
+      "name":"handmade_rifle",
+      "cost": 10,
+      "preview": "handmaderifle"
     },
     {
       "name":"horrigans_plasma_gun",
@@ -1085,6 +1216,11 @@
       "preview": "mirelurkhunteracid"
     },
     {
+      "name":"mirelurk_king_sonic_scream",
+      "cost": 0,
+      "preview": "mirelurkkingsonicscream"
+    },
+    {
       "name":"mirelurk_queen_acid",
       "cost": 0,
       "preview": "mirelurkqueenacid"
@@ -1169,6 +1305,11 @@
       "preview": "submachinegun"
     },
     {
+      "name":"syringer",
+      "cost": 20,
+      "preview": "syringer"
+    },
+    {
       "name": "tesla_rifle",
       "cost": 16,
       "preview":"teslarifle"
@@ -1219,6 +1360,11 @@
       "name":"a_light_burning_in_the_darkness",
       "cost":14,
       "preview": "alightburninginthedarkness"
+    },
+    {
+      "name":"acid_soaker",
+      "cost": 35,
+      "preview": "acidsoaker"
     },
     {
       "name": "alien_blaster",
@@ -1385,6 +1531,24 @@
       "preview": "mrhandyplasmapistol"
     },
     {
+      "name":"nuka_cola_sprayer",
+      "cost": 8,
+      "preview": "nukacolasprayer",
+      "restrictions":["robot"]
+    },
+    {
+      "name":"nukatron_cola_dispenser",
+      "cost": 4,
+      "preview": "nukatroncoladispenser",
+      "restrictions":["robot"]
+    },
+    {
+      "name":"nukatron_quantum_cola_dispenser",
+      "cost": 15,
+      "preview": "nukatronquantumcoladispenser",
+      "restrictions":["robot"]
+    },
+    {
       "name":"penetrating_laser_pistol",
       "cost": 8,
       "preview": "penetratinglaserpistol"
@@ -1398,6 +1562,11 @@
       "name": "pipe_pistol",
       "cost": 2,
       "preview": "pipepistol"
+    },
+    {
+      "name":"pipe_revolver",
+      "cost": 4,
+      "preview": "piperevolver"
     },
     {
       "name":"plasma_infused_bolt_action_pipe_pistol",
@@ -1460,6 +1629,11 @@
       "name": "thirst_zapper_cola",
       "cost": 2,
       "preview": "thirstzappercola"
+    },
+    {
+      "name":"western_revolver",
+      "cost": 5,
+      "preview": "westernrevolver"
     },
     {
       "name":"wounding_laser_pistol",
@@ -1550,6 +1724,11 @@
       "preview": "combatknife"
     },
     {
+      "name":"commie_whacker",
+      "cost": 4,
+      "preview": "commiewhacker"
+    },
+    {
       "name": "charons_combat_knife",
       "cost": 8,
       "preview": "charonscombatknife"
@@ -1610,6 +1789,11 @@
       "preview":"deathskullwhirl"
     },
     {
+      "name":"disciples_blade",
+      "cost": 12,
+      "preview": "disciplesblade"
+    },
+    {
       "name": "dog_bite",
       "cost": 0,
       "preview": "dogbite"
@@ -1654,6 +1838,21 @@
       "name": "freezing_machete",
       "cost": 5,
       "preview": "freezingmachete"
+    },
+    {
+      "name":"gatorclaw_claws",
+      "cost": 0,
+      "preview": "gatorclawclaws"
+    },
+    {
+      "name":"gatorclaw_jaws",
+      "cost": 0,
+      "preview": "gatorclawjaws"
+    },
+    {
+      "name":"gatorclaw_jaws_2",
+      "cost": 0,
+      "preview": "gatorclawjaws2"
     },
     {
       "name": "glowing_bloodbug_proboscis",
@@ -1795,6 +1994,11 @@
       "preview": "mirelurkhatchlingsclaw"
     },
     {
+      "name":"mirelurk_king_claws",
+      "cost": 0,
+      "preview": "mirelurkkingclaws"
+    },
+    {
       "name": "mirelurk_hunter_claw",
       "cost": 0,
       "preview": "mirelurkhunterclaw"
@@ -1921,6 +2125,12 @@
       "preview": "ripper"
     },
     {
+      "name":"robot_swipe",
+      "cost": 14,
+      "preview": "robotswipe",
+      "restrictions":["robot"]
+    },
+    {
       "name": "shishkebab",
       "cost": 15,
       "preview": "shishkebab"
@@ -1999,6 +2209,11 @@
       "name": "switch_blade",
       "cost": 2,
       "preview": "switchblade"
+    },
+    {
+      "name":"sword_of_wonders",
+      "cost": 15,
+      "preview": "swordofwonders"
     },
     {
       "name": "tessas_fist",
@@ -2098,6 +2313,11 @@
       "preview": "fragmentationgrenade"
     },
     {
+      "name":"fury_grenade",
+      "cost": 14,
+      "preview": "furygrenade"
+    },
+    {
       "name": "incendiary_grenade",
       "cost": 7,
       "preview": "incendiarygrenade"
@@ -2118,6 +2338,11 @@
       "preview": "molotovcocktail"
     },
     {
+      "name":"nuka_quantum_grenade",
+      "cost": 18,
+      "preview": "nukaquantumgrenade"
+    },
+    {
       "name":"nukalurk_queen_brood",
       "cost": 0,
       "preview": "nukalurkqueenbrood"
@@ -2128,9 +2353,19 @@
       "preview": "nukalurkqueenlob"
     },
     {
+      "name":"persuasion_grenade",
+      "cost": 5,
+      "preview": "persuasiongrenade"
+    },
+    {
       "name":"plasma_grenade",
       "cost": 7,
       "preview": "plasmagrenade"
+    },
+    {
+      "name":"predator_grenade",
+      "cost": 14,
+      "preview": "predatorgrenade"
     },
     {
       "name": "pulse_grenade",
@@ -2188,22 +2423,28 @@
   ],
   "power_armor": [
     {
+      "name": "enclave_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 49,
+      "preview": "enclavepowerarmor"
+    },
+    {
+      "name": "hellfire_power_armor",
+      "restrictions":["!super_mutant"],
+      "cost": 60,
+      "preview": "hellfirearmor"
+    },
+    {
       "name": "ncr_salvaged_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 26,
       "preview": "ncrsalvagedpowerarmor"
     },
     {
-      "name": "enclave_power_armor",
+      "name": "overboss_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 44,
-      "preview": "enclavepowerarmor"
-    },
-    {
-      "name": "hellfire_power_armor",
-      "restrictions":["!super_mutant"],
-      "cost": 52,
-      "preview": "hellfirearmor"
+      "cost": 51,
+      "preview": "overbosspowerarmor"
     },
     {
       "name": "power_armor_frame",
@@ -2214,49 +2455,49 @@
     {
       "name": "raider_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 33,
+      "cost": 34,
       "preview": "raiderpowerarmor"
     },
     {
       "name": "slags_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 38,
+      "cost": 44,
       "preview": "slagspowerarmor"
     },
     {
       "name": "t45_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 38,
+      "cost": 44,
       "preview": "t45"
     },
     {
       "name": "t51_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 54,
+      "cost": 60,
       "preview": "t51"
     },
     {
       "name": "t60_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 70,
+      "cost": 82,
       "preview": "t60"
     },
     {
       "name": "t60f_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 95,
+      "cost": 118,
       "preview": "t60fpowerarmor"
     },
     {
       "name": "tessas_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 30,
+      "cost": 32,
       "preview": "tessaspowerarmor"
     },
     {
       "name": "x01_power_armor",
       "restrictions":["!super_mutant"],
-      "cost": 82,
+      "cost": 102,
       "preview": "x01"
     }
   ],
@@ -2321,6 +2562,11 @@
       "preview": "damagedlegatearmor"
     },
     {
+      "name":"disciples_armor",
+      "cost":23,
+      "preview": "disciplesarmor"
+    },
+    {
       "name": "enclave_scout_armor",
       "cost": 12,
       "preview": "enclavescoutarmor"
@@ -2334,6 +2580,11 @@
       "name": "freefall_leg_armor",
       "cost": 2,
       "preview": "freefalllegarmor"
+    },
+    {
+      "name":"gages_outfit",
+      "cost":15,
+      "preview": "gagesoutfit"
     },
     {
       "name": "gecko_backed_metal_armor",
@@ -2351,10 +2602,25 @@
       "preview": "heavycombatarmor"
     },
     {
+      "name":"heavy_disciples_armor",
+      "cost":45,
+      "preview": "heavydisciplesarmor"
+    },
+    {
       "name": "heavy_gauntlets",
       "restrictions":["super_mutant"],
       "cost": 20,
       "preview": "heavygauntlets"
+    },
+    {
+      "name":"heavy_operator_armor",
+      "cost":49,
+      "preview": "heavyoperatorarmor"
+    },
+    {
+      "name":"heavy_pack_armor",
+      "cost":47,
+      "preview": "heavypackarmor"
     },
     {
       "name": "heavy_raider_armor",
@@ -2367,10 +2633,25 @@
       "preview": "heavysyntharmor"
     },
     {
+      "name":"light_raider_armor",
+      "cost":0,
+      "preview": "lightraiderarmor"
+    },
+    {
       "name": "mechanist_armor_and_helmet",
       "cost": 43,
       "restrictions":["!super_mutant"],
       "preview": "mechanistarmorandhelmet"
+    },
+    {
+      "name":"operators_armor",
+      "cost":34,
+      "preview": "operatorsarmor"
+    },
+    {
+      "name":"pack_armor",
+      "cost":25,
+      "preview": "packarmor"
     },
     {
       "name": "protectors_right_arm_guard",
@@ -2412,6 +2693,11 @@
       "name": "sturdy_metal_armor",
       "cost": 18,
       "preview": "sturdymetalarmor"
+    },
+    {
+      "name":"sturdy_raider_armor",
+      "cost":1000,
+      "preview": "sturdyraiderarmor"
     },
     {
       "name": "tesla_coil_harness",
@@ -2474,6 +2760,11 @@
       "preview": "camoflage"
     },
     {
+      "name":"cappy_glasses",
+      "cost":8,
+      "preview": "cappyglasses"
+    },
+    {
       "name": "dirty_postman_uniform",
       "cost": 6,
       "preview": "dirtypostmanuniform"
@@ -2519,6 +2810,11 @@
       "cost": 8,
       "restrictions":["creature"],
       "preview":"limbbraces"
+    },
+    {
+      "name":"magicians_costume",
+      "cost":32,
+      "preview": "magicianscostume"
     },
     {
       "name": "magnifying_visor",
@@ -2613,6 +2909,16 @@
       "restrictions":["!super_mutant"],
       "cost": 9,
       "preview": "vault111jumpsuit"
+    },
+    {
+      "name":"wasteland_outfit",
+      "cost":3,
+      "preview": "wastelandoutfit"
+    },
+    {
+      "name":"wildman_rags",
+      "cost":15,
+      "preview": "wildmanrags"
     }
   ],
   "chems": [
@@ -2787,6 +3093,11 @@
       "name": "moonshine",
       "cost": 3,
       "preview": "moonshine"
+    },
+    {
+      "name": "nuka_cola_dark",
+      "cost": 7,
+      "preview": "nukacoladark"
     },
     {
       "name": "rum",
@@ -2989,6 +3300,11 @@
   ],
   "perks":[
     {
+      "name":"ace_operator",
+      "cost": 1000,
+      "preview": "aceoperator"
+    },
+    {
       "name": "action_person",
       "cost": 8,
       "preview": "actionperson"
@@ -3072,6 +3388,11 @@
       "name": "chemist",
       "cost": 6,
       "preview": "chemist"
+    },
+    {
+      "name":"chosen_disciple",
+      "cost": 1000,
+      "preview": "chosendisciple"
     },
     {
       "name":"collaborative",
@@ -3332,6 +3653,11 @@
       "preview": "nuclearphysicist"
     },
     {
+      "name":"pack_alpha",
+      "cost": 1000,
+      "preview": "packalpha"
+    },
+    {
       "name": "pack_leader",
       "cost": 23,
       "preview": "packleader"
@@ -3521,6 +3847,12 @@
       "preview": "asbestoslining"
     },
     {
+      "name": "automatic",
+      "cost": 12,
+      "types":["rifles"],
+      "preview": "automatic"
+    },
+    {
       "name": "balanced",
       "cost": 9,
       "types":["pistols"],
@@ -3561,6 +3893,12 @@
       "cost": 5,
       "types":["armor"],
       "preview": "braced"
+    },
+    {
+      "name": "close_quarters",
+      "cost": 7,
+      "types":["rifles"],
+      "preview": "closequarters"
     },
     {
       "name": "comfort_grip",
@@ -3803,6 +4141,12 @@
       "preview": "heavy"
     },
     {
+      "name": "high_caliber",
+      "cost": 8,
+      "types":["rifles"],
+      "preview": "highcaliber"
+    },
+    {
       "name": "hot_rod_shark_paint",
       "cost": 6,
       "types":["power_armor"],
@@ -3887,6 +4231,12 @@
       "preview":"magneticattachment"
     },
     {
+      "name": "marksmans",
+      "cost": 5,
+      "types":["rifles"],
+      "preview": "marksmans"
+    },
+    {
       "name": "medic_pump",
       "cost": 10,
       "types":["power_armor"],
@@ -3917,6 +4267,18 @@
       "preview":"noxiousarmor"
     },
     {
+      "name":"nuka_cola_paint_job",
+      "cost":5,
+      "types":["power_armor"],
+      "preview": "nukacolapaintjob"
+    },
+    {
+      "name":"nuka_cola_quantum_paint_job",
+      "cost":15,
+      "types":["power_armor"],
+      "preview": "nukacolaquantumpaintjob"
+    },
+    {
       "name": "optimized_servos",
       "cost": 5,
       "types":["power_armor"],
@@ -3939,6 +4301,12 @@
       "cost": 12,
       "types":["rifles"],
       "preview": "powerful"
+    },
+    {
+      "name": "precision",
+      "cost": 10,
+      "types":["rifles"],
+      "preview": "precision"
     },
     {
       "name": "processor_overcharger",
@@ -4013,6 +4381,12 @@
       "preview": "rustyknuckles"
     },
     {
+      "name": "semi-auto",
+      "cost": 6,
+      "types":["rifles"],
+      "preview": "semi-auto"
+    },
+    {
       "name": "sensor_array_pa",
       "types":["power_armor"],
       "cost": 12,
@@ -4047,6 +4421,12 @@
       "cost": 2,
       "types":[ "rifles", "pistols"],
       "preview": "silenced"
+    },
+    {
+      "name": "sniper",
+      "cost": 10,
+      "types":["rifles"],
+      "preview": "sniper"
     },
     {
       "name": "spiked",
@@ -4119,6 +4499,12 @@
       "cost": 10,
       "types":["melee"],
       "preview": "superiormaterials"
+    },
+    {
+      "name": "tactical",
+      "cost": 15,
+      "types":["rifles"],
+      "preview": "tactical"
     },
     {
       "name": "targeting_hud",
@@ -4219,6 +4605,11 @@
       "preview": "cavefungus"
     },
     {
+      "name":"cotton_candy_bites",
+      "cost":7,
+      "preview": "cottoncandybites"
+    },
+    {
       "name":"cram",
       "cost":12,
       "preview": "cram"
@@ -4242,6 +4633,11 @@
       "name":"gecko_kebab",
       "cost":16,
       "preview": "geckokebab"
+    },
+    {
+      "name":"gum_drops",
+      "cost":2,
+      "preview": "gumdrops"
     },
     {
       "name":"honey_mesquite_pod",
@@ -4285,13 +4681,33 @@
     },
     {
       "name":"nuka_cherry",
-      "cost":20,
+      "cost":23,
       "preview": "nukacherry"
+    },
+    {
+      "name":"nuka_cola_orange",
+      "cost":33,
+      "preview": "nukacolaorange"
     },
     {
       "name":"nuka_cola_quantum",
       "cost":41,
       "preview": "nukacolaquantum"
+    },
+    {
+      "name":"nuka_cola_quartz",
+      "cost":21,
+      "preview": "nukacolaquartz"
+    },
+    {
+      "name":"nuka_cola_victory",
+      "cost":41,
+      "preview": "nukacolavictory"
+    },
+    {
+      "name":"nuka_cola_wild",
+      "cost":18,
+      "preview": "nukacolawild"
     },
     {
       "name":"queen_mirelurk_meat",
