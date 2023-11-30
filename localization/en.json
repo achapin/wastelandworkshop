@@ -1162,5 +1162,9 @@
   "pak":"The Pack",
 	"dis":"Disciples",
 	"opr":"Operators",
-	"nkl":"Nukalurks"
+	"nkl":"Nukalurks",
+  "mirelurk_king":"Mirelurk King",
+  "initiate":"Initiate",
+  "initiate_blade":"Initiate Blade",
+  "tactical":"Tacticial"
 }
