@@ -402,6 +402,10 @@ function buildAddSection() {
 		pointsSpan.setAttribute("class", "cost");
 		var pointsNode = document.createTextNode("(" + characterElement.cost + ")");
 		pointsSpan.appendChild(pointsNode);
+		if(characterElement.hasOwnProperty("cost_armored")){
+			var armoredPointsNode = document.createTextNode(" / (" + characterElement.cost_armored + ")");
+			pointsSpan.appendChild(armoredPointsNode);
+		}
 		if(can_add){
 			button.addEventListener("click", function() { 
 				var newCharacter = addCharacter(characterElement, {}); //IDEA: pass in default equipment, but filter it out if its battle mode?
@@ -764,6 +768,25 @@ function addCharacter(characterElement, presetInfo){
 	displaySection.appendChild(cardDiv);
 
 	addLeaderSection(headerRightSection, character, displaySection);
+
+	if(characterElement.hasOwnProperty("cost_armored")){
+		var armoredCheckBox = document.createElement('input');
+		armoredCheckBox.type = 'checkbox';
+		armoredCheckBox.checked = character.hasOwnProperty("armored");
+		var armoredDescription = document.createElement("span");
+		armoredDescription.setAttribute("class", "heroicDescription");
+		armoredDescription.appendChild(document.createTextNode("Use Armor on Card (" + characterElement.cost_armored +")"));
+		headerRightSection.appendChild(armoredDescription);
+		headerRightSection.appendChild(armoredCheckBox);
+		armoredCheckBox.addEventListener("click", function(){
+			if(armoredCheckBox.checked){
+				character.armored = 0;
+			}else{
+				delete character["armored"];
+			}
+			updateCaps();
+		});
+	}
 
 	var addHeroic = true;
 	var heroicSection;
@@ -2105,6 +2128,10 @@ function updateCaps(){
 			}
 
 			var baseCost = characterTemplate.cost;
+
+			if(characterTemplate.hasOwnProperty("cost_armored") && character.hasOwnProperty("armored")){
+				baseCost = characterTemplate.cost_armored;
+			}
 
 			unitCost += baseCost * modelCount;
 
