@@ -719,7 +719,6 @@
       "clothing.battered_fedora",
       "clothing.dirty_postman_uniform",
       "clothing.mirelurk_carapace",
-      "clothing.merc_charmer_costume",
       "clothing.patched_three_piece_suit",
       "clothing.red_flight_helmet",
       "clothing.road_goggles",
@@ -2822,10 +2821,6 @@
       "preview": "magnifyingvisor"
     },
     {
-      "name": "merc_charmer_costume",
-      "cost": 7
-    },
-    {
       "name": "military_fatigues",
       "cost": 7,
       "preview": "militaryfatigues"
@@ -4384,7 +4379,7 @@
       "name": "semi-auto",
       "cost": 6,
       "types":["rifles"],
-      "preview": "semi-auto"
+      "preview": "semiauto"
     },
     {
       "name": "sensor_array_pa",
