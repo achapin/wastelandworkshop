@@ -1215,7 +1215,8 @@
     "name": "behemoth", 
     "preview": "behemoth", 
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "creature"
     ]
   }, 
   {
@@ -2582,7 +2583,8 @@
     "name": "weak_behemoth",
     "preview":"weakbehemoth",
     "tags": [
-      "super_mutant"
+      "super_mutant",
+      "creature"
     ]
   }, 
   {
