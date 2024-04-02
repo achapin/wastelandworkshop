@@ -2425,25 +2425,29 @@
       "name": "enclave_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 49,
-      "preview": "enclavepowerarmor"
+      "preview": "enclavepowerarmor",
+      "sets_armor_values": true
     },
     {
       "name": "hellfire_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 60,
-      "preview": "hellfirearmor"
+      "preview": "hellfirearmor",
+      "sets_armor_values": true
     },
     {
       "name": "ncr_salvaged_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 26,
-      "preview": "ncrsalvagedpowerarmor"
+      "preview": "ncrsalvagedpowerarmor",
+      "sets_armor_values": true
     },
     {
       "name": "overboss_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 51,
-      "preview": "overbosspowerarmor"
+      "preview": "overbosspowerarmor",
+      "sets_armor_values": true
     },
     {
       "name": "power_armor_frame",
@@ -2455,49 +2459,57 @@
       "name": "raider_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 34,
-      "preview": "raiderpowerarmor"
+      "preview": "raiderpowerarmor",
+      "sets_armor_values": true
     },
     {
       "name": "slags_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 44,
-      "preview": "slagspowerarmor"
+      "preview": "slagspowerarmor",
+      "sets_armor_values": true
     },
     {
       "name": "t45_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 44,
-      "preview": "t45"
+      "preview": "t45",
+      "sets_armor_values": true
     },
     {
       "name": "t51_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 60,
-      "preview": "t51"
+      "preview": "t51",
+      "sets_armor_values": true
     },
     {
       "name": "t60_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 82,
-      "preview": "t60"
+      "preview": "t60",
+      "sets_armor_values": true
     },
     {
       "name": "t60f_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 118,
-      "preview": "t60fpowerarmor"
+      "preview": "t60fpowerarmor",
+      "sets_armor_values": true
     },
     {
       "name": "tessas_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 32,
-      "preview": "tessaspowerarmor"
+      "preview": "tessaspowerarmor",
+      "sets_armor_values": true
     },
     {
       "name": "x01_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 102,
-      "preview": "x01"
+      "preview": "x01",
+      "sets_armor_values": true
     }
   ],
   "armor": [
@@ -2532,12 +2544,14 @@
     {
       "name": "cleanroom_suit",
       "cost": 18,
-      "preview": "cleanroomsuit"
+      "preview": "cleanroomsuit",
+      "sets_armor_values": true
     },
     {
       "name": "combat_armor",
       "cost": 8,
-      "preview": "combatarmor"
+      "preview": "combatarmor",
+      "sets_armor_values": true
     },
     {
       "name": "commando_chest_piece",
@@ -2553,27 +2567,32 @@
     {
       "name": "damaged_hazmat_suit",
       "cost": 5,
-      "preview": "damagedhazmatsuit"
+      "preview": "damagedhazmatsuit",
+      "sets_armor_values": true
     },
     {
       "name": "damaged_legate_armor",
       "cost": 27,
-      "preview": "damagedlegatearmor"
+      "preview": "damagedlegatearmor",
+      "sets_armor_values": true
     },
     {
       "name":"disciples_armor",
       "cost":23,
-      "preview": "disciplesarmor"
+      "preview": "disciplesarmor",
+      "sets_armor_values": true
     },
     {
       "name": "enclave_scout_armor",
       "cost": 12,
-      "preview": "enclavescoutarmor"
+      "preview": "enclavescoutarmor",
+      "sets_armor_values": true
     },
     {
       "name": "environmental_suit",
       "cost": 12,
-      "preview": "environmentalsuit"
+      "preview": "environmentalsuit",
+      "sets_armor_values": true
     },
     {
       "name": "freefall_leg_armor",
@@ -2583,27 +2602,32 @@
     {
       "name":"gages_outfit",
       "cost":15,
-      "preview": "gagesoutfit"
+      "preview": "gagesoutfit",
+      "sets_armor_values": true
     },
     {
       "name": "gecko_backed_metal_armor",
       "cost": 11,
-      "preview": "geckobackedmetalarmor"
+      "preview": "geckobackedmetalarmor",
+      "sets_armor_values": true
     },
     {
       "name": "hazmat_suit",
       "cost": 8,
-      "preview": "hazmatsuit"
+      "preview": "hazmatsuit",
+      "sets_armor_values": true
     },
     {
       "name": "heavy_combat_armor",
       "cost": 45,
-      "preview": "heavycombatarmor"
+      "preview": "heavycombatarmor",
+      "sets_armor_values": true
     },
     {
       "name":"heavy_disciples_armor",
       "cost":45,
-      "preview": "heavydisciplesarmor"
+      "preview": "heavydisciplesarmor",
+      "sets_armor_values": true
     },
     {
       "name": "heavy_gauntlets",
@@ -2614,43 +2638,51 @@
     {
       "name":"heavy_operator_armor",
       "cost":49,
-      "preview": "heavyoperatorarmor"
+      "preview": "heavyoperatorarmor",
+      "sets_armor_values": true
     },
     {
       "name":"heavy_pack_armor",
       "cost":47,
-      "preview": "heavypackarmor"
+      "preview": "heavypackarmor",
+      "sets_armor_values": true
     },
     {
       "name": "heavy_raider_armor",
       "cost": 22,
-      "preview": "heavyraiderarmor"
+      "preview": "heavyraiderarmor",
+      "sets_armor_values": true
     },
     {
       "name": "heavy_synth_armor",
       "cost": 45,
-      "preview": "heavysyntharmor"
+      "preview": "heavysyntharmor",
+      "sets_armor_values": true
     },
     {
       "name":"light_raider_armor",
       "cost":0,
-      "preview": "lightraiderarmor"
+      "preview": "lightraiderarmor",
+      "sets_armor_values": true
     },
     {
       "name": "mechanist_armor_and_helmet",
       "cost": 43,
       "restrictions":["!super_mutant"],
-      "preview": "mechanistarmorandhelmet"
+      "preview": "mechanistarmorandhelmet",
+      "sets_armor_values": true
     },
     {
       "name":"operators_armor",
       "cost":34,
-      "preview": "operatorsarmor"
+      "preview": "operatorsarmor",
+      "sets_armor_values": true
     },
     {
       "name":"pack_armor",
       "cost":25,
-      "preview": "packarmor"
+      "preview": "packarmor",
+      "sets_armor_values": true
     },
     {
       "name": "protectors_right_arm_guard",
@@ -2660,12 +2692,14 @@
     {
       "name": "ranger_battle_armor",
       "cost": 10,
-      "preview":"rangerbattlearmor"
+      "preview":"rangerbattlearmor",
+      "sets_armor_values": true
     },
     {
       "name": "recon_armor",
       "cost": 16,
-      "preview":"reconarmor"
+      "preview":"reconarmor",
+      "sets_armor_values": true
     },
     {
       "name": "rocks_bladed_helm",
@@ -2681,22 +2715,26 @@
     {
       "name": "sturdy_combat_armor",
       "cost": 21,
-      "preview": "sturdycombatarmor"
+      "preview": "sturdycombatarmor",
+      "sets_armor_values": true
     },
     {
       "name": "sturdy_leather_armor",
       "cost": 16,
-      "preview": "sturdyleatherarmor"
+      "preview": "sturdyleatherarmor",
+      "sets_armor_values": true
     },
     {
       "name": "sturdy_metal_armor",
       "cost": 18,
-      "preview": "sturdymetalarmor"
+      "preview": "sturdymetalarmor",
+      "sets_armor_values": true
     },
     {
       "name":"sturdy_raider_armor",
       "cost":1000,
-      "preview": "sturdyraiderarmor"
+      "preview": "sturdyraiderarmor",
+      "sets_armor_values": true
     },
     {
       "name": "tesla_coil_harness",
@@ -2908,12 +2946,14 @@
     {
       "name":"wasteland_outfit",
       "cost":3,
-      "preview": "wastelandoutfit"
+      "preview": "wastelandoutfit",
+      "sets_armor_values": true
     },
     {
       "name":"wildman_rags",
       "cost":15,
-      "preview": "wildmanrags"
+      "preview": "wildmanrags",
+      "sets_armor_values": true
     }
   ],
   "chems": [

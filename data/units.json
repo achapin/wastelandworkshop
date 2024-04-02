@@ -35,6 +35,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":120,
     "cost": 101, 
     "default_equipment": {
       "heavy_weapons": [
@@ -82,6 +83,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":42,
     "cost": 41, 
     "default_equipment": {
       "pistols": [
@@ -103,6 +105,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":37,
     "cost": 35, 
     "default_equipment": {
       "pistols": [
@@ -132,6 +135,7 @@
         "pulse_grenade"
       ]
     }, 
+    "cost_armored":60, 
     "cost": 53, 
     "default_equipment": {
       "rifles": [
@@ -154,6 +158,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":86,
     "cost": 63, 
     "default_equipment": {
       "heavy_weapons": [
@@ -222,6 +227,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":58,
     "cost": 50, 
     "default_equipment": {
       "rifles": [
@@ -244,6 +250,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":63,
     "cost": 58, 
     "default_equipment": {
       "rifles": [
@@ -266,6 +273,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":85,
     "cost": 70, 
     "default_equipment": {
       "rifles": [
@@ -292,6 +300,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored":92,
     "cost": 77, 
     "default_equipment": {
       "heavy_weapons": [
@@ -580,6 +589,7 @@
       "institute_items",
       "standard_items"
     ], 
+    "cost_armored":95,
     "cost": 87, 
     "default_equipment": {
       "gear": {
@@ -628,6 +638,7 @@
       "institute_items",
       "standard_items"
     ], 
+    "cost_armored":52,
     "cost": 45, 
     "default_equipment": {
       "pistols": [
@@ -720,6 +731,7 @@
       "institute_items",
       "standard_items"
     ], 
+    "cost_armored":77,
     "cost": 67, 
     "default_equipment": {
       "rifles": [
@@ -789,6 +801,7 @@
       "raider_items",
       "standard_items"
     ], 
+    "cost_armored":102,
     "cost": 80, 
     "default_equipment": {
       "heavy_weapons": [
@@ -810,6 +823,7 @@
       "usable_items", 
       "power_armor"
     ], 
+    "cost_armored":93,
     "cost": 70, 
     "default_equipment": {
       "rifles": [
@@ -829,6 +843,7 @@
       "wasteland_items", 
       "usable_items"
     ], 
+    "cost_armored":45,
     "cost": 40, 
     "default_equipment": {
       "melee": [
@@ -850,6 +865,7 @@
       "wasteland_items", 
       "usable_items"
     ], 
+    "cost_armored":44, 
     "cost": 41, 
     "default_equipment": {
       "melee": [
@@ -874,6 +890,7 @@
       "raider_items",
       "standard_items"
     ], 
+    "cost_armored":43, 
     "cost": 36, 
     "default_equipment": {
       "rifles": [
@@ -895,6 +912,7 @@
       "raider_items",
       "standard_items"
     ], 
+    "cost_armored":39,
     "cost": 34, 
     "default_equipment": {
       "melee": [
@@ -920,6 +938,7 @@
       "raider_items",
       "standard_items"
     ], 
+    "cost_armored":61,
     "cost": 54, 
     "default_equipment": {
       "rifles": [
@@ -942,6 +961,7 @@
       "raider_items",
       "standard_items"
     ], 
+    "cost_armored":58,
     "cost": 50, 
     "default_equipment": {
       "rifles": [
@@ -964,6 +984,7 @@
       "raider_items",
       "standard_items"
     ], 
+    "cost_armored":95,
     "cost": 85, 
     "default_equipment": {
       "pistols": [
@@ -994,6 +1015,7 @@
       "raider_items",
       "standard_items"
     ], 
+    "cost_armored":91,
     "cost": 69, 
     "default_equipment": {
       "melee": [
@@ -1149,6 +1171,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":97,
     "cost": 90, 
     "default_equipment": {
       "pistols": [
@@ -1205,6 +1228,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":88,
     "cost": 77, 
     "default_equipment": {
       "melee": [
@@ -1227,6 +1251,7 @@
       "usable_items",
       "standard_items"
     ], 
+    "cost_armored":34,
     "cost": 32, 
     "default_equipment": {
       "rifles": [
@@ -1250,6 +1275,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":90,
     "cost": 72, 
     "default_equipment": {
       "heavy_weapons": [
@@ -1276,6 +1302,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":94,
     "cost": 73, 
     "default_equipment": {
       "heavy_weapons": [
@@ -1305,6 +1332,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":108,
     "cost": 87, 
     "default_equipment": {
       "melee": [
@@ -1393,6 +1421,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":47,
     "cost": 40, 
     "default_equipment": {
       "melee": [
@@ -1418,6 +1447,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":87,
     "cost": 80, 
     "default_equipment": {
       "melee": [
@@ -1446,6 +1476,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":55,
     "cost": 53, 
     "factions": [
       "mut"
@@ -1467,6 +1498,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":44,
     "cost": 40, 
     "default_equipment": {
       "melee": [
@@ -1494,6 +1526,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":81,
     "cost": 74, 
     "default_equipment": {
       "chems": {
@@ -1613,6 +1646,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":66,
     "cost": 63, 
     "default_equipment": {
       "pistols": [
@@ -1636,6 +1670,7 @@
       "usable_items",
       "standard_items"
     ], 
+    "cost_armored":85,
     "cost": 80, 
     "default_equipment": {
       "melee": [
@@ -1663,6 +1698,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":57,
     "cost": 52, 
     "default_equipment": {
       "rifles": [
@@ -1686,6 +1722,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":79,
     "cost": 66, 
     "default_equipment": {
       "pistols": [
@@ -1710,6 +1747,7 @@
       "usable_items",
       "standard_items"
     ], 
+    "cost_armored":110,
     "cost": 98, 
     "default_equipment": {
       "pistols": [
@@ -1733,6 +1771,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":57,
     "cost": 54, 
     "default_equipment": {
       "pistols": [
@@ -1756,6 +1795,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":117,
     "cost": 109, 
     "default_equipment": {
       "rifles": [
@@ -1784,6 +1824,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":109,
     "cost": 94, 
     "default_equipment": {
       "rifles": [
@@ -1807,6 +1848,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":44,
     "cost": 39, 
     "default_equipment": {
       "rifles": [
@@ -1828,6 +1870,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":43,
     "cost": 40, 
     "default_equipment": {
       "rifles": [
@@ -1854,6 +1897,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":111,
     "cost": 89, 
     "default_equipment": {
       "rifles": [
@@ -1879,6 +1923,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":90,
     "cost": 68, 
     "default_equipment": {
       "pistols": [
@@ -1906,6 +1951,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":134,
     "cost": 112, 
     "default_equipment": {
       "melee": [
@@ -1941,6 +1987,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":97,
     "cost": 89, 
     "default_equipment": {
       "power_armor": ["x01_power_armor"], 
@@ -1967,6 +2014,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":90,
     "cost": 83, 
     "default_equipment": {
       "pistols": [
@@ -1990,6 +2038,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":35,
     "cost": 32, 
     "default_equipment": {
       "pistols": [
@@ -2014,6 +2063,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":47,
     "cost": 42, 
     "default_equipment": {
       "melee": [
@@ -2039,6 +2089,7 @@
       "usable_items",
       "standard_items"
     ], 
+    "cost_armored":78,
     "cost": 75, 
     "default_equipment": {
       "armor": ["mechanist_armor_and_helmet"], 
@@ -2069,6 +2120,7 @@
       "enclave_items",
       "standard_items"
     ], 
+    "cost_armored":103,
     "cost": 95, 
     "default_equipment": {
       "pistols": [
@@ -2146,6 +2198,7 @@
       ],
       "power_armor":["enclave_power_armor"]
     },
+    "cost_armored":95,
     "cost": 87, 
     "factions": [
       "enc"
@@ -2163,6 +2216,7 @@
       "enclave_items",
       "standard_items"
     ],
+    "cost_armored":33,
     "cost": 28, 
     "default_equipment": {
       "pistols": [
@@ -2279,6 +2333,7 @@
       "usable_items",
       "standard_items"
     ], 
+    "cost_armored":88,
     "cost": 79, 
     "factions": [
       "crt", 
@@ -2319,6 +2374,7 @@
       "advanced_items",
       "usable_items"
     ],
+    "cost_armored":75,
     "cost": 69, 
     "default_equipment": {
       "rifles": [
@@ -2432,6 +2488,7 @@
       "enclave_items",
       "standard_items"
     ], 
+    "cost_armored":45,
     "cost": 40, 
     "default_equipment": {
       "pistols": [
@@ -2594,6 +2651,7 @@
       "enclave_items",
       "standard_items"
     ], 
+    "cost_armored":55,
     "cost": 51, 
     "default_equipment": {
       "melee": [
@@ -2620,6 +2678,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":33,
     "cost": 56, 
     "default_equipment": {
       "rifles": [
@@ -2662,6 +2721,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":69,
     "cost": 62, 
     "default_equipment": {
       "pistols": [
@@ -2706,6 +2766,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":95,
     "cost": 92, 
     "factions": [
       "srv",
@@ -2733,6 +2794,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":125,
     "cost": 80, 
     "default_equipment": {
       "rifles": [
@@ -2765,6 +2827,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":68,
     "cost": 52, 
     "default_equipment": {
       "melee":["power_fist"]
@@ -2787,6 +2850,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":112,
     "cost": 101, 
     "default_equipment": {
       "rifles": [
@@ -2816,6 +2880,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":116,
     "cost": 100, 
     "factions": [
       "mut",
@@ -2839,6 +2904,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":76,
     "cost": 75, 
     "default_equipment": {
       "heavy_weapons": [
@@ -2866,6 +2932,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored":128,
     "cost": 117, 
     "default_equipment": {
       "heavy_weapons": [
@@ -2974,6 +3041,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":115,
     "cost": 113, 
     "default_equipment": {
       "rifles": [
@@ -2997,6 +3065,7 @@
       "survivor_items",
       "standard_items"
     ], 
+    "cost_armored":105,
     "cost": 100, 
     "default_equipment": {
       "rifles": [
@@ -3019,6 +3088,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":85,
     "cost": 73, 
     "default_equipment": {
       "pistols": [
@@ -3040,6 +3110,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":87,
     "cost": 72, 
     "default_equipment": {
       "pistols": [
@@ -3061,6 +3132,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":69,
     "cost": 66, 
     "default_equipment": {
       "pistols": [
@@ -3082,6 +3154,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":58,
     "cost": 50, 
     "default_equipment": {
       "heavy_weapons": [
@@ -3103,6 +3176,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":72,
     "cost": 50, 
     "default_equipment": {
       "rifles": [
@@ -3123,6 +3197,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":39,
     "cost": 31, 
     "default_equipment": {
       "rifles": [
@@ -3143,6 +3218,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":37,
     "cost": 30, 
     "default_equipment": {
       "melee": [
@@ -3165,6 +3241,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":102,
     "cost": 57, 
     "default_equipment": {
       "rifles": [
@@ -3186,6 +3263,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":87,
     "cost": 82, 
     "default_equipment": {
       "melee":["machete"]
@@ -3206,6 +3284,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":141,
     "cost": 108,
     "default_equipment": {
       "melee": [
@@ -3230,6 +3309,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":57,
     "cost": 56, 
     "default_equipment": {
       "melee": [
@@ -3273,6 +3353,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":97,
     "cost": 63, 
     "default_equipment": {
       "melee": [
@@ -3296,6 +3377,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":75,
     "cost": 63, 
     "default_equipment": {
       "melee": [
@@ -3317,6 +3399,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":34,
     "cost": 32, 
     "default_equipment": {
       "melee": [
@@ -3341,6 +3424,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":28,
     "cost": 26,
     "default_equipment": {
       "melee": [
@@ -3364,6 +3448,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":54,
     "cost": 47, 
     "default_equipment": {
       "pistols": [
@@ -3387,6 +3472,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored":95,
     "cost": 73, 
     "default_equipment": {
       "rifles": [
@@ -3407,6 +3493,7 @@
       "advanced_items",
       "usable_items"
     ], 
+    "cost_armored":80,
     "cost": 72, 
     "default_equipment": {
       "melee": [
@@ -3429,6 +3516,7 @@
       "ncr_items",
       "standard_items"
     ], 
+    "cost_armored":125,
     "cost": 86, 
     "default_equipment": {
       "rifles": [
@@ -3616,6 +3704,7 @@
         "gunners_items",
         "standard_items"
     ], 
+    "cost_armored":53,
     "cost": 46, 
     "default_equipment": {
       "rifles": [
@@ -3637,6 +3726,7 @@
         "gunners_items",
         "standard_items"
     ], 
+    "cost_armored":68,
     "cost": 60, 
     "default_equipment": {
       "rifles": [
@@ -3659,6 +3749,7 @@
         "gunners_items",
         "standard_items"
     ], 
+    "cost_armored":96,
     "cost": 75,
     "default_equipment": {
       "rifles": [
@@ -3711,6 +3802,7 @@
         "gunners_items",
         "standard_items"
     ], 
+    "cost_armored":130,
     "cost": 122, 
     "factions": [
       "gun"
@@ -3732,6 +3824,7 @@
         "gunners_items",
         "standard_items"
     ], 
+    "cost_armored":94,
     "cost": 71, 
     "default_equipment": {
       "heavy_weapons": [
@@ -3753,6 +3846,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":112,
     "cost": 97, 
     "default_equipment": {
       "rifles": [
@@ -3774,6 +3868,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":63,
     "cost": 57, 
     "default_equipment": {
       "pistols": [
@@ -3795,6 +3890,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":65,
     "cost": 63, 
     "default_equipment": {
       "pistols": [
@@ -3816,6 +3912,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":79,
     "cost": 72, 
     "default_equipment": {
       "pistols": [
@@ -3837,6 +3934,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":60,
     "cost": 55,
     "default_equipment": {
       "pistols": [
@@ -3858,6 +3956,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":91,
     "cost": 65, 
     "default_equipment": {
       "heavy_weapons": [
@@ -3879,6 +3978,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":85,
     "cost": 75, 
     "default_equipment": {
       "rifles": [
@@ -3903,6 +4003,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":76,
     "cost": 53, 
     "default_equipment": {
       "rifles": [
@@ -4028,6 +4129,7 @@
         "wasteland_items",
         "standard_items"
     ], 
+    "cost_armored":179,
     "cost": 150, 
     "factions": [
       "srv"
@@ -4108,6 +4210,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":65,
     "cost": 63,
     "default_equipment":{
       "pistols":["10mm_pistol"]
@@ -4133,6 +4236,7 @@
         "raider_items",
         "standard_items"
     ], 
+    "cost_armored":120,
     "cost": 105, 
     "default_equipment":{
       "pistols":["laser_pistol"],
@@ -4160,6 +4264,7 @@
         "raider_items",
         "standard_items"
     ], 
+    "cost_armored":63,
     "cost": 56,
     "default_equipment":{
       "melee":["incendiary_super_sledge"],
@@ -4184,6 +4289,7 @@
         "raider_items",
         "standard_items"
     ], 
+    "cost_armored":43,
     "cost": 37,
     "default_equipment":{
       "melee":["sledgehammer"],
@@ -4207,6 +4313,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":71,
     "cost": 64,
     "default_equipment":{
       "pistols":["bolt_action_pipe_pistol"]
@@ -4232,6 +4339,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":44,
     "cost": 36,
     "default_equipment":{
       "pistols":["10mm_pistol"],
@@ -4258,6 +4366,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":67,
     "cost": 59,
     "default_equipment":{
       "pistols":["bolt_action_pipe_pistol"]
@@ -4283,6 +4392,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":58,
     "cost": 50,
     "default_equipment":{
       "pistols":["pipe_pistol"],
@@ -4309,6 +4419,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":47,
     "cost": 39,
     "default_equipment":{
       "pistols":["pipe_pistol"],
@@ -4335,6 +4446,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":36,
     "cost": 31,
     "default_equipment":{
       "rifles":["double_barrel_shotgun"]
@@ -4499,6 +4611,7 @@
         "enclave_items",
         "standard_items"
     ], 
+    "cost_armored":37,
     "cost": 32,
     "factions": [
       "enc"
@@ -4515,6 +4628,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":85,
     "cost": 78,
     "factions": [
       "srv"
@@ -4536,6 +4650,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":136,
     "cost": 117,
     "factions": [
       "srv"
@@ -4557,6 +4672,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":51,
     "cost": 46,
     "factions": [
       "srv"
@@ -4575,6 +4691,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":69,
     "cost": 61,
     "factions": [
       "srv"
@@ -4611,6 +4728,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":74,
     "cost": 70,
     "factions": [
       "srv"
@@ -4632,6 +4750,7 @@
         "bos_items",
         "standard_items"
     ], 
+    "cost_armored":67,
     "cost": 52,
     "factions": [
       "bos"
@@ -4649,6 +4768,7 @@
         "super_mutant_items",
         "standard_items"
     ], 
+    "cost_armored":141,
     "cost": 104,
     "factions": [
       "srv",
@@ -4687,6 +4807,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":112,
     "cost": 107,
     "factions": [
       "srv"
@@ -4707,6 +4828,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":60,
     "cost": 57,
     "factions": [
       "srv",
@@ -4726,6 +4848,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":52,
     "cost": 51,
     "factions": [
       "srv"
@@ -4747,6 +4870,7 @@
         "bos_items",
         "standard_items"
     ], 
+    "cost_armored":63,
     "cost": 51,
     "factions": [
       "bos"
@@ -4763,6 +4887,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":72,
     "cost": 65,
     "factions": [
       "srv"
@@ -4780,6 +4905,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":33,
     "cost": 30,
     "factions": [
       "srv"
@@ -4820,6 +4946,7 @@
         "bos_items",
         "standard_items"
     ], 
+    "cost_armored":78,
     "cost": 63,
     "factions": [
       "bos"
@@ -4857,6 +4984,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":27,
     "cost": 24,
     "factions": [
       "srv"
@@ -4875,6 +5003,7 @@
         "survivor_items",
         "standard_items"
     ], 
+    "cost_armored":62,
     "cost": 59,
     "factions": [
       "srv"
@@ -4894,6 +5023,7 @@
         "enclave_items",
         "standard_items"
     ], 
+    "cost_armored":61,
     "cost": 60,
     "factions": [
       "enc"

@@ -765,6 +765,25 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(headerRightSection, character, displaySection);
 
+	if(characterElement.hasOwnProperty("cost_armored")){
+		var armoredCheckBox = document.createElement('input');
+		armoredCheckBox.type = 'checkbox';
+		armoredCheckBox.checked = character.hasOwnProperty("armored");
+		var armoredDescription = document.createElement("span");
+		armoredDescription.setAttribute("class", "heroicDescription");
+		armoredDescription.appendChild(document.createTextNode("Use Armor on Card (" + characterElement.cost_armored +")"));
+		headerRightSection.appendChild(armoredDescription);
+		headerRightSection.appendChild(armoredCheckBox);
+		armoredCheckBox.addEventListener("click", function(){
+			if(armoredCheckBox.checked){
+				character.armored = 0;
+			}else{
+				delete character["armored"];
+			}
+			updateCaps();
+		});
+	}
+
 	var addHeroic = true;
 	var heroicSection;
 	if(characterElement.hasOwnProperty("battle_mode_packs")){
@@ -2106,6 +2125,28 @@ function updateCaps(){
 
 			var baseCost = characterTemplate.cost;
 
+			var armorSources = 0;
+
+			if(characterTemplate.hasOwnProperty("tags")
+			&& (characterTemplate.tags.indexOf("creature") >= 0 
+			|| characterTemplate.tags.indexOf("dog") >= 0 
+			|| characterTemplate.tags.indexOf("robot")>= 0 
+			|| characterTemplate.tags.indexOf("synth")>= 0 ))
+			{
+				armorSources++;
+			}
+
+			var warningSection = unitDisplay.querySelector(".warning");
+			warningSection.innerHTML = "";
+
+			if(characterTemplate.hasOwnProperty("cost_armored") && character.hasOwnProperty("armored")){
+				baseCost = characterTemplate.cost_armored;
+				armorSources++;
+				var oldPointsWarning = document.createElement("p");
+				oldPointsWarning.innerHTML = "This is <i>Not Legal</i> as of Wave 9/Nuka World: units need to purchase equipment to set armor values. This option is only provided for those who want to use the old points and armor values in tandem.";
+				warningSection.appendChild(oldPointsWarning);
+			}
+
 			unitCost += baseCost * modelCount;
 
 			var modelUpdadeCost = 0;
@@ -2148,9 +2189,6 @@ function updateCaps(){
 				}
 			}
 
-			var warningSection = unitDisplay.querySelector(".warning");
-			warningSection.innerHTML = "";
-
 			if(modelCount > 1 && (character.heroic || character.hasOwnProperty("perks"))){
 				var mmwarning = document.createTextNode("MULTI-MODEL UNITS CANNOT BE Heroic OR HAVE PERKS");
 				warningSection.appendChild(mmwarning);
@@ -2158,21 +2196,39 @@ function updateCaps(){
 	
 			wear_slots.forEach(function (slotType) {
 				if(character[slotType] != null){
-					var wearCost = getUpgrade(slotType, character[slotType]).cost;
+					var upgrade = getUpgrade(slotType, character[slotType]);
+					var wearCost = upgrade.cost;
 					unitCost += wearCost * modelCount;
 					modelUpdadeCost += wearCost;
+					if(upgrade.hasOwnProperty("sets_armor_values")){
+						armorSources++;
+					}
 				}
 			});
+
+			if(characterTemplate.hasOwnProperty("must_wear")){
+				characterTemplate.must_wear.forEach(function(element){
+					var elements = element.split(".");
+					var upgrade = getUpgrade(elements[0], elements[1]);
+					if(upgrade.hasOwnProperty("sets_armor_values")){
+						armorSources++;
+					}
+				});
+			}
 	
 			carry_slots.forEach(function (slotType) {
 				if(character.hasOwnProperty(slotType)){
 					character[slotType].forEach(function(item){
 						if(!characterTemplate.hasOwnProperty("equipped_pack") || !upgrades.battle_mode_packs[characterTemplate.equipped_pack].includes(slotType+"."+item))
 						{
-							var carryCost = getUpgrade(slotType,item).cost;
+							var upgrade = getUpgrade(slotType,item);
+							var carryCost = upgrade.cost;
 							carryCost = Math.max(0, carryCost);
 							unitCost += carryCost * modelCount;
 							modelUpdadeCost += carryCost;
+							if(upgrade.hasOwnProperty("sets_armor_values")){
+								armorSources++;
+							}
 						}
 					});
 				}
@@ -2214,6 +2270,18 @@ function updateCaps(){
 					});
 				}
 			});
+
+			if(armorSources <= 0){
+					
+				var noArmorWarning = document.createElement("p");
+				noArmorWarning.innerHTML = "This unit has <i>NO</i> armor. According to the Wave 9 rules, models without a unit type no longer use the armor on their card.";
+				warningSection.appendChild(noArmorWarning);
+			}
+			if(armorSources > 1){
+				var tooMuchArmorWarning = document.createElement("p");
+				tooMuchArmorWarning.innerHTML = "This unit has multiple sources of armor values. This is not allowed - you have to choose one.";
+				warningSection.appendChild(tooMuchArmorWarning);
+			}
 
 			unitDisplay.querySelector(".unit-cost").innerHTML = unitCost;
 			unitDisplay.querySelector(".modelBaseCost").innerHTML = baseCost;
