@@ -9,6 +9,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored": 107,
     "cost": 114, 
     "default_equipment": {
       "melee": [
@@ -182,7 +183,8 @@
       "power_armor",
       "bos_items",
       "standard_items"
-    ], 
+    ],
+    "cost_armored": 40,
     "cost": 40, 
     "default_equipment": {
       "rifles": [
@@ -205,6 +207,7 @@
       "bos_items",
       "standard_items"
     ], 
+    "cost_armored": 39,
     "cost": 39, 
     "default_equipment": {
       "rifles": [
@@ -326,7 +329,8 @@
       "bos_items",
       "standard_items"
     ], 
-    "cost": 122, 
+    "cost_armored": 122,
+    "cost": 88, 
     "default_equipment": {
       "power_armor": ["t60_power_armor"], 
       "rifles": [
@@ -615,6 +619,7 @@
       "institute_items",
       "standard_items"
     ], 
+    "cost_armored": 125,
     "cost": 125, 
     "default_equipment": {
       "pistols": [
@@ -709,6 +714,7 @@
       "institute_items",
       "standard_items"
     ], 
+    "cost_armored": 40,
     "cost": 40, 
     "default_equipment": {
       "pistols": [
@@ -756,7 +762,8 @@
       "institute_items",
       "standard_items"
     ], 
-    "cost": 143, 
+    "cost_armored": 143,
+    "cost": 144, 
     "default_equipment": {
       "pistols": [
         "gamma_gun"
@@ -778,6 +785,7 @@
       "institute_items",
       "standard_items"
     ], 
+    "cost_armored": 122,
     "cost": 122, 
     "default_equipment": {
       "pistols": [
@@ -1396,6 +1404,7 @@
       "super_mutant_items",
       "standard_items"
     ], 
+    "cost_armored": 163,
     "cost": 163, 
     "default_equipment": {
       "heavy_weapons": [
@@ -2249,6 +2258,7 @@
     ]
   }, 
   {
+    "cost_armored": 180,
     "cost": 180, 
     "factions": [
       "enc"
@@ -2266,6 +2276,7 @@
     "unique_code": "frank_horrigan_1"
   },
   {
+    "cost_armored": 190,
     "cost": 190, 
     "factions": [
       "enc"
@@ -2283,6 +2294,7 @@
     "unique_code": "frank_horrigan_2"
   }, 
   {
+    "cost_armored": 80,
     "cost": 80, 
     "factions": [
       "enc"
@@ -2308,6 +2320,7 @@
       "enclave_items",
       "standard_items"
     ], 
+    "cost_armored": 90,
     "cost": 100, 
     "default_equipment": {
       "heavy_weapons": [
@@ -2357,6 +2370,7 @@
       "enclave_items",
       "standard_items"
     ], 
+    "cost_armored": 57,
     "cost": 57, 
     "default_equipment": {
       "pistols": [
@@ -2529,6 +2543,7 @@
       "enclave_items",
       "standard_items"
     ], 
+    "cost_armored": 85,
     "cost": 93, 
     "default_equipment": {
       "pistols": [
@@ -2554,6 +2569,7 @@
       "enclave_items",
       "standard_items"
     ], 
+    "cost_armored": 60,
     "cost": 60, 
     "default_equipment": {
       "melee": [
@@ -3333,6 +3349,7 @@
       "legion_items",
       "standard_items"
     ], 
+    "cost_armored": 75,
     "cost": 71, 
     "default_equipment": {
       "rifles": [
@@ -3532,6 +3549,7 @@
     "preview":"ncrveteranranger"
   },
   {
+    "cost_armored": 1000,
     "cost": 1000, 
     "factions": [
       "bos"
@@ -3685,6 +3703,7 @@
         "gunners_items",
         "standard_items"
     ], 
+    "cost_armored": 36,
     "cost": 36, 
     "default_equipment": {
       "pistols": [
@@ -3777,6 +3796,7 @@
         "gunners_items",
         "standard_items"
     ], 
+    "cost_armored": 119,
     "cost": 115, 
     "default_equipment": {
       "thrown": {
@@ -4791,6 +4811,7 @@
         "bos_items",
         "standard_items"
     ], 
+    "cost_armored": 126,
     "cost": 125,
     "factions": [
       "srv"
@@ -4929,6 +4950,7 @@
         "standard_items",
         "power_armor"
     ], 
+    "cost_armored": 140,
     "cost": 139,
     "factions": [
       "bos"
@@ -4967,6 +4989,7 @@
         "standard_items",
         "power_armor"
     ], 
+    "cost_armored": 119,
     "cost": 118,
     "factions": [
       "bos"

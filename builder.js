@@ -154,6 +154,7 @@ function localizationLoaded(json){
 	var checkPreview = false; //Only enable for debugging
 	var badPreview = "";
 	var missingDefaults = "";
+	var missingArmorValue = "";
 
 	units.forEach(function(character){
 		if(!loc.hasOwnProperty(character.name)){
@@ -169,6 +170,25 @@ function localizationLoaded(json){
 			}
 
 			mappedUnits[character.name] = character;
+		}
+
+		if(checkPreview)
+		{
+			var shouldHaveArmorCost = !character.hasOwnProperty("tags")
+				|| (!character.tags.includes("robot")
+				&& !character.tags.includes("creature")
+				&& !character.tags.includes("synth")
+				&& !character.tags.includes("dog"));
+			if(shouldHaveArmorCost){
+				if(character.factions.includes("coa")
+				|| character.factions.includes("dis")
+				|| character.factions.includes("pak")){
+					shouldHaveArmorCost = false;
+				}
+			}
+			if(shouldHaveArmorCost && !character.hasOwnProperty("cost_armored")){
+				missingArmorValue += character.name + ", ";
+			}
 		}
 
 		if(!character.hasOwnProperty("preview")){
@@ -248,10 +268,13 @@ function localizationLoaded(json){
 		console.log("Missing LOC keys: " + missingKeys);
 	}
 	if(missingPreview.length > 0){
-	console.log("Missing Previews: " + missingPreview);
+		console.log("Missing Previews: " + missingPreview);
 	}
 	if(missingItems.length > 0){
-	console.log("Missing Items: " + missingItems);
+		console.log("Missing Items: " + missingItems);
+	}
+	if(missingArmorValue.length > 0){
+		console.log("Missing Armor Values: " + missingArmorValue);
 	}
 	console.log("Items Without Battle Mode Group: " + itemsWithoutBattleModeGroup);
 	if(checkPreview){
