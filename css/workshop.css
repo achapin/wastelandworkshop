@@ -501,6 +501,11 @@ option {
 	float: left;
 }
 
+.vaulttecapprovedprofile {
+	width: 185mm;
+	height: 125mm;
+}
+
 .fullcard {
 	width: 64mm;
 	height: 88mm;

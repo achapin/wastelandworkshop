@@ -782,7 +782,13 @@ function addCharacter(characterElement, presetInfo){
 			cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + image + ".png\" />";
 		});
 	} else {
-		cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + characterElement.preview + ".png\" />";
+
+		var imageClass = "fullcard";
+		if(characterElement.hasOwnProperty("vault_tec_approved_profile")){
+			imageClass = "vaulttecapprovedprofile";
+		}
+
+		cardDiv.innerHTML += "<img class=\"" + imageClass +  "\" src=\"images/" + characterElement.preview + ".png\" />";
 	}
 	displaySection.appendChild(cardDiv);
 
@@ -2156,6 +2162,10 @@ function updateCaps(){
 			|| characterTemplate.tags.indexOf("robot")>= 0 
 			|| characterTemplate.tags.indexOf("synth")>= 0 ))
 			{
+				armorSources++;
+			}
+
+			if(armorSources <= 0 && characterTemplate.hasOwnProperty("vault_tec_approved_profile")){
 				armorSources++;
 			}
 
