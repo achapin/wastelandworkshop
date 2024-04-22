@@ -6266,5 +6266,59 @@
     ], 
     "name": "initiate_blade", 
     "preview": "initiateblade"
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 85, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "cx404", 
+    "preview": "cx404",
+    "tags": [
+      "dog"
+    ],
+    "unique_code": "cx404",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 107, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "lucy", 
+    "preview": "lucy",
+    "unique_code": "lucy",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 127, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "the_ghoul", 
+    "preview": "theghoul",
+    "tags": [
+      "ghoul"
+    ],
+    "unique_code": "theghoul",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 159, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "maximus", 
+    "preview": "maximus",
+    "unique_code": "maximus",
+    "vault_tec_approved_profile":true
   }
 ]
