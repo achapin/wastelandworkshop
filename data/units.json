@@ -185,7 +185,7 @@
       "standard_items"
     ],
     "cost_armored": 40,
-    "cost": 40, 
+    "cost": 35, 
     "default_equipment": {
       "rifles": [
         "laser_rifle"
@@ -208,7 +208,7 @@
       "standard_items"
     ], 
     "cost_armored": 39,
-    "cost": 39, 
+    "cost": 34, 
     "default_equipment": {
       "rifles": [
         "laser_rifle"
@@ -383,7 +383,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 260, 
+    "cost": 240, 
     "factions": [
       "crt", 
       "enc"
@@ -620,7 +620,7 @@
       "standard_items"
     ], 
     "cost_armored": 125,
-    "cost": 125, 
+    "cost": 120, 
     "default_equipment": {
       "pistols": [
         "gamma_gun"
@@ -738,7 +738,7 @@
       "standard_items"
     ], 
     "cost_armored":77,
-    "cost": 67, 
+    "cost": 77, 
     "default_equipment": {
       "rifles": [
         "institute_laser_rifle"
@@ -786,7 +786,7 @@
       "standard_items"
     ], 
     "cost_armored": 122,
-    "cost": 122, 
+    "cost": 117, 
     "default_equipment": {
       "pistols": [
         "institute_laser_pistol"
@@ -1155,7 +1155,7 @@
     "battle_mode_packs": [
       "robot_items"
     ], 
-    "cost": 289, 
+    "cost": 268, 
     "factions": [
       "enc", 
       "rbt"
@@ -1205,7 +1205,7 @@
       "usable_items",
       "standard_items"
     ], 
-    "cost": 240, 
+    "cost": 212, 
     "default_equipment": {
       "melee": [
         "fire_hydrant_bat"
@@ -1364,7 +1364,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 60, 
+    "cost": 63, 
     "factions": [
       "mut"
     ], 
@@ -1381,7 +1381,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 68, 
+    "cost": 71, 
     "factions": [
       "mut"
     ], 
@@ -1405,7 +1405,7 @@
       "standard_items"
     ], 
     "cost_armored": 163,
-    "cost": 163, 
+    "cost": 119, 
     "default_equipment": {
       "heavy_weapons": [
         "gatling_laser"
@@ -1577,7 +1577,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 67, 
+    "cost": 72, 
     "factions": [
       "crt", 
       "srv", 
@@ -1596,7 +1596,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 77, 
+    "cost": 83, 
     "factions": [
       "srv"
     ], 
@@ -1614,7 +1614,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 69, 
+    "cost": 91, 
     "factions": [
       "srv"
     ], 
@@ -1632,7 +1632,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 77, 
+    "cost": 84, 
     "factions": [
       "srv"
     ], 
@@ -2407,7 +2407,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 58, 
+    "cost": 63, 
     "factions": [
       "crt",
       "nkl"
@@ -2462,7 +2462,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 270, 
+    "cost": 250, 
     "factions": [
       "crt",
       "nkl"
@@ -3014,7 +3014,7 @@
     "battle_mode_packs": [
       "dog_items"
     ], 
-    "cost": 65, 
+    "cost": 68, 
     "factions": [
       "crt",
       "lgn"
@@ -3807,9 +3807,9 @@
       "gun"
     ], 
     "must_carry":[
-      "power_armor.tessas_power_armor",
       "melee.tessas_fist"
     ],
+    "must_wear":["power_armor.tessas_power_armor"],
     "name": "tessa",
     "unique_code":"tessa",
     "preview":"tessa"
@@ -4581,7 +4581,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 15,
+    "cost": 39,
     "factions": [
       "crt"
     ], 
@@ -4596,7 +4596,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 26,
+    "cost": 63,
     "factions": [
       "crt"
     ], 
@@ -4791,7 +4791,7 @@
         "standard_items"
     ], 
     "cost_armored":141,
-    "cost": 104,
+    "cost": 89,
     "factions": [
       "srv",
       "mut"
@@ -5353,7 +5353,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 59, 
+    "cost": 67, 
     "default_equipment": {
       "thrown": {
         "fragmentation_grenade":"4"
@@ -5497,7 +5497,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 74, 
+    "cost": 87, 
     "default_equipment": {
       "pistols": [
         "44_revolver"
@@ -5589,7 +5589,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 130, 
+    "cost": 115, 
     "default_equipment": {
       "pistols": [
         "plasma_pistol"
@@ -5617,7 +5617,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 70, 
+    "cost": 112, 
     "default_equipment": {
       "pistols": [
         "plasma_pistol"
@@ -5666,7 +5666,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 132, 
+    "cost": 122, 
     "default_equipment": {
       "rifles":["combat_shotgun"]
     },
@@ -5712,7 +5712,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 58, 
+    "cost": 62, 
     "default_equipment": {
       "pistols":["10mm_pistol","pipe_revolver"],
       "melee":["disciples_blade","machete"]
@@ -5734,7 +5734,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 39, 
+    "cost": 35, 
     "default_equipment": {
       "melee": [
         "board"
@@ -5758,7 +5758,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 79, 
+    "cost": 69, 
     "default_equipment": {
     }, 
     "factions": [
@@ -5779,7 +5779,7 @@
       "raider_items",
       "standard_items"
     ], 
-    "cost": 121, 
+    "cost": 113, 
     "default_equipment": {
       "rifles":["handmade_rifle","hunting_rifle"],
       "melee":["machete"],
@@ -5997,7 +5997,7 @@
   {
     "battle_mode_packs": [
     ], 
-    "cost": 304, 
+    "cost": 320, 
     "default_equipment": {
     }, 
     "factions": [
@@ -6068,7 +6068,7 @@
   {
     "battle_mode_packs": [
     ], 
-    "cost": 250, 
+    "cost": 260, 
     "default_equipment": {
     }, 
     "factions": [
@@ -6090,7 +6090,7 @@
       "power_armor",
       "standard_items"
     ], 
-    "cost": 160, 
+    "cost": 152, 
     "default_equipment": {
       "melee": [
         "power_fist"
@@ -6179,7 +6179,7 @@
       "usable_items",
       "standard_items"
     ], 
-    "cost": 93, 
+    "cost": 83, 
     "default_equipment": {
       "melee": [
         "sledgehammer"
@@ -6220,7 +6220,7 @@
     "battle_mode_packs": [
       "creature_items"
     ], 
-    "cost": 200, 
+    "cost": 195, 
     "factions": [
       "crt",
       "nkl"

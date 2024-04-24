@@ -1169,5 +1169,17 @@
   "cx404":"CX404",
   "lucy":"Lucy",
   "the_ghoul":"The Ghoul",
-  "maximus":"Maximus"
+  "maximus":"Maximus",
+  "heavy_laser_turret":"Heavy Laser Turret",
+  "fists_armor":"Fist's Armor",
+  "light_synth_armor":"Light Synth Armor",
+  "sturdy_synth_armor":"Sturdy Synth Armor",
+  "super_mutant_body_armor":"Super Mutant Body Armor",
+  "super_mutant_cowl_armor":"Super Mutant Cowl Armor",
+  "super_mutant_heavy_armor":"Super Mutant Heavy Armor",
+  "super_mutant_light_armor":"Super Mutant Light Armor",
+  "super_mutant_overlord_armor":"Super Mutant Overlord Armor",
+  "heavy_weapon_mount":"Heavy Weapon Mount",
+  "radscorpion_venom_syringer":"Radscorpion Venom Syringer",
+  "top_up_nuka_cola_sprayer":"Top Up Nuka-Cola Sprayer"
 }
