@@ -207,7 +207,7 @@ function localizationLoaded(json){
 			return;
 		}
 
-		if(!character.hasOwnProperty("default_equipment") && !character.hasOwnProperty("must_carry")){
+		if(!character.hasOwnProperty("default_equipment") && !character.hasOwnProperty("must_carry") && !character.hasOwnProperty("vault_tec_approved_profile")){
 			missingDefaults += character.name + " ";
 			return;
 		}
