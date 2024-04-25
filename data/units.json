@@ -6320,5 +6320,509 @@
     "preview": "maximus",
     "unique_code": "maximus",
     "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 154, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "butcher_disciples_a", 
+    "preview": "butcherdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 156, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "butcher_disciples_b", 
+    "preview": "butcherdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 113, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "butcher_operators_a", 
+    "preview": "butcheroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 149, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "butcher_operators_b", 
+    "preview": "butcheroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 113, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "butcher_pack_a", 
+    "preview": "butcherpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 149, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "butcher_pack_b", 
+    "preview": "butcherpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 78, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "pillager_disciples_a", 
+    "preview": "pillagerdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 82, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "pillager_disciples_b", 
+    "preview": "pillagerdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 95, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "pillager_operators_a", 
+    "preview": "pillageroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 86, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "pillager_operators_b", 
+    "preview": "pillageroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 74, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "pillager_pack_a", 
+    "preview": "pillagerpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 67, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "pillager_pack_b", 
+    "preview": "pillagerpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 84, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "scavver_disciples_a", 
+    "preview": "scavverdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 86, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "scavver_disciples_b", 
+    "preview": "scavverdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 53, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "scavver_operators_a", 
+    "preview": "scavveroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 44, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "scavver_operators_b", 
+    "preview": "scavveroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 48, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "scavver_pack_a", 
+    "preview": "scavverpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 58, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "scavver_pack_b", 
+    "preview": "scavverpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 91, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "survivalist_disciples_a", 
+    "preview": "survivalistdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 83, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "survivalist_disciples_b", 
+    "preview": "survivalistdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 87, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "survivalist_operators_a", 
+    "preview": "survivalistoperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 81, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "survivalist_operators_b", 
+    "preview": "survivalistoperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 65, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "survivalist_pack_a", 
+    "preview": "survivalistpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 70, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "survivalist_pack_b", 
+    "preview": "survivalistpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 141, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "tormentor_disciples_a", 
+    "preview": "tormentordisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 143, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "tormentor_disciples_b", 
+    "preview": "tormentordisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 113, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "tormentor_operators_a", 
+    "preview": "tormentoroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 149, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "tormentor_operators_b", 
+    "preview": "tormentoroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 108, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "tormentor_pack_a", 
+    "preview": "tormentorpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 116, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "tormentor_pack_b", 
+    "preview": "tormentorpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 125, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "veteran_disciples_a", 
+    "preview": "veterandisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 157, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "veteran_disciples_b", 
+    "preview": "veterandisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 113, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "veteran_operators_a", 
+    "preview": "veteranoperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 108, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "veteran_operators_b", 
+    "preview": "veteranoperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 108, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "veteran_pack_a", 
+    "preview": "veteranpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 108, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "veteran_pack_b", 
+    "preview": "veteranpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 60, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "waster_disciples_a", 
+    "preview": "wasterdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 58, 
+    "factions": [
+      "rdr",
+      "dis"
+    ], 
+    "name": "waster_disciples_b", 
+    "preview": "wasterdisciplevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 45, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "waster_operators_a", 
+    "preview": "wasteroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 49, 
+    "factions": [
+      "rdr",
+      "opr"
+    ], 
+    "name": "waster_operators_b", 
+    "preview": "wasteroperatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 42, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "waster_pack_a", 
+    "preview": "wasterpackvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 48, 
+    "factions": [
+      "rdr",
+      "pak"
+    ], 
+    "name": "waster_pack_b", 
+    "preview": "wasterpackvtap",
+    "vault_tec_approved_profile":true
   }
 ]
