@@ -2677,6 +2677,7 @@
       "name": "fists_armor",
       "cost": 17,
       "preview": "fistsarmor",
+      "restrictions":["super_mutant"],
       "sets_armor_values": true
     },
     {
@@ -2830,7 +2831,7 @@
     {
       "name":"sturdy_synth_armor",
       "cost": 22,
-      "preview": "sturdyraiderarmor",
+      "preview": "sturdysyntharmor",
       "sets_armor_values": true
     },
     {
