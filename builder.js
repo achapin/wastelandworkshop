@@ -776,6 +776,11 @@ function addCharacter(characterElement, presetInfo){
 			cardDiv.innerHTML += "<img class=\"fullcard\" src=\"images/" + reference + ".png\" />";
 		});
 	}
+	if(characterElement.hasOwnProperty("referenceSmall")){
+		characterElement.referenceSmall.forEach(function(reference){
+			cardDiv.innerHTML += "<img class=\"smallcard\" src=\"images/" + reference + ".png\" />";
+		});
+	}
 
 	if(Array.isArray(characterElement.preview)) {
 		characterElement.preview.forEach(function(image){
@@ -1343,6 +1348,7 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 		}
 		optionSection.removeChild(entrySection);
 		cardDisplay.remove();
+		clearPreview();
 		updateCaps();
 
 		var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);

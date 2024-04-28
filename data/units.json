@@ -633,7 +633,8 @@
       "ins"
     ], 
     "name": "courser", 
-    "preview": "courser"
+    "preview": "courser",
+    "referenceSmall": ["stealthboy"]
   }, 
   {
     "battle_mode_packs": [
@@ -774,7 +775,8 @@
       "srv"
     ], 
     "name": "x6-88_courser", 
-    "preview": "x688courser", 
+    "preview": "x688courser",
+    "referenceSmall": ["stealthboy"], 
     "unique_code": "x6-88_courser"
   }, 
   {
@@ -796,7 +798,8 @@
       "ins"
     ], 
     "name": "z2-47", 
-    "preview": "z247", 
+    "preview": "z247",
+    "referenceSmall": ["stealthboy"], 
     "unique_code": "z2-47"
   }, 
   {
@@ -5750,13 +5753,7 @@
   }, 
   {
     "battle_mode_packs": [
-      "upgrades", 
-      "nuka_world_items", 
-      "wasteland_items", 
-      "advanced_items", 
-      "usable_items",
-      "raider_items",
-      "standard_items"
+      "dog_items"
     ], 
     "cost": 69, 
     "default_equipment": {
@@ -5767,7 +5764,8 @@
     ], 
     "must_carry":["melee.dog_bite"],
     "name": "hound", 
-    "preview": "hound"
+    "preview": "hound",
+    "tags":["dog"]
   }, 
   {
     "battle_mode_packs": [

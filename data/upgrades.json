@@ -302,6 +302,8 @@
       "thrown.synth_relay_grenade"
     ],
     "institute_items" : [
+      "armor.light_synth_armor",
+      "armor.sturdy_synth_armor",
       "armor.heavy_synth_armor",
       "clothing.institute_division_head_coat",
       "clothing.institute_lab_coat",
@@ -404,7 +406,7 @@
       "rifles.securitron_grenade_launcher",
       "rifles.securitron_smg"
     ],
-    "special_items" : [
+    "personal_items" : [
       "melee.fire_hydrant_bat",
       "melee.horrigans_knife",
       "melee.marcus_punch",
