@@ -6822,5 +6822,434 @@
     "name": "waster_pack_b", 
     "preview": "wasterpackvtap",
     "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 193, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "overlord_vtap", 
+    "preview": "overlordvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 122, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "master_vtap", 
+    "preview": "mastervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 104, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "brute_a", 
+    "preview": "brutevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 100, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "brute_b", 
+    "preview": "brutevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 99, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "aviator_vtap", 
+    "preview": "aviatorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 55, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "super_mutant_a", 
+    "preview": "supermutantvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 56, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "super_mutant_b", 
+    "preview": "supermutantvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 54, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "super_mutant_c", 
+    "preview": "supermutantvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 63, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "mutant_hound_vtap", 
+    "preview": "mutanthoundvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 77, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "skirmisher_a", 
+    "preview": "skirmishervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 53, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "skirmisher_b", 
+    "preview": "skirmishervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 59, 
+    "factions": [
+      "mut"
+    ], 
+    "name": "skirmisher_c", 
+    "preview": "skirmishervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 257, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "sole_survivor_tech_vtap", 
+    "preview": "solesurvivortechvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 212, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "sole_survivor_vtap", 
+    "preview": "solesurvivorvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 83, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "dogmeat_vtap", 
+    "preview": "dogmeatvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 52, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "settler_a", 
+    "preview": "settlervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 58, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "settler_b", 
+    "preview": "settlervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 55, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "scavenger_vtap", 
+    "preview": "scavengervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 49, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "tech_vtap", 
+    "preview": "techvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 80, 
+    "factions": [
+      "srv"
+    ], 
+    "name": "minuteman_vtap", 
+    "preview": "minutemanvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 114, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "knight_a", 
+    "preview": "knightvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 128, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "knight_b", 
+    "preview": "knightvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 128, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "knight_c", 
+    "preview": "knightvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 111, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "knight_d", 
+    "preview": "knightvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 192, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "paladin_a", 
+    "preview": "paladinvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 192, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "paladin_b", 
+    "preview": "paladinvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 93, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "lancer_vtap", 
+    "preview": "lancervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 78, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "knight_patrol_vtap", 
+    "preview": "knightpatrolvtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 49, 
+    "factions": [
+      "bos"
+    ], 
+    "name": "field_scribe_vtap", 
+    "preview": "fieldscribevtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 133, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "veteran_raider_vtap", 
+    "preview": "veteranraidervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 72, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "scavver_a", 
+    "preview": "scavvervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 76, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "scavver_b", 
+    "preview": "scavvervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 79, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "scavver_c", 
+    "preview": "scavvervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 62, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "psycho_a", 
+    "preview": "psychovtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 50, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "psycho_b", 
+    "preview": "psychovtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 51, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "psycho_c", 
+    "preview": "psychovtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 45, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "raider_a", 
+    "preview": "raidervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 50, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "raider_b", 
+    "preview": "raidervtap",
+    "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+    ], 
+    "cost": 46, 
+    "factions": [
+      "rdr"
+    ], 
+    "name": "raider_c", 
+    "preview": "raidervtap",
+    "vault_tec_approved_profile":true
   }
 ]
