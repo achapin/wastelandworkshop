@@ -915,7 +915,6 @@
       "clothing.wildman_rags",
       "alcohol.nuka_cola_dark",
       "perks.ace_operator",
-      "perks.berserker",
       "perks.blitzer",
       "perks.bodyguard",
       "perks.chosen_disciple",
@@ -3513,11 +3512,6 @@
       "name": "basher",
       "cost": 5,
       "preview": "basher"
-    },
-    {
-      "name": "berserker",
-      "cost": 9,
-      "preview": "berserker"
     },
     {
       "name": "big_leagues",
