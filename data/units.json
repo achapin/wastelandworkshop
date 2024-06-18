@@ -7251,5 +7251,70 @@
     "name": "raider_c", 
     "preview": "raidervtap",
     "vault_tec_approved_profile":true
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 58, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.feral_ghoul_swipe"
+    ], 
+    "name": "feral_ghoul_fireman", 
+    "preview": "feralghoulfireman", 
+    "tags": [
+      "creature"
+    ]
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 62, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.feral_ghoul_swipe"
+    ], 
+    "name": "feral_ghoul_special_operator", 
+    "preview": "feralghoulspecialoperator", 
+    "tags": [
+      "creature"
+    ]
+  }, 
+  {
+    "battle_mode_packs": [
+      "creature_items"
+    ], 
+    "cost": 65, 
+    "factions": [
+      "crt"
+    ], 
+    "must_carry": [
+      "melee.feral_ghoul_swipe"
+    ], 
+    "name": "feral_ghoul_armored", 
+    "preview": "feralghoularmored", 
+    "tags": [
+      "creature"
+    ]
+  }, 
+  {
+    "battle_mode_packs": [
+      "usable_items"
+    ], 
+    "cost": 56, 
+    "factions": [
+      "srv"
+    ], 
+    "must_wear": [
+      "clothing.mr_fuzzy_mascot_outfit"
+    ], 
+    "name": "mr_fuzzy", 
+    "preview": "mrfuzzy"
   }
 ]

@@ -1262,5 +1262,16 @@
   "psycho_c":"Psycho (VTAP-C)",
   "raider_a":"Raider (VTAP-A)",
   "raider_b":"Raider (VTAP-B)",
-  "raider_c":"Raider (VTAP-C)"
+  "raider_c":"Raider (VTAP-C)",
+  "feral_ghoul_fireman":"Feral Ghoul Fireman",
+  "feral_ghoul_special_operator":"Feral Ghoul (Special Operator)",
+  "feral_ghoul_armored":"Feral Ghoul (Armored)",
+  "mr_fuzzy":"Mr Fuzzy",
+  "hardened_sniper_rifle":"Hardened Sniper Rifle",
+  "pump-action_shotgun":"Pump-Action Shotgun",
+  "chainsaw":"Chainsaw",
+  "cultist_dagger":"Cultist Dagger",
+  "mr_fuzzy_mascot_outfit":"Mr Fuzzy Mascot Outfit",
+  "ritual_mask":"Ritual Mask",
+  "emergency_anti-venom":"Emergency Anti-Venom"
 }

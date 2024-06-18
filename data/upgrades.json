@@ -1193,6 +1193,11 @@
       "preview": "handmaderifle"
     },
     {
+      "name": "hardened_sniper_rifle",
+      "cost": 55,
+      "preview": "hardenedsniperrifle"
+    },
+    {
       "name": "heavy_laser_turret",
       "cost": 15,
       "preview": "heavylaserturret"
@@ -1318,6 +1323,11 @@
       "name": "plasma_rifle",
       "cost": 16,
       "preview": "plasmarifle"
+    },
+    {
+      "name": "pump-action_shotgun",
+      "cost": 18,
+      "preview": "pumpactionshotgun"
     },
     {
       "name":"radscorpion_venom_syringer",
@@ -1793,6 +1803,11 @@
       "preview": "centaurlash"
     },
     {
+      "name": "chainsaw",
+      "cost": 20,
+      "preview": "chainsaw"
+    },
+    {
       "name": "chinese_officers_sword",
       "cost": 7,
       "preview": "chineseofficerssword"
@@ -1816,6 +1831,16 @@
       "name": "crippling_tire_iron",
       "cost": 18,
       "preview": "cripplingtireiron"
+    },
+    {
+      "name": "cultist_dagger",
+      "cost": 6,
+      "preview": "cultistdagger"
+    },
+    {
+      "name": "assault_carbine",
+      "cost": 8,
+      "preview": "assaultcarbine"
     },
     {
       "name": "deathclaw_crush",
@@ -3004,6 +3029,11 @@
       "preview":"mirelurkcarapace"
     },
     {
+      "name": "mr_fuzzy_mascot_outfit",
+      "cost": 24,
+      "preview":"mrfuzzymascotoutfit"
+    },
+    {
       "name": "ncr_engineer_jumpsuit",
       "cost": 10,
       "preview": "ncrengineerjumpsuit"
@@ -3017,6 +3047,11 @@
       "name": "red_flight_helmet",
       "cost": 3,
       "preview": "redflighthelmet"
+    },
+    {
+      "name": "ritual_mask",
+      "cost": 5,
+      "preview":"ritualmask"
     },
     {
       "name": "road_goggles",
@@ -3130,6 +3165,11 @@
       "name": "doctors_bag",
       "cost": 12,
       "preview":"drsbag"
+    },
+    {
+      "name": "emergency_anti-venom",
+      "cost": 6,
+      "preview": "emergencyantivenom"
     },
     {
       "name": "fury",
