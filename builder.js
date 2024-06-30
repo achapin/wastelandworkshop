@@ -43,6 +43,8 @@ var possibleFilters = [
 	"slg",
 	"srv"
 ]
+var filter_vtap = false;
+var vtap_property = "vault_tec_approved_profile";
 
 var factionReferences = {
 	"bos":"reference_brotherhoodofsteel",
@@ -178,7 +180,7 @@ function localizationLoaded(json){
 			}
 		}
 
-		if(!character.hasOwnProperty("default_equipment") && !character.hasOwnProperty("must_carry") && !character.hasOwnProperty("vault_tec_approved_profile")){
+		if(!character.hasOwnProperty("default_equipment") && !character.hasOwnProperty("must_carry") && !character.hasOwnProperty(vtap_property)){
 			missingDefaults += character.name + " ";
 			return;
 		}
@@ -330,10 +332,15 @@ function buildAddSection() {
 	characterList.setAttribute("class", "characters row");
 	var list = document.createElement("ul");
 	characterList.appendChild(list);
+	console.log("build add");
 	units.forEach(function(characterElement){
 		var can_add = true;
 
 		if(appliedFilters.length > 0 && characterElement.hasOwnProperty("factions") && !characterElement.factions.includes(appliedFilters[0])){
+			return;
+		}
+
+		if(filter_vtap && characterElement.hasOwnProperty(vtap_property)){
 			return;
 		}
 
@@ -408,6 +415,20 @@ function buildAddSection() {
 
 function buildFiltersSection(){
 	var filtersSection = document.createElement("div");
+	var vtapFilterSection = document.createElement("div");
+	
+	var vtapFilterCheckBox = document.createElement('input');
+	vtapFilterCheckBox.type = 'checkbox';
+	vtapFilterCheckBox.checked = !filter_vtap;
+	vtapFilterCheckBox.addEventListener("click", function(){
+		filter_vtap = !filter_vtap;
+		vtapFilterCheckBox.checked = !filter_vtap;
+		buildAddSection();
+	});
+	vtapFilterSection.appendChild(document.createTextNode("Show Vault-Tec Approved Profiles:"));
+	vtapFilterSection.appendChild(vtapFilterCheckBox);
+	filtersSection.append(vtapFilterSection);
+
 	filtersSection.setAttribute("class", "filters row");
 	var list = document.createElement("ul");
 	possibleFilters.forEach(function(filter){
@@ -706,7 +727,7 @@ function addCharacter(characterElement, presetInfo){
 	} else {
 
 		var imageClass = "fullcard";
-		if(characterElement.hasOwnProperty("vault_tec_approved_profile")){
+		if(characterElement.hasOwnProperty(vtap_property)){
 			imageClass = "vaulttecapprovedprofile";
 		}
 
@@ -892,7 +913,7 @@ function addCharacter(characterElement, presetInfo){
 		equipmentSection.appendChild(mustCarrySection);
 	}
 
-	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty("vault_tec_approved_profile")) {
+	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty(vtap_property)) {
 		if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
 			addModdedCharacterSlots(characterElement, character, equipmentSection, displaySection);
 		} else if(!characterElement.hasOwnProperty("perks") || characterElement.perks) {
@@ -942,7 +963,7 @@ function addCharacter(characterElement, presetInfo){
 	charaSection.appendChild(totalCharacterCapsSection);
 	charaSection.appendChild(configureSection);
 	configureSection.appendChild(headerSection);
-	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty("vault_tec_approved_profile")) {
+	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty(vtap_property)) {
 		configureSection.appendChild(costSection);
 		configureSection.appendChild(equipmentSection);
 	}
@@ -1999,7 +2020,7 @@ function updateCaps(){
 				armorSources++;
 			}
 
-			if(armorSources <= 0 && characterTemplate.hasOwnProperty("vault_tec_approved_profile")){
+			if(armorSources <= 0 && characterTemplate.hasOwnProperty(vtap_property)){
 				armorSources++;
 			}
 
@@ -2143,7 +2164,7 @@ function updateCaps(){
 			}
 
 			unitDisplay.querySelector(".unit-cost").innerHTML = unitCost;
-			if(characterTemplate.name != "liberty_prime" && !characterTemplate.hasOwnProperty("vault_tec_approved_profile")) {
+			if(characterTemplate.name != "liberty_prime" && !characterTemplate.hasOwnProperty(vtap_property)) {
 				unitDisplay.querySelector(".modelBaseCost").innerHTML = baseCost;
 				unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
 				unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
