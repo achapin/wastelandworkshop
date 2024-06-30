@@ -1030,7 +1030,7 @@
     },
     {
       "name": "fire_hydrant_bat",
-      "can_carry":"super_mutant_behemoth",
+      "can_carry":["behemoth","weak_behemoth"],
       "cost": 38,
       "preview": "firehydrantbat"
     },

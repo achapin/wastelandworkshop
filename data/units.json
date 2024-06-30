@@ -1825,6 +1825,14 @@
 	},
 	{
 		"cost": 150,
+    "default_equipment": {
+			"melee": [
+				"fire_hydrant_bat"
+			],
+			"thrown": {
+				"weak_behemoth_rock_throw": 1
+			}
+		},
 		"factions": [
 			"mut"
 		],
