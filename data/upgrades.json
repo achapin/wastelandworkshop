@@ -1108,13 +1108,13 @@
     {
       "name": "assaultron_head_laser",
       "cost": 40,
-      "preview": "assaultronlaser",
+      "preview": "assaultronheadlaser",
       "restrictions":["robot", "assaultron"]
     },
     {
       "name": "battered_assaultron_head_laser",
       "cost": 30,
-      "preview": "assaultronbatlaser",
+      "preview": "batteredassaultronheadlaser",
       "restrictions":["robot", "assaultron"]
     },
     {
@@ -2578,21 +2578,21 @@
       "name": "t45_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 44,
-      "preview": "t45",
+      "preview": "t45powerarmor",
       "sets_armor_values": true
     },
     {
       "name": "t51_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 60,
-      "preview": "t51",
+      "preview": "t51powerarmor",
       "sets_armor_values": true
     },
     {
       "name": "t60_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 82,
-      "preview": "t60",
+      "preview": "t60powerarmor",
       "sets_armor_values": true
     },
     {
@@ -2613,7 +2613,7 @@
       "name": "x01_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 102,
-      "preview": "x01",
+      "preview": "x01powerarmor",
       "sets_armor_values": true
     }
   ],
