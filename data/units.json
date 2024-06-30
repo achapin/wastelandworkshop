@@ -1250,6 +1250,7 @@
 		],
 		"name": "nuka_cola_girl",
 		"preview": "nukagirl",
+    "tags":["armored"],
 		"unique_code": "nuka_cola_girl"
 	},
 	{
@@ -1652,6 +1653,7 @@
 		"reference": [
 			"reference_lorenzocabot"
 		],
+    "tags":["armored"],
 		"unique_code": "lorenzo_cabot"
 	},
 	{
@@ -2929,6 +2931,7 @@
 		],
 		"name": "grognak",
 		"preview": "grognak",
+    "tags":["armored"],
 		"unique_code": "grognak"
 	},
 	{

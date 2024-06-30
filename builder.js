@@ -2022,7 +2022,8 @@ function updateCaps(){
 			|| characterTemplate.tags.indexOf("dog") >= 0 
 			|| characterTemplate.tags.indexOf("robot")>= 0 
 			|| characterTemplate.tags.indexOf("synth")>= 0
-			|| characterTemplate.tags.indexOf("legendary")>= 0 ))
+			|| characterTemplate.tags.indexOf("legendary")>= 0
+			|| characterTemplate.tags.indexOf("armored")>= 0 ))
 			{
 				armorSources++;
 			}
