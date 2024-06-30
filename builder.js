@@ -892,14 +892,14 @@ function addCharacter(characterElement, presetInfo){
 		equipmentSection.appendChild(mustCarrySection);
 	}
 
-	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
-		addModdedCharacterSlots(characterElement, character, equipmentSection, displaySection);
-	} else if(!characterElement.hasOwnProperty("perks") || characterElement.perks) {
-		var perkSection = getPerkSection(character, displaySection);
-		equipmentSection.appendChild(perkSection);
-	}
-
-	if(characterElement.name != "liberty_prime") {
+	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty("vault_tec_approved_profile")) {
+		if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
+			addModdedCharacterSlots(characterElement, character, equipmentSection, displaySection);
+		} else if(!characterElement.hasOwnProperty("perks") || characterElement.perks) {
+			var perkSection = getPerkSection(character, displaySection);
+			equipmentSection.appendChild(perkSection);
+		}
+		
 		addSlots(characterElement, character, equipmentSection, displaySection);
 	}
 
@@ -942,8 +942,10 @@ function addCharacter(characterElement, presetInfo){
 	charaSection.appendChild(totalCharacterCapsSection);
 	charaSection.appendChild(configureSection);
 	configureSection.appendChild(headerSection);
-	configureSection.appendChild(costSection);
-	configureSection.appendChild(equipmentSection);
+	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty("vault_tec_approved_profile")) {
+		configureSection.appendChild(costSection);
+		configureSection.appendChild(equipmentSection);
+	}
 	charaSection.appendChild(displaySection);
 
 	forceSection.appendChild(charaSection);
@@ -1991,7 +1993,8 @@ function updateCaps(){
 			&& (characterTemplate.tags.indexOf("creature") >= 0 
 			|| characterTemplate.tags.indexOf("dog") >= 0 
 			|| characterTemplate.tags.indexOf("robot")>= 0 
-			|| characterTemplate.tags.indexOf("synth")>= 0 ))
+			|| characterTemplate.tags.indexOf("synth")>= 0
+			|| characterTemplate.tags.indexOf("legendary")>= 0 ))
 			{
 				armorSources++;
 			}
@@ -2140,9 +2143,11 @@ function updateCaps(){
 			}
 
 			unitDisplay.querySelector(".unit-cost").innerHTML = unitCost;
-			unitDisplay.querySelector(".modelBaseCost").innerHTML = baseCost;
-			unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
-			unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
+			if(characterTemplate.name != "liberty_prime" && !characterTemplate.hasOwnProperty("vault_tec_approved_profile")) {
+				unitDisplay.querySelector(".modelBaseCost").innerHTML = baseCost;
+				unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
+				unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
+			}
 			totalCaps += unitCost;
 			unitIndex++;
 		});
