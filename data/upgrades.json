@@ -2401,11 +2401,13 @@
     {
       "name": "heroic",
       "cost": 48,
+      "restrictions":["!robot", "!creature"],
       "preview": "heroic"
     },
     {
       "name": "unpredictable",
       "cost": 1.15,
+      "restrictions":["no_one"],
       "preview": "unpredictable"
     },
     {

@@ -714,38 +714,50 @@ function addCharacter(characterElement, presetInfo){
 	}
 	displaySection.appendChild(cardDiv);
 
+	var characterTags = [];
+	if(characterElement.hasOwnProperty("tags")){
+		characterTags = characterElement.tags;
+	}
+
 	addLeaderSection(headerRightSection, character, displaySection);
 
-	//TODO: Determine if the model can be made heroic
 	var heroicSection = document.createElement("div");
+	var addHeroic = false;
 	heroicSection.setAttribute("class", "heroic");
-	var heroicCheckBox = document.createElement('input');
-	heroicCheckBox.type = 'checkbox';
-	var heroicUpgrade = getUpgrade("heroic", "heroic");
-	if(character.hasOwnProperty("heroic"))
-	{
-		heroicCheckBox.checked = character.heroic == heroicUpgrade.name;
-	}
-	var heroicDescription = document.createElement("span");
-	heroicDescription.setAttribute("class", "heroicDescription");
-	heroicDescription.appendChild(document.createTextNode(loc[heroicUpgrade.name] + " (" + heroicUpgrade.cost +")"));
-	heroicSection.appendChild(heroicDescription);
-	heroicSection.appendChild(heroicCheckBox);
-	var cardDisplay = addCardToDisplay(displaySection, null);
-	if(character.hasOwnProperty("heroic") && character.heroic == heroicUpgrade.name){
-		setCardInDisplay(cardDisplay, heroicUpgrade.preview);
-	}
-	heroicCheckBox.addEventListener("click", function(){
-		if(heroicCheckBox.checked){
-			character.heroic = heroicUpgrade.name;
-			setCardInDisplay(cardDisplay, heroicUpgrade.preview);
-		}else{
-			delete character["heroic"];
-			setCardInDisplay(cardDisplay, null);
+	upgrades.heroic.forEach((heroicUpgrade) =>{
+		var heroicCheckBox = document.createElement('input');
+		heroicCheckBox.type = 'checkbox';
+		if(canEquip(heroicUpgrade, characterTags)){
+			if(character.hasOwnProperty("heroic"))
+			{
+				heroicCheckBox.checked = character.heroic == heroicUpgrade.name;
+			}
+			var heroicDescription = document.createElement("span");
+			heroicDescription.setAttribute("class", "heroicDescription");
+			heroicDescription.appendChild(document.createTextNode(loc[heroicUpgrade.name] + " (" + heroicUpgrade.cost +")"));
+			heroicSection.appendChild(heroicDescription);
+			heroicSection.appendChild(heroicCheckBox);
+			var cardDisplay = addCardToDisplay(displaySection, null);
+			if(character.hasOwnProperty("heroic") && character.heroic == heroicUpgrade.name){
+				setCardInDisplay(cardDisplay, heroicUpgrade.preview);
+			}
+			heroicCheckBox.addEventListener("click", function(){
+				if(heroicCheckBox.checked){
+					character.heroic = heroicUpgrade.name;
+					setCardInDisplay(cardDisplay, heroicUpgrade.preview);
+				}else{
+					delete character["heroic"];
+					setCardInDisplay(cardDisplay, null);
+				}
+				updateCaps();
+			});
+			addPreviewTooltip(heroicUpgrade, heroicDescription);
+			addHeroic = true;
 		}
-		updateCaps();
 	});
-	addPreviewTooltip(heroicUpgrade, heroicDescription);
+	if(addHeroic){
+		headerRightSection.appendChild(heroicSection);
+	}
 
 	var costSection = document.createElement("div");
 	costSection.setAttribute("class","cost-section");
