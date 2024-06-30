@@ -114,7 +114,8 @@
     {
       "name": "mk28_nuclear_bomb",
       "cost": 0,
-      "preview": "mk28nuclearbomb"
+      "preview": "mk28nuclearbomb",
+      "restrictions":["liberty_prime"]
     },
     {
       "name":"mortar_launcher",
@@ -153,7 +154,7 @@
       "name":"space_laser",
       "cost": 20,
       "preview": "spacelaser",
-      "restrictions":["robot"]
+      "restrictions":["robot","space_sentry"]
     }
   ],
   "rifles": [
@@ -1029,6 +1030,7 @@
     },
     {
       "name": "fire_hydrant_bat",
+      "can_carry":"super_mutant_behemoth",
       "cost": 38,
       "preview": "firehydrantbat"
     },
@@ -1525,12 +1527,14 @@
     {
       "name": "behemoth_rock_throw",
       "cost": 0,
-      "preview": "behemothrockthrow"
+      "preview": "behemothrockthrow",
+      "restrictions":["behemoth"]
     },
     {
       "name": "centaur_spit",
       "cost": 0,
-      "preview": "centaurspit"
+      "preview": "centaurspit",
+      "restrictions":["centaur"]
     },
     {
       "name": "cryo_grenade",
@@ -1560,7 +1564,8 @@
     {
       "name":"mirelurk_queen_brood",
       "cost": 0,
-      "preview": "mirelurkqueenbrood"
+      "preview": "mirelurkqueenbrood",
+      "restrictions":["mirelurk_queen"]
     },
     {
       "name": "molotov_cocktail",
@@ -1575,12 +1580,14 @@
     {
       "name":"nukalurk_queen_brood",
       "cost": 0,
-      "preview": "nukalurkqueenbrood"
+      "preview": "nukalurkqueenbrood",
+      "restrictions":["nukalurk_queen"]
     },
     {
       "name":"nukalurk_queen_lob",
       "cost": 0,
-      "preview": "nukalurkqueenlob"
+      "preview": "nukalurkqueenlob",
+      "restrictions":["nukalurk_queen"]
     },
     {
       "name":"persuasion_grenade",
@@ -1626,7 +1633,8 @@
     {
       "name":"weak_behemoth_rock_throw",
       "cost": 0,
-      "preview":"weakbehemothrockthrow"
+      "preview":"weakbehemothrockthrow",
+      "restrictions":["weak_behemoth"]
     }
   ],
   "mines": [

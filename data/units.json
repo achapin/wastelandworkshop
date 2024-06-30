@@ -863,14 +863,11 @@
 		"factions": [
 			"mut"
 		],
-		"must_carry": [
-			"thrown.behemoth_rock_throw"
-		],
 		"name": "behemoth",
 		"preview": "behemoth",
 		"tags": [
-			"super_mutant",
-			"creature"
+      "creature",
+			"super_mutant"
 		]
 	},
 	{
@@ -1829,14 +1826,11 @@
 		"factions": [
 			"mut"
 		],
-		"must_carry": [
-			"thrown.weak_behemoth_rock_throw"
-		],
 		"name": "weak_behemoth",
 		"preview": "weakbehemoth",
 		"tags": [
-			"super_mutant",
-			"creature"
+      "creature",
+			"super_mutant"
 		]
 	},
 	{

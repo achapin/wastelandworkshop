@@ -332,7 +332,6 @@ function buildAddSection() {
 	characterList.setAttribute("class", "characters row");
 	var list = document.createElement("ul");
 	characterList.appendChild(list);
-	console.log("build add");
 	units.forEach(function(characterElement){
 		var can_add = true;
 
@@ -371,17 +370,15 @@ function buildAddSection() {
 		pointsSpan.appendChild(pointsNode);
 		if(can_add){
 			button.addEventListener("click", function() { 
-				var newCharacter = addCharacter(characterElement, {}); //IDEA: pass in default equipment, but filter it out if its battle mode?
+				var newCharacter = addCharacter(characterElement, {});
 				if(characterElement.hasOwnProperty("default_equipment")){
 					for (var [slot, value] of Object.entries(characterElement.default_equipment)){
 						if(wear_slots.indexOf(slot) >= 0){
 							newCharacter[slot] = characterElement.default_equipment[slot];
 						}
-
 						if(carry_slots.indexOf(slot) >= 0){
 							var items = characterElement.default_equipment[slot];
 							items.forEach(item => {
-								var optionElement = getUpgrade(slot, item);
 								if(!newCharacter.hasOwnProperty(slot)){
 									newCharacter[slot]=[];
 								}
@@ -742,11 +739,6 @@ function addCharacter(characterElement, presetInfo){
 	}
 	displaySection.appendChild(cardDiv);
 
-	var characterTags = [];
-	if(characterElement.hasOwnProperty("tags")){
-		characterTags = characterElement.tags;
-	}
-
 	addLeaderSection(headerRightSection, character, displaySection);
 
 	var heroicSection = document.createElement("div");
@@ -755,7 +747,7 @@ function addCharacter(characterElement, presetInfo){
 	upgrades.heroic.forEach((heroicUpgrade) =>{
 		var heroicCheckBox = document.createElement('input');
 		heroicCheckBox.type = 'checkbox';
-		if(canEquip(heroicUpgrade, characterTags)){
+		if(canEquip(heroicUpgrade, characterElement)){
 			if(character.hasOwnProperty("heroic"))
 			{
 				heroicCheckBox.checked = character.heroic == heroicUpgrade.name;
@@ -1024,7 +1016,7 @@ function addModdedCharacterSlots(characterElement, character, equipmentSection, 
 	slotDropdown1.add(emptyOption1);
 	slotDropdown2.add(emptyOption2);
 	upgrades.mods.forEach(function(mod){
-		if(canEquip(mod, characterElement.tags)){
+		if(canEquip(mod, characterElement)){
 			var option1 = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
 			var option2 = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
 			if(mod1 != null && mod1 == mod){
@@ -1101,7 +1093,7 @@ function addSlots(characterElement, character, equipmentSection, displaySection)
 	if(!characterElement.hasOwnProperty("tags") || !characterElement.tags.includes("synth"))
 	{
 		wear_slots.forEach(function(slotType) {
-			var wearSection = getWearSection(character, false, slotType, characterTags, displaySection);
+			var wearSection = getWearSection(character, false, slotType, characterElement, displaySection);
 				equipmentSection.appendChild(wearSection);
 		});
 	}
@@ -1115,7 +1107,7 @@ function addSlots(characterElement, character, equipmentSection, displaySection)
 		equipmentSection.appendChild(consumeableSection);
 	}else{
 		carry_slots.forEach(function(slotType) {
-			var carrySection = getCarrySection(character, slotType, characterTags, displaySection);
+			var carrySection = getCarrySection(character, slotType, characterElement, displaySection);
 			equipmentSection.appendChild(carrySection);
 		});
 
@@ -1159,11 +1151,13 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	var optionIndex = 0;
 
 	var optionSection = document.createElement("div"); 
+	var equippedItem = false;
 
 	upgrades[slotType].forEach(function(optionElement){
-		if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
+		if(canEquip(optionElement, characterElement)){
 			if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
 				optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown, cardDisplay));
+				equippedItem = true;
 			}else{
 				slotDropdown.add(new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name));
 			}
@@ -1185,7 +1179,7 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 		updateCaps();
 	};
 
-	if(slotDropdown.length > 1)
+	if(slotDropdown.length > 1 || equippedItem)
 	{
 		consumeableSection.appendChild(consumeableHeader);
 		consumeableSection.appendChild(optionSection);
@@ -1247,8 +1241,23 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 	return entrySection;
 }
 
-function canEquip(optionElement, characterTags) {
+function canEquip(optionElement, characterElement) {
 	var allowed = true;
+
+	var characterTags = [];
+	if(characterElement.hasOwnProperty("tags")){
+		characterTags = characterElement.tags
+	}
+
+	if(optionElement.hasOwnProperty("can_carry")
+		&& optionElement.can_carry.includes(characterElement.name)){
+		return true;
+	}
+
+	if(optionElement.hasOwnProperty("restrictions")
+		&& optionElement.restrictions.includes(characterElement.name)){
+		return true;
+	}
 
 	if(characterTags.includes("dog")){
 		if(!optionElement.hasOwnProperty("restrictions")
@@ -1302,7 +1311,7 @@ function canEquip(optionElement, characterTags) {
 	return allowed;
 }
 
-function getWearSection(character, slotType, characterTags, displaySection){
+function getWearSection(character, slotType, characterElement, displaySection){
 	var wearSection = document.createElement("div");
 	wearSection.setAttribute("class", "carry-section");
 
@@ -1324,7 +1333,7 @@ function getWearSection(character, slotType, characterTags, displaySection){
 
 	upgrades[slotType].forEach(function(optionElement){
 
-		if(optionElement.cost != 0 && canEquip(optionElement, characterTags)){
+		if(optionElement.cost != 0 && canEquip(optionElement, characterElement)){
 			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 			slotDropdown.add(option);
 			optionIndex++;
@@ -1374,7 +1383,7 @@ function getWearSection(character, slotType, characterTags, displaySection){
 	return wearSection;
 }
 
-function getCarrySection(character, slotType, characterTags, displaySection){
+function getCarrySection(character, slotType, characterElement, displaySection){
 	var carrySection = document.createElement("div");
 	carrySection.setAttribute("class", "carry-section");
 	var carryHeader = document.createElement("h2");
@@ -1398,7 +1407,7 @@ function getCarrySection(character, slotType, characterTags, displaySection){
 
 	upgrades[slotType].forEach(function(option){
 		var can_equip = false;
-		if(option.cost != 0 && canEquip(option, characterTags)){
+		if(option.cost != 0 && canEquip(option, characterElement)){
 			can_equip = true;
 		}
 
@@ -1761,12 +1770,7 @@ function getPerkSection(character, displaySection){
 	upgrades.perks.forEach(function(perk){
 		var hasPerk = false;
 
-		var characterTags = [];
-		if(getCharacterById(character.name).hasOwnProperty("tags"))
-		{
-			characterTags = getCharacterById(character.name).tags;
-		}
-		if(!canEquip(perk, characterTags))
+		if(!canEquip(perk, getCharacterById(character.name)))
 		{
 			return;
 		}
@@ -1871,12 +1875,8 @@ function addLeaderSection(domElement, character, display){
 
 	for(var index = 0; index < upgrades.leader.length; index++) {
 		var optionElement = upgrades.leader[index];
-		var characterTags = [];
-		if(getCharacterById(character.name).hasOwnProperty("tags")){
-			characterTags = getCharacterById(character.name).tags;
-		}
 
-		if(canEquip(optionElement, characterTags)){
+		if(canEquip(optionElement, getCharacterById(character.name))){
 			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 			perkDropdown.add(option);
 		}
