@@ -1,6 +1,5 @@
 [
 	{
-		"cost_armored": 107,
 		"cost": 114,
 		"default_equipment": {
 			"melee": [
@@ -18,7 +17,6 @@
 		"unique_code": "aspirant_goddard"
 	},
 	{
-		"cost_armored": 120,
 		"cost": 101,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -57,7 +55,6 @@
 		]
 	},
 	{
-		"cost_armored": 42,
 		"cost": 41,
 		"default_equipment": {
 			"pistols": [
@@ -71,7 +68,6 @@
 		"preview": "scribe"
 	},
 	{
-		"cost_armored": 37,
 		"cost": 35,
 		"default_equipment": {
 			"pistols": [
@@ -92,7 +88,6 @@
 				"pulse_grenade"
 			]
 		},
-		"cost_armored": 60,
 		"cost": 53,
 		"default_equipment": {
 			"rifles": [
@@ -106,7 +101,6 @@
 		"preview": "knight"
 	},
 	{
-		"cost_armored": 86,
 		"cost": 63,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -124,7 +118,6 @@
 		"unique_code": "knight_captain_cade"
 	},
 	{
-		"cost_armored": 40,
 		"cost": 35,
 		"default_equipment": {
 			"rifles": [
@@ -138,7 +131,6 @@
 		"preview": "knightpatrol"
 	},
 	{
-		"cost_armored": 39,
 		"cost": 34,
 		"default_equipment": {
 			"rifles": [
@@ -152,7 +144,6 @@
 		"preview": "knightblade"
 	},
 	{
-		"cost_armored": 58,
 		"cost": 50,
 		"default_equipment": {
 			"rifles": [
@@ -166,7 +157,6 @@
 		"preview": "knighttech"
 	},
 	{
-		"cost_armored": 63,
 		"cost": 58,
 		"default_equipment": {
 			"rifles": [
@@ -180,7 +170,6 @@
 		"preview": "lancer"
 	},
 	{
-		"cost_armored": 85,
 		"cost": 70,
 		"default_equipment": {
 			"rifles": [
@@ -198,7 +187,6 @@
 		]
 	},
 	{
-		"cost_armored": 92,
 		"cost": 77,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -215,7 +203,6 @@
 		"preview": "paladin"
 	},
 	{
-		"cost_armored": 122,
 		"cost": 88,
 		"default_equipment": {
 			"power_armor": [
@@ -426,7 +413,6 @@
 		]
 	},
 	{
-		"cost_armored": 95,
 		"cost": 87,
 		"default_equipment": {
 			"gear": {
@@ -444,7 +430,6 @@
 		"unique_code": "conrad_kellog"
 	},
 	{
-		"cost_armored": 125,
 		"cost": 120,
 		"default_equipment": {
 			"pistols": [
@@ -464,7 +449,6 @@
 		]
 	},
 	{
-		"cost_armored": 52,
 		"cost": 45,
 		"default_equipment": {
 			"pistols": [
@@ -516,7 +500,6 @@
 		]
 	},
 	{
-		"cost_armored": 40,
 		"cost": 40,
 		"default_equipment": {
 			"pistols": [
@@ -533,7 +516,6 @@
 		"preview": "scientist"
 	},
 	{
-		"cost_armored": 77,
 		"cost": 77,
 		"default_equipment": {
 			"rifles": [
@@ -550,7 +532,6 @@
 		]
 	},
 	{
-		"cost_armored": 143,
 		"cost": 144,
 		"default_equipment": {
 			"pistols": [
@@ -569,7 +550,6 @@
 		"unique_code": "x6-88_courser"
 	},
 	{
-		"cost_armored": 122,
 		"cost": 117,
 		"default_equipment": {
 			"pistols": [
@@ -587,7 +567,6 @@
 		"unique_code": "z2-47"
 	},
 	{
-		"cost_armored": 102,
 		"cost": 80,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -602,7 +581,6 @@
 		"unique_code": "ack_ack"
 	},
 	{
-		"cost_armored": 93,
 		"cost": 70,
 		"default_equipment": {
 			"rifles": [
@@ -617,7 +595,6 @@
 		"unique_code": "avery"
 	},
 	{
-		"cost_armored": 45,
 		"cost": 40,
 		"default_equipment": {
 			"melee": [
@@ -634,7 +611,6 @@
 		"preview": "psycho"
 	},
 	{
-		"cost_armored": 44,
 		"cost": 41,
 		"default_equipment": {
 			"melee": [
@@ -651,7 +627,6 @@
 		"preview": "psychooutlaw"
 	},
 	{
-		"cost_armored": 43,
 		"cost": 36,
 		"default_equipment": {
 			"rifles": [
@@ -665,7 +640,6 @@
 		"preview": "raider"
 	},
 	{
-		"cost_armored": 39,
 		"cost": 34,
 		"default_equipment": {
 			"melee": [
@@ -682,7 +656,6 @@
 		"preview": "raideroutlaw"
 	},
 	{
-		"cost_armored": 61,
 		"cost": 54,
 		"default_equipment": {
 			"rifles": [
@@ -696,7 +669,6 @@
 		"preview": "scavver"
 	},
 	{
-		"cost_armored": 58,
 		"cost": 50,
 		"default_equipment": {
 			"rifles": [
@@ -710,7 +682,6 @@
 		"preview": "scavveroutlaw"
 	},
 	{
-		"cost_armored": 95,
 		"cost": 85,
 		"default_equipment": {
 			"pistols": [
@@ -732,7 +703,6 @@
 		"unique_code": "sin_jin"
 	},
 	{
-		"cost_armored": 91,
 		"cost": 69,
 		"default_equipment": {
 			"melee": [
@@ -861,7 +831,6 @@
 		]
 	},
 	{
-		"cost_armored": 97,
 		"cost": 90,
 		"default_equipment": {
 			"pistols": [
@@ -905,7 +874,6 @@
 		]
 	},
 	{
-		"cost_armored": 88,
 		"cost": 77,
 		"default_equipment": {
 			"melee": [
@@ -922,7 +890,6 @@
 		]
 	},
 	{
-		"cost_armored": 34,
 		"cost": 32,
 		"default_equipment": {
 			"rifles": [
@@ -937,7 +904,6 @@
 		"preview": "enslavedtech"
 	},
 	{
-		"cost_armored": 90,
 		"cost": 72,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -955,7 +921,6 @@
 		"unique_code": "fist"
 	},
 	{
-		"cost_armored": 94,
 		"cost": 73,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -976,7 +941,6 @@
 		"unique_code": "hammer"
 	},
 	{
-		"cost_armored": 108,
 		"cost": 87,
 		"default_equipment": {
 			"melee": [
@@ -1024,7 +988,6 @@
 		]
 	},
 	{
-		"cost_armored": 163,
 		"cost": 119,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -1044,7 +1007,6 @@
 		]
 	},
 	{
-		"cost_armored": 47,
 		"cost": 40,
 		"default_equipment": {
 			"melee": [
@@ -1061,7 +1023,6 @@
 		]
 	},
 	{
-		"cost_armored": 87,
 		"cost": 80,
 		"default_equipment": {
 			"melee": [
@@ -1083,7 +1044,6 @@
 		"unique_code": "strong"
 	},
 	{
-		"cost_armored": 55,
 		"cost": 53,
 		"factions": [
 			"mut"
@@ -1098,7 +1058,6 @@
 		]
 	},
 	{
-		"cost_armored": 44,
 		"cost": 40,
 		"default_equipment": {
 			"melee": [
@@ -1118,7 +1077,6 @@
 		]
 	},
 	{
-		"cost_armored": 81,
 		"cost": 74,
 		"default_equipment": {
 			"chems": {
@@ -1214,7 +1172,6 @@
 		"unique_code": "dogmeat"
 	},
 	{
-		"cost_armored": 66,
 		"cost": 63,
 		"default_equipment": {
 			"pistols": [
@@ -1232,7 +1189,6 @@
 		"unique_code": "hancock"
 	},
 	{
-		"cost_armored": 85,
 		"cost": 80,
 		"default_equipment": {
 			"melee": [
@@ -1255,7 +1211,6 @@
 		"unique_code": "mama_murphy"
 	},
 	{
-		"cost_armored": 57,
 		"cost": 52,
 		"default_equipment": {
 			"rifles": [
@@ -1270,7 +1225,6 @@
 		"preview": "minuteman"
 	},
 	{
-		"cost_armored": 79,
 		"cost": 66,
 		"default_equipment": {
 			"pistols": [
@@ -1288,7 +1242,6 @@
 		]
 	},
 	{
-		"cost_armored": 110,
 		"cost": 98,
 		"default_equipment": {
 			"pistols": [
@@ -1303,7 +1256,6 @@
 		"unique_code": "nuka_cola_girl"
 	},
 	{
-		"cost_armored": 57,
 		"cost": 54,
 		"default_equipment": {
 			"pistols": [
@@ -1318,7 +1270,6 @@
 		"unique_code": "piper"
 	},
 	{
-		"cost_armored": 117,
 		"cost": 109,
 		"default_equipment": {
 			"rifles": [
@@ -1338,7 +1289,6 @@
 		"unique_code": "preston_garvey"
 	},
 	{
-		"cost_armored": 109,
 		"cost": 94,
 		"default_equipment": {
 			"rifles": [
@@ -1354,7 +1304,6 @@
 		"unique_code": "ronnie_shaw"
 	},
 	{
-		"cost_armored": 44,
 		"cost": 39,
 		"default_equipment": {
 			"rifles": [
@@ -1368,7 +1317,6 @@
 		"preview": "scavenger"
 	},
 	{
-		"cost_armored": 43,
 		"cost": 40,
 		"default_equipment": {
 			"rifles": [
@@ -1382,7 +1330,6 @@
 		"preview": "settler"
 	},
 	{
-		"cost_armored": 111,
 		"cost": 89,
 		"default_equipment": {
 			"rifles": [
@@ -1399,7 +1346,6 @@
 		"unique_code": "sole_survivor"
 	},
 	{
-		"cost_armored": 90,
 		"cost": 68,
 		"default_equipment": {
 			"pistols": [
@@ -1414,7 +1360,6 @@
 		"unique_code": "sole_survivor"
 	},
 	{
-		"cost_armored": 134,
 		"cost": 112,
 		"default_equipment": {
 			"melee": [
@@ -1437,7 +1382,6 @@
 		"unique_code": "sole_survivor_loner"
 	},
 	{
-		"cost_armored": 97,
 		"cost": 89,
 		"default_equipment": {
 			"power_armor": [
@@ -1457,7 +1401,6 @@
 		"unique_code": "sole_survivor_tech"
 	},
 	{
-		"cost_armored": 90,
 		"cost": 83,
 		"default_equipment": {
 			"pistols": [
@@ -1472,7 +1415,6 @@
 		"unique_code": "sturges"
 	},
 	{
-		"cost_armored": 35,
 		"cost": 32,
 		"default_equipment": {
 			"pistols": [
@@ -1489,7 +1431,6 @@
 		"preview": "vaultdweller"
 	},
 	{
-		"cost_armored": 47,
 		"cost": 42,
 		"default_equipment": {
 			"melee": [
@@ -1506,7 +1447,6 @@
 		"preview": "vaultguard"
 	},
 	{
-		"cost_armored": 78,
 		"cost": 75,
 		"default_equipment": {
 			"armor": [
@@ -1530,7 +1470,6 @@
 		"unique_code": "mechanist"
 	},
 	{
-		"cost_armored": 103,
 		"cost": 95,
 		"default_equipment": {
 			"pistols": [
@@ -1596,7 +1535,6 @@
 				"enclave_power_armor"
 			]
 		},
-		"cost_armored": 95,
 		"cost": 87,
 		"factions": [
 			"enc"
@@ -1605,7 +1543,6 @@
 		"preview": "enclavesoldier"
 	},
 	{
-		"cost_armored": 33,
 		"cost": 28,
 		"default_equipment": {
 			"pistols": [
@@ -1634,7 +1571,6 @@
 		]
 	},
 	{
-		"cost_armored": 180,
 		"cost": 180,
 		"factions": [
 			"enc"
@@ -1652,7 +1588,6 @@
 		"unique_code": "frank_horrigan_1"
 	},
 	{
-		"cost_armored": 190,
 		"cost": 190,
 		"factions": [
 			"enc"
@@ -1670,7 +1605,6 @@
 		"unique_code": "frank_horrigan_2"
 	},
 	{
-		"cost_armored": 80,
 		"cost": 80,
 		"factions": [
 			"enc"
@@ -1688,7 +1622,6 @@
 		"unique_code": "frank_horrigan_3"
 	},
 	{
-		"cost_armored": 90,
 		"cost": 100,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -1709,7 +1642,6 @@
 		"preview": "hellfiretrooper"
 	},
 	{
-		"cost_armored": 88,
 		"cost": 79,
 		"factions": [
 			"crt",
@@ -1726,7 +1658,6 @@
 		"unique_code": "lorenzo_cabot"
 	},
 	{
-		"cost_armored": 57,
 		"cost": 57,
 		"default_equipment": {
 			"pistols": [
@@ -1740,7 +1671,6 @@
 		"preview": "lieutenant"
 	},
 	{
-		"cost_armored": 75,
 		"cost": 69,
 		"default_equipment": {
 			"rifles": [
@@ -1832,7 +1762,6 @@
 		]
 	},
 	{
-		"cost_armored": 45,
 		"cost": 40,
 		"default_equipment": {
 			"pistols": [
@@ -1861,7 +1790,6 @@
 		]
 	},
 	{
-		"cost_armored": 85,
 		"cost": 93,
 		"default_equipment": {
 			"pistols": [
@@ -1881,7 +1809,6 @@
 		"preview": "teslasoldier"
 	},
 	{
-		"cost_armored": 60,
 		"cost": 60,
 		"default_equipment": {
 			"melee": [
@@ -1959,7 +1886,6 @@
 		]
 	},
 	{
-		"cost_armored": 55,
 		"cost": 51,
 		"default_equipment": {
 			"melee": [
@@ -1978,7 +1904,6 @@
 		"unique_code": "arcade_gannon"
 	},
 	{
-		"cost_armored": 33,
 		"cost": 56,
 		"default_equipment": {
 			"rifles": [
@@ -2010,7 +1935,6 @@
 		"unique_code": "ed-e"
 	},
 	{
-		"cost_armored": 69,
 		"cost": 62,
 		"default_equipment": {
 			"pistols": [
@@ -2044,7 +1968,6 @@
 		"unique_code": "rex"
 	},
 	{
-		"cost_armored": 95,
 		"cost": 92,
 		"factions": [
 			"srv",
@@ -2058,7 +1981,6 @@
 		"unique_code": "the_burned_man"
 	},
 	{
-		"cost_armored": 125,
 		"cost": 80,
 		"default_equipment": {
 			"rifles": [
@@ -2082,7 +2004,6 @@
 		"unique_code": "the_courier"
 	},
 	{
-		"cost_armored": 68,
 		"cost": 52,
 		"default_equipment": {
 			"melee": [
@@ -2098,7 +2019,6 @@
 		"unique_code": "veronica"
 	},
 	{
-		"cost_armored": 112,
 		"cost": 101,
 		"default_equipment": {
 			"rifles": [
@@ -2121,7 +2041,6 @@
 		"unique_code": "lily"
 	},
 	{
-		"cost_armored": 116,
 		"cost": 100,
 		"factions": [
 			"mut",
@@ -2138,7 +2057,6 @@
 		"unique_code": "marcus"
 	},
 	{
-		"cost_armored": 76,
 		"cost": 75,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -2160,7 +2078,6 @@
 		]
 	},
 	{
-		"cost_armored": 128,
 		"cost": 117,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -2251,7 +2168,6 @@
 		]
 	},
 	{
-		"cost_armored": 115,
 		"cost": 113,
 		"default_equipment": {
 			"rifles": [
@@ -2265,7 +2181,6 @@
 		"preview": "1streconsharpshooter"
 	},
 	{
-		"cost_armored": 105,
 		"cost": 100,
 		"default_equipment": {
 			"rifles": [
@@ -2281,7 +2196,6 @@
 		"unique_code": "boone"
 	},
 	{
-		"cost_armored": 85,
 		"cost": 73,
 		"default_equipment": {
 			"pistols": [
@@ -2296,7 +2210,6 @@
 		"unique_code": "chief_hanlon"
 	},
 	{
-		"cost_armored": 87,
 		"cost": 72,
 		"default_equipment": {
 			"pistols": [
@@ -2311,7 +2224,6 @@
 		"unique_code": "general_lee_oliver"
 	},
 	{
-		"cost_armored": 69,
 		"cost": 66,
 		"default_equipment": {
 			"pistols": [
@@ -2325,7 +2237,6 @@
 		"preview": "ncrcivilianranger"
 	},
 	{
-		"cost_armored": 58,
 		"cost": 50,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -2342,7 +2253,6 @@
 		"preview": "ncrheavytrooper"
 	},
 	{
-		"cost_armored": 72,
 		"cost": 50,
 		"default_equipment": {
 			"rifles": [
@@ -2356,7 +2266,6 @@
 		"preview": "ncrpatrolranger"
 	},
 	{
-		"cost_armored": 39,
 		"cost": 31,
 		"default_equipment": {
 			"rifles": [
@@ -2370,7 +2279,6 @@
 		"preview": "ncrtrooper"
 	},
 	{
-		"cost_armored": 37,
 		"cost": 30,
 		"default_equipment": {
 			"melee": [
@@ -2384,7 +2292,6 @@
 		"preview": "ncrtroopermp"
 	},
 	{
-		"cost_armored": 102,
 		"cost": 57,
 		"default_equipment": {
 			"rifles": [
@@ -2401,7 +2308,6 @@
 		"preview": "centurion"
 	},
 	{
-		"cost_armored": 87,
 		"cost": 82,
 		"default_equipment": {
 			"melee": [
@@ -2415,7 +2321,6 @@
 		"preview": "houndmaster"
 	},
 	{
-		"cost_armored": 141,
 		"cost": 108,
 		"default_equipment": {
 			"melee": [
@@ -2433,7 +2338,6 @@
 		"unique_code": "legate_lanius"
 	},
 	{
-		"cost_armored": 57,
 		"cost": 56,
 		"default_equipment": {
 			"melee": [
@@ -2447,7 +2351,6 @@
 		"preview": "legionexplorer"
 	},
 	{
-		"cost_armored": 75,
 		"cost": 71,
 		"default_equipment": {
 			"rifles": [
@@ -2461,7 +2364,6 @@
 		"preview": "legionaryscout"
 	},
 	{
-		"cost_armored": 97,
 		"cost": 63,
 		"default_equipment": {
 			"melee": [
@@ -2476,7 +2378,6 @@
 		"unique_code": "lucius"
 	},
 	{
-		"cost_armored": 75,
 		"cost": 63,
 		"default_equipment": {
 			"melee": [
@@ -2490,7 +2391,6 @@
 		"preview": "praetorianguard"
 	},
 	{
-		"cost_armored": 34,
 		"cost": 32,
 		"default_equipment": {
 			"melee": [
@@ -2507,7 +2407,6 @@
 		"preview": "primelegionary"
 	},
 	{
-		"cost_armored": 28,
 		"cost": 26,
 		"default_equipment": {
 			"melee": [
@@ -2524,7 +2423,6 @@
 		"preview": "recruitlegionary"
 	},
 	{
-		"cost_armored": 54,
 		"cost": 47,
 		"default_equipment": {
 			"pistols": [
@@ -2541,7 +2439,6 @@
 		"preview": "veterandecanus"
 	},
 	{
-		"cost_armored": 95,
 		"cost": 73,
 		"default_equipment": {
 			"rifles": [
@@ -2555,7 +2452,6 @@
 		"preview": "vexillarius"
 	},
 	{
-		"cost_armored": 80,
 		"cost": 72,
 		"default_equipment": {
 			"melee": [
@@ -2570,7 +2466,6 @@
 		"unique_code": "vulpes_inculta"
 	},
 	{
-		"cost_armored": 125,
 		"cost": 86,
 		"default_equipment": {
 			"rifles": [
@@ -2584,7 +2479,6 @@
 		"preview": "ncrveteranranger"
 	},
 	{
-		"cost_armored": 1000,
 		"cost": 1000,
 		"factions": [
 			"bos"
@@ -2711,7 +2605,6 @@
 		]
 	},
 	{
-		"cost_armored": 36,
 		"cost": 36,
 		"default_equipment": {
 			"pistols": [
@@ -2725,7 +2618,6 @@
 		"preview": "gunnerconscript"
 	},
 	{
-		"cost_armored": 53,
 		"cost": 46,
 		"default_equipment": {
 			"rifles": [
@@ -2739,7 +2631,6 @@
 		"preview": "gunnerprivate"
 	},
 	{
-		"cost_armored": 68,
 		"cost": 60,
 		"default_equipment": {
 			"rifles": [
@@ -2753,7 +2644,6 @@
 		"preview": "gunnersergeant"
 	},
 	{
-		"cost_armored": 96,
 		"cost": 75,
 		"default_equipment": {
 			"rifles": [
@@ -2770,7 +2660,6 @@
 		"preview": "gunnercommander"
 	},
 	{
-		"cost_armored": 119,
 		"cost": 115,
 		"default_equipment": {
 			"thrown": {
@@ -2791,7 +2680,6 @@
 		"preview": "tessa"
 	},
 	{
-		"cost_armored": 130,
 		"cost": 122,
 		"factions": [
 			"gun"
@@ -2807,7 +2695,6 @@
 		"preview": "lieutenantclint"
 	},
 	{
-		"cost_armored": 94,
 		"cost": 71,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -2822,7 +2709,6 @@
 		"preview": "sergeantbaker"
 	},
 	{
-		"cost_armored": 112,
 		"cost": 97,
 		"default_equipment": {
 			"rifles": [
@@ -2837,7 +2723,6 @@
 		"preview": "desdemona"
 	},
 	{
-		"cost_armored": 63,
 		"cost": 57,
 		"default_equipment": {
 			"pistols": [
@@ -2852,7 +2737,6 @@
 		"unique_code": "drcarrington"
 	},
 	{
-		"cost_armored": 65,
 		"cost": 63,
 		"default_equipment": {
 			"pistols": [
@@ -2867,7 +2751,6 @@
 		"unique_code": "drummerboy"
 	},
 	{
-		"cost_armored": 79,
 		"cost": 72,
 		"default_equipment": {
 			"pistols": [
@@ -2882,7 +2765,6 @@
 		"unique_code": "mrtims"
 	},
 	{
-		"cost_armored": 60,
 		"cost": 55,
 		"default_equipment": {
 			"pistols": [
@@ -2897,7 +2779,6 @@
 		"unique_code": "tinkertom"
 	},
 	{
-		"cost_armored": 91,
 		"cost": 65,
 		"default_equipment": {
 			"heavy_weapons": [
@@ -2912,7 +2793,6 @@
 		"unique_code": "glory"
 	},
 	{
-		"cost_armored": 85,
 		"cost": 75,
 		"default_equipment": {
 			"rifles": [
@@ -2930,7 +2810,6 @@
 		"unique_code": "deacon"
 	},
 	{
-		"cost_armored": 76,
 		"cost": 53,
 		"default_equipment": {
 			"rifles": [
@@ -3045,7 +2924,6 @@
 		"unique_code": "curie"
 	},
 	{
-		"cost_armored": 179,
 		"cost": 150,
 		"factions": [
 			"srv"
@@ -3110,7 +2988,6 @@
 		]
 	},
 	{
-		"cost_armored": 65,
 		"cost": 63,
 		"default_equipment": {
 			"pistols": [
@@ -3130,7 +3007,6 @@
 		"unique_code": "jakefinch"
 	},
 	{
-		"cost_armored": 120,
 		"cost": 105,
 		"default_equipment": {
 			"pistols": [
@@ -3155,7 +3031,6 @@
 		"unique_code": "slag"
 	},
 	{
-		"cost_armored": 63,
 		"cost": 56,
 		"default_equipment": {
 			"melee": [
@@ -3174,7 +3049,6 @@
 		"unique_code": "bedlam"
 	},
 	{
-		"cost_armored": 43,
 		"cost": 37,
 		"default_equipment": {
 			"melee": [
@@ -3192,7 +3066,6 @@
 		"preview": "forged"
 	},
 	{
-		"cost_armored": 71,
 		"cost": 64,
 		"default_equipment": {
 			"pistols": [
@@ -3214,7 +3087,6 @@
 		"unique_code": "wiseman"
 	},
 	{
-		"cost_armored": 44,
 		"cost": 36,
 		"default_equipment": {
 			"pistols": [
@@ -3239,7 +3111,6 @@
 		"unique_code": "arlenglass"
 	},
 	{
-		"cost_armored": 67,
 		"cost": 59,
 		"default_equipment": {
 			"pistols": [
@@ -3261,7 +3132,6 @@
 		"unique_code": "holly"
 	},
 	{
-		"cost_armored": 58,
 		"cost": 50,
 		"default_equipment": {
 			"pistols": [
@@ -3286,7 +3156,6 @@
 		"unique_code": "deidre"
 	},
 	{
-		"cost_armored": 47,
 		"cost": 39,
 		"default_equipment": {
 			"pistols": [
@@ -3311,7 +3180,6 @@
 		"unique_code": "jones"
 	},
 	{
-		"cost_armored": 36,
 		"cost": 31,
 		"default_equipment": {
 			"rifles": [
@@ -3462,7 +3330,6 @@
 		]
 	},
 	{
-		"cost_armored": 37,
 		"cost": 32,
 		"factions": [
 			"enc"
@@ -3471,7 +3338,6 @@
 		"preview": "armoredtrainee"
 	},
 	{
-		"cost_armored": 85,
 		"cost": 78,
 		"factions": [
 			"srv"
@@ -3487,7 +3353,6 @@
 		"preview": "brick"
 	},
 	{
-		"cost_armored": 136,
 		"cost": 117,
 		"factions": [
 			"srv"
@@ -3501,7 +3366,6 @@
 		"preview": "butch"
 	},
 	{
-		"cost_armored": 51,
 		"cost": 46,
 		"factions": [
 			"srv"
@@ -3511,7 +3375,6 @@
 		"preview": "butcher"
 	},
 	{
-		"cost_armored": 69,
 		"cost": 61,
 		"factions": [
 			"srv"
@@ -3536,7 +3399,6 @@
 		]
 	},
 	{
-		"cost_armored": 74,
 		"cost": 70,
 		"factions": [
 			"srv"
@@ -3550,7 +3412,6 @@
 		"preview": "donovan"
 	},
 	{
-		"cost_armored": 67,
 		"cost": 52,
 		"factions": [
 			"bos"
@@ -3560,7 +3421,6 @@
 		"preview": "elderlyons"
 	},
 	{
-		"cost_armored": 141,
 		"cost": 89,
 		"factions": [
 			"srv",
@@ -3571,7 +3431,6 @@
 		"preview": "fawkes"
 	},
 	{
-		"cost_armored": 126,
 		"cost": 125,
 		"factions": [
 			"srv"
@@ -3584,7 +3443,6 @@
 		"preview": "lonewanderer"
 	},
 	{
-		"cost_armored": 112,
 		"cost": 107,
 		"factions": [
 			"srv"
@@ -3597,7 +3455,6 @@
 		"preview": "lucassimms"
 	},
 	{
-		"cost_armored": 60,
 		"cost": 57,
 		"factions": [
 			"srv",
@@ -3609,7 +3466,6 @@
 		"preview": "madisonli"
 	},
 	{
-		"cost_armored": 52,
 		"cost": 51,
 		"factions": [
 			"srv"
@@ -3623,7 +3479,6 @@
 		"preview": "moirabrown"
 	},
 	{
-		"cost_armored": 63,
 		"cost": 51,
 		"factions": [
 			"bos"
@@ -3632,7 +3487,6 @@
 		"preview": "reconknight"
 	},
 	{
-		"cost_armored": 72,
 		"cost": 65,
 		"factions": [
 			"srv"
@@ -3642,7 +3496,6 @@
 		"preview": "reilly"
 	},
 	{
-		"cost_armored": 33,
 		"cost": 30,
 		"factions": [
 			"srv"
@@ -3655,7 +3508,6 @@
 		"preview": "rosameitner"
 	},
 	{
-		"cost_armored": 140,
 		"cost": 139,
 		"factions": [
 			"bos"
@@ -3671,7 +3523,6 @@
 		"preview": "sarahlyons"
 	},
 	{
-		"cost_armored": 78,
 		"cost": 63,
 		"factions": [
 			"bos"
@@ -3681,7 +3532,6 @@
 		"preview": "scriberothchild"
 	},
 	{
-		"cost_armored": 119,
 		"cost": 118,
 		"factions": [
 			"bos"
@@ -3697,7 +3547,6 @@
 		"preview": "starpaladincross"
 	},
 	{
-		"cost_armored": 27,
 		"cost": 24,
 		"factions": [
 			"srv"
@@ -3707,7 +3556,6 @@
 		"preview": "theo"
 	},
 	{
-		"cost_armored": 62,
 		"cost": 59,
 		"factions": [
 			"srv"
@@ -3720,7 +3568,6 @@
 		"preview": "threedog"
 	},
 	{
-		"cost_armored": 61,
 		"cost": 60,
 		"factions": [
 			"enc"

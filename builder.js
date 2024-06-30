@@ -170,25 +170,6 @@ function localizationLoaded(json){
 			mappedUnits[character.name] = character;
 		}
 
-		if(checkPreview)
-		{
-			var shouldHaveArmorCost = !character.hasOwnProperty("tags")
-				|| (!character.tags.includes("robot")
-				&& !character.tags.includes("creature")
-				&& !character.tags.includes("synth")
-				&& !character.tags.includes("dog"));
-			if(shouldHaveArmorCost){
-				if(character.factions.includes("coa")
-				|| character.factions.includes("dis")
-				|| character.factions.includes("pak")){
-					shouldHaveArmorCost = false;
-				}
-			}
-			if(shouldHaveArmorCost && !character.hasOwnProperty("cost_armored")){
-				missingArmorValue += character.name + ", ";
-			}
-		}
-
 		if(!character.hasOwnProperty("preview")){
 			missingPreview += character.name+",";
 		}else if (checkPreview){
@@ -734,25 +715,6 @@ function addCharacter(characterElement, presetInfo){
 	displaySection.appendChild(cardDiv);
 
 	addLeaderSection(headerRightSection, character, displaySection);
-
-	if(characterElement.hasOwnProperty("cost_armored")){
-		var armoredCheckBox = document.createElement('input');
-		armoredCheckBox.type = 'checkbox';
-		armoredCheckBox.checked = character.hasOwnProperty("armored");
-		var armoredDescription = document.createElement("span");
-		armoredDescription.setAttribute("class", "heroicDescription");
-		armoredDescription.appendChild(document.createTextNode("Use Armor on Card (" + characterElement.cost_armored +")"));
-		headerRightSection.appendChild(armoredDescription);
-		headerRightSection.appendChild(armoredCheckBox);
-		armoredCheckBox.addEventListener("click", function(){
-			if(armoredCheckBox.checked){
-				character.armored = 0;
-			}else{
-				delete character["armored"];
-			}
-			updateCaps();
-		});
-	}
 
 	//TODO: Determine if the model can be made heroic
 	var heroicSection = document.createElement("div");
@@ -2028,14 +1990,6 @@ function updateCaps(){
 
 			var warningSection = unitDisplay.querySelector(".warning");
 			warningSection.innerHTML = "";
-
-			if(characterTemplate.hasOwnProperty("cost_armored") && character.hasOwnProperty("armored")){
-				baseCost = characterTemplate.cost_armored;
-				armorSources++;
-				var oldPointsWarning = document.createElement("p");
-				oldPointsWarning.innerHTML = "This is <i>Not Legal</i> as of Wave 9/Nuka World: units need to purchase equipment to set armor values. This option is only provided for those who want to use the old points and armor values in tandem.";
-				warningSection.appendChild(oldPointsWarning);
-			}
 
 			unitCost += baseCost * modelCount;
 
