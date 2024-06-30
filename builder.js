@@ -21,8 +21,6 @@ var totalCaps;
 var faction;
 var force;
 
-var settlementMode;
-
 var appliedFilters = [];
 var possibleFilters = [
 	"bos",
@@ -45,6 +43,8 @@ var possibleFilters = [
 	"slg",
 	"srv"
 ]
+var filter_vtap = false;
+var vtap_property = "vault_tec_approved_profile";
 
 var factionReferences = {
 	"bos":"reference_brotherhoodofsteel",
@@ -172,25 +172,6 @@ function localizationLoaded(json){
 			mappedUnits[character.name] = character;
 		}
 
-		if(checkPreview)
-		{
-			var shouldHaveArmorCost = !character.hasOwnProperty("tags")
-				|| (!character.tags.includes("robot")
-				&& !character.tags.includes("creature")
-				&& !character.tags.includes("synth")
-				&& !character.tags.includes("dog"));
-			if(shouldHaveArmorCost){
-				if(character.factions.includes("coa")
-				|| character.factions.includes("dis")
-				|| character.factions.includes("pak")){
-					shouldHaveArmorCost = false;
-				}
-			}
-			if(shouldHaveArmorCost && !character.hasOwnProperty("cost_armored")){
-				missingArmorValue += character.name + ", ";
-			}
-		}
-
 		if(!character.hasOwnProperty("preview")){
 			missingPreview += character.name+",";
 		}else if (checkPreview){
@@ -199,49 +180,22 @@ function localizationLoaded(json){
 			}
 		}
 
-		if(!character.hasOwnProperty("battle_mode_packs")){
-			if(!character.hasOwnProperty("must_carry"))
-			{
-				console.log(character.name + "has no battle mode packs");
-			}
-			return;
-		}
-
-		if(!character.hasOwnProperty("default_equipment") && !character.hasOwnProperty("must_carry") && !character.hasOwnProperty("vault_tec_approved_profile")){
+		if(!character.hasOwnProperty("default_equipment") && !character.hasOwnProperty("must_carry") && !character.hasOwnProperty(vtap_property)){
 			missingDefaults += character.name + " ";
 			return;
 		}
-
-		character.battle_mode_packs.forEach(function(pack){
-			if(!upgrades.battle_mode_packs.hasOwnProperty(pack)){
-				console.log(character.name + " has bad pack name " + pack);
-			}
-		})
 	});
 
 	console.log("Missing default equipment: " + missingDefaults);
 
 	var missingItems = "";
-	var allBattleModeItems = [];
-	Object.keys(upgrades.battle_mode_packs).forEach(function(pack){
-		upgrades.battle_mode_packs[pack].forEach(function(item){
-			allBattleModeItems.push(item);
-			var split = item.split('.');
-			var upgrade = getUpgrade(split[0], split[1]);
-			if(upgrade == null){
-				missingItems += pack.name + ": " + item + ",";
-			}
-		});
-	});
-	var itemsWithoutBattleModeGroup = "";
 
 	Object.keys(upgrades).forEach(function(section){
 		if(!loc.hasOwnProperty(section)){
 			missingKeys += section + ", ";
 		}
-		if(section == "battle_mode_packs"){
-			return;
-		}
+
+		console.log("Evaluating " + section);
 		upgrades[section].forEach(function(upgrade){
 			if(!loc.hasOwnProperty(upgrade.name)){
 				missingKeys += upgrade.name + ", ";
@@ -249,18 +203,10 @@ function localizationLoaded(json){
 			if(!upgrade.hasOwnProperty("preview")){
 				missingPreview += upgrade.name+",";
 			}else if (checkPreview){
-			if(!urlExists("images/" + upgrade["preview"] + ".png")) {
-				badPreview += upgrade["preview"] + " ";
+				if(!urlExists("images/" + upgrade["preview"] + ".png")) {
+					badPreview += upgrade["preview"] + " ";
+				}
 			}
-
-			console.log("Checking "+section + "."+upgrade.name)
-			var index = allBattleModeItems.indexOf(section + "."+upgrade.name)
-			if(index < 0){
-				itemsWithoutBattleModeGroup += section + "."+upgrade.name + ", "
-			} else {
-				console.log("Item: " + section + "."+upgrade.name + " has index " + index);
-			}
-		}
 		});
 	});
 
@@ -276,7 +222,6 @@ function localizationLoaded(json){
 	if(missingArmorValue.length > 0){
 		console.log("Missing Armor Values: " + missingArmorValue);
 	}
-	console.log("Items Without Battle Mode Group: " + itemsWithoutBattleModeGroup);
 	if(checkPreview){
 		console.log("Bad preview links: " + badPreview);
 	}
@@ -373,16 +318,10 @@ function clearForce(){
 	force.leader.perkIndex = 0;
 	force.characters = [];
 
-	settlementMode = false;
-
 	buildAddSection();
 
 	totalCaps = 0;
 	updateCaps();
-}
-
-function setSettlementMode(nowSettlementMode){
-	settlementMode = nowSettlementMode;
 }
 
 function buildAddSection() {
@@ -397,6 +336,10 @@ function buildAddSection() {
 		var can_add = true;
 
 		if(appliedFilters.length > 0 && characterElement.hasOwnProperty("factions") && !characterElement.factions.includes(appliedFilters[0])){
+			return;
+		}
+
+		if(filter_vtap && characterElement.hasOwnProperty(vtap_property)){
 			return;
 		}
 
@@ -427,35 +370,28 @@ function buildAddSection() {
 		pointsSpan.appendChild(pointsNode);
 		if(can_add){
 			button.addEventListener("click", function() { 
-				var newCharacter = addCharacter(characterElement, {}); //IDEA: pass in default equipment, but filter it out if its battle mode?
+				var newCharacter = addCharacter(characterElement, {});
 				if(characterElement.hasOwnProperty("default_equipment")){
 					for (var [slot, value] of Object.entries(characterElement.default_equipment)){
 						if(wear_slots.indexOf(slot) >= 0){
 							newCharacter[slot] = characterElement.default_equipment[slot];
 						}
-
 						if(carry_slots.indexOf(slot) >= 0){
 							var items = characterElement.default_equipment[slot];
 							items.forEach(item => {
-								var optionElement = getUpgrade(slot, item);
-								if(settlementMode || inBattleModeKit(optionElement, newCharacter, slot)){
-									if(!newCharacter.hasOwnProperty(slot)){
-										newCharacter[slot]=[];
-									}
-									newCharacter[slot].push(item);
+								if(!newCharacter.hasOwnProperty(slot)){
+									newCharacter[slot]=[];
 								}
+								newCharacter[slot].push(item);
 							});
 						}
 
 						if(consumable_slots.indexOf(slot) >= 0){
 							for(var [item, count] of Object.entries(value)) {
-								var optionElement = getUpgrade(slot, item);
-								if(settlementMode || inBattleModeKit(optionElement, newCharacter, slot)){
-									if(!newCharacter.hasOwnProperty(slot)){
-										newCharacter[slot]={};
-									}
-									newCharacter[slot][item]=count;
+								if(!newCharacter.hasOwnProperty(slot)){
+									newCharacter[slot]={};
 								}
+								newCharacter[slot][item]=count;
 							}
 						}
 					}
@@ -476,6 +412,20 @@ function buildAddSection() {
 
 function buildFiltersSection(){
 	var filtersSection = document.createElement("div");
+	var vtapFilterSection = document.createElement("div");
+	
+	var vtapFilterCheckBox = document.createElement('input');
+	vtapFilterCheckBox.type = 'checkbox';
+	vtapFilterCheckBox.checked = !filter_vtap;
+	vtapFilterCheckBox.addEventListener("click", function(){
+		filter_vtap = !filter_vtap;
+		vtapFilterCheckBox.checked = !filter_vtap;
+		buildAddSection();
+	});
+	vtapFilterSection.appendChild(document.createTextNode("Show Vault-Tec Approved Profiles:"));
+	vtapFilterSection.appendChild(vtapFilterCheckBox);
+	filtersSection.append(vtapFilterSection);
+
 	filtersSection.setAttribute("class", "filters row");
 	var list = document.createElement("ul");
 	possibleFilters.forEach(function(filter){
@@ -493,21 +443,6 @@ function buildFiltersSection(){
 		list.appendChild(filterEntry);
 	});
 	filtersSection.appendChild(list);
-
-	var settlementModeButton = document.createElement("button");
-	if(settlementMode){
-		settlementModeButton.setAttribute("class", "settlement_mode_enabled");
-		settlementModeButton.appendChild(document.createTextNode(loc["settlement_mode"]));
-	}else{
-		settlementModeButton.setAttribute("class", "settlement_mode_disabled");
-		settlementModeButton.appendChild(document.createTextNode(loc["battle_mode"]));
-	}
-	settlementModeButton.addEventListener("click", function(){
-		settlementMode = !settlementMode;
-		loadForceFromString(getStringForForce());
-	})
-
-	list.appendChild(settlementModeButton);
 
 	return filtersSection;
 }
@@ -621,6 +556,13 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 
 function getModSectionFor(character, slotType, carryInfo, display){
 	var modSection = document.createElement("div");
+
+	if(carryInfo != null){
+		var upgrade = getUpgrade(slotType, carryInfo.name);
+		if(upgrade.hasOwnProperty("unique")){
+			return modSection;
+		}
+	}
 
 	var modText = document.createElement("span");
 	modText.appendChild(document.createTextNode(loc["mod_section"]));
@@ -789,7 +731,7 @@ function addCharacter(characterElement, presetInfo){
 	} else {
 
 		var imageClass = "fullcard";
-		if(characterElement.hasOwnProperty("vault_tec_approved_profile")){
+		if(characterElement.hasOwnProperty(vtap_property)){
 			imageClass = "vaulttecapprovedprofile";
 		}
 
@@ -799,70 +741,42 @@ function addCharacter(characterElement, presetInfo){
 
 	addLeaderSection(headerRightSection, character, displaySection);
 
-	if(characterElement.hasOwnProperty("cost_armored")){
-		var armoredCheckBox = document.createElement('input');
-		armoredCheckBox.type = 'checkbox';
-		armoredCheckBox.checked = character.hasOwnProperty("armored");
-		var armoredDescription = document.createElement("span");
-		armoredDescription.setAttribute("class", "heroicDescription");
-		armoredDescription.appendChild(document.createTextNode("Use Armor on Card (" + characterElement.cost_armored +")"));
-		headerRightSection.appendChild(armoredDescription);
-		headerRightSection.appendChild(armoredCheckBox);
-		armoredCheckBox.addEventListener("click", function(){
-			if(armoredCheckBox.checked){
-				character.armored = 0;
-			}else{
-				delete character["armored"];
+	var heroicSection = document.createElement("div");
+	var addHeroic = false;
+	heroicSection.setAttribute("class", "heroic");
+	upgrades.heroic.forEach((heroicUpgrade) =>{
+		var heroicCheckBox = document.createElement('input');
+		heroicCheckBox.type = 'checkbox';
+		if(canEquip(heroicUpgrade, characterElement)){
+			if(character.hasOwnProperty("heroic"))
+			{
+				heroicCheckBox.checked = character.heroic == heroicUpgrade.name;
 			}
-			updateCaps();
-		});
-	}
-
-	var addHeroic = true;
-	var heroicSection;
-	if(characterElement.hasOwnProperty("battle_mode_packs")){
-		characterElement.battle_mode_packs.forEach(pack =>{
-			upgrades.battle_mode_packs[pack].forEach(upgrade => {
-				if(upgrade.split('.')[0] == "heroic")
-				{
-					if(addHeroic){
-						heroicSection = document.createElement("div");
-						heroicSection.setAttribute("class", "heroic");
-						addHeroic = false;
-					}
-					var heroicCheckBox = document.createElement('input');
-					heroicCheckBox.type = 'checkbox';
-					var heroicUpgrade = getUpgrade("heroic", upgrade.split('.')[1]);
-					if(character.hasOwnProperty("heroic"))
-					{
-						heroicCheckBox.checked = character.heroic == heroicUpgrade.name;
-					}
-					var heroicDescription = document.createElement("span");
-					heroicDescription.setAttribute("class", "heroicDescription");
-					heroicDescription.appendChild(document.createTextNode(loc[heroicUpgrade.name] + " (" + heroicUpgrade.cost +")"));
-					heroicSection.appendChild(heroicDescription);
-					heroicSection.appendChild(heroicCheckBox);
-					var cardDisplay = addCardToDisplay(displaySection, null);
-					if(character.hasOwnProperty("heroic") && character.heroic == heroicUpgrade.name){
-						setCardInDisplay(cardDisplay, heroicUpgrade.preview);
-					}
-					heroicCheckBox.addEventListener("click", function(){
-						if(heroicCheckBox.checked){
-							character.heroic = heroicUpgrade.name;
-							setCardInDisplay(cardDisplay, heroicUpgrade.preview);
-						}else{
-							delete character["heroic"];
-							setCardInDisplay(cardDisplay, null);
-						}
-						updateCaps();
-					});
-					addPreviewTooltip(heroicUpgrade, heroicDescription);
+			var heroicDescription = document.createElement("span");
+			heroicDescription.setAttribute("class", "heroicDescription");
+			heroicDescription.appendChild(document.createTextNode(loc[heroicUpgrade.name] + " (" + heroicUpgrade.cost +")"));
+			heroicSection.appendChild(heroicDescription);
+			heroicSection.appendChild(heroicCheckBox);
+			var cardDisplay = addCardToDisplay(displaySection, null);
+			if(character.hasOwnProperty("heroic") && character.heroic == heroicUpgrade.name){
+				setCardInDisplay(cardDisplay, heroicUpgrade.preview);
+			}
+			heroicCheckBox.addEventListener("click", function(){
+				if(heroicCheckBox.checked){
+					character.heroic = heroicUpgrade.name;
+					setCardInDisplay(cardDisplay, heroicUpgrade.preview);
+				}else{
+					delete character["heroic"];
+					setCardInDisplay(cardDisplay, null);
 				}
+				updateCaps();
 			});
-		});
-		if(!addHeroic){
-			headerRightSection.appendChild(heroicSection);
+			addPreviewTooltip(heroicUpgrade, heroicDescription);
+			addHeroic = true;
 		}
+	});
+	if(addHeroic){
+		headerRightSection.appendChild(heroicSection);
 	}
 
 	var costSection = document.createElement("div");
@@ -998,19 +912,15 @@ function addCharacter(characterElement, presetInfo){
 		equipmentSection.appendChild(mustCarrySection);
 	}
 
-	if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
-		addModdedCharacterSlots(characterElement, character, equipmentSection, settlementMode, displaySection);
-	} else if(!characterElement.hasOwnProperty("perks") || characterElement.perks) {
-		var perkSection = getPerkSection(character, displaySection);
-		equipmentSection.appendChild(perkSection);
-	}
-
-	if(characterElement.name != "liberty_prime") {
-		if(settlementMode){
-			addSettlementModeSlots(characterElement, character, equipmentSection, displaySection);
-		}else{
-			addBattleModeSlots(characterElement, character, equipmentSection, displaySection);
+	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty(vtap_property)) {
+		if(characterElement.hasOwnProperty("tags") && (characterElement.tags.includes("robot") || characterElement.tags.includes("creature"))){
+			addModdedCharacterSlots(characterElement, character, equipmentSection, displaySection);
+		} else if(!characterElement.hasOwnProperty("perks") || characterElement.perks) {
+			var perkSection = getPerkSection(character, displaySection);
+			equipmentSection.appendChild(perkSection);
 		}
+		
+		addSlots(characterElement, character, equipmentSection, displaySection);
 	}
 
 	showEquipment.addEventListener("click", function() {
@@ -1052,8 +962,10 @@ function addCharacter(characterElement, presetInfo){
 	charaSection.appendChild(totalCharacterCapsSection);
 	charaSection.appendChild(configureSection);
 	configureSection.appendChild(headerSection);
-	configureSection.appendChild(costSection);
-	configureSection.appendChild(equipmentSection);
+	if(characterElement.name != "liberty_prime" && !characterElement.hasOwnProperty(vtap_property)) {
+		configureSection.appendChild(costSection);
+		configureSection.appendChild(equipmentSection);
+	}
 	charaSection.appendChild(displaySection);
 
 	forceSection.appendChild(charaSection);
@@ -1078,7 +990,7 @@ function SetModelCount(displaySection, modelCount){
 	}
 }
 
-function addModdedCharacterSlots(characterElement, character, equipmentSection, isSettlementMode, displaySection){
+function addModdedCharacterSlots(characterElement, character, equipmentSection, displaySection){
 	var perkIndex1 = 0;
 	var perkIndex2 = 0;
 	var mod1 = null;
@@ -1104,7 +1016,7 @@ function addModdedCharacterSlots(characterElement, character, equipmentSection, 
 	slotDropdown1.add(emptyOption1);
 	slotDropdown2.add(emptyOption2);
 	upgrades.mods.forEach(function(mod){
-		if(canEquip(mod, characterElement.tags)){
+		if(canEquip(mod, characterElement)){
 			var option1 = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
 			var option2 = new Option(loc[mod.name] + " (" + mod.cost + ")", mod.name);
 			if(mod1 != null && mod1 == mod){
@@ -1170,7 +1082,7 @@ function updateCharacterModPreviews(slotDropdowns, slotPreviews){
 	}
 }
 
-function addSettlementModeSlots(characterElement, character, equipmentSection, displaySection){
+function addSlots(characterElement, character, equipmentSection, displaySection){
 	var firstConsumableSection = true;
 
 	var characterTags = [];
@@ -1181,7 +1093,7 @@ function addSettlementModeSlots(characterElement, character, equipmentSection, d
 	if(!characterElement.hasOwnProperty("tags") || !characterElement.tags.includes("synth"))
 	{
 		wear_slots.forEach(function(slotType) {
-			var wearSection = getWearSection(character, false, slotType, characterTags, displaySection);
+			var wearSection = getWearSection(character, false, slotType, characterElement, displaySection);
 				equipmentSection.appendChild(wearSection);
 		});
 	}
@@ -1191,11 +1103,11 @@ function addSettlementModeSlots(characterElement, character, equipmentSection, d
 		&& characterElement.hasOwnProperty("must_carry")){
 		//Skip all carry slots, bc this character cannot carry other weapons.
 		//They can't carry other equipment other, besides specific gear
-		var consumeableSection = getConsumeableSection(character, characterElement, "gear", characterTags, false, displaySection);
+		var consumeableSection = getConsumeableSection(character, characterElement, "gear", characterTags, displaySection);
 		equipmentSection.appendChild(consumeableSection);
 	}else{
 		carry_slots.forEach(function(slotType) {
-			var carrySection = getCarrySection(character, false, slotType, characterTags, displaySection);
+			var carrySection = getCarrySection(character, slotType, characterElement, displaySection);
 			equipmentSection.appendChild(carrySection);
 		});
 
@@ -1204,50 +1116,12 @@ function addSettlementModeSlots(characterElement, character, equipmentSection, d
 				addUnitUpgradesHeader(equipmentSection);
 				firstConsumableSection = false;
 			}
-			var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, false, displaySection);
+			var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, displaySection);
 			equipmentSection.appendChild(consumeableSection);
 		});
 	}
 
 	
-}
-
-function addBattleModeSlots(characterElement, character, equipmentSection, displaySection){
-
-	var characterTags = [];
-	if(characterElement.hasOwnProperty("tags")){
-		characterTags = characterElement.tags;
-	}
-	if(!characterElement.hasOwnProperty("tags") || !characterElement.tags.includes("synth"))
-	{
-		wear_slots.forEach(function(slotType) {
-			if(slotType != "power_armor" || (characterElement.hasOwnProperty("battle_mode_packs") && characterElement.battle_mode_packs.includes("power_armor"))){
-				var wearSection = getWearSection(character, true, slotType, characterTags, displaySection);
-					equipmentSection.appendChild(wearSection);
-			}
-		});
-	}
-
-	if(characterElement.hasOwnProperty("tags") 
-		&& (characterElement.tags.includes("robot") || characterElement.tags.includes("creature")) 
-		&& characterElement.hasOwnProperty("must_carry")){
-		//Skip all carry slots, bc this character cannot carry other weapons.
-		//They can't carry other equipment other, besides specific gear
-		var consumeableSection = getConsumeableSection(character, characterElement, "gear", characterTags, false, displaySection);
-		equipmentSection.appendChild(consumeableSection);
-	}else{
-		carry_slots.forEach(function (slotType) {
-			var carrySection = getCarrySection(character, true, slotType, characterTags, displaySection);
-			equipmentSection.appendChild(carrySection);
-		});
-
-		addUnitUpgradesHeader(equipmentSection);
-
-		consumable_slots.forEach(function (slotType) {
-			var consumeableSection = getConsumeableSection(character, characterElement, slotType, characterTags, true, displaySection);
-			equipmentSection.appendChild(consumeableSection);
-		});
-	}
 }
 
 function addUnitUpgradesHeader(equipmentSection){
@@ -1256,7 +1130,7 @@ function addUnitUpgradesHeader(equipmentSection){
 	equipmentSection.appendChild(unitUpgradesHeader);
 }
 
-function getConsumeableSection(character, characterElement, slotType, characterTags, isBattleMode, displaySection){
+function getConsumeableSection(character, characterElement, slotType, characterTags, displaySection){
 	var consumeableSection = document.createElement("div");
 	consumeableSection.setAttribute("class", "carry-section");
 	var consumeableHeader = document.createElement("h2");
@@ -1277,11 +1151,13 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 	var optionIndex = 0;
 
 	var optionSection = document.createElement("div"); 
+	var equippedItem = false;
 
 	upgrades[slotType].forEach(function(optionElement){
-		if(optionElement.cost != 0 && canEquip(optionElement, characterTags) && (!isBattleMode || inBattleModeKit(optionElement, character, slotType))){
+		if(canEquip(optionElement, characterElement)){
 			if(character.hasOwnProperty(slotType) && character[slotType].hasOwnProperty(optionElement.name)){
 				optionSection.appendChild(getConsumableEntry(optionElement, character, slotType, optionSection, slotDropdown, cardDisplay));
+				equippedItem = true;
 			}else{
 				slotDropdown.add(new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name));
 			}
@@ -1303,7 +1179,7 @@ function getConsumeableSection(character, characterElement, slotType, characterT
 		updateCaps();
 	};
 
-	if(slotDropdown.length > 1)
+	if(slotDropdown.length > 1 || equippedItem)
 	{
 		consumeableSection.appendChild(consumeableHeader);
 		consumeableSection.appendChild(optionSection);
@@ -1365,35 +1241,23 @@ function getConsumableEntry(optionElement, character, slotType, optionSection, s
 	return entrySection;
 }
 
-function inBattleModeKit(optionElement, character, slotType) {
-
-	var characterElement = getCharacterById(character.name);
-
-	if(!characterElement.hasOwnProperty("battle_mode_packs") ){
-		return false;
-	}
-
-	if(optionElement.name.includes("power_armor") && !characterElement.battle_mode_packs.includes("power_armor")){
-		return false;
-	}
-
-	var searchName = slotType + "." + optionElement.name;
-
-	var foundItem = false;
-
-	characterElement.battle_mode_packs.forEach(function(pack){
-		if(foundItem){
-			return;
-		}
-		if(upgrades.battle_mode_packs[pack].includes(searchName)){
-			foundItem = true;
-		}
-	});
-	return foundItem;
-}
-
-function canEquip(optionElement, characterTags) {
+function canEquip(optionElement, characterElement) {
 	var allowed = true;
+
+	var characterTags = [];
+	if(characterElement.hasOwnProperty("tags")){
+		characterTags = characterElement.tags
+	}
+
+	if(optionElement.hasOwnProperty("can_carry")
+		&& optionElement.can_carry.includes(characterElement.name)){
+		return true;
+	}
+
+	if(optionElement.hasOwnProperty("restrictions")
+		&& optionElement.restrictions.includes(characterElement.name)){
+		return true;
+	}
 
 	if(characterTags.includes("dog")){
 		if(!optionElement.hasOwnProperty("restrictions")
@@ -1447,7 +1311,7 @@ function canEquip(optionElement, characterTags) {
 	return allowed;
 }
 
-function getWearSection(character, isBattleMode, slotType, characterTags, displaySection){
+function getWearSection(character, slotType, characterElement, displaySection){
 	var wearSection = document.createElement("div");
 	wearSection.setAttribute("class", "carry-section");
 
@@ -1469,7 +1333,7 @@ function getWearSection(character, isBattleMode, slotType, characterTags, displa
 
 	upgrades[slotType].forEach(function(optionElement){
 
-		if(optionElement.cost != 0 && canEquip(optionElement, characterTags) && (!isBattleMode || inBattleModeKit(optionElement, character, slotType))){
+		if(optionElement.cost != 0 && canEquip(optionElement, characterElement)){
 			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 			slotDropdown.add(option);
 			optionIndex++;
@@ -1519,7 +1383,7 @@ function getWearSection(character, isBattleMode, slotType, characterTags, displa
 	return wearSection;
 }
 
-function getCarrySection(character, isBattleMode, slotType, characterTags, displaySection){
+function getCarrySection(character, slotType, characterElement, displaySection){
 	var carrySection = document.createElement("div");
 	carrySection.setAttribute("class", "carry-section");
 	var carryHeader = document.createElement("h2");
@@ -1543,7 +1407,7 @@ function getCarrySection(character, isBattleMode, slotType, characterTags, displ
 
 	upgrades[slotType].forEach(function(option){
 		var can_equip = false;
-		if(option.cost != 0 && canEquip(option, characterTags) && (!isBattleMode || inBattleModeKit(option, character, slotType))){
+		if(option.cost != 0 && canEquip(option, characterElement)){
 			can_equip = true;
 		}
 
@@ -1906,12 +1770,7 @@ function getPerkSection(character, displaySection){
 	upgrades.perks.forEach(function(perk){
 		var hasPerk = false;
 
-		var characterTags = [];
-		if(getCharacterById(character.name).hasOwnProperty("tags"))
-		{
-			characterTags = getCharacterById(character.name).tags;
-		}
-		if(!canEquip(perk, characterTags))
+		if(!canEquip(perk, getCharacterById(character.name)))
 		{
 			return;
 		}
@@ -2016,12 +1875,8 @@ function addLeaderSection(domElement, character, display){
 
 	for(var index = 0; index < upgrades.leader.length; index++) {
 		var optionElement = upgrades.leader[index];
-		var characterTags = [];
-		if(getCharacterById(character.name).hasOwnProperty("tags")){
-			characterTags = getCharacterById(character.name).tags;
-		}
 
-		if(canEquip(optionElement, characterTags)){
+		if(canEquip(optionElement, getCharacterById(character.name))){
 			var option = new Option(loc[optionElement.name] + " (" + optionElement.cost + ")", optionElement.name);
 			perkDropdown.add(option);
 		}
@@ -2166,25 +2021,19 @@ function updateCaps(){
 			&& (characterTemplate.tags.indexOf("creature") >= 0 
 			|| characterTemplate.tags.indexOf("dog") >= 0 
 			|| characterTemplate.tags.indexOf("robot")>= 0 
-			|| characterTemplate.tags.indexOf("synth")>= 0 ))
+			|| characterTemplate.tags.indexOf("synth")>= 0
+			|| characterTemplate.tags.indexOf("legendary")>= 0
+			|| characterTemplate.tags.indexOf("armored")>= 0 ))
 			{
 				armorSources++;
 			}
 
-			if(armorSources <= 0 && characterTemplate.hasOwnProperty("vault_tec_approved_profile")){
+			if(armorSources <= 0 && characterTemplate.hasOwnProperty(vtap_property)){
 				armorSources++;
 			}
 
 			var warningSection = unitDisplay.querySelector(".warning");
 			warningSection.innerHTML = "";
-
-			if(characterTemplate.hasOwnProperty("cost_armored") && character.hasOwnProperty("armored")){
-				baseCost = characterTemplate.cost_armored;
-				armorSources++;
-				var oldPointsWarning = document.createElement("p");
-				oldPointsWarning.innerHTML = "This is <i>Not Legal</i> as of Wave 9/Nuka World: units need to purchase equipment to set armor values. This option is only provided for those who want to use the old points and armor values in tandem.";
-				warningSection.appendChild(oldPointsWarning);
-			}
 
 			unitCost += baseCost * modelCount;
 
@@ -2258,7 +2107,7 @@ function updateCaps(){
 			carry_slots.forEach(function (slotType) {
 				if(character.hasOwnProperty(slotType)){
 					character[slotType].forEach(function(item){
-						if(!characterTemplate.hasOwnProperty("equipped_pack") || !upgrades.battle_mode_packs[characterTemplate.equipped_pack].includes(slotType+"."+item))
+						if(!characterTemplate.hasOwnProperty("equipped_pack"))
 						{
 							var upgrade = getUpgrade(slotType,item);
 							var carryCost = upgrade.cost;
@@ -2323,9 +2172,11 @@ function updateCaps(){
 			}
 
 			unitDisplay.querySelector(".unit-cost").innerHTML = unitCost;
-			unitDisplay.querySelector(".modelBaseCost").innerHTML = baseCost;
-			unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
-			unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
+			if(characterTemplate.name != "liberty_prime" && !characterTemplate.hasOwnProperty(vtap_property)) {
+				unitDisplay.querySelector(".modelBaseCost").innerHTML = baseCost;
+				unitDisplay.querySelector(".modelUpdadeCost").innerHTML = modelUpdadeCost;
+				unitDisplay.querySelector(".unitUpgradeCost").innerHTML = unitUpgradeCost;
+			}
 			totalCaps += unitCost;
 			unitIndex++;
 		});
@@ -2353,11 +2204,6 @@ function updateCaps(){
 function getStringForForce(){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
-	if(settlementMode){
-		forceString += "s=y;";
-	}else{
-		forceString += "s=n;";
-	}
 	if(force.hasOwnProperty("leader")){
 		forceString += "l=" + force.leader.leaderIndex + "," + force.leader.perkIndex + ";";
 	}else{
@@ -2396,17 +2242,19 @@ function loadForceFromString(forceString){
 	}
 	document.getElementById("listNameArea").value = listName;
 
-	settlementMode = objects[2].split("=")[1] == "y";
-
 	force = {};
 	force.leader = {};
 	force.characters = [];
 
-	var startIndex = 3;
+	var startIndex = 2;
 
-	var leaderInfo = objects[3].split("=")[1].split(",");
+	if(objects[2].split("=")[0] == "s"){ //Skip the old 's' parameter, which was for settlement vs battle mode
+		startIndex = 3;
+	}
+
+	var leaderInfo = objects[startIndex].split("=")[1].split(",");
 	if(leaderInfo.length == 2){
-		startIndex = 4;
+		startIndex++;
 		force.leader.leaderIndex = parseInt(leaderInfo[0]);
 		force.leader.perkIndex = parseInt(leaderInfo[1]);
 	}else{
