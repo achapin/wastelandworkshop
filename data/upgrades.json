@@ -49,12 +49,14 @@
     {
       "name": "broadsider",
       "cost": 31,
-      "preview": "broadsider"
+      "preview": "broadsider",
+      "unique": true
     },
     {
       "name": "eugene",
       "cost": 36,
-      "preview": "eugene"
+      "preview": "eugene",
+      "unique": true
     },
     {
       "name":"flamer",
@@ -69,17 +71,20 @@
     {
       "name": "fawkes_gatling_laser",
       "cost": 45,
-      "preview": "fawkesgatlinglaser"
+      "preview": "fawkesgatlinglaser",
+      "unique": true
     },
     {
       "name": "final_judgement",
       "cost": 35,
-      "preview": "finaljudgement"
+      "preview": "finaljudgement",
+      "unique": true
     },
     {
       "name": "freezing_junk_jet",
       "cost": 12,
-      "preview": "freezingjunkjet"
+      "preview": "freezingjunkjet",
+      "unique": true
     },
     {
       "name": "gatling_laser",
@@ -155,7 +160,8 @@
     {
       "name": "anti_materiel_rifle",
       "cost": 37,
-      "preview": "antimaterielrifle"
+      "preview": "antimaterielrifle",
+      "unique": true
     },
     {
       "name": "assault_carbine",
@@ -192,7 +198,8 @@
     {
       "name": "charons_shotgun",
       "cost": 10,
-      "preview": "charonsshotgun"
+      "preview": "charonsshotgun",
+      "unique": true
     },
     {
       "name": "chinese_assault_rifle",
@@ -217,12 +224,14 @@
     {
       "name":"crippling_bolt_action_pipe_rifle",
       "cost": 17,
-      "preview": "cripplingboltactionpiperifle"
+      "preview": "cripplingboltactionpiperifle",
+      "unique": true
     },
     {
       "name":"deadeye_institute_laser_rifle",
       "cost": 15,
-      "preview": "deadeyeinstitutelaserrifle"
+      "preview": "deadeyeinstitutelaserrifle",
+      "unique": true
     },
     {
       "name": "double_barrel_shotgun",
@@ -232,12 +241,14 @@
     {
       "name":"explosive_combat_rifle",
       "cost": 19,
-      "preview": "explosivecombatrifle"
+      "preview": "explosivecombatrifle",
+      "unique": true
     },
     {
       "name":"freezing_combat_shotgun",
       "cost": 11,
-      "preview": "freezingcombatshotgun"
+      "preview": "freezingcombatshotgun",
+      "unique": true
     },
     {
       "name": "gauss_rifle",
@@ -268,17 +279,20 @@
       "name":"horrigans_plasma_gun",
       "cost": 30,
       "preview": "horrigansplasmagun",
-      "restrictions":["frank_horrigan"]
+      "restrictions":["frank_horrigan"],
+      "unique": true
     },
     {
       "name": "hunters_hunting_rifle",
       "cost": 20,
-      "preview":"huntershuntingrifle"
+      "preview":"huntershuntingrifle",
+      "unique": true
     },
     {
       "name": "hunters_laser_musket",
       "cost": 15,
-      "preview":"hunterslasermusket"
+      "preview":"hunterslasermusket",
+      "unique": true
     },
     {
       "name": "hunting_rifle",
@@ -293,7 +307,8 @@
     {
       "name":"incendiary_assault_rifle",
       "cost": 14,
-      "preview": "incendiaryassaultrifle"
+      "preview": "incendiaryassaultrifle",
+      "unique": true
     },
     {
       "name": "institute_laser_rifle",
@@ -303,17 +318,20 @@
     {
       "name":"irradiated_pipe_rifle",
       "cost": 9,
-      "preview": "irradiatedpiperifle"
+      "preview": "irradiatedpiperifle",
+      "unique": true
     },
     {
       "name":"junkies_bolt_action_pipe_rifle",
       "cost": 14,
-      "preview": "junkiesboltactionpiperifle"
+      "preview": "junkiesboltactionpiperifle",
+      "unique": true
     },
     {
       "name":"kneecapper_laser_musket",
       "cost": 15,
-      "preview": "kneecapperlasermusket"
+      "preview": "kneecapperlasermusket",
+      "unique": true
     },
     {
       "name": "laser_musket",
@@ -379,7 +397,8 @@
     {
       "name":"plasma_infused_combat_shotgun",
       "cost": 11,
-      "preview": "plasmainfusedcombatshotgun"
+      "preview": "plasmainfusedcombatshotgun",
+      "unique": true
     },
     {
       "name": "plasma_rifle",
@@ -467,7 +486,8 @@
     {
       "name":"troubleshooters_combat_rifle",
       "cost": 17,
-      "preview": "troubleshooterscombatrifle"
+      "preview": "troubleshooterscombatrifle",
+      "unique": true
     },
     {
       "name":"young_mirelurk_queen_acid",
@@ -504,7 +524,8 @@
     {
       "name":"a_light_burning_in_the_darkness",
       "cost":14,
-      "preview": "alightburninginthedarkness"
+      "preview": "alightburninginthedarkness",
+      "unique": true
     },
     {
       "name":"acid_soaker",
@@ -534,12 +555,14 @@
     {
       "name":"col_autumns_10mm_pistol",
       "cost": 10,
-      "preview": "colautumns10mmpistol"
+      "preview": "colautumns10mmpistol",
+      "unique": true
     },
     {
       "name":"deadeye_gamma_gun",
       "cost": 17,
-      "preview": "deadeyegammagun"
+      "preview": "deadeyegammagun",
+      "unique": true
     },
     {
       "name": "deathskull_poison_blast",
@@ -549,7 +572,8 @@
     {
       "name":"explosive_10mm_pistol",
       "cost": 9,
-      "preview": "explosive10mmpistol"
+      "preview": "explosive10mmpistol",
+      "unique": true
     },
     {
       "name": "eyebot_laser",
@@ -610,7 +634,8 @@
     {
       "name":"hunters_10mm_pistol",
       "cost": 8,
-      "preview": "hunters10mmpistol"
+      "preview": "hunters10mmpistol",
+      "unique": true
     },
     {
       "name":"hunting_revolver",
@@ -620,7 +645,8 @@
     {
       "name": "indys_freezing_44",
       "cost": 9,
-      "preview":"indysfreezing44"
+      "preview":"indysfreezing44",
+      "unique": true
     },
     {
       "name": "institute_laser_pistol",
@@ -630,17 +656,20 @@
     {
       "name":"irradiated_bolt_action_pipe_pistol",
       "cost": 3,
-      "preview": "irradiatedboltactionpipepistol"
+      "preview": "irradiatedboltactionpipepistol",
+      "unique": true
     },
     {
       "name": "kellogs_pistol",
       "cost": 10,
-      "preview": "kelloggspistol"
+      "preview": "kelloggspistol",
+      "unique": true
     },
     {
       "name":"kneecapper_44_revolver",
       "cost": 7,
-      "preview": "kneecapper44revolver"
+      "preview": "kneecapper44revolver",
+      "unique": true
     },
     {
       "name": "laser_pistol",
@@ -655,7 +684,8 @@
     {
       "name":"lorenzos_artifact_gun",
       "cost": 18,
-      "preview": "lorenzosartifactgun"
+      "preview": "lorenzosartifactgun",
+      "unique": true
     },
     {
       "name": "mr_handy_flamer",
@@ -696,7 +726,8 @@
     {
       "name":"penetrating_laser_pistol",
       "cost": 8,
-      "preview": "penetratinglaserpistol"
+      "preview": "penetratinglaserpistol",
+      "unique": true
     },
     {
       "name":"plasma_defender",
@@ -716,7 +747,8 @@
     {
       "name":"plasma_infused_bolt_action_pipe_pistol",
       "cost": 4,
-      "preview": "plasmainfusedboltactionpipepistol"
+      "preview": "plasmainfusedboltactionpipepistol",
+      "unique": true
     },
     {
       "name": "plasma_pistol",
@@ -726,12 +758,14 @@
     {
       "name":"poisoners_pipe_pistol",
       "cost": 3,
-      "preview": "poisonerspipepistol"
+      "preview": "poisonerspipepistol",
+      "unique": true
     },
     {
       "name": "protectrons_gaze",
       "cost": 7,
-      "preview":"protectronsgaze"
+      "preview":"protectronsgaze",
+      "unique": true
     },
     {
       "name": "protectron_hand_laser",
@@ -747,7 +781,8 @@
     {
       "name":"ranger_sequoia",
       "cost": 13,
-      "preview": "rangersequoia"
+      "preview": "rangersequoia",
+      "unique": true
     },
     {
       "name":"robobrain_mesmetron",
@@ -769,17 +804,20 @@
     {
       "name":"staggering_institute_laser_pistol",
       "cost": 7,
-      "preview": "staggeringinstitutelaserpistol"
+      "preview": "staggeringinstitutelaserpistol",
+      "unique": true
     },
     {
       "name":"staggering_pipe_pistol",
       "cost": 3,
-      "preview":"staggeringpipepistol"
+      "preview":"staggeringpipepistol",
+      "unique": true
     },
     {
       "name": "thirst_zapper_cola",
       "cost": 2,
-      "preview": "thirstzappercola"
+      "preview": "thirstzappercola",
+      "unique": true
     },
     {
       "name":"western_revolver",
@@ -789,7 +827,8 @@
     {
       "name":"wounding_laser_pistol",
       "cost": 8,
-      "preview": "woundinglaserpistol"
+      "preview": "woundinglaserpistol",
+      "unique": true
     }
   ],
   "melee": [
@@ -822,7 +861,8 @@
     {
       "name": "blade_of_the_east",
       "cost": 25,
-      "preview": "bladeoftheeast"
+      "preview": "bladeoftheeast",
+      "unique": true
     },
     {
       "name": "bloated_glowing_one_swipe",
@@ -887,12 +927,14 @@
     {
       "name": "charons_combat_knife",
       "cost": 10,
-      "preview": "charonscombatknife"
+      "preview": "charonscombatknife",
+      "unique": true
     },
     {
       "name": "crippling_tire_iron",
       "cost": 18,
-      "preview": "cripplingtireiron"
+      "preview": "cripplingtireiron",
+      "unique": true
     },
     {
       "name": "cultist_dagger",
@@ -1003,7 +1045,8 @@
     {
       "name": "freezing_machete",
       "cost": 5,
-      "preview": "freezingmachete"
+      "preview": "freezingmachete",
+      "unique": true
     },
     {
       "name":"gatorclaw_claws",
@@ -1048,12 +1091,14 @@
     {
       "name": "grognaks_axe",
       "cost": 16,
-      "preview":"grognaksaxe"
+      "preview":"grognaksaxe",
+      "unique": true
     },
     {
       "name": "grognaks_sword",
       "cost": 20,
-      "preview":"grognakssword"
+      "preview":"grognakssword",
+      "unique": true
     },
     {
       "name": "hand_saw_blade",
@@ -1077,7 +1122,8 @@
       "name": "horrigans_knife",
       "cost": 40,
       "preview": "horrigansknife",
-      "restrictions":["frank_horrigan"]
+      "restrictions":["frank_horrigan"],
+      "unique": true
     },
     {
       "name": "hound_bite",
@@ -1092,27 +1138,32 @@
     {
       "name": "hunters_baseball_bat",
       "cost": 4,
-      "preview": "huntersbaseballbat"
+      "preview": "huntersbaseballbat",
+      "unique": true
     },
     {
       "name": "incendiary_baton",
       "cost": 13,
-      "preview": "incendiarybaton"
+      "preview": "incendiarybaton",
+      "unique": true
     },
     {
       "name": "incendiary_super_sledge",
       "cost": 33,
-      "preview": "incendiarysupersledge"
+      "preview": "incendiarysupersledge",
+      "unique": true
     },
     {
       "name": "irradiated_sledgehammer",
       "cost": 14,
-      "preview": "irradiatedsledgehammer"
+      "preview": "irradiatedsledgehammer",
+      "unique": true
     },
     {
       "name": "junkies_nail_board",
       "cost": 4,
-      "preview": "junkiesnailboard"
+      "preview": "junkiesnailboard",
+      "unique": true
     },
     {
       "name": "lead_pipe",
@@ -1142,7 +1193,8 @@
     {
       "name": "marcus_punch",
       "cost": 0,
-      "preview": "marcuspunch"
+      "preview": "marcuspunch",
+      "unique": true
     },
     {
       "name": "matriarch_swipe",
@@ -1223,7 +1275,8 @@
     {
       "name": "penetrating_lead_pipe",
       "cost": 13,
-      "preview": "penetratingleadpipe"
+      "preview": "penetratingleadpipe",
+      "unique": true
     },
     {
       "name": "pipe_wrench",
@@ -1233,12 +1286,14 @@
     {
       "name": "plasma_infused_assaultron_blade",
       "cost": 5,
-      "preview": "plasmainfusedassaultronblade"
+      "preview": "plasmainfusedassaultronblade",
+      "unique": true
     },
     {
       "name": "poisoners_ripper",
       "cost": 7,
-      "preview": "poisonersripper"
+      "preview": "poisonersripper",
+      "unique": true
     },
     {
       "name": "power_fist",
@@ -1283,7 +1338,8 @@
     {
       "name": "relentless_chinese_officers_sword",
       "cost": 9,
-      "preview": "relentlesschineseofficerssword"
+      "preview": "relentlesschineseofficerssword",
+      "unique": true
     },
     {
       "name": "ripper",
@@ -1299,7 +1355,8 @@
     {
       "name": "shishkebab",
       "cost": 15,
-      "preview": "shishkebab"
+      "preview": "shishkebab",
+      "unique": true
     },
     {
       "name": "ship_anchor",
@@ -1349,7 +1406,8 @@
     {
       "name": "staggering_tire_iron",
       "cost": 16,
-      "preview": "staggeringtireiron"
+      "preview": "staggeringtireiron",
+      "unique": true
     },
     {
       "name": "stingwing_sting",
@@ -1379,17 +1437,20 @@
     {
       "name":"sword_of_wonders",
       "cost": 15,
-      "preview": "swordofwonders"
+      "preview": "swordofwonders",
+      "unique": true
     },
     {
       "name": "tessas_fist",
       "cost": 12,
-      "preview": "tessasfist"
+      "preview": "tessasfist",
+      "unique": true
     },
     {
       "name": "thermic_lance",
       "cost": 35,
-      "preview": "thermiclance"
+      "preview": "thermiclance",
+      "unique": true
     },
     {
       "name": "tire_iron",
@@ -1399,12 +1460,14 @@
     {
       "name": "troubleshooters_nail_board",
       "cost": 2,
-      "preview": "troubleshootersnailboard"
+      "preview": "troubleshootersnailboard",
+      "unique": true
     },
     {
       "name": "troubleshooters_pipe_wrench",
       "cost": 7,
-      "preview": "troubleshooterspipewrench"
+      "preview": "troubleshooterspipewrench",
+      "unique": true
     },
     {
       "name": "vertibird_blade",
@@ -1419,7 +1482,8 @@
     {
       "name": "wounding_machete",
       "cost": 3,
-      "preview":"woundingmachete"
+      "preview":"woundingmachete",
+      "unique": true
     },
     {
       "name": "yao_guai_swipe",
@@ -1614,7 +1678,8 @@
       "restrictions":["!super_mutant"],
       "cost": 51,
       "preview": "overbosspowerarmor",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     },
     {
       "name": "power_armor_frame",
@@ -1634,7 +1699,8 @@
       "restrictions":["!super_mutant"],
       "cost": 44,
       "preview": "slagspowerarmor",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     },
     {
       "name": "t45_power_armor",
@@ -1662,14 +1728,16 @@
       "restrictions":["!super_mutant"],
       "cost": 118,
       "preview": "t60fpowerarmor",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     },
     {
       "name": "tessas_power_armor",
       "restrictions":["!super_mutant"],
       "cost": 30,
       "preview": "tessaspowerarmor",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     },
     {
       "name": "x01_power_armor",
@@ -1741,7 +1809,8 @@
       "name": "damaged_legate_armor",
       "cost": 27,
       "preview": "damagedlegatearmor",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     },
     {
       "name":"disciples_armor",
@@ -1766,7 +1835,8 @@
       "cost": 17,
       "preview": "fistsarmor",
       "restrictions":["super_mutant"],
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     },
     {
       "name": "freefall_leg_armor",
@@ -1850,7 +1920,8 @@
       "cost": 52,
       "restrictions":["!super_mutant"],
       "preview": "mechanistarmorandhelmet",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     },
     {
       "name":"operators_armor",
@@ -1884,7 +1955,8 @@
     {
       "name": "rocks_bladed_helm",
       "cost": 18,
-      "preview":"rocksbladedhelm"
+      "preview":"rocksbladedhelm",
+      "unique": true
     },
     {
       "name": "spiked_harness",
@@ -2072,7 +2144,8 @@
     {
       "name":"magicians_costume",
       "cost":32,
-      "preview": "magicianscostume"
+      "preview": "magicianscostume",
+      "unique": true
     },
     {
       "name": "magnifying_visor",
@@ -2138,7 +2211,8 @@
     {
       "name": "sheriffs_outfit",
       "cost": 26,
-      "preview": "sheriffsoutfit"
+      "preview": "sheriffsoutfit",
+      "unique": true
     },
     {
       "name": "shoulder_rags",
@@ -2155,7 +2229,8 @@
     {
       "name": "three_dogs_headwear",
       "cost": 10,
-      "preview": "threedogsheadwear"
+      "preview": "threedogsheadwear",
+      "unique": true
     },
     {
       "name": "tricorn_hat",
@@ -2184,7 +2259,8 @@
       "name":"wildman_rags",
       "cost":15,
       "preview": "wildmanrags",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique": true
     }
   ],
   "chems": [

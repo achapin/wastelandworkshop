@@ -560,6 +560,13 @@ function addEquipmentToggleButton(character, slotType, carryInfo, section, isSel
 function getModSectionFor(character, slotType, carryInfo, display){
 	var modSection = document.createElement("div");
 
+	if(carryInfo != null){
+		var upgrade = getUpgrade(slotType, carryInfo.name);
+		if(upgrade.hasOwnProperty("unique")){
+			return modSection;
+		}
+	}
+
 	var modText = document.createElement("span");
 	modText.appendChild(document.createTextNode(loc["mod_section"]));
 
