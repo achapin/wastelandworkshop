@@ -1855,7 +1855,8 @@
       "name":"gages_outfit",
       "cost":15,
       "preview": "gagesoutfit",
-      "sets_armor_values": true
+      "sets_armor_values": true,
+      "unique":true
     },
     {
       "name": "gecko_backed_metal_armor",
