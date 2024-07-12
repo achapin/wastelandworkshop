@@ -5406,14 +5406,19 @@
 		"factions": [
 			"srv"
 		],
+    "must_carry":[],
 		"must_wear": [
 			"clothing.mr_fuzzy_mascot_outfit"
 		],
 		"name": "mr_fuzzy",
-		"preview": "mrfuzzy"
+		"preview": "mrfuzzy",
+    "unique_code":"mrfuzzy"
 	},
 	{
 		"cost": 107,
+    "default_equipment":{
+      "melee":["cultist_dagger"]
+    },
 		"factions": [
 			"cmm"
 		],
@@ -5425,6 +5430,10 @@
 	},
 	{
 		"cost": 44,
+    "default_equipment":{
+      "melee":["cultist_blade"],
+      "pistols":["44_revolver","10mm_pistol"]
+    },
 		"factions": [
 			"cmm"
 		],
@@ -5433,6 +5442,9 @@
 	},
 	{
 		"cost": 52,
+    "default_equipment":{
+      "rifles":["combat_rifle","double_barrel_shotgun"]
+    },
 		"factions": [
 			"cmm"
 		],
@@ -5441,6 +5453,9 @@
 	},
 	{
 		"cost": 59,
+    "default_equipment":{
+      "heavy_weapons":["flamer"]
+    },
 		"factions": [
 			"cmm"
 		],
@@ -5449,6 +5464,11 @@
 	},
 	{
 		"cost": 52,
+    "default_equipment":{
+      "melee":["cultist_blade"],
+      "pistols":["pipe_pistol"],
+      "thrown":{"molotov_cocktail":1}
+    },
 		"factions": [
 			"cmm"
 		],
@@ -5460,6 +5480,9 @@
 	},
 	{
 		"cost": 53,
+    "default_equipment":{
+      "rifles":["double_barrel_shotgun","hardened_sniper_rifle"]
+    },
 		"factions": [
 			"cmm"
 		],
@@ -5503,6 +5526,9 @@
 	},
 	{
 		"cost": 55,
+    "default_equipment":{
+      "rifles":["combat_rifle","handmade_rifle"]
+    },
 		"factions": [
 			"cmm"
 		],
@@ -5533,6 +5559,7 @@
 		"factions": [
 			"cmm"
 		],
+    "must_carry":[],
 		"name": "the_wise_mothman",
 		"preview": "thewisemothman",
 		"tags": [
