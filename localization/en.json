@@ -1299,5 +1299,21 @@
   "cutthroat_outfit":"Cutthroat Outfit", 
   "engineers_uniform":"Engineers Uniform", 
   "mothman_icon":"Mothman Icon",
-  "cmm":"Cult of the Mothman"
+  "cmm":"Cult of the Mothman",
+  "cultist_a":"Cultist VTAP-A",
+  "cultist_b":"Cultist VTAP-B",
+  "cultist_awakened_a":"Cultist (Awakened) VTAP-A",
+  "cultist_awakened_b":"Cultist (Awakened) VTAP-B",
+  "cultist_prospect_a":"Cultist (Prospect) VTAP-A",
+  "cultist_prospect_b":"Cultist (Prospect) VTAP-B",
+  "disciple_a":"Disciple VTAP-A",
+  "disciple_b":"Disciple VTAP-B",
+  "high_priest_vtap":"High Priest VTAP",
+  "mothman_vtap":"Mothman VTAP",
+  "mothman_hatchling_vtap":"Mothman Hatchling VTAP",
+  "mothman_hatchling_vengeful_vtap":"Mothman Hatchling Vengeful VTAP",
+  "seeker_a":"Seeker VTAP-A",
+  "seeker_b":"Seeker VTAP-B",
+  "the_wise_mothman_vtap":"The Wise Mothman VTAP",
+  "wrathwing_vtap":"Wrathwing VTAP"
 }

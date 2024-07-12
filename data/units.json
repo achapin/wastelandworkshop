@@ -5566,5 +5566,169 @@
 			"creature",
       "cryptid"
 		]
+	},
+  {
+		"cost": 65,
+		"factions": [
+			"cmm"
+		],
+		"name": "cultist_a",
+		"preview": "cultist-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 60,
+		"factions": [
+			"cmm"
+		],
+		"name": "cultist_b",
+		"preview": "cultist-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 78,
+		"factions": [
+			"cmm"
+		],
+		"name": "cultist_awakened_a",
+		"preview": "cultistawakened-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 118,
+		"factions": [
+			"cmm"
+		],
+		"name": "cultist_awakened_b",
+		"preview": "cultistawakened-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 81,
+		"factions": [
+			"cmm"
+		],
+		"name": "cultist_prospect_a",
+		"preview": "cultistprospect-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 85,
+		"factions": [
+			"cmm"
+		],
+		"name": "cultist_prospect_b",
+		"preview": "cultistprospect-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 77,
+		"factions": [
+			"cmm"
+		],
+		"name": "disciple_a",
+		"preview": "disciple-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 78,
+		"factions": [
+			"cmm"
+		],
+		"name": "disciple_b",
+		"preview": "disciple-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 113,
+		"factions": [
+			"cmm"
+		],
+		"name": "high_priest_vtap",
+		"preview": "highpriest-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 214,
+		"factions": [
+			"cmm"
+		],
+    "must_carry":[],
+		"name": "mothman_vtap",
+		"preview": "mothman-vtap",
+		"tags": [
+			"creature",
+      "cryptid"
+		],
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 90,
+		"factions": [
+			"cmm"
+		],
+    "must_carry":[],
+		"name": "mothman_hatchling_vtap",
+		"preview": "mothmanhatchling-vtap",
+		"tags": [
+			"creature",
+      "cryptid"
+		],
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 100,
+		"factions": [
+			"cmm"
+		],
+    "must_carry":[],
+		"name": "mothman_hatchling_vengeful_vtap",
+		"preview": "mothmanhatchlingvengeful-vtap",
+		"tags": [
+			"creature",
+      "cryptid"
+		],
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 61,
+		"factions": [
+			"cmm"
+		],
+		"name": "seeker_a",
+		"preview": "seeker-vtap",
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 61,
+		"factions": [
+			"cmm"
+		],
+		"name": "seeker_b",
+		"preview": "seeker-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 172,
+		"factions": [
+			"cmm"
+		],
+    "must_carry":[],
+		"name": "the_wise_mothman_vtap",
+		"preview": "thewisemothman-vtap",
+		"tags": [
+			"creature",
+      "cryptid"
+		],
+		"vault_tec_approved_profile": true
+	},
+  {
+		"cost": 107,
+		"factions": [
+			"cmm"
+		],
+		"name": "wrathwing_vtap",
+		"preview": "wrathwing-vtap",
+		"vault_tec_approved_profile": true
 	}
 ]
