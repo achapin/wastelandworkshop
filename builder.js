@@ -27,6 +27,7 @@ var possibleFilters = [
 	"lgn",
 	"coa",
 	"crt",
+	"cmm",
 	"dis",
 	"enc",
 	"frg",
@@ -51,6 +52,7 @@ var factionReferences = {
 	"lgn":"reference_caesarslegion",
 	"coa":"reference_childrenofatom",
 	"crt":"reference_creaturesfaction",
+	"cmm":"reference_cultofthemothman",
 	"enc":"reference_enclave",
 	"frg":"reference_forged",
 	"ins":"",
@@ -70,6 +72,7 @@ var factionReferences = {
 
 var tagsToReferences = {
 	"creature":["reference_creatures"],
+	"cryptid":["reference_cryptids"],
 	"dog":["reference_dogs"],
 	"ghoul":["reference_ghouls"],
 	"legendary":["reference_legendary_units"],
