@@ -5411,5 +5411,133 @@
 		],
 		"name": "mr_fuzzy",
 		"preview": "mrfuzzy"
+	},
+	{
+		"cost": 107,
+		"factions": [
+			"cmm"
+		],
+		"must_carry": [
+			"gear.mothman_icon"
+		],
+		"name": "high_priest",
+		"preview": "highpriest"
+	},
+	{
+		"cost": 44,
+		"factions": [
+			"cmm"
+		],
+		"name": "seeker",
+		"preview": "seeker"
+	},
+	{
+		"cost": 52,
+		"factions": [
+			"cmm"
+		],
+		"name": "disciple_mothman",
+		"preview": "disciplemothman"
+	},
+	{
+		"cost": 59,
+		"factions": [
+			"cmm"
+		],
+		"name": "wrathwing",
+		"preview": "wrathwing"
+	},
+	{
+		"cost": 52,
+		"factions": [
+			"cmm"
+		],
+		"must_wear": [
+			"clothing.ritual_mask"
+		],
+		"name": "cultist",
+		"preview": "cultist"
+	},
+	{
+		"cost": 53,
+		"factions": [
+			"cmm"
+		],
+		"must_wear": [
+			"clothing.ritual_mask"
+		],
+		"name": "cultist_awakened",
+		"preview": "cultistawakened"
+	},
+	{
+		"cost": 90,
+		"factions": [
+			"cmm"
+		],
+		"must_carry": [
+			"melee.hatchling_sonic_wave",
+      "rifles.hatchling_sonic_screech"
+		],
+		"name": "mothman_hatchling",
+		"preview": "mothmanhatchling",
+		"tags": [
+			"creature",
+      "cryptid"
+		]
+	},
+	{
+		"cost": 100,
+		"factions": [
+			"cmm"
+		],
+		"must_carry": [
+			"melee.hatchling_sonic_wave",
+      "rifles.hatchling_sonic_screech"
+		],
+		"name": "mothman_hatchling_vengeful",
+		"preview": "mothmanhatchlingvengeful",
+		"tags": [
+			"creature",
+      "cryptid"
+		]
+	},
+	{
+		"cost": 55,
+		"factions": [
+			"cmm"
+		],
+		"must_wear": [
+			"clothing.ritual_mask"
+		],
+		"name": "cultist_prospect",
+		"preview": "cultistprospect"
+	},
+	{
+		"cost": 214,
+		"factions": [
+			"cmm"
+		],
+		"must_carry": [
+			"melee.mothman_sonic_wave",
+      "rifles.mothman_sonic_screech"
+		],
+		"name": "mothman",
+		"preview": "mothman",
+		"tags": [
+			"creature",
+      "cryptid"
+		]
+	},
+	{
+		"cost": 172,
+		"factions": [
+			"cmm"
+		],
+		"name": "the_wise_mothman",
+		"preview": "thewisemothman",
+		"tags": [
+			"creature",
+      "cryptid"
+		]
 	}
 ]

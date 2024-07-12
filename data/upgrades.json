@@ -267,6 +267,11 @@
       "preview": "handmaderifle"
     },
     {
+      "name": "hatchling_sonic_screech",
+      "cost": 0,
+      "preview":"hatchlingsonicscreech"
+    },
+    {
       "name": "hardened_sniper_rifle",
       "cost": 55,
       "preview": "hardenedsniperrifle"
@@ -378,6 +383,11 @@
       "name":"mirelurk_queen_acid",
       "cost": 0,
       "preview": "mirelurkqueenacid"
+    },
+    {
+      "name": "mothman_sonic_screech",
+      "cost": 0,
+      "preview":"mothmansonicscreech"
     },
     {
       "name": "mr_handy_smg",
@@ -834,6 +844,11 @@
   ],
   "melee": [
     {
+      "name": "alien_shock_baton",
+      "cost": 15,
+      "preview":"alienshockbaton"
+    },
+    {
       "name": "assaultron_swipe",
       "cost": 12,
       "preview": "assaultronswipe",
@@ -936,6 +951,11 @@
       "cost": 18,
       "preview": "cripplingtireiron",
       "unique": true
+    },
+    {
+      "name": "cultist_blade",
+      "cost": 5,
+      "preview": "cultistblade"
     },
     {
       "name": "cultist_dagger",
@@ -1121,6 +1141,11 @@
       "restrictions":["robot", "protectron"]
     },
     {
+      "name": "hatchling_sonic_wave",
+      "cost": 0,
+      "preview":"hatchlingsonicwave"
+    },
+    {
       "name": "horrigans_knife",
       "cost": 40,
       "preview": "horrigansknife",
@@ -1242,6 +1267,11 @@
       "name": "mongrel_bite",
       "cost": 0,
       "preview": "mongrelbite"
+    },
+    {
+      "name": "mothman_sonic_wave",
+      "cost": 0,
+      "preview":"mothmansonicwave"
     },
     {
       "name": "mr_handy_buzz_blade",
@@ -1907,15 +1937,33 @@
       "sets_armor_values": true
     },
     {
+      "name": "heavy_ritual_armor",
+      "cost": 24,
+      "preview": "heavyritualarmor",
+      "sets_armor_values": true
+    },
+    {
       "name": "heavy_synth_armor",
       "cost": 45,
       "preview": "heavysyntharmor",
       "sets_armor_values": true
     },
     {
+      "name": "incarnate_armor",
+      "cost": 12,
+      "preview": "incarnatearmor",
+      "sets_armor_values": true
+    },
+    {
       "name":"light_raider_armor",
       "cost":3,
       "preview": "lightraiderarmor",
+      "sets_armor_values": true
+    },
+    {
+      "name": "light_ritual_armor",
+      "cost": 9,
+      "preview": "lightritualarmor",
       "sets_armor_values": true
     },
     {
@@ -1931,6 +1979,12 @@
       "preview": "mechanistarmorandhelmet",
       "sets_armor_values": true,
       "unique": true
+    },
+    {
+      "name": "medium_ritual_armor",
+      "cost": 15,
+      "preview": "mediumritualarmor",
+      "sets_armor_values": true
     },
     {
       "name":"operators_armor",
@@ -2083,6 +2137,11 @@
       "preview": "batteredfedora"
     },
     {
+      "name": "blue_ridge_caravan_outfit",
+      "cost": 9,
+      "preview": "blueridgecaravanoutfit"
+    },
+    {
       "name": "bowler_hat",
       "restrictions":["robot"],
       "cost": 3,
@@ -2104,6 +2163,11 @@
       "preview": "cappyglasses"
     },
     {
+      "name": "cutthroat_outfit",
+      "cost": 18,
+      "preview": "cutthroatoutfit"
+    },
+    {
       "name": "dirty_postman_uniform",
       "cost": 6,
       "preview": "dirtypostmanuniform"
@@ -2123,6 +2187,11 @@
       "name": "enclave_officers_hat",
       "cost": 5,
       "preview":"enclaveofficershat"
+    },
+    {
+      "name": "engineers_uniform",
+      "cost": 9,
+      "preview": "engineersuniform"
     },
     {
       "name": "eyeglasses",
@@ -4254,6 +4323,11 @@
       "name":"mirelurk_eggs",
       "cost":12,
       "preview": "mirelurkeggs"
+    },
+    {
+      "name": "mothman_icon",
+      "cost": 12,
+      "preview": "mothmanicon"
     },
     {
       "name":"mr_handy_fuel",
