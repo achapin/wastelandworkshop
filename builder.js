@@ -278,7 +278,12 @@ function initListeners(){
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
-		loadForceFromString(queryString[1]);
+		if (queryString[1].startsWith("f=")){ 
+			loadForceFromString(queryString[1]);
+		} else {
+			let decompressedForce = LZString.decompressFromEncodedURIComponent(queryString[1]);
+			loadForceFromString(decompressedForce);
+		}		
 	}else{
 		clearForce();
 	}
@@ -2199,12 +2204,12 @@ function updateCaps(){
 	});
 
 	if (history.pushState) {
-		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce(true);
 		window.history.pushState({path:newurl},'',newurl);
 	}
 }
 
-function getStringForForce(){
+function getStringForForce(compress =  false){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
 	if(force.hasOwnProperty("leader")){
@@ -2220,6 +2225,9 @@ function getStringForForce(){
 			forceString += charString;
 		});
 	}
+	if (compress) {
+		return LZString.compressToEncodedURIComponent(JSON.stringify(forceString));
+	} 
 	return forceString;
 }
 
