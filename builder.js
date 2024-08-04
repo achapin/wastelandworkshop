@@ -284,7 +284,7 @@ function initListeners(){
 		loadForceFromString(queryString[1]);
 	}else{
 		clearForce();
-	}	
+	}
 }
 
 function switchLanguage(){
@@ -423,9 +423,9 @@ function buildFiltersSection(){
 	var vtapFilterCheckBox = document.createElement('input');
 	vtapFilterCheckBox.type = 'checkbox';
 	vtapFilterCheckBox.checked = !filter_vtap;
-	vtapFilterCheckBox.addEventListener("click", function(){		
+	vtapFilterCheckBox.addEventListener("click", function(){
 		filter_vtap = !filter_vtap;
-		vtapFilterCheckBox.checked = !filter_vtap;		
+		vtapFilterCheckBox.checked = !filter_vtap;
 		buildAddSection();
 	});
 	vtapFilterSection.appendChild(document.createTextNode("Show Vault-Tec Approved Profiles:"));
