@@ -256,6 +256,9 @@ function orderUnitsByLocalizedName(unitOne, unitTwo){
 
 function initListeners(){
 	document.getElementById("listNameArea").addEventListener("change", updateCaps, true);
+	document.getElementById("saveButton").addEventListener("click", exportClick);
+	document.getElementById("importButton").addEventListener("click", () => { document.getElementById("importFileSelector").click();  });
+	document.getElementById("importFileSelector").addEventListener("change", importFileHandler);
 
 	forceSection = document.getElementById("force");
 	addSection = document.getElementById("addSection");
@@ -281,7 +284,7 @@ function initListeners(){
 		loadForceFromString(queryString[1]);
 	}else{
 		clearForce();
-	}
+	}	
 }
 
 function switchLanguage(){
@@ -420,9 +423,9 @@ function buildFiltersSection(){
 	var vtapFilterCheckBox = document.createElement('input');
 	vtapFilterCheckBox.type = 'checkbox';
 	vtapFilterCheckBox.checked = !filter_vtap;
-	vtapFilterCheckBox.addEventListener("click", function(){
+	vtapFilterCheckBox.addEventListener("click", function(){		
 		filter_vtap = !filter_vtap;
-		vtapFilterCheckBox.checked = !filter_vtap;
+		vtapFilterCheckBox.checked = !filter_vtap;		
 		buildAddSection();
 	});
 	vtapFilterSection.appendChild(document.createTextNode("Show Vault-Tec Approved Profiles:"));
@@ -2403,4 +2406,37 @@ function initialize(){
 	upgradeLoadPromise.then(upgradesLoaded);
 	upgradeLoadPromise.catch(function(){alert("upgrade load failed");});
 	setVisitorCount();
+}
+
+function exportClick() {
+	let fileName = document.getElementById("listNameArea").value;
+	if (fileName.length === 0) {
+		fileName = "ForceList";//Pick a default if nothing is entered
+	}
+	let queryString = window.location.href.split("?");
+	if (queryString.length > 1) {
+		let hiddenElement = document.createElement('a');
+
+		hiddenElement.href = 'data:attachment/text,' + encodeURI(queryString[1]);
+		hiddenElement.target = '_blank';
+		hiddenElement.download = fileName + '.txt';
+		hiddenElement.click();
+	} else {
+		console.log("No data to export!");
+	}
+}
+
+function importFileHandler() {
+	let fileElement = document.getElementById("importFileSelector");
+	if (fileElement.files.length >= 1) {
+		console.log("only first file selected: ", fileElement.files[0]);
+		let importData = fileElement.files[0];
+		const reader = new FileReader();
+		reader.onload = () => {
+			loadForceFromString(reader.result);
+		  };
+		reader.readAsText(importData);
+	  } else {
+		console.log("No file selected for import!");
+	  }
 }
