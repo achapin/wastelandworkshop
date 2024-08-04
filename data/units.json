@@ -2859,6 +2859,14 @@
 	},
 	{
 		"cost": 90,
+    "default_equipment":{
+      "melee":[
+        "mr_handy_buzzsaw"
+      ],
+      "pistols":[
+        "mr_handy_laser"
+      ]
+    },
 		"equipped_pack": "mr_handy_items",
 		"factions": [
 			"rbt"
@@ -3337,6 +3345,14 @@
 	},
 	{
 		"cost": 32,
+    "default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			],
+			"melee": [
+				"combat_knife"
+			]
+		},
 		"factions": [
 			"enc"
 		],
@@ -3373,6 +3389,11 @@
 	},
 	{
 		"cost": 46,
+    "default_equipment": {
+			"pistols": [
+				"scoped_44_magnum"
+			]
+		},
 		"factions": [
 			"srv"
 		],
@@ -3382,6 +3403,14 @@
 	},
 	{
 		"cost": 61,
+    "default_equipment": {
+			"rifles": [
+				"charons_shotgun"
+			],
+			"melee": [
+				"charons_combat_knife"
+			]
+		},
 		"factions": [
 			"srv"
 		],
@@ -3406,6 +3435,11 @@
 	},
 	{
 		"cost": 70,
+    "default_equipment":{
+      "rifles":[
+        "chinese_assault_rifle"
+      ]
+    },
 		"factions": [
 			"srv"
 		],
@@ -3419,6 +3453,14 @@
 	},
 	{
 		"cost": 52,
+    "default_equipment": {
+			"pistols": [
+				"laser_pistol"
+			],
+			"clothing": [
+				"elder_robes"
+			]
+		},
 		"factions": [
 			"bos"
 		],
@@ -3428,6 +3470,11 @@
 	},
 	{
 		"cost": 89,
+    "default_equipment": {
+			"heavy_weapons": [
+				"fawkes_gatling_laser"
+			]
+		},
 		"factions": [
 			"srv",
 			"mut"
@@ -3438,6 +3485,14 @@
 	},
 	{
 		"cost": 125,
+    "default_equipment": {
+			"rifles": [
+				"chinese_assault_rifle"
+			],
+			"melee": [
+				"stun_baton"
+			]
+		},
 		"factions": [
 			"srv"
 		],
@@ -3450,6 +3505,11 @@
 	},
 	{
 		"cost": 107,
+    "default_equipment": {
+			"rifles": [
+				"chinese_assault_rifle"
+			]
+		},
 		"factions": [
 			"srv"
 		],
@@ -3462,6 +3522,14 @@
 	},
 	{
 		"cost": 57,
+    "default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			],
+      "chems":{
+        "stimpak":1
+      }
+		},
 		"factions": [
 			"srv",
 			"bos",
@@ -3473,6 +3541,11 @@
 	},
 	{
 		"cost": 51,
+    "default_equipment":{
+      "pistols":[
+        "10mm_pistol"
+      ]
+    },
 		"factions": [
 			"srv"
 		],
@@ -3486,6 +3559,11 @@
 	},
 	{
 		"cost": 51,
+    "default_equipment": {
+			"rifles": [
+				"combat_rifle"
+			]
+		},
 		"factions": [
 			"bos"
 		],
@@ -3494,6 +3572,14 @@
 	},
 	{
 		"cost": 65,
+    "default_equipment": {
+			"armor": [
+				"ranger_battle_armor"
+			],
+			"rifles": [
+				"submachine_gun"
+			]
+		},
 		"factions": [
 			"srv"
 		],
@@ -3515,6 +3601,11 @@
 	},
 	{
 		"cost": 139,
+    "default_equipment":{
+      "rifles":[
+        "laser_rifle"
+      ]
+    },
 		"factions": [
 			"bos"
 		],
@@ -3530,6 +3621,14 @@
 	},
 	{
 		"cost": 63,
+    "default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			],
+			"clothing": [
+				"scribe_robes"
+			]
+		},
 		"factions": [
 			"bos"
 		],
@@ -3539,6 +3638,14 @@
 	},
 	{
 		"cost": 118,
+    "default_equipment":{
+      "pistols":[
+        "laser_pistol"
+      ],
+      "melee":[
+        "super_sledge"
+      ]
+    },
 		"factions": [
 			"bos"
 		],
@@ -3554,6 +3661,17 @@
 	},
 	{
 		"cost": 24,
+    "default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			],
+			"gear": {
+				"theos_ammo_case": "1"
+      },
+      "thrown": {
+				"fragmentation_grenade": "1"
+			}
+		},
 		"factions": [
 			"srv"
 		],
@@ -3563,6 +3681,11 @@
 	},
 	{
 		"cost": 59,
+    "default_equipment":{
+      "pistols":[
+        "10mm_pistol"
+      ]
+    },
 		"factions": [
 			"srv"
 		],
@@ -3575,6 +3698,11 @@
 	},
 	{
 		"cost": 60,
+    "default_equipment":{
+      "pistols":[
+        "laser_pistol"
+      ]
+    },
 		"factions": [
 			"enc"
 		],
@@ -4528,6 +4656,11 @@
 	},
 	{
 		"cost": 35,
+    "default_equipment":{
+      "rifles":[
+        "laser_rifle"
+      ]
+    },
 		"factions": [
 			"bos"
 		],
@@ -4536,6 +4669,11 @@
 	},
 	{
 		"cost": 34,
+    "default_equipment":{
+      "rifles":[
+        "laser_rifle"
+      ]
+    },
 		"factions": [
 			"bos"
 		],
