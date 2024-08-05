@@ -528,6 +528,10 @@ option {
 	color: black;
 }
 
+input[type="file"] {
+	display: none;
+}
+
 @media print {
     .configure-section {
 		display: none;
