@@ -281,12 +281,7 @@ function initListeners(){
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
-		if (queryString[1].startsWith("f=")){ 
-			loadForceFromString(queryString[1]);
-		} else {
-			let decompressedForce = LZString.decompressFromEncodedURIComponent(queryString[1]);
-			loadForceFromString(decompressedForce);
-		}		
+		loadForceFromString(safeDecompressForce(queryString[1]));
 	}else{
 		clearForce();
 	}
@@ -317,7 +312,7 @@ function updateLanguage(json){
 		forceString = queryString[1];
 	}
 	clearForce();
-	loadForceFromString(forceString);
+	loadForceFromString(safeDecompressForce(forceString));
 }
 
 function clearForce(){
@@ -2441,10 +2436,18 @@ function importFileHandler() {
 		let importData = fileElement.files[0];
 		const reader = new FileReader();
 		reader.onload = () => {
-			loadForceFromString(reader.result);
+			(safeDecompressForce(reader.result));
 		  };
 		reader.readAsText(importData);
 	  } else {
 		console.log("No file selected for import!");
 	  }
+}
+
+function safeDecompressForce(forceData){
+	if (forceData.startsWith("f=")){ 
+		return forceData;
+	} else {
+		return LZString.decompressFromEncodedURIComponent(forceData);
+	}
 }
