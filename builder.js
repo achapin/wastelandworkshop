@@ -2436,7 +2436,7 @@ function importFileHandler() {
 		let importData = fileElement.files[0];
 		const reader = new FileReader();
 		reader.onload = () => {
-			(safeDecompressForce(reader.result));
+			loadForceFromString(safeDecompressForce(reader.result));
 		  };
 		reader.readAsText(importData);
 	  } else {
