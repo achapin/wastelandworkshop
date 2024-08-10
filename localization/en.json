@@ -1315,5 +1315,22 @@
   "seeker_a":"Seeker VTAP-A",
   "seeker_b":"Seeker VTAP-B",
   "the_wise_mothman_vtap":"The Wise Mothman VTAP",
-  "wrathwing_vtap":"Wrathwing VTAP"
+  "wrathwing_vtap":"Wrathwing VTAP",
+  "ward":"Ward",
+  "ward_vtap":"Ward (VTAP)",
+  "aubrie":"Aubrie",
+  "aubrie_vtap":"Aubrie (VTAP)",
+  "paige":"Paige",
+  "paige_vtap":"Paige (VTAP)",
+  "meggroberg":"Meg Groberg",
+  "meggroberg_vtap":"Meg Groberg (VTAP)",
+  "lev":"Lev",
+  "lev_vtap":"Lev (VTAP)",
+  "johnny_weston":"Johnny Weston",
+  "johnny_weston_vtap":"Johnny Weston (VTAP)",
+  "alien_disintegrator":"Alien Disintegrator",
+  "brotherhood_of_steel_special_ops_suit":"Brotherhood of Steel Special Ops Suit",
+  "stalker_outfit":"Stalker Outfit",
+  "steel_workers_uniform":"Steel Workers Uniform",
+  "tuxedo":"Tuxedo"
 }
