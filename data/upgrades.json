@@ -159,6 +159,11 @@
   ],
   "rifles": [
     {
+      "name": "alien_disintegrator",
+      "cost": 40,
+      "preview": "aliendisintegrator"
+    },
+    {
       "name": "anti_materiel_rifle",
       "cost": 37,
       "preview": "antimaterielrifle",
@@ -2153,6 +2158,11 @@
       "preview": "brotherhoodofsteelhood"
     },
     {
+      "name": "brotherhood_of_steel_special_ops_suit",
+      "cost": 5,
+      "preview": "brotherhoodofsteelspecialopssuit"
+    },
+    {
       "name": "camoflage",
       "cost": 22,
       "preview": "camoflage"
@@ -2305,6 +2315,16 @@
       "preview": "spikedmuzzle"
     },
     {
+      "name": "stalker_outfit",
+      "cost": 12,
+      "preview": "stalkeroutfit"
+    },
+    {
+      "name": "steel_workers_uniform",
+      "cost": 8,
+      "preview": "steelworkersuniform"
+    },
+    {
       "name": "three_dogs_headwear",
       "cost": 10,
       "preview": "threedogsheadwear",
@@ -2320,6 +2340,11 @@
       "cost": 5,
       "restrictions":["robot"],
       "preview": "triggermanbowler"
+    },
+    {
+      "name": "tuxedo",
+      "cost": 8,
+      "preview": "tuxedo"
     },
     {
       "name": "vault_111_jumpsuit",
