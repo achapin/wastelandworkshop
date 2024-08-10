@@ -5471,12 +5471,12 @@
 		"vault_tec_approved_profile": true
 	},
 	{
-		"cost": 45,
+		"cost": 50,
 		"factions": [
 			"rdr"
 		],
 		"name": "raider_a",
-		"preview": "raidervtap",
+		"preview": "raidervtap_new",
 		"vault_tec_approved_profile": true
 	},
 	{
@@ -5485,7 +5485,7 @@
 			"rdr"
 		],
 		"name": "raider_b",
-		"preview": "raidervtap",
+		"preview": "raidervtap_new",
 		"vault_tec_approved_profile": true
 	},
 	{
@@ -5494,7 +5494,7 @@
 			"rdr"
 		],
 		"name": "raider_c",
-		"preview": "raidervtap",
+		"preview": "raidervtap_new",
 		"vault_tec_approved_profile": true
 	},
 	{
@@ -5860,13 +5860,151 @@
 		],
 		"vault_tec_approved_profile": true
 	},
-  {
+	{
 		"cost": 107,
 		"factions": [
 			"cmm"
 		],
 		"name": "wrathwing_vtap",
 		"preview": "wrathwing-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 79,
+		"default_equipment":{
+			"rifles":["pump-action_shotgun"],
+			"clothing":["wasteland_outfit"]
+		},
+		"factions": [
+			"srv"
+		],
+		"name": "ward",
+		"preview": "ward",
+		"unique_code":"ward"
+	},
+	{
+		"cost": 100,
+		"factions": [
+			"srv"
+		],
+		"name": "ward_vtap",
+		"preview": "wardvtap",
+		"unique_code":"ward",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 66,
+		"default_equipment":{
+			"pistols":["pipe_pistol"],
+			"chems":{"stimpak":1}
+		},
+		"factions": [
+			"srv"
+		],
+		"name": "aubrie",
+		"preview": "aubrie",
+		"unique_code":"aubrie"
+	},
+	{
+		"cost": 68,
+		"factions": [
+			"srv"
+		],
+		"name": "aubrie_vtap",
+		"preview": "aubrievtap",
+		"unique_code":"aubrie",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 72,
+		"default_equipment":{
+			"melee":["pipe_wrench"],
+			"clothing":["steel_workers_uniform"]
+		},
+		"factions": [
+			"srv"
+		],
+		"name": "paige",
+		"preview": "paige",
+		"unique_code":"paige"
+	},
+	{
+		"cost": 86,
+		"factions": [
+			"srv"
+		],
+		"name": "paige_vtap",
+		"preview": "paigevtap",
+		"unique_code":"paige",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 86,
+		"default_equipment":{
+			"rifles":["handmade_rifle"],
+			"clothing":["stalker_outfit"]
+		},
+		"factions": [
+			"rdr"
+		],
+		"name": "meggroberg",
+		"preview": "meggroberg",
+		"unique_code":"meggroberg"
+	},
+	{
+		"cost": 108,
+		"factions": [
+			"rdr"
+		],
+		"name": "meggroberg_vtap",
+		"preview": "meggrobergvtap",
+		"unique_code":"meggroberg",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 74,
+		"default_equipment":{
+			"rifles":["handmade_rifle"],
+			"clothing":["cutthroat_outfit"]
+		},
+		"factions": [
+			"rdr"
+		],
+		"name": "lev",
+		"preview": "lev",
+		"unique_code":"lev"
+	},
+	{
+		"cost": 102,
+		"factions": [
+			"rdr"
+		],
+		"name": "lev_vtap",
+		"preview": "levvtap",
+		"unique_code":"lev",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 80,
+		"default_equipment":{
+			"pistols":["44_revolver"]
+		},
+		"factions": [
+			"rdr"
+		],
+		"must_wear":["clothing.tuxedo"],
+		"name": "johnny_weston",
+		"preview": "johnnyweston",
+		"unique_code":"johnny_weston"
+	},
+	{
+		"cost": 102,
+		"factions": [
+			"rdr"
+		],
+		"name": "johnny_weston_vtap",
+		"preview": "johnnywestonvtap",
+		"unique_code":"johnny_weston",
 		"vault_tec_approved_profile": true
 	}
 ]
