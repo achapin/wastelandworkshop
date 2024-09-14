@@ -42,7 +42,8 @@ var possibleFilters = [
 	"rbt",
 	"mut",
 	"slg",
-	"srv"
+	"srv",
+	"ztn"
 ]
 var filter_vtap = false;
 var vtap_property = "vault_tec_approved_profile";
@@ -67,7 +68,8 @@ var factionReferences = {
 	"pak":"reference_the_pack",
 	"dis":"reference_the_disciples",
 	"opr":"reference_the_operators",
-	"nkl":"reference_nukalurks_1"
+	"nkl":"reference_nukalurks_1",
+	"ztn":"reference_zetan"
 }
 
 var tagsToReferences = {
@@ -246,10 +248,12 @@ function orderUnitsByLocalizedName(unitOne, unitTwo){
 	if(!loc.hasOwnProperty(unitOne.name))
 	{
 		console.log("Missing localization for " + unitOne.name);
+		return -1;
 	}
 	if(!loc.hasOwnProperty(unitTwo.name))
 	{
 		console.log("Missing localization for " + unitTwo.name);
+		return 1;
 	}
 	return loc[unitOne.name].localeCompare(loc[unitTwo.name]);
 }

@@ -6006,5 +6006,270 @@
 		"preview": "johnnywestonvtap",
 		"unique_code":"johnny_weston",
 		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 200,
+		"factions": [
+			"srv"
+		],
+		"name": "vault_dweller_drifter_vtap",
+		"preview": "vaultdwellerdrifter-vtap",
+		"unique_code":"vaultdwellerdrifter",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 265,
+		"factions": [
+			"srv"
+		],
+		"name": "vault_dweller_sneaky_survivor_vtap",
+		"preview": "vaultdwellersneakysurvivor-vtap",
+		"unique_code":"vaultdwellersneakysurvivor",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 200,
+		"factions": [
+			"rdr",	
+			"srv"
+		],
+		"name": "vault_dweller_raid_leader_vtap",
+		"preview": "vaultdwellerraidleader-vtap",
+		"unique_code":"vaultdwellerraidleader",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 200,
+		"factions": [
+			"ztn"
+		],
+		"name": "alien_invader_supreme_commander_vtap",
+		"preview": "alieninvadersupremecommander-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 183,
+		"factions": [
+			"ztn"
+		],
+		"name": "alien_invader_vtap",
+		"preview": "alieninvader-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 66,
+		"factions": [
+			"ztn"
+		],
+		"name": "alien_drone_vtap",
+		"preview": "aliendrone-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 120,
+		"factions": [
+			"ztn"
+		],
+		"name": "alien_inquisitor_vtap",
+		"preview": "alieninquisitor-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 100,
+		"factions": [
+			"ztn"
+		],
+		"name": "zetan_vtap",
+		"preview": "zetan-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 107,
+		"factions": [
+			"ztn"
+		],
+		"name": "zetan_cryo_trooper_vtap",
+		"preview": "zetancryotrooper-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 107,
+		"factions": [
+			"ztn"
+		],
+		"name": "zetan_toxic_trooper_vtap",
+		"preview": "zetantoxictrooper-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 147,
+		"factions": [
+			"ztn"
+		],
+		"name": "the_flatwoods_monster_vtap",
+		"preview": "theflatwoodsmonster-vtap",
+		"vault_tec_approved_profile": true
+	},
+	{
+		"cost": 160,
+		"default_equipment":{
+			"rifles":["laser_rifle"],
+			"armor":["wasteland_armor"]
+		},
+		"factions": [
+			"srv"
+		],
+		"name": "vault_dweller_drifter",
+		"preview": "vaultdwellerdrifter",
+		"unique_code":"vaultdwellerdrifter"
+	},
+	{
+		"cost": 194,
+		"default_equipment":{
+			"rifles":["hardened_sniper_rifle"],
+			"armor":["sturdy_leather_armor"]
+		},
+		"factions": [
+			"srv"
+		],
+		"name": "vault_dweller_sneaky_survivor",
+		"preview": "vaultdwellersneakysurvivor",
+		"unique_code":"vaultdwellersneakysurvivor"
+	},
+	{
+		"cost": 157,
+		"default_equipment":{
+			"rifles":["double_barrel_shotgun"],
+			"melee":["chainsaw"],
+			"armor":["combat_armor"]
+		},
+		"factions": [
+			"rdr",
+			"srv"
+		],
+		"name": "vault_dweller_raid_leader",
+		"preview": "vaultdwellerraidleader",
+		"unique_code":"vaultdwellerraidleader"
+	},
+	{
+		"cost": 200,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"rifles.alien_disintegrator",
+			"melee.alien_shock_baton"
+		],
+		"must_wear": [
+			"power_armor.zetan_power_suit"
+		],
+		"name": "alien_invader_supreme_commander",
+		"preview": "alieninvadersupremecommander",
+		"tags":["zetan"]
+	},
+	{
+		"cost": 183,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"rifles.alien_disintegrator",
+			"melee.alien_shock_baton"
+		],
+		"must_wear": [
+			"power_armor.zetan_power_suit"
+		],
+		"name": "alien_invader",
+		"preview": "alieninvader",
+		"tags":["zetan"]
+	},
+	{
+		"cost": 66,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"pistols.alien_laser"
+		],
+		"name": "alien_drone",
+		"preview": "aliendrone",
+		"tags":["zetan"]
+	},
+	{
+		"cost": 120,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"pistols.alien_laser",
+			"melee.alien_swipe"
+		],
+		"must_wear": [
+			"armor.zetan_inquisitor_suit"
+		],
+		"name": "alien_inquisitor",
+		"preview": "alieninquisitor",
+		"tags":["zetan"]
+	},
+	{
+		"cost": 100,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"pistols.alien_blaster"
+		],
+		"must_wear": [
+			"armor.zetan_flight_suit"
+		],
+		"name": "zetan_trooper",
+		"preview": "zetantrooper",
+		"tags":["zetan"]
+	},
+	{
+		"cost": 107,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"pistols.alien_cyro_blaster"
+		],
+		"must_wear": [
+			"armor.zetan_flight_suit"
+		],
+		"name": "zetan_cryo_trooper",
+		"preview": "zetancryotrooper",
+		"tags":["zetan"]
+	},
+	{
+		"cost": 107,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"pistols.alien_toxin_blaster"
+		],
+		"must_wear": [
+			"armor.zetan_flight_suit"
+		],
+		"name": "zetan_toxic_trooper",
+		"preview": "zetantoxictrooper",
+		"tags":["zetan"]
+	},
+	{
+		"cost": 183,
+		"factions": [
+			"ztn"
+		],
+		"must_carry":[
+			"pistols.alien_laser",
+			"melee.alien_swipe"
+		],
+		"must_wear": [
+			"armor.zetan_inquisitor_suit"
+		],
+		"name": "the_flatwoods_monster",
+		"preview": "theflatwoodsmonster",
+		"tags":["cryptid", "zetan"]
 	}
 ]
