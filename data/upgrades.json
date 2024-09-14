@@ -550,8 +550,23 @@
     },
     {
       "name": "alien_blaster",
-      "cost": 9,
+      "cost": 10,
       "preview": "alienblaster"
+    },
+    {
+      "name": "alien_cyro_blaster",
+      "cost": 12,
+      "preview": "aliencryoblaster"
+    },
+    {
+      "name": "alien_laser",
+      "cost": 0,
+      "preview": "alienlaser"
+    },
+    {
+      "name": "alien_toxin_blaster",
+      "cost": 12,
+      "preview": "alientoxinblaster"
     },
     {
       "name": "bloatfly_larva",
@@ -852,6 +867,11 @@
       "name": "alien_shock_baton",
       "cost": 15,
       "preview":"alienshockbaton"
+    },
+    {
+      "name": "alien_swipe",
+      "cost": 0,
+      "preview":"alienswipe"
     },
     {
       "name": "assaultron_swipe",
@@ -1788,6 +1808,13 @@
       "cost": 102,
       "preview": "x01powerarmor",
       "sets_armor_values": true
+    },
+    {
+      "name": "zetan_power_suit",
+      "restrictions":["zetan"],
+      "cost": 45,
+      "preview": "zetanpowersuit",
+      "sets_armor_values": true
     }
   ],
   "armor": [
@@ -2102,6 +2129,26 @@
       "cost": 5,
       "restrictions":["creature"],
       "preview":"teslacoilharness"
+    },
+    {
+      "name": "wasteland_armor",
+      "cost": 10,
+      "preview": "wastelandarmor",
+      "sets_armor_values": true
+    },
+    {
+      "name": "zetan_flight_suit",
+      "restrictions":["zetan"],
+      "cost": 10,
+      "preview": "zetanflightsuit",
+      "sets_armor_values": true
+    },
+    {
+      "name": "zetan_inquisitor_suit",
+      "restrictions":["zetan"],
+      "cost": 18,
+      "preview": "zetaninquisitorsuit",
+      "sets_armor_values": true
     }
   ],
   "clothing": [
