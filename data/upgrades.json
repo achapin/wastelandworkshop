@@ -851,6 +851,11 @@
       "unique": true
     },
     {
+      "name": "wendigo_scream",
+      "cost": 0,
+      "preview": "wendigoscream"
+    },
+    {
       "name":"western_revolver",
       "cost": 5,
       "preview": "westernrevolver"
@@ -954,6 +959,11 @@
       "name": "chinese_officers_sword",
       "cost": 7,
       "preview": "chineseofficerssword"
+    },
+    {
+      "name": "colossus_kick",
+      "cost": 0,
+      "preview": "colossuskick"
     },
     {
       "name": "combat_knife",
@@ -1129,6 +1139,11 @@
       "name": "glowing_radroach_swarm_bite",
       "cost": 0,
       "preview":"glowingradroachswarmbite"
+    },
+    {
+      "name": "glowing_wendigo_swipe",
+      "cost": 0,
+      "preview": "glowingwendigoswipe"
     },
     {
       "name": "glowing_yao_guai_swipe",
@@ -1537,6 +1552,11 @@
       "preview": "weakghoulswipe"
     },
     {
+      "name": "wendigo_swipe",
+      "cost": 0,
+      "preview": "wendigoswipe"
+    },
+    {
       "name": "wounding_machete",
       "cost": 3,
       "preview":"woundingmachete",
@@ -1584,6 +1604,16 @@
       "cost": 0,
       "preview": "behemothrockthrow",
       "restrictions":["behemoth"]
+    },
+    {
+      "name": "colossus_acid_spittle",
+      "cost": 0,
+      "preview": "colossusacidicspittle"
+    },
+    {
+      "name": "colossus_poision_spittle",
+      "cost": 0,
+      "preview": "colossuspoisonspittle"
     },
     {
       "name": "centaur_spit",
