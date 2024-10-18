@@ -1363,5 +1363,19 @@
   "wasteland_armor":"Wasteland Armor", 
   "zetan_flight_suit":"Zetan Flight Suit", 
   "zetan_inquisitor_suit":"Zetan Inquisitor Suit",
-  "alien_drone":"Alien Drone"
+  "alien_drone":"Alien Drone",
+  "earle_williams_1":"Earle Williams 1",
+  "earle_williams_2":"Earle Williams 2",
+  "glowing_wendigo":"Glowing Wendigo",
+  "wendigo":"Wendigo",
+  "wendigo_colossus_1":"Wendigo Colossus 1",
+  "wendigo_colossus_2":"Wendigo Colossus 2",
+  "wendigo_colossus_spawn":"Wendigo Colossus Spawn",
+  "wendigo_scream":"Wendigo Scream",
+  "colossus_kick":"Colossus Kick",
+  "glowing_wendigo_swipe":"Glowing Wendigo Swipe",
+  "wendigo_swipe":"Wendigo Swipe",
+  "colossus_acid_spittle":"Colossus Acid Spittle",
+  "colossus_poision_spittle":"Colossus Poision Spittle"
+
 }

@@ -6271,5 +6271,127 @@
 		"name": "the_flatwoods_monster",
 		"preview": "theflatwoodsmonster",
 		"tags":["cryptid", "zetan"]
+	},
+	{
+		"cost": 300,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.colossus_kick",
+      		"thrown.colossus_acid_spittle.1",
+			"thrown.colossus_poision_spittle.1"
+		],
+		"name": "earle_williams_1",
+		"preview": "earlewilliams1",
+		"tags": [
+			"creature",
+			"cryptid",
+			"legendary"
+		],
+		"unique_code":"earle_williams_1"
+	},
+	{
+		"cost": 375,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.colossus_kick",
+      		"thrown.colossus_acid_spittle.1",
+			"thrown.colossus_poision_spittle.1"
+		],
+		"name": "earle_williams_2",
+		"preview": "earlewilliams2",
+		"tags": [
+			"creature",
+			"cryptid",
+			"legendary"
+		],
+		"unique_code":"earle_williams_2"
+	},
+	{
+		"cost": 158,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.glowing_wendigo_swipe",
+      		"pistols.wendigo_scream"
+		],
+		"name": "glowing_wendigo",
+		"preview": "glowingwendigo",
+		"tags": [
+			"creature",
+			"cryptid"
+		]
+	},
+	{
+		"cost": 122,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.wendigo_swipe",
+      		"pistols.wendigo_scream"
+		],
+		"name": "wendigo",
+		"preview": "wendigo",
+		"tags": [
+			"creature",
+			"cryptid"
+		]
+	},
+	{
+		"cost": 220,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.colossus_kick",
+      		"thrown.colossus_acid_spittle.1",
+			"thrown.colossus_poision_spittle.1"
+		],
+		"name": "wendigo_colossus_1",
+		"preview": "wendigocolossus1",
+		"tags": [
+			"creature",
+			"cryptid",
+			"legendary"
+		]
+	},
+	{
+		"cost": 275,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.colossus_kick",
+      		"thrown.colossus_acid_spittle.1",
+			"thrown.colossus_poision_spittle.1"
+		],
+		"name": "wendigo_colossus_2",
+		"preview": "wendigocolossus2",
+		"tags": [
+			"creature",
+			"cryptid",
+			"legendary"
+		]
+	},
+	{
+		"cost": 136,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.wendigo_swipe",
+      		"pistols.wendigo_scream"
+		],
+		"name": "wendigo_colossus_spawn",
+		"preview": "wendigocolossusspawn",
+		"tags": [
+			"creature",
+			"cryptid"
+		]
 	}
 ]
