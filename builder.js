@@ -801,9 +801,7 @@ function addCharacter(characterElement, presetInfo){
 
 		cardDiv.innerHTML += "<img class=\"" + imageClass +  "\" src=\"images/" + characterElement.preview + ".png\" />";
 	}
-	if(!characterElement.hasOwnProperty(vtap_property)) { //VTAP Doesn't have options		
-		displaySection.appendChild(cardDiv);
-	}
+	displaySection.appendChild(cardDiv);
 	
 
 	addLeaderSection(headerRightSection, character, displaySection);
@@ -1034,9 +1032,6 @@ function addCharacter(characterElement, presetInfo){
 		configureSection.appendChild(equipmentSection);
 	}
 	charaSection.appendChild(displaySection);
-	if(characterElement.hasOwnProperty(vtap_property)) { //Put the VTAP Image under the bar
-		configureSection.appendChild(cardDiv);
-	}
 	
 
 	forceSection.appendChild(charaSection);
