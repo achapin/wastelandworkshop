@@ -669,13 +669,47 @@ function removeModFromCharacter(character, modSlot){
 	}
 }
 
+function allowDrop(ev) {	
+	ev.preventDefault();
+  }
+
+function drag(caller, ev){
+	ev.dataTransfer.setData("source", caller.id);
+}
+
+function drop(target, ev){
+	ev.preventDefault();
+	let callerId = ev.dataTransfer.getData("source");
+  	let draggedItem = document.getElementById(callerId);
+
+	if (draggedItem != target) {
+		const container = document.querySelector('.container');
+        let span = document.createElement('span');
+        container.insertBefore(span, draggedItem);
+        container.insertBefore(draggedItem, target.nextSibling);
+        container.insertBefore(target, span);
+        span.remove();
+    }
+}
+
+function uuidv4() {
+	return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+	  (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+	);
+  }
+
 function addCharacter(characterElement, presetInfo){
 	var character = Object.assign({}, presetInfo);
 
 	character.name = characterElement.name;
 
-	var charaSection = document.createElement("div");
+	var charaSection = document.createElement("div");	
 	charaSection.setAttribute("class", "characterElement");
+	charaSection.setAttribute("id", uuidv4())
+	charaSection.setAttribute("draggable", "true");
+	charaSection.setAttribute("ondragstart", "drag(this, event)");
+	charaSection.setAttribute("ondrop", "drop(this, event)");
+	charaSection.setAttribute("ondragover", "allowDrop(event)");
 
 	var configureSection = document.createElement("div");
 	configureSection.setAttribute("class", "configure-section");
@@ -767,7 +801,10 @@ function addCharacter(characterElement, presetInfo){
 
 		cardDiv.innerHTML += "<img class=\"" + imageClass +  "\" src=\"images/" + characterElement.preview + ".png\" />";
 	}
-	displaySection.appendChild(cardDiv);
+	if(!characterElement.hasOwnProperty(vtap_property)) { //VTAP Doesn't have options		
+		displaySection.appendChild(cardDiv);
+	}
+	
 
 	addLeaderSection(headerRightSection, character, displaySection);
 
@@ -997,6 +1034,10 @@ function addCharacter(characterElement, presetInfo){
 		configureSection.appendChild(equipmentSection);
 	}
 	charaSection.appendChild(displaySection);
+	if(characterElement.hasOwnProperty(vtap_property)) { //Put the VTAP Image under the bar
+		configureSection.appendChild(cardDiv);
+	}
+	
 
 	forceSection.appendChild(charaSection);
 
