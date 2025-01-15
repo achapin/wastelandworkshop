@@ -81,6 +81,21 @@
       "unique": true
     },
     {
+      "name": "floater_fireball",
+      "cost": 0,
+      "preview": "floaterfireball"
+    },
+    {
+      "name": "floater_flamethrower",
+      "cost": 0,
+      "preview": "floaterflamethrower"
+    },
+    {
+      "name": "floater_freezer_breath",
+      "cost": 0,
+      "preview": "floaterfreezerbreath"
+    },
+    {
       "name": "freezing_junk_jet",
       "cost": 12,
       "preview": "freezingjunkjet",
@@ -639,6 +654,11 @@
       "preview": "glowingbloodbugbloodspray"
     },
     {
+      "name": "glowing_tri_barbed_tongue",
+      "cost": 0,
+      "preview": "glowingtribarbedtongue"
+    },
+    {
       "name":"hand_cryojet",
       "cost": 10,
       "preview":"handcryojet",
@@ -849,6 +869,11 @@
       "cost": 2,
       "preview": "thirstzappercola",
       "unique": true
+    },
+    {
+      "name": "tri_barbed_tongue",
+      "cost": 0,
+      "preview": "tribarbedtongue"
     },
     {
       "name": "wendigo_scream",
@@ -1090,6 +1115,11 @@
       "preview": "firehydrantbat"
     },
     {
+      "name": "floater_vampiric_bite",
+      "cost": 0,
+      "preview": "floatervampiricbite"
+    },
+    {
       "name": "fog_crawler_claw",
       "cost": 0,
       "preview": "fogcrawlerclaw"
@@ -1124,6 +1154,11 @@
       "name": "glowing_bloodbug_proboscis",
       "cost": 0,
       "preview": "glowingbloodbugproboscis"
+    },
+    {
+      "name": "glowing_radtoad_teeth",
+      "cost": 0,
+      "preview": "glowingradtoadteeth"
     },
     {
       "name": "glowing_mongrel_bite",
@@ -1403,6 +1438,11 @@
       "preview": "radstaggore"
     },
     {
+      "name": "radtoad_teeth",
+      "cost": 0,
+      "preview": "radtoadteeth"
+    },
+    {
       "name": "rebar_club",
       "cost": 18,
       "preview": "rebarclub"
@@ -1459,6 +1499,11 @@
       "name": "shipbreaker_trample",
       "cost": 0,
       "preview": "shipbreakertrample"
+    },
+    {
+      "name": "ski_sword",
+      "cost": 32,
+      "preview": "skisword"
     },
     {
       "name": "softshell_mirelurk_claw",
