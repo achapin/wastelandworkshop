@@ -6393,5 +6393,78 @@
 			"creature",
 			"cryptid"
 		]
+	},
+	{
+		"cost": 95,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"heavy_weapons.floater_flamethrower",
+      		"heavy_weapons.floater_fireball"
+		],
+		"name": "floater_flamer",
+		"preview": "floaterflamer",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 90,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"heavy_weapons.floater_freezer_breath"
+		],
+		"name": "floater_freezer",
+		"preview": "floaterfreezer",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 94,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.floater_vampiric_bite"
+		],
+		"name": "floater_gnasher",
+		"preview": "floatergnasher",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 75,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"pistols.tri_barbed_tongue",
+			"melee.radtoad_teeth"
+		],
+		"name": "radtoad",
+		"preview": "radtoad",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 84,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"pistols.glowing_tri_barbed_tongue",
+			"melee.glowing_radtoad_teeth"
+		],
+		"name": "radtoad_glowing",
+		"preview": "radtoadglowing",
+		"tags": [
+			"creature"
+		]
 	}
 ]
