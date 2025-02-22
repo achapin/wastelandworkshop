@@ -853,6 +853,11 @@
       "preview": "scoped44magnum"
     },
     {
+      "name": "snallygaster_toxic_slime",
+      "cost": 0,
+      "preview": "snallygastertoxicslime"
+    },
+    {
       "name":"staggering_institute_laser_pistol",
       "cost": 7,
       "preview": "staggeringinstitutelaserpistol",
@@ -1304,6 +1309,11 @@
       "preview":"matriarchswipe"
     },
     {
+      "name": "mega_sloth_claws",
+      "cost": 0,
+      "preview": "megaslothclaws"
+    },
+    {
       "name": "mirelurk_claw",
       "cost": 0,
       "preview": "mirelurkclaw"
@@ -1506,6 +1516,11 @@
       "preview": "skisword"
     },
     {
+      "name": "snallygaster_tongue_lash",
+      "cost": 0,
+      "preview": "snallygastertonguelash"
+    },
+    {
       "name": "softshell_mirelurk_claw",
       "cost": 0,
       "preview": "softshellmirelurkclaw"
@@ -1670,6 +1685,11 @@
       "name": "cryo_grenade",
       "cost": 6,
       "preview": "cryogrenade"
+    },
+    {
+      "name": "dirt_throw",
+      "cost": 0,
+      "preview": "dirtthrow"
     },
     {
       "name": "fragmentation_grenade",
