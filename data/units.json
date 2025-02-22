@@ -4636,6 +4636,7 @@
 		],
 		"name": "oswald_the_outrageous",
 		"preview": "oswaldtheoutrageous",
+		"tags":["ghoul"],
 		"unique_code": "oswaldtheoutrageous"
 	},
 	{
@@ -5643,7 +5644,7 @@
 		"preview": "mothmanhatchling",
 		"tags": [
 			"creature",
-      "cryptid"
+      		"cryptid"
 		]
 	},
 	{
@@ -6465,6 +6466,53 @@
 		"preview": "radtoadglowing",
 		"tags": [
 			"creature"
+		]
+	},
+	{
+		"cost": 190,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.mega_sloth_claws",
+			"thrown.dirt_throw"
+		],
+		"name": "mega_sloth",
+		"preview": "megasloth",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 137,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.snallygaster_tongue_lash",
+			"pistols.snallygaster_toxic_slime"
+		],
+		"name": "snallygaster_glowing",
+		"preview": "snallygasterglowing",
+		"tags": [
+			"creature",
+      		"cryptid"
+		]
+	},
+	{
+		"cost": 117,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.snallygaster_tongue_lash",
+			"pistols.snallygaster_toxic_slime"
+		],
+		"name": "snallygaster",
+		"preview": "snallygaster",
+		"tags": [
+			"creature",
+      		"cryptid"
 		]
 	}
 ]
