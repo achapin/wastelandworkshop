@@ -6514,5 +6514,119 @@
 			"creature",
       		"cryptid"
 		]
+	},
+	{
+		"cost": 250,
+		"factions": [
+			"rbt"
+		],
+		"must_carry": [
+			"melee.assaultron_swipe",
+			"rifles.assaultron_head_laser"
+		],
+		"name": "imposter_sheepsquatch_1",
+		"preview": "impostersheepsquatch",
+		"tags": [
+			"robot"
+		]
+	},
+	{
+		"cost": 275,
+		"factions": [
+			"rbt"
+		],
+		"must_carry": [
+			"melee.assaultron_swipe",
+			"rifles.assaultron_head_laser"
+		],
+		"name": "imposter_sheepsquatch_2",
+		"preview": "impostersheepsquatch2",
+		"tags": [
+			"robot"
+		]
+	},
+	{
+		"cost": 85,
+		"must_carry":[
+			"melee.baseball_bat",
+			"rifles.plasma_splitter_rifle"
+		],
+		"must_wear":[
+			"clothing.blue_ridge_caravan_outfit"
+		],
+		"factions": [
+			"srv"
+		],
+		"name": "aries",
+		"preview": "aries",
+		"unique_code":"aries"
+	},
+	{
+		"cost": 225,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.sheepsquatch_swipe",
+			"melee.sheepsquatch_ram",
+			"thrown.sheepsquatch_poison_quills"
+		],
+		"name": "sheepsquatch_1",
+		"preview": "sheepsquatch1",
+		"tags": [
+			"creature",
+      		"cryptid"
+		]
+	},
+	{
+		"cost": 270,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.sheepsquatch_swipe",
+			"melee.sheepsquatch_ram",
+			"thrown.sheepsquatch_poison_quills"
+		],
+		"name": "sheepsquatch_2",
+		"preview": "sheepsquatch2",
+		"tags": [
+			"creature",
+      		"cryptid"
+		]
+	},
+	{
+		"cost": 250,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.sheepsquatch_swipe",
+			"melee.sheepsquatch_ram",
+			"thrown.sheepsquatch_poison_quills"
+		],
+		"name": "sheepsquatch_prime_1",
+		"preview": "sheepsquatchprime1",
+		"tags": [
+			"creature",
+      		"cryptid"
+		]
+	},
+	{
+		"cost": 350,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.sheepsquatch_swipe",
+			"melee.sheepsquatch_ram",
+			"thrown.sheepsquatch_poison_quills"
+		],
+		"name": "sheepsquatch_prime_2",
+		"preview": "sheepsquatchprime2",
+		"tags": [
+			"creature",
+      		"cryptid"
+		]
 	}
 ]
