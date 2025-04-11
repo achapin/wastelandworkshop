@@ -1409,5 +1409,18 @@
   "plasma_splitter_rifle" : "Plasma Splitter Rifle", 
   "sheepsquatch_ram": "Sheepsquatch Ram", 
   "sheepsquatch_swipe": "Sheepsquatch Swipe", 
-  "sheepsquatch_poison_quills": "Sheepsquatch Poison Quills" 
+  "sheepsquatch_poison_quills": "Sheepsquatch Poison Quills",
+  "grafton_monster":"Grafton Monster", 
+  "odessa_valdez":"Odessa Valdez", 
+  "rahmani":"Rahmani", 
+  "rahmani_expedition_leader":"Rahmani Expedition Leader", 
+  "shin":"Shin", 
+  "shin_brotherhood_loyalist":"Shin, Brotherhood Loyalist", 
+  "vernon_dodge":"Vernon Dodge", 
+  "automatic_laser_rifle":"Automatic Laser Rifle", 
+  "grafton_slam":"Grafton Slam", 
+  "war_glaive":"War Glaive", 
+  "oil_bomb":"Oil Bomb",
+  "brotherhood_of_steel_infantry_uniform":"Brotherhood of Steel Infantry Uniform",
+  "heavy_brotherhood_combat_chestplate":"Heavy Brotherhood Combat Chestplate"
 }
