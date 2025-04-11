@@ -201,6 +201,11 @@
       "restrictions":["robot", "assaultron"]
     },
     {
+      "name": "automatic_laser_rifle",
+      "cost": 26,
+      "preview": "automaticlaserrifle"
+    },
+    {
       "name": "battered_assaultron_head_laser",
       "cost": 30,
       "preview": "batteredassaultronheadlaser",
@@ -1196,6 +1201,11 @@
       "preview":"glowingyaoguaiswipe"
     },
     {
+      "name": "grafton_slam",
+      "cost": 0,
+      "preview":"graftonslam"
+    },
+    {
       "name": "grognaks_axe",
       "cost": 16,
       "preview":"grognaksaxe",
@@ -1627,6 +1637,11 @@
       "preview": "weakghoulswipe"
     },
     {
+      "name": "war_glaive",
+      "cost": 20,
+      "preview":"warglaive"
+    },
+    {
       "name": "wendigo_swipe",
       "cost": 0,
       "preview": "wendigoswipe"
@@ -1753,6 +1768,11 @@
       "cost": 0,
       "preview": "nukalurkqueenlob",
       "restrictions":["nukalurk_queen"]
+    },
+    {
+      "name": "oil_bomb",
+      "cost": 0,
+      "preview": "oilbomb"
     },
     {
       "name":"persuasion_grenade",
@@ -2048,6 +2068,12 @@
       "sets_armor_values": true
     },
     {
+      "name": "heavy_brotherhood_combat_chestplate",
+      "cost": 8,
+      "preview": "heavybrotherhoodcombatchestplate",
+      "sets_armor_values": true
+    },
+    {
       "name": "heavy_combat_armor",
       "cost": 45,
       "preview": "heavycombatarmor",
@@ -2318,6 +2344,11 @@
       "name": "brotherhood_of_steel_hood",
       "cost": 7,
       "preview": "brotherhoodofsteelhood"
+    },
+    {
+      "name": "brotherhood_of_steel_infantry_uniform",
+      "cost": 5,
+      "preview": "brotherhoodofsteelinfantryuniform"
     },
     {
       "name": "brotherhood_of_steel_special_ops_suit",

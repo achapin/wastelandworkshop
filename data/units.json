@@ -6628,5 +6628,124 @@
 			"creature",
       		"cryptid"
 		]
+	},
+	{
+		"cost": 150,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.grafton_slam",
+			"thrown.oil_bomb"
+		],
+		"name": "grafton_monster",
+		"preview": "graftonmonster",
+		"tags": [
+			"creature",
+      		"cryptid"
+		]
+	},
+	{
+		"cost": 48,
+		"default_equipment": {
+			"pistols": [
+				"44_revolver"
+			],
+			"clothing": [
+				"engineers_uniform"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"name": "odessa_valdez",
+		"preview": "odessavaldez",
+		"unique_code": "odessavaldez"
+	},
+	{
+		"cost": 48,
+		"default_equipment": {
+			"pistols": [
+				"44_revolver"
+			],
+			"clothing": [
+				"brotherhood_of_steel_infantry_uniform"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"must_carry":[
+			"melee.war_glaive"
+		],
+		"name": "rahmani",
+		"preview": "rahmani",
+		"unique_code": "rahmani"
+	},
+	{
+		"cost": 187,
+		"factions": [
+			"bos"
+		],
+		"must_carry":[
+			"melee.war_glaive"
+		],
+		"must_wear":[
+			"power_armor.t51_power_armor"
+		],
+		"name": "rahmani_expedition_leader",
+		"preview": "rahmaniexpeditionleader",
+		"unique_code": "rahmani"
+	},
+	{
+		"cost": 69,
+		"default_equipment": {
+			"rifles": [
+				"automatic_laser_rifle"
+			],
+			"armor": [
+				"heavy_brotherhood_combat_chestplate"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"name": "shin",
+		"preview": "shin",
+		"unique_code": "shin"
+	},
+	{
+		"cost": 173,
+		"default_equipment": {
+			"rifles": [
+				"automatic_laser_rifle"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"must_wear":[
+			"power_armor.t51_power_armor"
+		],
+		"name": "shin_brotherhood_loyalist",
+		"preview": "shinbrotherhoodloyalist",
+		"unique_code": "shin"
+	},
+	{
+		"cost": 67,
+		"default_equipment": {
+			"rifles": [
+				"combat_rifle"
+			],
+			"clothing": [
+				"brotherhood_of_steel_special_ops_suit"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"name": "vernon_dodge",
+		"preview": "vernondodge",
+		"unique_code": "vernondodge"
 	}
 ]
