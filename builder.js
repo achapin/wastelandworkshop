@@ -285,7 +285,7 @@ function initListeners(){
 
 	var queryString = window.location.href.split("?");
 	if(queryString.length > 1){
-		loadForceFromString(queryString[1]);
+		loadForceFromString(safeDecompressForce(queryString[1]));
 	}else{
 		clearForce();
 	}
@@ -316,7 +316,7 @@ function updateLanguage(json){
 		forceString = queryString[1];
 	}
 	clearForce();
-	loadForceFromString(forceString);
+	loadForceFromString(safeDecompressForce(forceString));
 }
 
 function clearForce(){
@@ -2206,12 +2206,12 @@ function updateCaps(){
 	});
 
 	if (history.pushState) {
-		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce();
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + getStringForForce(true);
 		window.history.pushState({path:newurl},'',newurl);
 	}
 }
 
-function getStringForForce(){
+function getStringForForce(compress =  false){
 	var forceString = "f=" + faction + ";";
 	forceString += "n=" + document.getElementById("listNameArea").value + ";";
 	if(force.hasOwnProperty("leader")){
@@ -2227,6 +2227,9 @@ function getStringForForce(){
 			forceString += charString;
 		});
 	}
+	if (compress) {
+		return LZString.compressToEncodedURIComponent(JSON.stringify(forceString));
+	} 
 	return forceString;
 }
 
@@ -2437,10 +2440,18 @@ function importFileHandler() {
 		let importData = fileElement.files[0];
 		const reader = new FileReader();
 		reader.onload = () => {
-			loadForceFromString(reader.result);
+			loadForceFromString(safeDecompressForce(reader.result));
 		  };
 		reader.readAsText(importData);
 	  } else {
 		console.log("No file selected for import!");
 	  }
+}
+
+function safeDecompressForce(forceData){
+	if (forceData.startsWith("f=")){ 
+		return forceData;
+	} else {
+		return LZString.decompressFromEncodedURIComponent(forceData);
+	}
 }
