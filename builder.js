@@ -46,6 +46,7 @@ var possibleFilters = [
 	"ztn"
 ]
 var filter_vtap = false;
+var filter_vtap_only = true;
 var vtap_property = "vault_tec_approved_profile";
 
 var factionReferences = {
@@ -353,6 +354,10 @@ function buildAddSection() {
 			return;
 		}
 
+		if(!filter_vtap_only && !characterElement.hasOwnProperty(vtap_property)){
+			return;
+		}
+
 		if(characterElement.hasOwnProperty("unique_code")){
 			force.characters.forEach(function(otherChar){
 				var otherCharElement = getCharacterById(otherChar.name)
@@ -423,6 +428,7 @@ function buildAddSection() {
 function buildFiltersSection(){
 	var filtersSection = document.createElement("div");
 	var vtapFilterSection = document.createElement("div");
+	var vtapOnlyFilterSection = document.createElement("div");
 	
 	var vtapFilterCheckBox = document.createElement('input');
 	vtapFilterCheckBox.type = 'checkbox';
@@ -435,6 +441,20 @@ function buildFiltersSection(){
 	vtapFilterSection.appendChild(document.createTextNode("Show Vault-Tec Approved Profiles:"));
 	vtapFilterSection.appendChild(vtapFilterCheckBox);
 	filtersSection.append(vtapFilterSection);
+
+	//Only Show VTAP Filter
+	var vtapOnlyFilterCheckBox = document.createElement('input');
+	vtapOnlyFilterCheckBox.type = 'checkbox';
+	vtapOnlyFilterCheckBox.checked = !filter_vtap_only;
+	vtapOnlyFilterCheckBox.addEventListener("click", function(){
+		filter_vtap_only = !filter_vtap_only;
+		vtapOnlyFilterCheckBox.checked = !filter_vtap_only;
+		buildAddSection();
+	});
+	vtapOnlyFilterSection.appendChild(document.createTextNode("Hide Non-VTAP:"));
+	vtapOnlyFilterSection.appendChild(vtapOnlyFilterCheckBox);
+
+	filtersSection.append(vtapOnlyFilterSection);
 
 	filtersSection.setAttribute("class", "filters row");
 	var list = document.createElement("ul");
