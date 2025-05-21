@@ -149,6 +149,16 @@
       "preview": "missilelauncher"
     },
     {
+      "name": "scorchbeast_queen_scream",
+      "cost": 0,
+      "preview": "scorchbeastqueenscream"
+    },
+    {
+      "name": "scorchbeast_sonic_scream",
+      "cost": 0,
+      "preview": "scorchbeastsonicscream"
+    },
+    {
       "name": "securitron_gatling_laser",
       "cost": 20,
       "preview": "securitrongatlinglaser",
@@ -996,6 +1006,11 @@
       "preview": "chainsaw"
     },
     {
+      "name": "chair_leg",
+      "cost": 3,
+      "preview": "chairleg"
+    },
+    {
       "name": "chinese_officers_sword",
       "cost": 7,
       "preview": "chineseofficerssword"
@@ -1488,6 +1503,31 @@
       "cost": 14,
       "preview": "robotswipe",
       "restrictions":["robot"]
+    },
+    {
+      "name": "scorchbeast_claws",
+      "cost": 0,
+      "preview": "scorchbeastclaws"
+    },
+    {
+      "name": "scorchbeast_queen_blast",
+      "cost": 0,
+      "preview": "scorchbeastqueenblast"
+    },
+    {
+      "name": "scorchbeast_queen_claws",
+      "cost": 0,
+      "preview": "scorchbeastqueenclaws"
+    },
+    {
+      "name": "scorchbeast_queen_radiation_sweep",
+      "cost": 0,
+      "preview": "scorchbeastqueenradiationsweep"
+    },
+    {
+      "name": "scorched_swipe",
+      "cost": 0,
+      "preview": "scorchedswipe"
     },
     {
       "name": "sheepsquatch_ram",
@@ -2458,6 +2498,11 @@
       "name": "patched_three_piece_suit",
       "cost": 8,
       "preview": "patchedthreepiecesuit"
+    },
+    {
+      "name": "radio_pack",
+      "cost": 0,
+      "preview": "radiopack"
     },
     {
       "name": "red_flight_helmet",

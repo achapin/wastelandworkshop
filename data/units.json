@@ -6747,5 +6747,170 @@
 		"name": "vernon_dodge",
 		"preview": "vernondodge",
 		"unique_code": "vernondodge"
+	},
+	{
+		"cost": 45,
+		"must_carry":[
+			"melee.scorched_swipe"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorched",
+		"preview": "scorched",
+		"tags":[
+			"scorched"
+		]
+	},
+	{
+		"cost": 47,
+		"default_equipment":{
+			"melee":[
+				"chair_leg"
+			],
+			"pistols":[
+				"pipe_pistol"
+			]
+		},
+		"must_carry":[
+			"melee.scorched_swipe"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorched_asylum_worker",
+		"preview": "scorchedasylumworker",
+		"tags":[
+			"scorched"
+		]
+	},
+	{
+		"cost": 51,
+		"must_carry":[
+			"melee.scorched_swipe",
+			"pistols.10mm_pistol",
+			"clothing.radio_pack"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorched_officer",
+		"preview": "scorchedofficer",
+		"tags":[
+			"scorched"
+		]
+	},
+	{
+		"cost": 53,
+		"default_equipment":{
+			"melee":[
+				"ski_sword"
+			]
+		},
+		"must_carry":[
+			"melee.scorched_swipe"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorched_skier",
+		"preview": "scorchedskier",
+		"tags":[
+			"scorched"
+		]
+	},
+	{
+		"cost": 46,
+		"default_equipment":{
+			"melee":[
+				"baseball_bat",
+				"fire_axe"
+			],
+			"rifles":[
+				"hunting_rifle"
+			]
+		},
+		"must_carry":[
+			"melee.scorched_swipe"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorched_responder",
+		"preview": "scorchedresponder",
+		"tags":[
+			"scorched"
+		]
+	},
+	{
+		"cost": 250,
+		"must_carry":[
+			"heavy_weapons.scorchbeast_queen_scream",
+			"melee.scorchbeast_queen_radiation_sweep",
+			"melee.scorchbeast_queen_claws"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorchbeast_queen_1",
+		"preview": "scorchbeastqueen1",
+		"tags":[
+			"cryptid",
+			"legendary",
+			"scorched"
+		],
+		"unique_code": "scorchbeast_queen_1"
+	},
+	{
+		"cost": 300,
+		"must_carry":[
+			"heavy_weapons.scorchbeast_queen_scream",
+			"melee.scorchbeast_queen_claws"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorchbeast_queen_2",
+		"preview": "scorchbeastqueen2",
+		"tags":[
+			"cryptid",
+			"legendary",
+			"scorched"
+		],
+		"unique_code": "scorchbeast_queen_2"
+	},
+	{
+		"cost": 400,
+		"must_carry":[
+			"melee.scorchbeast_queen_blast",
+			"melee.scorchbeast_queen_claws"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorchbeast_queen_3",
+		"preview": "scorchbeastqueen3",
+		"tags":[
+			"cryptid",
+			"legendary",
+			"scorched"
+		],
+		"unique_code": "scorchbeast_queen_3"
+	},
+	{
+		"cost": 170,
+		"must_carry":[
+			"heavy_weapons.scorchbeast_sonic_scream",
+			"melee.scorchbeast_claws"
+		],
+		"factions": [
+			"sch"
+		],
+		"name": "scorchbeast",
+		"preview": "scorchbeast",
+		"tags":[
+			"cryptid",
+			"scorched"
+		]
 	}
 ]
