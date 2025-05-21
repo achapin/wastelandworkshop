@@ -42,6 +42,7 @@ var possibleFilters = [
 	"rbt",
 	"mut",
 	"slg",
+	"sch",
 	"srv",
 	"ztn"
 ]
@@ -65,6 +66,7 @@ var factionReferences = {
 	"mut":"reference_supermutants",
 	"slg":"reference_slog",
 	"srv":"reference_survivors",
+	"sch":"reference_scorched",
 	"pak":"reference_the_pack",
 	"dis":"reference_the_disciples",
 	"opr":"reference_the_operators",
@@ -2033,6 +2035,7 @@ function updateCaps(){
 			|| characterTemplate.tags.indexOf("robot")>= 0 
 			|| characterTemplate.tags.indexOf("synth")>= 0
 			|| characterTemplate.tags.indexOf("legendary")>= 0
+			|| characterTemplate.tags.indexOf("scorched")>= 0
 			|| characterTemplate.tags.indexOf("armored")>= 0 ))
 			{
 				armorSources++;
