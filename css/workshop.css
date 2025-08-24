@@ -22,6 +22,7 @@ body {
 	background-color: rgb(40,65,129);
 	color: rgb(231, 189, 66);
 	font-family: 'Futura';
+	scroll-behavior: auto;
 }
 
 h1 {
