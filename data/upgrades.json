@@ -47,6 +47,12 @@
   ],
   "heavy_weapons": [
     {
+      "name": "admirals_friend",
+      "cost": 30,
+      "preview": "admiralsfriend",
+      "unique": true
+    },
+    {
       "name": "broadsider",
       "cost": 31,
       "preview": "broadsider",
@@ -105,6 +111,11 @@
       "name": "gatling_laser",
       "cost": 30,
       "preview": "gatlinglaser"
+    },
+    {
+      "name": "harpoon_gun",
+      "cost": 15,
+      "preview": "harpoongun"
     },
     {
       "name": "heavy_incinerator",
@@ -465,6 +476,11 @@
       "name":"radscorpion_venom_syringer",
       "cost": 20,
       "preview": "radscorpionvenomsyringer"
+    },
+    {
+      "name": "radium_rifle",
+      "cost": 20,
+      "preview": "radiumrifle"
     },
     {
       "name": "railway_rifle",
@@ -854,6 +870,11 @@
       "cost": 13,
       "preview": "rangersequoia",
       "unique": true
+    },
+    {
+      "name":"rapid_fire_plasma_pistol",
+      "cost": 14,
+      "preview": "rapidfireplasmapistol"
     },
     {
       "name":"robobrain_mesmetron",
@@ -1339,6 +1360,11 @@
       "preview":"matriarchswipe"
     },
     {
+      "name": "meat_hook",
+      "cost": 7,
+      "preview": "meathook"
+    },
+    {
       "name": "mega_sloth_claws",
       "cost": 0,
       "preview": "megaslothclaws"
@@ -1441,6 +1467,11 @@
       "cost": 7,
       "preview": "poisonersripper",
       "unique": true
+    },
+    {
+      "name": "pole_hook",
+      "cost": 10,
+      "preview": "polehook"
     },
     {
       "name": "power_fist",
@@ -2004,6 +2035,12 @@
       "preview": "armyhelmet"
     },
     {
+      "name": "assault_marine_armor",
+      "cost": 44,
+      "preview": "assaultmarinearmor",
+      "sets_armor_values": true
+    },
+    {
       "name": "bladed_helmet",
       "restrictions":["super_mutant"],
       "cost": 4,
@@ -2168,6 +2205,12 @@
       "sets_armor_values": true
     },
     {
+      "name": "inquisitor_marine_armor",
+      "cost": 44,
+      "preview": "inquisitormarinearmor",
+      "sets_armor_values": true
+    },
+    {
       "name":"light_raider_armor",
       "cost":3,
       "preview": "lightraiderarmor",
@@ -2318,6 +2361,12 @@
       "sets_armor_values": true
     },
     {
+      "name": "zealots_marine_armor",
+      "cost": 40,
+      "preview": "zealotsmarinearmor",
+      "sets_armor_values": true
+    },
+    {
       "name": "zetan_flight_suit",
       "restrictions":["zetan"],
       "cost": 10,
@@ -2406,6 +2455,12 @@
       "preview": "cappyglasses"
     },
     {
+      "name": "child_of_atom_rags",
+      "cost": 10,
+      "preview": "childofatomrags",
+      "sets_armor_values": true
+    },
+    {
       "name": "cutthroat_outfit",
       "cost": 18,
       "preview": "cutthroatoutfit"
@@ -2442,6 +2497,19 @@
       "preview": "eyeglasses"
     },
     {
+      "name": "high_confessors_robes",
+      "cost": 18,
+      "preview": "highconfessorsrobes",
+      "unique": true,
+      "sets_armor_values": true
+    },
+    {
+      "name": "high_confessors_helm",
+      "cost": 8,
+      "preview": "highconfessorshelm",
+      "unique": true
+    },
+    {
       "name": "institute_division_head_coat",
       "cost": 7,
       "preview": "institutedivisionheadcoat"
@@ -2474,6 +2542,11 @@
       "preview": "magnifyingvisor"
     },
     {
+      "name": "marine_wetsuit",
+      "cost": 12,
+      "preview": "marinewetsuit"
+    },
+    {
       "name": "military_fatigues",
       "cost": 7,
       "preview": "militaryfatigues"
@@ -2493,6 +2566,11 @@
       "name": "ncr_engineer_jumpsuit",
       "cost": 10,
       "preview": "ncrengineerjumpsuit"
+    },
+    {
+      "name": "old_fishermans_hat",
+      "cost": 7,
+      "preview": "oldfishermanshat"
     },
     {
       "name": "patched_three_piece_suit",
@@ -2523,6 +2601,12 @@
       "name": "robotic_bits",
       "cost": 7,
       "preview": "roboticbits"
+    },
+    {
+      "name": "robes_of_atoms_devoted",
+      "cost": 16,
+      "preview": "robesofatomsdevoted",
+      "sets_armor_values": true
     },
     {
       "name": "scribe_robes",
@@ -2567,6 +2651,11 @@
       "cost": 10,
       "preview": "threedogsheadwear",
       "unique": true
+    },
+    {
+      "name": "trapper_leathers",
+      "cost": 22,
+      "preview": "trapperleathers"
     },
     {
       "name": "tricorn_hat",
@@ -4260,6 +4349,11 @@
   ],
   "food_and_drink":[
     {
+      "name": "angler_meat",
+      "cost": 2,
+      "preview": "anglermeat"
+    },
+    {
       "name":"bighorner_steak",
       "cost":8,
       "preview": "bighornersteak"
@@ -4320,9 +4414,29 @@
       "preview": "geckokebab"
     },
     {
+      "name": "grilled_hermit_crab_meat",
+      "cost": 12,
+      "preview": "grilledhermitcrabmeat"
+    },
+    {
+      "name": "gulper_innards",
+      "cost": 7,
+      "preview": "gulperinnards"
+    },
+    {
+      "name": "gulper_slurry",
+      "cost": 24,
+      "preview": "gulperslurry"
+    },
+    {
       "name":"gum_drops",
       "cost":2,
       "preview": "gumdrops"
+    },
+    {
+      "name": "hermit_crab_meat",
+      "cost": 12,
+      "preview": "hermitcrabmeat"
     },
     {
       "name":"honey_mesquite_pod",
@@ -4398,6 +4512,11 @@
       "name":"queen_mirelurk_meat",
       "cost":33,
       "preview": "queenmirelurkmeat"
+    },
+    {
+      "name": "poached_angler",
+      "cost": 5,
+      "preview": "poachedangler"
     },
     {
       "name":"radroach_meat",
