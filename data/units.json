@@ -2527,6 +2527,10 @@
 	{
 		"cost": 45,
 		"default_equipment": {
+			"rifles": [
+				"radium_rifle",
+				"pipe_rifle"
+			],
 			"pistols": [
 				"pipe_pistol",
 				"gamma_gun"
@@ -2536,7 +2540,8 @@
 			"coa"
 		],
 		"name": "child_of_atom",
-		"preview": "childofatom"
+		"preview": "childofatom",
+		"tags":["armored"]
 	},
 	{
 		"cost": 84,
@@ -2550,7 +2555,8 @@
 			"coa"
 		],
 		"name": "disciple",
-		"preview": "disciple"
+		"preview": "disciple",
+		"tags":["armored"]
 	},
 	{
 		"cost": 60,
@@ -2564,7 +2570,8 @@
 			"coa"
 		],
 		"name": "preacher",
-		"preview": "preacher"
+		"preview": "preacher",
+		"tags":["armored"]				
 	},
 	{
 		"cost": 188,
@@ -6912,5 +6919,85 @@
 			"cryptid",
 			"scorched"
 		]
+	},
+	{
+		"cost": 27,
+		"default_equipment": {
+			"rifles": [
+				"radium_rifle",
+				"combat_rifle",
+				"pipe_rifle"
+			],
+			"armor":["zealots_marine_armor"]
+		},
+		"factions": [
+			"coa"
+		],
+		"name": "zealot",
+		"preview": "zealot"
+	},
+	{
+		"cost": 76,
+		"default_equipment": {
+			"rifles": [
+				"radium_rifle",
+				"combat_rifle",
+				"pipe_rifle"
+			],
+			"armor":["zealots_marine_armor"]
+		},
+		"factions": [
+			"coa"
+		],
+		"name": "grand_zealot",
+		"preview": "grandzealot"
+	},
+	{
+		"cost": 94,
+		"default_equipment": {
+			"rifles": [
+				"radium_rifle"
+			],
+			"armor":["zealots_marine_armor"]
+		},
+		"factions": [
+			"coa"
+		],
+		"name": "zealot_theil",
+		"preview": "zealottheil",
+		"unique_code":"zealot_theil"
+	},
+	{
+		"cost": 122,
+		"default_equipment": {
+			"rifles": [
+				"radium_rifle"
+			],
+			"armor":["inquisitor_marine_armor"]
+		},
+		"factions": [
+			"coa"
+		],
+		"name": "grand_zealot_richter",
+		"preview": "grandzealotrichter",
+		"unique_code":"grand_zealot_richter"
+	},
+	{
+		"cost": 86,
+		"default_equipment": {
+			"pistols": [
+				"gamma_gun"
+			]
+		},
+		"factions": [
+			"coa"
+		],
+		"must_wear": [
+			"clothing.high_confessors_robes",
+			"clothing.high_confessors_helm"
+		],
+		"name": "high_confessor_tektus",
+		"preview": "highconfessortektus",
+		"unique_code":"high_confessor_tektus"
 	}
 ]
