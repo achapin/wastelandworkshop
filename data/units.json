@@ -6999,5 +6999,99 @@
 		"name": "high_confessor_tektus",
 		"preview": "highconfessortektus",
 		"unique_code":"high_confessor_tektus"
+	},
+	{
+		"cost": 58,
+		"default_equipment": {
+			"melee": [
+				"pole_hook"
+			],
+			"clothing": ["fishermans_overalls"]
+		},
+		"factions": [
+			"srv",
+			"thm"
+		],
+		"name": "the_mariner",
+		"preview": "themariner",
+		"unique_code":"the_mariner"
+	},
+	{
+		"cost": 51,
+		"default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			]
+		},
+		"factions": [
+			"srv",
+			"arg"
+		],
+		"name": "faraday",
+		"preview": "faraday",
+		"unique_code":"faraday"
+	},
+	{
+		"cost": 51,
+		"default_equipment": {
+			"rifles": [
+				"double_barrel_shotgun"
+			],
+			"clothing": ["wasteland_outfit"]
+		},
+		"factions": [
+			"srv",
+			"thm"
+		],
+		"name": "captain_avery",
+		"preview": "captainavery",
+		"unique_code":"captain_avery"
+	},
+	{
+		"cost": 64,
+		"default_equipment": {
+			"rifles": [
+				"assault_rifle"
+			],
+			"armor": ["sturdy_leather_armor"]
+		},
+		"factions": [
+			"srv",
+			"thm"
+		],
+		"name": "allen_lee",
+		"preview": "allenlee",
+		"unique_code":"allen_lee"
+	},
+	{
+		"cost": 169,
+		"default_equipment": {
+			"rifles": [
+				"assault_rifle"
+			]
+		},
+		"factions": [
+			"srv",
+			"arg"
+		],
+		"must_wear":["clothing.chases_uniform"],
+		"name": "chase",
+		"preview": "chase",
+		"unique_code":"chase"
+	},
+	{
+		"cost": 67,
+		"default_equipment": {
+			"pistols": [
+				"rapid_fire_plasma_pistol"
+			]
+		},
+		"factions": [
+			"srv",
+			"arg"
+		],
+		"name": "dima",
+		"preview": "dima",
+		"unique_code":"dima"
 	}
 ]

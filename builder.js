@@ -23,6 +23,7 @@ var force;
 
 var appliedFilters = [];
 var possibleFilters = [
+	"arg",
 	"bos",
 	"lgn",
 	"coa",
@@ -44,12 +45,14 @@ var possibleFilters = [
 	"slg",
 	"sch",
 	"srv",
+	"thm",
 	"ztn"
 ]
 var filter_vtap = false;
 var vtap_property = "vault_tec_approved_profile";
 
 var factionReferences = {
+	"arg":"reference_arcadiarenegades",
 	"bos":"reference_brotherhoodofsteel",
 	"lgn":"reference_caesarslegion",
 	"coa":"reference_childrenofatom",
@@ -71,6 +74,7 @@ var factionReferences = {
 	"dis":"reference_the_disciples",
 	"opr":"reference_the_operators",
 	"nkl":"reference_nukalurks_1",
+	"thm":"reference_theharbormen",
 	"ztn":"reference_zetan"
 }
 

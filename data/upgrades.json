@@ -2455,6 +2455,13 @@
       "preview": "cappyglasses"
     },
     {
+      "name": "chases_uniform",
+      "cost": 29,
+      "preview": "chasesuniform",
+      "sets_armor_values": true,
+      "unique": true
+    },
+    {
       "name": "child_of_atom_rags",
       "cost": 10,
       "preview": "childofatomrags",
@@ -2495,6 +2502,11 @@
       "name": "eyeglasses",
       "cost": 7,
       "preview": "eyeglasses"
+    },
+    {
+      "name": "fishermans_overalls",
+      "cost": 4,
+      "preview": "fishermansoveralls"
     },
     {
       "name": "high_confessors_robes",
