@@ -4693,8 +4693,8 @@
 		"factions": [
 			"srv"
 		],
-		"name": "cx404",
-		"preview": "cx404",
+		"name": "cx404-vtap",
+		"preview": "cx404-vtap",
 		"tags": [
 			"dog"
 		],
@@ -4706,8 +4706,8 @@
 		"factions": [
 			"srv"
 		],
-		"name": "lucy",
-		"preview": "lucy",
+		"name": "lucy-vtap",
+		"preview": "lucy-vtap",
 		"unique_code": "lucy",
 		"vault_tec_approved_profile": true
 	},
@@ -4716,12 +4716,12 @@
 		"factions": [
 			"srv"
 		],
-		"name": "the_ghoul",
-		"preview": "theghoul",
+		"name": "the_ghoul-vtap",
+		"preview": "theghoul-vtap",
 		"tags": [
 			"ghoul"
 		],
-		"unique_code": "theghoul",
+		"unique_code": "the_ghoul",
 		"vault_tec_approved_profile": true
 	},
 	{
@@ -4729,8 +4729,8 @@
 		"factions": [
 			"bos"
 		],
-		"name": "maximus",
-		"preview": "maximus",
+		"name": "maximus-vtap",
+		"preview": "maximus-vtap",
 		"unique_code": "maximus",
 		"vault_tec_approved_profile": true
 	},
@@ -7093,5 +7093,142 @@
 		"name": "dima",
 		"preview": "dima",
 		"unique_code":"dima"
+	},
+	{
+		"cost": 135,
+		"default_equipment": {
+			"heavy_weapons": [
+				"heavy_assault_rifle"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"must_carry":["melee.power_armored_fist"],
+		"must_wear":["power_armor.t60_power_armor"],
+		"name": "maximus",
+		"preview": "maximus",
+		"unique_code":"maximus"
+	},
+	{
+		"cost": 44,
+		"default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			],
+			"clothing": [
+				"military_fatigues"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"name": "maximus_squire",
+		"preview": "maximussquire",
+		"unique_code":"maximus"
+	},
+	{
+		"cost": 45,
+		"default_equipment": {
+			"clothing": [
+				"vault_33_jumpsuit"
+			]
+		},
+		"factions": [
+			"srv"
+		],
+		"name": "hank",
+		"preview": "hank",
+		"unique_code":"hank"
+	},
+	{
+		"cost": 62,
+		"default_equipment": {
+			"armor": [
+				"sturdy_leather_armor"
+			],
+			"pistols": [
+				"laser_pistol"
+			]
+		},
+		"factions": [
+			"srv",
+			"ncr"
+		],
+		"name": "moldaver",
+		"preview": "moldaver",
+		"unique_code":"moldaver"
+	},
+	{
+		"cost": 127,
+		"factions": [
+			"srv"
+		],
+		"must_carry":["pistols.the_ghouls_pistol", "rifles.the_ghouls_rifle"],
+		"must_wear":["clothing.the_ghouls_outfit"],
+		"name": "the_ghoul",
+		"preview": "theghoul",
+		"tags": [
+			"ghoul"
+		],
+		"unique_code":"the_ghoul"
+	},
+	{
+		"cost": 40,
+		"default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			]
+		},
+		"factions": [
+			"srv"
+		],
+		"must_wear":["clothing.vault_33_jumpsuit"],
+		"name": "lucy",
+		"preview": "lucy",
+		"unique_code":"lucy"
+	},
+	{
+		"cost": 64,
+		"factions": [
+			"srv"
+		],
+		"must_carry":["pistols.lucys_tranquilizer_pistol"],
+		"must_wear":["clothing.wasteland_outfit"],
+		"name": "lucy_bride",
+		"preview": "lucybride",
+		"unique_code":"lucy"
+	},
+	{
+		"cost": 85,
+		"factions": [
+			"srv"
+		],
+		"must_carry":[
+			"melee.dog_bite"
+		],
+		"name": "cx404",
+		"preview": "cx404",
+		"tags": [
+			"dog"
+		],
+		"unique_code": "cx404"
+	},
+	{
+		"cost": 51,
+		"default_equipment": {
+			"pistols": [
+				"10mm_pistol"
+			],
+			"clothing": [
+				"military_fatigues"
+			]
+		},
+		"factions": [
+			"bos"
+		],
+		"name": "thaddeus",
+		"preview": "thaddeus",
+		"unique_code":"thaddeus"
 	}
 ]

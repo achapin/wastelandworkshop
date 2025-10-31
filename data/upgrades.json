@@ -118,6 +118,11 @@
       "preview": "harpoongun"
     },
     {
+      "name": "heavy_assault_rifle",
+      "cost": 24,
+      "preview": "heavyassaultrifle"
+    },
+    {
       "name": "heavy_incinerator",
       "cost": 35,
       "preview": "heavyincinerator"
@@ -546,6 +551,12 @@
       "preview":"teslarifle"
     },
     {
+      "name": "the_ghouls_rifle",
+      "cost": 23,
+      "preview":"theghoulsrifle",
+      "unique": true
+    },
+    {
       "name": "trail_carbine",
       "cost": 23,
       "preview": "trailcarbine"
@@ -775,6 +786,12 @@
       "unique": true
     },
     {
+      "name":"lucys_tranquilizer_pistol",
+      "cost": 4,
+      "preview": "lucystranquilizerpistol",
+      "unique": true
+    },
+    {
       "name": "mr_handy_flamer",
       "cost": 10,
       "restrictions":["robot", "mr_handy"],
@@ -908,6 +925,12 @@
       "name":"staggering_pipe_pistol",
       "cost": 3,
       "preview":"staggeringpipepistol",
+      "unique": true
+    },
+    {
+      "name": "the_ghouls_pistol",
+      "cost": 14,
+      "preview": "theghoulspistol",
       "unique": true
     },
     {
@@ -1472,6 +1495,11 @@
       "name": "pole_hook",
       "cost": 10,
       "preview": "polehook"
+    },
+    {
+      "name": "power_armored_fist",
+      "cost": 0,
+      "preview": "powerarmoredfist"
     },
     {
       "name": "power_fist",
@@ -2659,6 +2687,13 @@
       "preview": "steelworkersuniform"
     },
     {
+      "name": "the_ghouls_outfit",
+      "cost": 25,
+      "preview": "theghoulsoutfit",
+      "sets_armor_values": true,
+      "unique": true
+    },
+    {
       "name": "three_dogs_headwear",
       "cost": 10,
       "preview": "threedogsheadwear",
@@ -2684,6 +2719,12 @@
       "name": "tuxedo",
       "cost": 8,
       "preview": "tuxedo"
+    },
+    {
+      "name": "vault_33_jumpsuit",
+      "cost": 3,
+      "preview": "vault33jumpsuit",
+      "sets_armor_values": true
     },
     {
       "name": "vault_111_jumpsuit",

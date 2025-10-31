@@ -48,7 +48,7 @@ var possibleFilters = [
 	"thm",
 	"ztn"
 ]
-var filter_vtap = false;
+var filter_vtap = true;
 var vtap_property = "vault_tec_approved_profile";
 
 var factionReferences = {
