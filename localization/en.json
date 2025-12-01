@@ -1494,5 +1494,19 @@
   "cx404-vtap":"CX404 (VTAP)",
   "lucy-vtap":"Lucy (VTAP)",
   "the_ghoul-vtap":"The Ghoul (VTAP)",
-  "maximus-vtap":"Maximus (VTAP)"
+  "maximus-vtap":"Maximus (VTAP)",
+  "gulper":"Gulper",
+  "gulper_glowing":"Gulper, Glowing",
+  "gulper_newt":"Gulper Newt",
+  "angler":"Angler",
+  "angler_glowing":"Angler, Glowing",
+  "angler_venomous":"Angler, Venomous",
+  "hermit_crab":"Hermit Crab",
+  "hermit_crab_glowing":"Hermit Crab, Glowing",
+  "albino_hermit_crab":"Albino Hermit Crab",
+  "fog_vomit":"Fog Vomit",
+  "angler_claw":"Angler Claw",
+  "gulper_bite":"Gulper Bite",
+  "gulper_slam":"Gulper Slam",
+  "hermit_crab_pincer":"Hermit Crab Pincer"
 }

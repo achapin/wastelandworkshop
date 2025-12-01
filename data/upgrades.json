@@ -686,6 +686,11 @@
       "preview": "flaregun"
     },
     {
+      "name": "fog_vomit",
+      "cost": 0,
+      "preview": "fogvomit"
+    },
+    {
       "name": "gamma_gun",
       "cost": 13,
       "preview": "gammagun"
@@ -971,6 +976,11 @@
       "name": "alien_swipe",
       "cost": 0,
       "preview":"alienswipe"
+    },
+    {
+      "name": "angler_claw",
+      "cost": 0,
+      "preview":"anglerclaw"
     },
     {
       "name": "assaultron_swipe",
@@ -1277,6 +1287,16 @@
       "unique": true
     },
     {
+      "name": "gulper_bite",
+      "cost": 0,
+      "preview":"gulperbite"
+    },
+    {
+      "name": "gulper_slam",
+      "cost": 0,
+      "preview":"gulperslam"
+    },
+    {
       "name": "hand_saw_blade",
       "cost": 6,
       "preview":"handsawblade",
@@ -1298,6 +1318,11 @@
       "name": "hatchling_sonic_wave",
       "cost": 0,
       "preview":"hatchlingsonicwave"
+    },
+    {
+      "name": "hermit_crab_pincer",
+      "cost": 0,
+      "preview":"hermitcrabpincer"
     },
     {
       "name": "horrigans_knife",

@@ -7152,7 +7152,7 @@
 			]
 		},
 		"factions": [
-			"srv",
+			"rdr",
 			"ncr"
 		],
 		"name": "moldaver",
@@ -7230,5 +7230,136 @@
 		"name": "thaddeus",
 		"preview": "thaddeus",
 		"unique_code":"thaddeus"
+	},
+	{
+		"cost": 90,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.gulper_bite",
+			"melee.gulper_slam"
+		],
+		"name": "gulper",
+		"preview": "gulper",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 130,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.gulper_bite",
+			"melee.gulper_slam"
+		],
+		"name": "gulper_glowing",
+		"preview": "gulperglowing",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 73,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.gulper_bite"
+		],
+		"name": "gulper_newt",
+		"preview": "gulpernewt",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 94,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.angler_claw",
+			"pistols.fog_vomit"
+		],
+		"name": "angler",
+		"preview": "angler",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 134,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.angler_claw",
+			"pistols.fog_vomit"
+		],
+		"name": "angler_glowing",
+		"preview": "anglerglowing",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 106,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.angler_claw",
+			"pistols.fog_vomit"
+		],
+		"name": "angler_venomous",
+		"preview": "anglervenomous",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 176,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.hermit_crab_pincer"
+		],
+		"name": "hermit_crab",
+		"preview": "hermitcrab",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 216,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.hermit_crab_pincer"
+		],
+		"name": "hermit_crab_glowing",
+		"preview": "hermitcrabglowing",
+		"tags": [
+			"creature"
+		]
+	},
+	{
+		"cost": 200,
+		"factions": [
+			"crt"
+		],
+		"must_carry": [
+			"melee.hermit_crab_pincer"
+		],
+		"name": "albino_hermit_crab",
+		"preview": "albinohermitcrab",
+		"tags": [
+			"creature"
+		]
 	}
 ]
