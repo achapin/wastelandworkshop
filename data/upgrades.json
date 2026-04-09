@@ -340,6 +340,12 @@
       "unique": true
     },
     {
+      "name": "henrietta",
+      "cost": 16,
+      "preview": "henrietta",
+      "unique": true
+    },
+    {
       "name": "hunters_hunting_rifle",
       "cost": 20,
       "preview":"huntershuntingrifle",
@@ -406,6 +412,11 @@
       "preview": "laserturret"
     },
     {
+      "name": "lever_action_rifle",
+      "cost": 13,
+      "preview": "leveractionrifle"
+    },
+    {
       "name": "machine_gun_turret_mk1",
       "cost": 10,
       "preview": "machinegunturretmk1"
@@ -419,6 +430,11 @@
       "name": "marksman_carbine",
       "cost": 19,
       "preview": "marksmancarbine"
+    },
+    {
+      "name": "marksmans_50_hunting_rifle",
+      "cost": 30,
+      "preview": "marksmans50huntingrifle"
     },
     {
       "name":"mirelurk_hunter_acid",
@@ -2118,6 +2134,12 @@
       "sets_armor_values": true
     },
     {
+      "name": "coastal_armor",
+      "cost": 12,
+      "preview": "coastalarmor",
+      "sets_armor_values": true
+    },
+    {
       "name": "combat_armor",
       "cost": 8,
       "preview": "combatarmor",
@@ -2408,6 +2430,18 @@
       "preview":"teslacoilharness"
     },
     {
+      "name": "trapper_armor",
+      "cost": 15,
+      "preview": "trapperarmor",
+      "sets_armor_values": true
+    },
+    {
+      "name": "trapper_heavy_armor",
+      "cost": 29,
+      "preview": "trapperheavyarmor",
+      "sets_armor_values": true
+    },
+    {
       "name": "wasteland_armor",
       "cost": 10,
       "preview": "wastelandarmor",
@@ -2573,6 +2607,12 @@
       "cost": 8,
       "preview": "highconfessorshelm",
       "unique": true
+    },
+    {
+      "name": "hunters_long_coat",
+      "cost": 18,
+      "preview": "hunterslongcoat",
+      "sets_armor_values": true
     },
     {
       "name": "institute_division_head_coat",

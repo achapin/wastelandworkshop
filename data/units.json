@@ -7361,5 +7361,163 @@
 		"tags": [
 			"creature"
 		]
+	},
+	{
+		"cost": 101,
+		"factions": [
+			"srv",
+			"thm"
+		],
+		"must_carry":["rifles.henrietta"],
+		"must_wear":["clothing.hunters_long_coat"],
+		"name": "old_longfellow",
+		"preview": "oldlongfellow",
+		"unique_code":"old_longfellow"
+	},
+	{
+		"cost": 130,
+		"default_equipment": {
+			"heavy_weapons": [
+				"harpoon_gun"
+			]
+		},
+		"factions": [
+			"trp"
+		],
+		"must_wear":["power_armor.raider_power_armor"],
+		"name": "bilge",
+		"preview": "bilge",
+		"unique_code":"bilge"
+	},
+	{
+		"cost": 80,
+		"default_equipment": {
+			"melee": [
+				"machete"
+			],
+			"armor":["trapper_armor"]
+		},
+		"factions": [
+			"trp"
+		],
+		"has_perk":["lone_wanderer"],
+		"name": "malcolm",
+		"preview": "malcolm",
+		"unique_code":"malcolm"
+	},
+	{
+		"cost": 88,
+		"default_equipment": {
+			"armor": ["heavy_trapper_armor"]
+		},
+		"factions": [
+			"trp"
+		],
+		"must_carry":["rifles.marksmans_50_hunting_rifle"],
+		"name": "douglas",
+		"preview": "douglas",
+		"unique_code":"douglas"
+	},
+	{
+		"cost": 60,
+		"default_equipment": {
+			"armor":["coastal_armor"],
+			"pistols": [
+				"pipe_revolver"
+			],
+			"melee":[
+				"meat_hook",
+				"pole_hook"
+			]
+		},
+		"factions": [
+			"trp"
+		],
+		"name": "scrounging_trapper",
+		"preview": "scroungingtrapper"
+	},
+	{
+		"cost": 56,
+		"default_equipment": {
+			"armor":["coastal_armor"],
+			"pistols": [
+				"pipe_pistol"
+			],
+			"melee":[
+				"meat_hook",
+				"pole_hook"
+			],
+			"rifles":[
+				"double_barrel_shotgun"
+			]
+		},
+		"factions": [
+			"trp"
+		],
+		"name": "ruthless_trapper",
+		"preview": "ruthlesstrapper"
+	},
+	{
+		"cost": 52,
+		"default_equipment": {
+			"armor":["coastal_armor"],
+			"melee":[
+				"pole_hook"
+			],
+			"rifles":[
+				"lever_action_rifle"
+			]
+		},
+		"factions": [
+			"trp"
+		],
+		"name": "relentless_trapper",
+		"preview": "relentlesstrapper"
+	},
+	{
+		"cost": 50,
+		"default_equipment": {
+			"armor":["coastal_armor"],
+			"heavy_weapons": [
+				"harpoon_gun"
+			]
+		},
+		"factions": [
+			"trp"
+		],
+		"name": "grim_trapper",
+		"preview": "grimtrapper"
+	},
+	{
+		"cost": 42,
+		"default_equipment": {
+			"armor":["coastal_armor"],
+			"heavy_weapons": [
+				"harpoon_gun"
+			],
+			"rifles":[
+				"pipe_rifle"
+			]
+		},
+		"factions": [
+			"trp"
+		],
+		"name": "stalking_trapper",
+		"preview": "stalkingtrapper"
+	},
+	{
+		"cost": 40,
+		"default_equipment": {
+			"armor":["coastal_armor"],
+			"rifles":[
+				"lever_action_rifle",
+				"pipe_rifle"
+			]
+		},
+		"factions": [
+			"trp"
+		],
+		"name": "trapper",
+		"preview": "trapper"
 	}
 ]
