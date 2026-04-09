@@ -46,6 +46,7 @@ var possibleFilters = [
 	"sch",
 	"srv",
 	"thm",
+	"trp",
 	"ztn"
 ]
 var filter_vtap = true;
@@ -75,6 +76,7 @@ var factionReferences = {
 	"opr":"reference_the_operators",
 	"nkl":"reference_nukalurks_1",
 	"thm":"reference_theharbormen",
+	"trp":"reference_trappers",
 	"ztn":"reference_zetan"
 }
 
